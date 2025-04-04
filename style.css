@@ -17,6 +17,12 @@
   --box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   --transition: all 0.3s ease;
   --container-width: 1200px;
+  --header-height: 4rem;
+  --content-spacing: clamp(1rem, 5vw, 4rem); /* Responsive spacing */
+  --font-size-base: clamp(16px, 1vw, 18px); /* Responsive base font size */
+  --font-size-h1: clamp(2rem, 6vw, 2.75rem);
+  --font-size-h2: clamp(1.5rem, 4vw, 2rem);
+  --font-size-h3: clamp(1.2rem, 3vw, 1.8rem);
 }
 
 * {
@@ -27,6 +33,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 100%; /* Ensures rem units work properly */
 }
 
 body {
@@ -34,9 +41,10 @@ body {
   color: var(--text);
   background-color: var(--light);
   line-height: 1.8;
-  font-size: 16px;
+  font-size: var(--font-size-base);
   /* Ajouter un padding-top pour la bannière promo */
   padding-top: 40px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* ======================== */
@@ -47,15 +55,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.3;
+  width: 100%; /* Ensure headings don't break layout on small screens */
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: var(--font-size-h1);
   color: white;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: var(--font-size-h2);
   color: var(--primary);
   position: relative;
   padding-bottom: 0.5rem;
@@ -73,12 +82,13 @@ h2::after {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: var(--font-size-h3);
   color: var(--primary);
 }
 
 p {
   margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
 }
 
 strong {
@@ -87,6 +97,12 @@ strong {
 
 ul {
   list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Prevents inline image whitespace issues */
 }
 
 /* ======================== */
@@ -104,7 +120,7 @@ a:hover {
 
 .btn {
   display: inline-block;
-  padding: 0.875rem 1.75rem;
+  padding: clamp(0.5rem, 2vw, 0.875rem) clamp(1rem, 3vw, 1.75rem);
   background-color: var(--secondary);
   color: white;
   text-align: center;
@@ -115,6 +131,8 @@ a:hover {
   cursor: pointer;
   letter-spacing: 0.5px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -148,20 +166,21 @@ a:hover {
 /* 4. LAYOUT & CONTAINERS   */
 /* ======================== */
 .container {
+  width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 clamp(1rem, 3vw, 1.5rem);
 }
 
 section {
-  padding: 4rem 0;
+  padding: var(--content-spacing) 0;
 }
 
 main section {
-  margin-bottom: 4rem;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
   background: white;
   border-radius: var(--border-radius);
-  padding: 2rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
   box-shadow: var(--box-shadow);
 }
 
@@ -183,8 +202,13 @@ main section {
 
 .promo-banner p {
   margin: 0;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 1vw, 1rem);
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
 }
 
 .pulse-icon {
@@ -219,23 +243,26 @@ main section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
 }
 
 .logo {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
   font-weight: 700;
   color: var(--primary);
+  z-index: 1001; /* Ensure logo stays above mobile menu */
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
+  gap: clamp(0.5rem, 1vw, 1.5rem);
 }
 
 .nav-menu li {
-  margin-left: 1.5rem;
+  margin: 0;
 }
 
 .nav-link {
@@ -243,12 +270,15 @@ main section {
   font-weight: 500;
   transition: var(--transition);
   position: relative;
+  display: block;
+  padding: 0.5rem 0.25rem;
+  font-size: clamp(0.85rem, 1vw, 1rem);
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: -2px;
   left: 0;
   width: 0;
   height: 2px;
@@ -269,7 +299,7 @@ main section {
   font-weight: 700;
   border: 2px solid var(--secondary);
   border-radius: var(--border-radius);
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
 }
 
 .nav-cta:hover {
@@ -285,6 +315,7 @@ main section {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 1001; /* Ensure menu toggle stays above mobile menu */
 }
 
 .menu-toggle .bar {
@@ -302,7 +333,7 @@ header {
   background: var(--primary);
   color: white;
   text-align: center;
-  padding: 4rem 1rem;
+  padding: clamp(2rem, 6vw, 4rem) 1rem;
   position: relative;
 }
 
@@ -318,14 +349,14 @@ header {
 header h1 {
   color: white;
   margin-bottom: 0.25rem;
-  font-size: 2.75rem;
+  font-size: var(--font-size-h1);
 }
 
 header h2 {
   font-weight: 400;
   color: var(--light);
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
   padding-bottom: 0;
 }
 
@@ -337,22 +368,24 @@ header h2::after {
   font-style: italic;
   color: var(--light);
   opacity: 0.9;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   margin-bottom: 1.5rem;
 }
 
 /* Badge d'offre dans le header */
 .header-offers {
   margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .header-offer-badge {
   display: inline-block;
   background-color: var(--accent-bright);
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
   border-radius: var(--border-radius);
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 700;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transform: rotate(-3deg);
@@ -392,7 +425,7 @@ header > * {
 /* ======================== */
 .hero {
   background-color: white;
-  padding: 4rem 0;
+  padding: clamp(2rem, 5vw, 4rem) 0;
   position: relative;
   box-shadow: var(--box-shadow);
 }
@@ -402,23 +435,23 @@ header > * {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: clamp(1.5rem, 4vw, 2rem);
 }
 
 .hero-text {
   flex: 1;
-  min-width: 300px;
+  min-width: 100%;
 }
 
 .hero-text h3 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   margin-bottom: 1.5rem;
   color: var(--primary);
 }
 
 .hero-text p {
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
 }
 
 .badge-container {
@@ -431,10 +464,10 @@ header > * {
 .offre-speciale {
   display: inline-block;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: white;
   background-color: var(--secondary);
-  padding: 0.75rem 1.25rem;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.8rem, 2vw, 1.25rem);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   transform: rotate(-2deg);
@@ -443,7 +476,7 @@ header > * {
 
 .offre-speciale .offre-detail {
   display: block;
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
   margin-top: 0.25rem;
   opacity: 0.9;
 }
@@ -452,21 +485,22 @@ header > * {
   display: inline-block;
   background-color: var(--primary);
   color: white;
-  padding: 0.5rem 1rem;
+  padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.8rem, 1.5vw, 1rem);
   border-radius: var(--border-radius);
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
 }
 
 /* Image "hero" */
 .hero-image {
   flex: 1;
-  min-width: 300px;
+  min-width: 100%;
   text-align: center;
 }
 
 .image-wrapper {
   position: relative;
   display: inline-block;
+  max-width: 100%;
 }
 
 .hero-image img {
@@ -477,6 +511,8 @@ header > * {
   transition: var(--transition);
   border: 5px solid white;
   outline: 1px solid rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-image img:hover {
@@ -492,7 +528,7 @@ header > * {
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
   font-weight: 700;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
   transform: rotate(5deg);
@@ -503,8 +539,8 @@ header > * {
 /* SECTION ÉCHIQUIER PLEINE LARGEUR */
 /* ======================== */
 .chessboard-showcase {
-  height: 400px;
-  background-image: url('echiquier.jpg');
+  height: clamp(200px, 50vw, 400px);
+  background-image: url('echiquier.PNG');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -520,21 +556,21 @@ header > * {
 
 .chessboard-overlay {
   background-color: rgba(44, 62, 80, 0.7);
-  padding: 3rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
   border-radius: var(--border-radius);
   backdrop-filter: blur(2px);
-  max-width: 80%;
+  max-width: clamp(85%, 100% - 2rem, 80%);
 }
 
 .chessboard-overlay h3 {
   color: white;
-  font-size: 2.2rem;
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
   margin-bottom: 1rem;
 }
 
 .chessboard-overlay p {
   color: white;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   margin-bottom: 0;
 }
 
@@ -555,15 +591,14 @@ header > * {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-top: clamp(1rem, 2vw, 1.5rem);
 }
 
 .stat-item {
   text-align: center;
-  flex: 1;
-  min-width: 160px;
-  padding: 1.5rem;
+  flex: 1 1 clamp(110px, 25%, 160px);
+  padding: clamp(1rem, 3vw, 1.5rem);
   background-color: var(--light-gray);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -577,7 +612,7 @@ header > * {
 
 .stat-number {
   display: block;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
   color: var(--secondary);
   line-height: 1;
@@ -586,7 +621,7 @@ header > * {
 
 .stat-text {
   display: block;
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
   color: var(--text);
 }
 
@@ -595,18 +630,19 @@ header > * {
 /* ======================== */
 .advantages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(240px, 30%, 280px), 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
   margin-top: 2rem;
 }
 
 .advantage-card {
   background: var(--light-gray);
-  padding: 1.5rem;
+  padding: clamp(1.25rem, 2.5vw, 1.5rem);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
   border-left: 3px solid var(--primary);
+  height: 100%;
 }
 
 .advantage-card:hover {
@@ -616,7 +652,7 @@ header > * {
 }
 
 .advantage-icon {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   color: var(--secondary);
   margin-bottom: 1rem;
 }
@@ -624,11 +660,12 @@ header > * {
 .advantage-card h4 {
   margin-bottom: 0.75rem;
   color: var(--primary);
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
 }
 
 .advantage-card p {
   margin-bottom: 0;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
 }
 
 /* ======================== */
@@ -637,13 +674,13 @@ header > * {
 .location-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: clamp(1.5rem, 4vw, 2rem);
   align-items: center;
 }
 
 .location-text {
   flex: 1.5;
-  min-width: 300px;
+  min-width: 100%;
 }
 
 .location-icon {
@@ -653,7 +690,7 @@ header > * {
 
 .location-map {
   flex: 1;
-  min-width: 280px;
+  min-width: 100%;
 }
 
 .map-image {
@@ -661,20 +698,22 @@ header > * {
   height: auto;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  display: block;
+  margin: 0 auto;
 }
 
 /* ======================== */
 /* 12. TARIFS SECTION       */
 /* ======================== */
 .free-lesson-banner {
-  background: linear-gradient(135deg, rgba(192, 57, 43, 0.9), rgba(231, 76, 60, 0.9)), url('echiquier.jpg');
+  background: linear-gradient(135deg, rgba(192, 57, 43, 0.9), rgba(231, 76, 60, 0.9)), url('echiquier.PNG');
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 2rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
   border-radius: var(--border-radius);
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
   position: relative;
   overflow: hidden;
@@ -690,7 +729,7 @@ header > * {
 }
 
 .gift-icon {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   margin-bottom: 1rem;
   animation: bounce 2s infinite;
 }
@@ -706,12 +745,12 @@ header > * {
 
 .free-lesson-banner h3 {
   color: white;
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
   margin-bottom: 1rem;
 }
 
 .free-lesson-banner h3 span {
-  font-size: 2.2rem;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
   background-color: white;
   color: var(--secondary);
   padding: 0.2rem 0.5rem;
@@ -722,7 +761,7 @@ header > * {
 
 .free-lesson-banner p {
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -731,8 +770,8 @@ header > * {
 .free-lesson-banner .btn {
   background-color: white;
   color: var(--secondary);
-  font-size: 1.1rem;
-  padding: 0.75rem 2rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1.5rem, 3vw, 2rem);
 }
 
 .free-lesson-banner .btn:hover {
@@ -743,15 +782,13 @@ header > * {
 .tarifs-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: clamp(1.5rem, 4vw, 2rem);
   justify-content: center;
   margin-bottom: 2rem;
 }
 
 .tarif-card {
-  flex: 1;
-  min-width: 280px;
-  max-width: 350px;
+  flex: 1 1 clamp(250px, 40%, 350px);
   background-color: white;
   border-radius: var(--border-radius);
   overflow: hidden;
@@ -759,6 +796,7 @@ header > * {
   transition: var(--transition);
   border: 1px solid var(--medium-gray);
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .tarif-card:hover {
@@ -785,12 +823,13 @@ header > * {
   font-size: 0.8rem;
   font-weight: 700;
   border-bottom-left-radius: var(--border-radius);
+  z-index: 1;
 }
 
 .tarif-header {
   background-color: var(--primary);
   color: white;
-  padding: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 1.5rem);
   text-align: center;
 }
 
@@ -801,20 +840,21 @@ header > * {
 .tarif-header h3 {
   color: white;
   margin-bottom: 0.5rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
 .tarif-price {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 700;
 }
 
 .duration {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   font-weight: 400;
 }
 
 .tarif-body {
-  padding: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 1.5rem);
 }
 
 .tarif-features {
@@ -825,6 +865,7 @@ header > * {
   margin-bottom: 0.75rem;
   padding-left: 1.5rem;
   position: relative;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 .tarif-features li i {
@@ -838,8 +879,8 @@ header > * {
   text-align: center;
   font-weight: bold;
   color: var(--secondary);
-  font-size: 1.2rem;
-  padding: 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  padding: clamp(1.25rem, 3vw, 1.5rem);
   background-color: var(--light);
   border-radius: var(--border-radius);
   border: 2px dashed var(--secondary);
@@ -873,8 +914,8 @@ header > * {
   background-color: var(--primary);
   color: white;
   text-align: center;
-  padding: 4rem 0;
-  background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('echiquier.jpg');
+  padding: clamp(3rem, 6vw, 4rem) 0;
+  background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('echiquier.PNG');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -882,7 +923,7 @@ header > * {
 
 .testimonials h2 {
   color: white;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
 }
 
 .testimonials h2::after {
@@ -894,7 +935,7 @@ header > * {
 .testimonials-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: clamp(1.5rem, 4vw, 2rem);
   justify-content: center;
 }
 
@@ -903,12 +944,11 @@ header > * {
   color: var(--text);
   border-radius: var(--border-radius);
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  padding: 1.5rem;
-  flex: 1;
-  min-width: 280px;
-  max-width: 350px;
+  padding: clamp(1.25rem, 3vw, 1.5rem);
+  flex: 1 1 clamp(250px, 30%, 350px);
   position: relative;
   transition: var(--transition);
+  margin-bottom: 1rem;
 }
 
 .testimonial-card:hover {
@@ -938,6 +978,7 @@ header > * {
   z-index: 1;
   text-align: left;
   margin-bottom: 0;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 .testimonial-author {
@@ -950,10 +991,11 @@ header > * {
   display: block;
   font-weight: 700;
   color: var(--primary);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 .author-title {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
   color: var(--secondary);
 }
 
@@ -962,17 +1004,17 @@ header > * {
 /* ======================== */
 .contact {
   background-color: white;
-  padding: 4rem 0;
+  padding: clamp(3rem, 6vw, 4rem) 0;
 }
 
 .free-trial-reminder {
   background-color: var(--accent-bright);
   color: white;
-  padding: 1rem;
+  padding: clamp(0.75rem, 2vw, 1rem);
   margin-bottom: 2rem;
   text-align: center;
   border-radius: var(--border-radius);
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   font-weight: 700;
   animation: pulse 2s infinite;
 }
@@ -984,12 +1026,11 @@ header > * {
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: clamp(1.5rem, 4vw, 2rem);
 }
 
 .contact-info {
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 100%;
 }
 
 .contact-item {
@@ -999,7 +1040,7 @@ header > * {
 }
 
 .contact-icon {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   color: var(--secondary);
   margin-right: 1rem;
   flex-shrink: 0;
@@ -1007,19 +1048,20 @@ header > * {
 
 .contact-item h4 {
   margin-bottom: 0.25rem;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
 }
 
 .contact-message {
-  padding: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 1.5rem);
   background-color: var(--light);
   border-radius: var(--border-radius);
   border-left: 3px solid var(--secondary);
   margin-top: 2rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 .contact-form {
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 100%;
 }
 
 .form-group {
@@ -1030,6 +1072,7 @@ header > * {
   display: block;
   font-weight: 500;
   margin-bottom: 0.5rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 .form-group input,
@@ -1039,7 +1082,7 @@ header > * {
   border: 1px solid var(--medium-gray);
   border-radius: var(--border-radius);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
   transition: var(--transition);
 }
 
@@ -1057,9 +1100,9 @@ header > * {
   background-color: var(--secondary);
   color: white;
   text-align: center;
-  padding: 4rem 0;
+  padding: clamp(3rem, 6vw, 4rem) 0;
   position: relative;
-  background-image: linear-gradient(rgba(192, 57, 43, 0.9), rgba(192, 57, 43, 0.9)), url('echiquier.jpg');
+  background-image: linear-gradient(rgba(192, 57, 43, 0.9), rgba(192, 57, 43, 0.9)), url('echiquier.PNG');
   background-size: cover;
   background-position: center;
 }
@@ -1068,18 +1111,19 @@ header > * {
   background-color: var(--accent);
   color: white;
   font-weight: 700;
-  padding: 0.5rem 1.5rem;
+  padding: clamp(0.4rem, 1vw, 0.5rem) clamp(1rem, 2vw, 1.5rem);
   border-radius: 50px;
   display: inline-block;
   margin-bottom: 1.5rem;
   transform: rotate(-2deg);
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 .cta h3 {
   color: white;
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .cta p {
@@ -1087,7 +1131,7 @@ header > * {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
 }
 
 .cta p strong {
@@ -1103,41 +1147,39 @@ header > * {
 footer {
   background-color: var(--dark);
   color: white;
-  padding: 3rem 0 1rem;
+  padding: clamp(2rem, 4vw, 3rem) 0 1rem;
 }
 
 .footer-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: clamp(1.5rem, 4vw, 2rem);
   margin-bottom: 2rem;
 }
 
 .footer-logo {
-  flex: 2;
-  min-width: 250px;
+  flex: 1 1 100%;
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
   font-weight: 700;
 }
 
 .footer-logo p {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
   margin-top: 0.5rem;
   opacity: 0.8;
 }
 
 .footer-links {
-  flex: 1;
-  min-width: 150px;
+  flex: 1 1 clamp(150px, 30%, 200px);
 }
 
 .footer-links h4,
 .footer-social h4 {
   color: var(--light);
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
 }
 
 .footer-links ul li {
@@ -1148,6 +1190,7 @@ footer {
   color: var(--light);
   opacity: 0.8;
   transition: var(--transition);
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
 }
 
 .footer-links ul li a:hover {
@@ -1156,13 +1199,13 @@ footer {
 }
 
 .footer-social {
-  flex: 1;
-  min-width: 150px;
+  flex: 1 1 clamp(150px, 30%, 200px);
 }
 
 .social-icons {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .social-icon {
@@ -1187,7 +1230,7 @@ footer {
   text-align: center;
   padding-top: 2rem;
   border-top: 1px solid rgba(255,255,255,0.1);
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
   opacity: 0.7;
 }
 
@@ -1196,21 +1239,23 @@ footer {
 /* ======================== */
 .floating-cta {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
   z-index: 999;
 }
 
 .floating-cta a {
-  display: block;
+  display: flex;
+  align-items: center;
   background-color: var(--accent-bright);
   color: white;
-  padding: 1rem 1.5rem;
+  padding: clamp(0.7rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.5rem);
   border-radius: 50px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transition: var(--transition);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  line-height: 1.2;
 }
 
 .floating-cta a:hover {
@@ -1229,19 +1274,38 @@ footer {
 /* ======================== */
 /* 18. MEDIA QUERIES        */
 /* ======================== */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
+@media (min-width: 576px) {
+  .hero-text {
+    min-width: 0;
+    flex: 1 1 300px;
   }
   
-  h2 {
-    font-size: 1.75rem;
+  .hero-image {
+    min-width: 0;
+    flex: 1 1 300px;
   }
   
-  h3 {
-    font-size: 1.5rem;
+  .contact-info,
+  .contact-form {
+    flex: 1 1 45%;
   }
   
+  .footer-logo {
+    flex: 2 1 250px;
+  }
+  
+  .location-text {
+    min-width: 0;
+    flex: 1.5 1 300px;
+  }
+  
+  .location-map {
+    min-width: 0;
+    flex: 1 1 280px;
+  }
+}
+
+@media (max-width: 991px) {
   .menu-toggle {
     display: flex;
   }
@@ -1258,6 +1322,7 @@ footer {
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     padding: 2rem;
     z-index: 999;
+    align-items: flex-start;
   }
   
   .nav-menu.active {
@@ -1265,7 +1330,21 @@ footer {
   }
   
   .nav-menu li {
-    margin: 1.5rem 0;
+    width: 100%;
+  }
+  
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .nav-cta {
+    margin-top: 1rem;
+    text-align: center;
+    display: inline-block;
+    width: auto;
   }
   
   .menu-toggle.active .bar:nth-child(1) {
@@ -1282,6 +1361,8 @@ footer {
   
   .tarif-card.featured {
     transform: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   
   .tarif-card.featured:hover {
@@ -1293,28 +1374,11 @@ footer {
   }
   
   .chessboard-showcase {
-    height: 300px;
-  }
-  
-  .chessboard-overlay {
-    padding: 2rem;
-    max-width: 90%;
-  }
-  
-  .chessboard-overlay h3 {
-    font-size: 1.8rem;
+    background-attachment: scroll; /* Fix for mobile scrolling */
   }
 }
 
-@media (max-width: 576px) {
-  section {
-    padding: 3rem 0;
-  }
-  
-  .hero {
-    padding: 3rem 0;
-  }
-  
+@media (max-width: 575px) {
   .hero-text {
     text-align: center;
   }
@@ -1323,38 +1387,126 @@ footer {
     justify-content: center;
   }
   
-  .stats {
-    flex-direction: column;
-  }
-  
-  .testimonial-card {
-    max-width: 100%;
-  }
-  
-  .floating-cta {
-    bottom: 1rem;
-    right: 1rem;
-  }
-  
-  .floating-cta a {
-    padding: 0.75rem 1rem;
-    font-size: 0.9rem;
-  }
-  
   .header-offer-badge {
     font-size: 1.1rem;
   }
   
-  .chessboard-showcase {
-    height: 250px;
+  .badge-container {
+    flex-direction: column;
+    align-items: center;
   }
   
-  .chessboard-overlay {
-    padding: 1.5rem;
-    max-width: 95%;
+  .offre-speciale, .badge {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
   }
   
-  .chessboard-overlay h3 {
-    font-size: 1.5rem;
+  .promo-banner p strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .floating-cta {
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .floating-cta a {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ======================== */
+/* 19. ACCESSIBILITY        */
+/* ======================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.001s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Pour les utilisateurs qui préfèrent un mode sombre */
+@media (prefers-color-scheme: dark) {
+  .testimonial-card, 
+  .contact,
+  .hero,
+  main section,
+  .navbar {
+    background-color: #222;
+    color: #eee;
+  }
+  
+  .testimonial-card,
+  .advantage-card,
+  .stat-item {
+    background-color: #2c2c2c;
+  }
+  
+  .footer-bottom {
+    border-top-color: #444;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    background-color: #333;
+    color: #eee;
+    border-color: #555;
+  }
+  
+  /* Mode sombre désactivé car besoin d'adapter plus de choses... */
+  :root {
+    color-scheme: light;
+  }
+}
+
+/* ======================== */
+/* 20. PRINT STYLES         */
+/* ======================== */
+@media print {
+  .navbar,
+  .promo-banner,
+  .floating-cta,
+  .footer-social {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white;
+    font-size: 12pt;
+    color: black;
+  }
+  
+  header,
+  .testimonials,
+  .cta {
+    background: none !important;
+    color: black;
+  }
+  
+  header h1,
+  header h2,
+  .testimonials h2 {
+    color: black;
+  }
+  
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+  }
+  
+  h2::after {
+    display: none;
   }
 }
