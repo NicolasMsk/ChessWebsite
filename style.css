@@ -924,6 +924,72 @@ header > * {
 }
 
 /* ======================== */
+/* SECTION FAQ              */
+/* ======================== */
+.faq {
+  background-color: white;
+  padding: clamp(2.2rem, 5vw, 4.2rem) 0;
+  box-shadow: var(--box-shadow);
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  border-left: 3px solid var(--primary);
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  border-left-color: var(--secondary);
+}
+
+.faq-item h4 {
+  padding: 1.2rem 1.5rem;
+  margin: 0;
+  font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+  color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-item h4::after {
+  content: '+';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.faq-item.active h4::after {
+  content: '-';
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+  margin-bottom: 0;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--text);
+}
+
+/* ======================== */
 /* 13. TESTIMONIALS         */
 /* ======================== */
 .testimonials {
@@ -1468,6 +1534,17 @@ footer {
   
   .contact-message, 
   .notice {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Amélioration FAQ sur mobile */
+  .faq-item h4 {
+    font-size: 16px;
+    padding: 1rem 1.2rem;
+  }
+  
+  .faq-answer p {
     font-size: 16px;
     line-height: 1.6;
   }
