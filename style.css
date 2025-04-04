@@ -540,7 +540,7 @@ header > * {
 /* ======================== */
 .chessboard-showcase {
   height: clamp(200px, 50vw, 400px);
-  background-image: url('echiquier.PNG');
+  background-image: url('echiquier.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -706,7 +706,7 @@ header > * {
 /* 12. TARIFS SECTION       */
 /* ======================== */
 .free-lesson-banner {
-  background: linear-gradient(135deg, rgba(192, 57, 43, 0.9), rgba(231, 76, 60, 0.9)), url('echiquier.PNG');
+  background: linear-gradient(135deg, rgba(192, 57, 43, 0.9), rgba(231, 76, 60, 0.9)), url('echiquier.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -915,7 +915,7 @@ header > * {
   color: white;
   text-align: center;
   padding: clamp(3rem, 6vw, 4rem) 0;
-  background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('echiquier.PNG');
+  background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('echiquier.png');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1102,7 +1102,7 @@ header > * {
   text-align: center;
   padding: clamp(3rem, 6vw, 4rem) 0;
   position: relative;
-  background-image: linear-gradient(rgba(192, 57, 43, 0.9), rgba(192, 57, 43, 0.9)), url('echiquier.PNG');
+  background-image: linear-gradient(rgba(192, 57, 43, 0.9), rgba(192, 57, 43, 0.9)), url('echiquier.png');
   background-size: cover;
   background-position: center;
 }
