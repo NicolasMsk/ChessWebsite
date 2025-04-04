@@ -306,66 +306,74 @@
       </div>
     </div>
   </section>
-
-  <!-- Section Contact -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Contact et réservation</h2>
-      <div class="free-trial-reminder">
-        <i class="fa-solid fa-gift"></i> Premier cours d'échecs OFFERT - Réservez dès maintenant !
-      </div>
-      <div class="contact-container">
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fa-solid fa-phone contact-icon"></i>
-            <div>
-              <h4>Téléphone</h4>
-              <a href="tel:+33609365691" aria-label="Téléphone : 06 09 36 56 91">06 09 36 56 91</a>
-            </div>
+<!-- Section Contact -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Contact et réservation</h2>
+    <div class="free-trial-reminder">
+      <i class="fa-solid fa-gift"></i> Premier cours d'échecs OFFERT - Réservez dès maintenant !
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fa-solid fa-phone contact-icon"></i>
+          <div>
+            <h4>Téléphone</h4>
+            <a href="tel:+33609365691" aria-label="Téléphone : 06 09 36 56 91">06 09 36 56 91</a>
           </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-envelope contact-icon"></i>
-            <div>
-              <h4>Email</h4>
-              <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-clock contact-icon"></i>
-            <div>
-              <h4>Horaires</h4>
-              <p>Lundi au Samedi : 9h - 20h</p>
-            </div>
-          </div>
-          <p class="contact-message">
-            N'hésitez pas à me contacter pour toute question, ou pour réserver votre cours 
-            d'échecs <strong>gratuit</strong> et débuter votre progression !
-          </p>
         </div>
-        <div class="contact-form">
-          <form id="reservation-form">
-            <div class="form-group">
-              <label for="name">Nom complet</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Téléphone</label>
-              <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-full">Réserver mon cours gratuit</button>
-          </form>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope contact-icon"></i>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-clock contact-icon"></i>
+          <div>
+            <h4>Horaires</h4>
+            <p>Lundi au Samedi : 9h - 20h</p>
+          </div>
+        </div>
+        <p class="contact-message">
+          N'hésitez pas à me contacter pour toute question, ou pour réserver votre cours 
+          d'échecs <strong>gratuit</strong> et débuter votre progression !
+        </p>
+      </div>
+      <div class="contact-form">
+        <form id="reservation-form" action="https://formspree.io/f/mnnpgoqe" method="POST">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-full">Réserver mon cours gratuit</button>
+        </form>
+        
+        <!-- Message de confirmation (caché par défaut) -->
+        <div id="form-confirmation" class="form-confirmation" style="display: none;">
+          <div class="confirmation-content">
+            <i class="fa-solid fa-check-circle confirmation-icon"></i>
+            <h3>Demande envoyée avec succès !</h3>
+            <p>Merci pour votre intérêt. Je vous contacterai très rapidement pour organiser votre premier cours gratuit.</p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Appel à l'action avec image d'échiquier -->
   <section class="cta">
@@ -416,25 +424,69 @@
   </div>
 
   <!-- Script JavaScript pour la navigation mobile -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenu = document.getElementById('mobile-menu');
-      const navMenu = document.querySelector('.nav-menu');
-      
-      mobileMenu.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navMenu.classList.toggle('active');
-      });
+  <!-- Script JavaScript pour la navigation mobile et la gestion du formulaire -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Navigation mobile
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    mobileMenu.addEventListener('click', function() {
+      this.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
 
-      // Fermer le menu après avoir cliqué sur un lien
-      const navLinks = document.querySelectorAll('.nav-link');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          mobileMenu.classList.remove('active');
-          navMenu.classList.remove('active');
-        });
+    // Fermer le menu après avoir cliqué sur un lien
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+        navMenu.classList.remove('active');
       });
     });
-  </script>
+
+    // Gestion du formulaire et confirmation
+    const form = document.getElementById('reservation-form');
+    const confirmationMessage = document.getElementById('form-confirmation');
+    
+    if (form) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Récupérer les données du formulaire
+        const formData = new FormData(form);
+        
+        // Envoyer les données (avec Formspree)
+        fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            // Cacher le formulaire
+            form.style.display = 'none';
+            
+            // Afficher le message de confirmation
+            confirmationMessage.style.display = 'block';
+            
+            // Réinitialiser le formulaire
+            form.reset();
+            
+            // Faire défiler jusqu'au message de confirmation
+            confirmationMessage.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            throw new Error('Une erreur est survenue. Veuillez réessayer.');
+          }
+        })
+        .catch(error => {
+          alert(error.message);
+        });
+      });
+    }
+  });
+</script>
 </body>
 </html>
