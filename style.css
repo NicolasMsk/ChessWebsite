@@ -306,6 +306,15 @@ header {
   position: relative;
 }
 
+/* Header avec fond d'échiquier */
+.header-with-chessboard {
+  background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('echiquier.PNG');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
 header h1 {
   color: white;
   margin-bottom: 0.25rem;
@@ -367,6 +376,10 @@ header::before {
   background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
   opacity: 0.3;
   z-index: 0;
+}
+
+.header-with-chessboard::before {
+  display: none; /* Suppression du pattern pour la version avec image d'échecs */
 }
 
 header > * {
@@ -484,6 +497,45 @@ header > * {
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
   transform: rotate(5deg);
   z-index: 2;
+}
+
+/* ======================== */
+/* SECTION ÉCHIQUIER PLEINE LARGEUR */
+/* ======================== */
+.chessboard-showcase {
+  height: 400px;
+  background-image: url('echiquier.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  margin: 0 -1.5rem 4rem -1.5rem;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.chessboard-overlay {
+  background-color: rgba(44, 62, 80, 0.7);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(2px);
+  max-width: 80%;
+}
+
+.chessboard-overlay h3 {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.chessboard-overlay p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0;
 }
 
 /* ======================== */
@@ -615,7 +667,9 @@ header > * {
 /* 12. TARIFS SECTION       */
 /* ======================== */
 .free-lesson-banner {
-  background: linear-gradient(135deg, var(--secondary), var(--accent-bright));
+  background: linear-gradient(135deg, rgba(192, 57, 43, 0.9), rgba(231, 76, 60, 0.9)), url('echiquier.jpg');
+  background-size: cover;
+  background-position: center;
   color: white;
   padding: 2rem;
   border-radius: var(--border-radius);
@@ -627,20 +681,7 @@ header > * {
 }
 
 .free-lesson-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
-    linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
-    linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%), 
-    linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
-  background-size: 40px 40px;
-  opacity: 0.3;
-  z-index: 0;
+  display: none; /* Supprimé car nous utilisons déjà l'image d'échiquier en arrière-plan */
 }
 
 .free-lesson-banner > * {
@@ -833,6 +874,10 @@ header > * {
   color: white;
   text-align: center;
   padding: 4rem 0;
+  background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('echiquier.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 .testimonials h2 {
@@ -1014,6 +1059,9 @@ header > * {
   text-align: center;
   padding: 4rem 0;
   position: relative;
+  background-image: linear-gradient(rgba(192, 57, 43, 0.9), rgba(192, 57, 43, 0.9)), url('echiquier.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .cta-badge {
@@ -1243,6 +1291,19 @@ footer {
   .promo-banner p {
     font-size: 0.9rem;
   }
+  
+  .chessboard-showcase {
+    height: 300px;
+  }
+  
+  .chessboard-overlay {
+    padding: 2rem;
+    max-width: 90%;
+  }
+  
+  .chessboard-overlay h3 {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1282,5 +1343,18 @@ footer {
   
   .header-offer-badge {
     font-size: 1.1rem;
+  }
+  
+  .chessboard-showcase {
+    height: 250px;
+  }
+  
+  .chessboard-overlay {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+  
+  .chessboard-overlay h3 {
+    font-size: 1.5rem;
   }
 }
