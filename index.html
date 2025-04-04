@@ -6,10 +6,11 @@
   <meta name="keywords" content="cours d'échecs, professeur d'échecs, Paris, enfants, adultes, Paris 15, Nicolas Musicki" />
   <meta name="author" content="Nicolas Musicki" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3a6ea5">
 
   <title>Professeur d'échecs à Paris | 1er Cours OFFERT - Nicolas Musicki</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts - Préchargement pour améliorer les performances -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
@@ -306,74 +307,75 @@
       </div>
     </div>
   </section>
-<!-- Section Contact -->
-<section class="contact" id="contact">
-  <div class="container">
-    <h2>Contact et réservation</h2>
-    <div class="free-trial-reminder">
-      <i class="fa-solid fa-gift"></i> Premier cours d'échecs OFFERT - Réservez dès maintenant !
-    </div>
-    <div class="contact-container">
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fa-solid fa-phone contact-icon"></i>
-          <div>
-            <h4>Téléphone</h4>
-            <a href="tel:+33609365691" aria-label="Téléphone : 06 09 36 56 91">06 09 36 56 91</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fa-solid fa-envelope contact-icon"></i>
-          <div>
-            <h4>Email</h4>
-            <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fa-solid fa-clock contact-icon"></i>
-          <div>
-            <h4>Horaires</h4>
-            <p>Lundi au Samedi : 9h - 20h</p>
-          </div>
-        </div>
-        <p class="contact-message">
-          N'hésitez pas à me contacter pour toute question, ou pour réserver votre cours 
-          d'échecs <strong>gratuit</strong> et débuter votre progression !
-        </p>
+  
+  <!-- Section Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact et réservation</h2>
+      <div class="free-trial-reminder">
+        <i class="fa-solid fa-gift"></i> Premier cours d'échecs OFFERT - Réservez dès maintenant !
       </div>
-      <div class="contact-form">
-        <form id="reservation-form" action="https://formspree.io/f/mnnpgoqe" method="POST">
-          <div class="form-group">
-            <label for="name">Nom complet</label>
-            <input type="text" id="name" name="name" required>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fa-solid fa-phone contact-icon"></i>
+            <div>
+              <h4>Téléphone</h4>
+              <a href="tel:+33609365691" aria-label="Téléphone : 06 09 36 56 91">06 09 36 56 91</a>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope contact-icon"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="phone">Téléphone</label>
-            <input type="tel" id="phone" name="phone" required>
+          <div class="contact-item">
+            <i class="fa-solid fa-clock contact-icon"></i>
+            <div>
+              <h4>Horaires</h4>
+              <p>Lundi au Samedi : 9h - 20h</p>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-full">Réserver mon cours gratuit</button>
-        </form>
-        
-        <!-- Message de confirmation (caché par défaut) -->
-        <div id="form-confirmation" class="form-confirmation" style="display: none;">
-          <div class="confirmation-content">
-            <i class="fa-solid fa-check-circle confirmation-icon"></i>
-            <h3>Demande envoyée avec succès !</h3>
-            <p>Merci pour votre intérêt. Je vous contacterai très rapidement pour organiser votre premier cours gratuit.</p>
+          <p class="contact-message">
+            N'hésitez pas à me contacter pour toute question, ou pour réserver votre cours 
+            d'échecs <strong>gratuit</strong> et débuter votre progression !
+          </p>
+        </div>
+        <div class="contact-form">
+          <form id="reservation-form" action="https://formspree.io/f/mnnpgoqe" method="POST">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-full">Réserver mon cours gratuit</button>
+          </form>
+          
+          <!-- Message de confirmation (caché par défaut) -->
+          <div id="form-confirmation" class="form-confirmation" style="display: none;">
+            <div class="confirmation-content">
+              <i class="fa-solid fa-check-circle confirmation-icon"></i>
+              <h3>Demande envoyée avec succès !</h3>
+              <p>Merci pour votre intérêt. Je vous contacterai très rapidement pour organiser votre premier cours gratuit.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Appel à l'action avec image d'échiquier -->
   <section class="cta">
@@ -391,7 +393,7 @@
       <div class="footer-content">
         <div class="footer-logo">
           <i class="fa-solid fa-chess-knight"></i> Nicolas Musicki
-          <p>Professeur d'échecs à Paris<sup>e</sup></p>
+          <p>Professeur d'échecs à Paris 15<sup>e</sup></p>
         </div>
         <div class="footer-links">
           <h4>Liens rapides</h4>
@@ -405,8 +407,8 @@
         <div class="footer-social">
           <h4>Suivez-moi</h4>
           <div class="social-icons">
-            <a href="https://www.instagram.com/nicolas_musicki/" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/nicolas_musicki/" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -423,70 +425,69 @@
     </a>
   </div>
 
-  <!-- Script JavaScript pour la navigation mobile -->
   <!-- Script JavaScript pour la navigation mobile et la gestion du formulaire -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Navigation mobile
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    mobileMenu.addEventListener('click', function() {
-      this.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    // Fermer le menu après avoir cliqué sur un lien
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        mobileMenu.classList.remove('active');
-        navMenu.classList.remove('active');
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Navigation mobile
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      mobileMenu.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
       });
-    });
 
-    // Gestion du formulaire et confirmation
-    const form = document.getElementById('reservation-form');
-    const confirmationMessage = document.getElementById('form-confirmation');
-    
-    if (form) {
-      form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        // Récupérer les données du formulaire
-        const formData = new FormData(form);
-        
-        // Envoyer les données (avec Formspree)
-        fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        })
-        .then(response => {
-          if (response.ok) {
-            // Cacher le formulaire
-            form.style.display = 'none';
-            
-            // Afficher le message de confirmation
-            confirmationMessage.style.display = 'block';
-            
-            // Réinitialiser le formulaire
-            form.reset();
-            
-            // Faire défiler jusqu'au message de confirmation
-            confirmationMessage.scrollIntoView({ behavior: 'smooth' });
-          } else {
-            throw new Error('Une erreur est survenue. Veuillez réessayer.');
-          }
-        })
-        .catch(error => {
-          alert(error.message);
+      // Fermer le menu après avoir cliqué sur un lien
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.remove('active');
+          navMenu.classList.remove('active');
         });
       });
-    }
-  });
-</script>
+
+      // Gestion du formulaire et confirmation
+      const form = document.getElementById('reservation-form');
+      const confirmationMessage = document.getElementById('form-confirmation');
+      
+      if (form) {
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          // Récupérer les données du formulaire
+          const formData = new FormData(form);
+          
+          // Envoyer les données (avec Formspree)
+          fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          })
+          .then(response => {
+            if (response.ok) {
+              // Cacher le formulaire
+              form.style.display = 'none';
+              
+              // Afficher le message de confirmation
+              confirmationMessage.style.display = 'block';
+              
+              // Réinitialiser le formulaire
+              form.reset();
+              
+              // Faire défiler jusqu'au message de confirmation
+              confirmationMessage.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              throw new Error('Une erreur est survenue. Veuillez réessayer.');
+            }
+          })
+          .catch(error => {
+            alert(error.message);
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
