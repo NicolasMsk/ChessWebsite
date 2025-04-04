@@ -339,7 +339,7 @@ header {
 
 /* Header avec fond d'échiquier */
 .header-with-chessboard {
-  background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('echiquier.PNG');
+  background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('echiquier.png');
   background-size: cover;
   background-position: center;
   position: relative;
