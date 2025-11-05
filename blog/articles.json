@@ -1,0 +1,54 @@
+{
+  "articles": [
+    {
+      "id": "10-erreurs-debutant-echecs",
+      "title": "10 erreurs de débutant aux échecs (et comment les éviter)",
+      "description": "Les 10 erreurs que TOUS les débutants font aux échecs. Checklist complète avec solutions concrètes pour progresser rapidement et arrêter de perdre bêtement.",
+      "date": "2025-11-12",
+      "readTime": "10 min",
+      "author": "Nicolas Musicki",
+      "image": "images/10-erreurs-debutant-echecs.webp",
+      "imageAlt": "Liste des erreurs classiques des débutants aux échecs"
+    },
+    {
+      "id": "professeur-ou-autodidacte-echecs",
+      "title": "Apprendre les échecs : faut-il un professeur ou peut-on débuter seul ?",
+      "description": "Professeur vs autodidacte aux échecs : analyse complète avec avantages, inconvénients, coûts réels et profils types. Le guide pour choisir la bonne méthode selon VOTRE situation.",
+      "date": "2025-11-10",
+      "readTime": "11 min",
+      "author": "Nicolas Musicki",
+      "image": "images/professeur-ou-autodidacte-echecs.webp",
+      "imageAlt": "Comparaison professeur d'échecs vs apprentissage autodidacte"
+    },
+    {
+      "id": "cours-echecs-enfants-paris",
+      "title": "Cours d'échecs pour enfants à Paris : comment choisir le bon professeur ?",
+      "description": "Les 7 critères essentiels pour choisir un professeur d'échecs pour votre enfant à Paris. Guide pratique avec questions à poser, pièges à éviter et comparatif club vs cours particuliers.",
+      "date": "2025-11-07",
+      "readTime": "12 min",
+      "author": "Nicolas Musicki",
+      "image": "images/cours-echecs-enfants-paris.webp",
+      "imageAlt": "Cours d'échecs pour enfants à Paris"
+    },
+    {
+      "id": "comment-apprendre-echecs-enfant",
+      "title": "Comment apprendre les échecs à un enfant ? Guide complet 2025",
+      "description": "Méthode éprouvée pour initier votre enfant aux échecs sans prise de tête. Mini-jeux, astuces et erreurs à éviter par un professeur expérimenté.",
+      "date": "2025-11-06",
+      "readTime": "10 min",
+      "author": "Nicolas Musicki",
+      "image": "images/comment-apprendre-echecs-enfant.webp",
+      "imageAlt": "Parent enseignant les échecs à son enfant de manière ludique et pédagogique"
+    },
+    {
+      "id": "bienfaits-echecs-enfants",
+      "title": "Les bienfaits des échecs pour les enfants : 7 raisons de commencer dès 5 ans",
+      "description": "Découvrez pourquoi 5 ans est l'âge idéal pour commencer les échecs et les 7 bienfaits scientifiquement prouvés pour le développement des enfants.",
+      "date": "2025-11-05",
+      "readTime": "8 min",
+      "author": "Nicolas Musicki",
+      "image": "images/bienfaits-echecs-enfants.webp",
+      "imageAlt": "Enfant de 5 ans jouant aux échecs, développant sa concentration et ses capacités cognitives"
+    }
+  ]
+}

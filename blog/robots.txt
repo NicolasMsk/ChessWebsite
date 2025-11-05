@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /blog/
+Allow: /blog/*.html
+Allow: /blog/*.css
+Allow: /blog/*.js
+
+# Sitemap
+Sitemap: https://www.cours-echecs-paris.fr/blog/sitemap.xml
+Sitemap: https://www.cours-echecs-paris.fr/sitemap.xml
+
+# Éviter l'indexation des fichiers temporaires
+Disallow: /blog/*.tmp
+Disallow: /blog/*~
+Disallow: /blog/*.bak

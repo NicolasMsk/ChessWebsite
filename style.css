@@ -1,0 +1,1651 @@
+/* ======================== */
+/* 1. VARIABLES & RESET     */
+/* ======================== */
+:root {
+  --primary: #3a6ea5;         /* Bleu plus clair et moderne */
+  --secondary: #e74c3c;       /* Rouge plus vif et lisible */
+  --accent: #f39c12;          /* Orange inchangé */
+  --accent-bright: #e74c3c;   /* Rouge vif */
+  --light: #f5f7fa;           /* Fond légèrement plus clair */
+  --dark: #2c3e50;            /* Bleu foncé plus doux */
+  --text: #333333;            /* Texte standard */
+  --text-light: #666666;      /* Texte secondaire plus clair */
+  --light-gray: #f8f9fa;      /* Gris très clair pour les fonds */
+  --medium-gray: #e9ecef;     /* Gris moyen plus doux */
+  --success: #2ecc71;         /* Vert plus vif */
+  --promo: #e74c3c;           /* Rouge promo */
+  --border-radius: 6px;       /* Coins légèrement plus arrondis */
+  --box-shadow: 0 5px 15px rgba(0,0,0,0.08);  /* Ombre plus subtile */
+  --transition: all 0.3s ease;
+  --container-width: 1200px;
+  --header-height: 4rem;
+  --content-spacing: clamp(1.25rem, 5vw, 4rem);
+  --font-size-base: clamp(16px, 1vw, 18px);
+  --font-size-h1: clamp(2.2rem, 6vw, 3rem);
+  --font-size-h2: clamp(1.6rem, 4vw, 2.2rem);
+  --font-size-h3: clamp(1.3rem, 3vw, 1.8rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--light);
+  line-height: 1.8;
+  font-size: var(--font-size-base);
+  padding-top: 40px;
+  overflow-x: hidden;
+}
+
+/* ======================== */
+/* 2. TYPOGRAPHY            */
+/* ======================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  width: 100%;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Ajout d'une ombre pour meilleure lisibilité */
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  color: var(--primary);
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  color: var(--primary);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
+  color: var(--text);
+}
+
+strong {
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ======================== */
+/* 3. BUTTONS & LINKS       */
+/* ======================== */
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.btn {
+  display: inline-block;
+  padding: clamp(0.6rem, 2vw, 0.95rem) clamp(1.2rem, 3vw, 1.9rem);
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: var(--primary);
+}
+
+.btn-light {
+  background-color: white;
+  color: var(--primary);
+}
+
+.btn-light:hover {
+  background-color: var(--light);
+  color: var(--secondary);
+}
+
+.btn-full {
+  display: block;
+  width: 100%;
+}
+
+/* ======================== */
+/* 4. LAYOUT & CONTAINERS   */
+/* ======================== */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 1.5rem);
+}
+
+section {
+  padding: var(--content-spacing) 0;
+}
+
+main section {
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  background: white;
+  border-radius: var(--border-radius);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: var(--box-shadow);
+}
+
+/* ======================== */
+/* 5. BANNIÈRE PROMO        */
+/* ======================== */
+.promo-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--promo);
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+  z-index: 2000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.promo-banner p {
+  margin: 0;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  color: white; /* Assurez-vous que le texte est blanc */
+}
+
+.pulse-icon {
+  animation: pulse 2s infinite;
+  margin-right: 0.3rem;
+}
+
+.promo-link {
+  color: white;
+  text-decoration: underline;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  transition: var(--transition);
+}
+
+.promo-link:hover {
+  color: var(--light);
+}
+
+/* ======================== */
+/* 6. NAVIGATION            */
+/* ======================== */
+.navbar {
+  background-color: white;
+  position: sticky;
+  top: 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  font-weight: 700;
+  color: var(--primary);
+  z-index: 1001;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.6rem, 1vw, 1.6rem);
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+.nav-link {
+  color: var(--text);
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.25rem;
+  font-size: clamp(0.9rem, 1vw, 1.05rem);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--secondary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  color: var(--secondary);
+  font-weight: 700;
+  border: 2px solid var(--secondary);
+  border-radius: var(--border-radius);
+  padding: 0.4rem 0.8rem;
+}
+
+.nav-cta:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.nav-cta:hover::after {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary);
+  margin: 3px 0;
+  transition: var(--transition);
+}
+
+/* ======================== */
+/* 7. HEADER                */
+/* ======================== */
+header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: clamp(2.2rem, 6vw, 4.2rem) 1rem;
+  position: relative;
+}
+
+/* Header avec fond d'échiquier */
+.header-with-chessboard {
+  background-image: linear-gradient(rgba(58, 110, 165, 0.85), rgba(58, 110, 165, 0.85)), url('echiquier.avif');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  color: white;
+  margin-bottom: 0.35rem;
+  font-size: var(--font-size-h1);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+header h2 {
+  font-weight: 400;
+  color: var(--light);
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  padding-bottom: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+header h2::after {
+  display: none;
+}
+
+.intro {
+  font-style: italic;
+  color: var(--light);
+  opacity: 0.95;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Badge d'offre dans le header */
+.header-offers {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header-offer-badge {
+  display: inline-block;
+  background-color: var(--accent-bright);
+  color: white;
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+  border-radius: var(--border-radius);
+  font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transform: rotate(-3deg);
+  animation: pulse 2s infinite;
+}
+
+/* Chess pattern overlay for header */
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%), 
+    linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%), 
+    linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.header-with-chessboard::before {
+  display: none;
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ======================== */
+/* 8. HERO SECTION          */
+/* ======================== */
+.hero {
+  background-color: white;
+  padding: clamp(2.2rem, 5vw, 3rem) 0;
+  position: relative;
+  box-shadow: var(--box-shadow);
+}
+
+.hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 100%;
+}
+
+.hero-text h3 {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+  color: var(--text);
+}
+
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.offre-speciale {
+  display: inline-block;
+  font-weight: bold;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: white;
+  background-color: var(--secondary);
+  padding: clamp(0.55rem, 1.5vw, 0.8rem) clamp(0.9rem, 2vw, 1.3rem);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transform: rotate(-2deg);
+  position: relative;
+}
+
+.offre-speciale .offre-detail {
+  display: block;
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
+  margin-top: 0.25rem;
+  opacity: 0.95;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  line-height: 1;
+  height: fit-content;
+}
+
+/* Image "hero" */
+.hero-image {
+  flex: 1;
+  min-width: 100%;
+  text-align: center;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border: 5px solid white;
+  outline: 1px solid rgba(0,0,0,0.08);
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.image-badge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: var(--accent-bright);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transform: rotate(5deg);
+  z-index: 2;
+}
+
+/* ======================== */
+/* SECTION ÉCHIQUIER PLEINE LARGEUR */
+/* ======================== */
+.chessboard-showcase {
+  height: clamp(220px, 50vw, 420px);
+  background-image: url('echiquier.avif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  margin: 0 -1.5rem 4rem -1.5rem;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.chessboard-overlay {
+  background-color: rgba(58, 110, 165, 0.7);
+  padding: clamp(1.6rem, 4vw, 3.2rem);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(2px);
+  max-width: clamp(85%, 100% - 2rem, 80%);
+}
+
+.chessboard-overlay h3 {
+  color: white;
+  font-size: clamp(1.5rem, 3.5vw, 2.3rem);
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.chessboard-overlay p {
+  color: white;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  margin-bottom: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ======================== */
+/* 9. ABOUT SECTION         */
+/* ======================== */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.about p {
+  text-align: justify;
+  color: var(--text);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: clamp(1.1rem, 2vw, 1.6rem);
+  margin-top: clamp(1.1rem, 2vw, 1.6rem);
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1 1 clamp(120px, 25%, 170px);
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.stat-number {
+  display: block;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--secondary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-text {
+  display: block;
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  color: var(--text);
+}
+
+/* ======================== */
+/* 10. ADVANTAGES SECTION   */
+/* ======================== */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 30%, 290px), 1fr));
+  gap: clamp(1.1rem, 2vw, 1.6rem);
+  margin-top: 2rem;
+}
+
+.advantage-card {
+  background: var(--light-gray);
+  padding: clamp(1.3rem, 2.5vw, 1.6rem);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border-left: 3px solid var(--primary);
+  height: 100%;
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  border-left-color: var(--secondary);
+}
+
+.advantage-icon {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.advantage-card h4 {
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+  font-size: clamp(1.15rem, 1.5vw, 1.3rem);
+}
+
+.advantage-card p {
+  margin-bottom: 0;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  color: var(--text);
+}
+
+/* ======================== */
+/* 11. LOCATION SECTION     */
+/* ======================== */
+.location-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.6rem, 4vw, 2.1rem);
+  align-items: center;
+}
+
+.location-text {
+  flex: 1.5;
+  min-width: 100%;
+}
+
+.location-icon {
+  color: var(--secondary);
+  margin-right: 0.5rem;
+}
+
+.location-map {
+  flex: 1;
+  min-width: 100%;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ======================== */
+/* 12. TARIFS SECTION       */
+/* ======================== */
+.free-lesson-banner {
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.85), rgba(231, 76, 60, 0.85)), url('echiquier.avif');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: clamp(1.6rem, 4vw, 2.1rem);
+  border-radius: var(--border-radius);
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.free-lesson-banner::before {
+  display: none;
+}
+
+.free-lesson-banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.gift-icon {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.free-lesson-banner h3 {
+  color: white;
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.free-lesson-banner h3 span {
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+  background-color: white;
+  color: var(--secondary);
+  padding: 0.2rem 0.5rem;
+  margin: 0 0.3rem;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.free-lesson-banner p {
+  margin-bottom: 1.5rem;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.free-lesson-banner .btn {
+  background-color: white;
+  color: var(--secondary);
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  padding: clamp(0.65rem, 1.5vw, 0.8rem) clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.free-lesson-banner .btn:hover {
+  background-color: var(--light);
+  transform: translateY(-5px);
+}
+
+.tarifs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.6rem, 4vw, 2.1rem);
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tarif-card {
+  flex: 1 1 clamp(260px, 40%, 360px);
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border: 1px solid var(--medium-gray);
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.tarif-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.tarif-card.featured {
+  border-color: var(--secondary);
+  transform: scale(1.05);
+}
+
+.tarif-card.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.tarif-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-bottom-left-radius: var(--border-radius);
+  z-index: 1;
+}
+
+.tarif-header {
+  background-color: var(--primary);
+  color: white;
+  padding: clamp(1.3rem, 3vw, 1.6rem);
+  text-align: center;
+}
+
+.tarif-card.featured .tarif-header {
+  background-color: var(--secondary);
+}
+
+.tarif-header h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.tarif-price {
+  font-size: clamp(2.1rem, 4vw, 2.6rem);
+  font-weight: 700;
+}
+
+.duration {
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  font-weight: 400;
+}
+
+.tarif-body {
+  padding: clamp(1.3rem, 3vw, 1.6rem);
+}
+
+.tarif-features {
+  margin-bottom: 1.5rem;
+}
+
+.tarif-features li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.6rem;
+  position: relative;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--text);
+}
+
+.tarif-features li i {
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  color: var(--success);
+}
+
+.notice {
+  text-align: center;
+  font-weight: bold;
+  color: var(--secondary);
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  padding: clamp(1.3rem, 3vw, 1.6rem);
+  background-color: var(--light);
+  border-radius: var(--border-radius);
+  border: 2px dashed var(--secondary);
+  margin-top: 2rem;
+}
+
+.notice i {
+  margin-right: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ======================== */
+/* SECTION FAQ              */
+/* ======================== */
+.faq {
+  background-color: white;
+  padding: clamp(2.2rem, 5vw, 4.2rem) 0;
+  box-shadow: var(--box-shadow);
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  border-left: 3px solid var(--primary);
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  border-left-color: var(--secondary);
+}
+
+.faq-item h4 {
+  padding: 1.2rem 1.5rem;
+  margin: 0;
+  font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+  color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-item h4::after {
+  content: '+';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.faq-item.active h4::after {
+  content: '-';
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+  margin-bottom: 0;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--text);
+}
+
+/* ======================== */
+/* 13. TESTIMONIALS         */
+/* ======================== */
+.testimonials {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: clamp(3.1rem, 6vw, 4.1rem) 0;
+  background-image: linear-gradient(rgba(58, 110, 165, 0.85), rgba(58, 110, 165, 0.85)), url('echiquier.avif');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.testimonials h2 {
+  color: white;
+  margin-bottom: clamp(2.1rem, 5vw, 3.1rem);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.testimonials h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent);
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.6rem, 4vw, 2.1rem);
+  justify-content: center;
+}
+
+.testimonial-card {
+  background-color: white;
+  color: var(--text);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  padding: clamp(1.3rem, 3vw, 1.6rem);
+  flex: 1 1 clamp(260px, 30%, 360px);
+  position: relative;
+  transition: var(--transition);
+  margin-bottom: 1rem;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.testimonial-content {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.testimonial-content::before {
+  content: '\201C';
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  position: absolute;
+  top: -1.5rem;
+  left: -0.5rem;
+  color: var(--medium-gray);
+  z-index: 0;
+}
+
+.testimonial-content p {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  margin-bottom: 0;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--text);
+}
+
+.testimonial-author {
+  text-align: right;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--medium-gray);
+}
+
+.author-name {
+  display: block;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+}
+
+.author-title {
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  color: var(--secondary);
+}
+
+/* ======================== */
+/* 14. CONTACT SECTION      */
+/* ======================== */
+.contact {
+  background-color: white;
+  padding: clamp(3.1rem, 6vw, 4.1rem) 0;
+}
+
+.free-trial-reminder {
+  background-color: var(--accent-bright);
+  color: white;
+  padding: clamp(0.8rem, 2vw, 1.05rem);
+  margin-bottom: 2rem;
+  text-align: center;
+  border-radius: var(--border-radius);
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  font-weight: 700;
+  animation: pulse 2s infinite;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.free-trial-reminder i {
+  margin-right: 0.5rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.6rem, 4vw, 2.1rem);
+}
+
+.contact-info {
+  flex: 1 1 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  color: var(--secondary);
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-item h4 {
+  margin-bottom: 0.3rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.15rem);
+  color: var(--primary);
+}
+
+.contact-message {
+  padding: clamp(1.3rem, 3vw, 1.6rem);
+  background-color: var(--light);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--secondary);
+  margin-top: 2rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--text);
+}
+
+.contact-form {
+  flex: 1 1 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  transition: var(--transition);
+  color: var(--text);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.15);
+}
+
+/* ======================== */
+/* 15. CTA SECTION          */
+/* ======================== */
+.cta {
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: clamp(3.1rem, 6vw, 4.1rem) 0;
+  position: relative;
+  background-image: linear-gradient(rgba(231, 76, 60, 0.85), rgba(231, 76, 60, 0.85)), url('echiquier.avif');
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-badge {
+  background-color: var(--accent);
+  color: white;
+  font-weight: 700;
+  padding: clamp(0.45rem, 1vw, 0.55rem) clamp(1.05rem, 2vw, 1.55rem);
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  transform: rotate(-2deg);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+}
+
+.cta h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.cta p {
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(1.05rem, 1.3vw, 1.15rem);
+  color: white;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.cta p strong {
+  background-color: white;
+  color: var(--secondary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* ======================== */
+/* 16. FOOTER               */
+/* ======================== */
+footer {
+  background-color: var(--dark);
+  color: white;
+  padding: clamp(2.1rem, 4vw, 3.1rem) 0 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.6rem, 4vw, 2.1rem);
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  flex: 1 1 100%;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.35rem, 2vw, 1.55rem);
+  font-weight: 700;
+}
+
+.footer-logo p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  margin-top: 0.5rem;
+  opacity: 0.85;
+  color: white;
+}
+
+.footer-links {
+  flex: 1 1 clamp(160px, 30%, 210px);
+}
+
+.footer-links h4,
+.footer-social h4 {
+  color: var(--light);
+  margin-bottom: 1rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.15rem);
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+  color: var(--light);
+  opacity: 0.85;
+  transition: var(--transition);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+}
+
+.footer-links ul li a:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.footer-social {
+  flex: 1 1 clamp(160px, 30%, 210px);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  color: white;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background-color: var(--secondary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  opacity: 0.75;
+}
+
+/* ======================== */
+/* 17. FLOATING CTA BUTTON  */
+/* ======================== */
+.floating-cta {
+  position: fixed;
+  bottom: clamp(1.1rem, 3vw, 2.1rem);
+  right: clamp(1.1rem, 3vw, 2.1rem);
+  z-index: 999;
+}
+
+.floating-cta a {
+  display: flex;
+  align-items: center;
+  background-color: var(--accent-bright);
+  color: white;
+  padding: clamp(0.75rem, 1.5vw, 1.05rem) clamp(1.05rem, 2vw, 1.55rem);
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: var(--transition);
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.2;
+}
+
+.floating-cta a:hover {
+  background-color: var(--secondary);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  color: white;
+  text-decoration: none;
+}
+
+.floating-cta i {
+  margin-right: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+/* ======================== */
+/* 18. MEDIA QUERIES        */
+/* ======================== */
+@media (min-width: 576px) {
+  .hero-text {
+    min-width: 0;
+    flex: 1 1 300px;
+  }
+  
+  .hero-image {
+    min-width: 0;
+    flex: 1 1 300px;
+  }
+  
+  .contact-info,
+  .contact-form {
+    flex: 1 1 45%;
+  }
+  
+  .footer-logo {
+    flex: 2 1 250px;
+  }
+  
+  .location-text {
+    min-width: 0;
+    flex: 1.5 1 300px;
+  }
+  
+  .location-map {
+    min-width: 0;
+    flex: 1 1 280px;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 100px; /* Ajusté pour la bannière promo */
+    left: -100%;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 100px);
+    transition: var(--transition);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+    padding: 2rem;
+    z-index: 999;
+    align-items: flex-start;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .nav-menu li {
+    width: 100%;
+  }
+  
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 0;
+    font-size: 1.15rem;
+  }
+  
+  .nav-cta {
+    margin-top: 1rem;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+  }
+  
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  .tarif-card.featured {
+    transform: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tarif-card.featured:hover {
+    transform: translateY(-10px);
+  }
+  
+  .promo-banner p {
+    font-size: 0.95rem;
+  }
+  
+  .chessboard-showcase {
+    background-attachment: scroll; /* Fix for mobile scrolling */
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-text {
+    text-align: center;
+  }
+  
+  .badge-container {
+    justify-content: center;
+  }
+  
+  .header-offer-badge {
+    font-size: 1.15rem;
+  }
+  
+  .badge-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .offre-speciale, .badge {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .promo-banner p strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .floating-cta {
+    bottom: 0.6rem;
+    right: 0.6rem;
+  }
+  
+  .floating-cta a {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Améliorations pour la lisibilité sur mobile */
+  body {
+    font-size: 16px; /* Garantir une taille de police minimale */
+  }
+  
+  p, .advantage-card p, .tarif-features li {
+    font-size: 16px; /* Taille de texte confortable sur mobile */
+    line-height: 1.6;
+  }
+  
+  .form-group input, 
+  .form-group textarea {
+    font-size: 16px; /* Éviter le zoom sur iOS */
+    padding: 0.9rem;
+  }
+  
+  /* Augmenter contraste et taille sur mobile */
+  .testimonial-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .contact-message, 
+  .notice {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Amélioration FAQ sur mobile */
+  .faq-item h4 {
+    font-size: 16px;
+    padding: 1rem 1.2rem;
+  }
+  
+  .faq-answer p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* ======================== */
+/* 19. ACCESSIBILITY        */
+/* ======================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.001s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mode sombre désactivé */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+/* ======================== */
+/* 20. PRINT STYLES         */
+/* ======================== */
+@media print {
+  .navbar,
+  .promo-banner,
+  .floating-cta,
+  .footer-social {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white;
+    font-size: 12pt;
+    color: black;
+  }
+  
+  header,
+  .testimonials,
+  .cta {
+    background: none !important;
+    color: black;
+  }
+  
+  header h1,
+  header h2,
+  .testimonials h2 {
+    color: black;
+  }
+  
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+  }
+  
+  h2::after {
+    display: none;
+  }
+}
+
+/* Style pour le message de confirmation */
+.form-confirmation {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(46, 204, 113, 0.1);
+  border-left: 5px solid var(--success);
+  border-radius: var(--border-radius);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.confirmation-content {
+  text-align: center;
+}
+
+.confirmation-icon {
+  font-size: 3rem;
+  color: var(--success);
+  margin-bottom: 1rem;
+}
+
+.form-confirmation h3 {
+  color: var(--success);
+  margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
