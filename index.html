@@ -24,10 +24,12 @@
   <!-- Google Fonts - Préchargement pour améliorer les performances -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
   
   <!-- Lien vers la feuille de style externe -->
   <link rel="stylesheet" href="style.css">
@@ -186,7 +188,7 @@
         </div>
         <div class="hero-image">
           <div class="image-wrapper">
-            <img src="nicolas_musicki.avif" alt="Photo de Nicolas Musicki, professeur d'échecs à Paris et Versailles" />
+            <img src="nicolas_musicki.avif" alt="Photo de Nicolas Musicki, professeur d'échecs à Paris et Versailles" width="500" height="500" loading="eager" />
             <div class="image-badge">1<sup>er</sup> cours OFFERT</div>
           </div>
         </div>
@@ -295,7 +297,7 @@
             </p>
           </div>
           <div class="location-map">
-            <img src="15eme.avif" alt="Zone d'intervention Paris et Versailles" class="map-image">
+            <img src="15eme.avif" alt="Zone d'intervention Paris et Versailles" class="map-image" width="600" height="400" loading="lazy">
           </div>
         </div>
       </section>
