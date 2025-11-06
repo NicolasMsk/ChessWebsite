@@ -9,9 +9,26 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-05</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Article sur les échecs pour adultes débutants -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/echecs-adultes-debutants-30-40-50-ans.html</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-13</news:publication_date>
+      <news:title>Les échecs pour adultes débutants : par où commencer à 30, 40 ou 50 ans ?</news:title>
+      <news:keywords>apprendre échecs adulte, débuter échecs 30 ans, cours échecs adultes Paris, échecs débutant</news:keywords>
+    </news:news>
   </url>
   
   <!-- Article sur les bienfaits des échecs pour enfants -->

@@ -1,11 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Page d'accueil -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2025-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Page principale du blog -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Articles du blog -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/echecs-adultes-debutants-30-40-50-ans.html</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/10-erreurs-debutant-echecs.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/professeur-ou-autodidacte-echecs.html</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/cours-echecs-enfants-paris.html</loc>
+    <lastmod>2025-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/comment-apprendre-echecs-enfant.html</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/bienfaits-echecs-enfants.html</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

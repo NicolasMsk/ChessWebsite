@@ -116,5 +116,26 @@ img {
 
 ---
 
+## 📋 IMAGES À CRÉER
+
+### ⏳ Images manquantes actuelles :
+
+**echecs-adultes-debutants-30-40-50-ans.webp**
+- Sujet : Adulte (30-50 ans) apprenant les échecs avec un professeur
+- Style : Professionnel, chaleureux, inspirant
+- Dimensions : 1200x630px
+- Poids cible : < 120KB
+- Alt text : "Adulte de 40 ans apprenant les échecs avec un professeur"
+- Contexte : Article pour adultes débutants qui veulent se lancer dans les échecs
+
+**Suggestions pour la création :**
+- Photo : Adulte concentré devant un échiquier, avec un professeur en arrière-plan
+- Ou : Adulte seul, réfléchissant devant l'échiquier, expression positive
+- Ambiance : Lumineuse, professionnelle mais accessible
+- Couleurs : Tons chauds, échiquier en bois visible
+- À éviter : Images trop "corporate", trop froides, ou clichés "vieux monsieur"
+
+---
+
 *Guide créé pour le blog de Nicolas Musicki - Cours d'Échecs Paris*
 *Dernière mise à jour : Novembre 2025*
