@@ -149,6 +149,17 @@ a:hover {
   background-color: var(--primary);
 }
 
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
 .btn-light {
   background-color: white;
   color: var(--primary);
@@ -162,6 +173,20 @@ a:hover {
 .btn-full {
   display: block;
   width: 100%;
+}
+
+/* Conteneur pour les boutons côte à côte */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.hero-buttons .btn {
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
 }
 
 /* ======================== */
@@ -1497,6 +1522,16 @@ footer {
     width: 100%;
     max-width: 300px;
     text-align: center;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    min-width: 100%;
   }
   
   .promo-banner p strong {
