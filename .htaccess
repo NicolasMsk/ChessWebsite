@@ -26,6 +26,19 @@
   ExpiresByType text/html "access plus 1 hour"
 </IfModule>
 
+# Redirections pour éviter le contenu dupliqué (SEO)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Redirection de index.html vers / (racine)
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)index\.html [NC]
+  RewriteRule ^ %1 [R=301,L]
+  
+  # Redirection de /blog/index.html vers /blog/
+  RewriteCond %{THE_REQUEST} /blog/index\.html [NC]
+  RewriteRule ^blog/index\.html$ /blog/ [R=301,L]
+</IfModule>
+
 # Compression GZIP
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html
