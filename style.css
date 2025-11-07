@@ -1396,6 +1396,16 @@ footer {
 /* ======================== */
 /* 18. MEDIA QUERIES        */
 /* ======================== */
+@media (min-width: 576px) and (max-width: 768px) {
+  .promo-banner {
+    padding: 0.4rem 0.5rem;
+  }
+  
+  .promo-banner p {
+    font-size: 0.85rem;
+  }
+}
+
 @media (min-width: 576px) {
   .hero-text {
     min-width: 0;
@@ -1491,8 +1501,17 @@ footer {
     transform: translateY(-10px);
   }
   
+  .promo-banner {
+    padding: 0.35rem 0.5rem;
+  }
+  
   .promo-banner p {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    gap: 0.15rem;
+  }
+  
+  .promo-banner .pulse-icon {
+    font-size: 0.75rem;
   }
   
   .chessboard-showcase {
@@ -1535,8 +1554,12 @@ footer {
   }
   
   .promo-banner p strong {
-    display: block;
-    margin-bottom: 0.25rem;
+    display: inline;
+    margin-bottom: 0;
+  }
+  
+  .promo-link {
+    font-size: 0.75rem;
   }
   
   .floating-cta {
