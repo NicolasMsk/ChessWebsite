@@ -120,6 +120,23 @@ img {
 
 ### ⏳ Images manquantes actuelles :
 
+**echecs-tdah-concentration-enfants.webp**
+- Sujet : Enfant avec TDAH concentré sur une partie d'échecs
+- Style : Bienveillant, calme, concentration visible
+- Dimensions : 1200x630px
+- Poids cible : < 120KB
+- Alt text : "Enfant TDAH concentré sur une partie d'échecs"
+- Contexte : Article sur les bienfaits des échecs pour enfants avec troubles de l'attention
+
+**Suggestions pour la création :**
+- Photo : Enfant de 8-10 ans concentré devant un échiquier, expression de réflexion calme
+- Ambiance : Lumineuse et apaisante, pas de distraction en arrière-plan
+- Couleurs : Tons doux, échiquier bien visible
+- À éviter : Agitation, chaos visuel, trop de stimuli
+- Idéal : Montrer la concentration sereine que les échecs peuvent apporter
+
+---
+
 **echecs-adultes-debutants-30-40-50-ans.webp**
 - Sujet : Adulte (30-50 ans) apprenant les échecs avec un professeur
 - Style : Professionnel, chaleureux, inspirant

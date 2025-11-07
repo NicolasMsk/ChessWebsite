@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "echecs-tdah-concentration-enfants",
+      "title": "Échecs et TDAH : pourquoi ce jeu aide les enfants à canaliser leur attention",
+      "description": "Les échecs structurent l'attention des enfants TDAH : études scientifiques, témoignages et techniques concrètes pour adapter l'apprentissage. Guide complet par un professeur expérimenté.",
+      "date": "2025-11-14",
+      "readTime": "13 min",
+      "author": "Nicolas Musicki",
+      "image": "images/echecs-tdah-concentration-enfants.webp",
+      "imageAlt": "Enfant TDAH concentré sur une partie d'échecs"
+    },
+    {
       "id": "echecs-adultes-debutants-30-40-50-ans",
       "title": "Les échecs pour adultes débutants : par où commencer à 30, 40 ou 50 ans ?",
       "description": "Il n'est jamais trop tard pour apprendre les échecs ! Guide complet pour adultes : méthode, temps nécessaire, ressources, coûts réels. Témoignages et plan d'action concret.",

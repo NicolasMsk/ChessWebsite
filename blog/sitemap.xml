@@ -9,9 +9,26 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Article sur les échecs et le TDAH -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/echecs-tdah-concentration-enfants.html</loc>
+    <lastmod>2025-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-14</news:publication_date>
+      <news:title>Échecs et TDAH : pourquoi ce jeu aide les enfants à canaliser leur attention</news:title>
+      <news:keywords>échecs TDAH, TDAH concentration échecs, hyperactivité échecs, cours échecs TDAH Paris</news:keywords>
+    </news:news>
   </url>
   
   <!-- Article sur les échecs pour adultes débutants -->

@@ -297,8 +297,26 @@ button:focus {
 }
 
 .cta-section p {
+  color: white;
   font-size: 1.1em;
   margin-bottom: 25px;
+}
+
+.cta-section ul {
+  color: white;
+  text-align: left;
+  display: inline-block;
+  margin: 20px auto;
+}
+
+.cta-section li {
+  color: white !important;
+  margin-bottom: 12px;
+  font-size: 1.05em;
+}
+
+.cta-section strong {
+  color: white !important;
 }
 
 .gift-badge {
