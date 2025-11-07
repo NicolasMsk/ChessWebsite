@@ -43,8 +43,13 @@ body {
   background-color: var(--light);
   line-height: 1.8;
   font-size: var(--font-size-base);
-  padding-top: 40px;
+  padding-top: 0; /* padding only when banner is present via .has-promo */
   overflow-x: hidden;
+}
+
+/* Add top padding only when the promo banner is active on the page */
+.has-promo {
+  padding-top: 40px;
 }
 
 /* ======================== */
@@ -265,6 +270,11 @@ main section {
   top: 40px;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Navbar sans bannière (pour les pages blog) */
+body:not(:has(.promo-banner)) .navbar {
+  top: 0;
 }
 
 .navbar .container {
