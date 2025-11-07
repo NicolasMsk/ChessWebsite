@@ -1,8 +1,0 @@
-# Redirections pour éviter le contenu dupliqué dans le blog
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  
-  # Redirection de /blog/index.html vers /blog/
-  RewriteCond %{THE_REQUEST} /index\.html [NC]
-  RewriteRule ^index\.html$ /blog/ [R=301,L]
-</IfModule>
