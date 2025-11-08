@@ -553,8 +553,8 @@ header > * {
 
 .hero-image img {
   max-width: 100%;
-  width: 500px;
-  height: 500px;
+  width: auto;
+  height: auto;
   aspect-ratio: 1 / 1;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
