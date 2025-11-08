@@ -553,9 +553,7 @@ header > * {
 
 .hero-image img {
   max-width: 100%;
-  width: auto;
   height: auto;
-  aspect-ratio: 1 / 1;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
