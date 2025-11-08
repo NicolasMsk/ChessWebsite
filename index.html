@@ -31,6 +31,9 @@
 
   <title>Cours d'Échecs à Paris et Versailles | Professeur d'échecs | 1er Cours OFFERT</title>
 
+  <!-- Préchargement image LCP pour améliorer les performances -->
+  <link rel="preload" as="image" href="nicolas_musicki.webp" fetchpriority="high">
+
   <!-- Google Fonts - Préchargement pour améliorer les performances -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +44,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
   
-  <!-- Lien vers la feuille de style externe -->
+  <!-- Lien vers la feuille de style externe avec preload pour optimiser -->
+  <link rel="preload" href="style.css" as="style">
   <link rel="stylesheet" href="style.css">
 
  <!-- Favicons -->
