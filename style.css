@@ -45,6 +45,7 @@ body {
   font-size: var(--font-size-base);
   padding-top: 0; /* padding only when banner is present via .has-promo */
   overflow-x: hidden;
+  font-display: swap; /* Évite les décalages lors du chargement des polices */
 }
 
 /* Add top padding only when the promo banner is active on the page */
@@ -551,7 +552,9 @@ header > * {
 
 .hero-image img {
   max-width: 100%;
-  height: auto;
+  width: 500px;
+  height: 500px;
+  aspect-ratio: 1 / 1;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
