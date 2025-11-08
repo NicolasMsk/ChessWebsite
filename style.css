@@ -68,6 +68,7 @@ h1 {
   font-size: var(--font-size-h1);
   color: white;
   text-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Ajout d'une ombre pour meilleure lisibilité */
+  min-height: 3.5rem; /* Réserve l'espace pour éviter le layout shift */
 }
 
 h2 {
