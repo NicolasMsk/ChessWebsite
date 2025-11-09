@@ -22,14 +22,14 @@
   <meta property="og:description" content="Découvrez les conseils d'un professeur d'échecs expérimenté : bienfaits pour les enfants, techniques d'apprentissage et stratégies pour progresser aux échecs.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.cours-echecs-paris.fr/blog/">
-  <meta property="og:image" content="https://www.cours-echecs-paris.fr/nicolas_musicki.avif">
+  <meta property="og:image" content="https://www.cours-echecs-paris.fr/nicolas_musicki.webp">
   <meta property="og:site_name" content="Cours d'Échecs Paris - Nicolas Musicki">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Blog Échecs - Conseils et Astuces | Nicolas Musicki">
   <meta name="twitter:description" content="Découvrez les conseils d'un professeur d'échecs expérimenté pour apprendre et progresser aux échecs.">
-  <meta name="twitter:image" content="https://www.cours-echecs-paris.fr/nicolas_musicki.avif">
+  <meta name="twitter:image" content="https://www.cours-echecs-paris.fr/nicolas_musicki.webp">
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.cours-echecs-paris.fr/blog/">
@@ -58,7 +58,7 @@
       "url": "https://www.cours-echecs-paris.fr/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.cours-echecs-paris.fr/nicolas_musicki.avif"
+        "url": "https://www.cours-echecs-paris.fr/nicolas_musicki.webp"
       }
     },
     "mainEntityOfPage": {
@@ -128,6 +128,11 @@
     <section class="blog-list" id="blog-list" aria-label="Liste des articles de blog">
       <p style="text-align: center; color: #666;">Chargement des articles...</p>
     </section>
+    
+    <!-- Pagination -->
+    <div class="pagination-container" id="pagination-container" style="display: none;">
+      <div class="pagination" id="pagination"></div>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -150,7 +155,7 @@
         <div class="footer-social">
           <h4>Suivez-moi</h4>
           <div class="social-icons">
-            <a href="https://www.instagram.com/nicolas_musicki/" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/magickchess/" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
         </div>
@@ -183,7 +188,12 @@
         });
       }
 
-      // Fonction pour afficher les articles
+      // Configuration de la pagination
+      let allArticles = [];
+      let currentPage = 1;
+      const articlesPerPage = 6;
+
+      // Fonction pour afficher les articles d'une page spécifique
       function displayArticles(articles) {
         const blogList = document.getElementById('blog-list');
         blogList.innerHTML = '';
@@ -199,9 +209,11 @@
           articleCard.setAttribute('itemscope', '');
           articleCard.setAttribute('itemtype', 'https://schema.org/Article');
           
-            const imageHTML = article.image 
-              ? `<img src="${article.image}" alt="${article.imageAlt || article.title}" loading="lazy" style="width: 100%; height: 250px; object-fit: cover;" itemprop="image">` 
-              : '';          articleCard.innerHTML = `
+          const imageHTML = article.image 
+            ? `<img src="${article.image}" alt="${article.imageAlt || article.title}" loading="lazy" style="width: 100%; height: 250px; object-fit: cover;" itemprop="image">` 
+            : '';
+            
+          articleCard.innerHTML = `
             ${imageHTML}
             <div class="blog-card-content">
               <h2 itemprop="headline">${article.title}</h2>
@@ -217,6 +229,117 @@
           
           blogList.appendChild(articleCard);
         });
+      }
+
+      // Fonction pour afficher la pagination
+      function displayPagination() {
+        const totalPages = Math.ceil(allArticles.length / articlesPerPage);
+        const paginationContainer = document.getElementById('pagination-container');
+        const pagination = document.getElementById('pagination');
+        
+        // Masquer la pagination si une seule page ou moins
+        if (totalPages <= 1) {
+          paginationContainer.style.display = 'none';
+          return;
+        }
+        
+        paginationContainer.style.display = 'block';
+        pagination.innerHTML = '';
+        
+        // Bouton Précédent
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'pagination-btn' + (currentPage === 1 ? ' disabled' : '');
+        prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i> Précédent';
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.addEventListener('click', () => {
+          if (currentPage > 1) {
+            goToPage(currentPage - 1);
+          }
+        });
+        pagination.appendChild(prevBtn);
+        
+        // Numéros de pages
+        const maxVisiblePages = 5;
+        let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+        let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+        
+        // Ajuster startPage si on est proche de la fin
+        if (endPage - startPage < maxVisiblePages - 1) {
+          startPage = Math.max(1, endPage - maxVisiblePages + 1);
+        }
+        
+        // Première page si pas visible
+        if (startPage > 1) {
+          const firstBtn = document.createElement('button');
+          firstBtn.className = 'pagination-number';
+          firstBtn.textContent = '1';
+          firstBtn.addEventListener('click', () => goToPage(1));
+          pagination.appendChild(firstBtn);
+          
+          if (startPage > 2) {
+            const dots = document.createElement('span');
+            dots.className = 'pagination-dots';
+            dots.textContent = '...';
+            pagination.appendChild(dots);
+          }
+        }
+        
+        // Pages visibles
+        for (let i = startPage; i <= endPage; i++) {
+          const pageBtn = document.createElement('button');
+          pageBtn.className = 'pagination-number' + (i === currentPage ? ' active' : '');
+          pageBtn.textContent = i;
+          pageBtn.addEventListener('click', () => goToPage(i));
+          pagination.appendChild(pageBtn);
+        }
+        
+        // Dernière page si pas visible
+        if (endPage < totalPages) {
+          if (endPage < totalPages - 1) {
+            const dots = document.createElement('span');
+            dots.className = 'pagination-dots';
+            dots.textContent = '...';
+            pagination.appendChild(dots);
+          }
+          
+          const lastBtn = document.createElement('button');
+          lastBtn.className = 'pagination-number';
+          lastBtn.textContent = totalPages;
+          lastBtn.addEventListener('click', () => goToPage(totalPages));
+          pagination.appendChild(lastBtn);
+        }
+        
+        // Bouton Suivant
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'pagination-btn' + (currentPage === totalPages ? ' disabled' : '');
+        nextBtn.innerHTML = 'Suivant <i class="fa-solid fa-chevron-right"></i>';
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.addEventListener('click', () => {
+          if (currentPage < totalPages) {
+            goToPage(currentPage + 1);
+          }
+        });
+        pagination.appendChild(nextBtn);
+      }
+
+      // Fonction pour aller à une page spécifique
+      function goToPage(page) {
+        currentPage = page;
+        const startIndex = (page - 1) * articlesPerPage;
+        const endIndex = startIndex + articlesPerPage;
+        const articlesToShow = allArticles.slice(startIndex, endIndex);
+        
+        displayArticles(articlesToShow);
+        displayPagination();
+        
+        // Scroll vers le haut de la liste
+        document.getElementById('blog-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // Fonction pour initialiser le blog avec tous les articles
+      function initializeBlog(articles) {
+        allArticles = articles;
+        goToPage(1);
       }
 
       // Articles de fallback (au cas où le JSON ne se charge pas)
@@ -302,13 +425,13 @@
           return response.json();
         })
         .then(data => {
-          displayArticles(data.articles);
+          initializeBlog(data.articles);
         })
         .catch(error => {
           console.error('Erreur lors du chargement des articles:', error);
           console.log('Utilisation des articles de fallback');
           // Force l'affichage du fallback même en cas d'erreur
-          displayArticles(fallbackArticles);
+          initializeBlog(fallbackArticles);
         });
     });
   </script>

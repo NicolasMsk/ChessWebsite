@@ -419,6 +419,74 @@ button:focus {
 }
 
 /* ======================== */
+/* PAGINATION               */
+/* ======================== */
+
+.pagination-container {
+  max-width: 1000px;
+  margin: 40px auto 60px;
+  padding: 0 20px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pagination-btn,
+.pagination-number {
+  padding: 10px 18px;
+  border: 2px solid #3a6ea5;
+  background: white;
+  color: #3a6ea5;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pagination-btn:hover:not(.disabled),
+.pagination-number:hover:not(.active) {
+  background: #3a6ea5;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(58, 110, 165, 0.3);
+}
+
+.pagination-number.active {
+  background: linear-gradient(135deg, #3a6ea5 0%, #2c5aa0 100%);
+  color: white;
+  border-color: #2c5aa0;
+  box-shadow: 0 4px 12px rgba(58, 110, 165, 0.4);
+}
+
+.pagination-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: #ddd;
+  color: #999;
+}
+
+.pagination-dots {
+  padding: 10px 8px;
+  color: #999;
+  font-weight: 600;
+  user-select: none;
+}
+
+.pagination-number {
+  min-width: 45px;
+  justify-content: center;
+}
+
+/* ======================== */
 /* RESPONSIVE DESIGN        */
 /* ======================== */
 
@@ -490,6 +558,34 @@ button:focus {
     flex-direction: column;
     gap: 8px;
   }
+  
+  /* Pagination mobile */
+  .pagination-container {
+    margin: 30px auto 40px;
+  }
+  
+  .pagination {
+    gap: 6px;
+  }
+  
+  .pagination-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .pagination-btn i {
+    display: none;
+  }
+  
+  .pagination-number {
+    min-width: 38px;
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  
+  .pagination-dots {
+    padding: 8px 5px;
+  }
 }
 
 /* Smartphones (481px - 768px) */
@@ -522,6 +618,17 @@ button:focus {
   .blog-card-meta {
     flex-wrap: wrap;
     gap: 10px;
+  }
+  
+  /* Pagination tablette */
+  .pagination-btn {
+    padding: 9px 14px;
+    font-size: 14px;
+  }
+  
+  .pagination-number {
+    min-width: 42px;
+    padding: 9px 14px;
   }
 }
 
