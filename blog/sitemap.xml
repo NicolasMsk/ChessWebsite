@@ -9,9 +9,26 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Article sur le temps pour devenir bon aux échecs -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/combien-temps-devenir-bon-echecs.html</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-15</news:publication_date>
+      <news:title>Combien de temps pour devenir bon aux échecs ? Le guide réaliste</news:title>
+      <news:keywords>temps progression échecs, devenir bon échecs, combien temps apprendre échecs, niveau échecs, elo échecs</news:keywords>
+    </news:news>
   </url>
   
   <!-- Article sur les échecs et le TDAH -->

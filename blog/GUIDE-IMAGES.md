@@ -154,5 +154,25 @@ img {
 
 ---
 
+**combien-temps-devenir-bon-echecs.webp**
+- Sujet : Chronologie visuelle de progression aux échecs, ou personne progressant avec le temps
+- Style : Inspirant, motivant, timeline/évolution
+- Dimensions : 1200x630px
+- Poids cible : < 120KB
+- Alt text : "Chronologie progression échecs de débutant à expert"
+- Contexte : Article sur le temps réel nécessaire pour progresser selon les niveaux Elo
+
+**Suggestions pour la création :**
+- Option 1 : Timeline graphique avec différents niveaux Elo et durées
+- Option 2 : Montage photo avant/après d'un joueur progressant
+- Option 3 : Échiquier avec sablier ou horloge, symbolisant le temps
+- Option 4 : Graphique ascendant avec pièces d'échecs représentant la progression
+- Ambiance : Positive, dynamique, évolution claire
+- Couleurs : Gradient ou progression visuelle (du clair au foncé, ou bleu progressif)
+- Éléments clés : Notion de temps + échecs + progression
+- À éviter : Image statique, trop complexe, ou décourageante
+
+---
+
 *Guide créé pour le blog de Nicolas Musicki - Cours d'Échecs Paris*
 *Dernière mise à jour : Novembre 2025*
