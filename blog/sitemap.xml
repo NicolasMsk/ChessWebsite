@@ -9,9 +9,26 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-15</lastmod>
+    <lastmod>2025-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Article sur la stagnation aux échecs -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/stagnation-echecs-progresser.html</loc>
+    <lastmod>2025-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-16</news:publication_date>
+      <news:title>Pourquoi 90% des joueurs stagnent aux échecs (et comment passer enfin au niveau supérieur)</news:title>
+      <news:keywords>stagnation échecs, plateau échecs, progresser échecs, bloquer échecs, améliorer niveau échecs, dépasser plateau échecs</news:keywords>
+    </news:news>
   </url>
   
   <!-- Article sur le temps pour devenir bon aux échecs -->
