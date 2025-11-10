@@ -12,7 +12,7 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -20,63 +20,63 @@
   <!-- Articles du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/stagnation-echecs-progresser.html</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/combien-temps-devenir-bon-echecs.html</loc>
-    <lastmod>2025-11-15</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/echecs-tdah-concentration-enfants.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/echecs-adultes-debutants-30-40-50-ans.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/10-erreurs-debutant-echecs.html</loc>
-    <lastmod>2025-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.cours-echecs-paris.fr/blog/professeur-ou-autodidacte-echecs.html</loc>
-    <lastmod>2025-11-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.cours-echecs-paris.fr/blog/cours-echecs-enfants-paris.html</loc>
     <lastmod>2025-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.cours-echecs-paris.fr/blog/comment-apprendre-echecs-enfant.html</loc>
+    <loc>https://www.cours-echecs-paris.fr/blog/professeur-ou-autodidacte-echecs.html</loc>
     <lastmod>2025-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.cours-echecs-paris.fr/blog/bienfaits-echecs-enfants.html</loc>
+    <loc>https://www.cours-echecs-paris.fr/blog/cours-echecs-enfants-paris.html</loc>
     <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/comment-apprendre-echecs-enfant.html</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/bienfaits-echecs-enfants.html</loc>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

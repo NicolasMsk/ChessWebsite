@@ -9,7 +9,7 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -17,7 +17,7 @@
   <!-- Article sur la stagnation aux échecs -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/stagnation-echecs-progresser.html</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <news:news>
@@ -25,7 +25,7 @@
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
         <news:language>fr</news:language>
       </news:publication>
-      <news:publication_date>2025-11-16</news:publication_date>
+      <news:publication_date>2025-11-11</news:publication_date>
       <news:title>Pourquoi 90% des joueurs stagnent aux échecs (et comment passer enfin au niveau supérieur)</news:title>
       <news:keywords>stagnation échecs, plateau échecs, progresser échecs, bloquer échecs, améliorer niveau échecs, dépasser plateau échecs</news:keywords>
     </news:news>
@@ -34,7 +34,7 @@
   <!-- Article sur le temps pour devenir bon aux échecs -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/combien-temps-devenir-bon-echecs.html</loc>
-    <lastmod>2025-11-15</lastmod>
+    <lastmod>2025-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <news:news>
@@ -42,7 +42,7 @@
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
         <news:language>fr</news:language>
       </news:publication>
-      <news:publication_date>2025-11-15</news:publication_date>
+      <news:publication_date>2025-11-10</news:publication_date>
       <news:title>Combien de temps pour devenir bon aux échecs ? Le guide réaliste</news:title>
       <news:keywords>temps progression échecs, devenir bon échecs, combien temps apprendre échecs, niveau échecs, elo échecs</news:keywords>
     </news:news>
@@ -51,7 +51,7 @@
   <!-- Article sur les échecs et le TDAH -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/echecs-tdah-concentration-enfants.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <news:news>
@@ -59,7 +59,7 @@
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
         <news:language>fr</news:language>
       </news:publication>
-      <news:publication_date>2025-11-14</news:publication_date>
+      <news:publication_date>2025-11-09</news:publication_date>
       <news:title>Échecs et TDAH : pourquoi ce jeu aide les enfants à canaliser leur attention</news:title>
       <news:keywords>échecs TDAH, TDAH concentration échecs, hyperactivité échecs, cours échecs TDAH Paris</news:keywords>
     </news:news>
@@ -68,7 +68,7 @@
   <!-- Article sur les échecs pour adultes débutants -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/echecs-adultes-debutants-30-40-50-ans.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <news:news>
@@ -76,7 +76,7 @@
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
         <news:language>fr</news:language>
       </news:publication>
-      <news:publication_date>2025-11-13</news:publication_date>
+      <news:publication_date>2025-11-08</news:publication_date>
       <news:title>Les échecs pour adultes débutants : par où commencer à 30, 40 ou 50 ans ?</news:title>
       <news:keywords>apprendre échecs adulte, débuter échecs 30 ans, cours échecs adultes Paris, échecs débutant</news:keywords>
     </news:news>
