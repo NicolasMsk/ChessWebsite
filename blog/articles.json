@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "cours-echecs-en-ligne-vs-presentiel",
+      "title": "Cours d'échecs en ligne vs présentiel : lequel choisir en 2025 ?",
+      "description": "Cours d'échecs en ligne vs présentiel : comparatif complet 2025. Avantages, inconvénients, prix, efficacité. Guide pour choisir le meilleur format selon votre profil (enfant, adulte, débutant).",
+      "date": "2025-11-12",
+      "readTime": "14 min",
+      "author": "Nicolas Musicki",
+      "image": "images/cours-echecs-en-ligne-vs-presentiel.webp",
+      "imageAlt": "Comparaison cours d'échecs en ligne sur écran et cours présentiel avec échiquier physique"
+    },
+    {
       "id": "stagnation-echecs-progresser",
       "title": "Pourquoi 90% des joueurs stagnent aux échecs (et comment passer enfin au niveau supérieur)",
       "description": "Les 8 erreurs qui bloquent votre progression aux échecs (mauvaise méthode, blitz, ouvertures) et solutions concrètes pour débloquer +100-200 Elo en 6-12 mois.",

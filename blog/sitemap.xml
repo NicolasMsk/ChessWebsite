@@ -9,9 +9,26 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Article sur les cours en ligne vs présentiel -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/cours-echecs-en-ligne-vs-presentiel.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-12</news:publication_date>
+      <news:title>Cours d'échecs en ligne vs présentiel : lequel choisir en 2025 ?</news:title>
+      <news:keywords>cours échecs en ligne, cours échecs présentiel, cours échecs Paris, meilleur cours échecs, professeur échecs en ligne, cours échecs visio</news:keywords>
+    </news:news>
   </url>
   
   <!-- Article sur la stagnation aux échecs -->
