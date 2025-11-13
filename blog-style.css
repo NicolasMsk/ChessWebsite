@@ -687,3 +687,80 @@ button:focus {
     margin: 0 3px;
   }
 }
+
+/* ======================== */
+/* RECOMMANDATIONS ARTICLES */
+/* ======================== */
+
+.article-recommendation {
+  margin: 40px 0;
+  padding: 25px;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+  border-left: 4px solid #3a6ea5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.article-recommendation h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.article-recommendation p {
+  margin: 0 0 18px 0;
+  color: #5a6c7d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.recommendation-link {
+  display: block;
+  padding: 15px 20px;
+  background: white;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.recommendation-link:hover {
+  transform: translateX(5px);
+  box-shadow: 0 3px 10px rgba(58, 110, 165, 0.15);
+  background: #fafbff;
+}
+
+.recommendation-link strong {
+  display: block;
+  color: #3a6ea5;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.recommendation-link span {
+  display: block;
+  color: #6b7c8d;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .article-recommendation {
+    padding: 20px 15px;
+    margin: 30px 0;
+  }
+  
+  .recommendation-link {
+    padding: 12px 15px;
+  }
+  
+  .recommendation-link strong {
+    font-size: 1rem;
+  }
+  
+  .recommendation-link span {
+    font-size: 0.85rem;
+  }
+}
