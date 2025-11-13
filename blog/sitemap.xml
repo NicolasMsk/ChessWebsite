@@ -9,9 +9,26 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Article sur les citations d'échecs inspirantes -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/citations-echecs-inspirantes.html</loc>
+    <lastmod>2025-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-14</news:publication_date>
+      <news:title>Les 20 citations d'échecs les plus inspirantes (et leur signification profonde)</news:title>
+      <news:keywords>citations échecs, phrases célèbres échecs, proverbes échecs, philosophie échecs, Bobby Fischer citation, Kasparov citation, leçons de vie échecs</news:keywords>
+    </news:news>
   </url>
   
   <!-- Article sur la psychologie et les biais mentaux -->
