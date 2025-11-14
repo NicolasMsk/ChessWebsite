@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "echecs-intelligence-enfants-etudes",
+      "title": "Les échecs rendent-ils les enfants plus intelligents ? Ce que disent les études",
+      "description": "Analyse scientifique complète : les échecs augmentent-ils le QI ? Impact sur la mémoire, concentration et résultats scolaires. Ce que disent vraiment les études sur l'intelligence des enfants.",
+      "date": "2025-11-14",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/echecs-intelligence-enfants-etudes.webp",
+      "imageAlt": "Enfant jouant aux échecs avec représentation symbolique du cerveau et de l'intelligence"
+    },
+    {
       "id": "citations-echecs-inspirantes",
       "title": "Les 20 citations d'échecs les plus inspirantes (et leur signification profonde)",
       "description": "Les 20 citations d'échecs les plus inspirantes de Fischer, Kasparov, Tal, Capablanca. Découvrez leur signification profonde et comment les appliquer dans votre vie quotidienne.",

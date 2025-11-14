@@ -14,6 +14,23 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Article sur les échecs et l'intelligence des enfants -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/echecs-intelligence-enfants-etudes.html</loc>
+    <lastmod>2025-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-14</news:publication_date>
+      <news:title>Les échecs rendent-ils les enfants plus intelligents ? Ce que disent les études</news:title>
+      <news:keywords>échecs intelligence enfants, QI échecs, échecs mémoire enfant, résultats scolaires échecs, études scientifiques échecs, échecs rendent intelligent, cognitif échecs enfants</news:keywords>
+    </news:news>
+  </url>
+  
   <!-- Article sur les citations d'échecs inspirantes -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/citations-echecs-inspirantes.html</loc>
