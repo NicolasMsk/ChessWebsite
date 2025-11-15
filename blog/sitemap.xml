@@ -9,9 +9,26 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Article Échecs vs Jeux Vidéo -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/echecs-vs-jeux-video.html</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-15</news:publication_date>
+      <news:title>Échecs vs Jeux Vidéo : Le Match (et Pourquoi les Parents Devraient S'y Intéresser)</news:title>
+      <news:keywords>échecs vs jeux vidéo, jeux vidéo enfants, alternative jeux vidéo, temps écran enfant, échecs jeux vidéo comparaison, activité enfant écran, remplacer jeux vidéo</news:keywords>
+    </news:news>
   </url>
   
   <!-- Article sur les échecs et l'intelligence des enfants -->
