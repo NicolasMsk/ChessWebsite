@@ -9,9 +9,26 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-15</lastmod>
+    <lastmod>2025-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Article Débuter aux Échecs 0-500 Elo -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/debuter-echecs-guide-complet-0-500-elo.html</loc>
+    <lastmod>2025-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-16</news:publication_date>
+      <news:title>Débuter aux Échecs : Le Guide Complet (0-500 Elo)</news:title>
+      <news:keywords>débuter échecs, apprendre échecs débutant, 0 elo échecs, 500 elo échecs, guide débutant échecs, règles échecs, stratégie débutant échecs, comment débuter échecs</news:keywords>
+    </news:news>
   </url>
   
   <!-- Article Échecs vs Jeux Vidéo -->

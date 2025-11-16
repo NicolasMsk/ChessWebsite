@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "debuter-echecs-guide-complet-0-500-elo",
+      "title": "Débuter aux Échecs : Le Guide Complet (0-500 Elo)",
+      "description": "Guide complet pour débuter aux échecs : règles, stratégies essentielles, ouvertures simples, tactiques de base. Méthode progressive de 0 à 500 Elo par un prof avec 5 ans d'expérience.",
+      "date": "2025-11-16",
+      "readTime": "18 min",
+      "author": "Nicolas Musicki",
+      "image": "images/debuter-echecs-guide-complet-0-500-elo.webp",
+      "imageAlt": "Débutant apprenant les échecs avec échiquier et pièces"
+    },
+    {
       "id": "echecs-vs-jeux-video",
       "title": "Échecs vs Jeux Vidéo : Le Match (et Pourquoi les Parents Devraient S'y Intéresser)",
       "description": "Comparaison objective échecs vs jeux vidéo : bénéfices cognitifs, addiction, socialisation, temps d'écran. Ce que disent les études + mon expérience de prof après 5 ans.",
