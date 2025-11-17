@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "magnus-carlsen-parcours-champion-monde",
+      "title": "Magnus Carlsen : Le Parcours du Plus Grand Champion d'Échecs",
+      "description": "Magnus Carlsen : parcours complet du champion du monde. Enfance prodige, records, style de jeu unique, anecdotes. Portrait du joueur qui a révolutionné les échecs.",
+      "date": "2025-11-17",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/magnus-carlsen-parcours-champion-monde.webp",
+      "imageAlt": "Magnus Carlsen champion du monde d'échecs en pleine réflexion"
+    },
+    {
       "id": "debuter-echecs-guide-complet-0-500-elo",
       "title": "Débuter aux Échecs : Le Guide Complet (0-500 Elo)",
       "description": "Guide complet pour débuter aux échecs : règles, stratégies essentielles, ouvertures simples, tactiques de base. Méthode progressive de 0 à 500 Elo par un prof avec 5 ans d'expérience.",

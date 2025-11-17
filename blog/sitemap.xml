@@ -9,9 +9,26 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Article Magnus Carlsen -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/magnus-carlsen-parcours-champion-monde.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-17</news:publication_date>
+      <news:title>Magnus Carlsen : Le Parcours du Plus Grand Champion d'Échecs</news:title>
+      <news:keywords>Magnus Carlsen, champion monde échecs, parcours Magnus Carlsen, biographie Magnus Carlsen, Carlsen style de jeu, meilleur joueur échecs, Carlsen Elo, prodige échecs</news:keywords>
+    </news:news>
   </url>
   
   <!-- Article Débuter aux Échecs 0-500 Elo -->
