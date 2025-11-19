@@ -12,12 +12,19 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2025-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Articles du blog -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/mon-enfant-perd-toujours-echecs.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/magnus-carlsen-parcours-champion-monde.html</loc>
     <lastmod>2025-11-17</lastmod>

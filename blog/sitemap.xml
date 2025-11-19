@@ -9,9 +9,26 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2025-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Article Mon Enfant Perd Toujours aux Échecs -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/mon-enfant-perd-toujours-echecs.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-19</news:publication_date>
+      <news:title>Mon Enfant Perd Toujours aux Échecs : 7 Solutions Concrètes</news:title>
+      <news:keywords>enfant perd échecs, enfant nul échecs, améliorer enfant échecs, progresser échecs enfant, motivation échecs enfant, cours échecs enfants Paris</news:keywords>
+    </news:news>
   </url>
   
   <!-- Article Magnus Carlsen -->

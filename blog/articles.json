@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "mon-enfant-perd-toujours-echecs",
+      "title": "Mon Enfant Perd Toujours aux Échecs : 7 Solutions Concrètes",
+      "description": "Votre enfant perd toutes ses parties ? 7 causes principales + solutions testées pour l'aider à progresser sans pression. Guide rassurant par un prof qui a formé 300+ enfants.",
+      "date": "2025-11-19",
+      "readTime": "11 min",
+      "author": "Nicolas Musicki",
+      "image": "images/mon-enfant-perd-toujours-echecs.webp",
+      "imageAlt": "Enfant concentré devant un échiquier après une défaite, parent à côté qui le soutient"
+    },
+    {
       "id": "magnus-carlsen-parcours-champion-monde",
       "title": "Magnus Carlsen : Le Parcours du Plus Grand Champion d'Échecs",
       "description": "Magnus Carlsen : parcours complet du champion du monde. Enfance prodige, records, style de jeu unique, anecdotes. Portrait du joueur qui a révolutionné les échecs.",
