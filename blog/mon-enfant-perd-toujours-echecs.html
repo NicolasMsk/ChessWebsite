@@ -98,10 +98,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
   
   <!-- Styles -->
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="blog-style.css">
+  <link rel="stylesheet" href="../blog-style.css">
   
   <!-- Icône -->
   <link rel="icon" type="image/x-icon" href="../15eme.avif">
@@ -111,43 +114,51 @@
   <link rel="manifest" href="../site.webmanifest">
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <h1 class="site-title">
-        <a href="../index.html">Cours d'Échecs Paris</a>
-      </h1>
-      <nav class="main-nav">
-        <a href="../index.html">Accueil</a>
-        <a href="../index.html#tarifs">Tarifs</a>
-        <a href="index.html">Blog</a>
-        <a href="../index.html#contact" class="cta-button">Premier cours offert</a>
-      </nav>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="../" style="color: inherit; text-decoration: none;">
+          <i class="fa-solid fa-chess-knight"></i> Nicolas Musicki
+        </a>
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="../#about" class="nav-link">À propos</a></li>
+        <li><a href="../#advantages" class="nav-link">Pourquoi les échecs</a></li>
+        <li><a href="./" class="nav-link">Blog</a></li>
+        <li><a href="../#tarifs" class="nav-link">Tarifs</a></li>
+        <li><a href="../#faq" class="nav-link">FAQ</a></li>
+        <li><a href="../#contact" class="nav-link">Contact</a></li>
+        <li><a href="../#contact" class="nav-link nav-cta">Réserver</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="breadcrumb">
+      <a href="../">Accueil</a> <i class="fa-solid fa-chevron-right"></i> <a href="./">Blog</a> <i class="fa-solid fa-chevron-right"></i> Mon Enfant Perd Toujours aux Échecs
+    </div>
+    <h1>Mon Enfant Perd Toujours aux Échecs : 7 Solutions Concrètes</h1>
+    <div class="article-meta">
+      <i class="fa-solid fa-calendar"></i> 19 novembre 2025
+      <i class="fa-solid fa-clock"></i> 11 min de lecture
+      <i class="fa-solid fa-user"></i> Nicolas Musicki
     </div>
   </header>
 
-  <main class="blog-article">
-    <article>
-      <div class="article-header">
-        <div class="breadcrumb">
-          <a href="../index.html">Accueil</a> &gt;
-          <a href="index.html">Blog</a> &gt;
-          <span>Mon Enfant Perd Toujours aux Échecs</span>
-        </div>
-        
-        <h1>Mon Enfant Perd Toujours aux Échecs : 7 Solutions Concrètes</h1>
-        
-        <div class="article-meta">
-          <span class="author">Par Nicolas Musicki</span>
-          <span class="separator">•</span>
-          <time datetime="2025-11-19">19 novembre 2025</time>
-          <span class="separator">•</span>
-          <span class="reading-time">11 min de lecture</span>
-        </div>
-
-        <img src="images/mon-enfant-perd-toujours-echecs.webp" alt="Enfant concentré devant un échiquier après une défaite, parent à côté qui le soutient" class="article-hero-image">
-      </div>
-
-      <div class="article-content">
+  <main>
+    <article class="article-container" itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="datePublished" content="2025-11-19">
+      <meta itemprop="dateModified" content="2025-11-19">
+      <meta itemprop="author" content="Nicolas Musicki">
+      <meta itemprop="publisher" content="Cours d'Échecs Paris - Nicolas Musicki">
+      <!-- Image principale de l'article -->
+      <img src="images/mon-enfant-perd-toujours-echecs.webp" alt="Enfant concentré devant un échiquier après une défaite, parent à côté qui le soutient" style="width: 100%; max-width: 900px; height: auto; border-radius: 12px; margin: 0 auto 30px; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" itemprop="image">
         
         <p class="lead">"Mon fils perd toutes ses parties. Il commence à se décourager et je ne sais plus quoi lui dire..."</p>
 
@@ -467,20 +478,20 @@
       </div>
 
       <div class="article-recommendations">
-        <h3>Articles recommandés</h3>
-        <div class="recommendations-grid">
-          <a href="comment-apprendre-echecs-enfant.html" class="recommendation-card">
-            <h4>Comment Apprendre les Échecs à un Enfant ?</h4>
-            <p>Méthode simple en 5 étapes pour initier votre enfant sans pression</p>
+        <div class="article-recommendation">
+          <h3>📚 Article recommandé</h3>
+          <p>Vous cherchez d'autres conseils ? Découvrez aussi :</p>
+          <a href="comment-apprendre-echecs-enfant.html" class="recommendation-link">
+            <strong>Comment Apprendre les Échecs à un Enfant ?</strong>
+            <span>Méthode simple en 5 étapes pour initier votre enfant sans pression →</span>
           </a>
-          <a href="bienfaits-echecs-enfants.html" class="recommendation-card">
-            <h4>7 Bienfaits des Échecs dès 5 ans</h4>
-            <p>Concentration +35%, mémoire, confiance : pourquoi c'est l'âge idéal</p>
-          </a>
-          <a href="echecs-tdah-concentration-enfants.html" class="recommendation-card">
-            <h4>Échecs et TDAH : +40% de Concentration</h4>
-            <p>Comment les échecs aident les enfants hyperactifs selon les études</p>
-          </a>
+        </div>
+        <div style="margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee;">
+          <p style="text-align: center; color: #999;">
+            <i class="fa-solid fa-chess-knight"></i> Article rédigé par Nicolas Musicki, professeur d'échecs à Paris et Versailles<br>
+            <a href="../" style="color: #3a6ea5; text-decoration: none;">Retour à l'accueil</a> | 
+            <a href="../#contact" style="color: #3a6ea5; text-decoration: none;">Me contacter</a>
+          </p>
         </div>
       </div>
 
@@ -488,32 +499,56 @@
   </main>
 
   <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Cours d'Échecs Paris</h3>
-        <p>Professeur d'échecs à Paris et Versailles depuis 5 ans. Pédagogue passionné, +2000 Elo.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fa-solid fa-chess-knight"></i> Nicolas Musicki
+          <p>Professeur d'échecs à Paris et Versailles</p>
+        </div>
+        <div class="footer-links">
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="../">Accueil</a></li>
+            <li><a href="./">Blog</a></li>
+            <li><a href="../#tarifs">Tarifs</a></li>
+            <li><a href="../#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Suivez-moi</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/magickchess/" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="footer-section">
-        <h3>Navigation</h3>
-        <ul>
-          <li><a href="../index.html">Accueil</a></li>
-          <li><a href="../index.html#tarifs">Tarifs</a></li>
-          <li><a href="index.html">Blog</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <p>© 2025 Nicolas Musicki - Professeur d'échecs à Paris et Versailles. Tous droits réservés.</p>
       </div>
-      <div class="footer-section">
-        <h3>Articles populaires</h3>
-        <ul>
-          <li><a href="bienfaits-echecs-enfants.html">Les 7 bienfaits des échecs pour enfants</a></li>
-          <li><a href="comment-apprendre-echecs-enfant.html">Comment apprendre les échecs à un enfant</a></li>
-          <li><a href="cours-echecs-enfants-paris.html">Cours d'échecs pour enfants à Paris</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Nicolas Musicki - Cours d'Échecs Paris. Tous droits réservés.</p>
     </div>
   </footer>
+
+  <script>
+    // Navigation mobile
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      if (mobileMenu && navMenu) {
+        mobileMenu.addEventListener('click', function() {
+          this.classList.toggle('active');
+          navMenu.classList.toggle('active');
+        });
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
