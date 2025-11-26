@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <div class="chatbot-empty">
                 <div class="chatbot-empty-icon">🎯</div>
                 <h4>Bienvenue !</h4>
-                <p>Pose-moi tes questions sur les cours d'échecs ! Le 1er cours est 100% gratuit pour essayer. 🎁</p>
+                <p>Pose-moi tes questions !</p>
               </div>
             </div>
           </div>
