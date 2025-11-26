@@ -123,6 +123,7 @@
   font-size: 13px;
   opacity: 1;
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .chatbot-close {
@@ -195,14 +196,14 @@
 
 .typing-indicator {
   display: flex;
-  gap: 4px;
+  gap: 3px;
   align-items: center;
-  height: 20px;
+  height: 16px;
 }
 
 .typing-dot {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   background: var(--accent-color);
   border-radius: 50%;
   animation: typing 1.4s infinite;
