@@ -1,0 +1,25 @@
+# Ignore node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Production
+dist/
+build/
+
+# Logs
+logs/
+*.log
