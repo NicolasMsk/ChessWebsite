@@ -196,14 +196,14 @@
 
 .typing-indicator {
   display: flex;
-  gap: 3px;
+  gap: 2px;
   align-items: center;
-  height: 16px;
+  height: 12px;
 }
 
 .typing-dot {
-  width: 5px;
-  height: 5px;
+  width: 3px;
+  height: 3px;
   background: var(--accent-color);
   border-radius: 50%;
   animation: typing 1.4s infinite;
