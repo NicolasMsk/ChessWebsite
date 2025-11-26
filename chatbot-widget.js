@@ -42,13 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div class="chatbot-messages" id="chatbot-messages">
           <div class="message bot">
-            <div class="message-content">
-              <div class="chatbot-empty">
-                <div class="chatbot-empty-icon">♟️</div>
-                <h4>Assistant Échecs</h4>
-                <p>Pose tes questions ici 👋</p>
-              </div>
-            </div>
+            <div class="message-content">Salut ! 👋 Je suis l'assistant échecs de Nicolas. Tu peux poser tes questions ici !</div>
           </div>
         </div>
         <div class="chatbot-input-area">
@@ -92,12 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Clear input
     input.value = '';
     input.style.height = 'auto';
-
-    // Remove empty state if present
-    const emptyState = messagesDiv.querySelector('.chatbot-empty');
-    if (emptyState) {
-      emptyState.closest('.message').remove();
-    }
 
     // Add user message
     const userMsg = document.createElement('div');
