@@ -8,6 +8,17 @@ const OpenAI = require('openai');
 // Initialize Express
 const app = express();
 
+// Logs de démarrage
+console.log('🚀 Starting Chess Chatbot Server...');
+console.log('📝 Environment Variables Check:');
+console.log('  - SUPABASE_URL:', process.env.SUPABASE_URL ? '✓ Set' : '✗ Missing');
+console.log('  - SUPABASE_SECRET_KEY:', process.env.SUPABASE_SECRET_KEY ? '✓ Set' : '✗ Missing');
+console.log('  - OPENAI_API_KEY:', process.env.OPENAI_API_KEY ? '✓ Set' : '✗ Missing');
+console.log('  - OPENAI_MODEL:', process.env.OPENAI_MODEL || 'gpt-4o-mini (default)');
+console.log('  - PORT:', process.env.PORT || '3000 (default)');
+console.log('  - NODE_ENV:', process.env.NODE_ENV || 'development (default)');
+console.log('  - CORS_ORIGIN:', process.env.CORS_ORIGIN || '* (all origins)');
+
 // Middleware
 app.use(cors({
   origin: process.env.CORS_ORIGIN?.split(',') || '*',
@@ -16,15 +27,19 @@ app.use(cors({
 app.use(express.json({ limit: '10mb' }));
 
 // Initialize Supabase
+console.log('🗄️  Initializing Supabase client...');
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SECRET_KEY
 );
+console.log('✓ Supabase client initialized');
 
 // Initialize OpenAI
+console.log('🤖 Initializing OpenAI client...');
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
+console.log('✓ OpenAI client initialized');
 
 // SYSTEM PROMPT - À GARDER SYNCHRONISÉ AVEC prompt.txt
 const SYSTEM_PROMPT = `Tu es un assistant IA spécialisé en enseignement des échecs pour enfants et adultes débutants, créé par Nicolas Musicki, professeur d'échecs à Paris et Versailles.
@@ -103,20 +118,27 @@ app.get('/health', (req, res) => {
 
 // Chat endpoint
 app.post('/api/chat', async (req, res) => {
+  console.log('\n💬 New chat request received');
   try {
     const { message, sessionId } = req.body;
+    console.log('  - Session ID:', sessionId);
+    console.log('  - Message:', message?.substring(0, 50) + '...');
 
     // Validation
     if (!message || !sessionId) {
+      console.log('❌ Validation failed: Missing message or sessionId');
       return res.status(400).json({ error: 'Message and sessionId required' });
     }
 
     // Create or get session
+    console.log('📦 Checking session in Supabase...');
     const { data: session, error: sessionError } = await supabase
       .from('sessions')
       .select('*')
       .eq('session_id', sessionId)
       .single();
+    
+    console.log('  - Session found:', session ? '✓' : '✗');
 
     if (sessionError && sessionError.code !== 'PGRST116') {
       throw sessionError;
@@ -141,6 +163,7 @@ app.post('/api/chat', async (req, res) => {
       .limit(10);
 
     // Build messages for OpenAI
+    console.log('📚 Building message history...');
     const messages = [
       { role: 'system', content: SYSTEM_PROMPT },
       ...(history || []).map(msg => ({
@@ -149,8 +172,10 @@ app.post('/api/chat', async (req, res) => {
       })),
       { role: 'user', content: message }
     ];
+    console.log('  - Total messages:', messages.length);
 
     // Call OpenAI API
+    console.log('🤖 Calling OpenAI API...');
     const response = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: messages,
@@ -159,8 +184,10 @@ app.post('/api/chat', async (req, res) => {
     });
 
     const aiResponse = response.choices[0].message.content;
+    console.log('✓ OpenAI response received:', aiResponse?.substring(0, 50) + '...');
 
     // Save conversation to Supabase
+    console.log('💾 Saving to Supabase...');
     await supabase
       .from('conversations')
       .insert({
@@ -168,8 +195,10 @@ app.post('/api/chat', async (req, res) => {
         message_user: message,
         response_ai: aiResponse
       });
+    console.log('✓ Conversation saved');
 
     // Return response
+    console.log('✅ Sending response to client');
     res.json({
       success: true,
       message: aiResponse,
@@ -177,10 +206,14 @@ app.post('/api/chat', async (req, res) => {
     });
 
   } catch (error) {
-    console.error('Error in /api/chat:', error);
+    console.error('\n❌ Error in /api/chat:');
+    console.error('  - Error message:', error.message);
+    console.error('  - Error stack:', error.stack);
+    console.error('  - Full error:', JSON.stringify(error, null, 2));
     res.status(500).json({
       success: false,
-      error: error.message || 'Internal server error'
+      error: error.message || 'Internal server error',
+      details: error.stack
     });
   }
 });
