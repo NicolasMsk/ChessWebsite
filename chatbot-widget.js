@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="message bot">
             <div class="message-content">
               <div class="chatbot-empty">
-                <div class="chatbot-empty-icon">🎯</div>
-                <h4>Bienvenue !</h4>
-                <p>Pose-moi tes questions !</p>
+                <div class="chatbot-empty-icon">♟️</div>
+                <h4>Assistant Échecs</h4>
+                <p>Pose tes questions ici 👋</p>
               </div>
             </div>
           </div>
