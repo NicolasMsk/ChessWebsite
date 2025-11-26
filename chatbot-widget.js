@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Add bot response
       const botMsg = document.createElement('div');
       botMsg.className = 'message bot';
-      botMsg.innerHTML = `<div class="message-content">${escapeHtml(data.response)}</div>`;
+      botMsg.innerHTML = `<div class="message-content">${escapeHtml(data.message)}</div>`;
       messagesDiv.appendChild(botMsg);
       messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
