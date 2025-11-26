@@ -176,6 +176,8 @@
   font-size: 14px;
   line-height: 1.4;
   word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 .message.user .message-content {

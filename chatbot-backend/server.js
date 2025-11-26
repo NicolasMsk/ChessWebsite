@@ -109,24 +109,31 @@ app.post('/api/chat', async (req, res) => {
         });
     }
 
-    // Get conversation history (last 10 messages)
+    // Get conversation history (last 3 exchanges = 6 messages max)
     const { data: history } = await supabase
       .from('conversations')
       .select('*')
       .eq('session_id', sessionId)
-      .order('timestamp', { ascending: true })
-      .limit(10);
+      .order('timestamp', { ascending: false })
+      .limit(3);
 
     // Build messages for OpenAI
     console.log('📚 Building message history...');
     const messages = [
-      { role: 'system', content: SYSTEM_PROMPT },
-      ...(history || []).map(msg => ({
-        role: msg.message_user ? 'user' : 'assistant',
-        content: msg.message_user || msg.response_ai
-      })),
-      { role: 'user', content: message }
+      { role: 'system', content: SYSTEM_PROMPT }
     ];
+    
+    // Add history in correct order (oldest first)
+    if (history && history.length > 0) {
+      history.reverse().forEach(msg => {
+        messages.push({ role: 'user', content: msg.message_user });
+        messages.push({ role: 'assistant', content: msg.response_ai });
+      });
+    }
+    
+    // Add current message
+    messages.push({ role: 'user', content: message });
+    
     console.log('  - Total messages:', messages.length);
 
     // Call OpenAI API
