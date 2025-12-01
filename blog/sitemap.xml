@@ -9,11 +9,28 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2025-11-19</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
+  <!-- Article Top 5 Échiquiers Pliables -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/meilleur-echiquier-pliable.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2025-11-29</news:publication_date>
+      <news:title>Top 5 des Meilleurs Échiquiers Pliables en 2025 (Comparatif &amp; Guide d'Achat)</news:title>
+      <news:keywords>échiquier pliable, échiquier magnétique, échiquier bois pliable, meilleur échiquier, comparatif échiquier, échiquier voyage, jeu échecs pliable, échiquier portable</news:keywords>
+    </news:news>
+  </url>
+
   <!-- Article Mon Enfant Perd Toujours aux Échecs -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/mon-enfant-perd-toujours-echecs.html</loc>
