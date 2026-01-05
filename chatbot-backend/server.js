@@ -71,12 +71,41 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', message: 'Chess Chatbot Backend is running' });
 });
 
+// Validate UUID format
+function isValidUUID(str) {
+  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+  return uuidRegex.test(str);
+}
+
+// Convert invalid session ID to a deterministic UUID (based on hash)
+function convertToUUID(str) {
+  // If already valid, return as-is
+  if (isValidUUID(str)) return str;
+  
+  // Generate a deterministic UUID from the string
+  // This ensures the same invalid ID always maps to the same UUID
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash;
+  }
+  
+  // Create a UUID-like format from the hash
+  const hex = Math.abs(hash).toString(16).padStart(8, '0');
+  return `${hex.slice(0,8)}-${hex.slice(0,4)}-4${hex.slice(1,4)}-8${hex.slice(0,3)}-${hex.padEnd(12, '0').slice(0,12)}`;
+}
+
 // Chat endpoint
 app.post('/api/chat', async (req, res) => {
   console.log('\n💬 New chat request received');
   try {
-    const { message, sessionId } = req.body;
-    console.log('  - Session ID:', sessionId);
+    let { message, sessionId } = req.body;
+    console.log('  - Original Session ID:', sessionId);
+    
+    // Convert to valid UUID if needed
+    sessionId = convertToUUID(sessionId);
+    console.log('  - Converted Session ID:', sessionId);
     console.log('  - Message:', message?.substring(0, 50) + '...');
 
     // Validation
