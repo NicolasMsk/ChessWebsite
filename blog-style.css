@@ -377,15 +377,22 @@ button:focus {
 }
 
 .cta-section .btn {
-  background: var(--white);
-  color: var(--black);
-  border-color: var(--white);
+  background: var(--accent);
+  color: var(--walnut);
+  border-color: var(--accent);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
 .cta-section .btn:hover {
-  background: transparent;
-  color: var(--white);
+  background: var(--white);
+  color: var(--walnut);
   border-color: var(--white);
+  transform: translateY(-2px);
 }
 
 .gift-badge {

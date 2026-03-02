@@ -473,12 +473,12 @@ body:not(.has-promo) .navbar {
 }
 
 .nav-cta {
-  background: var(--walnut);
-  color: var(--white) !important;
-  font-weight: 600;
-  border: 2px solid var(--walnut);
+  background: var(--accent);
+  color: var(--walnut) !important;
+  font-weight: 700;
+  border: 2px solid var(--accent);
   border-radius: 0;
-  padding: 0.5rem 1.5rem;
+  padding: 0.55rem 1.6rem;
   font-size: 0.78rem;
   transition: var(--transition);
   letter-spacing: 0.12em;
@@ -487,9 +487,10 @@ body:not(.has-promo) .navbar {
 
 .nav-cta:hover {
   background: var(--white);
-  color: var(--black) !important;
+  color: var(--walnut) !important;
   transform: none;
   box-shadow: none;
+  border-color: var(--white);
 }
 
 .nav-cta:hover::after {
