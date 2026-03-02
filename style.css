@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+/* Lora font loaded via HTML <head> for performance */
 
 /* ================================================ */
 /*  COURS D'ÉCHECS PARIS — PREMIUM CHESS AESTHETIC  */
@@ -1305,6 +1305,60 @@ header .btn:hover {
 }
 
 /* ======================== */
+/* 12b. BLOG PREVIEW        */
+/* ======================== */
+.blog-preview {
+  padding: 80px 0;
+}
+
+.blog-preview h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.blog-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.blog-preview-card {
+  display: block;
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid var(--silver);
+  border-left: 4px solid var(--accent);
+  text-decoration: none;
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.blog-preview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--walnut);
+}
+
+.blog-preview-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--walnut);
+}
+
+.blog-preview-card h4 i {
+  color: var(--accent);
+  margin-right: 8px;
+}
+
+.blog-preview-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ======================== */
 /* 13. TESTIMONIALS         */
 /* ======================== */
 .testimonials {
@@ -1906,6 +1960,10 @@ footer {
   }
 
   .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-preview-grid {
     grid-template-columns: 1fr;
   }
 
