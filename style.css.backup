@@ -1,0 +1,1810 @@
+/* ======================== */
+/* 1. VARIABLES & RESET     */
+/* ======================== */
+:root {
+  /* Retour aux couleurs d'origine, mais versions modernisées/nettes */
+  --primary: #2980b9;         /* Bleu original (plus clair, plus "web") */
+  --primary-dark: #2471a3;    /* Version sombre du bleu original */
+  --secondary: #e74c3c;       /* Le rouge original, dynamique */
+  --secondary-hover: #c0392b; /* Version sombre */
+  
+  --accent: #f39c12;          /* L'orange original */
+  /* Suppression du jaune "kitsch", on remplace par l'orange original ou le rouge selon le contexte */
+  --accent-bright: #f39c12;   
+  
+  --light: #f8f9fa;           /* Blanc froid moderne pour le fond */
+  --dark: #1a252f;            /* Gris très foncé, plus élégant que le bleu nuit standard */
+  
+  --text: #34495e;            /* Texte gris foncé mat, très lisible */
+  --text-light: #7f8c8d;      /* Texte secondaire doux */
+  
+  --light-gray: #f4f6f9;      /* Gris très léger et pur */
+  --medium-gray: #dfe6ed;     
+  
+  --success: #27ae60;         /* Vert émeraude, plus premium */
+  --promo: #c0392b;           /* Rouge bordeaux pour les promos, plus chic */
+  
+  --border-radius: 8px;       /* Coins un peu moins ronds pour faire plus sérieux/premium */
+  --box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1); /* Ombre diffuse et légère "luxe" */
+  --box-shadow-hover: 0 15px 35px -10px rgba(0, 0, 0, 0.15);
+  
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+  
+  --container-width: 1240px;  /* Un peu plus large pour respirer */
+  --header-height: 4.5rem;
+  --content-spacing: clamp(3rem, 6vw, 6rem);
+  
+  --font-size-base: clamp(16px, 1vw, 18px);
+  --font-size-h1: clamp(2.5rem, 6vw, 3.8rem);
+  --font-size-h2: clamp(2rem, 4vw, 2.8rem);
+  --font-size-h3: clamp(1.5rem, 3vw, 2rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--light);
+  line-height: 1.8;
+  font-size: var(--font-size-base);
+  padding-top: 0; 
+  overflow-x: hidden;
+  font-display: swap; 
+  -webkit-font-smoothing: antialiased; /* Rendu de texte plus net */
+}
+
+/* Add top padding only when the promo banner is active on the page */
+.has-promo {
+  padding-top: 40px;
+}
+
+/* ======================== */
+/* 2. TYPOGRAPHY            */
+/* ======================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+  width: 100%;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  color: white; 
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+  letter-spacing: -0.01em;
+  min-height: 3.5rem; 
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  color: var(--primary);
+  position: relative;
+  /* Centrage subtil des titres sur desktop souvent plus joli */
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px; /* Plus discret */
+  height: 3px; /* Plus fin et élégant */
+  background-color: var(--secondary);
+  border-radius: 2px;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 1.1vw, 1.15rem);
+  color: var(--text);
+  max-width: 80ch; /* Meilleure lisibilité */
+}
+
+strong {
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* ======================== */
+/* 3. BUTTONS & LINKS       */
+/* ======================== */
+a {
+  color: var(--primary); /* Liens bleus par défaut */
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.btn {
+  display: inline-block;
+  padding: clamp(0.7rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2.2rem);
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre neutre */
+  white-space: normal; /* Permet au texte de passer à la ligne si nécessaire */
+  word-wrap: break-word;
+}
+
+.btn:hover {
+  background-color: var(--secondary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-dark);
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-light {
+  background-color: white;
+  color: var(--primary);
+}
+
+.btn-light:hover {
+  background-color: var(--light);
+  color: var(--secondary);
+}
+
+.btn-full {
+  display: block;
+  width: 100%;
+}
+
+/* Conteneur pour les boutons côte à côte */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.hero-buttons .btn {
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+}
+
+/* ======================== */
+/* 4. LAYOUT & CONTAINERS   */
+/* ======================== */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 1.5rem);
+}
+
+section {
+  padding: var(--content-spacing) 0;
+}
+
+main section {
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  background: white;
+  border-radius: var(--border-radius);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: var(--box-shadow);
+}
+
+/* ======================== */
+/* 5. BANNIÈRE PROMO        */
+/* ======================== */
+.promo-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 0.4rem 0;
+  z-index: 2000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.promo-banner p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  color: white;
+  line-height: 1.3;
+}
+
+.pulse-icon {
+  color: white;
+  opacity: 0.9;
+  margin-right: 0.5rem;
+  font-size: 1.1em;
+}
+
+.promo-link {
+  color: var(--primary);
+  background: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 8px;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.promo-link i {
+  font-size: 0.9em;
+  transition: transform 0.3s ease;
+}
+
+.promo-link:hover {
+  background: white;
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.promo-link:hover i {
+  transform: translateX(3px);
+}
+
+/* ======================== */
+/* 6. NAVIGATION            */
+/* ======================== */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9); /* Plus transparent */
+  backdrop-filter: blur(15px); /* Flou plus fort */
+  position: sticky;
+  top: 40px;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Ombre douce */
+}
+
+/* Navbar sans bannière (pour les pages blog) */
+body:not(:has(.promo-banner)) .navbar {
+  top: 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 700;
+  color: var(--primary);
+  z-index: 1001;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icône logo colorée */
+.logo i {
+  color: var(--primary); /* Bleue comme le titre pour harmoniser */
+  font-size: 1.1em; /* Un peu plus grand pour l'alignement */
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 1.5vw, 2rem);
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+.nav-link {
+  color: var(--dark);
+  font-weight: 600;
+  transition: var(--transition);
+  position: relative;
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--secondary); /* Soulignement rouge */
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+.nav-link:hover {
+  color: var(--secondary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  background: var(--primary);
+  color: white;
+  font-weight: 600; /* Un peu moins gras */
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.2rem; /* Taille plus standard */
+  font-size: 0.9rem;
+  transition: var(--transition);
+  box-shadow: none; /* Pas d'ombre alourdissante */
+}
+
+.nav-cta:hover {
+  background: var(--primary-dark);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-cta:hover::after {
+  display: none;
+}
+
+/* ======================== */
+/* 7. HEADER                */
+/* ======================== */
+header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: clamp(3rem, 6vw, 5rem) 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header avec fond d'échiquier */
+.header-with-chessboard {
+  /* Retour au fond original pour retrouver la transparence et la couleur exactes */
+  background-image: linear-gradient(rgba(58, 110, 165, 0.85), rgba(58, 110, 165, 0.85)), url('echiquier.avif');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: var(--font-size-h1);
+  text-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Ombre plus diffuse premium */
+  letter-spacing: -0.02em; /* Plus serré pour les titres display */
+  line-height: 1.1;
+}
+
+header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 2rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  padding-bottom: 0;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+header h2::after {
+  display: none;
+}
+
+.intro {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--light); /* Blanc soft, moins agressif que le jaune */
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Badge d'offre dans le header */
+.header-offers {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header-offer-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.1); 
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: none;
+  transform: none;
+  animation: none;
+}
+
+/* Chess pattern overlay subtil pour texture - Supprimé pour netteté */
+header::before {
+  display: none;
+}
+
+/* Chess pattern overlay for header - Retiré pour plus de sobriété */
+header::before {
+  display: none;
+}
+
+.header-with-chessboard::before {
+  display: none;
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
+/* ======================== */
+/* 8. HERO SECTION          */
+/* ======================== */
+.hero {
+  background-color: var(--light); /* Changer le fond blanc en crème pour moins de dureté */
+  padding: clamp(3rem, 5vw, 5rem) 0;
+  position: relative;
+  box-shadow: none; /* Plus propre sans l'ombre portée ici */
+}
+
+.hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 100%;
+}
+
+.hero-text h3 {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+  color: var(--text);
+}
+
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.offre-speciale {
+  display: inline-block;
+  font-weight: bold;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: white;
+  background-color: var(--secondary);
+  padding: clamp(0.55rem, 1.5vw, 0.8rem) clamp(0.9rem, 2vw, 1.3rem);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transform: none; /* Retrait de la rotation - plus sobre/premium */
+  position: relative;
+}
+
+.offre-speciale .offre-detail {
+  display: block;
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
+  margin-top: 0.25rem;
+  opacity: 0.95;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  line-height: 1;
+  height: fit-content;
+}
+
+/* Image "hero" */
+.hero-image {
+  flex: 1;
+  min-width: 100%;
+  text-align: center;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border: 5px solid white;
+  outline: 1px solid rgba(0,0,0,0.08);
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-image img:hover {
+  transform: translateY(-5px); /* Lift elegant au lieu de scale */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.image-badge {
+  position: absolute;
+  top: 20px; /* Position plus standard et alignée */
+  right: 20px;
+  background-color: var(--secondary); /* Rouge au lieu du jaune */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px; /* Plus carré, moins rond/enfantin */
+  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transform: none; /* Pas de rotation */
+  z-index: 2;
+}
+
+/* ======================== */
+/* SECTION ÉCHIQUIER PLEINE LARGEUR */
+/* ======================== */
+.chessboard-showcase {
+  height: clamp(220px, 50vw, 420px);
+  background-image: url('echiquier.avif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  margin: 0 -1.5rem 4rem -1.5rem;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.chessboard-overlay {
+  background-color: rgba(58, 110, 165, 0.7);
+  padding: clamp(1.6rem, 4vw, 3.2rem);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(2px);
+  max-width: clamp(85%, 100% - 2rem, 80%);
+}
+
+.chessboard-overlay h3 {
+  color: white;
+  font-size: clamp(1.5rem, 3.5vw, 2.3rem);
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.chessboard-overlay p {
+  color: white;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  margin-bottom: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ======================== */
+/* 9. ABOUT SECTION         */
+/* ======================== */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.about p {
+  text-align: justify;
+  color: var(--text);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: clamp(1.1rem, 2vw, 1.6rem);
+  margin-top: clamp(1.1rem, 2vw, 1.6rem);
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1 1 clamp(120px, 25%, 170px);
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.stat-number {
+  display: block;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--secondary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-text {
+  display: block;
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  color: var(--text);
+}
+
+/* ======================== */
+/* 10. ADVANTAGES SECTION   */
+/* ======================== */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 30%, 290px), 1fr));
+  gap: clamp(1.1rem, 2vw, 1.6rem);
+  margin-top: 2rem;
+}
+
+.advantage-card {
+  background: white; /* Fond blanc au lieu de gris pour plus de clarté/premium */
+  padding: clamp(1.3rem, 2.5vw, 1.6rem);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.05); /* Bordure très fine au lieu du border-left coloré */
+  height: 100%;
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+  border-color: rgba(0,0,0,0.05);
+}
+
+.advantage-icon {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.advantage-card h4 {
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+  font-size: clamp(1.15rem, 1.5vw, 1.3rem);
+}
+
+.advantage-card p {
+  margin-bottom: 0;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  color: var(--text);
+}
+
+/* ======================== */
+/* 11. LOCATION SECTION     */
+/* ======================== */
+.location-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.6rem, 4vw, 2.1rem);
+  align-items: center;
+}
+
+.location-text {
+  flex: 1.5;
+  min-width: 100%;
+}
+
+.location-icon {
+  color: var(--secondary);
+  margin-right: 0.5rem;
+}
+
+.location-map {
+  flex: 1;
+  min-width: 100%;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ======================== */
+/* 12. TARIFS SECTION       */
+/* ======================== */
+.free-lesson-banner {
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.85), rgba(231, 76, 60, 0.85)), url('echiquier.avif');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: clamp(1.6rem, 4vw, 2.1rem);
+  border-radius: var(--border-radius);
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.free-lesson-banner::before {
+  display: none;
+}
+
+.free-lesson-banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.gift-icon {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.free-lesson-banner h3 {
+  color: white;
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.free-lesson-banner h3 span {
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+  background-color: white;
+  color: var(--secondary);
+  padding: 0.2rem 0.5rem;
+  margin: 0 0.3rem;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.free-lesson-banner p {
+  margin-bottom: 1.5rem;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.free-lesson-banner .btn {
+  background-color: white;
+  color: var(--secondary);
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  padding: clamp(0.65rem, 1.5vw, 0.8rem) clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.free-lesson-banner .btn:hover {
+  background-color: var(--light);
+  transform: translateY(-5px);
+}
+
+.tarifs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.6rem, 4vw, 2.1rem);
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tarif-card {
+  flex: 1 1 clamp(260px, 40%, 360px);
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border: 1px solid var(--medium-gray);
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.tarif-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.tarif-card.featured {
+  border-color: var(--secondary);
+  transform: scale(1.05);
+}
+
+.tarif-card.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.tarif-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-bottom-left-radius: var(--border-radius);
+  z-index: 1;
+}
+
+.tarif-header {
+  background-color: var(--primary);
+  color: white;
+  padding: clamp(1.3rem, 3vw, 1.6rem);
+  text-align: center;
+}
+
+.tarif-card.featured .tarif-header {
+  background-color: var(--secondary);
+}
+
+.tarif-header h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.tarif-price {
+  font-size: clamp(2.1rem, 4vw, 2.6rem);
+  font-weight: 700;
+}
+
+.duration {
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  font-weight: 400;
+}
+
+.tarif-body {
+  padding: clamp(1.3rem, 3vw, 1.6rem);
+}
+
+.tarif-features {
+  margin-bottom: 1.5rem;
+}
+
+.tarif-features li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.6rem;
+  position: relative;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--text);
+}
+
+.tarif-features li i {
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  color: var(--success);
+}
+
+.notice {
+  text-align: center;
+  font-weight: 500; /* Moins gras */
+  color: var(--text);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  padding: clamp(1.3rem, 3vw, 1.6rem);
+  background-color: white;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--medium-gray); /* Bordure solide fine propre */
+  margin-top: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.notice i {
+  margin-right: 0.5rem;
+  color: var(--secondary);
+  animation: none; /* Pas d'animation cheap */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ======================== */
+/* SECTION FAQ              */
+/* ======================== */
+.faq {
+  background-color: white;
+  padding: clamp(2.2rem, 5vw, 4.2rem) 0;
+  box-shadow: var(--box-shadow);
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  border-left: 3px solid var(--primary);
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  border-left-color: var(--secondary);
+}
+
+.faq-item h4 {
+  padding: 1.2rem 1.5rem;
+  margin: 0;
+  font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+  color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-item h4::after {
+  content: '+';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.faq-item.active h4::after {
+  content: '-';
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+  margin-bottom: 0;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--text);
+}
+
+/* ======================== */
+/* 13. TESTIMONIALS         */
+/* ======================== */
+.testimonials {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: clamp(3.1rem, 6vw, 4.1rem) 0;
+  background-image: linear-gradient(rgba(58, 110, 165, 0.85), rgba(58, 110, 165, 0.85)), url('echiquier.avif');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.testimonials h2 {
+  color: white;
+  margin-bottom: clamp(2.1rem, 5vw, 3.1rem);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.testimonials h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent);
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background-color: white;
+  color: var(--text);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 2.5rem 2rem;
+  flex: 1 1 clamp(300px, 30%, 380px);
+  position: relative;
+  transition: var(--transition);
+  margin-bottom: 0;
+  border: none;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.testimonial-content {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.testimonial-content::before {
+  content: '\201C';
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  position: absolute;
+  top: -2.5rem;
+  left: -1rem;
+  color: rgba(58, 110, 165, 0.1); /* Plus subtil */
+  z-index: 0;
+}
+
+.testimonial-content p {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  margin-bottom: 0;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--text);
+}
+
+.testimonial-author {
+  text-align: right;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--medium-gray);
+}
+
+.author-name {
+  display: block;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+}
+
+.author-title {
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  color: var(--secondary);
+}
+
+/* ======================== */
+/* 14. CONTACT SECTION      */
+/* ======================== */
+.contact {
+  background-color: white;
+  padding: clamp(3.1rem, 6vw, 4.1rem) 0;
+}
+
+.free-trial-reminder {
+  background-color: var(--light-gray); /* Fond clair propre */
+  color: var(--secondary); /* Texte rouge élégant */
+  padding: clamp(0.8rem, 2vw, 1.05rem);
+  margin-bottom: 2rem;
+  text-align: center;
+  border-radius: var(--border-radius);
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  font-weight: 700;
+  border: 1px solid rgba(231, 76, 60, 0.2); /* Bordure subtile */
+  box-shadow: var(--box-shadow);
+  text-shadow: none;
+}
+
+.free-trial-reminder i {
+  margin-right: 0.5rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.6rem, 4vw, 2.1rem);
+}
+
+.contact-info {
+  flex: 1 1 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  color: var(--secondary);
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-item h4 {
+  margin-bottom: 0.3rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.15rem);
+  color: var(--primary);
+}
+
+.contact-message {
+  padding: clamp(1.3rem, 3vw, 1.6rem);
+  background-color: var(--light);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--secondary);
+  margin-top: 2rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--text);
+}
+
+.contact-form {
+  flex: 1 1 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  transition: var(--transition);
+  color: var(--text);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.15);
+}
+
+/* ======================== */
+/* 15. CTA SECTION          */
+/* ======================== */
+.cta {
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: clamp(3.1rem, 6vw, 4.1rem) 0;
+  position: relative;
+  background-image: linear-gradient(rgba(231, 76, 60, 0.85), rgba(231, 76, 60, 0.85)), url('echiquier.avif');
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-badge {
+  background-color: rgba(255,255,255,0.2); /* Transparence chic */
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  transform: none; /* Pas de rotation */
+  box-shadow: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cta h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.cta p {
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(1.05rem, 1.3vw, 1.15rem);
+  color: white;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.cta p strong {
+  background-color: white;
+  color: var(--secondary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* ======================== */
+/* 16. FOOTER               */
+/* ======================== */
+footer {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: clamp(2.1rem, 4vw, 3.1rem) 0 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.6rem, 4vw, 2.1rem);
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  flex: 1 1 100%;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.35rem, 2vw, 1.55rem);
+  font-weight: 700;
+}
+
+.footer-logo p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  margin-top: 0.5rem;
+  opacity: 0.85;
+  color: white;
+}
+
+.footer-links {
+  flex: 1 1 clamp(160px, 30%, 210px);
+}
+
+.footer-links h4,
+.footer-social h4 {
+  color: var(--light);
+  margin-bottom: 1rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.15rem);
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+  color: var(--light);
+  opacity: 0.85;
+  transition: var(--transition);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+}
+
+.footer-links ul li a:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.footer-social {
+  flex: 1 1 clamp(160px, 30%, 210px);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  color: white;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background-color: var(--secondary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  opacity: 0.75;
+  color: white;
+}
+
+.footer-bottom p {
+  color: white !important;
+}
+
+/* ======================== */
+/* 17. FLOATING CTA BUTTON  */
+/* ======================== */
+.floating-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+}
+
+.floating-cta a {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(231, 76, 60, 0.4); /* Ombre colorée "glow" plus moderne */
+  transition: var(--transition);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.floating-cta a:hover {
+  background-color: var(--secondary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(231, 76, 60, 0.5);
+  text-decoration: none;
+}
+
+.floating-cta i {
+  margin-right: 0.5rem;
+  animation: none; /* Stop pulse */
+}
+
+/* ======================== */
+/* 18. MEDIA QUERIES        */
+/* ======================== */
+@media (min-width: 576px) and (max-width: 768px) {
+  .promo-banner {
+    padding: 0.4rem 0.5rem;
+  }
+  
+  .promo-banner p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero-text {
+    min-width: 0;
+    flex: 1 1 300px;
+  }
+  
+  .hero-image {
+    min-width: 0;
+    flex: 1 1 300px;
+  }
+  
+  .contact-info,
+  .contact-form {
+    flex: 1 1 45%;
+  }
+  
+  .footer-logo {
+    flex: 2 1 250px;
+  }
+  
+  .location-text {
+    min-width: 0;
+    flex: 1.5 1 300px;
+  }
+  
+  .location-map {
+    min-width: 0;
+    flex: 1 1 280px;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 100px; /* Ajusté pour la bannière promo */
+    left: -100%;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 100px);
+    transition: var(--transition);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+    padding: 2rem;
+    z-index: 999;
+    align-items: flex-start;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .nav-menu li {
+    width: 100%;
+  }
+  
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 0;
+    font-size: 1.15rem;
+  }
+  
+  .nav-cta {
+    margin-top: 1rem;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+  }
+  
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  .tarif-card.featured {
+    transform: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tarif-card.featured:hover {
+    transform: translateY(-10px);
+  }
+  
+  .promo-banner {
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .promo-banner p {
+    font-size: 0.7rem;
+    gap: 0.1rem;
+  }
+  
+  .promo-banner .pulse-icon {
+    font-size: 0.65rem;
+  }
+  
+  .promo-link {
+    padding: 3px 10px;
+    font-size: 0.65rem;
+    margin-left: 5px;
+  }
+  
+  .chessboard-showcase {
+    background-attachment: scroll; /* Fix for mobile scrolling */
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-text {
+    text-align: center;
+  }
+  
+  .badge-container {
+    justify-content: center;
+  }
+  
+  .header-offer-badge {
+    font-size: 1.15rem;
+  }
+  
+  .badge-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .offre-speciale, .badge {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    min-width: 100%;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+  }
+  
+  .promo-banner p strong {
+    display: inline;
+    margin-bottom: 0;
+  }
+  
+  .promo-link {
+    font-size: 0.75rem;
+  }
+  
+  .floating-cta {
+    bottom: 0.6rem;
+    right: 0.6rem;
+  }
+  
+  .floating-cta a {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Améliorations pour la lisibilité sur mobile */
+  body {
+    font-size: 16px; /* Garantir une taille de police minimale */
+  }
+  
+  p, .advantage-card p, .tarif-features li {
+    font-size: 16px; /* Taille de texte confortable sur mobile */
+    line-height: 1.6;
+  }
+  
+  .form-group input, 
+  .form-group textarea {
+    font-size: 16px; /* Éviter le zoom sur iOS */
+    padding: 0.9rem;
+  }
+  
+  /* Augmenter contraste et taille sur mobile */
+  .testimonial-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .contact-message, 
+  .notice {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Amélioration FAQ sur mobile */
+  .faq-item h4 {
+    font-size: 16px;
+    padding: 1rem 1.2rem;
+  }
+  
+  .faq-answer p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* ======================== */
+/* 19. ACCESSIBILITY        */
+/* ======================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.001s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mode sombre désactivé */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+/* ======================== */
+/* 20. PRINT STYLES         */
+/* ======================== */
+@media print {
+  .navbar,
+  .promo-banner,
+  .floating-cta,
+  .footer-social {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white;
+    font-size: 12pt;
+    color: black;
+  }
+  
+  header,
+  .testimonials,
+  .cta {
+    background: none !important;
+    color: black;
+  }
+  
+  header h1,
+  header h2,
+  .testimonials h2 {
+    color: black;
+  }
+  
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+  }
+  
+  h2::after {
+    display: none;
+  }
+}
+
+/* Style pour le message de confirmation */
+.form-confirmation {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(46, 204, 113, 0.1);
+  border-left: 5px solid var(--success);
+  border-radius: var(--border-radius);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.confirmation-content {
+  text-align: center;
+}
+
+.confirmation-icon {
+  font-size: 3rem;
+  color: var(--success);
+  margin-bottom: 1rem;
+}
+
+.form-confirmation h3 {
+  color: var(--success);
+  margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
