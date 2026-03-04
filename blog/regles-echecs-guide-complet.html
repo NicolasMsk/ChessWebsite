@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCK01E71GB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KCK01E71GB');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Toutes les règles des échecs expliquées simplement : déplacement des pièces, roque, en passant, échec et mat, pat, promotion. Guide complet illustré pour débutants.">
+  <meta name="keywords" content="règles échecs, règle du jeu échecs, comment jouer aux échecs, déplacement pièces échecs, roque échecs, en passant échecs, échec et mat, promotion pion, apprendre règles échecs">
+  <meta name="author" content="Nicolas Musicki">
+  <title>Les Règles des Échecs : Guide Complet et Illustré pour Débutants (2026)</title>
+
+  <!-- Balises Open Graph -->
+  <meta property="og:title" content="Les Règles des Échecs : Guide Complet pour Débutants">
+  <meta property="og:description" content="Toutes les règles des échecs expliquées simplement : déplacement des pièces, roque, en passant, échec et mat. Guide complet illustré.">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cours-echecs-paris.fr/blog/regles-echecs-guide-complet.html">
+  <meta property="og:image" content="https://www.cours-echecs-paris.fr/echiquier.avif">
+  <meta property="og:site_name" content="Cours d'Échecs Paris - Nicolas Musicki">
+  <meta property="article:author" content="Nicolas Musicki">
+  <meta property="article:published_time" content="2026-03-04">
+  <meta property="article:section" content="Règles des Échecs">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Les Règles des Échecs : Guide Complet pour Débutants">
+  <meta name="twitter:description" content="Toutes les règles des échecs expliquées simplement : déplacement des pièces, roque, en passant, échec et mat.">
+  <meta name="twitter:image" content="https://www.cours-echecs-paris.fr/echiquier.avif">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.cours-echecs-paris.fr/blog/regles-echecs-guide-complet.html">
+
+  <!-- Liens de navigation -->
+  <link rel="home" href="https://www.cours-echecs-paris.fr/">
+  <link rel="up" href="https://www.cours-echecs-paris.fr/blog/">
+
+  <!-- Données structurées JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Les Règles des Échecs : Guide Complet et Illustré pour Débutants",
+    "description": "Toutes les règles des échecs expliquées simplement : déplacement des pièces, roque, en passant, échec et mat, pat, promotion. Guide complet pour débutants.",
+    "author": {
+      "@type": "Person",
+      "name": "Nicolas Musicki",
+      "url": "https://www.cours-echecs-paris.fr"
+    },
+    "datePublished": "2026-03-04",
+    "dateModified": "2026-03-04",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Cours d'Échecs Paris",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.cours-echecs-paris.fr/logo.png"
+      }
+    },
+    "image": "https://www.cours-echecs-paris.fr/echiquier.avif",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.cours-echecs-paris.fr/blog/regles-echecs-guide-complet.html"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../blog-style.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body class="has-promo">
+  <!-- Bannière Promo -->
+  <div class="promo-banner">
+    <div class="container">
+      <p><i class="fa-solid fa-gift pulse-icon"></i> <strong>1<sup>er</sup> COURS OFFERT</strong> <span class="promo-text-long">- Profitez de cette offre exclusive !</span> <a href="../#contact" class="promo-link">Réserver <i class="fa-solid fa-arrow-right"></i></a></p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../" class="logo">&#9812; Nicolas Musicki</a>
+      <ul class="nav-menu">
+        <li><a href="../#about" class="nav-link">À propos</a></li>
+        <li><a href="../#offres" class="nav-link">Mes offres</a></li>
+        <li><a href="../#testimonials" class="nav-link">Témoignages</a></li>
+        <li><a href="./" class="nav-link">Blog</a></li>
+        <li><a href="../#contact" class="nav-cta">Réserver un cours</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header de l'article -->
+  <header class="article-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../">Accueil</a> <i class="fa-solid fa-chevron-right"></i>
+        <a href="./">Blog</a> <i class="fa-solid fa-chevron-right"></i>
+        <span>Règles des Échecs</span>
+      </div>
+
+      <h1>Les Règles des Échecs : Guide Complet<br><span class="subtitle">Tout ce qu'il faut savoir pour jouer votre première partie</span></h1>
+
+      <div class="article-meta">
+        <span><i class="fa-solid fa-user"></i> Nicolas Musicki</span>
+        <span><i class="fa-solid fa-calendar"></i> 4 mars 2026</span>
+        <span><i class="fa-solid fa-clock"></i> 15 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <article class="article-container">
+      <div class="container">
+
+        <!-- Image principale -->
+        <div class="article-image">
+          <img src="images/regles-echecs-guide-complet.png" alt="Échiquier avec pièces en position initiale pour apprendre les règles des échecs" width="900" height="600" loading="eager">
+        </div>
+
+        <!-- Introduction -->
+        <div class="article-intro">
+          <p class="lead">
+            Vous voulez <strong>apprendre à jouer aux échecs</strong> ? Vous êtes au bon endroit. Les échecs sont un jeu passionnant, accessible à tous, et dont les règles s'apprennent en <strong>moins d'une heure</strong>.
+          </p>
+          <p>
+            Je suis <strong>Nicolas Musicki</strong>, professeur d'échecs depuis plus de 5 ans à Paris et Versailles. J'ai initié des centaines de débutants complets, des enfants de 5 ans aux adultes de 60 ans. Et je vous assure : <strong>les règles ne sont pas compliquées</strong>. Il suffit de les aborder dans le bon ordre.
+          </p>
+          <p>
+            Dans ce guide, je vous explique <strong>toutes les règles officielles</strong> du jeu d'échecs, de la mise en place de l'échiquier jusqu'aux règles spéciales (roque, prise en passant, promotion). Avec des exemples concrets et des explications simples.
+          </p>
+        </div>
+
+        <!-- Table des matières -->
+        <nav class="table-of-contents">
+          <h2><i class="fa-solid fa-list"></i> Sommaire</h2>
+          <ul>
+            <li><a href="#echiquier">L'échiquier et la position de départ</a></li>
+            <li><a href="#pieces">Le déplacement de chaque pièce</a></li>
+            <li><a href="#regles-speciales">Les règles spéciales : roque, en passant, promotion</a></li>
+            <li><a href="#echec-mat">Échec, échec et mat, pat</a></li>
+            <li><a href="#nulle">Les différentes façons de faire nulle</a></li>
+            <li><a href="#valeur">La valeur des pièces</a></li>
+            <li><a href="#notation">La notation des coups</a></li>
+            <li><a href="#conseils">5 conseils pour bien commencer</a></li>
+            <li><a href="#faq">Questions fréquentes</a></li>
+          </ul>
+        </nav>
+
+        <!-- Section 1 : L'échiquier -->
+        <section id="echiquier">
+          <h2>1. L'échiquier et la position de départ</h2>
+
+          <h3>L'échiquier : 64 cases, 8 colonnes, 8 rangées</h3>
+
+          <p>
+            L'échiquier est un plateau carré composé de <strong>64 cases</strong> alternativement claires et foncées. Il se compose de <strong>8 colonnes</strong> (de a à h, de gauche à droite pour les Blancs) et <strong>8 rangées</strong> (de 1 à 8, du bas vers le haut pour les Blancs).
+          </p>
+
+          <div class="info-box">
+            <h3><i class="fa-solid fa-lightbulb"></i> Règle d'or pour placer l'échiquier</h3>
+            <p>La <strong>case en bas à droite doit toujours être une case claire</strong> (blanche). C'est la première chose à vérifier avant de commencer une partie. Retenez : « <strong>blanc à droite</strong> ».</p>
+          </div>
+
+          <h3>La position initiale des pièces</h3>
+
+          <p>
+            Chaque joueur commence avec <strong>16 pièces</strong>. Voici comment les placer (en partant du bord de l'échiquier vers le centre) :
+          </p>
+
+          <div class="card neutral">
+            <h4><i class="fa-solid fa-chess"></i> Rangée 1 (première rangée des Blancs)</h4>
+            <p>De gauche à droite : <strong>Tour – Cavalier – Fou – Dame – Roi – Fou – Cavalier – Tour</strong></p>
+            <p>Astuce pour retenir : la <strong>Dame se place toujours sur sa couleur</strong>. Dame blanche sur case blanche, Dame noire sur case noire.</p>
+          </div>
+
+          <div class="card neutral">
+            <h4><i class="fa-solid fa-chess-pawn"></i> Rangée 2 (deuxième rangée des Blancs)</h4>
+            <p>Les <strong>8 pions</strong> se placent sur toute la deuxième rangée, formant une ligne de défense devant les pièces.</p>
+          </div>
+
+          <p>
+            Le joueur avec les pièces noires place ses pièces de façon symétrique sur les rangées 7 (pions) et 8 (pièces).
+          </p>
+
+          <div class="highlight-box">
+            <h4><i class="fa-solid fa-circle-info"></i> Qui commence ?</h4>
+            <p>Les <strong>Blancs jouent toujours en premier</strong>. Ensuite, chaque joueur joue un coup à tour de rôle. C'est une règle universelle aux échecs.</p>
+          </div>
+        </section>
+
+        <!-- Section 2 : Le déplacement des pièces -->
+        <section id="pieces">
+          <h2>2. Le déplacement de chaque pièce</h2>
+
+          <p>
+            Chaque pièce d'échecs a son propre mode de déplacement. C'est la première chose à maîtriser. Voyons-les une par une, de la plus simple à la plus complexe.
+          </p>
+
+          <h3><i class="fa-solid fa-chess-rook"></i> La Tour</h3>
+
+          <div class="card success">
+            <h4>Déplacement de la Tour</h4>
+            <p>La Tour se déplace en <strong>ligne droite</strong>, horizontalement ou verticalement, d'autant de cases qu'elle le souhaite. Elle ne peut pas sauter par-dessus d'autres pièces.</p>
+            <p><strong>En pratique :</strong> la Tour est très puissante en fin de partie quand l'échiquier est dégagé. Elle contrôle toute une colonne ou toute une rangée.</p>
+          </div>
+
+          <h3><i class="fa-solid fa-chess-bishop"></i> Le Fou</h3>
+
+          <div class="card success">
+            <h4>Déplacement du Fou</h4>
+            <p>Le Fou se déplace en <strong>diagonale</strong>, d'autant de cases qu'il le souhaite. Il ne peut pas sauter par-dessus d'autres pièces.</p>
+            <p><strong>Point important :</strong> un Fou reste <strong>toujours sur la même couleur de case</strong>. Vous avez un Fou de cases blanches et un Fou de cases noires. C'est pour cela qu'on dit que les deux Fous ensemble sont très forts : ils couvrent les deux couleurs.</p>
+          </div>
+
+          <h3><i class="fa-solid fa-chess-queen"></i> La Dame (ou Reine)</h3>
+
+          <div class="card success">
+            <h4>Déplacement de la Dame</h4>
+            <p>La Dame est la <strong>pièce la plus puissante</strong>. Elle combine les mouvements de la Tour et du Fou : elle se déplace en <strong>ligne droite (horizontale, verticale) ET en diagonale</strong>, d'autant de cases qu'elle le souhaite.</p>
+            <p><strong>Conseil :</strong> la Dame est précieuse. Évitez de la sortir trop tôt en début de partie, car elle peut être facilement attaquée et vous ferez perdre du temps à la protéger.</p>
+          </div>
+
+          <h3><i class="fa-solid fa-chess-king"></i> Le Roi</h3>
+
+          <div class="card success">
+            <h4>Déplacement du Roi</h4>
+            <p>Le Roi se déplace d'<strong>une seule case dans n'importe quelle direction</strong> : horizontalement, verticalement ou en diagonale.</p>
+            <p><strong>Règle fondamentale :</strong> le Roi ne peut <strong>jamais se placer sur une case contrôlée par une pièce adverse</strong>. Si votre Roi est attaqué (en « échec »), vous devez obligatoirement parer la menace.</p>
+          </div>
+
+          <h3><i class="fa-solid fa-chess-knight"></i> Le Cavalier</h3>
+
+          <div class="card success">
+            <h4>Déplacement du Cavalier</h4>
+            <p>Le Cavalier a un déplacement unique : il se déplace en <strong>« L »</strong>. Concrètement : 2 cases dans une direction (horizontale ou verticale) puis 1 case perpendiculairement (ou inversement).</p>
+            <p><strong>Particularité :</strong> le Cavalier est la <strong>seule pièce qui peut sauter par-dessus</strong> les autres pièces, qu'elles soient alliées ou adverses. C'est ce qui le rend si dangereux, surtout en position fermée.</p>
+          </div>
+
+          <h3><i class="fa-solid fa-chess-pawn"></i> Le Pion</h3>
+
+          <div class="card success">
+            <h4>Déplacement du Pion</h4>
+            <p>Le Pion est la pièce la plus nombreuse mais aussi la plus particulière :</p>
+            <ul>
+              <li><strong>Avance d'une case</strong> vers l'avant (jamais en arrière !)</li>
+              <li><strong>Avance de deux cases</strong> depuis sa position de départ (premier coup uniquement)</li>
+              <li><strong>Capture en diagonale</strong> : le Pion prend les pièces adverses d'une case en diagonale vers l'avant</li>
+            </ul>
+            <p><strong>Important :</strong> le Pion est la seule pièce qui ne recule jamais et qui ne capture pas dans la même direction qu'il se déplace.</p>
+          </div>
+
+          <div class="info-box">
+            <h3>Comment capture-t-on une pièce ?</h3>
+            <p>Pour capturer (ou « prendre ») une pièce adverse, il suffit de déplacer votre pièce sur la case occupée par la pièce adverse. Celle-ci est alors <strong>retirée du jeu</strong> et votre pièce prend sa place. On ne peut pas capturer ses propres pièces.</p>
+          </div>
+        </section>
+
+        <!-- Section 3 : Règles spéciales -->
+        <section id="regles-speciales">
+          <h2>3. Les règles spéciales : roque, en passant, promotion</h2>
+
+          <p>
+            Les échecs comportent trois <strong>règles spéciales</strong> que les débutants oublient souvent. Elles sont pourtant essentielles et vous les utiliserez dans quasiment chaque partie.
+          </p>
+
+          <h3>Le Roque : mettre son Roi en sécurité</h3>
+
+          <p>
+            Le roque est un <strong>coup spécial qui implique le Roi et une Tour</strong>. C'est le seul moment du jeu où vous pouvez déplacer deux pièces en un seul coup.
+          </p>
+
+          <div class="grid-2">
+            <div class="card neutral">
+              <h4>Petit roque (côté Roi)</h4>
+              <p>Le Roi se déplace de <strong>2 cases vers la droite</strong>, et la Tour vient se placer juste à sa gauche. Le Roi passe de e1 à g1, la Tour de h1 à f1.</p>
+              <p><strong>Notation :</strong> O-O</p>
+            </div>
+
+            <div class="card neutral">
+              <h4>Grand roque (côté Dame)</h4>
+              <p>Le Roi se déplace de <strong>2 cases vers la gauche</strong>, et la Tour vient se placer juste à sa droite. Le Roi passe de e1 à c1, la Tour de a1 à d1.</p>
+              <p><strong>Notation :</strong> O-O-O</p>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <h3><i class="fa-solid fa-exclamation-triangle"></i> Conditions pour roquer</h3>
+            <p>Le roque est possible <strong>uniquement si toutes ces conditions</strong> sont remplies :</p>
+            <ul>
+              <li>Le Roi <strong>n'a jamais bougé</strong> depuis le début de la partie</li>
+              <li>La Tour concernée <strong>n'a jamais bougé</strong></li>
+              <li>Il n'y a <strong>aucune pièce entre</strong> le Roi et la Tour</li>
+              <li>Le Roi <strong>n'est pas en échec</strong> au moment du roque</li>
+              <li>Le Roi ne <strong>traverse pas une case contrôlée</strong> par une pièce adverse</li>
+              <li>Le Roi ne <strong>termine pas sur une case contrôlée</strong> par une pièce adverse</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box">
+            <h4><i class="fa-solid fa-lightbulb"></i> Pourquoi roquer ?</h4>
+            <p>Le roque est un <strong>coup essentiel en début de partie</strong>. Il permet de mettre votre Roi à l'abri dans un coin de l'échiquier, protégé par des pions, et d'activer votre Tour en la plaçant vers le centre. <strong>Roquez tôt !</strong> C'est un conseil que je donne à tous mes élèves.</p>
+          </div>
+
+          <h3>La prise en passant</h3>
+
+          <p>
+            C'est la règle la plus méconnue des échecs. La <strong>prise en passant</strong> concerne uniquement les pions.
+          </p>
+
+          <div class="card neutral">
+            <h4>Quand la prise en passant s'applique-t-elle ?</h4>
+            <p>Situation : un de vos pions est sur la <strong>5ème rangée</strong> (pour les Blancs) ou la <strong>4ème rangée</strong> (pour les Noirs). Un pion adverse, depuis sa position de départ, avance de <strong>2 cases</strong> et se retrouve juste à côté de votre pion.</p>
+            <p><strong>Vous avez alors le droit</strong>, <em>uniquement au coup suivant</em>, de capturer ce pion « en passant » : votre pion se déplace en diagonale sur la case que le pion adverse a « sautée », et le pion adverse est retiré.</p>
+            <p><strong>Attention :</strong> si vous ne jouez pas la prise en passant immédiatement (au coup suivant), vous perdez ce droit. C'est maintenant ou jamais !</p>
+          </div>
+
+          <h3>La promotion du pion</h3>
+
+          <p>
+            Quand un pion atteint la <strong>dernière rangée</strong> de l'échiquier (la 8ème pour les Blancs, la 1ère pour les Noirs), il est <strong>obligatoirement transformé</strong> en une autre pièce de son choix : Dame, Tour, Fou ou Cavalier.
+          </p>
+
+          <div class="card success">
+            <h4><i class="fa-solid fa-crown"></i> La promotion en pratique</h4>
+            <p>Dans <strong>99% des cas</strong>, on choisit la Dame, car c'est la pièce la plus puissante. On parle alors de « faire Dame ».</p>
+            <p><strong>Cas particulier :</strong> il arrive parfois qu'on préfère promouvoir en Cavalier (la « sous-promotion ») pour réaliser un échec immédiat que la Dame ne pourrait pas donner. C'est rare mais spectaculaire !</p>
+            <p><strong>À noter :</strong> on peut avoir plusieurs Dames en même temps sur l'échiquier. Il n'y a pas de limite.</p>
+          </div>
+        </section>
+
+        <!-- Section 4 : Échec et mat -->
+        <section id="echec-mat">
+          <h2>4. Échec, échec et mat, pat</h2>
+
+          <p>
+            Comprendre ces trois concepts est <strong>fondamental</strong>. C'est le cœur même du jeu d'échecs.
+          </p>
+
+          <h3>L'échec</h3>
+
+          <p>
+            Un Roi est <strong>en échec</strong> lorsqu'il est attaqué par une pièce adverse. Quand votre Roi est en échec, vous devez <strong>obligatoirement</strong> parer la menace. Il existe 3 façons de le faire :
+          </p>
+
+          <div class="grid-2">
+            <div class="card neutral">
+              <h4>1. Déplacer le Roi</h4>
+              <p>Bougez votre Roi sur une case sûre, non contrôlée par l'adversaire.</p>
+            </div>
+
+            <div class="card neutral">
+              <h4>2. Bloquer l'échec</h4>
+              <p>Interposez une de vos pièces entre la pièce attaquante et votre Roi. (Impossible si l'attaquant est un Cavalier.)</p>
+            </div>
+          </div>
+
+          <div class="card neutral" style="margin-top: 15px;">
+            <h4>3. Capturer la pièce attaquante</h4>
+            <p>Prenez la pièce qui fait échec avec une de vos pièces (y compris le Roi lui-même, si la case est sûre).</p>
+          </div>
+
+          <div class="info-box">
+            <h3><i class="fa-solid fa-ban"></i> Règle absolue</h3>
+            <p>Vous ne pouvez <strong>jamais</strong> ignorer un échec. Si aucune des trois solutions n'est possible, c'est <strong>échec et mat</strong> : la partie est terminée.</p>
+          </div>
+
+          <h3>L'échec et mat : la victoire</h3>
+
+          <p>
+            L'<strong>échec et mat</strong> (ou simplement « mat ») est l'objectif ultime aux échecs. Votre Roi est en échec et <strong>il n'existe aucun moyen d'y échapper</strong> : pas de fuite, pas de blocage, pas de capture possible.
+          </p>
+
+          <div class="highlight-box">
+            <h4><i class="fa-solid fa-trophy"></i> La partie est gagnée !</h4>
+            <p>Le joueur qui inflige l'échec et mat <strong>remporte la partie</strong>. Attention : on ne « prend » jamais le Roi aux échecs. Le jeu se termine dès que le mat est constaté.</p>
+          </div>
+
+          <h3>Le pat : ni victoire, ni défaite</h3>
+
+          <p>
+            Le <strong>pat</strong> est une situation où le joueur dont c'est le tour <strong>n'a aucun coup légal</strong> à jouer, mais son Roi <strong>n'est pas en échec</strong>. Résultat : la partie est <strong>nulle</strong> (match nul).
+          </p>
+
+          <div class="card neutral">
+            <h4><i class="fa-solid fa-handshake"></i> Piège classique</h4>
+            <p>Le pat est le <strong>cauchemar du joueur qui a l'avantage</strong>. Imaginez : vous avez une Dame et un Roi contre un Roi seul. Si vous jouez mal, vous pouvez patter votre adversaire et perdre la victoire ! C'est une erreur très fréquente chez les débutants.</p>
+            <p><strong>Astuce :</strong> quand vous dominez largement, laissez toujours au Roi adverse au moins une case pour bouger. Puis matez-le calmement.</p>
+          </div>
+        </section>
+
+        <!-- Section 5 : Les nulles -->
+        <section id="nulle">
+          <h2>5. Les différentes façons de faire nulle</h2>
+
+          <p>
+            Une partie peut se terminer par un <strong>match nul</strong> (ou « nulle ») de plusieurs façons :
+          </p>
+
+          <div class="card neutral">
+            <h4>1. Le pat</h4>
+            <p>Comme expliqué ci-dessus : aucun coup légal possible, mais pas d'échec.</p>
+          </div>
+
+          <div class="card neutral">
+            <h4>2. Accord mutuel</h4>
+            <p>Les deux joueurs peuvent proposer et accepter la nulle à tout moment. Cela arrive souvent quand la position est équilibrée et qu'aucun camp ne peut gagner.</p>
+          </div>
+
+          <div class="card neutral">
+            <h4>3. Matériel insuffisant</h4>
+            <p>La partie est nulle si aucun des deux joueurs n'a assez de pièces pour infliger un mat. Par exemple : <strong>Roi contre Roi</strong>, <strong>Roi + Fou contre Roi</strong>, ou <strong>Roi + Cavalier contre Roi</strong>.</p>
+          </div>
+
+          <div class="card neutral">
+            <h4>4. Répétition de position (triple répétition)</h4>
+            <p>Si la <strong>même position exacte</strong> apparaît 3 fois dans la partie (même placement, même tour de jeu, mêmes droits de roque), un joueur peut réclamer la nulle.</p>
+          </div>
+
+          <div class="card neutral">
+            <h4>5. Règle des 50 coups</h4>
+            <p>Si <strong>50 coups consécutifs</strong> sont joués sans aucune prise et sans aucun mouvement de pion, un joueur peut réclamer la nulle.</p>
+          </div>
+        </section>
+
+        <!-- Section 6 : Valeur des pièces -->
+        <section id="valeur">
+          <h2>6. La valeur des pièces</h2>
+
+          <p>
+            Toutes les pièces ne se valent pas. Connaître leur <strong>valeur relative</strong> est essentiel pour décider quand échanger et quand éviter un échange.
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Pièce</th>
+                <th>Valeur</th>
+                <th>Commentaire</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Pion</strong> ♙</td>
+                <td><strong>1 point</strong></td>
+                <td>L'unité de base. Mais un pion bien placé peut valoir de l'or !</td>
+              </tr>
+              <tr>
+                <td><strong>Cavalier</strong> ♘</td>
+                <td><strong>3 points</strong></td>
+                <td>Excellent en position fermée. Peut sauter par-dessus les pièces.</td>
+              </tr>
+              <tr>
+                <td><strong>Fou</strong> ♗</td>
+                <td><strong>3 points</strong></td>
+                <td>Fort en position ouverte. La paire de Fous est un avantage reconnu.</td>
+              </tr>
+              <tr>
+                <td><strong>Tour</strong> ♖</td>
+                <td><strong>5 points</strong></td>
+                <td>Puissante sur les colonnes ouvertes et en finale.</td>
+              </tr>
+              <tr>
+                <td><strong>Dame</strong> ♕</td>
+                <td><strong>9 points</strong></td>
+                <td>La pièce la plus forte. Perdre sa Dame est souvent fatal.</td>
+              </tr>
+              <tr>
+                <td><strong>Roi</strong> ♔</td>
+                <td><strong>∞</strong></td>
+                <td>Valeur infinie : si vous le perdez, la partie est finie !</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="info-box">
+            <h3><i class="fa-solid fa-scale-balanced"></i> Comment utiliser ces valeurs ?</h3>
+            <p>Ces valeurs servent de <strong>guide pour les échanges</strong>. Échanger un Fou (3 pts) contre une Tour (5 pts) est un bon échange. Donner une Tour pour un Pion est une mauvaise affaire. Mais attention : <strong>la position compte aussi</strong>. Un Cavalier bien centralisé peut valoir plus qu'une Tour coincée dans un coin.</p>
+          </div>
+        </section>
+
+        <!-- Section 7 : Notation -->
+        <section id="notation">
+          <h2>7. La notation des coups</h2>
+
+          <p>
+            La <strong>notation algébrique</strong> est le système utilisé pour écrire les coups d'échecs. Pas besoin de la maîtriser pour jouer, mais c'est utile pour suivre des parties ou noter les vôtres.
+          </p>
+
+          <div class="card neutral">
+            <h4>Les bases de la notation</h4>
+            <ul>
+              <li><strong>R</strong> = Roi, <strong>D</strong> = Dame, <strong>T</strong> = Tour, <strong>F</strong> = Fou, <strong>C</strong> = Cavalier</li>
+              <li>Les pions ne sont pas notés par une lettre (on écrit juste la case d'arrivée)</li>
+              <li><strong>x</strong> = capture (ex : Fxe5 = le Fou capture en e5)</li>
+              <li><strong>+</strong> = échec (ex : Dd7+ = la Dame va en d7 avec échec)</li>
+              <li><strong>#</strong> = échec et mat (ex : Dh7# = mat en h7)</li>
+              <li><strong>O-O</strong> = petit roque, <strong>O-O-O</strong> = grand roque</li>
+              <li><strong>e4</strong> = un pion va en e4</li>
+            </ul>
+          </div>
+
+          <div class="card neutral">
+            <h4>Exemples concrets</h4>
+            <ul>
+              <li><strong>1. e4 e5</strong> = Les Blancs avancent le pion en e4, les Noirs répondent e5</li>
+              <li><strong>2. Cf3</strong> = Le Cavalier blanc va en f3</li>
+              <li><strong>3. Fc4</strong> = Le Fou blanc va en c4</li>
+              <li><strong>4. O-O</strong> = Les Blancs font le petit roque</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section 8 : Conseils -->
+        <section id="conseils">
+          <h2>8. 5 conseils pour bien commencer</h2>
+
+          <p>
+            Maintenant que vous connaissez les règles, voici <strong>5 conseils essentiels</strong> pour jouer vos premières parties avec confiance.
+          </p>
+
+          <div class="card success">
+            <h4><i class="fa-solid fa-1"></i> Contrôlez le centre</h4>
+            <p>Les cases <strong>e4, d4, e5, d5</strong> sont les cases centrales de l'échiquier. Les contrôler avec vos pions et vos pièces vous donne plus d'espace et de possibilités. Commencez par <strong>1. e4</strong> ou <strong>1. d4</strong>.</p>
+          </div>
+
+          <div class="card success">
+            <h4><i class="fa-solid fa-2"></i> Développez vos pièces</h4>
+            <p>Sortez rapidement vos <strong>Cavaliers et vos Fous</strong> vers des cases actives. Ne bougez pas la même pièce deux fois en ouverture. L'objectif : avoir toutes vos pièces en jeu le plus vite possible.</p>
+          </div>
+
+          <div class="card success">
+            <h4><i class="fa-solid fa-3"></i> Roquez tôt</h4>
+            <p><strong>Mettez votre Roi en sécurité</strong> dans les 10 premiers coups. Le roque protège votre Roi et active votre Tour. C'est l'un des meilleurs réflexes à prendre.</p>
+          </div>
+
+          <div class="card success">
+            <h4><i class="fa-solid fa-4"></i> Ne sortez pas la Dame trop tôt</h4>
+            <p>La Dame est tentante car elle est puissante, mais en la sortant trop tôt, elle sera <strong>attaquée par les pièces mineures adverses</strong> et vous perdrez des temps pour la repositionner. Patientez !</p>
+          </div>
+
+          <div class="card success">
+            <h4><i class="fa-solid fa-5"></i> Réfléchissez avant de jouer</h4>
+            <p>Avant chaque coup, posez-vous la question : <strong>« Que menace mon adversaire ? »</strong> Vérifiez que votre coup ne laisse pas de pièce en prise. Cette simple habitude élimine la majorité des erreurs de débutant.</p>
+            <p><strong>Pour aller plus loin :</strong> découvrez les <a href="10-erreurs-debutant-echecs.html">10 erreurs de débutant les plus courantes</a>.</p>
+          </div>
+        </section>
+
+        <!-- Section 9 : FAQ -->
+        <section id="faq">
+          <h2>9. Questions fréquentes</h2>
+
+          <div class="card neutral">
+            <h4>Peut-on prendre le Roi aux échecs ?</h4>
+            <p>
+              <strong>Non, jamais.</strong> Le Roi n'est jamais réellement capturé. La partie se termine quand le Roi est en <strong>échec et mat</strong>, c'est-à-dire quand il est attaqué et qu'aucun coup ne peut le sauver. C'est une différence fondamentale avec les autres jeux de plateau.
+            </p>
+          </div>
+
+          <div class="card neutral">
+            <h4>Peut-on roquer si on a déjà été en échec ?</h4>
+            <p>
+              <strong>Oui</strong>, à condition de n'avoir pas déplacé le Roi pour parer l'échec. Si vous avez bloqué l'échec ou capturé la pièce attaquante sans bouger le Roi, le roque reste possible. En revanche, si le Roi a bougé (même pour y revenir), le roque est <strong>définitivement interdit</strong>.
+            </p>
+          </div>
+
+          <div class="card neutral">
+            <h4>Un pion peut-il prendre en arrière ?</h4>
+            <p>
+              <strong>Non.</strong> Le pion est la seule pièce qui ne peut <strong>jamais reculer</strong>. Il avance toujours vers l'avant et capture en diagonale vers l'avant. C'est ce qui rend chaque avancée de pion irréversible et stratégiquement importante.
+            </p>
+          </div>
+
+          <div class="card neutral">
+            <h4>Peut-on avoir deux Dames ?</h4>
+            <p>
+              <strong>Oui !</strong> Chaque pion qui atteint la dernière rangée peut être promu en Dame. En théorie, vous pourriez avoir <strong>jusqu'à 9 Dames</strong> (la Dame originale + 8 pions promus). En pratique, avoir 2 Dames est déjà assez pour gagner.
+            </p>
+          </div>
+
+          <div class="card neutral">
+            <h4>À quel âge peut-on apprendre les échecs ?</h4>
+            <p>
+              Les enfants peuvent apprendre les règles dès <strong>5-6 ans</strong>. Avec une approche ludique et adaptée, ils progressent très vite. Pour en savoir plus, lisez notre guide : <a href="comment-apprendre-echecs-enfant.html">Comment apprendre les échecs à un enfant ?</a>
+            </p>
+          </div>
+
+          <div class="card neutral">
+            <h4>Où jouer aux échecs en ligne gratuitement ?</h4>
+            <p>
+              Les deux meilleures plateformes gratuites sont <strong>Lichess.org</strong> (100% gratuit et open source) et <strong>Chess.com</strong> (gratuit avec options premium). Vous pouvez y jouer contre d'autres humains ou contre l'ordinateur, à n'importe quel niveau.
+            </p>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-section">
+          <h3>Vous connaissez les règles ? Passez à l'étape suivante !</h3>
+          <p>Maintenant que vous maîtrisez les règles, il est temps de <strong>progresser avec un professeur</strong>. Je propose un <strong>1er cours offert et sans engagement</strong> pour évaluer votre niveau et définir vos objectifs.</p>
+          <a href="../#contact" class="btn">Réserver mon cours offert <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Articles recommandés -->
+        <div class="article-recommendation">
+          <h3>Articles recommandés</h3>
+          <p>Vous avez appris les règles ? Voici la suite logique de votre parcours :</p>
+          <a href="debuter-echecs-guide-complet-0-500-elo.html" class="recommendation-link">
+            <strong>Débuter aux Échecs : Le Guide Complet (0-500 Elo)</strong>
+            <span>Passez des règles à la stratégie : ouvertures, tactiques et plan de progression &rarr;</span>
+          </a>
+          <a href="10-erreurs-debutant-echecs.html" class="recommendation-link" style="margin-top: 15px; display: block;">
+            <strong>10 Erreurs de Débutant aux Échecs</strong>
+            <span>Évitez les pièges classiques dès vos premières parties &rarr;</span>
+          </a>
+        </div>
+
+        <div style="margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee;">
+          <p style="text-align: center; color: #999;">
+            <i class="fa-solid fa-chess-knight"></i> Article rédigé par Nicolas Musicki, professeur d'échecs à Paris et Versailles<br>
+            <a href="../" style="color: #0a0a0a; text-decoration: none;">Retour à l'accueil</a> |
+            <a href="../#contact" style="color: #0a0a0a; text-decoration: none;">Me contacter</a>
+          </p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fa-solid fa-chess-knight"></i> Nicolas Musicki
+          <p>Professeur d'échecs à Paris et Versailles</p>
+        </div>
+        <div class="footer-links">
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="../#about">À propos</a></li>
+            <li><a href="../#advantages">Pourquoi les échecs</a></li>
+            <li><a href="./">Blog</a></li>
+            <li><a href="../#tarifs">Tarifs</a></li>
+            <li><a href="../#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Suivez-moi</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/magickchess/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nicolas Musicki - Professeur d'échecs à Paris et Versailles. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+          this.classList.toggle('active');
+          navMenu.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "id": "regles-echecs-guide-complet",
+      "title": "Les Règles des Échecs : Guide Complet et Illustré pour Débutants",
+      "description": "Toutes les règles des échecs expliquées simplement : déplacement des pièces, roque, en passant, échec et mat, pat, promotion. Guide complet illustré pour débutants.",
+      "date": "2026-03-04",
+      "readTime": "15 min",
+      "author": "Nicolas Musicki",
+      "image": "images/regles-echecs-guide-complet.png",
+      "imageAlt": "Échiquier avec pièces en position initiale pour apprendre les règles des échecs"
+    },
+    {
+      "id": "cours-echecs-versailles",
+      "title": "Cours d'Échecs à Versailles : Progressez avec un Professeur Particulier",
+      "description": "Cours d'échecs à Versailles et dans les Yvelines (78) pour enfants et adultes. Professeur particulier à domicile. 1er cours offert ! Réservez maintenant.",
+      "date": "2026-03-04",
+      "readTime": "8 min",
+      "author": "Nicolas Musicki",
+      "image": "images/cours-echecs-versailles.png",
+      "imageAlt": "Cours d'échecs à Versailles - professeur particulier à domicile dans les Yvelines 78"
+    },
+    {
       "id": "meilleur-echiquier-pliable",
       "title": "Top 5 des Meilleurs Échiquiers Pliables en 2026 (Comparatif & Guide)",
       "description": "Comparatif complet des meilleurs échiquiers pliables : bois, magnétique, tournoi, premium. Avis d'un professeur d'échecs + guide d'achat détaillé selon votre budget.",
@@ -19,6 +39,16 @@
       "author": "Nicolas Musicki",
       "image": "images/mon-enfant-perd-toujours-echecs.webp",
       "imageAlt": "Enfant concentré devant un échiquier après une défaite, parent à côté qui le soutient"
+    },
+    {
+      "id": "maxime-vachier-lagrave",
+      "title": "Maxime Vachier-Lagrave : Portrait du Champion Français d'Échecs",
+      "description": "MVL : parcours du n°1 français d'échecs. Enfance, style de jeu, Najdorf, palmarès et anecdotes. Portrait complet du champion qui fait vibrer la France aux échecs.",
+      "date": "2025-11-18",
+      "readTime": "15 min",
+      "author": "Nicolas Musicki",
+      "image": "images/maxime-vachier-lagrave.webp",
+      "imageAlt": "Maxime Vachier-Lagrave champion d'échecs français en pleine concentration"
     },
     {
       "id": "magnus-carlsen-parcours-champion-monde",

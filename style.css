@@ -542,6 +542,7 @@ header h1 {
   letter-spacing: -0.03em;
   line-height: 1.05;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 header h2 {

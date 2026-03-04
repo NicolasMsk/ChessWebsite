@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://www.cours-echecs-paris.fr/sitemap.xml
+Sitemap: https://www.cours-echecs-paris.fr/blog/sitemap.xml

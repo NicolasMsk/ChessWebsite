@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(csso style.css --output style.min.css)"
+    ]
+  }
+}
