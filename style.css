@@ -548,7 +548,7 @@ header h1 {
 header h2 {
   font-family: 'Lora', 'Georgia', serif;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 2rem;
   font-size: clamp(1.1rem, 2.2vw, 1.35rem);
   padding-bottom: 0;
@@ -559,6 +559,13 @@ header h2 {
 
 header h2::after {
   display: none;
+}
+
+/* "Nicolas Musicki" visible en doré dans le header */
+header .name-accent {
+  color: var(--accent-light);
+  font-weight: 600;
+  font-style: italic;
 }
 
 .intro {
@@ -622,27 +629,25 @@ header .btn:hover {
 /* ======================== */
 .hero {
   background-color: var(--white);
-  padding: clamp(4rem, 8vw, 7rem) 0;
+  padding: clamp(3rem, 7vw, 6rem) 0;
   position: relative;
-  box-shadow: none;
 }
 
 .hero-inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   gap: clamp(2rem, 5vw, 4rem);
 }
 
 .hero-text {
   flex: 1;
-  min-width: 100%;
+  min-width: 280px;
 }
 
 .hero-text h3 {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  margin-bottom: 2rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 1.5rem;
   color: var(--black);
   letter-spacing: -0.02em;
 }
@@ -702,8 +707,8 @@ header .btn:hover {
 
 /* Image hero */
 .hero-image {
-  flex: 1;
-  min-width: 100%;
+  flex: 0 0 auto;
+  width: clamp(260px, 42%, 460px);
   text-align: center;
 }
 
@@ -718,15 +723,8 @@ header .btn:hover {
   height: auto;
   border-radius: 0;
   box-shadow: none;
-  transition: var(--transition);
-  border: none;
-  outline: none;
   display: block;
   margin: 0 auto;
-}
-
-.hero-image img:hover {
-  transform: none;
 }
 
 .image-badge {
@@ -739,11 +737,16 @@ header .btn:hover {
   border-radius: 0;
   font-size: clamp(0.65rem, 0.9vw, 0.75rem);
   font-weight: 600;
-  box-shadow: none;
-  transform: none;
   z-index: 2;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    width: 100%;
+    order: -1;
+  }
 }
 
 /* ======================== */
@@ -2285,4 +2288,127 @@ footer {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   SECTION DIFFÉRENCIATEURS
+   ============================================ */
+.differentiators {
+  background: var(--walnut);
+  padding: 2rem 0;
+}
+
+.diff-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+}
+
+.diff-item {
+  flex: 1 1 160px;
+  max-width: 200px;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background 0.2s;
+}
+
+.diff-item:last-child {
+  border-right: none;
+}
+
+.diff-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.diff-icon {
+  font-size: 1.6rem;
+  color: var(--accent-light);
+  margin-bottom: 0.5rem;
+}
+
+.diff-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.diff-desc {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .diff-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .diff-item {
+    max-width: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .diff-item:nth-child(2n) {
+    border-right: none;
+  }
+  .diff-item:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+}
+
+/* ============================================
+   TÉMOIGNAGES INLINE (inside main)
+   ============================================ */
+.testimonials-inline {
+  padding: 3rem 0 2rem;
+}
+
+.testimonials-inline h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.testimonials-inline .testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonials-inline .testimonial-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.07);
+  color: var(--black);
+}
+
+.testimonials-inline .testimonial-content p {
+  color: var(--text-light);
+}
+
+.testimonials-inline .testimonial-author {
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.testimonials-inline .author-name {
+  color: var(--walnut);
+}
+
+.testimonials-inline .author-title {
+  color: var(--text-light);
+}
+
+/* Stars */
+.testimonial-stars {
+  color: #f5a623;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 2px;
 }
