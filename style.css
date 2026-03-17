@@ -2405,6 +2405,17 @@ footer {
   color: var(--text-light);
 }
 
+/* Lien FIDE dans la section about */
+.fide-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--accent);
+}
+.fide-link:hover {
+  border-bottom-style: solid;
+  color: var(--accent);
+}
+
 /* Stars */
 .testimonial-stars {
   color: #f5a623;

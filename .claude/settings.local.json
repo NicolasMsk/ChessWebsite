@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -rn \"\"\"8 ans\\\\|\"\"10 ans\\\\|5 années\\\\|5 ans.*expérience\\\\|expérience.*5 ans\\\\|8 ans.*expérience\\\\|expérience.*8 ans\\\\|10 ans.*expérience\\\\|expérience.*10 ans\\\\|ans d.enseign\\\\|depuis.*an\\\\|dizaine d.élèves\" blog/ --include=\"*.html\")",
+      "Bash(node quickwins.js)"
+    ]
+  }
+}

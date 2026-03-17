@@ -1,4 +1,27 @@
 User-agent: *
 Allow: /
+
+# AI crawlers — explicit opt-in
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
 Sitemap: https://www.cours-echecs-paris.fr/sitemap.xml
 Sitemap: https://www.cours-echecs-paris.fr/blog/sitemap.xml
