@@ -1,13 +1,16 @@
 # Cours d'Échecs Paris
 
-> Cours particuliers d'échecs à Paris et Versailles avec Nicolas Musicki,
-> professeur 2077 Elo (top 2% mondial). Premier cours offert, sans engagement.
-> Disponible 7j/7. Coaching complet : analyse de parties, répertoire d'ouvertures,
-> accompagnement aux tournois, études partagées sur lichess.
+> Nicolas Musicki, professeur d'échecs 2078 Elo FIDE (top 2% mondial), propose
+> des cours particuliers d'échecs à domicile à Paris et Versailles (Yvelines 78).
+> Premier cours offert, sans engagement. Disponible 7j/7. Coaching complet :
+> analyse de parties sur chess.com & lichess, répertoire d'ouvertures personnalisé,
+> exercices hebdomadaires corrigés, accompagnement aux tournois.
 
 ## Services
-- [Cours particuliers d'échecs Paris](https://www.cours-echecs-paris.fr/): Leçons individuelles (50€/h) ou en duo (75€/h), à domicile ou en visio. Premier cours gratuit.
-- [Cours d'échecs Versailles](https://www.cours-echecs-paris.fr/blog/cours-echecs-versailles.html): Cours à domicile dans les Yvelines (78). 1er cours offert.
+- [Cours individuels à domicile (50€/h)](https://www.cours-echecs-paris.fr/#tarifs): Cours personnalisé, tous niveaux, enfants et adultes. Matériel fourni.
+- [Cours en visio (40€/h)](https://www.cours-echecs-paris.fr/#tarifs): En visioconférence, flexibilité maximale, où que vous soyez.
+- [1er cours offert](https://www.cours-echecs-paris.fr/#contact): Sans engagement, bilan de niveau inclus.
+- [Cours d'échecs Versailles](https://www.cours-echecs-paris.fr/blog/cours-echecs-versailles.html): Cours à domicile dans les Yvelines (78).
 
 ## Guides pour débutants
 - [Règles des échecs — guide complet](https://www.cours-echecs-paris.fr/blog/regles-echecs-guide-complet.html): Toutes les règles expliquées simplement : pièces, roque, en passant, promotion, échec et mat.

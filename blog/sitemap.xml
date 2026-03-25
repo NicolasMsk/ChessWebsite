@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
@@ -19,7 +19,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/meilleur-echiquier-pliable.html</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -36,7 +36,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/mon-enfant-perd-toujours-echecs.html</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -53,7 +53,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/magnus-carlsen-parcours-champion-monde.html</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -70,7 +70,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/debuter-echecs-guide-complet-0-500-elo.html</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -87,7 +87,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/echecs-vs-jeux-video.html</loc>
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -104,7 +104,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/echecs-intelligence-enfants-etudes.html</loc>
     <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -121,7 +121,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/citations-echecs-inspirantes.html</loc>
     <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -138,7 +138,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/psychologie-biais-mentaux-echecs.html</loc>
     <lastmod>2026-01-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -155,7 +155,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/cours-echecs-en-ligne-vs-presentiel.html</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -172,7 +172,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/stagnation-echecs-progresser.html</loc>
     <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -189,7 +189,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/combien-temps-devenir-bon-echecs.html</loc>
     <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -206,7 +206,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/echecs-tdah-concentration-enfants.html</loc>
     <lastmod>2025-12-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -223,7 +223,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/echecs-adultes-debutants-30-40-50-ans.html</loc>
     <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
@@ -342,7 +342,7 @@
     <loc>https://www.cours-echecs-paris.fr/blog/regles-echecs-guide-complet.html</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
     <news:news>
       <news:publication>
         <news:name>Blog Échecs - Nicolas Musicki</news:name>
