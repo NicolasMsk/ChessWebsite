@@ -1113,6 +1113,8 @@ header .btn:hover {
   border: 1px solid var(--silver);
   position: relative;
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .tarif-card + .tarif-card {
@@ -1186,6 +1188,13 @@ header .btn:hover {
 
 .tarif-body {
   padding: clamp(1.5rem, 3vw, 2rem);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarif-body .btn {
+  margin-top: auto;
 }
 
 .tarif-features {
