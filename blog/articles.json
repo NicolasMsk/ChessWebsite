@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "cours-echecs-autour-versailles-yvelines",
+      "title": "Cours d'Échecs autour de Versailles (78) | 30+ Villes",
+      "description": "Cours d'échecs à domicile autour de Versailles : Le Chesnay, Viroflay, Saint-Germain-en-Laye, Meudon, La Celle-Saint-Cloud... 1er cours offert !",
+      "date": "2026-04-12",
+      "readTime": "15 min",
+      "author": "Nicolas Musicki",
+      "image": "images/cours-echecs-autour-versailles-yvelines.webp",
+      "imageAlt": "Carte des villes autour de Versailles où Nicolas Musicki donne des cours d'échecs à domicile"
+    },
+    {
       "id": "cours-echecs-adultes-paris",
       "title": "Cours d'Échecs Adultes à Paris | 1er Cours Offert",
       "description": "Cours d'échecs pour adultes à Paris : débutants et confirmés. Professeur 2092 Elo FIDE, à domicile ou en visio. 1er cours offert !",

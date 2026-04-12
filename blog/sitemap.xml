@@ -405,6 +405,23 @@
     </news:news>
   </url>
 
+  <!-- Article Cours d'Échecs autour de Versailles -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/cours-echecs-autour-versailles-yvelines.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-12</news:publication_date>
+      <news:title>Cours d'Échecs à Domicile autour de Versailles : 30+ Villes Couvertes</news:title>
+      <news:keywords>cours échecs Le Chesnay, cours échecs Viroflay, cours échecs Yvelines, professeur échecs 78, cours échecs Saint-Germain-en-Laye</news:keywords>
+    </news:news>
+  </url>
+
   <!-- Article Activités Enfants Vacances Échecs -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/activites-enfants-vacances-echecs.html</loc>
