@@ -1,6 +1,36 @@
 {
   "articles": [
     {
+      "id": "cours-echecs-adultes-paris",
+      "title": "Cours d'Échecs Adultes à Paris | 1er Cours Offert",
+      "description": "Cours d'échecs pour adultes à Paris : débutants et confirmés. Professeur 2092 Elo FIDE, à domicile ou en visio. 1er cours offert !",
+      "date": "2026-04-12",
+      "readTime": "12 min",
+      "author": "Nicolas Musicki",
+      "image": "images/cours-echecs-adultes-paris.webp",
+      "imageAlt": "Adulte apprenant les échecs avec un professeur particulier à Paris"
+    },
+    {
+      "id": "activites-enfants-vacances-echecs",
+      "title": "Vacances Scolaires : Les Échecs, l'Activité Idéale",
+      "description": "Occuper vos enfants intelligemment pendant les vacances ? Les échecs : zéro écran, +35% concentration, dès 5 ans. Programme et conseils d'un prof.",
+      "date": "2026-04-12",
+      "readTime": "11 min",
+      "author": "Nicolas Musicki",
+      "image": "images/activites-enfants-vacances-echecs.webp",
+      "imageAlt": "Enfants jouant aux échecs pendant les vacances scolaires dans un parc parisien"
+    },
+    {
+      "id": "echecs-retraite-seniors",
+      "title": "Échecs à la Retraite : 8 Bienfaits Prouvés (Mémoire, Social)",
+      "description": "Les échecs à la retraite : mémoire +23%, lien social, prévention cognitive. 8 bienfaits prouvés + guide complet pour débuter à 60, 65 ou 70 ans.",
+      "date": "2026-04-12",
+      "readTime": "14 min",
+      "author": "Nicolas Musicki",
+      "image": "images/echecs-retraite-seniors.webp",
+      "imageAlt": "Retraité souriant jouant aux échecs dans un parc ensoleillé avec un échiquier en bois"
+    },
+    {
       "id": "regles-echecs-guide-complet",
       "title": "Règles des Échecs : Apprenez à Jouer en 15 Min (Illustré)",
       "description": "Toutes les règles des échecs expliquées simplement avec images : déplacement, roque, en passant, échec et mat. Jouez votre 1re partie aujourd'hui.",

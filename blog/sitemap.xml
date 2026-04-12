@@ -370,5 +370,56 @@
       <news:keywords>cours échecs Versailles, professeur échecs Versailles, cours échecs Yvelines 78, cours échecs domicile Versailles</news:keywords>
     </news:news>
   </url>
-  
+
+  <!-- Article Échecs à la Retraite -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/echecs-retraite-seniors.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-12</news:publication_date>
+      <news:title>Les Échecs à la Retraite : 8 Bienfaits Prouvés pour les Seniors</news:title>
+      <news:keywords>échecs retraite, échecs seniors, activité intellectuelle retraite, prévention cognitive, mémoire seniors, cours échecs Paris</news:keywords>
+    </news:news>
+  </url>
+
+  <!-- Article Cours d'Échecs Adultes Paris -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/cours-echecs-adultes-paris.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-12</news:publication_date>
+      <news:title>Cours d'Échecs pour Adultes à Paris : Débutants et Confirmés</news:title>
+      <news:keywords>cours échecs adultes Paris, professeur échecs adultes, apprendre échecs adulte Paris, cours particulier échecs adulte</news:keywords>
+    </news:news>
+  </url>
+
+  <!-- Article Activités Enfants Vacances Échecs -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/activites-enfants-vacances-echecs.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Blog Échecs - Nicolas Musicki</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-12</news:publication_date>
+      <news:title>Vacances Scolaires : Les Échecs, l'Activité Idéale pour les Enfants</news:title>
+      <news:keywords>activité enfant vacances Paris, stage échecs enfants, échecs vacances scolaires, occuper enfant vacances</news:keywords>
+    </news:news>
+  </url>
+
 </urlset>

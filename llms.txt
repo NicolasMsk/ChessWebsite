@@ -1,6 +1,6 @@
 # Cours d'Échecs Paris
 
-> Nicolas Musicki, professeur d'échecs 2078 Elo FIDE (top 2% mondial), propose
+> Nicolas Musicki, professeur d'échecs 2092 Elo FIDE (top 2% mondial), propose
 > des cours particuliers d'échecs à domicile à Paris et Versailles (Yvelines 78).
 > Premier cours offert, sans engagement. Disponible 7j/7. Coaching complet :
 > analyse de parties sur chess.com & lichess, répertoire d'ouvertures personnalisé,
@@ -11,6 +11,9 @@
 - [Cours en visio (40€/h)](https://www.cours-echecs-paris.fr/#tarifs): En visioconférence, flexibilité maximale, où que vous soyez.
 - [1er cours offert](https://www.cours-echecs-paris.fr/#contact): Sans engagement, bilan de niveau inclus.
 - [Cours d'échecs Versailles](https://www.cours-echecs-paris.fr/blog/cours-echecs-versailles.html): Cours à domicile dans les Yvelines (78).
+
+## Services
+- [Cours d'échecs adultes Paris](https://www.cours-echecs-paris.fr/blog/cours-echecs-adultes-paris.html): Cours particuliers pour adultes débutants et confirmés à Paris. 1er cours offert.
 
 ## Guides pour débutants
 - [Règles des échecs — guide complet](https://www.cours-echecs-paris.fr/blog/regles-echecs-guide-complet.html): Toutes les règles expliquées simplement : pièces, roque, en passant, promotion, échec et mat.
@@ -23,6 +26,7 @@
 - [Échecs et intelligence — que disent les études ?](https://www.cours-echecs-paris.fr/blog/echecs-intelligence-enfants-etudes.html): Analyse scientifique avec études Venezuela, Belgique, Allemagne, New York.
 - [Cours d'échecs pour enfants Paris](https://www.cours-echecs-paris.fr/blog/cours-echecs-enfants-paris.html): Approche pédagogique adaptée par tranche d'âge.
 - [Échecs et TDAH](https://www.cours-echecs-paris.fr/blog/echecs-tdah-concentration-enfants.html): Comment les échecs aident les enfants avec TDAH à développer leur concentration.
+- [Vacances scolaires : les échecs, activité idéale](https://www.cours-echecs-paris.fr/blog/activites-enfants-vacances-echecs.html): Occuper les enfants intelligemment pendant les vacances avec les échecs.
 - [Mon enfant perd toujours aux échecs](https://www.cours-echecs-paris.fr/blog/mon-enfant-perd-toujours-echecs.html): Conseils pour gérer la frustration et transformer les défaites en apprentissage.
 
 ## Progression et stratégie
@@ -31,6 +35,7 @@
 - [Professeur ou autodidacte ?](https://www.cours-echecs-paris.fr/blog/professeur-ou-autodidacte-echecs.html): Analyse honnête des deux approches.
 - [Psychologie et biais mentaux aux échecs](https://www.cours-echecs-paris.fr/blog/psychologie-biais-mentaux-echecs.html): Les erreurs cognitives qui coûtent des points.
 - [Échecs pour adultes débutants 30-40-50 ans](https://www.cours-echecs-paris.fr/blog/echecs-adultes-debutants-30-40-50-ans.html): Il n'est jamais trop tard pour apprendre.
+- [Échecs à la retraite : 8 bienfaits pour les seniors](https://www.cours-echecs-paris.fr/blog/echecs-retraite-seniors.html): Mémoire, lien social, prévention cognitive. Guide pour débuter à 60-70 ans.
 
 ## Références et culture échecs
 - [Magnus Carlsen — parcours champion du monde](https://www.cours-echecs-paris.fr/blog/magnus-carlsen-parcours-champion-monde.html)

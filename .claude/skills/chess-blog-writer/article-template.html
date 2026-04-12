@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCK01E71GB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KCK01E71GB');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{META_DESCRIPTION < 160 chars}}">
+  <meta name="keywords" content="{{KEYWORD1, KEYWORD2, ..., Nicolas Musicki}}">
+  <meta name="author" content="Nicolas Musicki">
+  <title>{{TITLE SEO < 60 chars}}</title>
+
+  <!-- Balises Open Graph -->
+  <meta property="og:title" content="{{OG_TITLE}}">
+  <meta property="og:description" content="{{OG_DESCRIPTION}}">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cours-echecs-paris.fr/blog/{{SLUG}}.html">
+  <meta property="og:image" content="https://www.cours-echecs-paris.fr/blog/images/{{SLUG}}.webp">
+  <meta property="og:site_name" content="Cours d'Échecs Paris - Nicolas Musicki">
+  <meta property="article:author" content="Nicolas Musicki">
+  <meta property="article:published_time" content="{{YYYY-MM-DD}}">
+  <meta property="article:section" content="{{ARTICLE_SECTION}}">
+  <meta property="article:tag" content="{{TAG1}}">
+  <meta property="article:tag" content="{{TAG2}}">
+  <meta property="article:tag" content="{{TAG3}}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{TWITTER_TITLE}}">
+  <meta name="twitter:description" content="{{TWITTER_DESCRIPTION}}">
+  <meta name="twitter:image" content="https://www.cours-echecs-paris.fr/blog/images/{{SLUG}}.webp">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.cours-echecs-paris.fr/blog/{{SLUG}}.html">
+
+  <!-- Liens de navigation -->
+  <link rel="home" href="https://www.cours-echecs-paris.fr/">
+  <link rel="up" href="https://www.cours-echecs-paris.fr/blog/">
+
+  <!-- Données structurées JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{HEADLINE JSON-LD}}",
+    "description": "{{DESCRIPTION JSON-LD}}",
+    "author": {
+      "@type": "Person",
+      "name": "Nicolas Musicki",
+      "description": "Professeur d'échecs à Paris et Versailles",
+      "url": "https://www.cours-echecs-paris.fr/"
+    },
+    "datePublished": "{{YYYY-MM-DD}}",
+    "dateModified": "{{YYYY-MM-DD}}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Cours d'Échecs Paris - Nicolas Musicki",
+      "url": "https://www.cours-echecs-paris.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.cours-echecs-paris.fr/nicolas_musicki.webp"
+      }
+    },
+    "image": "https://www.cours-echecs-paris.fr/blog/images/{{SLUG}}.webp",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.cours-echecs-paris.fr/blog/{{SLUG}}.html"
+    },
+    "articleSection": "{{ARTICLE_SECTION}}",
+    "keywords": [{{KEYWORDS_JSON_ARRAY}}],
+    "wordCount": "{{WORD_COUNT}}",
+    "timeRequired": "PT{{READ_MINUTES}}M"
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../blog-style.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body class="has-promo">
+  <!-- Bannière Promo -->
+  <div class="promo-banner">
+    <div class="container">
+      <p><i class="fa-solid fa-gift pulse-icon"></i> <strong>1<sup>er</sup> COURS OFFERT</strong> <span class="promo-text-long">- Profitez de cette offre exclusive !</span> <a href="../#contact" class="promo-link">Réserver <i class="fa-solid fa-arrow-right"></i></a></p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="../" style="color: inherit; text-decoration: none;">
+          <i class="fa-solid fa-chess-knight"></i> Nicolas Musicki
+        </a>
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="../#about" class="nav-link">À propos</a></li>
+        <li><a href="../#advantages" class="nav-link">Pourquoi les échecs</a></li>
+        <li><a href="./" class="nav-link">Blog</a></li>
+        <li><a href="../#tarifs" class="nav-link">Tarifs</a></li>
+        <li><a href="../#faq" class="nav-link">FAQ</a></li>
+        <li><a href="../#contact" class="nav-link">Contact</a></li>
+        <li><a href="../#contact" class="nav-link nav-cta">Réserver</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="breadcrumb">
+      <a href="../">Accueil</a> <i class="fa-solid fa-chevron-right"></i> <a href="./">Blog</a> <i class="fa-solid fa-chevron-right"></i> {{BREADCRUMB_TITLE}}
+    </div>
+    <h1>{{H1_TITLE}}</h1>
+    <div class="article-meta">
+      <i class="fa-solid fa-calendar"></i> {{DATE_FORMATTED ex: 12 avril 2026}}
+      <i class="fa-solid fa-clock"></i> {{READ_TIME}} min de lecture
+      <i class="fa-solid fa-user"></i> Nicolas Musicki
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <article class="article-container" itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="datePublished" content="{{YYYY-MM-DD}}">
+      <meta itemprop="dateModified" content="{{YYYY-MM-DD}}">
+      <meta itemprop="author" content="Nicolas Musicki">
+      <meta itemprop="publisher" content="Cours d'Échecs Paris - Nicolas Musicki">
+
+    <!-- INTRO BOX : accroche émotionnelle, 3-4 phrases -->
+    <div class="intro-box">
+      {{INTRO_HOOK}}
+    </div>
+
+    <!-- TABLE DES MATIÈRES -->
+    <div class="table-of-contents">
+      <h3>Au sommaire</h3>
+      <ul>
+        <li><a href="#section-1">{{Section 1 title}}</a></li>
+        <li><a href="#section-2">{{Section 2 title}}</a></li>
+        <li><a href="#section-3">{{Section 3 title}}</a></li>
+        <li><a href="#section-4">{{Section 4 title}}</a></li>
+        <!-- Ajouter selon besoin -->
+      </ul>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- CONTENU PRINCIPAL                            -->
+    <!-- Alterner H2/H3, paragraphes, listes, encarts -->
+    <!-- ============================================ -->
+
+    <h2 id="section-1">{{Titre section 1}}</h2>
+
+    <p>{{Contenu...}}</p>
+
+    <!-- ENCART TIP (conseil de Nicolas) -->
+    <div class="tip-box">
+      {{Conseil pratique de Nicolas}}
+    </div>
+
+    <h3>{{Sous-section}}</h3>
+
+    <p>{{Contenu avec <strong>mots en gras</strong> et <a href="autre-article.html">liens internes</a>...}}</p>
+
+    <ul>
+      <li><strong>Point 1</strong> : explication</li>
+      <li><strong>Point 2</strong> : explication</li>
+      <li><strong>Point 3</strong> : explication</li>
+    </ul>
+
+    <!-- ENCART SCIENCE (étude / chiffres) -->
+    <div class="science-box">
+      {{Étude scientifique avec source, chiffres concrets}}
+    </div>
+
+    <h2 id="section-2">{{Titre section 2}}</h2>
+
+    <p>{{Contenu...}}</p>
+
+    <!-- ENCART HIGHLIGHT (fait marquant) -->
+    <div class="highlight-box">
+      <strong>{{Label}} :</strong> {{Fait marquant ou témoignage}}
+    </div>
+
+    <!-- ENCART CITATION -->
+    <div class="quote">
+      "{{Citation}}" - {{Auteur, contexte}}
+    </div>
+
+    <h2 id="section-3">{{Titre section 3}}</h2>
+
+    <p>{{Contenu...}}</p>
+
+    <!-- CTA MILIEU D'ARTICLE -->
+    <div class="cta-section">
+      <div class="gift-badge">OFFRE SPECIALE</div>
+      <h3>{{Accroche CTA}}</h3>
+      <p>{{Description offre}}</p>
+      <a href="../#contact" class="btn">Réserver le cours d'essai gratuit</a>
+    </div>
+
+    <h2 id="section-4">{{Titre section 4 / Conclusion}}</h2>
+
+    <p>{{Conclusion...}}</p>
+
+    <!-- CTA FINAL -->
+    <div class="cta-section">
+      <h3>Vous êtes à Paris ou Versailles ?</h3>
+      <p>Je propose des cours d'échecs adaptés à tous les niveaux. Premier cours offert pour tester !</p>
+      <a href="../#contact" class="btn">Discutons de votre projet <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <!-- ARTICLE RECOMMANDÉ -->
+    <div class="article-recommendation">
+      <h3>Article recommandé</h3>
+      <p>{{Phrase de transition vers l'article recommandé}}</p>
+      <a href="{{slug-article-recommande}}.html" class="recommendation-link">
+        <strong>{{Titre article recommandé}}</strong>
+        <span>{{Description courte}} →</span>
+      </a>
+    </div>
+
+    <!-- FOOTER AUTEUR -->
+    <div style="margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee;">
+      <p style="text-align: center; color: #999;">
+        <i class="fa-solid fa-chess-knight"></i> Article rédigé par Nicolas Musicki, professeur d'échecs à Paris et Versailles<br>
+        <a href="../" style="color: #667eea; text-decoration: none;">Retour à l'accueil</a> |
+        <a href="../#contact" style="color: #667eea; text-decoration: none;">Me contacter</a>
+      </p>
+    </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fa-solid fa-chess-knight"></i> Nicolas Musicki
+          <p>Professeur d'échecs à Paris et Versailles</p>
+        </div>
+        <div class="footer-links">
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="../">Accueil</a></li>
+            <li><a href="./">Blog</a></li>
+            <li><a href="../#tarifs">Tarifs</a></li>
+            <li><a href="../#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Suivez-moi</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/magickchess/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nicolas Musicki - Professeur d'échecs à Paris et Versailles. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navMenu = document.querySelector('.nav-menu');
+
+      if (mobileMenu && navMenu) {
+        mobileMenu.addEventListener('click', function() {
+          this.classList.toggle('active');
+          navMenu.classList.toggle('active');
+        });
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
