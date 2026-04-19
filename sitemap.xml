@@ -9,6 +9,14 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Guide gratuit (lead magnet — page de conversion) -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/ebook-gratuit.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
