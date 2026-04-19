@@ -1,0 +1,16 @@
+name = "chess-lead-magnet"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# Variable publique (sera remplacée par "https://www.cours-echecs-paris.fr" en prod)
+[vars]
+ALLOWED_ORIGIN = "https://www.cours-echecs-paris.fr"
+
+# Binding vers la base de données KV (à remplir après création du namespace)
+[[kv_namespaces]]
+binding = "SUBSCRIBERS"
+id = "74b1be0e07f949ba86749422063c463f"
+
+# Les secrets sont configurés via : wrangler secret put <NOM>
+# - RESEND_API_KEY : ta clé API Resend
+# - ADMIN_TOKEN    : un token random que tu choisis (pour accéder à /subscribers)

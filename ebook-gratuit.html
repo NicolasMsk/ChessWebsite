@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Bandeau cookies RGPD + Google Analytics (chargé après consentement) -->
+  <script src="cookies.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Téléchargez gratuitement le guide complet des échecs pour débutants par Nicolas Musicki (2092 Elo FIDE). 90 pages, des règles du jeu à votre premier tournoi.">
+  <meta name="keywords" content="guide échecs gratuit, apprendre échecs PDF, ebook échecs débutant, cours échecs Paris, Nicolas Musicki">
+  <meta name="author" content="Nicolas Musicki">
+  <title>Guide Gratuit des Échecs — 90 pages pour débuter | Nicolas Musicki</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Guide Gratuit des Échecs — 90 pages pour débuter">
+  <meta property="og:description" content="Volume 1 gratuit de la collection « Apprendre les Échecs » par Nicolas Musicki, 2092 Elo FIDE. Des règles du jeu à votre premier tournoi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cours-echecs-paris.fr/ebook-gratuit.html">
+  <meta property="og:image" content="https://www.cours-echecs-paris.fr/nicolas_musicki.webp">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="canonical" href="https://www.cours-echecs-paris.fr/ebook-gratuit.html">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="style.min.css">
+
+  <style>
+    /* Styles spécifiques à la landing page */
+    .ebook-hero {
+      background: linear-gradient(135deg, #F0D9B5 0%, #D4A56A 100%);
+      padding: 80px 20px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .ebook-hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('echiquier.avif') center / cover no-repeat;
+      opacity: 0.12;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+    .ebook-hero > * { position: relative; z-index: 1; }
+    .ebook-hero .collection-label {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 12px; text-transform: uppercase; letter-spacing: 5px;
+      color: #3E2C1C; margin-bottom: 10px; opacity: 0.85;
+    }
+    .ebook-hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      color: #3E2C1C; line-height: 1.1;
+      margin-bottom: 16px; font-weight: 700;
+    }
+    .ebook-hero .hero-subtitle {
+      font-family: Lora, Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+      color: #3E2C1C; max-width: 640px; margin: 0 auto 12px;
+    }
+    .ebook-hero .hero-pitch {
+      font-family: Lora, serif; font-size: 16px;
+      color: #3E2C1C; max-width: 640px; margin: 0 auto;
+      opacity: 0.85;
+    }
+    .ebook-hero .free-badge {
+      display: inline-block;
+      background: #3E2C1C; color: #F0D9B5;
+      padding: 8px 20px; border-radius: 30px;
+      font-family: Montserrat, sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 2px;
+      margin-top: 22px;
+    }
+
+    /* Section principale : cover + form */
+    .ebook-main {
+      max-width: 1100px; margin: 0 auto;
+      padding: 70px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .ebook-cover-preview {
+      text-align: center;
+    }
+    .ebook-cover-preview img {
+      max-width: 100%; height: auto;
+      border-radius: 8px;
+      box-shadow: 0 20px 50px rgba(62,44,28,0.25), 0 6px 16px rgba(62,44,28,0.15);
+    }
+    .ebook-cover-preview .cover-stats {
+      display: flex; justify-content: center;
+      gap: 28px; margin-top: 26px;
+    }
+    .ebook-cover-preview .cover-stats .stat {
+      text-align: center;
+    }
+    .ebook-cover-preview .cover-stats .stat-num {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 32px; font-weight: 700; color: #3E2C1C;
+      line-height: 1;
+    }
+    .ebook-cover-preview .cover-stats .stat-label {
+      font-family: Montserrat, sans-serif;
+      font-size: 11px; text-transform: uppercase; letter-spacing: 2px;
+      color: #8B5A2B; margin-top: 4px;
+    }
+
+    .ebook-form-section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2rem; color: #3E2C1C;
+      margin-bottom: 8px; line-height: 1.2;
+    }
+    .ebook-form-section .section-subtitle {
+      font-family: Lora, serif; font-style: italic;
+      color: #8B5A2B; margin-bottom: 30px;
+    }
+
+    .ebook-form-box {
+      background: #FAF6EF;
+      border: 1px solid #d4c9ab;
+      border-radius: 12px;
+      padding: 28px 26px;
+      margin-bottom: 30px;
+    }
+
+    /* ============ FORMULAIRE MAISON ============ */
+    .ebook-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .ebook-form-label {
+      font-family: Montserrat, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #8B5A2B;
+      margin-bottom: -6px;
+    }
+    .ebook-form-input {
+      width: 100%;
+      padding: 15px 18px;
+      border: 1.5px solid #d4c9ab;
+      border-radius: 8px;
+      font-family: Lora, serif;
+      font-size: 16px;
+      background: #fff;
+      color: #3a3a3a;
+      box-sizing: border-box;
+      transition: all 0.2s;
+    }
+    .ebook-form-input::placeholder { color: #b0a594; }
+    .ebook-form-input:focus {
+      outline: none;
+      border-color: #8B5A2B;
+      box-shadow: 0 0 0 4px rgba(139,90,43,0.12);
+    }
+    .ebook-form-submit {
+      width: 100%;
+      background: #3E2C1C;
+      color: #F0D9B5;
+      border: none;
+      border-radius: 8px;
+      padding: 17px 20px;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(62,44,28,0.18);
+    }
+    .ebook-form-submit:hover:not(:disabled) {
+      background: #5C3317;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 22px rgba(62,44,28,0.3);
+    }
+    .ebook-form-submit:disabled { opacity: 0.6; cursor: wait; }
+    .ebook-form-consent {
+      font-family: Lora, serif;
+      font-size: 12.5px;
+      color: #8B5A2B;
+      text-align: center;
+      margin: 6px 0 0;
+      line-height: 1.5;
+      opacity: 0.85;
+    }
+    .ebook-message {
+      padding: 16px 20px;
+      border-radius: 8px;
+      font-family: Lora, serif;
+      font-size: 14.5px;
+      line-height: 1.5;
+      display: none;
+    }
+    .ebook-message.show { display: block; }
+    .ebook-message.success {
+      background: #f0faf1; border: 1px solid #b5e2ba; color: #1e5e2f;
+    }
+    .ebook-message.error {
+      background: #fff1f0; border: 1px solid #f5c2c2; color: #8f1a1a;
+    }
+
+    .ebook-benefits {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .ebook-benefits li {
+      padding: 10px 0 10px 36px;
+      position: relative;
+      font-family: Lora, serif;
+      font-size: 15.5px; line-height: 1.5;
+      color: #3a3a3a;
+      border-bottom: 1px dashed #e5dcc7;
+    }
+    .ebook-benefits li:last-child { border-bottom: none; }
+    .ebook-benefits li::before {
+      content: "♞"; position: absolute; left: 0; top: 10px;
+      color: #8B5A2B; font-size: 20px;
+    }
+
+    /* Section auteur */
+    .ebook-author {
+      background: #faf6ef;
+      padding: 60px 20px; text-align: center;
+    }
+    .ebook-author img {
+      width: 130px; height: 130px;
+      object-fit: cover; object-position: center top;
+      border-radius: 50%;
+      border: 4px solid #3E2C1C;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      margin-bottom: 22px;
+    }
+    .ebook-author h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem; color: #3E2C1C;
+      margin-bottom: 4px;
+    }
+    .ebook-author .author-credentials {
+      font-family: Montserrat, sans-serif;
+      font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+      color: #8B5A2B; margin-bottom: 24px;
+    }
+    .ebook-author p {
+      max-width: 620px; margin: 0 auto 14px;
+      font-family: Lora, serif; font-size: 16px;
+      line-height: 1.6; color: #4a4a4a;
+    }
+
+    /* FAQ */
+    .ebook-faq {
+      max-width: 780px; margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .ebook-faq h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2rem; color: #3E2C1C;
+      text-align: center; margin-bottom: 35px;
+    }
+    .ebook-faq .faq-item {
+      padding: 18px 0;
+      border-bottom: 1px solid #e5dcc7;
+    }
+    .ebook-faq .faq-q {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.1rem; color: #3E2C1C;
+      font-weight: 700; margin-bottom: 8px;
+    }
+    .ebook-faq .faq-a {
+      font-family: Lora, serif; font-size: 15px;
+      line-height: 1.6; color: #4a4a4a;
+    }
+
+    @media (max-width: 820px) {
+      .ebook-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 50px 20px;
+      }
+      .ebook-cover-preview img { max-width: 280px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation simple -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <i class="fa-solid fa-chess-knight"></i> Nicolas Musicki
+      </div>
+      <ul class="nav-menu">
+        <li><a href="/" class="nav-link">Accueil</a></li>
+        <li><a href="/#about" class="nav-link">À propos</a></li>
+        <li><a href="/blog/" class="nav-link">Blog</a></li>
+        <li><a href="/#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="ebook-hero">
+    <div class="collection-label">Collection « Apprendre les Échecs »</div>
+    <h1>Le Guide Gratuit des Échecs<br/>pour Débutants Absolus</h1>
+    <p class="hero-subtitle">90 pages illustrées — des règles du jeu à ton premier tournoi.</p>
+    <p class="hero-pitch">Par Nicolas Musicki, professeur et entraîneur d'échecs à Paris — 2092 Elo FIDE.</p>
+    <div class="free-badge">100 % GRATUIT · PDF TÉLÉCHARGEABLE</div>
+  </section>
+
+  <!-- MAIN : cover preview + form -->
+  <section class="ebook-main">
+    <div class="ebook-cover-preview">
+      <img src="nicolas_musicki.webp" alt="Couverture du guide Volume 1" onerror="this.src='echiquier.avif'"/>
+      <div class="cover-stats">
+        <div class="stat">
+          <div class="stat-num">90</div>
+          <div class="stat-label">Pages</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">60+</div>
+          <div class="stat-label">Diagrammes</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">30+</div>
+          <div class="stat-label">Exercices</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ebook-form-section">
+      <h2>Télécharge ton guide maintenant</h2>
+      <p class="section-subtitle">Reçois-le par email, gratuitement, sans engagement.</p>
+
+      <div class="ebook-form-box">
+        <!-- Messages succès/erreur (affichés par JS après soumission) -->
+        <div id="ebook-success" class="ebook-message success"></div>
+        <div id="ebook-error" class="ebook-message error"></div>
+
+        <!-- Formulaire maison (POST vers Cloudflare Worker) -->
+        <form id="ebook-form" class="ebook-form" novalidate>
+          <label for="ebook-email" class="ebook-form-label">Ton adresse email</label>
+          <input type="email" id="ebook-email" name="email" placeholder="ton-email@exemple.com" autocomplete="email" required class="ebook-form-input">
+
+          <button type="submit" class="ebook-form-submit" id="ebook-submit-btn">
+            📕 Recevoir mon guide gratuit
+          </button>
+
+          <p class="ebook-form-consent">
+            En cliquant, tu acceptes de recevoir ton guide ainsi que quelques conseils pédagogiques. Désinscription en 1 clic, à tout moment.
+          </p>
+        </form>
+      </div>
+
+      <ul class="ebook-benefits">
+        <li><strong>Toutes les règles</strong> expliquées clairement (pièces, mouvements, roque, prise en passant, promotion).</li>
+        <li><strong>Les 5 principes</strong> qui rendent une ouverture solide.</li>
+        <li><strong>5 motifs tactiques</strong> essentiels : fourchette, clouage, enfilade, attaque découverte, menace de mat.</li>
+        <li><strong>Une partie célèbre</strong> commentée coup par coup (le Piège de Legal).</li>
+        <li><strong>Les finales de base</strong> pour finir une partie proprement.</li>
+        <li><strong>Tout pour préparer ton premier tournoi</strong> sereinement.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AUTEUR -->
+  <section class="ebook-author">
+    <img src="nicolas_musicki.webp" alt="Nicolas Musicki"/>
+    <h3>Nicolas Musicki</h3>
+    <div class="author-credentials">Professeur d'échecs · 2092 Elo FIDE</div>
+    <p>J'enseigne les échecs à Paris et Versailles, à domicile ou en visio, pour enfants, adolescents et adultes, débutants ou confirmés.</p>
+    <p>J'ai écrit ce guide parce que je n'ai pas trouvé, dans ma bibliothèque, l'ouvrage que j'aurais voulu mettre entre les mains de mes premiers élèves. C'est maintenant chose faite — et c'est gratuit.</p>
+    <a href="/#contact" class="btn" style="margin-top: 20px;">Réserver un 1er cours gratuit <i class="fa-solid fa-arrow-right"></i></a>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ebook-faq">
+    <h2>Questions fréquentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">C'est vraiment gratuit ?</div>
+      <div class="faq-a">Oui, 100 %. Pas de carte bancaire demandée, pas d'essai limité. Tu donnes juste ton email pour recevoir le PDF par lien de téléchargement.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Pour quel niveau est conçu ce guide ?</div>
+      <div class="faq-a">Le guide part de zéro. Si tu ne connais pas encore les règles, il est pour toi. Si tu connais vaguement les règles mais tu perds toujours en 10 coups, il est pour toi. Au-delà de 1000 Elo, le Volume 2 (payant, à paraître) sera plus adapté.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Pour quel âge ?</div>
+      <div class="faq-a">Dès 8-9 ans pour un enfant qui lit bien, jusqu'à 80 ans et plus pour un adulte. Le ton est accessible sans être infantilisant.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Je vais recevoir du spam après ?</div>
+      <div class="faq-a">Non. Tu recevras le guide immédiatement, puis 2-3 emails pédagogiques sur 2 semaines (astuces pour débuter, comment utiliser le guide). Après, plus rien sauf si je publie un Volume 2. Désinscription en un clic possible à tout moment.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Que deviennent mes données personnelles ?</div>
+      <div class="faq-a">Ton email est stocké de manière sécurisée sur une base de données personnelle hébergée sur Cloudflare, et l'envoi du guide passe par Resend (service conforme RGPD). Jamais revendu, jamais partagé. Voir les <a href="mentions-legales.html">mentions légales</a> pour le détail.</div>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fa-solid fa-chess-knight"></i> Nicolas Musicki
+          <p>Professeur et entraîneur d'échecs</p>
+        </div>
+        <div class="footer-links">
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/#about">À propos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#tarifs">Tarifs</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Suivez-moi</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/magickchess/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Nicolas Musicki - Professeur d'échecs à Paris et dans les Yvelines. Tous droits réservés. — <a href="mentions-legales.html" style="color:inherit;text-decoration:underline;">Mentions légales</a> — <a href="#" onclick="chessCookiesReset(); return false;" style="color:inherit;text-decoration:underline;">Gérer mes cookies</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Formulaire ebook : soumission vers Worker Cloudflare -->
+  <script>
+    (function () {
+      // ⚠️ REMPLACE cette URL par celle de ton Worker Cloudflare après déploiement
+      // (fourni par `wrangler deploy`, du type https://chess-lead-magnet.TON-NOM.workers.dev)
+      const WORKER_URL = 'https://chess-lead-magnet.chess-musicki.workers.dev';
+
+      const form = document.getElementById('ebook-form');
+      const btn = document.getElementById('ebook-submit-btn');
+      const emailInput = document.getElementById('ebook-email');
+      const successMsg = document.getElementById('ebook-success');
+      const errorMsg = document.getElementById('ebook-error');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        successMsg.classList.remove('show');
+        errorMsg.classList.remove('show');
+
+        const email = emailInput.value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+          errorMsg.textContent = "L'adresse email ne semble pas valide. Vérifie qu'elle est bien orthographiée et réessaie.";
+          errorMsg.classList.add('show');
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Envoi en cours…';
+
+        try {
+          const res = await fetch(WORKER_URL + '/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, why: 'guide_achat_gratuit' }),
+          });
+          const data = await res.json();
+
+          if (res.ok && data.success) {
+            form.style.display = 'none';
+            successMsg.textContent = data.message || 'Parfait ! Ton guide arrive dans ta boîte mail. Pense à vérifier tes spams au cas où.';
+            successMsg.classList.add('show');
+          } else {
+            throw new Error(data.error || 'Erreur inconnue');
+          }
+        } catch (err) {
+          errorMsg.textContent = "Oups, quelque chose a bloqué l'envoi du guide. Réessaie dans quelques secondes, ou envoie-moi directement un email à nicolas.musicki@gmail.com et je te fais parvenir le guide à la main.";
+          errorMsg.classList.add('show');
+          btn.disabled = false;
+          btn.textContent = '📕 Recevoir mon guide gratuit';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+ebook/
+.DS_Store
+Thumbs.db
+*.log
+.wrangler/
+api/.env
+api/.env.admin
+api/node_modules/
+api/.wrangler/

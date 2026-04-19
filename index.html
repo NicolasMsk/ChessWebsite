@@ -290,8 +290,7 @@
       </div>
       <ul class="nav-menu">
         <li><a href="#about" class="nav-link">À propos</a></li>
-        <li><a href="#advantages" class="nav-link">Pourquoi les échecs</a></li>
-        <li><a href="#tournois" class="nav-link">Tournois</a></li>
+        <li><a href="ebook-gratuit.html" class="nav-link">📕 Guide gratuit</a></li>
         <li><a href="blog/" class="nav-link">Blog</a></li>
         <li><a href="#tarifs" class="nav-link">Tarifs</a></li>
         <li><a href="#faq" class="nav-link">FAQ</a></li>
@@ -783,6 +782,7 @@
             <li><a href="#tarifs">Tarifs</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
           </ul>
         </div>
         <div class="footer-social">
@@ -794,7 +794,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Nicolas Musicki - Professeur d'échecs à Paris et dans les Yvelines. Tous droits réservés.</p>
+        <p>© 2026 Nicolas Musicki - Professeur d'échecs à Paris et dans les Yvelines. Tous droits réservés. — <a href="mentions-legales.html" style="color:inherit;text-decoration:underline;">Mentions légales</a> — <a href="#" onclick="chessCookiesReset(); return false;" style="color:inherit;text-decoration:underline;">Gérer mes cookies</a></p>
       </div>
     </div>
   </footer>
@@ -887,13 +887,7 @@
     });
   </script>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCK01E71GB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-KCK01E71GB');
-  </script>
+  <!-- Bandeau cookies RGPD + Google Analytics (chargé après consentement) -->
+  <script src="cookies.js" defer></script>
 </body>
 </html>
