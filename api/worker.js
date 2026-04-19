@@ -19,6 +19,7 @@
 const PDF_URL = 'https://www.cours-echecs-paris.fr/fichiers/guide-volume-1.pdf';
 const FROM_ADDRESS = 'Nicolas Musicki <contact@cours-echecs-paris.fr>';
 const REPLY_TO = 'nicolas.musicki@gmail.com';
+const ADMIN_EMAIL = 'nicolas.musicki@gmail.com';
 
 export default {
   async fetch(request, env) {
@@ -39,6 +40,9 @@ export default {
       }
       if (path === '/subscribers/export.csv' && request.method === 'GET') {
         return await handleExportCsv(request, env);
+      }
+      if (path === '/admin' && request.method === 'GET') {
+        return await handleAdminPage(request, env);
       }
       if (path === '/' && request.method === 'GET') {
         return new Response('Chess Lead Magnet API — OK', {
@@ -67,18 +71,34 @@ async function handleSubscribe(request, env) {
 
   // Vérifier les doublons (soft-succeed : renvoyer quand même le PDF)
   const existing = await env.SUBSCRIBERS.get(`email:${email}`);
+  const isNew = !existing;
+  let totalCount = null;
 
-  if (!existing) {
+  if (isNew) {
     const id = crypto.randomUUID();
     const date = new Date().toISOString();
     const record = { id, email, date, why };
 
     await env.SUBSCRIBERS.put(`subscriber:${id}`, JSON.stringify(record));
     await env.SUBSCRIBERS.put(`email:${email}`, id);
+
+    try {
+      const all = await fetchAllSubscribers(env);
+      totalCount = all.length;
+    } catch {}
   }
 
   // Envoi de l'email avec le PDF
   const emailResult = await sendGuideEmail(email, env);
+
+  // Notification admin (nouveau inscrit uniquement) — non bloquant
+  if (isNew) {
+    try {
+      await sendAdminNotification({ email, why, totalCount }, env);
+    } catch (err) {
+      console.error('Admin notification failed:', err);
+    }
+  }
   if (!emailResult.ok) {
     return jsonResponse(
       { error: 'Inscription enregistrée mais l\'envoi de l\'email a échoué. Nicolas te contactera.' },
@@ -136,6 +156,82 @@ async function handleExportCsv(request, env) {
 }
 
 // ============================================================
+// ENDPOINT : /admin?token=... (GET, page HTML lisible sur mobile)
+// ============================================================
+async function handleAdminPage(request, env) {
+  if (!isAdminAuthorized(request, env)) {
+    return new Response('<!DOCTYPE html><meta charset="utf-8"><body style="font-family:sans-serif;padding:40px;text-align:center;"><h1>⛔️ Non autorisé</h1><p>Token manquant ou invalide. Utilise <code>?token=...</code> dans l\'URL.</p></body>', {
+      status: 401,
+      headers: { 'Content-Type': 'text/html; charset=utf-8' },
+    });
+  }
+
+  const subscribers = await fetchAllSubscribers(env);
+  subscribers.sort((a, b) => b.date.localeCompare(a.date));
+
+  const token = encodeURIComponent(env.ADMIN_TOKEN);
+  const rows = subscribers.map((s, i) => {
+    const dateFr = new Date(s.date).toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
+    return `<tr>
+      <td style="padding:10px 8px;color:#888;font-variant-numeric:tabular-nums;">${subscribers.length - i}</td>
+      <td style="padding:10px 8px;"><a href="mailto:${escapeHtml(s.email)}" style="color:#3E2C1C;text-decoration:none;">${escapeHtml(s.email)}</a></td>
+      <td style="padding:10px 8px;color:#666;font-variant-numeric:tabular-nums;white-space:nowrap;">${escapeHtml(dateFr)}</td>
+      <td style="padding:10px 8px;color:#888;font-size:12px;">${escapeHtml(s.why || '')}</td>
+    </tr>`;
+  }).join('');
+
+  const html = `<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inscrits Guide Volume 1</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin:0; background:#faf6ef; color:#3E2C1C; }
+  .wrap { max-width:900px; margin:0 auto; padding:24px 16px 60px; }
+  h1 { margin:0 0 4px; font-size:24px; }
+  .sub { color:#888; margin:0 0 20px; font-size:14px; }
+  .count { display:inline-block; background:#3E2C1C; color:#fff; padding:4px 12px; border-radius:20px; font-weight:600; font-size:14px; margin-right:8px; }
+  .actions { margin:16px 0 20px; }
+  .btn { display:inline-block; background:#fff; color:#3E2C1C; border:1px solid #ddd; padding:8px 14px; border-radius:6px; text-decoration:none; font-size:14px; margin-right:8px; }
+  .btn:hover { background:#f5ebd5; }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.06); }
+  th { text-align:left; padding:12px 8px; background:#f5ebd5; font-size:12px; text-transform:uppercase; letter-spacing:1px; color:#3E2C1C; }
+  tr:not(:last-child) td { border-bottom:1px solid #f0e8d8; }
+  .empty { text-align:center; padding:40px; color:#888; }
+  @media (max-width:600px) {
+    th:nth-child(4), td:nth-child(4) { display:none; }
+    body { font-size:14px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>📩 Inscrits — Guide Volume 1</h1>
+    <p class="sub"><span class="count">${subscribers.length}</span> inscrits au total</p>
+
+    <div class="actions">
+      <a href="/subscribers/export.csv?token=${token}" class="btn">⬇️ Télécharger CSV</a>
+      <a href="/admin?token=${token}" class="btn">🔄 Rafraîchir</a>
+    </div>
+
+    ${subscribers.length === 0
+      ? '<div class="empty">Aucun inscrit pour le moment.</div>'
+      : `<table>
+          <thead><tr><th>#</th><th>Email</th><th>Date</th><th>Source</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>`
+    }
+  </div>
+</body>
+</html>`;
+
+  return new Response(html, {
+    headers: { 'Content-Type': 'text/html; charset=utf-8' },
+  });
+}
+
+// ============================================================
 // Utilitaires
 // ============================================================
 
@@ -159,7 +255,10 @@ async function fetchAllSubscribers(env) {
 
 function isAdminAuthorized(request, env) {
   const auth = request.headers.get('Authorization') || '';
-  return auth === `Bearer ${env.ADMIN_TOKEN}`;
+  if (auth === `Bearer ${env.ADMIN_TOKEN}`) return true;
+  const url = new URL(request.url);
+  const token = url.searchParams.get('token');
+  return token && token === env.ADMIN_TOKEN;
 }
 
 function normalizeEmail(input) {
@@ -206,6 +305,45 @@ async function sendGuideEmail(to, env) {
   });
 
   return { ok: response.ok, status: response.status };
+}
+
+// ============================================================
+// Notification admin (Nicolas) à chaque nouvelle inscription
+// ============================================================
+async function sendAdminNotification({ email, why, totalCount }, env) {
+  const date = new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
+  const total = totalCount != null ? `<p style="margin:6px 0;"><strong>Total inscrits :</strong> ${totalCount}</p>` : '';
+
+  const html = `<!DOCTYPE html><html lang="fr"><body style="font-family: -apple-system, Segoe UI, Roboto, sans-serif; color:#222;">
+    <div style="max-width:520px; margin:20px auto; padding:20px; border:1px solid #e5e5e5; border-radius:8px;">
+      <h2 style="margin:0 0 12px; color:#3E2C1C;">📩 Nouveau téléchargement du guide</h2>
+      <p style="margin:6px 0;"><strong>Email :</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
+      <p style="margin:6px 0;"><strong>Source :</strong> ${escapeHtml(why)}</p>
+      <p style="margin:6px 0;"><strong>Date :</strong> ${escapeHtml(date)} (Paris)</p>
+      ${total}
+    </div>
+  </body></html>`;
+
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from: FROM_ADDRESS,
+      to: [ADMIN_EMAIL],
+      reply_to: email,
+      subject: `📩 Nouveau inscrit guide : ${email}`,
+      html,
+    }),
+  });
+
+  return { ok: response.ok, status: response.status };
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
 // ============================================================
