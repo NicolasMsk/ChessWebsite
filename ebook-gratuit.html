@@ -199,12 +199,27 @@
       opacity: 0.85;
     }
     .ebook-hero .free-badge {
-      display: inline-block;
-      background: #3E2C1C; color: #F0D9B5;
-      padding: 8px 20px; border-radius: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: #3E2C1C;
+      padding: 6px 0 0;
       font-family: Montserrat, sans-serif;
-      font-size: 13px; font-weight: 700; letter-spacing: 2px;
+      font-size: 12px; font-weight: 600; letter-spacing: 2.5px;
       margin-top: 22px;
+      cursor: default;
+      user-select: none;
+      opacity: 0.85;
+    }
+    .ebook-hero .free-badge::before,
+    .ebook-hero .free-badge::after {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      background: #3E2C1C;
+      opacity: 0.5;
     }
 
     /* Section principale : cover + form */
