@@ -663,6 +663,152 @@
         </script>
       </section>
 
+      <!-- Volume 2 — bonus après 1er cours d'essai -->
+      <section class="home-vol2-bonus" aria-labelledby="v2-title">
+        <style>
+          .home-vol2-bonus {
+            background: linear-gradient(135deg, #1A3A5F 0%, #0B1F3A 100%);
+            padding: 60px 30px;
+            margin: 40px 0;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+          }
+          .home-vol2-bonus::after {
+            content: "";
+            position: absolute; inset: 0;
+            background: url('echiquier.avif') center / cover no-repeat;
+            opacity: 0.07;
+            mix-blend-mode: screen;
+            pointer-events: none;
+          }
+          .home-vol2-bonus .v2-wrap {
+            position: relative; z-index: 1;
+            max-width: 940px; margin: 0 auto;
+            display: grid; grid-template-columns: 200px 1fr;
+            gap: 44px; align-items: center;
+          }
+          .home-vol2-bonus .v2-cover img {
+            width: 100%; height: auto; display: block;
+            border-radius: 4px;
+            box-shadow: 0 14px 34px rgba(0,0,0,0.55), 0 4px 12px rgba(0,0,0,0.25);
+            transform: rotate(3deg);
+            transition: transform 0.3s ease;
+          }
+          .home-vol2-bonus .v2-cover img:hover { transform: rotate(0); }
+          .home-vol2-bonus .v2-badge {
+            display: inline-block;
+            background: #C89434;
+            color: #0B1F3A;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-family: Montserrat, sans-serif;
+            font-weight: 700;
+            font-size: 11px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+          }
+          .home-vol2-bonus h2 {
+            color: #E8D6A8;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.7rem, 3.3vw, 2.2rem);
+            line-height: 1.22;
+            margin: 0 0 14px;
+            font-weight: 700;
+          }
+          .home-vol2-bonus h2 strong { color: #C89434; }
+          .home-vol2-bonus .v2-pitch {
+            color: #E8D6A8;
+            font-family: Lora, Georgia, serif;
+            font-size: 15px;
+            line-height: 1.65;
+            margin: 0 0 22px;
+            opacity: 0.92;
+            max-width: 560px;
+          }
+          .home-vol2-bonus .v2-features {
+            list-style: none;
+            margin: 0 0 24px;
+            padding: 0;
+            color: #E8D6A8;
+            font-family: Lora, serif;
+            font-size: 14px;
+            line-height: 1.85;
+            max-width: 560px;
+          }
+          .home-vol2-bonus .v2-features li {
+            padding-left: 26px;
+            position: relative;
+          }
+          .home-vol2-bonus .v2-features li::before {
+            content: "♟";
+            position: absolute; left: 0;
+            color: #C89434;
+          }
+          .home-vol2-bonus .v2-cta {
+            display: inline-block;
+            background: #C89434;
+            color: #0B1F3A;
+            padding: 15px 32px;
+            border-radius: 8px;
+            font-family: Montserrat, sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.2s ease;
+          }
+          .home-vol2-bonus .v2-cta:hover {
+            background: #E8B957;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(200,148,52,0.45);
+          }
+          .home-vol2-bonus .v2-mini {
+            color: #D4A259;
+            font-family: Lora, serif;
+            font-size: 12px;
+            opacity: 0.85;
+            margin-top: 12px;
+            font-style: italic;
+          }
+          @media (max-width: 720px) {
+            .home-vol2-bonus { padding: 44px 20px; }
+            .home-vol2-bonus .v2-wrap {
+              grid-template-columns: 1fr;
+              text-align: center;
+              gap: 28px;
+            }
+            .home-vol2-bonus .v2-cover { max-width: 180px; margin: 0 auto; }
+            .home-vol2-bonus .v2-pitch,
+            .home-vol2-bonus .v2-features { margin-left: auto; margin-right: auto; }
+            .home-vol2-bonus .v2-features { text-align: left; display: inline-block; }
+          }
+        </style>
+
+        <div class="v2-wrap">
+          <div class="v2-cover">
+            <img src="couverture-guide-v2.png" alt="Couverture du Volume 2 — Le Starter Pack" width="200" height="306" loading="lazy">
+          </div>
+          <div class="v2-content">
+            <div class="v2-badge">🎁 Bonus réservé aux élèves</div>
+            <h2 id="v2-title">Le <strong>Volume 2</strong> offert<br>après ton 1<sup>er</sup> cours d'essai</h2>
+            <p class="v2-pitch">
+              120 pages pour arrêter de stagner. On y va plus loin : un vrai répertoire d'ouverture à mémoriser (Londres aux Blancs, Caro-Kann aux Noirs), une méthode pour ne plus gaffer, les schémas gagnants du milieu de partie et les finales clés.
+            </p>
+            <ul class="v2-features">
+              <li><strong>Répertoire complet</strong> Blancs + Noirs, variantes détaillées</li>
+              <li><strong>Méthode anti-gaffe</strong> pour 200 points Elo immédiats</li>
+              <li><strong>Schémas stratégiques</strong> du milieu de partie</li>
+              <li><strong>Finales techniques</strong> (Lucena, Philidor, fous opposés)</li>
+            </ul>
+            <a href="#contact" class="v2-cta">Je réserve mon 1<sup>er</sup> cours →</a>
+            <div class="v2-mini">Cours d'essai de 30 min &middot; offert &middot; à Paris, Versailles ou en visio</div>
+          </div>
+        </div>
+      </section>
+
       <!-- Avantages des échecs -->
       <section class="advantages" id="advantages">
         <h2>Pourquoi suivre des cours d'échecs ?</h2>
