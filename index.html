@@ -466,6 +466,203 @@
         </div>
       </section>
 
+      <!-- Guide gratuit — capture lead -->
+      <section class="home-lead-magnet" id="guide-gratuit" aria-labelledby="hlm-title">
+        <style>
+          .home-lead-magnet {
+            background: linear-gradient(135deg, #F0D9B5 0%, #D4A56A 100%);
+            padding: 70px 20px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+          }
+          .home-lead-magnet::after {
+            content: "";
+            position: absolute; inset: 0;
+            background: url('echiquier.avif') center / cover no-repeat;
+            opacity: 0.08;
+            mix-blend-mode: multiply;
+            pointer-events: none;
+          }
+          .home-lead-magnet .hlm-wrap {
+            position: relative; z-index: 1;
+            max-width: 980px; margin: 0 auto;
+            display: grid; grid-template-columns: 220px 1fr;
+            gap: 48px; align-items: center;
+          }
+          .home-lead-magnet .hlm-visual img {
+            width: 100%; height: auto; display: block;
+            border-radius: 4px;
+            box-shadow: 0 14px 34px rgba(62,44,28,0.3), 0 4px 12px rgba(62,44,28,0.15);
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
+          }
+          .home-lead-magnet .hlm-visual img:hover { transform: rotate(0); }
+          .home-lead-magnet .hlm-kicker {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; text-transform: uppercase;
+            letter-spacing: 3px; color: #3E2C1C;
+            opacity: 0.85; margin-bottom: 10px;
+          }
+          .home-lead-magnet h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+            color: #3E2C1C; line-height: 1.2;
+            margin: 0 0 14px; font-weight: 700;
+          }
+          .home-lead-magnet .hlm-pitch {
+            font-family: Lora, Georgia, serif;
+            font-size: 15px; line-height: 1.6;
+            color: #3E2C1C; margin: 0 0 22px;
+            max-width: 520px;
+          }
+          .home-lead-magnet .hlm-form {
+            display: flex; gap: 10px; flex-wrap: wrap;
+            max-width: 520px;
+          }
+          .home-lead-magnet .hlm-form input[type="email"] {
+            flex: 1; min-width: 200px;
+            padding: 13px 16px;
+            border: 1.5px solid rgba(62,44,28,0.2);
+            border-radius: 8px;
+            font-family: Lora, serif; font-size: 15px;
+            background: #fff; color: #3a3a3a;
+            box-sizing: border-box;
+          }
+          .home-lead-magnet .hlm-form input[type="email"]:focus {
+            outline: none;
+            border-color: #3E2C1C;
+            box-shadow: 0 0 0 3px rgba(62,44,28,0.12);
+          }
+          .home-lead-magnet .hlm-form button {
+            background: #3E2C1C; color: #F0D9B5;
+            border: none; border-radius: 8px;
+            padding: 13px 22px;
+            font-family: Montserrat, sans-serif;
+            font-size: 13px; font-weight: 700;
+            letter-spacing: 1.2px; text-transform: uppercase;
+            cursor: pointer; transition: all 0.2s;
+            white-space: nowrap;
+          }
+          .home-lead-magnet .hlm-form button:hover {
+            background: #2a1d12;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(62,44,28,0.3);
+          }
+          .home-lead-magnet .hlm-form button:disabled {
+            opacity: 0.6; cursor: not-allowed;
+          }
+          .home-lead-magnet .hlm-consent {
+            font-family: Lora, serif; font-size: 12px;
+            color: #3E2C1C; opacity: 0.75;
+            margin: 12px 0 0; max-width: 520px;
+          }
+          .home-lead-magnet .hlm-msg {
+            display: none; margin-top: 16px;
+            padding: 12px 16px; border-radius: 8px;
+            font-family: Lora, serif; font-size: 14px;
+          }
+          .home-lead-magnet .hlm-msg.show { display: block; }
+          .home-lead-magnet .hlm-success {
+            background: #e8f5e9; color: #2e6b34;
+            border: 1px solid #a5d6a7;
+          }
+          .home-lead-magnet .hlm-error {
+            background: #fef1ee; color: #a33e26;
+            border: 1px solid #e8b9a8;
+          }
+          @media (max-width: 720px) {
+            .home-lead-magnet { padding: 50px 20px; }
+            .home-lead-magnet .hlm-wrap {
+              grid-template-columns: 1fr;
+              text-align: center;
+              gap: 28px;
+            }
+            .home-lead-magnet .hlm-visual {
+              max-width: 180px; margin: 0 auto;
+            }
+            .home-lead-magnet .hlm-pitch,
+            .home-lead-magnet .hlm-consent { margin-left: auto; margin-right: auto; }
+            .home-lead-magnet .hlm-form { justify-content: center; }
+          }
+        </style>
+
+        <div class="hlm-wrap">
+          <div class="hlm-visual">
+            <img src="couverture-guide-v1.png" alt="Couverture du guide gratuit « Les Fondamentaux des Échecs » pour débutants" width="220" height="336" loading="lazy">
+          </div>
+          <div class="hlm-content">
+            <div class="hlm-kicker">📕 Guide offert · 90 pages PDF</div>
+            <h2 id="hlm-title">Apprends les échecs avec mon guide gratuit</h2>
+            <p class="hlm-pitch">
+              Pour les <strong>débutants absolus</strong> : toutes les règles, les principes d'ouverture, les motifs tactiques essentiels, les finales de base et une partie célèbre commentée. Envoyé immédiatement par email.
+            </p>
+            <form id="home-lead-form" class="hlm-form" novalidate>
+              <input type="email" id="hlm-email" name="email" placeholder="ton-email@exemple.com" autocomplete="email" required>
+              <button type="submit" id="hlm-submit">📕 Je reçois mon guide</button>
+            </form>
+            <p class="hlm-consent">
+              Tu reçois le guide + quelques conseils pédagogiques. Désinscription en 1 clic, à tout moment.
+            </p>
+            <div id="hlm-success" class="hlm-msg hlm-success"></div>
+            <div id="hlm-error" class="hlm-msg hlm-error"></div>
+            <noscript>
+              <p style="margin-top:14px;"><a href="ebook-gratuit.html" style="color:#3E2C1C;font-weight:700;">→ Télécharger le guide sur la page dédiée</a></p>
+            </noscript>
+          </div>
+        </div>
+
+        <script>
+          (function () {
+            const WORKER_URL = 'https://chess-lead-magnet.chess-musicki.workers.dev';
+            const form = document.getElementById('home-lead-form');
+            const btn = document.getElementById('hlm-submit');
+            const emailInput = document.getElementById('hlm-email');
+            const successMsg = document.getElementById('hlm-success');
+            const errorMsg = document.getElementById('hlm-error');
+
+            form.addEventListener('submit', async function (e) {
+              e.preventDefault();
+              successMsg.classList.remove('show');
+              errorMsg.classList.remove('show');
+
+              const email = emailInput.value.trim();
+              if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+                errorMsg.textContent = "L'adresse email ne semble pas valide. Vérifie qu'elle est bien orthographiée et réessaie.";
+                errorMsg.classList.add('show');
+                return;
+              }
+
+              btn.disabled = true;
+              btn.textContent = 'Envoi…';
+
+              try {
+                const res = await fetch(WORKER_URL + '/subscribe', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ email: email, why: 'home_lead_magnet' }),
+                });
+                const data = await res.json();
+
+                if (res.ok && data.success) {
+                  form.style.display = 'none';
+                  successMsg.textContent = data.message || 'Parfait ! Ton guide arrive dans ta boîte mail (vérifie tes spams si tu ne le vois pas).';
+                  successMsg.classList.add('show');
+                } else {
+                  throw new Error(data.error || 'Erreur inconnue');
+                }
+              } catch (err) {
+                errorMsg.textContent = "Oups, un problème est survenu. Réessaie dans quelques secondes, ou envoie-moi directement un email à nicolas.musicki@gmail.com.";
+                errorMsg.classList.add('show');
+                btn.disabled = false;
+                btn.textContent = '📕 Je reçois mon guide';
+              }
+            });
+          })();
+        </script>
+      </section>
+
       <!-- Avantages des échecs -->
       <section class="advantages" id="advantages">
         <h2>Pourquoi suivre des cours d'échecs ?</h2>
