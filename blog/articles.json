@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "meilleurs-films-series-echecs",
+      "title": "Les 10 Meilleurs Films et Séries sur les Échecs",
+      "description": "Les 10 meilleurs films et séries sur les échecs : Gambit de la Dame (Netflix), Searching for Bobby Fischer, Pawn Sacrifice, Queen of Katwe, et plus.",
+      "date": "2026-04-20",
+      "readTime": "14 min",
+      "author": "Nicolas Musicki",
+      "image": "images/bobby-fischer.jpg",
+      "imageAlt": "Bobby Fischer, figure légendaire des échecs au cinéma"
+    },
+    {
       "id": "cours-echecs-autour-versailles-yvelines",
       "title": "Cours d'Échecs autour de Versailles (78) | À Domicile",
       "description": "Cours d'échecs à domicile autour de Versailles : Le Chesnay, Viroflay, Vélizy, Chaville, Jouy-en-Josas, Saint-Cyr-l'École... 1er cours offert !",
@@ -47,7 +57,7 @@
       "date": "2026-03-04",
       "readTime": "15 min",
       "author": "Nicolas Musicki",
-      "image": "images/regles-echecs-guide-complet.png",
+      "image": "images/regles-echecs-guide-complet.webp",
       "imageAlt": "Échiquier avec pièces en position initiale pour apprendre les règles des échecs"
     },
     {
@@ -57,7 +67,7 @@
       "date": "2026-03-04",
       "readTime": "8 min",
       "author": "Nicolas Musicki",
-      "image": "images/cours-echecs-versailles.png",
+      "image": "images/cours-echecs-versailles.webp",
       "imageAlt": "Cours d'échecs à Versailles - professeur particulier à domicile dans les Yvelines 78"
     },
     {
