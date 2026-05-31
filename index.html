@@ -290,7 +290,7 @@
       </div>
       <ul class="nav-menu">
         <li><a href="#about" class="nav-link">À propos</a></li>
-        <li><a href="ebook-gratuit.html" class="nav-link">📕 Guide gratuit</a></li>
+        <li><a href="ebook-gratuit.html" class="nav-link">📕 Le guide</a></li>
         <li><a href="blog/" class="nav-link">Blog</a></li>
         <li><a href="#tarifs" class="nav-link">Tarifs</a></li>
         <li><a href="#faq" class="nav-link">FAQ</a></li>
@@ -466,7 +466,7 @@
         </div>
       </section>
 
-      <!-- Guide gratuit — capture lead -->
+      <!-- Guide PDF payant (4,99 €) -->
       <section class="home-lead-magnet" id="guide-gratuit" aria-labelledby="hlm-title">
         <style>
           .home-lead-magnet {
@@ -590,77 +590,24 @@
 
         <div class="hlm-wrap">
           <div class="hlm-visual">
-            <img src="couverture-guide-v1.png" alt="Couverture du guide gratuit « Les Fondamentaux des Échecs » pour débutants" width="220" height="336" loading="lazy">
+            <img src="couverture-guide-v1.png" alt="Couverture du guide « Les Fondamentaux des Échecs » pour débutants" width="220" height="336" loading="lazy">
           </div>
           <div class="hlm-content">
-            <div class="hlm-kicker">📕 Guide offert · 90 pages PDF</div>
-            <h2 id="hlm-title">Apprends les échecs avec mon guide gratuit</h2>
+            <div class="hlm-kicker">📕 Guide PDF · 90 pages · 4,99 €</div>
+            <h2 id="hlm-title">Apprends les échecs avec mon guide</h2>
             <p class="hlm-pitch">
-              Pour les <strong>débutants absolus</strong> : toutes les règles, les principes d'ouverture, les motifs tactiques essentiels, les finales de base et une partie célèbre commentée. Envoyé immédiatement par email.
+              Pour les <strong>débutants absolus</strong> : toutes les règles, les principes d'ouverture, les motifs tactiques essentiels, les finales de base et une partie célèbre commentée. Téléchargement immédiat du PDF après l'achat.
             </p>
-            <form id="home-lead-form" class="hlm-form" novalidate>
-              <input type="email" id="hlm-email" name="email" placeholder="ton-email@exemple.com" autocomplete="email" required>
-              <button type="submit" id="hlm-submit">📕 Je reçois mon guide</button>
-            </form>
+            <div style="margin:18px 0;">
+              <a href="https://buy.stripe.com/aFa4gB8cL7lgd81aNWdQQ00" id="hlm-buy" class="btn" style="text-decoration:none;display:inline-block;">📕 Obtenir le guide — 4,99 €</a>
+            </div>
             <p class="hlm-consent">
-              Tu reçois le guide + quelques conseils pédagogiques. Désinscription en 1 clic, à tout moment.
+              Paiement sécurisé par Stripe · PDF de 90 pages · téléchargement immédiat. <a href="ebook-gratuit.html" style="color:#3E2C1C;font-weight:700;">En savoir plus →</a>
             </p>
-            <div id="hlm-success" class="hlm-msg hlm-success"></div>
-            <div id="hlm-error" class="hlm-msg hlm-error"></div>
-            <noscript>
-              <p style="margin-top:14px;"><a href="ebook-gratuit.html" style="color:#3E2C1C;font-weight:700;">→ Télécharger le guide sur la page dédiée</a></p>
-            </noscript>
           </div>
         </div>
 
-        <script>
-          (function () {
-            const WORKER_URL = 'https://chess-lead-magnet.chess-musicki.workers.dev';
-            const form = document.getElementById('home-lead-form');
-            const btn = document.getElementById('hlm-submit');
-            const emailInput = document.getElementById('hlm-email');
-            const successMsg = document.getElementById('hlm-success');
-            const errorMsg = document.getElementById('hlm-error');
-
-            form.addEventListener('submit', async function (e) {
-              e.preventDefault();
-              successMsg.classList.remove('show');
-              errorMsg.classList.remove('show');
-
-              const email = emailInput.value.trim();
-              if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
-                errorMsg.textContent = "L'adresse email ne semble pas valide. Vérifie qu'elle est bien orthographiée et réessaie.";
-                errorMsg.classList.add('show');
-                return;
-              }
-
-              btn.disabled = true;
-              btn.textContent = 'Envoi…';
-
-              try {
-                const res = await fetch(WORKER_URL + '/subscribe', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ email: email, why: 'home_lead_magnet' }),
-                });
-                const data = await res.json();
-
-                if (res.ok && data.success) {
-                  form.style.display = 'none';
-                  successMsg.textContent = data.message || 'Parfait ! Ton guide arrive dans ta boîte mail (vérifie tes spams si tu ne le vois pas).';
-                  successMsg.classList.add('show');
-                } else {
-                  throw new Error(data.error || 'Erreur inconnue');
-                }
-              } catch (err) {
-                errorMsg.textContent = "Oups, un problème est survenu. Réessaie dans quelques secondes, ou envoie-moi directement un email à nicolas.musicki@gmail.com.";
-                errorMsg.classList.add('show');
-                btn.disabled = false;
-                btn.textContent = '📕 Je reçois mon guide';
-              }
-            });
-          })();
-        </script>
+        <!-- Guide vendu via lien Stripe (plus de formulaire email) -->
       </section>
 
       <!-- Volume 2 — bonus après 1er cours d'essai -->
