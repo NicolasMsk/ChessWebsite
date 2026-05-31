@@ -4,19 +4,21 @@
  *
  * Endpoints :
  *   POST /subscribe              → inscription + envoi PDF
+ *   POST /stripe-webhook         → paiement Stripe réussi → envoi du guide par email
  *   GET  /subscribers            → liste des inscrits (auth Bearer)
  *   GET  /subscribers/export.csv → export CSV (auth Bearer)
  *
  * Variables d'environnement (à configurer via Wrangler) :
- *   RESEND_API_KEY  (secret) : clé API Resend
- *   ADMIN_TOKEN     (secret) : token pour accéder aux endpoints admin
- *   ALLOWED_ORIGIN  (var)    : "https://www.cours-echecs-paris.fr" (ou "*" en dev)
+ *   RESEND_API_KEY         (secret) : clé API Resend
+ *   ADMIN_TOKEN            (secret) : token pour accéder aux endpoints admin
+ *   STRIPE_WEBHOOK_SECRET  (secret) : clé de signature du webhook Stripe (whsec_...)
+ *   ALLOWED_ORIGIN         (var)    : "https://www.cours-echecs-paris.fr" (ou "*" en dev)
  *
  * Binding KV :
  *   SUBSCRIBERS : namespace KV (structure : subscriber:<id> → JSON, email:<email> → id)
  */
 
-const PDF_URL = 'https://www.cours-echecs-paris.fr/fichiers/guide-volume-1.pdf';
+const PDF_URL = 'https://www.cours-echecs-paris.fr/fichiers/guide-volume-1-7f3a9c.pdf';
 const FROM_ADDRESS = 'Nicolas Musicki <contact@cours-echecs-paris.fr>';
 const REPLY_TO = 'nicolas.musicki@gmail.com';
 const ADMIN_EMAIL = 'nicolas.musicki@gmail.com';
@@ -34,6 +36,9 @@ export default {
     try {
       if (path === '/subscribe' && request.method === 'POST') {
         return await handleSubscribe(request, env);
+      }
+      if (path === '/stripe-webhook' && request.method === 'POST') {
+        return await handleStripeWebhook(request, env);
       }
       if (path === '/subscribers' && request.method === 'GET') {
         return await handleListSubscribers(request, env);
@@ -115,6 +120,106 @@ async function handleSubscribe(request, env) {
     200,
     env
   );
+}
+
+// ============================================================
+// ENDPOINT : /stripe-webhook (POST) — paiement réussi → envoi du guide
+// ============================================================
+async function handleStripeWebhook(request, env) {
+  const signature = request.headers.get('Stripe-Signature') || '';
+  const rawBody = await request.text();
+
+  const valid = await verifyStripeSignature(rawBody, signature, env.STRIPE_WEBHOOK_SECRET);
+  if (!valid) {
+    return new Response('Invalid signature', { status: 400 });
+  }
+
+  let event;
+  try {
+    event = JSON.parse(rawBody);
+  } catch {
+    return new Response('Invalid payload', { status: 400 });
+  }
+
+  if (event.type === 'checkout.session.completed') {
+    const session = event.data?.object || {};
+    const email = normalizeEmail(session.customer_details?.email || session.customer_email);
+
+    if (isValidEmail(email)) {
+      // Enregistrer l'acheteur (best-effort, ne bloque pas l'envoi)
+      try {
+        const existing = await env.SUBSCRIBERS.get(`email:${email}`);
+        if (!existing) {
+          const id = crypto.randomUUID();
+          const record = { id, email, date: new Date().toISOString(), why: 'achat_stripe' };
+          await env.SUBSCRIBERS.put(`subscriber:${id}`, JSON.stringify(record));
+          await env.SUBSCRIBERS.put(`email:${email}`, id);
+        }
+      } catch (err) {
+        console.error('KV store failed:', err);
+      }
+
+      // Envoi de l'email avec le lien du guide (best-effort)
+      try {
+        await sendGuideEmail(email, env);
+      } catch (err) {
+        console.error('Guide email failed:', err);
+      }
+
+      // Notification admin (best-effort)
+      try {
+        await sendAdminNotification({ email, why: 'achat_stripe', totalCount: null }, env);
+      } catch (err) {
+        console.error('Admin notification failed:', err);
+      }
+    }
+  }
+
+  // Toujours répondre 200 pour éviter les relances Stripe
+  return new Response(JSON.stringify({ received: true }), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' },
+  });
+}
+
+// Vérifie la signature d'un webhook Stripe (HMAC-SHA256 via Web Crypto)
+async function verifyStripeSignature(payload, sigHeader, secret) {
+  if (!secret || !sigHeader) return false;
+
+  let timestamp = null;
+  const signatures = [];
+  for (const part of sigHeader.split(',')) {
+    const [key, value] = part.split('=');
+    if (key === 't') timestamp = value;
+    if (key === 'v1') signatures.push(value);
+  }
+  if (!timestamp || signatures.length === 0) return false;
+
+  // Protection anti-rejeu : tolérance de 5 minutes
+  const age = Math.abs(Math.floor(Date.now() / 1000) - parseInt(timestamp, 10));
+  if (Number.isNaN(age) || age > 300) return false;
+
+  const signedPayload = `${timestamp}.${payload}`;
+  const key = await crypto.subtle.importKey(
+    'raw',
+    new TextEncoder().encode(secret),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign']
+  );
+  const sigBuffer = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(signedPayload));
+  const expected = [...new Uint8Array(sigBuffer)].map((b) => b.toString(16).padStart(2, '0')).join('');
+
+  return signatures.some((sig) => timingSafeEqual(sig, expected));
+}
+
+function timingSafeEqual(a, b) {
+  if (a.length !== b.length) return false;
+  let result = 0;
+  for (let i = 0; i < a.length; i++) {
+    result |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+  return result === 0;
 }
 
 // ============================================================
@@ -372,7 +477,7 @@ function guideEmailHtml() {
         <tr>
           <td style="padding:40px 40px 20px; color:#3a3a3a; font-size:16px; line-height:1.65;">
             <p style="margin:0 0 20px; font-size:17px;">Bonjour,</p>
-            <p style="margin:0 0 20px;">Merci pour ton inscription ! Comme promis, voici ton guide à télécharger — <strong>c'est cadeau</strong> :</p>
+            <p style="margin:0 0 20px;">Merci pour ton achat ! Voici ton guide des échecs à télécharger :</p>
             <p style="margin:0 0 20px; text-align:center;">
               <a href="${PDF_URL}" target="_blank" style="display:inline-block; background:#3E2C1C; color:#F0D9B5; text-decoration:none; padding:16px 40px; border-radius:8px; font-family:Georgia,serif; font-size:16px; font-weight:700; letter-spacing:1px;">📕 Télécharger mon guide (PDF)</a>
             </p>
