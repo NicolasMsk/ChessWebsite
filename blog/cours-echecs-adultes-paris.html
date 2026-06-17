@@ -80,6 +80,43 @@
   }
   </script>
 
+  <!-- Donnees structurees : fil d'Ariane -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.cours-echecs-paris.fr/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.cours-echecs-paris.fr/blog/"},
+      {"@type":"ListItem","position":3,"name":"Cours d'échecs adultes à Paris","item":"https://www.cours-echecs-paris.fr/blog/cours-echecs-adultes-paris.html"}
+    ]
+  }
+  </script>
+
+  <!-- Donnees structurees : service local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Cours d'échecs particuliers pour adultes",
+    "name": "Cours d'échecs adultes à Paris",
+    "description": "Cours d'échecs particuliers pour adultes à Paris, tous niveaux, à domicile ou en visio. Professeur 2092 Elo FIDE. Premier cours offert.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Nicolas Musicki — Cours d'échecs",
+      "image": "https://www.cours-echecs-paris.fr/nicolas_musicki.webp",
+      "telephone": "+33609365691",
+      "email": "nicolas.musicki@gmail.com",
+      "url": "https://www.cours-echecs-paris.fr/",
+      "priceRange": "40-50 EUR",
+      "areaServed": ["Paris","Île-de-France"],
+      "address": {"@type":"PostalAddress","addressLocality":"Paris","addressRegion":"Île-de-France","addressCountry":"FR"}
+    },
+    "areaServed": {"@type":"City","name":"Paris"},
+    "offers": {"@type":"Offer","price":"0","priceCurrency":"EUR","description":"Premier cours d'échecs offert"}
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

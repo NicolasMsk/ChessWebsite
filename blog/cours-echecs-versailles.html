@@ -65,6 +65,47 @@
   }
   </script>
 
+  <!-- Donnees structurees : fil d'Ariane -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.cours-echecs-paris.fr/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.cours-echecs-paris.fr/blog/"},
+      {"@type":"ListItem","position":3,"name":"Cours d'échecs à Versailles","item":"https://www.cours-echecs-paris.fr/blog/cours-echecs-versailles.html"}
+    ]
+  }
+  </script>
+
+  <!-- Donnees structurees : service local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Cours d'échecs particuliers",
+    "name": "Cours d'échecs à Versailles et dans les Yvelines",
+    "description": "Cours d'échecs particuliers à domicile à Versailles et dans les Yvelines (78), pour enfants et adultes, tous niveaux. Premier cours offert.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Nicolas Musicki — Cours d'échecs",
+      "image": "https://www.cours-echecs-paris.fr/nicolas_musicki.webp",
+      "telephone": "+33609365691",
+      "email": "nicolas.musicki@gmail.com",
+      "url": "https://www.cours-echecs-paris.fr/",
+      "priceRange": "40-50 EUR",
+      "areaServed": ["Versailles","Le Chesnay","Yvelines","Île-de-France"],
+      "address": {"@type":"PostalAddress","addressLocality":"Versailles","addressRegion":"Yvelines","postalCode":"78000","addressCountry":"FR"}
+    },
+    "areaServed": [
+      {"@type":"City","name":"Versailles"},
+      {"@type":"City","name":"Le Chesnay"},
+      {"@type":"AdministrativeArea","name":"Yvelines"}
+    ],
+    "offers": {"@type":"Offer","price":"0","priceCurrency":"EUR","description":"Premier cours d'échecs offert"}
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
