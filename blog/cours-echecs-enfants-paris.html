@@ -69,7 +69,45 @@
     }
   }
   </script>
-  
+
+  <!-- Donnees structurees : fil d'Ariane -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.cours-echecs-paris.fr/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.cours-echecs-paris.fr/blog/"},
+      {"@type":"ListItem","position":3,"name":"Cours d'échecs enfants à Paris","item":"https://www.cours-echecs-paris.fr/blog/cours-echecs-enfants-paris.html"}
+    ]
+  }
+  </script>
+
+  <!-- Donnees structurees : service local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Cours d'échecs particuliers pour enfants",
+    "name": "Cours d'échecs enfants à Paris",
+    "description": "Cours d'échecs particuliers pour enfants à Paris, à domicile ou en visio. Méthode ludique et progressive. Premier cours offert.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Nicolas Musicki — Cours d'échecs",
+      "image": "https://www.cours-echecs-paris.fr/nicolas_musicki.webp",
+      "telephone": "+33609365691",
+      "email": "nicolas.musicki@gmail.com",
+      "url": "https://www.cours-echecs-paris.fr/",
+      "priceRange": "40-50 EUR",
+      "areaServed": ["Paris","Île-de-France"],
+      "address": {"@type":"PostalAddress","addressLocality":"Paris","addressRegion":"Île-de-France","addressCountry":"FR"}
+    },
+    "areaServed": {"@type":"City","name":"Paris"},
+    "audience": {"@type":"PeopleAudience","suggestedMinAge":5},
+    "offers": {"@type":"Offer","price":"0","priceCurrency":"EUR","description":"Premier cours d'échecs offert"}
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -505,6 +543,19 @@
       <a href="comment-apprendre-echecs-enfant.html" class="recommendation-link">
         <strong>Comment Apprendre les Échecs à un Enfant : Le Guide Complet</strong>
         <span>Les méthodes qui fonctionnent vraiment pour captiver et faire progresser un enfant →</span>
+      </a>
+    </div>
+
+    <!-- Cluster cours -->
+    <div class="article-recommendation">
+      <h3>♟️ Nos autres cours d'échecs</h3>
+      <a href="cours-echecs-adultes-paris.html" class="recommendation-link">
+        <strong>Cours d'échecs adultes à Paris</strong>
+        <span>À domicile ou en visio, tous niveaux. 1er cours offert &rarr;</span>
+      </a>
+      <a href="cours-echecs-versailles.html" class="recommendation-link">
+        <strong>Cours d'échecs à Versailles (78)</strong>
+        <span>Professeur à domicile dans les Yvelines &rarr;</span>
       </a>
     </div>
 
