@@ -6,6 +6,52 @@
   var CONSENT_KEY = 'chess-cookie-consent';
   var GA_ID = 'G-KCK01E71GB';
 
+  // ===== Suivi des conversions (GA4) — câblé AVANT les retours anticipés =====
+  // Les écouteurs sont attachés dans tous les cas ; ils n'envoient l'événement
+  // que si Google Analytics est chargé (typeof window.gtag === 'function'),
+  // donc rien ne part sans consentement.
+  function chessTrack(name, params) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, params || {});
+    }
+  }
+  window.chessTrack = chessTrack;
+
+  function wireConversions() {
+    // Clics : téléphone, email, achat ebook (Stripe), lien vers la page ebook
+    document.addEventListener('click', function (e) {
+      var el = e.target;
+      var a = (el && el.closest) ? el.closest('a[href]') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (href.indexOf('tel:') === 0) {
+        chessTrack('click_telephone', { lien: href });
+      } else if (href.indexOf('mailto:') === 0) {
+        chessTrack('click_email', { lien: href });
+      } else if (href.indexOf('buy.stripe.com') !== -1) {
+        chessTrack('click_acheter_ebook', { lien: href });
+      } else if (href.indexOf('ebook-gratuit') !== -1) {
+        chessTrack('click_lien_ebook', { page: location.pathname });
+      }
+    }, true);
+
+    // Envoi du formulaire de contact / réservation (= lead)
+    document.addEventListener('submit', function (e) {
+      var form = e.target;
+      if (!form || form.tagName !== 'FORM') return;
+      var action = form.getAttribute('action') || '';
+      if (form.id === 'reservation-form' || action.indexOf('formspree') !== -1) {
+        chessTrack('generate_lead', { form_id: form.id || 'contact', transport_type: 'beacon' });
+      }
+    }, true);
+  }
+
+  if (document.readyState !== 'loading') {
+    wireConversions();
+  } else {
+    document.addEventListener('DOMContentLoaded', wireConversions);
+  }
+
   var consent = localStorage.getItem(CONSENT_KEY);
   if (consent === 'accepted') { loadAnalytics(); return; }
   if (consent === 'refused')  { return; }
