@@ -30,7 +30,7 @@
         chessTrack('click_email', { lien: href });
       } else if (href.indexOf('buy.stripe.com') !== -1) {
         chessTrack('click_acheter_ebook', { lien: href });
-      } else if (href.indexOf('ebook-gratuit') !== -1) {
+      } else if (href.indexOf('guide-apprendre-les-echecs') !== -1 || href.indexOf('ebook-gratuit') !== -1) {
         chessTrack('click_lien_ebook', { page: location.pathname });
       }
     }, true);
