@@ -4,7 +4,7 @@
   <!-- Page d'accueil -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- Guide gratuit (lead magnet — page de conversion) -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/guide-apprendre-les-echecs.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -49,7 +49,7 @@
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/debuter-echecs-guide-complet-0-500-elo.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -112,14 +112,14 @@
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/echecs-adultes-debutants-30-40-50-ans.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/10-erreurs-debutant-echecs.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -162,7 +162,7 @@
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/regles-echecs-guide-complet.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -204,21 +204,21 @@
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/judit-polgar-meilleure-joueuse-echecs.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/meilleurs-films-series-echecs.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/classement-elo-echecs.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

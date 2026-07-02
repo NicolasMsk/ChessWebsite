@@ -476,7 +476,7 @@ function guideEmailHtml() {
         <tr>
           <td style="padding:40px 40px 20px; color:#3a3a3a; font-size:16px; line-height:1.65;">
             <p style="margin:0 0 20px; font-size:17px;">Bonjour,</p>
-            <p style="margin:0 0 20px;">Merci pour ton achat ! Voici ton guide des échecs à télécharger :</p>
+            <p style="margin:0 0 20px;">Merci pour ton inscription ! Comme promis, voici ton guide à télécharger — <strong>c'est cadeau</strong> :</p>
             <p style="margin:0 0 20px; text-align:center;">
               <a href="${PDF_URL}" target="_blank" style="display:inline-block; background:#3E2C1C; color:#F0D9B5; text-decoration:none; padding:16px 40px; border-radius:8px; font-family:Georgia,serif; font-size:16px; font-weight:700; letter-spacing:1px;">📕 Télécharger mon guide (PDF)</a>
             </p>
