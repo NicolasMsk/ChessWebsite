@@ -96,13 +96,11 @@ async function handleSubscribe(request, env) {
   // Envoi de l'email avec le PDF
   const emailResult = await sendGuideEmail(email, env);
 
-  // Notification admin (nouveau inscrit uniquement) — non bloquant
-  if (isNew) {
-    try {
-      await sendAdminNotification({ email, why, totalCount }, env);
-    } catch (err) {
-      console.error('Admin notification failed:', err);
-    }
+  // Notification admin à CHAQUE téléchargement (nouveau ou re-téléchargement) — non bloquant
+  try {
+    await sendAdminNotification({ email, why, totalCount, isNew }, env);
+  } catch (err) {
+    console.error('Admin notification failed:', err);
   }
   if (!emailResult.ok) {
     return jsonResponse(
@@ -414,13 +412,14 @@ async function sendGuideEmail(to, env) {
 // ============================================================
 // Notification admin (Nicolas) à chaque nouvelle inscription
 // ============================================================
-async function sendAdminNotification({ email, why, totalCount }, env) {
+async function sendAdminNotification({ email, why, totalCount, isNew = true }, env) {
   const date = new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
   const total = totalCount != null ? `<p style="margin:6px 0;"><strong>Total inscrits :</strong> ${totalCount}</p>` : '';
+  const titre = isNew ? '📩 Nouveau téléchargement du guide' : '🔁 Guide re-téléchargé (email déjà inscrit)';
 
   const html = `<!DOCTYPE html><html lang="fr"><body style="font-family: -apple-system, Segoe UI, Roboto, sans-serif; color:#222;">
     <div style="max-width:520px; margin:20px auto; padding:20px; border:1px solid #e5e5e5; border-radius:8px;">
-      <h2 style="margin:0 0 12px; color:#3E2C1C;">📩 Nouveau téléchargement du guide</h2>
+      <h2 style="margin:0 0 12px; color:#3E2C1C;">${titre}</h2>
       <p style="margin:6px 0;"><strong>Email :</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
       <p style="margin:6px 0;"><strong>Source :</strong> ${escapeHtml(why)}</p>
       <p style="margin:6px 0;"><strong>Date :</strong> ${escapeHtml(date)} (Paris)</p>
@@ -438,7 +437,7 @@ async function sendAdminNotification({ email, why, totalCount }, env) {
       from: FROM_ADDRESS,
       to: [ADMIN_EMAIL],
       reply_to: email,
-      subject: `📩 Nouveau inscrit guide : ${email}`,
+      subject: isNew ? `📩 Nouveau inscrit guide : ${email}` : `🔁 Guide re-téléchargé : ${email}`,
       html,
     }),
   });
