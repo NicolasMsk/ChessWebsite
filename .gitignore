@@ -7,3 +7,4 @@ api/.env
 api/.env.admin
 api/node_modules/
 api/.wrangler/
+.claude/settings.local.json
