@@ -21,6 +21,8 @@
 - [De zéro à 500 Elo](https://www.cours-echecs-paris.fr/blog/debuter-echecs-guide-complet-0-500-elo.html): Plan structuré sur 2-4 mois avec routine quotidienne de 30 minutes.
 - [10 erreurs du débutant](https://www.cours-echecs-paris.fr/blog/10-erreurs-debutant-echecs.html): Les pièges classiques à éviter pour progresser plus vite.
 - [Combien de temps pour devenir bon aux échecs ?](https://www.cours-echecs-paris.fr/blog/combien-temps-devenir-bon-echecs.html): Estimation réaliste selon le niveau visé.
+- [Les 5 meilleures ouvertures pour débutants](https://www.cours-echecs-paris.fr/blog/meilleures-ouvertures-echecs-debutants.html): L'Italienne, le Londres, la Caro-Kann et la Slave expliquées coup par coup.
+- [Combien coûte un cours d'échecs ?](https://www.cours-echecs-paris.fr/blog/combien-coute-cours-echecs.html): Les vrais tarifs 2026 — cours particuliers, clubs, en ligne — et comment choisir.
 
 ## Ressources pour enfants et parents
 - [Bienfaits des échecs pour les enfants](https://www.cours-echecs-paris.fr/blog/bienfaits-echecs-enfants.html): 7 bénéfices documentés, dès 5 ans.
@@ -39,7 +41,10 @@
 - [Échecs à la retraite : 8 bienfaits pour les seniors](https://www.cours-echecs-paris.fr/blog/echecs-retraite-seniors.html): Mémoire, lien social, prévention cognitive. Guide pour débuter à 60-70 ans.
 
 ## Références et culture échecs
+- [Championnat du Monde 2026 : Gukesh vs Sindarov](https://www.cours-echecs-paris.fr/blog/championnat-monde-echecs-2026.html): Le guide du match de fin 2026, accessible aux débutants.
 - [Magnus Carlsen — parcours champion du monde](https://www.cours-echecs-paris.fr/blog/magnus-carlsen-parcours-champion-monde.html)
+- [Judit Polgár, meilleure joueuse de tous les temps](https://www.cours-echecs-paris.fr/blog/judit-polgar-meilleure-joueuse-echecs.html)
+- [Le classement Elo expliqué](https://www.cours-echecs-paris.fr/blog/classement-elo-echecs.html)
 - [Maxime Vachier-Lagrave](https://www.cours-echecs-paris.fr/blog/maxime-vachier-lagrave.html)
 - [Citations inspirantes sur les échecs](https://www.cours-echecs-paris.fr/blog/citations-echecs-inspirantes.html)
 - [Échecs vs jeux vidéo](https://www.cours-echecs-paris.fr/blog/echecs-vs-jeux-video.html)

@@ -1,6 +1,56 @@
 {
   "articles": [
     {
+      "id": "championnat-monde-echecs-2026",
+      "title": "Championnat du Monde d'Échecs 2026 : Gukesh face à Sindarov, le duel des prodiges",
+      "description": "Le plus jeune champion du monde de l'histoire face au prodige ouzbek qui a écrasé les Candidats. Format, portraits, enjeux : tout comprendre du match de fin 2026.",
+      "date": "2026-07-02",
+      "readTime": "13 min",
+      "author": "Nicolas Musicki",
+      "image": "images/championnat-monde-echecs-2026.webp",
+      "imageAlt": "Échiquier de tournoi avec pendule, ambiance de match de championnat du monde d'échecs"
+    },
+    {
+      "id": "meilleures-ouvertures-echecs-debutants",
+      "title": "Les 5 Meilleures Ouvertures aux Échecs pour Débutants (avec les coups précis)",
+      "description": "L'Italienne, le système de Londres, la Caro-Kann, la Slave : les ouvertures idéales pour débuter, expliquées coup par coup avec les pièges à éviter.",
+      "date": "2026-07-02",
+      "readTime": "14 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Échiquier en début de partie, premiers coups d'une ouverture aux échecs"
+    },
+    {
+      "id": "combien-coute-cours-echecs",
+      "title": "Combien Coûte un Cours d'Échecs ? Les Vrais Tarifs en 2026",
+      "description": "Cours particuliers (25-80 €/h), clubs, plateformes en ligne : le comparatif honnête des prix des cours d'échecs, et les 4 critères pour bien choisir.",
+      "date": "2026-07-02",
+      "readTime": "12 min",
+      "author": "Nicolas Musicki",
+      "image": "images/combien-coute-cours-echecs.webp",
+      "imageAlt": "Pièces d'échecs sur un échiquier, illustration du coût des cours d'échecs"
+    },
+    {
+      "id": "judit-polgar-meilleure-joueuse-echecs",
+      "title": "Judit Polgár : la Meilleure Joueuse d'Échecs de Tous les Temps",
+      "description": "Judit Polgár, la Hongroise qui a battu les hommes : plus jeune GM de l'histoire, victoires contre Kasparov et Karpov, 27 ans dans le top mondial.",
+      "date": "2026-04-20",
+      "readTime": "14 min",
+      "author": "Nicolas Musicki",
+      "image": "images/judit-polgar.jpg",
+      "imageAlt": "Judit Polgár, la meilleure joueuse d'échecs de l'histoire, devant un échiquier"
+    },
+    {
+      "id": "classement-elo-echecs",
+      "title": "Classement Elo aux Échecs : Comment ça Fonctionne Vraiment",
+      "description": "Le classement Elo expliqué simplement : qui était Arpad Elo, comment l'Elo se calcule, ce que valent 1200, 1500, 2000, 2500 points. Guide complet 2026.",
+      "date": "2026-04-20",
+      "readTime": "13 min",
+      "author": "Nicolas Musicki",
+      "image": "images/arpad-elo.jpg",
+      "imageAlt": "Arpad Elo, inventeur du classement Elo aux échecs"
+    },
+    {
       "id": "meilleurs-films-series-echecs",
       "title": "Les 10 Meilleurs Films et Séries sur les Échecs",
       "description": "Les 10 meilleurs films et séries sur les échecs : Gambit de la Dame (Netflix), Searching for Bobby Fischer, Pawn Sacrifice, Queen of Katwe, et plus.",
