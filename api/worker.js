@@ -113,7 +113,7 @@ async function handleSubscribe(request, env) {
   return jsonResponse(
     {
       success: true,
-      message: 'Parfait ! Ton guide arrive dans ta boîte mail (vérifie tes spams si tu ne le vois pas).',
+      message: 'Parfait ! Ton guide arrive dans ta boîte mail. Si tu ne le vois pas d\'ici 2 minutes, regarde dans Spams et dans l\'onglet Promotions (Gmail).',
     },
     200,
     env
@@ -401,8 +401,9 @@ async function sendGuideEmail(to, env) {
       from: FROM_ADDRESS,
       to: [to],
       reply_to: REPLY_TO,
-      subject: '🎁 Ton guide des échecs est prêt !',
+      subject: 'Ton guide des échecs est prêt',
       html: guideEmailHtml(),
+      text: guideEmailText(),
     }),
   });
 
@@ -447,6 +448,26 @@ async function sendAdminNotification({ email, why, totalCount, isNew = true }, e
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+// Version texte brut (améliore la délivrabilité)
+function guideEmailText() {
+  return `Bonjour,
+
+Merci pour ton inscription ! Comme promis, voici ton guide des échecs (PDF, 90 pages) :
+
+${PDF_URL}
+
+Quelques conseils pour bien en profiter :
+- Lis dans l'ordre, chaque chapitre s'appuie sur le précédent.
+- Prends ton temps : un chapitre par jour, c'est parfait.
+- Fais les exercices, les solutions sont en annexe.
+
+À très vite,
+Nicolas Musicki
+Professeur d'échecs — cours-echecs-paris.fr
+
+P.S. Si tu veux aller plus vite qu'en autodidacte, mon premier cours est offert, à domicile (Paris/Versailles) ou en visio : https://www.cours-echecs-paris.fr/#contact`;
 }
 
 // ============================================================
