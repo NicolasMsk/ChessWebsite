@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "alireza-firouzja-numero-1-francais",
+      "title": "Alireza Firouzja : le Numéro 1 Français en Pleine Forme (2026)",
+      "description": "Plus jeune 2800 de l'histoire, vainqueur à Chennai et en Croatie en 2026, de retour dans le top 10 : portrait d'Alireza Firouzja, numéro 1 français.",
+      "date": "2026-08-03",
+      "readTime": "12 min",
+      "author": "Nicolas Musicki",
+      "image": "images/alireza-firouzja-numero-1-francais.webp",
+      "imageAlt": "Cavalier d'échecs dans une lumière dramatique, illustrant le style d'attaque d'Alireza Firouzja"
+    },
+    {
       "id": "championnat-monde-echecs-2026",
       "title": "Championnat du Monde d'Échecs 2026 : Gukesh face à Sindarov, le duel des prodiges",
       "description": "Le plus jeune champion du monde de l'histoire face au prodige ouzbek qui a écrasé les Candidats. Format, portraits, enjeux : tout comprendre du match de fin 2026.",

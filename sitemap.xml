@@ -225,7 +225,7 @@
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/championnat-monde-echecs-2026.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -240,5 +240,11 @@
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/alireza-firouzja-numero-1-francais.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
