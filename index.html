@@ -615,6 +615,8 @@
             .home-lead-magnet .hlm-visual {
               max-width: 180px; margin: 0 auto;
             }
+            /* la rotation fait deborder la boite de ~5px : on retablit la marge */
+            .home-lead-magnet .hlm-visual img { width: 94%; margin: 0 auto; }
             .home-lead-magnet .hlm-pitch,
             .home-lead-magnet .hlm-consent { margin-left: auto; margin-right: auto; }
             .home-lead-magnet .hlm-form { justify-content: center; }
@@ -815,6 +817,8 @@
               gap: 28px;
             }
             .home-vol2-bonus .v2-cover { max-width: 180px; margin: 0 auto; }
+            /* idem : rotate(3deg) elargit la boite de ~7px */
+            .home-vol2-bonus .v2-cover img { width: 93%; margin: 0 auto; }
             .home-vol2-bonus .v2-pitch,
             .home-vol2-bonus .v2-features { margin-left: auto; margin-right: auto; }
             .home-vol2-bonus .v2-features { text-align: left; display: inline-block; }
