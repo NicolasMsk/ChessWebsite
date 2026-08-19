@@ -18,6 +18,15 @@
  *   SUBSCRIBERS : namespace KV (structure : subscriber:<id> → JSON, email:<email> → id)
  */
 
+import {
+  isPackSession,
+  buildOrderRecord,
+  orderConfirmationHtml,
+  orderConfirmationText,
+  orderAdminHtml,
+  ordersToCsv,
+} from './order.js';
+
 const PDF_URL = 'https://www.cours-echecs-paris.fr/fichiers/guide-volume-1-7f3a9c.pdf';
 const FROM_ADDRESS = 'Nicolas Musicki <contact@cours-echecs-paris.fr>';
 const REPLY_TO = 'nicolas.musicki@gmail.com';
@@ -45,6 +54,12 @@ export default {
       }
       if (path === '/subscribers/export.csv' && request.method === 'GET') {
         return await handleExportCsv(request, env);
+      }
+      if (path === '/orders' && request.method === 'GET') {
+        return await handleListOrders(request, env);
+      }
+      if (path === '/orders/export.csv' && request.method === 'GET') {
+        return await handleExportOrdersCsv(request, env);
       }
       if (path === '/admin' && request.method === 'GET') {
         return await handleAdminPage(request, env);
@@ -141,6 +156,18 @@ async function handleStripeWebhook(request, env) {
 
   if (event.type === 'checkout.session.completed') {
     const session = event.data?.object || {};
+
+    // AIGUILLAGE PRODUIT — à ne jamais déplacer plus bas.
+    // Le pack de livres reliés a son propre traitement et ne doit surtout pas
+    // déclencher l'envoi du guide PDF gratuit (deux produits distincts).
+    if (isPackSession(session)) {
+      await handlePackOrder(session, env);
+      return new Response(JSON.stringify({ received: true }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
     const email = normalizeEmail(session.customer_details?.email || session.customer_email);
 
     if (isValidEmail(email)) {
@@ -178,6 +205,89 @@ async function handleStripeWebhook(request, env) {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
   });
+}
+
+// ============================================================
+// Traitement d'une commande du pack de livres reliés
+// ============================================================
+async function handlePackOrder(session, env) {
+  // On ne traite que les paiements effectivement encaissés.
+  if (session.payment_status !== 'paid') {
+    console.log('Pack order ignored, payment_status =', session.payment_status);
+    return;
+  }
+
+  const key = `order:${session.id}`;
+
+  // Idempotence : Stripe rejoue les events en échec pendant plusieurs jours.
+  const deja = await env.SUBSCRIBERS.get(key);
+  if (deja) {
+    console.log('Pack order already processed:', session.id);
+    return;
+  }
+
+  const order = buildOrderRecord(session, new Date().toISOString());
+
+  // Écriture AVANT les emails : si Resend tombe, la commande reste récupérable
+  // via /orders. Une commande payée mais perdue est le pire échec possible.
+  await env.SUBSCRIBERS.put(key, JSON.stringify(order));
+
+  if (isValidEmail(order.email)) {
+    try {
+      await sendOrderConfirmationEmail(order, env);
+    } catch (err) {
+      console.error('Order confirmation email failed:', err);
+    }
+  } else {
+    console.error('Order without valid email:', session.id);
+  }
+
+  try {
+    await sendOrderAdminNotification(order, env);
+  } catch (err) {
+    console.error('Order admin notification failed:', err);
+  }
+}
+
+// ============================================================
+// Emails de commande
+// ============================================================
+async function sendOrderConfirmationEmail(order, env) {
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from: FROM_ADDRESS,
+      to: [order.email],
+      reply_to: REPLY_TO,
+      subject: 'Ta commande est confirmée — Apprendre les Échecs, Volumes I & II',
+      html: orderConfirmationHtml(order),
+      text: orderConfirmationText(order),
+    }),
+  });
+  return { ok: response.ok, status: response.status };
+}
+
+async function sendOrderAdminNotification(order, env) {
+  const montant = ((Number(order.amount_total) || 0) / 100).toFixed(2).replace('.', ',');
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from: FROM_ADDRESS,
+      to: [ADMIN_EMAIL],
+      reply_to: order.email || REPLY_TO,
+      subject: `🎉 Nouvelle commande — ${montant} € — ${order.name || order.email}`,
+      html: orderAdminHtml(order),
+    }),
+  });
+  return { ok: response.ok, status: response.status };
 }
 
 // Vérifie la signature d'un webhook Stripe (HMAC-SHA256 via Web Crypto)
@@ -253,6 +363,51 @@ async function handleExportCsv(request, env) {
     headers: {
       'Content-Type': 'text/csv; charset=utf-8',
       'Content-Disposition': 'attachment; filename="subscribers.csv"',
+    },
+  });
+}
+
+// ============================================================
+// ENDPOINTS : /orders et /orders/export.csv (GET, admin)
+// ============================================================
+async function fetchAllOrders(env) {
+  const orders = [];
+  let cursor;
+  do {
+    const list = await env.SUBSCRIBERS.list({ prefix: 'order:', cursor });
+    for (const key of list.keys) {
+      const raw = await env.SUBSCRIBERS.get(key.name);
+      if (!raw) continue;
+      try {
+        orders.push(JSON.parse(raw));
+      } catch {
+        console.error('Order JSON invalide:', key.name);
+      }
+    }
+    cursor = list.list_complete ? null : list.cursor;
+  } while (cursor);
+
+  orders.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  return orders;
+}
+
+async function handleListOrders(request, env) {
+  if (!isAdminAuthorized(request, env)) {
+    return jsonResponse({ error: 'Non autorisé' }, 401, env);
+  }
+  const orders = await fetchAllOrders(env);
+  return jsonResponse({ count: orders.length, orders }, 200, env);
+}
+
+async function handleExportOrdersCsv(request, env) {
+  if (!isAdminAuthorized(request, env)) {
+    return new Response('Non autorisé', { status: 401 });
+  }
+  const orders = await fetchAllOrders(env);
+  return new Response(ordersToCsv(orders), {
+    headers: {
+      'Content-Type': 'text/csv; charset=utf-8',
+      'Content-Disposition': 'attachment; filename="commandes.csv"',
     },
   });
 }

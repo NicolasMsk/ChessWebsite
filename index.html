@@ -46,6 +46,7 @@
   <!-- Lien vers la feuille de style externe -->
   <!-- <link rel="preload" href="style.min.css" as="style"> -->
   <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="pack-livres.css">
 
  <!-- Favicons -->
 <link rel="icon" type="image/x-icon" href="https://www.cours-echecs-paris.fr/favicon.ico">
@@ -169,6 +170,38 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Pour annuler ou reporter un cours sans frais, merci de prévenir au moins 24 heures à l'avance. Passé ce délai, le cours est considéré comme dû et n'est pas reporté. Cette règle permet de bloquer les créneaux sereinement pour tous les élèves. Les cas de force majeure (maladie avec certificat, urgence familiale) sont étudiés au cas par cas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Le guide des échecs n'est-il pas gratuit ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Si. Le Volume 1 est téléchargeable gratuitement en PDF sur cours-echecs-paris.fr, et le Volume 2 est offert après un premier cours d'essai. L'édition reliée à la main vendue 64,99 € n'est pas le contenu mais l'objet : deux volumes cousus main par une relieuse professionnelle, sur papier ivoire, numérotés et signés."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce qu'un livre relié à la main ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les cahiers sont cousus à la main un à un par une relieuse professionnelle, et non collés en dos carré comme un livre industriel. Les couvertures sont rigides et habillées de toile. Le livre s'ouvre à plat sans se casser et tient des décennies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps pour recevoir les livres reliés ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Entre 5 et 10 jours ouvrés après la commande, en Colissimo suivi. La livraison est limitée à la France métropolitaine et les frais de port sont compris dans le prix de 64,99 €."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Puis-je être remboursé après l'achat des livres reliés ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. Un droit de rétractation de 14 jours à compter de la réception s'applique. Il suffit d'écrire à nicolas.musicki@gmail.com : l'adresse postale de retour est communiquée sous 48 heures ouvrées, et le remboursement est effectué dès réception du colis en bon état."
         }
       }
     ]
@@ -810,6 +843,181 @@
         </div>
       </section>
 
+      <!-- Pack des 2 volumes reliés à la main (produit payant — distinct du guide gratuit) -->
+      <section class="pack-livres" id="pack-livres" aria-labelledby="pack-title">
+        <div class="pack-wrap">
+
+          <div class="pack-visuals">
+            <div class="pack-hero-media" id="pack-hero-media">
+              <img src="images/reliure/pack-principal.webp"
+                   alt="Les deux volumes reliés à la main d'Apprendre les Échecs, posés sur un échiquier en bois"
+                   width="1080" height="810" loading="lazy" decoding="async">
+              <video muted loop playsinline preload="none"
+                     poster="images/reliure/pack-principal.webp"
+                     aria-label="Vidéo de présentation des deux volumes reliés">
+                <source src="images/reliure/pack-video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="pack-thumbs">
+              <img src="images/reliure/pack-tranche.webp"
+                   alt="Les deux volumes debout, tranche cousue visible"
+                   width="1080" height="810" loading="lazy" decoding="async">
+              <img src="images/reliure/pack-rouge.webp"
+                   alt="Gros plan sur la couverture rouge du Volume I"
+                   width="810" height="1080" loading="lazy" decoding="async">
+              <img src="images/reliure/pack-plongee.webp"
+                   alt="Vue en plongée des deux volumes sur l'échiquier"
+                   width="810" height="1080" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="pack-content">
+            <div class="pack-eyebrow">L'édition reliée à la main</div>
+            <h2 id="pack-title">Apprendre les Échecs<br>Volumes&nbsp;I &amp; II</h2>
+
+            <p class="pack-pitch">
+              Deux volumes cousus main par une relieuse professionnelle, imprimés sur papier ivoire.
+              Chaque exemplaire est numéroté et signé à la main. Ce n'est pas un livre de plus dans
+              une étagère&nbsp;: c'est un objet qu'on offre, et qu'on garde.
+            </p>
+
+            <ul class="pack-features">
+              <li><strong>Reliure cousue main</strong> par une relieuse professionnelle</li>
+              <li><strong>Papier ivoire</strong>, impression couleur, couvertures rigides</li>
+              <li><strong>Exemplaire numéroté et signé</strong> — série limitée à 50</li>
+              <li><strong>Les deux volumes</strong>&nbsp;: les bases, puis le répertoire et les finales</li>
+            </ul>
+
+            <div class="pack-price">
+              <span class="pack-price-amount">64,99&nbsp;€</span>
+              <span class="pack-price-note">Livraison comprise</span>
+            </div>
+
+            <a class="pack-cta" id="pack-cta"
+               href="https://buy.stripe.com/4gM4gB0KjgVQ1pj09idQQ03"
+               rel="noopener">Commander les 2 volumes</a>
+            <div class="pack-cta-reassure">
+              Paiement sécurisé par Stripe &middot; Livraison en France sous 5 à 10 jours ouvrés
+            </div>
+
+            <div class="pack-honesty">
+              <strong>Soyons clairs&nbsp;:</strong> le contenu reste disponible gratuitement en PDF
+              sur ce site. Ici, tu n'achètes pas de l'information — tu achètes un objet fabriqué à la main.
+            </div>
+
+            <div class="pack-service">
+              Une question&nbsp;? <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
+              &nbsp;·&nbsp; <a href="tel:+33609365691">06&nbsp;09&nbsp;36&nbsp;56&nbsp;91</a><br>
+              <a href="cgv.html">Conditions générales de vente</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="pack-faq">
+          <h3>Questions sur l'édition reliée</h3>
+
+          <details>
+            <summary>Le guide n'est pas gratuit&nbsp;?</summary>
+            <div class="pack-faq-answer">
+              <p>Si — et il le reste. Le Volume 1 est téléchargeable gratuitement en PDF sur ce site, et le Volume 2 est offert après un premier cours d'essai.</p>
+              <p>Ce que tu achètes ici, ce n'est pas le contenu&nbsp;: c'est l'objet. Deux livres cousus main, sur papier ivoire, numérotés et signés. Si tu veux seulement apprendre les échecs, prends le PDF, il est fait pour ça.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Qu'est-ce qui est relié à la main exactement&nbsp;?</summary>
+            <div class="pack-faq-answer">
+              <p>Les cahiers sont cousus à la main, un à un, par une relieuse professionnelle — pas collés en dos carré comme un livre industriel. Les couvertures sont rigides, habillées de toile.</p>
+              <p>Conséquence concrète&nbsp;: le livre s'ouvre à plat sans se casser, et il tient des décennies. C'est aussi pour ça que la production est lente.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Les exemplaires sont-ils numérotés&nbsp;?</summary>
+            <div class="pack-faq-answer">
+              <p>Oui. Chaque exemplaire porte un numéro manuscrit sur la page de garde, sous la forme «&nbsp;n°&nbsp;7&nbsp;/&nbsp;50&nbsp;», accompagné de ma signature.</p>
+              <p>La première série est limitée à 50 exemplaires. Au-delà, j'ouvrirai une seconde série, numérotée séparément.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Combien de temps pour le recevoir&nbsp;?</summary>
+            <div class="pack-faq-answer">
+              <p>Entre 5 et 10 jours ouvrés après ta commande. L'envoi se fait en Colissimo suivi, et tu reçois un email de confirmation dès le paiement validé.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Livrez-vous en dehors de la France&nbsp;?</summary>
+            <div class="pack-faq-answer">
+              <p>Pas pour le moment. La livraison est limitée à la France métropolitaine — c'est la seule zone où je peux garantir le délai et l'état du colis à l'arrivée.</p>
+              <p>Si tu es à l'étranger et que ça t'intéresse vraiment, écris-moi à <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>, on trouvera une solution au cas par cas.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Puis-je l'offrir&nbsp;?</summary>
+            <div class="pack-faq-answer">
+              <p>C'est même l'usage principal. Le colis est emballé en papier kraft, sans aucun prix visible sur l'emballage ni dans le paquet.</p>
+              <p>Si tu veux une dédicace au nom de la personne, précise-le par email après ta commande&nbsp;: j'écris à la main, donc c'est faisable tant que le colis n'est pas parti.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Et si je veux seulement le contenu&nbsp;?</summary>
+            <div class="pack-faq-answer">
+              <p>Prends le PDF gratuit, sans hésiter. Le contenu est strictement identique&nbsp;: mêmes chapitres, mêmes exercices, mêmes diagrammes.</p>
+              <p>Le livre relié n'apporte rien de plus sur le plan pédagogique. Il apporte autre chose.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Comment se passe le paiement&nbsp;? Puis-je être remboursé&nbsp;?</summary>
+            <div class="pack-faq-answer">
+              <p>Le paiement se fait par carte bancaire sur une page sécurisée Stripe. Je n'ai jamais accès à tes coordonnées bancaires.</p>
+              <p>Tu disposes d'un <strong>droit de rétractation de 14 jours</strong> à compter de la réception. Pour l'exercer, écris à <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>&nbsp;: je te communique l'adresse postale de retour sous 48&nbsp;heures ouvrées, et je te rembourse dès réception du colis en bon état.</p>
+              <p>Le détail figure dans les <a href="cgv.html">conditions générales de vente</a>.</p>
+            </div>
+          </details>
+
+          <div class="pack-service" style="text-align:center; margin-top:26px;">
+            Une autre question&nbsp;? <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
+            &nbsp;·&nbsp; <a href="tel:+33609365691">06&nbsp;09&nbsp;36&nbsp;56&nbsp;91</a>
+          </div>
+        </div>
+
+        <script>
+          (function () {
+            // Vidéo chargée seulement à l'approche du viewport : évite d'imposer
+            // 2,7 Mo à qui ne descend jamais jusqu'à cette section.
+            var media = document.getElementById('pack-hero-media');
+            var video = media ? media.querySelector('video') : null;
+            var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            if (media && video && !reduit && 'IntersectionObserver' in window) {
+              var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                  if (!entry.isIntersecting) return;
+                  observer.disconnect();
+                  video.preload = 'auto';
+                  video.load();
+                  var p = video.play();
+                  if (p && p.then) {
+                    p.then(function () {
+                      media.classList.add('is-video-ready');
+                    }, function () {
+                      /* autoplay refusé par le navigateur : on garde l'image fixe */
+                    });
+                  }
+                });
+              }, { rootMargin: '300px' });
+              observer.observe(media);
+            }
+          })();
+        </script>
+      </section>
+
       <!-- Avantages des échecs -->
       <section class="advantages" id="advantages">
         <h2>Pourquoi suivre des cours d'échecs ?</h2>
@@ -1139,6 +1347,7 @@
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="cgv.html">CGV</a></li>
           </ul>
         </div>
         <div class="footer-links">
@@ -1160,7 +1369,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Nicolas Musicki - Professeur d'échecs à Paris et dans les Yvelines. Tous droits réservés. — <a href="mentions-legales.html" style="color:inherit;text-decoration:underline;">Mentions légales</a> — <a href="#" onclick="chessCookiesReset(); return false;" style="color:inherit;text-decoration:underline;">Gérer mes cookies</a></p>
+        <p>© 2026 Nicolas Musicki - Professeur d'échecs à Paris et dans les Yvelines. Tous droits réservés. — <a href="mentions-legales.html" style="color:inherit;text-decoration:underline;">Mentions légales</a> — <a href="cgv.html" style="color:inherit;text-decoration:underline;">CGV</a> — <a href="#" onclick="chessCookiesReset(); return false;" style="color:inherit;text-decoration:underline;">Gérer mes cookies</a></p>
       </div>
     </div>
   </footer>
