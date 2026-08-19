@@ -509,7 +509,12 @@
       <div class="logo">
         <i class="fa-solid fa-chess-knight"></i> Nicolas Musicki
       </div>
-      <ul class="nav-menu">
+      <div class="menu-toggle" id="mobile-menu" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
         <li><a href="/" class="nav-link">Accueil</a></li>
         <li><a href="/#about" class="nav-link">À propos</a></li>
         <li><a href="/blog/" class="nav-link">Blog</a></li>
@@ -883,7 +888,7 @@
       <div class="plb-strip" id="plb-strip"></div>
     </div>
 
-    <script src="pack-livres.js?v=2" defer></script>
+    <script src="pack-livres.js?v=3" defer></script>
   </section>
 
   <!-- AUTEUR -->
@@ -1012,5 +1017,6 @@
       });
     })();
   </script>
+  <script src="nav-mobile.js?v=1" defer></script>
 </body>
 </html>

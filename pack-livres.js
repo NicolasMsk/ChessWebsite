@@ -146,18 +146,29 @@
   var video = media ? media.querySelector('video') : null;
   var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (media && video && !reduit && 'IntersectionObserver' in window) {
+  // Économie de données : sur connexion lente ou en mode « économiseur »,
+  // on n'impose pas 2,7 Mo de vidéo. La photo fixe suffit.
+  var co = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  var connexionMenagee = !!(co && (co.saveData || /^([23]g|slow-2g)$/.test(co.effectiveType || '')));
+
+  if (media && video && !reduit && !connexionMenagee && 'IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         observer.disconnect();
+
+        // On ne bascule QUE sur l'événement `playing` : il garantit qu'une
+        // première image est rendue. La promesse de play() se résout avant,
+        // ce qui laissait apparaître un rectangle vide le temps du décodage.
+        video.addEventListener('playing', function () {
+          media.classList.add('is-video-ready');
+        }, { once: true });
+
         video.preload = 'auto';
         video.load();
         var p = video.play();
-        if (p && p.then) {
-          p.then(function () {
-            media.classList.add('is-video-ready');
-          }, function () {
+        if (p && p.catch) {
+          p.catch(function () {
             /* autoplay refusé par le navigateur : on garde l'image fixe */
           });
         }
