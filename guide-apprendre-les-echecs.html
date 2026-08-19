@@ -52,6 +52,7 @@
 
   <!-- Feuille de style principale -->
   <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="pack-livres.css?v=2">
 
   <!-- Structured data : Book + FAQPage + BreadcrumbList + Person -->
   <script type="application/ld+json">
@@ -124,7 +125,7 @@
             "name": "Pour quel niveau est conçu ce guide des échecs ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Le guide part de zéro. Si tu ne connais pas encore les règles, il est pour toi. Si tu connais vaguement les règles mais tu perds toujours en 10 coups, il est pour toi. Pour les joueurs déjà confirmés, le Volume 2 (à paraître) sera plus adapté pour continuer à progresser."
+              "text": "Le guide part de zéro. Si tu ne connais pas encore les règles, il est pour toi. Si tu connais vaguement les règles mais tu perds toujours en 10 coups, il est pour toi. Pour les joueurs déjà confirmés, le Volume 2 sera plus adapté pour continuer à progresser : il est offert après un premier cours d'essai."
             }
           },
           {
@@ -140,7 +141,7 @@
             "name": "Vais-je recevoir du spam après avoir téléchargé le guide ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Non. Tu recevras le guide immédiatement, puis 2-3 emails pédagogiques sur 2 semaines (astuces pour débuter, comment utiliser le guide). Après, plus rien sauf si je publie un Volume 2. Désinscription en un clic possible à tout moment."
+              "text": "Non. Tu recevras le guide immédiatement, puis 2-3 emails pédagogiques sur 2 semaines (astuces pour débuter, comment utiliser le guide). Après, plus rien. Désinscription en un clic possible à tout moment."
             }
           },
           {
@@ -149,6 +150,30 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Ton email est stocké de manière sécurisée sur une base de données personnelle hébergée sur Cloudflare, et l'envoi du guide passe par Resend (service conforme RGPD). Jamais revendu, jamais partagé."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Existe-t-il une version papier du guide des échecs ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui : une édition reliée à la main des Volumes I et II, cousue main par une relieuse professionnelle, imprimée sur papier ivoire, avec couvertures rigides. Chaque exemplaire est numéroté et signé à la main, en série limitée à 50. Elle coûte 64,99 € livraison comprise. Le contenu est identique au PDF, qui reste gratuit : l'achat porte sur l'objet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de temps pour recevoir les livres reliés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Entre 5 et 10 jours ouvrés après la commande, en Colissimo suivi. La livraison est limitée à la France métropolitaine et les frais de port sont compris dans le prix de 64,99 €."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Puis-je être remboursé après l'achat des livres reliés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. Un droit de rétractation de 14 jours à compter de la réception s'applique. Il suffit d'écrire à nicolas.musicki@gmail.com : l'adresse postale de retour est communiquée sous 48 heures ouvrées, et le remboursement est effectué dès réception du colis en bon état."
             }
           }
         ]
@@ -697,6 +722,170 @@
     </div>
   </section>
 
+  <!-- Pack des 2 volumes reliés à la main (produit payant — distinct du guide gratuit) -->
+  <section class="pack-livres" id="pack-livres" aria-labelledby="pack-title">
+    <div class="pack-wrap">
+
+      <div class="pack-visuals">
+        <div class="pack-hero-media pack-open-lb" id="pack-hero-media"
+             role="button" tabindex="0" data-index="0"
+             aria-label="Agrandir les photos de l'édition reliée">
+          <img src="images/reliure/pack-principal.webp"
+               alt="Les deux volumes reliés à la main d'Apprendre les Échecs, posés sur un échiquier en bois"
+               width="1080" height="810" loading="lazy" decoding="async">
+          <video muted loop playsinline preload="none"
+                 poster="images/reliure/pack-principal.webp"
+                 aria-label="Vidéo de présentation des deux volumes reliés">
+            <source src="images/reliure/pack-video.mp4" type="video/mp4">
+          </video>
+          <span class="pack-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir</span>
+        </div>
+        <div class="pack-thumbs">
+          <button type="button" class="pack-open-lb" data-index="1" aria-label="Agrandir : les deux volumes debout, tranche cousue visible">
+            <img src="images/reliure/pack-tranche.webp"
+                 alt="Les deux volumes debout, tranche cousue visible"
+                 width="1080" height="810" loading="lazy" decoding="async">
+          </button>
+          <button type="button" class="pack-open-lb" data-index="2" aria-label="Agrandir : gros plan sur la couverture rouge du Volume I">
+            <img src="images/reliure/pack-rouge.webp"
+                 alt="Gros plan sur la couverture rouge du Volume I"
+                 width="810" height="1080" loading="lazy" decoding="async">
+          </button>
+          <button type="button" class="pack-open-lb" data-index="3" aria-label="Agrandir : vue en plongée des deux volumes sur l'échiquier">
+            <img src="images/reliure/pack-plongee.webp"
+                 alt="Vue en plongée des deux volumes sur l'échiquier"
+                 width="810" height="1080" loading="lazy" decoding="async">
+          </button>
+        </div>
+      </div>
+
+      <div class="pack-content">
+        <div class="pack-eyebrow">L'édition reliée à la main</div>
+        <h2 id="pack-title">Apprendre les Échecs<br>Volumes&nbsp;I &amp; II</h2>
+
+        <p class="pack-pitch">
+          Tu viens de télécharger le guide en PDF — et il reste gratuit, pour toujours.
+          Mais si tu veux l'objet&nbsp;: deux volumes cousus main par une relieuse
+          professionnelle, sur papier ivoire, numérotés et signés. C'est ce qu'on offre,
+          et ce qu'on garde.
+        </p>
+
+        <ul class="pack-features">
+          <li><strong>Reliure cousue main</strong> par une relieuse professionnelle</li>
+          <li><strong>Papier ivoire</strong>, impression couleur, couvertures rigides</li>
+          <li><strong>Exemplaire numéroté et signé</strong> — série limitée à 50</li>
+          <li><strong>Les deux volumes</strong>&nbsp;: les bases, puis le répertoire et les finales</li>
+        </ul>
+
+        <div class="pack-price">
+          <span class="pack-price-amount">64,99&nbsp;€</span>
+          <span class="pack-price-note">Livraison comprise</span>
+        </div>
+
+        <a class="pack-cta" id="pack-cta"
+           href="https://buy.stripe.com/4gM4gB0KjgVQ1pj09idQQ03"
+           rel="noopener">Commander les 2 volumes</a>
+        <div class="pack-cta-reassure">
+          Paiement sécurisé par Stripe &middot; Livraison en France sous 5 à 10 jours ouvrés
+        </div>
+
+        <div class="pack-honesty">
+          <strong>Soyons clairs&nbsp;:</strong> le contenu est identique à celui du PDF que tu
+          reçois gratuitement. Ici, tu n'achètes pas de l'information — tu achètes un objet
+          fabriqué à la main.
+        </div>
+
+        <div class="pack-service">
+          Une question&nbsp;? <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
+          &nbsp;·&nbsp; <a href="tel:+33609365691">06&nbsp;09&nbsp;36&nbsp;56&nbsp;91</a><br>
+          <a href="cgv.html">Conditions générales de vente</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pack-faq">
+      <h3>Questions sur l'édition reliée</h3>
+
+      <details>
+        <summary>Pourquoi payer ce qui est gratuit&nbsp;?</summary>
+        <div class="pack-faq-answer">
+          <p>Tu ne paies pas le contenu — il est identique, et il reste gratuit en PDF.</p>
+          <p>Tu paies un objet&nbsp;: des cahiers cousus main un à un, du papier ivoire, une couverture rigide toilée, un numéro et une signature manuscrits. Si tu veux juste apprendre les échecs, garde le PDF, il est fait pour ça.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Qu'est-ce qui est relié à la main exactement&nbsp;?</summary>
+        <div class="pack-faq-answer">
+          <p>Les cahiers sont cousus à la main, un à un, par une relieuse professionnelle — pas collés en dos carré comme un livre industriel. Les couvertures sont rigides, habillées de toile.</p>
+          <p>Conséquence concrète&nbsp;: le livre s'ouvre à plat sans se casser, et il tient des décennies. C'est aussi pour ça que la production est lente.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Les exemplaires sont-ils numérotés&nbsp;?</summary>
+        <div class="pack-faq-answer">
+          <p>Oui. Chaque exemplaire porte un numéro manuscrit sur la page de garde, sous la forme «&nbsp;n°&nbsp;7&nbsp;/&nbsp;50&nbsp;», accompagné de ma signature.</p>
+          <p>La première série est limitée à 50 exemplaires. Au-delà, j'ouvrirai une seconde série, numérotée séparément.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Combien de temps pour le recevoir&nbsp;?</summary>
+        <div class="pack-faq-answer">
+          <p>Entre 5 et 10 jours ouvrés après ta commande, en Colissimo suivi. Tu reçois un email de confirmation dès le paiement validé.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Livrez-vous en dehors de la France&nbsp;?</summary>
+        <div class="pack-faq-answer">
+          <p>Pas pour le moment. La livraison est limitée à la France métropolitaine — c'est la seule zone où je peux garantir le délai et l'état du colis à l'arrivée.</p>
+          <p>Si tu es à l'étranger et que ça t'intéresse vraiment, écris-moi à <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>, on trouvera une solution au cas par cas.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Puis-je l'offrir&nbsp;?</summary>
+        <div class="pack-faq-answer">
+          <p>C'est même l'usage principal. Le colis est emballé en papier kraft, sans aucun prix visible sur l'emballage ni dans le paquet.</p>
+          <p>Si tu veux une dédicace au nom de la personne, précise-le par email après ta commande&nbsp;: j'écris à la main, donc c'est faisable tant que le colis n'est pas parti.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Comment se passe le paiement&nbsp;? Puis-je être remboursé&nbsp;?</summary>
+        <div class="pack-faq-answer">
+          <p>Le paiement se fait par carte bancaire sur une page sécurisée Stripe. Je n'ai jamais accès à tes coordonnées bancaires.</p>
+          <p>Tu disposes d'un <strong>droit de rétractation de 14 jours</strong> à compter de la réception. Pour l'exercer, écris à <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>&nbsp;: je te communique l'adresse postale de retour sous 48&nbsp;heures ouvrées, et je te rembourse dès réception du colis en bon état.</p>
+          <p>Le détail figure dans les <a href="cgv.html">conditions générales de vente</a>.</p>
+        </div>
+      </details>
+
+      <div class="pack-service" style="text-align:center; margin-top:26px;">
+        Une autre question&nbsp;? <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
+        &nbsp;·&nbsp; <a href="tel:+33609365691">06&nbsp;09&nbsp;36&nbsp;56&nbsp;91</a>
+      </div>
+    </div>
+
+    <!-- Visionneuse plein écran des photos du pack -->
+    <div class="plb" id="pack-lightbox" role="dialog" aria-modal="true"
+         aria-label="Photos de l'édition reliée" hidden>
+      <button type="button" class="plb-close" id="plb-close" aria-label="Fermer">&times;</button>
+      <button type="button" class="plb-nav plb-prev" id="plb-prev" aria-label="Photo précédente">&#8249;</button>
+      <button type="button" class="plb-nav plb-next" id="plb-next" aria-label="Photo suivante">&#8250;</button>
+      <div class="plb-stage" id="plb-stage">
+        <img id="plb-img" src="" alt="">
+      </div>
+      <div class="plb-caption" id="plb-caption"></div>
+      <div class="plb-counter" id="plb-counter"></div>
+      <div class="plb-strip" id="plb-strip"></div>
+    </div>
+
+    <script src="pack-livres.js?v=2" defer></script>
+  </section>
+
   <!-- AUTEUR -->
   <section class="ebook-author">
     <h3>Nicolas Musicki</h3>
@@ -717,7 +906,7 @@
 
     <div class="faq-item">
       <div class="faq-q">Pour quel niveau est conçu ce guide ?</div>
-      <div class="faq-a">Le guide part de zéro. Si tu ne connais pas encore les règles, il est pour toi. Si tu connais vaguement les règles mais tu perds toujours en 10 coups, il est pour toi. Pour les joueurs déjà confirmés, le Volume 2 (à paraître) sera plus adapté.</div>
+      <div class="faq-a">Le guide part de zéro. Si tu ne connais pas encore les règles, il est pour toi. Si tu connais vaguement les règles mais tu perds toujours en 10 coups, il est pour toi. Pour les joueurs déjà confirmés, le Volume 2 sera plus adapté — il est offert après un premier cours d'essai.</div>
     </div>
 
     <div class="faq-item">
@@ -727,7 +916,7 @@
 
     <div class="faq-item">
       <div class="faq-q">Je vais recevoir du spam après ?</div>
-      <div class="faq-a">Non. Tu recevras le guide immédiatement, puis 2-3 emails pédagogiques sur 2 semaines (astuces pour débuter, comment utiliser le guide). Après, plus rien sauf si je publie un Volume 2. Désinscription en un clic possible à tout moment.</div>
+      <div class="faq-a">Non. Tu recevras le guide immédiatement, puis 2-3 emails pédagogiques sur 2 semaines (astuces pour débuter, comment utiliser le guide). Après, plus rien. Désinscription en un clic possible à tout moment.</div>
     </div>
 
     <div class="faq-item">
@@ -753,6 +942,7 @@
             <li><a href="/#tarifs">Tarifs</a></li>
             <li><a href="/#contact">Contact</a></li>
             <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="cgv.html">CGV</a></li>
           </ul>
         </div>
         <div class="footer-social">

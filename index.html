@@ -46,7 +46,7 @@
   <!-- Lien vers la feuille de style externe -->
   <!-- <link rel="preload" href="style.min.css" as="style"> -->
   <link rel="stylesheet" href="style.min.css">
-  <link rel="stylesheet" href="pack-livres.css">
+  <link rel="stylesheet" href="pack-livres.css?v=2">
 
  <!-- Favicons -->
 <link rel="icon" type="image/x-icon" href="https://www.cours-echecs-paris.fr/favicon.ico">
@@ -848,7 +848,9 @@
         <div class="pack-wrap">
 
           <div class="pack-visuals">
-            <div class="pack-hero-media" id="pack-hero-media">
+            <div class="pack-hero-media pack-open-lb" id="pack-hero-media"
+                 role="button" tabindex="0" data-index="0"
+                 aria-label="Agrandir les photos de l'édition reliée">
               <img src="images/reliure/pack-principal.webp"
                    alt="Les deux volumes reliés à la main d'Apprendre les Échecs, posés sur un échiquier en bois"
                    width="1080" height="810" loading="lazy" decoding="async">
@@ -857,17 +859,24 @@
                      aria-label="Vidéo de présentation des deux volumes reliés">
                 <source src="images/reliure/pack-video.mp4" type="video/mp4">
               </video>
+              <span class="pack-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir</span>
             </div>
             <div class="pack-thumbs">
-              <img src="images/reliure/pack-tranche.webp"
-                   alt="Les deux volumes debout, tranche cousue visible"
-                   width="1080" height="810" loading="lazy" decoding="async">
-              <img src="images/reliure/pack-rouge.webp"
-                   alt="Gros plan sur la couverture rouge du Volume I"
-                   width="810" height="1080" loading="lazy" decoding="async">
-              <img src="images/reliure/pack-plongee.webp"
-                   alt="Vue en plongée des deux volumes sur l'échiquier"
-                   width="810" height="1080" loading="lazy" decoding="async">
+              <button type="button" class="pack-open-lb" data-index="1" aria-label="Agrandir : les deux volumes debout, tranche cousue visible">
+                <img src="images/reliure/pack-tranche.webp"
+                     alt="Les deux volumes debout, tranche cousue visible"
+                     width="1080" height="810" loading="lazy" decoding="async">
+              </button>
+              <button type="button" class="pack-open-lb" data-index="2" aria-label="Agrandir : gros plan sur la couverture rouge du Volume I">
+                <img src="images/reliure/pack-rouge.webp"
+                     alt="Gros plan sur la couverture rouge du Volume I"
+                     width="810" height="1080" loading="lazy" decoding="async">
+              </button>
+              <button type="button" class="pack-open-lb" data-index="3" aria-label="Agrandir : vue en plongée des deux volumes sur l'échiquier">
+                <img src="images/reliure/pack-plongee.webp"
+                     alt="Vue en plongée des deux volumes sur l'échiquier"
+                     width="810" height="1080" loading="lazy" decoding="async">
+              </button>
             </div>
           </div>
 
@@ -987,35 +996,21 @@
           </div>
         </div>
 
-        <script>
-          (function () {
-            // Vidéo chargée seulement à l'approche du viewport : évite d'imposer
-            // 2,7 Mo à qui ne descend jamais jusqu'à cette section.
-            var media = document.getElementById('pack-hero-media');
-            var video = media ? media.querySelector('video') : null;
-            var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        <!-- Visionneuse plein écran des photos du pack -->
+        <div class="plb" id="pack-lightbox" role="dialog" aria-modal="true"
+             aria-label="Photos de l'édition reliée" hidden>
+          <button type="button" class="plb-close" id="plb-close" aria-label="Fermer">&times;</button>
+          <button type="button" class="plb-nav plb-prev" id="plb-prev" aria-label="Photo précédente">&#8249;</button>
+          <button type="button" class="plb-nav plb-next" id="plb-next" aria-label="Photo suivante">&#8250;</button>
+          <div class="plb-stage" id="plb-stage">
+            <img id="plb-img" src="" alt="">
+          </div>
+          <div class="plb-caption" id="plb-caption"></div>
+          <div class="plb-counter" id="plb-counter"></div>
+          <div class="plb-strip" id="plb-strip"></div>
+        </div>
 
-            if (media && video && !reduit && 'IntersectionObserver' in window) {
-              var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                  if (!entry.isIntersecting) return;
-                  observer.disconnect();
-                  video.preload = 'auto';
-                  video.load();
-                  var p = video.play();
-                  if (p && p.then) {
-                    p.then(function () {
-                      media.classList.add('is-video-ready');
-                    }, function () {
-                      /* autoplay refusé par le navigateur : on garde l'image fixe */
-                    });
-                  }
-                });
-              }, { rootMargin: '300px' });
-              observer.observe(media);
-            }
-          })();
-        </script>
+        <script src="pack-livres.js?v=2" defer></script>
       </section>
 
       <!-- Avantages des échecs -->

@@ -63,13 +63,236 @@
   margin-top: 12px;
 }
 
+.pack-thumbs button {
+  display: block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 0;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 4px 14px rgba(59, 35, 20, 0.16);
+}
+
+.pack-thumbs button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(59, 35, 20, 0.28);
+}
+
+.pack-thumbs button:focus-visible {
+  outline: 3px solid var(--accent, #c9a84c);
+  outline-offset: 2px;
+}
+
 .pack-thumbs img {
   display: block;
   width: 100%;
   height: 110px;
   object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 4px 14px rgba(59, 35, 20, 0.16);
+}
+
+/* Pastille « agrandir » sur le visuel principal */
+
+.pack-hero-media {
+  cursor: zoom-in;
+}
+
+.pack-zoom-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  background: rgba(20, 12, 6, 0.72);
+  color: #f0d9b5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.6px;
+  border-radius: 40px;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s ease;
+}
+
+.pack-hero-media:hover .pack-zoom-hint {
+  background: rgba(20, 12, 6, 0.9);
+}
+
+/* ---------- Visionneuse plein écran ---------- */
+
+.plb {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  background: rgba(14, 9, 4, 0.96);
+}
+
+.plb.is-open {
+  display: flex;
+}
+
+.plb-stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 56px 14px 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.plb-stage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 3px;
+  cursor: zoom-in;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Zoom : l'image dépasse le cadre, le défilement natif fait le déplacement.
+   Sur mobile, le pincer-pour-zoomer du navigateur reste disponible en plus. */
+.plb-stage.is-zoomed {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.plb-stage.is-zoomed img {
+  max-width: none;
+  max-height: none;
+  width: 190%;
+  cursor: zoom-out;
+}
+
+.plb-close,
+.plb-nav {
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f5efe6;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s ease;
+}
+
+.plb-close:hover,
+.plb-nav:hover {
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.plb-close:focus-visible,
+.plb-nav:focus-visible {
+  outline: 3px solid var(--accent, #c9a84c);
+  outline-offset: 2px;
+}
+
+.plb-close {
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.plb-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  font-size: 1.6rem;
+}
+
+.plb-prev { left: 14px; }
+.plb-next { right: 14px; }
+
+.plb-caption {
+  flex: none;
+  padding: 10px 16px 6px;
+  text-align: center;
+  font-family: Lora, Georgia, serif;
+  font-size: 0.9rem;
+  color: #e6dcc9;
+}
+
+.plb-counter {
+  flex: none;
+  padding: 0 16px 10px;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  color: #b39b6e;
+}
+
+.plb-strip {
+  flex: none;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 14px 20px;
+}
+
+.plb-strip button {
+  padding: 0;
+  border: 2px solid transparent;
+  background: none;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+  line-height: 0;
+  opacity: 0.5;
+  transition: opacity 0.18s ease, border-color 0.18s ease;
+}
+
+.plb-strip button:hover { opacity: 0.85; }
+
+.plb-strip button[aria-current="true"] {
+  opacity: 1;
+  border-color: var(--accent, #c9a84c);
+}
+
+.plb-strip button:focus-visible {
+  outline: 2px solid var(--accent, #c9a84c);
+  outline-offset: 2px;
+}
+
+.plb-strip img {
+  display: block;
+  width: 62px;
+  height: 46px;
+  object-fit: cover;
+}
+
+@media (max-width: 620px) {
+  .plb-nav {
+    width: 42px;
+    height: 42px;
+    font-size: 1.3rem;
+  }
+
+  .plb-prev { left: 6px; }
+  .plb-next { right: 6px; }
+
+  .plb-stage { padding: 52px 6px 6px; }
+  .plb-strip img { width: 48px; height: 36px; }
+  .plb-caption { font-size: 0.82rem; }
+}
+
+/* La page ne défile plus derrière la visionneuse ouverte */
+body.plb-lock {
+  overflow: hidden;
 }
 
 /* ---------- Colonne contenu ---------- */
