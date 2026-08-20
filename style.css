@@ -425,6 +425,12 @@ body:not(.has-promo) .navbar {
   border: none;
 }
 
+.navbar a.logo {
+  color: var(--black);
+  text-decoration: none;
+  border: none;
+}
+
 .logo i {
   color: var(--black);
   font-size: 1em;
@@ -1000,6 +1006,120 @@ header .btn:hover {
 .location-map {
   flex: 1;
   min-width: 100%;
+}
+
+.section-kicker {
+  margin-bottom: 0.5rem !important;
+  color: var(--accent-dark) !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.76rem !important;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.75rem;
+}
+
+.location-map-note {
+  margin-top: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+/* ======================== */
+/* 11b. VISIO HIGHLIGHT     */
+/* ======================== */
+.visio-highlight {
+  margin: 1rem 0 5rem;
+  padding: clamp(2rem, 5vw, 4rem);
+  background: var(--walnut);
+  color: var(--white);
+}
+
+.visio-highlight-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(240px, 0.7fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.visio-highlight .section-kicker {
+  color: var(--accent) !important;
+}
+
+.visio-highlight h2 {
+  color: var(--white);
+  margin-bottom: 1.25rem;
+}
+
+.visio-highlight-copy > p:not(.section-kicker) {
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.8;
+}
+
+.visio-highlight-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.visio-highlight-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.visio-highlight-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+}
+
+.visio-highlight-offer {
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  text-align: center;
+}
+
+.visio-highlight-label,
+.visio-highlight-offer > span {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.visio-highlight-offer > strong {
+  display: block;
+  margin: 0.4rem 0 0;
+  color: var(--accent);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1;
+}
+
+.visio-highlight-offer p {
+  margin: 1.2rem 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .visio-highlight-inner,
+  .visio-highlight-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .map-image {

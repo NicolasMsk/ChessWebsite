@@ -2,6 +2,59 @@
 
 Ce document sert à mesurer les effets des changements SEO dans Search Console et GA4. Les comparaisons doivent porter sur des fenêtres de durée identique et tenir compte de la saisonnalité.
 
+## Lot 3 — offre visio France et international — 20 août 2026
+
+### Point de départ
+
+- L'offre à distance était dispersée entre l'accueil, les tarifs et un article comparatif, sans page commerciale dédiée.
+- L'article comparatif contenait deux informations devenues inexactes : même tarif pour les deux formats et essai gratuit limité à 30 minutes.
+- Aucun point de mesure historique propre à une URL visio n'existe avant la publication de cette nouvelle page.
+
+### Modifications
+
+- Création de `/cours-echecs-en-visio.html`, ciblée sur les intentions `cours d'échecs en visio`, `cours d'échecs en ligne` et `professeur d'échecs à distance`.
+- Positionnement clair : 40 € par heure, premier cours offert, enfants et adultes, partout en France et dans le monde sous réserve d'un créneau compatible avec le fuseau horaire.
+- Ajout de données structurées `Service`, `FAQPage` et `BreadcrumbList`, ainsi que d'un canonical et de métadonnées sociales dédiées.
+- Mise en avant de la visio dans le menu, le premier écran, les avantages, les tarifs et une nouvelle section de l'accueil.
+- Ajout de liens internes depuis le blog et les pages locales. La rubrique Zones distingue désormais le déplacement à domicile de l'offre à distance sans limite géographique.
+- Correction de l'article comparatif : 50 €/h à domicile, 40 €/h en visio et premier cours d'une heure offert.
+- Ajout de la page au sitemap principal et à `llms.txt`.
+
+### Mesure prévue
+
+- À 28 jours : contrôler l'indexation, les impressions et les positions de `/cours-echecs-en-visio.html` sur les requêtes liées aux cours en ligne et en visio.
+- Dans GA4 : comparer les sessions de cette page, les clics vers le formulaire et l'événement `generate_lead` avec les autres pages commerciales.
+- À 56 jours : comparer le taux de conversion organique de l'offre visio et ajuster le title ou la meta description uniquement si les impressions sont suffisantes et le CTR faible.
+
+## Lot 2 — SEO local — 20 août 2026
+
+### Point de départ
+
+- Ancienne page `/blog/cours-echecs-autour-versailles-yvelines.html` : 2 clics, 39 impressions, CTR 5,13 % et position moyenne 7,31 sur la période du 20 mai au 19 août 2026.
+- Cette page a généré 3 sessions GA4, dont 1 session engagée, sans événement clé.
+- L'ancienne page `/blog/cours-echecs-versailles.html` a généré 1 session GA4 sur la même période et n'apparaissait pas dans les pages principales du rapport GSC exporté.
+- Signal local incohérent avant modification : adresse structurée à Paris, texte évoquant successivement moins de 5 km, un rayon de 10 km et la quasi-totalité des Yvelines.
+
+### Modifications
+
+- Création de la rubrique commerciale `/zones/`, désormais accessible depuis le menu principal et les menus des articles.
+- Déplacement de la page Versailles vers `/zones/cours-echecs-versailles.html`.
+- Déplacement et élargissement de la page des alentours vers `/zones/cours-echecs-paris-versailles-alentours.html`.
+- Conservation des deux anciennes URL du blog avec redirection HTML immédiate et canonical vers leur nouvelle adresse.
+- Remplacement des rayons kilométriques par la règle métier réelle : déplacement possible lorsque le trajet jusqu'au domicile reste inférieur ou égal à environ une heure, selon l'adresse, l'horaire et les transports.
+- Ajout d'une section locale détaillée sur l'accueil et d'un lien vers la rubrique Zones.
+- Harmonisation des données structurées : activité située à Versailles et zones desservies couvrant Paris, Versailles et les communes principales.
+- Ajout de Matéo comme preuve locale factuelle : élève suivi à Versailles depuis un an et très satisfait des cours. Aucune citation ne lui a été attribuée.
+- Suppression de plusieurs affirmations locales non vérifiées dans les anciennes descriptions de communes.
+- Remplacement des visuels locaux au rendu artificiel par la photographie réelle de Nicolas sur la page Versailles et par la carte Paris–Versailles déjà utilisée sur le site.
+- Mise à jour du sitemap principal, du sitemap éditorial, de `llms.txt` et des liens internes.
+
+### Mesure prévue
+
+- À 28 jours : vérifier l'indexation des trois URL `/zones/`, le transfert des anciennes URL et les impressions sur `cours échecs Versailles`, `professeur échecs Versailles`, `cours échecs Le Chesnay`, `cours échecs Viroflay` et `cours échecs Vélizy`.
+- À 56 jours : comparer les clics organiques et les demandes de contact issues des pages locales avec la période précédente.
+- Lors de l'ajout des avis Google au site : conserver uniquement les avis authentiques, leur formulation exacte et l'accord des personnes citées.
+
 ## Lot 1 — 20 août 2026
 
 ### Période de référence
