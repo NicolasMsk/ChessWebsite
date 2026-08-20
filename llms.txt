@@ -22,6 +22,7 @@
 - [De zéro à 500 Elo](https://www.cours-echecs-paris.fr/blog/debuter-echecs-guide-complet-0-500-elo.html): Plan structuré sur 2-4 mois avec routine quotidienne de 30 minutes.
 - [10 erreurs du débutant](https://www.cours-echecs-paris.fr/blog/10-erreurs-debutant-echecs.html): Les pièges classiques à éviter pour progresser plus vite.
 - [Combien de temps pour devenir bon aux échecs ?](https://www.cours-echecs-paris.fr/blog/combien-temps-devenir-bon-echecs.html): Estimation réaliste selon le niveau visé.
+- [Comment jouer aux échecs en ligne](https://www.cours-echecs-paris.fr/blog/comment-jouer-echecs-en-ligne.html): Guide pas à pas et comparatif honnête de Chess.com et Lichess pour débuter.
 - [Les 5 meilleures ouvertures pour débutants](https://www.cours-echecs-paris.fr/blog/meilleures-ouvertures-echecs-debutants.html): L'Italienne, le Londres, la Caro-Kann et la Slave expliquées coup par coup.
 - [Combien coûte un cours d'échecs ?](https://www.cours-echecs-paris.fr/blog/combien-coute-cours-echecs.html): Les vrais tarifs 2026 — cours particuliers, clubs, en ligne — et comment choisir.
 

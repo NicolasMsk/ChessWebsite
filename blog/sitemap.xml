@@ -9,9 +9,22 @@
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Article Comment Jouer aux Échecs en Ligne -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/comment-jouer-echecs-en-ligne.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.cours-echecs-paris.fr/blog/images/comment-jouer-echecs-en-ligne.webp</image:loc>
+      <image:title>Comment jouer aux échecs en ligne</image:title>
+      <image:caption>Guide pour débuter sur Chess.com et Lichess</image:caption>
+    </image:image>
   </url>
   
   <!-- Article Top 5 Échiquiers Pliables -->

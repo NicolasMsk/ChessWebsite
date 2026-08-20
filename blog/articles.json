@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "comment-jouer-echecs-en-ligne",
+      "title": "Comment Jouer aux Échecs en Ligne ? Guide Chess.com et Lichess",
+      "description": "Première partie, cadence, adversaire, analyse : le guide simple pour jouer aux échecs en ligne et choisir entre Chess.com et Lichess.",
+      "date": "2026-08-20",
+      "readTime": "13 min",
+      "author": "Nicolas Musicki",
+      "image": "images/comment-jouer-echecs-en-ligne.webp",
+      "imageAlt": "Joueur lançant une partie d'échecs en ligne sur un ordinateur portable, avec un échiquier en bois à côté"
+    },
+    {
       "id": "alireza-firouzja-numero-1-francais",
       "title": "Alireza Firouzja : le Numéro 1 Français en Pleine Forme (2026)",
       "description": "Plus jeune 2800 de l'histoire, vainqueur à Chennai et en Croatie en 2026, de retour dans le top 10 : portrait d'Alireza Firouzja, numéro 1 français.",
