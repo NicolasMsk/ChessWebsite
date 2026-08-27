@@ -9,13 +9,15 @@
   var section = document.getElementById('pack-livres');
   if (!section) return;
 
+  var assetRoot = section.getAttribute('data-asset-root') || '';
+
   // ---------- Visionneuse ----------
 
   var PHOTOS = [
-    { src: 'images/reliure/pack-principal.webp', legende: 'Les deux volumes reliés à la main, sur un échiquier en bois' },
-    { src: 'images/reliure/pack-tranche.webp',   legende: 'Debout : la tranche cousue main est visible' },
-    { src: 'images/reliure/pack-rouge.webp',     legende: 'Le Volume I, couverture rouge, grain du papier ivoire' },
-    { src: 'images/reliure/pack-plongee.webp',   legende: 'Vue en plongée des deux volumes' }
+    { src: assetRoot + 'images/reliure/pack-principal.webp', legende: 'Les deux volumes reliés à la main, sur un échiquier en bois' },
+    { src: assetRoot + 'images/reliure/pack-tranche.webp',   legende: 'Debout : la tranche cousue main est visible' },
+    { src: assetRoot + 'images/reliure/pack-rouge.webp',     legende: 'Le Volume I, couverture rouge, grain du papier ivoire' },
+    { src: assetRoot + 'images/reliure/pack-plongee.webp',   legende: 'Vue en plongée des deux volumes' }
   ];
 
   var lb = document.getElementById('pack-lightbox');

@@ -17,7 +17,7 @@
   <meta property="og:url" content="https://www.cours-echecs-paris.fr/" />
   <meta property="og:image" content="https://www.cours-echecs-paris.fr/nicolas_musicki.webp" />
   <meta property="og:locale" content="fr_FR" />
-  <meta property="og:site_name" content="Cours d'Échecs Paris - Nicolas Musicki" />
+  <meta property="og:site_name" content="Nicolas Musicki" />
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -46,7 +46,12 @@
   <!-- Lien vers la feuille de style externe -->
   <!-- <link rel="preload" href="style.min.css" as="style"> -->
   <link rel="stylesheet" href="style.min.css">
-  <link rel="stylesheet" href="pack-livres.css?v=2">
+  <style>
+    .hero-buttons{gap:12px;margin-top:1.25rem;align-items:center}.hero-buttons .btn{flex:0 1 auto;min-width:0;padding:.7rem 1.15rem;font-size:.72rem;line-height:1.25}
+    .book-referral{max-width:920px;margin:clamp(2rem,5vw,4rem) auto;padding:clamp(1rem,2.5vw,1.5rem);display:grid;grid-template-columns:minmax(180px,260px) 1fr;align-items:center;gap:clamp(1.25rem,3vw,2.25rem);background:var(--off-white);border:1px solid var(--silver);border-left:4px solid var(--accent)}
+    .book-referral img{width:100%;aspect-ratio:4/3;object-fit:cover}.book-referral-eyebrow{margin-bottom:.45rem;color:var(--accent-dark);font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.book-referral h3{margin-bottom:.65rem;font-size:clamp(1.25rem,2.4vw,1.75rem)}.book-referral p{margin-bottom:.9rem;font-size:.96rem;line-height:1.65}.book-referral-link{display:inline-block;color:var(--walnut);border-bottom:1px solid var(--accent-dark);font-family:Montserrat,sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.03em}
+    @media(max-width:640px){.book-referral{grid-template-columns:112px 1fr;gap:1rem}.book-referral p{display:none}}@media(max-width:575px){.hero-buttons{flex-direction:row;align-items:stretch;gap:8px}.hero-buttons .btn{width:auto;min-width:0;flex:1 1 calc(50% - 4px);padding:.6rem .65rem;font-size:.67rem}.hero-buttons .btn:last-child{flex-basis:100%}}@media(max-width:420px){.book-referral{grid-template-columns:1fr}.book-referral img{max-height:180px}}
+  </style>
 
  <!-- Favicons -->
 <link rel="icon" type="image/x-icon" href="https://www.cours-echecs-paris.fr/favicon.ico">
@@ -60,36 +65,43 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Cours d'Échecs Paris et Versailles - Nicolas Musicki",
+    "@id": "https://www.cours-echecs-paris.fr/#business",
+    "name": "Nicolas Musicki",
     "description": "Cours d'échecs pour enfants, adolescents et adultes à domicile à Paris, Versailles et alentours, ainsi qu'en visio partout en France et dans le monde.",
     "url": "https://www.cours-echecs-paris.fr/",
-    "image": "https://www.cours-echecs-paris.fr/nicolas_musicki.webp",
-    "telephone": "+33609365691",
-    "email": "nicolas.musicki@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Versailles",
-      "addressRegion": "Yvelines",
-      "postalCode": "78000",
-      "addressCountry": "FR"
+    "founder": {
+      "@id": "https://www.cours-echecs-paris.fr/#nicolas-musicki"
     },
     "areaServed": [
       {"@type": "City", "name": "Paris"},
-      {"@type": "City", "name": "Versailles"},
-      {"@type": "City", "name": "Le Chesnay-Rocquencourt"},
       {"@type": "City", "name": "Viroflay"},
-      {"@type": "City", "name": "Vélizy-Villacoublay"},
-      {"@type": "City", "name": "Chaville"},
-      {"@type": "City", "name": "Saint-Germain-en-Laye"},
-      {"@type": "AdministrativeArea", "name": "Yvelines"}
+      {"@type": "City", "name": "Versailles"},
+      {"@type": "City", "name": "Saint-Cloud"},
+      {"@type": "City", "name": "Neuilly-sur-Seine"},
+      {"@type": "City", "name": "Boulogne-Billancourt"},
+      {"@type": "City", "name": "Le Chesnay-Rocquencourt"}
     ],
     "priceRange": "$$",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "09:00",
-      "closes": "20:00"
-    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "17:00",
+        "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "12:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "08:00",
+        "closes": "11:00"
+      }
+    ],
     "offers": {
       "@type": "Offer",
       "description": "Premier cours d'échecs gratuit",
@@ -115,12 +127,7 @@
           "description": "Cours en visioconférence partout en France et dans le monde, avec support pédagogique inclus"
         }
       ]
-    },
-    "sameAs": [
-      "https://www.instagram.com/magickchess/",
-      "https://www.linkedin.com/in/nicolas-musicki-4867a4184/",
-      "https://ratings.fide.com/profile/653008898"
-    ]
+    }
   }
   </script>
 
@@ -177,38 +184,6 @@
           "@type": "Answer",
           "text": "Pour annuler ou reporter un cours sans frais, merci de prévenir au moins 24 heures à l'avance. Passé ce délai, le cours est considéré comme dû et n'est pas reporté. Cette règle permet de bloquer les créneaux sereinement pour tous les élèves. Les cas de force majeure (maladie avec certificat, urgence familiale) sont étudiés au cas par cas."
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Le guide des échecs n'est-il pas gratuit ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Si. Le Volume 1 est téléchargeable gratuitement en PDF sur cours-echecs-paris.fr, et le Volume 2 est offert après un premier cours d'essai. L'édition reliée à la main vendue 64,99 € n'est pas le contenu mais l'objet : deux volumes cousus main par une relieuse professionnelle, sur papier ivoire, numérotés et signés."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Qu'est-ce qu'un livre relié à la main ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Les cahiers sont cousus à la main un à un par une relieuse professionnelle, et non collés en dos carré comme un livre industriel. Les couvertures sont rigides et habillées de toile. Le livre s'ouvre à plat sans se casser et tient des décennies."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Combien de temps pour recevoir les livres reliés ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Entre 5 et 10 jours ouvrés après la commande, en Colissimo suivi. La livraison est limitée à la France métropolitaine et les frais de port sont compris dans le prix de 64,99 €."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Puis-je être remboursé après l'achat des livres reliés ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui. Un droit de rétractation de 14 jours à compter de la réception s'applique. Il suffit d'écrire à nicolas.musicki@gmail.com : l'adresse postale de retour est communiquée sous 48 heures ouvrées, et le remboursement est effectué dès réception du colis en bon état."
-        }
       }
     ]
   }
@@ -219,6 +194,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://www.cours-echecs-paris.fr/#nicolas-musicki",
     "name": "Nicolas Musicki",
     "jobTitle": "Professeur d'échecs",
     "description": "Professeur d'échecs professionnel à Paris et Versailles. Cours particuliers pour enfants, adolescents et adultes, tous niveaux.",
@@ -226,11 +202,8 @@
     "image": "https://www.cours-echecs-paris.fr/nicolas_musicki.webp",
     "telephone": "+33609365691",
     "email": "nicolas.musicki@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Paris",
-      "addressRegion": "Île-de-France",
-      "addressCountry": "FR"
+    "worksFor": {
+      "@id": "https://www.cours-echecs-paris.fr/#business"
     },
     "knowsAbout": ["Échecs", "Cours d'échecs", "Pédagogie échiquéenne", "Préparation tournois d'échecs"],
     "sameAs": [
@@ -246,12 +219,12 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": "https://www.cours-echecs-paris.fr/#service",
     "serviceType": "Cours d'échecs particuliers",
     "name": "Cours d'échecs à domicile et en visio",
     "description": "Cours d'échecs particuliers à domicile à Paris, Versailles et alentours, ou en visio partout en France et dans le monde. Enfants et adultes, tous niveaux. Premier cours offert.",
     "provider": {
-      "@type": "Person",
-      "name": "Nicolas Musicki"
+      "@id": "https://www.cours-echecs-paris.fr/#nicolas-musicki"
     },
     "areaServed": [
       {
@@ -260,11 +233,27 @@
       },
       {
         "@type": "City",
+        "name": "Viroflay"
+      },
+      {
+        "@type": "City",
         "name": "Versailles"
       },
       {
-        "@type": "AdministrativeArea",
-        "name": "Yvelines (78)"
+        "@type": "City",
+        "name": "Saint-Cloud"
+      },
+      {
+        "@type": "City",
+        "name": "Neuilly-sur-Seine"
+      },
+      {
+        "@type": "City",
+        "name": "Boulogne-Billancourt"
+      },
+      {
+        "@type": "City",
+        "name": "Le Chesnay-Rocquencourt"
       },
       {
         "@type": "Country",
@@ -311,8 +300,28 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://www.cours-echecs-paris.fr/#website",
-    "name": "Cours d'Échecs Paris — Nicolas Musicki",
-    "url": "https://www.cours-echecs-paris.fr"
+    "name": "Nicolas Musicki",
+    "url": "https://www.cours-echecs-paris.fr",
+    "publisher": {
+      "@id": "https://www.cours-echecs-paris.fr/#business"
+    }
+  }
+  </script>
+
+  <!-- Fil d'Ariane de la page d'accueil -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.cours-echecs-paris.fr/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://www.cours-echecs-paris.fr/"
+      }
+    ]
   }
   </script>
 </head>
@@ -337,7 +346,7 @@
       </div>
       <ul class="nav-menu">
         <li><a href="#about" class="nav-link">À propos</a></li>
-        <li><a href="guide-apprendre-les-echecs.html" class="nav-link">📕 Le guide</a></li>
+        <li><a href="guide-apprendre-les-echecs.html" class="nav-link">Le guide</a></li>
         <li><a href="zones/" class="nav-link">Zones</a></li>
         <li><a href="blog/" class="nav-link">Blog</a></li>
         <li><a href="#tarifs" class="nav-link">Tarifs</a></li>
@@ -372,7 +381,7 @@
         <div class="hero-text">
           <h3>Un coaching complet — pas juste des cours</h3>
           <p>
-            <strong>2092 Elo FIDE (niveau Expert)</strong>, passionné depuis l'enfance, je vous offre bien plus qu'une heure de cours :
+            <strong>2080 Elo FIDE (niveau Expert)</strong>, passionné depuis l'enfance, je vous offre bien plus qu'une heure de cours :
             analyse de vos parties sur <em>chess.com &amp; lichess</em>, répertoire d'ouvertures personnalisé,
             exercices hebdomadaires corrigés, accompagnement aux tournois et disponibilité <strong>7j/7</strong>.
           </p>
@@ -384,7 +393,7 @@
               <i class="fa-solid fa-gift"></i> 1<sup>er</sup> COURS OFFERT
               <span class="offre-detail">Sans engagement</span>
             </span>
-            <span class="badge"><i class="fa-solid fa-chess-queen"></i> 2092 Elo FIDE — niveau Expert</span>
+            <span class="badge"><i class="fa-solid fa-chess-queen"></i> 2080 Elo FIDE — niveau Expert</span>
             <span class="badge"><i class="fa-solid fa-clock"></i> Disponible 7j/7</span>
           </div>
           <div class="hero-buttons">
@@ -410,7 +419,7 @@
       <div class="diff-grid">
         <div class="diff-item">
           <div class="diff-icon"><i class="fa-solid fa-chess-queen"></i></div>
-          <div class="diff-label">2092 Elo FIDE</div>
+          <div class="diff-label">2080 Elo FIDE</div>
           <div class="diff-desc">Niveau Expert certifié</div>
         </div>
         <div class="diff-item">
@@ -451,7 +460,7 @@
         <div class="about-content">
           <p>
             Je suis <strong>Nicolas Musicki</strong>, <strong>professeur d'échecs à Paris et Versailles</strong>,
-            <a href="https://ratings.fide.com/profile/653008898" target="_blank" rel="noopener noreferrer" class="fide-link"><strong>2092 Elo FIDE (niveau Expert)</strong></a> — un niveau qui place les joueurs dans le top 2 % mondial.
+            <a href="https://ratings.fide.com/profile/653008898" target="_blank" rel="noopener noreferrer" class="fide-link"><strong>2080 Elo FIDE (niveau Expert)</strong></a> — un niveau qui place les joueurs dans le top 2 % mondial.
             Passionné depuis l'enfance, j'enseigne aux enfants et adultes à domicile et en visio.
           </p>
           <p>
@@ -466,7 +475,7 @@
           </p>
           <div class="stats">
             <div class="stat-item">
-              <span class="stat-number">2092</span>
+              <span class="stat-number">2080</span>
               <span class="stat-text">Elo — niveau Expert</span>
             </div>
             <div class="stat-item">
@@ -729,323 +738,18 @@
         </script>
       </section>
 
-      <!-- Volume 2 — bonus après 1er cours d'essai -->
-      <section class="home-vol2-bonus" aria-labelledby="v2-title">
-        <style>
-          .home-vol2-bonus {
-            background: linear-gradient(135deg, #1A3A5F 0%, #0B1F3A 100%);
-            padding: 60px 30px;
-            margin: 40px 0;
-            border-radius: 16px;
-            position: relative;
-            overflow: hidden;
-          }
-          .home-vol2-bonus::after {
-            content: "";
-            position: absolute; inset: 0;
-            background: url('echiquier.avif') center / cover no-repeat;
-            opacity: 0.07;
-            mix-blend-mode: screen;
-            pointer-events: none;
-          }
-          .home-vol2-bonus .v2-wrap {
-            position: relative; z-index: 1;
-            max-width: 940px; margin: 0 auto;
-            display: grid; grid-template-columns: 200px 1fr;
-            gap: 44px; align-items: center;
-          }
-          .home-vol2-bonus .v2-cover img {
-            width: 100%; height: auto; display: block;
-            border-radius: 4px;
-            box-shadow: 0 14px 34px rgba(0,0,0,0.55), 0 4px 12px rgba(0,0,0,0.25);
-            transform: rotate(3deg);
-            transition: transform 0.3s ease;
-          }
-          .home-vol2-bonus .v2-cover img:hover { transform: rotate(0); }
-          .home-vol2-bonus .v2-badge {
-            display: inline-block;
-            background: #C89434;
-            color: #0B1F3A;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-family: Montserrat, sans-serif;
-            font-weight: 700;
-            font-size: 11px;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-          }
-          .home-vol2-bonus h2 {
-            color: #E8D6A8;
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: clamp(1.7rem, 3.3vw, 2.2rem);
-            line-height: 1.22;
-            margin: 0 0 14px;
-            font-weight: 700;
-          }
-          .home-vol2-bonus h2 strong { color: #C89434; }
-          .home-vol2-bonus .v2-pitch {
-            color: #E8D6A8;
-            font-family: Lora, Georgia, serif;
-            font-size: 15px;
-            line-height: 1.65;
-            margin: 0 0 22px;
-            opacity: 0.92;
-            max-width: 560px;
-          }
-          .home-vol2-bonus .v2-features {
-            list-style: none;
-            margin: 0 0 24px;
-            padding: 0;
-            color: #E8D6A8;
-            font-family: Lora, serif;
-            font-size: 14px;
-            line-height: 1.85;
-            max-width: 560px;
-          }
-          .home-vol2-bonus .v2-features li {
-            padding-left: 26px;
-            position: relative;
-          }
-          .home-vol2-bonus .v2-features li::before {
-            content: "♟";
-            position: absolute; left: 0;
-            color: #C89434;
-          }
-          .home-vol2-bonus .v2-cta {
-            display: inline-block;
-            background: #C89434;
-            color: #0B1F3A;
-            padding: 15px 32px;
-            border-radius: 8px;
-            font-family: Montserrat, sans-serif;
-            font-weight: 700;
-            font-size: 13px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: all 0.2s ease;
-          }
-          .home-vol2-bonus .v2-cta:hover {
-            background: #E8B957;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(200,148,52,0.45);
-          }
-          .home-vol2-bonus .v2-mini {
-            color: #D4A259;
-            font-family: Lora, serif;
-            font-size: 12px;
-            opacity: 0.85;
-            margin-top: 12px;
-            font-style: italic;
-          }
-          @media (max-width: 720px) {
-            .home-vol2-bonus { padding: 44px 20px; }
-            .home-vol2-bonus .v2-wrap {
-              grid-template-columns: 1fr;
-              text-align: center;
-              gap: 28px;
-            }
-            .home-vol2-bonus .v2-cover { max-width: 180px; margin: 0 auto; }
-            /* idem : rotate(3deg) elargit la boite de ~7px */
-            .home-vol2-bonus .v2-cover img { width: 93%; margin: 0 auto; }
-            .home-vol2-bonus .v2-pitch,
-            .home-vol2-bonus .v2-features { margin-left: auto; margin-right: auto; }
-            .home-vol2-bonus .v2-features { text-align: left; display: inline-block; }
-          }
-        </style>
-
-        <div class="v2-wrap">
-          <div class="v2-cover">
-            <img src="couverture-guide-v2.png" alt="Couverture du Volume 2 — Le Starter Pack" width="200" height="306" loading="lazy">
-          </div>
-          <div class="v2-content">
-            <div class="v2-badge">🎁 Bonus réservé aux élèves</div>
-            <h2 id="v2-title">Le <strong>Volume 2</strong> offert<br>après ton 1<sup>er</sup> cours d'essai</h2>
-            <p class="v2-pitch">
-              120 pages pour arrêter de stagner. On y va plus loin : un vrai répertoire d'ouverture à mémoriser (Londres aux Blancs, Caro-Kann aux Noirs), une méthode pour ne plus gaffer, les schémas gagnants du milieu de partie et les finales clés.
-            </p>
-            <ul class="v2-features">
-              <li><strong>Répertoire complet</strong> Blancs + Noirs, variantes détaillées</li>
-              <li><strong>Méthode anti-gaffe</strong> pour 200 points Elo immédiats</li>
-              <li><strong>Schémas stratégiques</strong> du milieu de partie</li>
-              <li><strong>Finales techniques</strong> (Lucena, Philidor, fous opposés)</li>
-            </ul>
-            <a href="#contact" class="v2-cta">Je réserve mon 1<sup>er</sup> cours →</a>
-            <div class="v2-mini">Cours d'essai d'1h &middot; offert &middot; à Paris, Versailles ou en visio</div>
-          </div>
+      <!-- Renvoi secondaire vers l'édition reliée : la réservation reste le CTA principal -->
+      <aside class="book-referral" id="edition-reliee" aria-labelledby="book-referral-title">
+        <img src="images/reliure/pack-principal.webp"
+             alt="Les deux volumes reliés à la main d'Apprendre les Échecs"
+             width="320" height="240" loading="lazy" decoding="async">
+        <div class="book-referral-content">
+          <div class="book-referral-eyebrow">Édition artisanale</div>
+          <h3 id="book-referral-title">Apprendre les Échecs, en livre relié</h3>
+          <p>Deux volumes cousus main par une relieuse professionnelle, imprimés sur papier ivoire, numérotés et signés.</p>
+          <a href="edition-raffinee/" class="book-referral-link">Découvrez le livre relié →</a>
         </div>
-      </section>
-
-      <!-- Pack des 2 volumes reliés à la main (produit payant — distinct du guide gratuit) -->
-      <section class="pack-livres" id="pack-livres" aria-labelledby="pack-title">
-        <div class="pack-wrap">
-
-          <div class="pack-visuals">
-            <div class="pack-hero-media pack-open-lb" id="pack-hero-media"
-                 role="button" tabindex="0" data-index="0"
-                 aria-label="Agrandir les photos de l'édition reliée">
-              <img src="images/reliure/pack-principal.webp"
-                   alt="Les deux volumes reliés à la main d'Apprendre les Échecs, posés sur un échiquier en bois"
-                   width="1080" height="810" loading="lazy" decoding="async">
-              <video muted loop playsinline preload="none"
-                     poster="images/reliure/pack-principal.webp"
-                     aria-label="Vidéo de présentation des deux volumes reliés">
-                <source src="images/reliure/pack-video.mp4" type="video/mp4">
-              </video>
-              <span class="pack-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir</span>
-            </div>
-            <div class="pack-thumbs">
-              <button type="button" class="pack-open-lb" data-index="1" aria-label="Agrandir : les deux volumes debout, tranche cousue visible">
-                <img src="images/reliure/pack-tranche.webp"
-                     alt="Les deux volumes debout, tranche cousue visible"
-                     width="1080" height="810" loading="lazy" decoding="async">
-              </button>
-              <button type="button" class="pack-open-lb" data-index="2" aria-label="Agrandir : gros plan sur la couverture rouge du Volume I">
-                <img src="images/reliure/pack-rouge.webp"
-                     alt="Gros plan sur la couverture rouge du Volume I"
-                     width="810" height="1080" loading="lazy" decoding="async">
-              </button>
-              <button type="button" class="pack-open-lb" data-index="3" aria-label="Agrandir : vue en plongée des deux volumes sur l'échiquier">
-                <img src="images/reliure/pack-plongee.webp"
-                     alt="Vue en plongée des deux volumes sur l'échiquier"
-                     width="810" height="1080" loading="lazy" decoding="async">
-              </button>
-            </div>
-          </div>
-
-          <div class="pack-content">
-            <div class="pack-eyebrow">L'édition reliée à la main</div>
-            <h2 id="pack-title">Apprendre les Échecs<br>Volumes&nbsp;I &amp; II</h2>
-
-            <p class="pack-pitch">
-              Deux volumes cousus main par une relieuse professionnelle, imprimés sur papier ivoire.
-              Chaque exemplaire est numéroté et signé à la main. Ce n'est pas un livre de plus dans
-              une étagère&nbsp;: c'est un objet qu'on offre, et qu'on garde.
-            </p>
-
-            <ul class="pack-features">
-              <li><strong>Reliure cousue main</strong> par une relieuse professionnelle</li>
-              <li><strong>Papier ivoire</strong>, impression couleur, couvertures rigides</li>
-              <li><strong>Exemplaire numéroté et signé</strong> — série limitée à 50</li>
-              <li><strong>Les deux volumes</strong>&nbsp;: les bases, puis le répertoire et les finales</li>
-            </ul>
-
-            <div class="pack-price">
-              <span class="pack-price-amount">64,99&nbsp;€</span>
-              <span class="pack-price-note">Livraison comprise</span>
-            </div>
-
-            <a class="pack-cta" id="pack-cta"
-               href="https://buy.stripe.com/4gM4gB0KjgVQ1pj09idQQ03"
-               rel="noopener">Commander les 2 volumes</a>
-            <div class="pack-cta-reassure">
-              Paiement sécurisé par Stripe &middot; Livraison en France sous 5 à 10 jours ouvrés
-            </div>
-
-            <div class="pack-honesty">
-              <strong>Soyons clairs&nbsp;:</strong> le contenu reste disponible gratuitement en PDF
-              sur ce site. Ici, tu n'achètes pas de l'information — tu achètes un objet fabriqué à la main.
-            </div>
-
-            <div class="pack-service">
-              Une question&nbsp;? <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
-              &nbsp;·&nbsp; <a href="tel:+33609365691">06&nbsp;09&nbsp;36&nbsp;56&nbsp;91</a><br>
-              <a href="cgv.html">Conditions générales de vente</a>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="pack-faq">
-          <h3>Questions sur l'édition reliée</h3>
-
-          <details>
-            <summary>Le guide n'est pas gratuit&nbsp;?</summary>
-            <div class="pack-faq-answer">
-              <p>Si — et il le reste. Le Volume 1 est téléchargeable gratuitement en PDF sur ce site, et le Volume 2 est offert après un premier cours d'essai.</p>
-              <p>Ce que tu achètes ici, ce n'est pas le contenu&nbsp;: c'est l'objet. Deux livres cousus main, sur papier ivoire, numérotés et signés. Si tu veux seulement apprendre les échecs, prends le PDF, il est fait pour ça.</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Qu'est-ce qui est relié à la main exactement&nbsp;?</summary>
-            <div class="pack-faq-answer">
-              <p>Les cahiers sont cousus à la main, un à un, par une relieuse professionnelle — pas collés en dos carré comme un livre industriel. Les couvertures sont rigides, habillées de toile.</p>
-              <p>Conséquence concrète&nbsp;: le livre s'ouvre à plat sans se casser, et il tient des décennies. C'est aussi pour ça que la production est lente.</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Les exemplaires sont-ils numérotés&nbsp;?</summary>
-            <div class="pack-faq-answer">
-              <p>Oui. Chaque exemplaire porte un numéro manuscrit sur la page de garde, sous la forme «&nbsp;n°&nbsp;7&nbsp;/&nbsp;50&nbsp;», accompagné de ma signature.</p>
-              <p>La première série est limitée à 50 exemplaires. Au-delà, j'ouvrirai une seconde série, numérotée séparément.</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Combien de temps pour le recevoir&nbsp;?</summary>
-            <div class="pack-faq-answer">
-              <p>Entre 5 et 10 jours ouvrés après ta commande. L'envoi se fait en Colissimo suivi, et tu reçois un email de confirmation dès le paiement validé.</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Livrez-vous en dehors de la France&nbsp;?</summary>
-            <div class="pack-faq-answer">
-              <p>Pas pour le moment. La livraison est limitée à la France métropolitaine — c'est la seule zone où je peux garantir le délai et l'état du colis à l'arrivée.</p>
-              <p>Si tu es à l'étranger et que ça t'intéresse vraiment, écris-moi à <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>, on trouvera une solution au cas par cas.</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Puis-je l'offrir&nbsp;?</summary>
-            <div class="pack-faq-answer">
-              <p>C'est même l'usage principal. Le colis est emballé en papier kraft, sans aucun prix visible sur l'emballage ni dans le paquet.</p>
-              <p>Si tu veux une dédicace au nom de la personne, précise-le par email après ta commande&nbsp;: j'écris à la main, donc c'est faisable tant que le colis n'est pas parti.</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Et si je veux seulement le contenu&nbsp;?</summary>
-            <div class="pack-faq-answer">
-              <p>Prends le PDF gratuit, sans hésiter. Le contenu est strictement identique&nbsp;: mêmes chapitres, mêmes exercices, mêmes diagrammes.</p>
-              <p>Le livre relié n'apporte rien de plus sur le plan pédagogique. Il apporte autre chose.</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Comment se passe le paiement&nbsp;? Puis-je être remboursé&nbsp;?</summary>
-            <div class="pack-faq-answer">
-              <p>Le paiement se fait par carte bancaire sur une page sécurisée Stripe. Je n'ai jamais accès à tes coordonnées bancaires.</p>
-              <p>Tu disposes d'un <strong>droit de rétractation de 14 jours</strong> à compter de la réception. Pour l'exercer, écris à <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>&nbsp;: je te communique l'adresse postale de retour sous 48&nbsp;heures ouvrées, et je te rembourse dès réception du colis en bon état.</p>
-              <p>Le détail figure dans les <a href="cgv.html">conditions générales de vente</a>.</p>
-            </div>
-          </details>
-
-          <div class="pack-service" style="text-align:center; margin-top:26px;">
-            Une autre question&nbsp;? <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
-            &nbsp;·&nbsp; <a href="tel:+33609365691">06&nbsp;09&nbsp;36&nbsp;56&nbsp;91</a>
-          </div>
-        </div>
-
-        <!-- Visionneuse plein écran des photos du pack -->
-        <div class="plb" id="pack-lightbox" role="dialog" aria-modal="true"
-             aria-label="Photos de l'édition reliée" hidden>
-          <button type="button" class="plb-close" id="plb-close" aria-label="Fermer">&times;</button>
-          <button type="button" class="plb-nav plb-prev" id="plb-prev" aria-label="Photo précédente">&#8249;</button>
-          <button type="button" class="plb-nav plb-next" id="plb-next" aria-label="Photo suivante">&#8250;</button>
-          <div class="plb-stage" id="plb-stage">
-            <img id="plb-img" src="" alt="">
-          </div>
-          <div class="plb-caption" id="plb-caption"></div>
-          <div class="plb-counter" id="plb-counter"></div>
-          <div class="plb-strip" id="plb-strip"></div>
-        </div>
-
-        <script src="pack-livres.js?v=3" defer></script>
-      </section>
+      </aside>
 
       <!-- Avantages des échecs -->
       <section class="advantages" id="advantages">
@@ -1227,46 +931,34 @@
           <i class="fa-solid fa-gift"></i> N'oubliez pas : votre premier cours est totalement <strong>GRATUIT</strong> et sans engagement !
         </p>
       </section>
-      
-      <!-- Section FAQ -->
-      <section class="faq" id="faq">
-        <h2>Questions fréquentes sur les cours d'échecs</h2>
-        <div class="faq-container">
-          <div class="faq-item">
-            <h4>Comment se déroulent les cours d'échecs ?</h4>
-            <div class="faq-answer">
-              <p>Mes cours d'échecs à Paris et Versailles se déroulent principalement à votre domicile pour plus de confort, ou en visioconférence si vous préférez. Chaque séance est personnalisée selon votre niveau et vos objectifs. Nous commençons par définir ensemble vos besoins, puis je mets en place un programme adapté combinant théorie, exercices pratiques et parties commentées.</p>
-            </div>
+
+      <!-- FAQ visible synchronisée avec le schema FAQPage -->
+      <section class="schema-faq" id="faq" data-schema-faq="true" aria-labelledby="schema-faq-title">
+        <h2 id="schema-faq-title">Questions fréquentes</h2>
+        <div class="schema-faq-list">
+          <div class="schema-faq-item">
+            <h3>Comment se déroulent les cours d'échecs à Paris ?</h3>
+            <p>Les cours d'échecs se déroulent principalement à votre domicile à Paris et Versailles pour plus de confort. Chaque séance est personnalisée selon votre niveau et vos objectifs. Un programme adapté est mis en place combinant théorie, exercices pratiques et parties commentées. Des cours en visio sont également disponibles.</p>
           </div>
-          <div class="faq-item">
-            <h4>Quel est le prix d'un cours d'échecs ?</h4>
-            <div class="faq-answer">
-              <p>Le tarif des cours d'échecs est de 50€ pour un cours particulier d'une heure à domicile et 40€ pour un cours en visio. Je propose systématiquement un premier cours gratuit pour faire connaissance et évaluer votre niveau. N'hésitez pas à me contacter pour plus d'informations.</p>
-            </div>
+          <div class="schema-faq-item">
+            <h3>Quel est le prix d'un cours d'échecs à Paris ?</h3>
+            <p>Le tarif est de 50€ pour un cours particulier d'une heure à domicile et 40€ pour un cours en visio. Le premier cours est systématiquement gratuit et sans engagement pour faire connaissance et évaluer votre niveau.</p>
           </div>
-          <div class="faq-item">
-            <h4>Quel est le meilleur âge pour commencer les cours d'échecs ?</h4>
-            <div class="faq-answer">
-              <p>Les enfants peuvent commencer les cours d'échecs dès l'âge de 5-6 ans. Pour les adultes, il n'y a aucune limite d'âge ! J'adapte ma pédagogie à chaque tranche d'âge : approche ludique pour les enfants, méthode structurée pour les adolescents, et apprentissage orienté stratégie pour les adultes. Quel que soit votre âge, les échecs développent des compétences utiles tout au long de la vie.</p>
-            </div>
+          <div class="schema-faq-item">
+            <h3>À quel âge un enfant peut-il commencer les cours d'échecs ?</h3>
+            <p>Les enfants peuvent commencer les cours d'échecs dès l'âge de 5-6 ans. La pédagogie est adaptée à chaque tranche d'âge : approche ludique pour les enfants, méthode structurée pour les adolescents, et apprentissage orienté stratégie pour les adultes.</p>
           </div>
-          <div class="faq-item">
-            <h4>Où prendre des cours d'échecs à Paris et Versailles ?</h4>
-            <div class="faq-answer">
-              <p>J'interviens à domicile à Paris, Versailles et dans les communes dont le trajet reste inférieur ou égal à environ une heure. La faisabilité dépend de l'adresse, de l'horaire et des transports. Les cours en visio à 40 €/h sont accessibles partout en France et dans le monde.</p>
-            </div>
+          <div class="schema-faq-item">
+            <h3>Où prendre des cours d'échecs à Paris et Versailles ?</h3>
+            <p>Nicolas Musicki intervient à domicile à Paris, Versailles et dans les communes accessibles en environ une heure maximum selon l'adresse, l'horaire et les transports. Le Chesnay-Rocquencourt, Viroflay, Vélizy-Villacoublay et Chaville font notamment partie de la zone habituelle. Les cours en visio à 40 euros de l'heure sont accessibles partout en France et dans le monde.</p>
           </div>
-          <div class="faq-item">
-            <h4>Faut-il avoir du matériel pour suivre des cours d'échecs ?</h4>
-            <div class="faq-answer">
-              <p>Non, vous n'avez besoin d'aucun matériel pour suivre mes cours d'échecs. Je fournis tout le nécessaire : jeu d'échecs, pendule, supports pédagogiques et exercices. Si vous souhaitez vous équiper pour vous entraîner entre les cours, je peux vous conseiller sur l'achat de matériel adapté à votre niveau et à votre budget.</p>
-            </div>
+          <div class="schema-faq-item">
+            <h3>Faut-il avoir du matériel pour suivre des cours d'échecs ?</h3>
+            <p>Non, tout le matériel est fourni : jeu d'échecs, pendule, supports pédagogiques et exercices. Des conseils sur l'achat de matériel adapté sont disponibles pour ceux qui souhaitent s'entraîner entre les cours.</p>
           </div>
-          <div class="faq-item">
-            <h4>Quelle est la politique d'annulation des cours ?</h4>
-            <div class="faq-answer">
-              <p>Pour annuler ou reporter un cours sans frais, merci de me prévenir <strong>au moins 24 heures à l'avance</strong>. Passé ce délai, le cours est considéré comme dû et n'est pas reporté. Cette règle me permet de bloquer mes créneaux sereinement pour tous mes élèves. Les cas de force majeure (maladie avec certificat médical, urgence familiale) sont bien entendu étudiés au cas par cas avec bienveillance.</p>
-            </div>
+          <div class="schema-faq-item">
+            <h3>Quelle est la politique d'annulation des cours d'échecs ?</h3>
+            <p>Pour annuler ou reporter un cours sans frais, merci de prévenir au moins 24 heures à l'avance. Passé ce délai, le cours est considéré comme dû et n'est pas reporté. Cette règle permet de bloquer les créneaux sereinement pour tous les élèves. Les cas de force majeure (maladie avec certificat, urgence familiale) sont étudiés au cas par cas.</p>
           </div>
         </div>
       </section>
@@ -1289,7 +981,7 @@
           </a>
           <a href="blog/cours-echecs-adultes-paris.html" class="blog-preview-card">
             <h4><i class="fa-solid fa-user"></i> Cours d'échecs adultes à Paris</h4>
-            <p>Professeur particulier (2092 Elo), à domicile ou en visio. 1er cours offert.</p>
+            <p>Professeur particulier (2080 Elo), à domicile ou en visio. 1er cours offert.</p>
           </a>
           <a href="blog/cours-echecs-enfants-paris.html" class="blog-preview-card">
             <h4><i class="fa-solid fa-child"></i> Cours d'échecs enfants à Paris</h4>
@@ -1334,7 +1026,7 @@
             <i class="fa-solid fa-clock contact-icon"></i>
             <div>
               <h4>Horaires</h4>
-              <p>À définir en fonction de vos disponibilités</p>
+              <p>Lun–ven : 17h–23h<br>Sam : 8h–12h · Dim : 8h–11h</p>
             </div>
           </div>
           <p class="contact-message">

@@ -2555,3 +2555,148 @@ footer {
   margin-bottom: 0.75rem;
   letter-spacing: 2px;
 }
+
+/* FAQ visible, synchronisée avec les données structurées FAQPage */
+.schema-faq {
+  margin: clamp(3rem, 7vw, 5rem) 0 1.5rem;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  background: var(--off-white, #f8f6f1);
+  border: 1px solid var(--silver, #d9d5cc);
+  border-top: 4px solid var(--walnut, #3e2c1c);
+}
+
+.schema-faq > h2 {
+  margin: 0 0 2rem;
+  color: var(--black, #1a1a1a);
+  text-align: left;
+}
+
+.schema-faq-list {
+  display: grid;
+  gap: 0;
+}
+
+.schema-faq-item {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--silver, #d9d5cc);
+}
+
+.schema-faq-item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.schema-faq-item:last-child {
+  padding-bottom: 0;
+}
+
+.schema-faq .schema-faq-item h3 {
+  margin: 0 0 0.65rem;
+  color: var(--walnut, #3e2c1c);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.35;
+}
+
+.schema-faq .schema-faq-item p {
+  margin: 0;
+  color: var(--text-light, #4a4a4a);
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 600px) {
+  .schema-faq {
+    margin-top: 2.5rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .schema-faq > h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .schema-faq-item {
+    padding: 1.25rem 0;
+  }
+}
+
+/* ============================================
+   ZONES TACTILES MOBILES — WCAG 2.5.5
+   La surface cliquable est étendue par un pseudo-élément
+   en position absolue : aucun impact sur la mise en page,
+   ni sur la taille du texte ou des icônes.
+   ============================================ */
+@media (max-width: 480px) {
+
+  .footer-links a,
+  .footer-bottom a,
+  .contact-item a,
+  .contact-info a,
+  .pack-service a,
+  .breadcrumb a,
+  .logo a,
+  .promo-link,
+  .read-also__all a,
+  a[href^="tel:"],
+  a[href^="mailto:"] {
+    position: relative;
+  }
+
+  .footer-links a::before,
+  .footer-bottom a::before,
+  .contact-item a::before,
+  .contact-info a::before,
+  .pack-service a::before,
+  .breadcrumb a::before,
+  .logo a::before,
+  .promo-link::before,
+  .read-also__all a::before,
+  a[href^="tel:"]::before,
+  a[href^="mailto:"]::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: max(100%, 44px);
+    height: 44px;
+    z-index: 1;
+  }
+
+  /* Boutons et champs : quelques pixels, invisibles à l'œil */
+  .btn,
+  .nav-cta,
+  button,
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 44px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    min-height: 44px;
+    font-size: 16px;
+  }
+
+  .social-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Menu mobile : meme extension invisible */
+  .nav-menu .nav-link { position: relative; }
+  .nav-menu .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: max(100%, 44px);
+    height: 44px;
+    z-index: 1;
+  }
+}

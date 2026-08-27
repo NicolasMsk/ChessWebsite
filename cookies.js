@@ -85,15 +85,22 @@
       'margin:0 0 16px 0;color:#4a4a4a;font-size:14.5px;',
     '}',
     '#chess-cookie-banner a{color:#8B5A2B;text-decoration:underline;font-weight:500;}',
+    // Zone tactile etendue sans modifier la mise en page
+    '@media (max-width:480px){#chess-cookie-banner p a{position:relative;}',
+    '#chess-cookie-banner p a::after{content:"";position:absolute;left:0;right:0;top:50%;',
+    'transform:translateY(-50%);height:44px;}}',
     '#chess-cookie-banner a:hover{color:#3E2C1C;}',
     '#chess-cookie-banner .cc-buttons{',
       'display:flex;gap:10px;',
     '}',
     '#chess-cookie-banner button{',
-      'flex:1;padding:12px 18px;border-radius:8px;border:none;',
+      'flex:1;padding:12px 18px;min-height:44px;border-radius:8px;border:none;',
       'font-family:inherit;font-size:14px;font-weight:600;',
       'cursor:pointer;transition:all .18s ease;letter-spacing:.2px;',
       '-webkit-tap-highlight-color:transparent;',
+    '}',
+    '#chess-cookie-banner button:focus-visible,#chess-cookie-banner a:focus-visible{',
+      'outline:3px solid #C47A2C;outline-offset:2px;',
     '}',
     '#chess-cookie-banner .cc-accept{',
       'background:#3E2C1C;color:#F0D9B5;',
@@ -107,11 +114,18 @@
     '}',
     '#chess-cookie-banner .cc-refuse:hover{background:#e8e3d4;color:#3E2C1C;}',
     '@media (max-width:540px){',
-      '#chess-cookie-banner{bottom:12px;left:12px;right:12px;padding:18px 20px;}',
-      '#chess-cookie-banner .cc-title{font-size:15px;}',
-      '#chess-cookie-banner p{font-size:14px;margin-bottom:14px;}',
-      '#chess-cookie-banner .cc-buttons{flex-direction:column;}',
-      '#chess-cookie-banner button{padding:13px 18px;}',
+      '#chess-cookie-banner{',
+        'bottom:0;left:0;right:0;max-width:none;',
+        'padding:10px 12px max(10px,env(safe-area-inset-bottom));',
+        'border-radius:12px 12px 0 0;',
+        'font-size:13px;line-height:1.35;',
+      '}',
+      '#chess-cookie-banner .cc-head{gap:6px;margin-bottom:4px;}',
+      '#chess-cookie-banner .cc-emoji{font-size:16px;}',
+      '#chess-cookie-banner .cc-title{font-size:13px;letter-spacing:0;}',
+      '#chess-cookie-banner p{font-size:12px;line-height:1.35;margin-bottom:8px;}',
+      '#chess-cookie-banner .cc-buttons{flex-direction:row;gap:8px;}',
+      '#chess-cookie-banner button{min-height:44px;padding:9px 12px;font-size:13px;}',
     '}'
   ].join('');
   document.head.appendChild(style);
@@ -121,13 +135,14 @@
     var banner = document.createElement('div');
     banner.id = 'chess-cookie-banner';
     banner.setAttribute('role', 'dialog');
-    banner.setAttribute('aria-label', 'Bandeau de consentement cookies');
+    banner.setAttribute('aria-labelledby', 'chess-cookie-title');
+    banner.setAttribute('aria-describedby', 'chess-cookie-description');
     banner.innerHTML =
       '<div class="cc-head">' +
         '<span class="cc-emoji">🍪</span>' +
-        '<span class="cc-title">Ce site utilise des cookies</span>' +
+        '<span class="cc-title" id="chess-cookie-title">Ce site utilise des cookies</span>' +
       '</div>' +
-      '<p>Nous utilisons des cookies pour mesurer l\'audience du site via Google Analytics. Aucun cookie n\'est déposé sans votre accord. <a href="mentions-legales.html">En savoir plus</a></p>' +
+      '<p id="chess-cookie-description">Nous utilisons des cookies pour mesurer l\'audience du site via Google Analytics. Aucun cookie n\'est déposé sans votre accord. <a href="mentions-legales.html">En savoir plus</a></p>' +
       '<div class="cc-buttons">' +
         '<button class="cc-refuse" type="button">Refuser</button>' +
         '<button class="cc-accept" type="button">Accepter</button>' +

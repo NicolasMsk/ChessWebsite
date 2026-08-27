@@ -125,7 +125,7 @@
             "name": "Pour quel niveau est conçu ce guide des échecs ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Le guide part de zéro. Si tu ne connais pas encore les règles, il est pour toi. Si tu connais vaguement les règles mais tu perds toujours en 10 coups, il est pour toi. Pour les joueurs déjà confirmés, le Volume 2 sera plus adapté pour continuer à progresser : il est offert après un premier cours d'essai."
+              "text": "Le guide part de zéro. Si tu ne connais pas encore les règles, il est pour toi. Si tu connais vaguement les règles mais tu perds toujours en 10 coups, il est pour toi. Pour les joueurs déjà confirmés, ce guide sera probablement trop élémentaire."
             }
           },
           {
@@ -468,6 +468,38 @@
     }
 
     /* FAQ */
+    /* ===== À lire aussi sur le blog ===== */
+    .read-also {
+      max-width: 780px; margin: 0 auto;
+      padding: 20px 20px 60px;
+    }
+    .read-also h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2rem; color: #3E2C1C;
+      text-align: center; margin-bottom: 10px;
+    }
+    .read-also__intro {
+      text-align: center; color: #6b5b47;
+      margin: 0 auto 30px; max-width: 560px; line-height: 1.7;
+    }
+    .read-also__list { list-style: none; margin: 0; padding: 0; }
+    .read-also__list li { border-bottom: 1px solid #e5dcc7; }
+    .read-also__list li:first-child { border-top: 1px solid #e5dcc7; }
+    .read-also__list a {
+      display: block; padding: 18px 0;
+      color: #3E2C1C; text-decoration: none;
+    }
+    .read-also__list a:hover .read-also__title { text-decoration: underline; }
+    .read-also__title {
+      display: block; font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.15rem; line-height: 1.35; margin-bottom: 4px;
+    }
+    .read-also__desc {
+      display: block; font-size: .95rem; color: #6b5b47; line-height: 1.6;
+    }
+    .read-also__all { text-align: center; margin: 28px 0 0; }
+    .read-also__all a { color: #3E2C1C; font-weight: 600; }
+
     .ebook-faq {
       max-width: 780px; margin: 0 auto;
       padding: 60px 20px;
@@ -617,117 +649,6 @@
     </div>
   </section>
 
-  <!-- BONUS VOLUME 2 -->
-  <section class="ebook-vol2-bonus" aria-labelledby="v2-bonus-title">
-    <style>
-      .ebook-vol2-bonus {
-        background: linear-gradient(135deg, #1A3A5F 0%, #0B1F3A 100%);
-        padding: 70px 30px;
-        position: relative;
-        overflow: hidden;
-      }
-      .ebook-vol2-bonus::after {
-        content: "";
-        position: absolute; inset: 0;
-        background: url('echiquier.avif') center / cover no-repeat;
-        opacity: 0.07; mix-blend-mode: screen; pointer-events: none;
-      }
-      .ebook-vol2-bonus .v2-wrap {
-        position: relative; z-index: 1;
-        max-width: 940px; margin: 0 auto;
-        display: grid; grid-template-columns: 200px 1fr;
-        gap: 44px; align-items: center;
-      }
-      .ebook-vol2-bonus .v2-cover img {
-        width: 100%; height: auto; display: block;
-        border-radius: 4px;
-        box-shadow: 0 14px 34px rgba(0,0,0,0.55), 0 4px 12px rgba(0,0,0,0.25);
-        transform: rotate(3deg);
-        transition: transform 0.3s ease;
-      }
-      .ebook-vol2-bonus .v2-cover img:hover { transform: rotate(0); }
-      .ebook-vol2-bonus .v2-badge {
-        display: inline-block;
-        background: #C89434; color: #0B1F3A;
-        padding: 6px 16px; border-radius: 20px;
-        font-family: Montserrat, sans-serif;
-        font-weight: 700; font-size: 11px;
-        letter-spacing: 2.5px; text-transform: uppercase;
-        margin-bottom: 16px;
-      }
-      .ebook-vol2-bonus h2 {
-        color: #E8D6A8;
-        font-family: 'Playfair Display', Georgia, serif;
-        font-size: clamp(1.7rem, 3.3vw, 2.2rem);
-        line-height: 1.22; margin: 0 0 14px; font-weight: 700;
-      }
-      .ebook-vol2-bonus h2 strong { color: #C89434; }
-      .ebook-vol2-bonus .v2-pitch {
-        color: #E8D6A8;
-        font-family: Lora, Georgia, serif;
-        font-size: 15px; line-height: 1.65;
-        margin: 0 0 22px; opacity: 0.92; max-width: 560px;
-      }
-      .ebook-vol2-bonus .v2-features {
-        list-style: none; margin: 0 0 24px; padding: 0;
-        color: #E8D6A8; font-family: Lora, serif;
-        font-size: 14px; line-height: 1.85; max-width: 560px;
-      }
-      .ebook-vol2-bonus .v2-features li {
-        padding-left: 26px; position: relative;
-      }
-      .ebook-vol2-bonus .v2-features li::before {
-        content: "♟"; position: absolute; left: 0; color: #C89434;
-      }
-      .ebook-vol2-bonus .v2-cta {
-        display: inline-block;
-        background: #C89434; color: #0B1F3A;
-        padding: 15px 32px; border-radius: 8px;
-        font-family: Montserrat, sans-serif;
-        font-weight: 700; font-size: 13px;
-        letter-spacing: 1.5px; text-transform: uppercase;
-        text-decoration: none; transition: all 0.2s ease;
-      }
-      .ebook-vol2-bonus .v2-cta:hover {
-        background: #E8B957; transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(200,148,52,0.45);
-      }
-      .ebook-vol2-bonus .v2-mini {
-        color: #D4A259; font-family: Lora, serif;
-        font-size: 12px; opacity: 0.85; margin-top: 12px; font-style: italic;
-      }
-      @media (max-width: 720px) {
-        .ebook-vol2-bonus { padding: 50px 20px; }
-        .ebook-vol2-bonus .v2-wrap {
-          grid-template-columns: 1fr; text-align: center; gap: 28px;
-        }
-        .ebook-vol2-bonus .v2-cover { max-width: 180px; margin: 0 auto; }
-        .ebook-vol2-bonus .v2-pitch,
-        .ebook-vol2-bonus .v2-features { margin-left: auto; margin-right: auto; }
-        .ebook-vol2-bonus .v2-features { text-align: left; display: inline-block; }
-      }
-    </style>
-    <div class="v2-wrap">
-      <div class="v2-cover">
-        <img src="couverture-guide-v2.png" alt="Couverture du Volume 2 — Le Starter Pack" width="200" height="306" loading="lazy">
-      </div>
-      <div class="v2-content">
-        <div class="v2-badge">🎁 Bonus réservé aux élèves</div>
-        <h2 id="v2-bonus-title">Le <strong>Volume 2</strong> offert<br/>après ton 1<sup>er</sup> cours d'essai</h2>
-        <p class="v2-pitch">
-          Tu viens de recevoir le Volume 1. Le Volume 2 va plus loin : 120 pages pour sortir du stade de débutant absolu et commencer à jouer comme quelqu'un qui sait ce qu'il fait.
-        </p>
-        <ul class="v2-features">
-          <li><strong>Répertoire complet</strong> Blancs + Noirs (Londres + Caro-Kann)</li>
-          <li><strong>Méthode anti-gaffe</strong> qui vaut 200 points Elo</li>
-          <li><strong>Schémas stratégiques</strong> du milieu de partie</li>
-          <li><strong>Finales techniques</strong> : Lucena, Philidor, fous opposés</li>
-        </ul>
-        <a href="/#contact" class="v2-cta">Je réserve mon 1<sup>er</sup> cours →</a>
-        <div class="v2-mini">Cours d'essai d'1h &middot; offert &middot; à Paris, Versailles ou en visio</div>
-      </div>
-    </div>
-  </section>
 
   <!-- Pack des 2 volumes reliés à la main (produit payant — distinct du guide gratuit) -->
   <section class="pack-livres" id="pack-livres" aria-labelledby="pack-title">
@@ -902,6 +823,45 @@
     <a href="/#contact" class="btn" style="margin-top: 20px;">Réserver un 1er cours gratuit <i class="fa-solid fa-arrow-right"></i></a>
   </section>
 
+  <!-- À lire aussi sur le blog -->
+  <section class="read-also" aria-labelledby="read-also-title">
+    <h2 id="read-also-title">À lire aussi sur le blog</h2>
+    <p class="read-also__intro">En attendant de recevoir le guide, voici les articles que je conseille le plus souvent à mes élèves débutants.</p>
+    <ul class="read-also__list">
+      <li>
+        <a href="blog/regles-echecs-guide-complet.html">
+          <span class="read-also__title">Les règles des échecs expliquées de zéro</span>
+          <span class="read-also__desc">Déplacements, roque, prise en passant, pat : tout ce qu'il faut savoir avant la première partie.</span>
+        </a>
+      </li>
+      <li>
+        <a href="blog/debuter-echecs-guide-complet-0-500-elo.html">
+          <span class="read-also__title">Débuter aux échecs : le plan complet de 0 à 500 Elo</span>
+          <span class="read-also__desc">Par quoi commencer, dans quel ordre, et la routine de 30 minutes par jour qui fait la différence.</span>
+        </a>
+      </li>
+      <li>
+        <a href="blog/10-erreurs-debutant-echecs.html">
+          <span class="read-also__title">Les 10 erreurs classiques du débutant</span>
+          <span class="read-also__desc">Celles que je corrige à chaque premier cours — et comment les éviter dès maintenant.</span>
+        </a>
+      </li>
+      <li>
+        <a href="blog/meilleures-ouvertures-echecs-debutants.html">
+          <span class="read-also__title">Quelles ouvertures apprendre quand on débute ?</span>
+          <span class="read-also__desc">Trois ouvertures suffisent au départ. Comprendre les idées vaut mieux que mémoriser des coups.</span>
+        </a>
+      </li>
+      <li>
+        <a href="blog/bienfaits-echecs-enfants.html">
+          <span class="read-also__title">Les bienfaits des échecs pour les enfants</span>
+          <span class="read-also__desc">Concentration, logique, gestion de la défaite : ce que les échecs apportent vraiment dès 5 ans.</span>
+        </a>
+      </li>
+    </ul>
+    <p class="read-also__all"><a href="blog/">Voir tous les articles du blog</a></p>
+  </section>
+
   <!-- FAQ -->
   <section class="ebook-faq">
     <h2>Questions fréquentes</h2>
@@ -913,7 +873,7 @@
 
     <div class="faq-item">
       <div class="faq-q">Pour quel niveau est conçu ce guide ?</div>
-      <div class="faq-a">Le guide part de zéro. Si tu ne connais pas encore les règles, il est pour toi. Si tu connais vaguement les règles mais tu perds toujours en 10 coups, il est pour toi. Pour les joueurs déjà confirmés, le Volume 2 sera plus adapté — il est offert après un premier cours d'essai.</div>
+      <div class="faq-a">Le guide part de zéro. Si tu ne connais pas encore les règles, il est pour toi. Si tu connais vaguement les règles mais tu perds toujours en 10 coups, il est pour toi. Pour les joueurs déjà confirmés, ce guide sera probablement trop élémentaire.</div>
     </div>
 
     <div class="faq-item">

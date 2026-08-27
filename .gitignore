@@ -8,3 +8,10 @@ api/.env.admin
 api/node_modules/
 api/.wrangler/
 .claude/settings.local.json
+
+# Credentials — ne jamais committer
+chess_service_account.json
+
+# Outils / captures temporaires
+.playwright-mcp/
+temp/

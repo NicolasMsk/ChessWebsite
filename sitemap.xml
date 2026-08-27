@@ -25,6 +25,14 @@
     <priority>0.95</priority>
   </url>
 
+  <!-- Édition artisanale reliée -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/edition-raffinee/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>
