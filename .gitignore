@@ -1,17 +1,72 @@
-ebook/
-.DS_Store
-Thumbs.db
-*.log
-.wrangler/
+# ============================================================
+#  SECRETS — ne doivent JAMAIS partir sur le dépôt (public)
+# ============================================================
+*.env
+.env
+.env.*
+!.env.example
 api/.env
 api/.env.admin
-api/node_modules/
-api/.wrangler/
-.claude/settings.local.json
-
-# Credentials — ne jamais committer
+*service_account*.json
 chess_service_account.json
+*credentials*.json
+*.pem
+*.key
+*.p12
+*_secret*
+*_token*
 
-# Outils / captures temporaires
-.playwright-mcp/
+# ============================================================
+#  CONTENU PRIVÉ — livré manuellement, jamais public
+# ============================================================
+ebook/
+
+# ============================================================
+#  DÉPENDANCES ET ARTEFACTS DE BUILD
+# ============================================================
+node_modules/
+api/node_modules/
+.wrangler/
+api/.wrangler/
+dist/
+build/
+*.tsbuildinfo
+
+# ============================================================
+#  TRAVAIL EN COURS — non destiné au site publié
+# ============================================================
 temp/
+campagnes-email/
+edition-raffinee/
+brouillons/
+drafts/
+
+# ============================================================
+#  OUTILS, AUDITS ET CAPTURES D'ÉCRAN
+# ============================================================
+.playwright-mcp/
+.claude/settings.local.json
+*-AUDIT-*.md
+audit-*.png
+a[0-9]-*.png
+*-screenshot.png
+screenshot*.png
+capture*.png
+echiquier_chesscom.png
+
+# Pages web sauvegardées depuis un navigateur (déchet)
+*_files/
+*.mhtml
+
+# ============================================================
+#  SYSTÈME ET ÉDITEURS
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+*.bak
+*~
+.vscode/
+.idea/
