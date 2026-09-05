@@ -87,3 +87,8 @@ desktop.ini
 
 # Volume 2 — bonus exclusif livre manuellement par email, jamais public
 fichiers/guide-volume-2*.pdf
+
+# Tableau de bord prive : donnees et configuration locale uniquement.
+analytics-local/.cache/
+analytics-local/config.local.json
+analytics-local/*.log

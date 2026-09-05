@@ -2,6 +2,7 @@
 include:
   - .well-known
 exclude:
+  - analytics-local
   - api
   - docs
   - temp

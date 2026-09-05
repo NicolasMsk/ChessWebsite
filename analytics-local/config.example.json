@@ -1,0 +1,7 @@
+{
+  "siteUrl": "https://www.cours-echecs-paris.fr/",
+  "ga4PropertyId": "512332614",
+  "credentialsFile": "../chess_service_account.json",
+  "port": 4317,
+  "categoryOverrides": {}
+}
