@@ -6,22 +6,32 @@ const decimal = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1 });
 const dateFormat = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', timeZone: 'UTC' });
 const date = value => dateFormat.format(new Date(value + 'T12:00:00Z'));
 const range = p => `${date(p.start)} – ${date(p.end)} ${p.end.slice(0, 4)}`;
+
+// Libellés en français courant ; le terme technique reste dans `tech` (infobulle, CSV).
 const metrics = {
-  impressions: { name: 'Impressions', source: 'gsc', field: 'impressions' },
-  clicks: { name: 'Clics Google', source: 'gsc', field: 'clicks' },
-  ctr: { name: 'CTR', source: 'gsc', field: 'ctr', format: 'rate', change: 'points' },
-  position: { name: 'Position', source: 'gsc', field: 'position', format: 'decimal', change: 'position', lower: true },
-  sessions: { name: 'Sessions entrantes', source: 'ga', field: 'sessions' },
-  users: { name: 'Utilisateurs entrants', source: 'ga', field: 'users', totalField: 'totalUsers' },
-  views: { name: 'Vues de la page', source: 'ga', field: 'views', totalField: 'screenPageViews' },
-  engaged: { name: 'Sessions engagées', source: 'ga', field: 'engagedSessions' },
-  engagement: { name: 'Taux d’engagement', source: 'ga', field: 'engagementRate', format: 'rate', change: 'points' },
-  duration: { name: 'Durée de session', source: 'ga', field: 'averageSessionDuration', format: 'duration' },
-  engagementTime: { name: 'Temps engagé / page', source: 'ga', field: 'engagementSeconds', totalField: 'userEngagementDuration', format: 'duration' },
-  keyEvents: { name: 'Événements clés', source: 'ga', field: 'keyEvents' },
+  impressions: { name: 'Affichages Google', short: 'Affichages', tech: 'Impressions', source: 'gsc', field: 'impressions', hint: 'Fois où une page du site est apparue dans les résultats Google' },
+  clicks: { name: 'Clics Google', short: 'Clics', tech: 'Clics', source: 'gsc', field: 'clicks', hint: 'Personnes arrivées sur le site depuis un résultat Google' },
+  ctr: { name: 'Taux de clic', short: 'Taux de clic', tech: 'CTR', source: 'gsc', field: 'ctr', format: 'rate', change: 'points', hint: 'Clics ÷ affichages' },
+  position: { name: 'Position Google', short: 'Position', tech: 'Position moyenne', source: 'gsc', field: 'position', format: 'decimal', change: 'position', lower: true, hint: 'Rang moyen dans les résultats — plus bas est mieux, 1 = premier' },
+  sessions: { name: 'Visites', short: 'Visites', tech: 'Sessions (page d’entrée)', source: 'ga', field: 'sessions', hint: 'Visites qui ont commencé sur cette page' },
+  users: { name: 'Visiteurs', short: 'Visiteurs', tech: 'Utilisateurs entrants', source: 'ga', field: 'users', totalField: 'totalUsers', hint: 'Personnes distinctes entrées par cette page' },
+  views: { name: 'Pages vues', short: 'Pages vues', tech: 'Vues', source: 'ga', field: 'views', totalField: 'screenPageViews', hint: 'Nombre de fois où la page a été affichée' },
+  engaged: { name: 'Visites engagées', short: 'Engagées', tech: 'Sessions engagées', source: 'ga', field: 'engagedSessions', hint: 'Visites de plus de 10 s, ou avec 2 pages, ou une action clé' },
+  engagement: { name: 'Taux d’engagement', short: 'Engagement', tech: 'Taux d’engagement', source: 'ga', field: 'engagementRate', format: 'rate', change: 'points', hint: 'Part des visites engagées' },
+  duration: { name: 'Durée moyenne', short: 'Durée', tech: 'Durée de session', source: 'ga', field: 'averageSessionDuration', format: 'duration', hint: 'Durée moyenne d’une visite entrée par cette page' },
+  engagementTime: { name: 'Temps de lecture', short: 'Lecture', tech: 'Temps engagé cumulé', source: 'ga', field: 'engagementSeconds', totalField: 'userEngagementDuration', format: 'duration', hint: 'Temps total passé activement sur la page' },
+  keyEvents: { name: 'Actions clés', short: 'Actions', tech: 'Événements clés GA4', source: 'ga', field: 'keyEvents', hint: 'Inscriptions au guide, clics contact, téléphone, email…' },
 };
-const views = { combined: ['impressions', 'clicks', 'position', 'sessions', 'views', 'engagement', 'keyEvents'], gsc: ['impressions', 'clicks', 'ctr', 'position'], ga: ['sessions', 'users', 'views', 'engaged', 'engagement', 'duration', 'keyEvents'] };
-let data = null, csrf = '', selectedCategory = '', selectedView = 'combined', sortKey = 'clicks', ascending = false, channel = 'all', timer = null, chartRows = [], displayedGeneration = '', requestSequence = 0;
+const views = {
+  combined: ['impressions', 'clicks', 'position', 'sessions', 'keyEvents'],
+  gsc: ['impressions', 'clicks', 'ctr', 'position'],
+  ga: ['sessions', 'users', 'views', 'engagement', 'duration', 'keyEvents'],
+};
+const COMPARE = {
+  WoW: { label: 'vs semaine précédente', shortLabel: 'vs sem. préc.', current: 'week', previous: 'previousWeek', unit: '7 jours' },
+  MoM: { label: 'vs mois précédent', shortLabel: 'vs mois préc.', current: 'month', previous: 'previousMonth', unit: 'un mois' },
+};
+let data = null, csrf = '', selectedCategory = '', selectedView = 'combined', sortKey = 'clicks', ascending = false, channel = 'all', compareMode = 'WoW', timer = null, chartRows = [], displayedGeneration = '', requestSequence = 0;
 
 function value(page, key, period = 'range', total = false) {
   const metric = metrics[key];
@@ -46,25 +56,39 @@ function difference(current, previous, key) {
   if (metrics[key].change === 'points') { amount = (current - previous) * 100; suffix = ' pt'; }
   else if (metrics[key].change === 'position') { amount = current - previous; suffix = ''; }
   else {
-    if (previous === 0) return current === 0 ? { text: '0 %', className: 'neutral', raw: 0 } : { text: 'Nouveau', className: 'neutral', raw: 'Nouveau' };
+    if (previous === 0) return current === 0 ? { text: '=', className: 'neutral', raw: 0 } : { text: 'Nouveau', className: 'positive', raw: 'Nouveau' };
     amount = (current - previous) / previous * 100; suffix = ' %';
   }
   const neutral = Math.abs(amount) < .05;
   return { text: `${amount > 0 && !neutral ? '+' : ''}${decimal.format(neutral ? 0 : amount)}${suffix}`, className: neutral ? 'neutral' : ((amount > 0) !== !!metrics[key].lower ? 'positive' : 'negative'), raw: amount };
 }
+function periodsOf(mode) {
+  const c = COMPARE[mode];
+  return `${range(data.periods[c.current])} contre ${range(data.periods[c.previous])}`;
+}
+// Une seule comparaison affichée (celle choisie en haut) ; l'autre reste dans l'infobulle.
 function comparison(page, key, mode, total = false) {
-  const current = value(page, key, mode === 'WoW' ? 'week' : 'month', total);
-  const previous = value(page, key, mode === 'WoW' ? 'previousWeek' : 'previousMonth', total);
+  const c = COMPARE[mode];
+  const current = value(page, key, c.current, total), previous = value(page, key, c.previous, total);
   const diff = difference(current, previous, key);
-  const title = `${mode} : ${format(previous, key)} → ${format(current, key)}. ${mode === 'WoW' ? range(data.periods.week) + ' vs ' + range(data.periods.previousWeek) : range(data.periods.month) + ' vs ' + range(data.periods.previousMonth)}`;
+  const other = mode === 'WoW' ? 'MoM' : 'WoW';
+  const oc = COMPARE[other];
+  const otherDiff = difference(value(page, key, oc.current, total), value(page, key, oc.previous, total), key);
+  const title = `${c.label} : ${format(previous, key)} → ${format(current, key)} (${periodsOf(mode)}).\n${oc.label} : ${otherDiff.text}.`;
   return `<span class="delta ${diff.className}" title="${esc(title)}">${esc(diff.text)}</span>`;
 }
 function cell(page, key) {
   const main = value(page, key);
-  return `<div class="metric-value${main == null ? ' missing' : ''}">${format(main, key)}</div><div class="metric-compare"><span class="comparison-name">WoW</span>${comparison(page, key, 'WoW')}</div><div class="metric-compare"><span class="comparison-name">MoM</span>${comparison(page, key, 'MoM')}</div>`;
+  return `<div class="metric-value${main == null ? ' missing' : ''}">${format(main, key)}</div><div class="metric-compare">${comparison(page, key, compareMode)}</div>`;
 }
 function renderKpis() {
-  $('#kpis').innerHTML = ['impressions', 'clicks', 'sessions', 'keyEvents'].map((key, index) => `<article class="kpi ${index === 0 ? 'primary-kpi' : ''}"><div class="kpi-top"><span class="kpi-label">${key === 'sessions' ? 'Sessions du site' : esc(metrics[key].name)}</span><span class="kpi-source">${metrics[key].source === 'gsc' ? 'GOOGLE' : 'GA4'}</span></div><div class="kpi-value">${format(value(data.totals, key, 'range', true), key)}</div><div class="kpi-bottom"><span class="kpi-comparison"><span class="comparison-name">WoW</span>${comparison(data.totals, key, 'WoW', true)}</span><span class="kpi-comparison"><span class="comparison-name">MoM</span>${comparison(data.totals, key, 'MoM', true)}</span></div></article>`).join('');
+  const tiles = [
+    { key: 'impressions', label: 'Affichages dans Google' },
+    { key: 'clicks', label: 'Clics depuis Google' },
+    { key: 'sessions', label: 'Visites sur le site' },
+    { key: 'keyEvents', label: 'Actions clés' },
+  ];
+  $('#kpis').innerHTML = tiles.map(({ key, label }, index) => `<article class="kpi ${index === 0 ? 'primary-kpi' : ''}"><div class="kpi-top"><span class="kpi-label">${esc(label)}</span><span class="kpi-source">${metrics[key].source === 'gsc' ? 'Google' : 'GA4'}</span></div><div class="kpi-value">${format(value(data.totals, key, 'range', true), key)}</div><div class="kpi-bottom">${comparison(data.totals, key, compareMode, true)}<span class="kpi-vs">${COMPARE[compareMode].label}</span></div><p class="kpi-hint">${esc(metrics[key].hint)}</p></article>`).join('');
 }
 function renderCategories() {
   const counts = new Map();
@@ -72,6 +96,8 @@ function renderCategories() {
   $('#categories').innerHTML = [...counts].map(([category, count]) => `<button class="category-button ${selectedCategory === category ? 'selected' : ''}" data-category="${esc(category)}"><span class="category-dot"></span>${esc(category)}<span class="category-count">${count}</span></button>`).join('');
   $('#all-pages').classList.toggle('active', !selectedCategory);
   $('#total-pages').textContent = data.pages.length;
+  // Sur petit écran la barre latérale disparaît : le même choix est proposé dans un menu.
+  $('#category-select').innerHTML = `<option value="">Toutes les catégories</option>` + [...counts].map(([category, count]) => `<option value="${esc(category)}" ${selectedCategory === category ? 'selected' : ''}>${esc(category)} (${count})</option>`).join('');
 }
 function filteredPages() {
   const term = $('#search').value.toLocaleLowerCase('fr');
@@ -80,8 +106,8 @@ function filteredPages() {
 function renderTable() {
   if (!data) return;
   const keys = views[selectedView];
-  let firstGa = keys.find(key => metrics[key].source === 'ga');
-  $('#table-head').innerHTML = `<tr><th scope="col">PAGE / URL</th>${keys.map(key => `<th scope="col" class="${metrics[key].source === 'ga' ? 'ga-column ' : ''}${key === firstGa ? 'ga-start' : ''}" aria-sort="${sortKey === key ? ascending ? 'ascending' : 'descending' : 'none'}"><button data-sort="${key}" class="${sortKey === key ? 'active-sort' : ''}"><span class="source">${metrics[key].source === 'gsc' ? 'SEARCH CONSOLE' : 'GA4'}</span>${esc(metrics[key].name)} ${sortKey === key ? ascending ? '↑' : '↓' : '↕'}</button></th>`).join('')}</tr>`;
+  const firstGa = keys.find(key => metrics[key].source === 'ga');
+  $('#table-head').innerHTML = `<tr><th scope="col">Page</th>${keys.map(key => `<th scope="col" class="${metrics[key].source === 'ga' ? 'ga-column ' : ''}${key === firstGa ? 'ga-start' : ''}" aria-sort="${sortKey === key ? ascending ? 'ascending' : 'descending' : 'none'}"><button data-sort="${key}" class="${sortKey === key ? 'active-sort' : ''}" title="${esc(metrics[key].hint)} (${esc(metrics[key].tech)})"><span class="source">${metrics[key].source === 'gsc' ? 'Google' : 'GA4'}</span>${esc(metrics[key].short)} <span class="sort-arrow">${sortKey === key ? ascending ? '↑' : '↓' : ''}</span></button></th>`).join('')}</tr>`;
   const pages = filteredPages();
   const groups = new Map();
   for (const page of pages) { if (!groups.has(page.category)) groups.set(page.category, []); groups.get(page.category).push(page); }
@@ -94,19 +120,25 @@ function renderTable() {
     });
     const clicks = rows.every(p => value(p, 'clicks') != null) ? rows.reduce((n, p) => n + value(p, 'clicks'), 0) : null;
     const sessions = rows.every(p => value(p, 'sessions') != null) ? rows.reduce((n, p) => n + value(p, 'sessions'), 0) : null;
-    return `<tr class="group-row"><td colspan="${keys.length + 1}"><div>${esc(group).toLocaleUpperCase('fr')}<span class="group-pill">${rows.length}</span><span class="group-summary">${format(clicks, 'clicks')} clics · ${format(sessions, 'sessions')} sessions entrantes</span></div></td></tr>` + rows.map(page => `<tr class="page-row"><td class="page-cell"><button class="page-link" data-page="${esc(page.path)}">${esc(page.title)}</button><span class="page-path" title="${esc(page.path)}">${esc(page.path)}</span>${page.noindex ? '<span class="page-status">noindex</span>' : !page.inSitemap ? '<span class="page-status">Hors sitemap</span>' : ''}</td>${keys.map(key => `<td class="${metrics[key].source === 'ga' ? 'ga-column ' : ''}${key === firstGa ? 'ga-start' : ''}">${cell(page, key)}</td>`).join('')}</tr>`).join('');
+    return `<tr class="group-row"><td colspan="${keys.length + 1}"><div>${esc(group)}<span class="group-pill">${rows.length} page${rows.length > 1 ? 's' : ''}</span><span class="group-summary">${format(clicks, 'clicks')} clics Google · ${format(sessions, 'sessions')} visites</span></div></td></tr>` + rows.map(page => `<tr class="page-row"><td class="page-cell"><button class="page-link" data-page="${esc(page.path)}">${esc(page.title)}</button><span class="page-path" title="${esc(page.path)}">${esc(page.path)}</span>${page.noindex ? '<span class="page-status">noindex</span>' : !page.inSitemap ? '<span class="page-status">Hors sitemap</span>' : ''}</td>${keys.map(key => `<td class="${metrics[key].source === 'ga' ? 'ga-column ' : ''}${key === firstGa ? 'ga-start' : ''}">${cell(page, key)}</td>`).join('')}</tr>`).join('');
   }).join('');
-  $('#table-title').firstChild.textContent = (selectedCategory || 'Toutes vos pages') + ' ';
+  $('#table-title').firstChild.textContent = (selectedCategory || 'Toutes les pages') + ' ';
   $('#result-count').textContent = pages.length;
-  $('#table-count').textContent = `${pages.length} page${pages.length > 1 ? 's' : ''} affichée${pages.length > 1 ? 's' : ''} sur ${data.pages.length}`;
+  $('#table-count').textContent = `${pages.length} page${pages.length > 1 ? 's' : ''} sur ${data.pages.length}`;
   $('#empty').hidden = !!pages.length;
 }
+// Trois hausses, trois baisses de clics Google sur la comparaison choisie, en phrases lisibles.
 function renderInsights() {
-  const comparable = data.pages.filter(p => value(p, 'clicks', 'week') != null && value(p, 'clicks', 'previousWeek') != null);
-  const gains = comparable.map(page => ({ page, gain: value(page, 'clicks', 'week') - value(page, 'clicks', 'previousWeek') })).sort((a, b) => b.gain - a.gain);
-  const best = gains.find(item => item.gain > 0), worst = [...gains].reverse().find(item => item.gain < 0);
-  const make = (item, down) => item ? `<div class="insight"><span class="insight-symbol ${down ? 'down' : ''}">${down ? '↘' : '↗'}</span><div><div class="label">${down ? 'À SURVEILLER' : 'PLUS FORTE PROGRESSION'}</div><button data-page="${esc(item.page.path)}">${esc(item.page.title)}</button><div class="gain ${down ? 'down' : ''}">${item.gain > 0 ? '+' : ''}${number.format(item.gain)} clics sur 7 jours</div></div></div>` : `<div class="insight"><span class="insight-symbol">–</span><div><div class="label">${down ? 'À SURVEILLER' : 'PLUS FORTE PROGRESSION'}</div><span class="muted">${down ? 'Aucune baisse de clics sur la période.' : 'Pas encore de progression mesurable.'}</span></div></div>`;
-  $('#insights').innerHTML = comparable.length ? make(best, false) + make(worst, true) : '<p class="detail-hint">Données comparatives indisponibles.</p>';
+  const c = COMPARE[compareMode];
+  const rows = data.pages
+    .filter(p => value(p, 'clicks', c.current) != null && value(p, 'clicks', c.previous) != null)
+    .map(page => { const now = value(page, 'clicks', c.current), before = value(page, 'clicks', c.previous); return { page, now, before, gain: now - before }; });
+  const line = item => `<li><button data-page="${esc(item.page.path)}">${esc(item.page.title)}</button><span class="insight-numbers">${number.format(item.before)} → <b>${number.format(item.now)}</b> clics <span class="delta ${item.gain > 0 ? 'positive' : 'negative'}">${item.gain > 0 ? '+' : ''}${number.format(item.gain)}</span></span></li>`;
+  const ups = rows.filter(r => r.gain > 0).sort((a, b) => b.gain - a.gain).slice(0, 3);
+  const downs = rows.filter(r => r.gain < 0).sort((a, b) => a.gain - b.gain).slice(0, 3);
+  $('#insights').innerHTML = rows.length ? `
+    <div class="insight-block"><div class="label up">↗ En hausse ${esc(c.label)}</div>${ups.length ? `<ul>${ups.map(line).join('')}</ul>` : '<p class="muted">Aucune page en hausse.</p>'}</div>
+    <div class="insight-block"><div class="label down">↘ En baisse ${esc(c.label)}</div>${downs.length ? `<ul>${downs.map(line).join('')}</ul>` : '<p class="muted">Aucune page en baisse.</p>'}</div>` : '<p class="detail-hint">Données comparatives indisponibles.</p>';
 }
 function dailyRows(key) {
   const lookup = new Map();
@@ -122,25 +154,36 @@ function renderChart() {
   const key = $('#chart-metric').value;
   chartRows = dailyRows(key);
   const unavailable = value(data.totals, key, 'range', true) == null || data.warnings.some(w => w.startsWith(metrics[key].source === 'gsc' ? 'Courbe Search Console' : 'Courbe GA4'));
-  $('#chart-total').textContent = unavailable ? '—' : format(chartRows.reduce((n, row) => n + row.value, 0), key);
-  $('#chart-caption').textContent = metrics[key].name.toLocaleLowerCase('fr') + ' sur la période';
+  const total = chartRows.reduce((n, row) => n + row.value, 0);
+  $('#chart-total').textContent = unavailable ? '—' : format(total, key);
+  $('#chart-caption').textContent = `${metrics[key].name.toLocaleLowerCase('fr')} sur 28 jours · ${unavailable ? '—' : decimal.format(total / chartRows.length)} par jour en moyenne`;
   $('#chart-first').textContent = date(data.periods.range.start); $('#chart-last').textContent = date(data.periods.range.end);
   if (unavailable) { $('#chart').innerHTML = '<div class="chart-empty">Courbe indisponible pour cette source.</div>'; return; }
-  const max = Math.max(...chartRows.map(r => r.value), 1), width = 650, height = 124;
-  const points = chartRows.map((row, i) => [i / (chartRows.length - 1) * width, height - row.value / max * 104]);
+  const max = Math.max(...chartRows.map(r => r.value), 1), width = 650, height = 124, left = 34;
+  const points = chartRows.map((row, i) => [left + i / (chartRows.length - 1) * (width - left), height - row.value / max * 104]);
   const line = points.map((p, i) => `${i ? 'L' : 'M'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
-  $('#chart').innerHTML = `<svg viewBox="0 0 ${width} 138" preserveAspectRatio="none" role="img" aria-label="${esc(metrics[key].name)}, du ${esc(range(data.periods.range))}"><defs><linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#61bda5" stop-opacity=".22"/><stop offset="100%" stop-color="#61bda5" stop-opacity="0"/></linearGradient></defs>${[20, 54, 89, 124].map(y => `<line x1="0" y1="${y}" x2="650" y2="${y}" stroke="#edf2f3" stroke-dasharray="3 5"/>`).join('')}<path d="${line} L650,138 L0,138 Z" fill="url(#area-gradient)"/><path d="${line}" stroke="#3c9d87" stroke-width="2.4" fill="none" vector-effect="non-scaling-stroke" stroke-linejoin="round"/><circle cx="${points.at(-1)[0]}" cy="${points.at(-1)[1]}" r="3" fill="#3c9d87"/></svg><div class="chart-tooltip" hidden></div>`;
+  const avg = height - (total / chartRows.length) / max * 104;
+  // Axe vertical lisible : 0, la moitié, le maximum ; moyenne en pointillé.
+  $('#chart').innerHTML = `<svg viewBox="0 0 ${width} 138" preserveAspectRatio="none" role="img" aria-label="${esc(metrics[key].name)}, du ${esc(range(data.periods.range))}"><defs><linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#61bda5" stop-opacity=".22"/><stop offset="100%" stop-color="#61bda5" stop-opacity="0"/></linearGradient></defs>
+    ${[[20, max], [72, max / 2], [124, 0]].map(([y, v]) => `<line x1="${left}" y1="${y}" x2="${width}" y2="${y}" stroke="#e6ecee" stroke-dasharray="3 5"/><text x="${left - 6}" y="${y + 4}" text-anchor="end" class="axis-label">${esc(number.format(Math.round(v)))}</text>`).join('')}
+    <line x1="${left}" y1="${avg.toFixed(1)}" x2="${width}" y2="${avg.toFixed(1)}" stroke="#b7c6cc" stroke-width="1" stroke-dasharray="2 4"/>
+    <path d="${line} L${width},138 L${left},138 Z" fill="url(#area-gradient)"/>
+    <path d="${line}" stroke="#3c9d87" stroke-width="2.4" fill="none" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+    <circle cx="${points.at(-1)[0]}" cy="${points.at(-1)[1]}" r="3.5" fill="#3c9d87"/></svg><div class="chart-tooltip" hidden></div>`;
+}
+function renderCompareBar() {
+  const c = COMPARE[compareMode];
+  for (const button of document.querySelectorAll('[data-compare]')) { const on = button.dataset.compare === compareMode; button.classList.toggle('selected', on); button.setAttribute('aria-selected', String(on)); }
+  $('#compare-detail').textContent = `${c.label} : ${periodsOf(compareMode)}`;
 }
 function render() {
   $('#dashboard').hidden = false; $('#loading').hidden = true;
   $('#range-label').textContent = range(data.periods.range);
-  $('#value-period').textContent = range(data.periods.range);
-  $('#wow-period').textContent = `${range(data.periods.week)} vs ${range(data.periods.previousWeek)}`;
-  $('#mom-period').textContent = `${range(data.periods.month)} vs ${range(data.periods.previousMonth)}`;
-  $('#updated').textContent = 'Données enregistrées le ' + new Intl.DateTimeFormat('fr-FR', { dateStyle: 'short', timeStyle: 'short' }).format(new Date(data.generatedAt));
-  $('#timezone-note').textContent = `Vue d’ensemble : site entier. Search Console : heure du Pacifique · GA4 : ${data.gaTimeZone}. Les journées ne sont donc pas strictement alignées. Les utilisateurs et événements observés dépendent du consentement et du paramétrage GA4.`;
-  renderKpis(); renderCategories(); renderChart(); renderInsights(); renderTable();
+  $('#updated').textContent = 'Données du ' + new Intl.DateTimeFormat('fr-FR', { dateStyle: 'short', timeStyle: 'short' }).format(new Date(data.generatedAt));
+  $('#timezone-note').textContent = `Search Console compte les journées en heure du Pacifique, GA4 en ${data.gaTimeZone} : les jours ne coïncident pas exactement. GA4 ne voit que les visiteurs qui acceptent les cookies.`;
+  renderCompareBar(); renderKpis(); renderCategories(); renderChart(); renderInsights(); renderTable();
 }
+function rerenderComparisons() { renderCompareBar(); renderKpis(); renderInsights(); renderTable(); }
 function openPage(path) {
   const page = data?.pages.find(p => p.path === path); if (!page) return;
   $('#detail-category').textContent = page.category;
@@ -148,12 +191,13 @@ function openPage(path) {
   const link = $('#detail-url');
   link.hidden = page.path === '(not set)';
   if (!link.hidden) { link.href = new URL(page.path, data.siteUrl).href; link.textContent = link.href + ' ↗'; }
-  $('#detail-metrics').innerHTML = Object.keys(metrics).map(key => `<article class="detail-card"><div class="detail-source">${metrics[key].source === 'gsc' ? 'SEARCH CONSOLE' : 'GOOGLE ANALYTICS 4'}</div><div class="detail-label">${esc(metrics[key].name)}</div>${cell(page, key)}</article>`).join('');
-  $('#detail-periods').innerHTML = `<div class="detail-periods"><strong>WoW</strong> ${esc(range(data.periods.week))} / ${esc(range(data.periods.previousWeek))}<br><strong>MoM</strong> ${esc(range(data.periods.month))} / ${esc(range(data.periods.previousMonth))}</div>`;
-  const notes = ['Sessions et événements clés : attribués à la page d’entrée. Vues et temps engagé : attribués à la page consultée.'];
-  if (Object.values(page.periods).some(p => p.usersApproximate)) notes.push('Plusieurs variantes d’URL sont regroupées : les utilisateurs entrants de cette ligne peuvent inclure des doublons.');
-  if (!page.inSitemap) notes.push('Cette URL ne figure pas dans le sitemap local.');
-  if (!Object.values(page.periods).some(p => p.hasGsc)) notes.push('Aucune ligne Search Console renvoyée pour cette URL sur les périodes chargées. Cela ne suffit pas à conclure à une absence d’indexation.');
+  const other = compareMode === 'WoW' ? 'MoM' : 'WoW';
+  $('#detail-metrics').innerHTML = Object.keys(metrics).map(key => `<article class="detail-card"><div class="detail-source">${metrics[key].source === 'gsc' ? 'Google' : 'GA4'}</div><div class="detail-label" title="${esc(metrics[key].hint)}">${esc(metrics[key].name)}</div>${cell(page, key)}<div class="detail-other">${esc(COMPARE[other].shortLabel)} ${comparison(page, key, other)}</div></article>`).join('');
+  $('#detail-periods').innerHTML = `<div class="detail-periods"><strong>Valeurs :</strong> ${esc(range(data.periods.range))}<br><strong>${esc(COMPARE[compareMode].label)} :</strong> ${esc(periodsOf(compareMode))}<br><strong>${esc(COMPARE[other].label)} :</strong> ${esc(periodsOf(other))}</div>`;
+  const notes = ['Visites et actions clés : visites qui ont commencé sur cette page. Pages vues et temps de lecture : toutes les visites de la page.'];
+  if (Object.values(page.periods).some(p => p.usersApproximate)) notes.push('Plusieurs variantes d’URL sont regroupées : le nombre de visiteurs peut inclure des doublons.');
+  if (!page.inSitemap) notes.push('Cette URL ne figure pas dans le sitemap.');
+  if (!Object.values(page.periods).some(p => p.hasGsc)) notes.push('Google n’a renvoyé aucune donnée pour cette page sur la période — ce n’est pas une preuve qu’elle n’est pas indexée.');
   $('#detail-note').textContent = notes.join(' ');
   $('#page-dialog').showModal();
 }
@@ -170,10 +214,10 @@ async function load() {
     const running = !!body.job?.running;
     $('#refresh').disabled = running; $('#refresh-icon').classList.toggle('spinning', running);
     $('#progress').textContent = body.job?.progress || 'Connexion aux API…';
-    $('#connection').innerHTML = '<i></i>' + (running ? 'Actualisation en cours' : body.data ? 'Données API · cache local' : 'Connexion à vérifier');
+    $('#connection').innerHTML = '<i></i>' + (running ? 'Actualisation en cours' : body.data ? 'Données en cache local' : 'Connexion à vérifier');
     const warnings = [...(body.data?.warnings || []), ...(body.job?.error ? [body.job.error + ' Le dernier cache disponible est conservé.'] : [])];
     const age = body.data ? Date.now() - Date.parse(body.data.generatedAt) : 0;
-    if (age > 86400000) warnings.unshift('Le cache a plus de 24 heures. Actualisez les API pour obtenir une vue récente.');
+    if (age > 86400000) warnings.unshift('Ces données ont plus de 24 heures. Cliquez sur « Actualiser » pour les mettre à jour.');
     $('#warnings').innerHTML = warnings.map(w => `<div class="warning">${esc(w)}</div>`).join('');
     if (!body.data && !running && body.job?.error) { $('#loading').hidden = true; $('#dashboard').hidden = true; }
     if (running) timer = setTimeout(load, 1500);
@@ -191,7 +235,7 @@ function csvField(value) {
 function exportCsv() {
   if (!data) return;
   const keys = Object.keys(metrics), periods = ['range', 'week', 'previousWeek', 'month', 'previousMonth'];
-  const header = ['Categorie', 'Page', 'URL', 'Canal GA4', ...keys.flatMap(key => [...periods.map(p => `${metrics[key].name} ${data.periods[p].start} au ${data.periods[p].end}`), `${metrics[key].name} WoW (${metrics[key].change || '%'})`, `${metrics[key].name} MoM (${metrics[key].change || '%'})`])];
+  const header = ['Categorie', 'Page', 'URL', 'Canal GA4', ...keys.flatMap(key => [...periods.map(p => `${metrics[key].tech} ${data.periods[p].start} au ${data.periods[p].end}`), `${metrics[key].tech} vs semaine precedente (${metrics[key].change || '%'})`, `${metrics[key].tech} vs mois precedent (${metrics[key].change || '%'})`])];
   const rows = filteredPages().map(page => [page.category, page.title, page.path === '(not set)' ? page.path : new URL(page.path, data.siteUrl).href, channel, ...keys.flatMap(key => [...periods.map(period => value(page, key, period)), difference(value(page, key, 'week'), value(page, key, 'previousWeek'), key).raw, difference(value(page, key, 'month'), value(page, key, 'previousMonth'), key).raw])]);
   const content = '\uFEFF' + [header, ...rows].map(row => row.map(csvField).join(';')).join('\r\n');
   const href = URL.createObjectURL(new Blob([content], { type: 'text/csv;charset=utf-8' }));
@@ -199,14 +243,16 @@ function exportCsv() {
 }
 
 $('#categories').addEventListener('click', event => { const button = event.target.closest('[data-category]'); if (button) { selectedCategory = button.dataset.category; renderCategories(); renderTable(); } });
+$('#category-select').addEventListener('change', () => { selectedCategory = $('#category-select').value; renderCategories(); renderTable(); });
 $('#all-pages').addEventListener('click', () => { selectedCategory = ''; if (data) { renderCategories(); renderTable(); } });
 $('.tabs').addEventListener('click', event => { const button = event.target.closest('[data-view]'); if (!button) return; selectedView = button.dataset.view; for (const tab of document.querySelectorAll('[data-view]')) { tab.classList.toggle('selected', tab === button); tab.setAttribute('aria-selected', String(tab === button)); } if (!views[selectedView].includes(sortKey)) sortKey = views[selectedView][0]; renderTable(); });
+$('#compare-tabs').addEventListener('click', event => { const button = event.target.closest('[data-compare]'); if (!button || !data) return; compareMode = button.dataset.compare; rerenderComparisons(); });
 $('#table-head').addEventListener('click', event => { const button = event.target.closest('[data-sort]'); if (button) { ascending = sortKey === button.dataset.sort ? !ascending : false; sortKey = button.dataset.sort; renderTable(); } });
 document.addEventListener('click', event => { const button = event.target.closest('[data-page]'); if (button) openPage(button.dataset.page); });
 $('#search').addEventListener('input', renderTable); $('#hide-empty').addEventListener('change', renderTable);
 $('#channel').addEventListener('change', () => { channel = $('#channel').value; data = null; displayedGeneration = ''; $('#dashboard').hidden = true; $('#loading').hidden = false; load(); });
 $('#chart-metric').addEventListener('change', renderChart);
-$('#chart').addEventListener('mousemove', event => { const tooltip = $('.chart-tooltip'); if (!tooltip || !chartRows.length) return; const rect = $('#chart').getBoundingClientRect(); const index = Math.max(0, Math.min(chartRows.length - 1, Math.round((event.clientX - rect.left) / rect.width * (chartRows.length - 1)))); const row = chartRows[index]; tooltip.hidden = false; tooltip.textContent = `${date(row.date)} · ${format(row.value, $('#chart-metric').value)}`; tooltip.style.left = Math.min(Math.max(0, event.clientX - rect.left - 40), rect.width - 140) + 'px'; });
+$('#chart').addEventListener('mousemove', event => { const tooltip = $('.chart-tooltip'); if (!tooltip || !chartRows.length) return; const rect = $('#chart').getBoundingClientRect(); const left = rect.width * 34 / 650; const index = Math.max(0, Math.min(chartRows.length - 1, Math.round((event.clientX - rect.left - left) / (rect.width - left) * (chartRows.length - 1)))); const row = chartRows[index]; tooltip.hidden = false; tooltip.textContent = `${date(row.date)} · ${format(row.value, $('#chart-metric').value)}`; tooltip.style.left = Math.min(Math.max(0, event.clientX - rect.left - 40), rect.width - 150) + 'px'; });
 $('#chart').addEventListener('mouseleave', () => { const tooltip = $('.chart-tooltip'); if (tooltip) tooltip.hidden = true; });
 $('#detail-close').addEventListener('click', () => $('#page-dialog').close()); $('#method-open').addEventListener('click', () => $('#method-dialog').showModal()); $('#method-close').addEventListener('click', () => $('#method-dialog').close());
 for (const dialog of document.querySelectorAll('dialog')) dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
