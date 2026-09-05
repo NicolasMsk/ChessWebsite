@@ -347,6 +347,7 @@
       <ul class="nav-menu">
         <li><a href="#about" class="nav-link">À propos</a></li>
         <li><a href="guide-apprendre-les-echecs.html" class="nav-link">Le guide</a></li>
+        <li><a href="idee-cadeau-echecs.html" class="nav-link">Cadeau</a></li>
         <li><a href="zones/" class="nav-link">Zones</a></li>
         <li><a href="blog/" class="nav-link">Blog</a></li>
         <li><a href="#tarifs" class="nav-link">Tarifs</a></li>
@@ -689,7 +690,7 @@
 
         <script>
           (function () {
-            const WORKER_URL = 'https://chess-lead-magnet.chess-musicki.workers.dev';
+            const SUBSCRIBE_ENDPOINT = 'https://chess-lead-magnet.chess-musicki.workers.dev/subscribe';
             const form = document.getElementById('home-lead-form');
             const btn = document.getElementById('hlm-submit');
             const emailInput = document.getElementById('hlm-email');
@@ -712,7 +713,7 @@
               btn.textContent = 'Envoi…';
 
               try {
-                const res = await fetch(WORKER_URL + '/subscribe', {
+                const res = await fetch(SUBSCRIBE_ENDPOINT, {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({ email: email, why: 'home_lead_magnet' }),
@@ -741,12 +742,12 @@
       <!-- Renvoi secondaire vers l'édition reliée : la réservation reste le CTA principal -->
       <aside class="book-referral" id="edition-reliee" aria-labelledby="book-referral-title">
         <img src="images/reliure/pack-principal.webp"
-             alt="Les deux volumes reliés à la main d'Apprendre les Échecs"
+             alt="Apprendre les Échecs relié à la main, photographié dans l'édition précédente en deux volumes"
              width="320" height="240" loading="lazy" decoding="async">
         <div class="book-referral-content">
           <div class="book-referral-eyebrow">Édition artisanale</div>
           <h3 id="book-referral-title">Apprendre les Échecs, en livre relié</h3>
-          <p>Deux volumes cousus main par une relieuse professionnelle, imprimés sur papier ivoire, numérotés et signés.</p>
+          <p>Un volume unique cousu main par une relieuse professionnelle, imprimé sur papier ivoire, numéroté et signé.</p>
           <a href="edition-raffinee/" class="book-referral-link">Découvrez le livre relié →</a>
         </div>
       </aside>
@@ -1112,6 +1113,7 @@
             <li><a href="blog/cours-echecs-enfants-paris.html">Cours enfants à Paris</a></li>
             <li><a href="zones/cours-echecs-versailles.html">Cours à Versailles (78)</a></li>
             <li><a href="cours-echecs-en-visio.html">Cours en visio — France et international</a></li>
+            <li><a href="idee-cadeau-echecs.html">Offrir un cours d'échecs</a></li>
             <li><a href="blog/cours-echecs-en-ligne-vs-presentiel.html">En ligne ou présentiel ?</a></li>
             <li><a href="guide-apprendre-les-echecs.html">Guide « Apprendre les Échecs »</a></li>
           </ul>

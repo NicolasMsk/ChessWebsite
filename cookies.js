@@ -142,7 +142,7 @@
         '<span class="cc-emoji">🍪</span>' +
         '<span class="cc-title" id="chess-cookie-title">Ce site utilise des cookies</span>' +
       '</div>' +
-      '<p id="chess-cookie-description">Nous utilisons des cookies pour mesurer l\'audience du site via Google Analytics. Aucun cookie n\'est déposé sans votre accord. <a href="mentions-legales.html">En savoir plus</a></p>' +
+      '<p id="chess-cookie-description">Nous utilisons des cookies pour mesurer l\'audience du site via Google Analytics. Aucun cookie n\'est déposé sans votre accord. <a href="/mentions-legales.html">En savoir plus</a></p>' +
       '<div class="cc-buttons">' +
         '<button class="cc-refuse" type="button">Refuser</button>' +
         '<button class="cc-accept" type="button">Accepter</button>' +

@@ -2,6 +2,40 @@
 
 Ce document sert à mesurer les effets des changements SEO dans Search Console et GA4. Les comparaisons doivent porter sur des fenêtres de durée identique et tenir compte de la saisonnalité.
 
+## Lot 4 — idée cadeau échecs — 4 septembre 2026
+
+### Point de départ
+
+- Les demandes pour offrir des cours d'échecs arrivaient sans page dédiée à cette intention.
+- Le site ne répondait pas directement aux recherches `idée cadeau échecs`, `offrir un cours d'échecs` et `bon cadeau échecs`.
+
+### Modifications
+
+- Création de `/idee-cadeau-echecs.html`, page commerciale autonome pour offrir une ou plusieurs séances à un enfant ou un adulte.
+- Présentation des deux formats réellement proposés : 40 €/h en visio et 50 €/h à domicile à Paris ou Versailles, sous réserve de validation du déplacement.
+- Ajout d'un parcours en quatre étapes, d'exemples de budget, d'un tableau par profil et d'une FAQ dont les réponses restent identiques aux données structurées.
+- Ajout des données structurées `WebPage`, `Service`, `OfferCatalog`, `FAQPage` et `BreadcrumbList`.
+- Mise en forme de packs cohérents avec le premier cours offert de la page d'accueil : 2 séances 40 € ou 50 €, 3 séances 80 € ou 100 €, 5 séances 160 € ou 200 €. Le tarif horaire est inchangé, seul l'effet de pack est nouveau. Les exemples de budget antérieurs (120 €, 150 €, 200 €, 250 €) ne déduisaient pas la séance offerte et étaient donc faux.
+- Distinction explicite entre visio, sans contrainte de lieu, et présentiel, soumis à validation de la durée du trajet.
+- Ajout d'une section « occasion » (Noël, anniversaire, fêtes des pères et des mères, fin d'année scolaire, retraite, pot de départ) et de la formulation « passionné d'échecs », absentes jusque-là.
+- Ajout d'une section dédiée au livre relié à la main, avec photo, prix et renvoi vers `/edition-raffinee/`.
+- Corrections d'accessibilité : contraste de l'or porté à 4,8:1 sur blanc, tableaux encapsulés dans un conteneur défilable, fil d'Ariane en `nav`, règles d'impression.
+
+### Correction d'une page en erreur 404
+
+- `/edition-raffinee/` était déclarée au sitemap et liée depuis la page d'accueil, mais exclue du dépôt par `.gitignore` : elle renvoyait donc une erreur 404 en production, sur un produit à 64,99 €.
+- `.gitignore` restreint désormais l'exclusion au contenu du dossier, en publiant uniquement `index.html`. Les PDF du livre, les scripts de fabrication et les profils de navigateur restent exclus.
+- Page mise à jour pour le volume unique remplaçant les deux tomes, photos de l'édition précédente conservées avec une mention explicite.
+- Ajout au sitemap, à `llms.txt`, au menu de l'accueil et du blog, à la page visio et aux pages contextuellement pertinentes.
+- Conservation de tout le contenu commercial important sous forme de texte HTML directement accessible, sans dépendance à JavaScript.
+
+### Mesure prévue
+
+- Après publication : inspecter l'URL dans Search Console, tester l'URL en direct et demander son indexation.
+- À 28 jours : mesurer impressions, clics et position sur les requêtes liées aux cadeaux et bons cadeaux échecs.
+- À 56 jours : comparer les clics email et téléphone provenant de cette page avec ceux des autres pages commerciales.
+- Ne modifier le title qu'après un volume d'impressions suffisant pour interpréter le CTR.
+
 ## Lot 3 — offre visio France et international — 20 août 2026
 
 ### Point de départ

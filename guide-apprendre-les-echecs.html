@@ -931,7 +931,7 @@
     (function () {
       // ⚠️ REMPLACE cette URL par celle de ton Worker Cloudflare après déploiement
       // (fourni par `wrangler deploy`, du type https://chess-lead-magnet.TON-NOM.workers.dev)
-      const WORKER_URL = 'https://chess-lead-magnet.chess-musicki.workers.dev';
+      const SUBSCRIBE_ENDPOINT = 'https://chess-lead-magnet.chess-musicki.workers.dev/subscribe';
 
       const form = document.getElementById('ebook-form');
       const btn = document.getElementById('ebook-submit-btn');
@@ -955,7 +955,7 @@
         btn.textContent = 'Envoi en cours…';
 
         try {
-          const res = await fetch(WORKER_URL + '/subscribe', {
+          const res = await fetch(SUBSCRIBE_ENDPOINT, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: email, why: 'page_guide' }),

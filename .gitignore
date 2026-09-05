@@ -37,7 +37,10 @@ build/
 # ============================================================
 temp/
 campagnes-email/
-edition-raffinee/
+# edition-raffinee : la page de vente doit etre publiee, mais surtout PAS
+# les PDF du livre (contenu payant), les scripts de fabrication ni les profils.
+edition-raffinee/*
+!edition-raffinee/index.html
 brouillons/
 drafts/
 
@@ -57,6 +60,17 @@ echiquier_chesscom.png
 # Pages web sauvegardées depuis un navigateur (déchet)
 *_files/
 *.mhtml
+
+# Profils de navigateur créés pour les captures et previews.
+# Contiennent cookies, historique et identifiants : ne doivent JAMAIS
+# entrer dans le dépôt ni être déployés.
+*profile*/
+*-profile-*/
+.chrome-*/
+.edge-*/
+.playwright-mcp/
+**/Default/Login Data
+**/Default/Cookies
 
 # ============================================================
 #  SYSTÈME ET ÉDITEURS

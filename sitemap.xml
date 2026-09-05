@@ -25,10 +25,18 @@
     <priority>0.95</priority>
   </url>
 
+  <!-- Bon cadeau pour offrir des cours d'échecs -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/idee-cadeau-echecs.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Édition artisanale reliée -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/edition-raffinee/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -79,7 +87,7 @@
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/echecs-vs-jeux-video.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -213,7 +221,7 @@
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/cours-echecs-adultes-paris.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
