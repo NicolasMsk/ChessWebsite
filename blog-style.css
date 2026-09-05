@@ -1119,3 +1119,120 @@ button:focus {
     z-index: 1;
   }
 }
+
+/* Diagrammes d'échiquier (SVG générés depuis les positions du guide) */
+.diagramme {
+  margin: 28px auto;
+  max-width: 400px;
+  text-align: center;
+}
+.diagramme img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+.diagramme figcaption {
+  font-family: Lora, serif;
+  font-size: 14px;
+  color: #6b5a48;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+.diagrammes-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin: 28px 0;
+}
+.diagrammes-2 .diagramme { margin: 0; max-width: none; }
+
+/* Formulaire du guide gratuit, intégré aux articles (POST vers le Worker) */
+.guide-form-box {
+  background: linear-gradient(135deg, #F0D9B5 0%, #D4A56A 100%);
+  border-radius: 12px;
+  padding: 28px;
+  margin: 36px 0;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 24px rgba(139, 90, 43, 0.18);
+}
+.guide-form-box img {
+  width: 110px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+.guide-form-body { flex: 1; min-width: 240px; }
+.guide-form-kicker {
+  font-family: Montserrat, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #3E2C1C;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+.guide-form-box h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  color: #3E2C1C;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+.guide-form-box p {
+  font-family: Lora, serif;
+  font-size: 15px;
+  color: #3E2C1C;
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+.guide-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.guide-form input[type="email"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 13px 16px;
+  border: 1.5px solid #b08a5a;
+  border-radius: 8px;
+  font-family: Lora, serif;
+  font-size: 16px;
+  background: #fff;
+  color: #3a3a3a;
+}
+.guide-form input[type="email"]:focus {
+  outline: none;
+  border-color: #3E2C1C;
+  box-shadow: 0 0 0 4px rgba(62, 44, 28, 0.15);
+}
+.guide-form button {
+  background: #3E2C1C;
+  color: #F0D9B5;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 22px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.guide-form button:hover:not(:disabled) { background: #5C3317; }
+.guide-form button:disabled { opacity: 0.6; cursor: wait; }
+.guide-form-box .guide-form-consent { font-size: 12.5px; opacity: 0.8; margin: 10px 0 0; }
+.guide-form-msg {
+  display: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: Lora, serif;
+  font-size: 15px;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+.guide-form-msg.show { display: block; }
+.guide-form-msg.success { background: #e7f4ea; color: #1f5f34; }
+.guide-form-msg.error { background: #fdecea; color: #8b2a1f; }

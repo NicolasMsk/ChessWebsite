@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -10 360 350" width="360" height="350" role="img">
+<defs>
+<pattern id="cases" width="80" height="80" patternUnits="userSpaceOnUse">
+<rect width="80" height="80" fill="#F0D9B5"/><rect width="40" height="40" fill="#B58863"/><rect x="40" y="40" width="40" height="40" fill="#B58863"/>
+</pattern>
+<marker id="pointe" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B05E17"/></marker>
+<symbol id="wR" viewBox="0 0 45 45"><g fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path stroke-linecap="butt" d="M9 39h27v-3H9v3zm3-3v-4h21v4H12zm-1-22V9h4v2h5V9h5v2h5V9h4v5"/><path d="m34 14-3 3H14l-3-3"/><path stroke-linecap="butt" stroke-linejoin="miter" d="M31 17v12.5H14V17"/><path d="m31 29.5 1.5 2.5h-20l1.5-2.5"/><path fill="none" stroke-linejoin="miter" d="M11 14h23"/></g></symbol>
+</defs>
+<rect x="0" y="0" width="320" height="320" fill="url(#cases)" stroke="#1a1a1a" stroke-width="2"/>
+<rect x="120" y="280" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="120" y="240" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="120" y="200" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="120" y="120" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="120" y="80" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="120" y="40" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="120" y="0" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="0" y="160" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="40" y="160" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="80" y="160" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="160" y="160" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="200" y="160" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="240" y="160" width="40" height="40" fill="#FFD54F" opacity="0.5"/><rect x="280" y="160" width="40" height="40" fill="#FFD54F" opacity="0.5"/>
+<g><use href="#wR" x="120" y="160" width="40" height="40"/></g>
+
+<g font-family="Georgia,serif" font-size="13" fill="#5a4632" text-anchor="middle"><text x="20" y="340">a</text><text x="60" y="340">b</text><text x="100" y="340">c</text><text x="140" y="340">d</text><text x="180" y="340">e</text><text x="220" y="340">f</text><text x="260" y="340">g</text><text x="300" y="340">h</text><text x="-10" y="305">1</text><text x="-10" y="265">2</text><text x="-10" y="225">3</text><text x="-10" y="185">4</text><text x="-10" y="145">5</text><text x="-10" y="105">6</text><text x="-10" y="65">7</text><text x="-10" y="25">8</text></g>
+</svg>
