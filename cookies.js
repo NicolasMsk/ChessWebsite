@@ -6,6 +6,25 @@
   var CONSENT_KEY = 'chess-cookie-consent';
   var GA_ID = 'G-KCK01E71GB';
 
+  // Disponible aussi lorsque le visiteur revient avec un choix déjà mémorisé.
+  window.chessCookiesReset = function () {
+    window['ga-disable-' + GA_ID] = true;
+    window.gtag = undefined;
+    localStorage.removeItem(CONSENT_KEY);
+    // Les cookies GA peuvent appartenir au domaine courant ou au domaine parent.
+    var hostParts = location.hostname.split('.');
+    document.cookie.split(';').forEach(function (entry) {
+      var name = entry.split('=')[0].trim();
+      if (!/^(_ga($|_)|_gid$|_gat($|_))/.test(name)) return;
+      var expired = name + '=; Max-Age=0; path=/; SameSite=Lax';
+      document.cookie = expired;
+      for (var i = 0; i < hostParts.length - 1; i++) {
+        document.cookie = expired + '; domain=' + hostParts.slice(i).join('.');
+      }
+    });
+    location.reload();
+  };
+
   // ===== Suivi des conversions (GA4) — câblé AVANT les retours anticipés =====
   // Les écouteurs sont attachés dans tous les cas ; ils n'envoient l'événement
   // que si Google Analytics est chargé (typeof window.gtag === 'function'),
@@ -185,9 +204,4 @@
     gtag('config', GA_ID);
   }
 
-  // Fonction globale pour permettre à l'utilisateur de réouvrir ses préférences
-  window.chessCookiesReset = function () {
-    localStorage.removeItem(CONSENT_KEY);
-    location.reload();
-  };
 })();

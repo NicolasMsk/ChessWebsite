@@ -25,7 +25,12 @@ import {
   orderConfirmationText,
   orderAdminHtml,
   ordersToCsv,
+  csvField,
 } from './order.js';
+import {
+  adminAuthorized, adminSessionRedirect, validAdminSecret, timingSafeEqual,
+  secureResponse, readLimitedText, hash,
+} from './security.js';
 
 const PDF_URL = 'https://www.cours-echecs-paris.fr/fichiers/guide-volume-1-7f3a9c.pdf';
 const FROM_ADDRESS = 'Nicolas Musicki <contact@cours-echecs-paris.fr>';
@@ -34,6 +39,11 @@ const ADMIN_EMAIL = 'nicolas.musicki@gmail.com';
 
 export default {
   async fetch(request, env) {
+    return secureResponse(await routeRequest(request, env));
+  },
+};
+
+async function routeRequest(request, env) {
     // Réponse CORS préliminaire
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: corsHeaders(env) });
@@ -43,6 +53,27 @@ export default {
     const path = url.pathname;
 
     try {
+      // Les anciens favoris restent utilisables, mais le secret ne figure plus
+      // dans les liens de navigation ni dans les réponses contenant des données.
+      const adminPaths = ['/admin', '/subscribers', '/subscribers/export.csv', '/orders', '/orders/export.csv'];
+      if (request.method === 'GET' && adminPaths.includes(path) && url.searchParams.has('token')) {
+        if (!validAdminSecret(env.ADMIN_TOKEN) || !timingSafeEqual(url.searchParams.get('token'), env.ADMIN_TOKEN)) {
+          return jsonResponse({ error: 'Non autorisé' }, 401, env);
+        }
+        return await adminSessionRedirect(path, env);
+      }
+      if (path === '/admin' && request.method === 'POST') {
+        const origin = request.headers.get('Origin');
+        if (origin && origin !== url.origin) return new Response('Non autorisé', { status: 403 });
+        if (env.SUBSCRIBE_IP_LIMITER && !(await env.SUBSCRIBE_IP_LIMITER.limit({ key: `admin:${request.headers.get('CF-Connecting-IP') || 'unknown'}` })).success) {
+          return new Response('Réessayez dans une minute', { status: 429, headers: { 'Retry-After': '60' } });
+        }
+        const form = new URLSearchParams(await readLimitedText(request, 4096));
+        if (!validAdminSecret(env.ADMIN_TOKEN) || !timingSafeEqual(form.get('token'), env.ADMIN_TOKEN)) {
+          return new Response('Non autorisé', { status: 401 });
+        }
+        return await adminSessionRedirect('/admin', env);
+      }
       if (path === '/subscribe' && request.method === 'POST') {
         return await handleSubscribe(request, env);
       }
@@ -71,17 +102,19 @@ export default {
       }
       return new Response('Not found', { status: 404 });
     } catch (err) {
-      console.error('Error:', err);
-      return jsonResponse({ error: 'Erreur serveur' }, 500, env);
+      console.error('Request failed:', err.status || 500);
+      return jsonResponse({ error: err.status === 413 ? 'Requête trop volumineuse' : 'Erreur serveur' }, err.status === 413 ? 413 : 500, env);
     }
-  },
-};
+}
 
 // ============================================================
 // ENDPOINT : /subscribe (POST)
 // ============================================================
 async function handleSubscribe(request, env) {
-  const body = await request.json().catch(() => ({}));
+  const raw = await readLimitedText(request, 4096);
+  let body;
+  try { body = JSON.parse(raw); } catch { body = {}; }
+  if (!body || typeof body !== 'object' || Array.isArray(body)) body = {};
   const email = normalizeEmail(body.email);
   const why = (body.why || 'guide_gratuit').toString().trim().slice(0, 100);
 
@@ -89,10 +122,27 @@ async function handleSubscribe(request, env) {
     return jsonResponse({ error: 'Email invalide' }, 400, env);
   }
 
-  // Vérifier les doublons (soft-succeed : renvoyer quand même le PDF)
+  // Protection Cloudflare par IP et adresse ; les compteurs sont locaux au
+  // point de présence. Le délai KV complète cette limite (sans atomicité globale).
+  if (!env.SUBSCRIBE_IP_LIMITER || !env.SUBSCRIBE_EMAIL_LIMITER) {
+    return jsonResponse({ error: 'Le formulaire est temporairement indisponible. Réessayez plus tard.' }, 503, env);
+  }
+  const emailHash = await hash(email);
+  const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+  const ipAllowed = await env.SUBSCRIBE_IP_LIMITER.limit({ key: `subscribe:${ip}` });
+  const emailAllowed = ipAllowed.success && (await env.SUBSCRIBE_EMAIL_LIMITER.limit({ key: emailHash })).success;
+  const cooldownKey = `guide-cooldown:${emailHash}`;
+  if (!emailAllowed || await env.SUBSCRIBERS.get(cooldownKey)) {
+    const response = jsonResponse({ error: 'Veuillez patienter quelques minutes avant de redemander le guide. Vérifiez aussi vos courriers indésirables.' }, 429, env);
+    response.headers.set('Retry-After', '600');
+    return response;
+  }
+  await env.SUBSCRIBERS.put(cooldownKey, '1', { expirationTtl: 600 });
+
+  // Une nouvelle demande reste possible après le délai de dix minutes.
   const existing = await env.SUBSCRIBERS.get(`email:${email}`);
   const isNew = !existing;
-  let totalCount = null;
+  const totalCount = null;
 
   if (isNew) {
     const id = crypto.randomUUID();
@@ -102,10 +152,6 @@ async function handleSubscribe(request, env) {
     await env.SUBSCRIBERS.put(`subscriber:${id}`, JSON.stringify(record));
     await env.SUBSCRIBERS.put(`email:${email}`, id);
 
-    try {
-      const all = await fetchAllSubscribers(env);
-      totalCount = all.length;
-    } catch {}
   }
 
   // Envoi de l'email avec le PDF
@@ -140,7 +186,7 @@ async function handleSubscribe(request, env) {
 // ============================================================
 async function handleStripeWebhook(request, env) {
   const signature = request.headers.get('Stripe-Signature') || '';
-  const rawBody = await request.text();
+  const rawBody = await readLimitedText(request, 262144);
 
   const valid = await verifyStripeSignature(rawBody, signature, env.STRIPE_WEBHOOK_SECRET);
   if (!valid) {
@@ -154,8 +200,12 @@ async function handleStripeWebhook(request, env) {
     return new Response('Invalid payload', { status: 400 });
   }
 
-  if (event.type === 'checkout.session.completed') {
+  if (!event || typeof event !== 'object') return new Response('Invalid payload', { status: 400 });
+
+  if (event.type === 'checkout.session.completed' || event.type === 'checkout.session.async_payment_succeeded') {
     const session = event.data?.object || {};
+    if (typeof session.id !== 'string' || !session.id) return new Response('Invalid session', { status: 400 });
+    if (session.payment_status !== 'paid') return jsonResponse({ received: true }, 200, env);
 
     // AIGUILLAGE PRODUIT — à ne jamais déplacer plus bas.
     // Le pack de livres reliés a son propre traitement et ne doit surtout pas
@@ -184,23 +234,15 @@ async function handleStripeWebhook(request, env) {
         console.error('KV store failed:', err);
       }
 
-      // Envoi de l'email avec le lien du guide (best-effort)
-      try {
-        await sendGuideEmail(email, env);
-      } catch (err) {
-        console.error('Guide email failed:', err);
-      }
-
-      // Notification admin (best-effort)
-      try {
-        await sendAdminNotification({ email, why: 'achat_stripe', totalCount: null }, env);
-      } catch (err) {
-        console.error('Admin notification failed:', err);
-      }
+      // Ne relancer que les notifications qui n'ont pas encore réussi.
+      await deliverNotifications([
+        [`payment:${session.id}:guide`, key => sendGuideEmail(email, env, key)],
+        [`payment:${session.id}:admin`, key => sendAdminNotification({ email, why: 'achat_stripe', totalCount: null, sentAt: Number(session.created || 0) * 1000 }, env, key)],
+      ], env);
     }
   }
 
-  // Toujours répondre 200 pour éviter les relances Stripe
+  // Acquitter après traitement ; les échecs remontent en 500 pour permettre la relance.
   return new Response(JSON.stringify({ received: true }), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
@@ -219,44 +261,51 @@ async function handlePackOrder(session, env) {
 
   const key = `order:${session.id}`;
 
-  // Idempotence : Stripe rejoue les events en échec pendant plusieurs jours.
-  const deja = await env.SUBSCRIBERS.get(key);
-  if (deja) {
-    console.log('Pack order already processed:', session.id);
-    return;
-  }
-
-  const order = buildOrderRecord(session, new Date().toISOString());
-
-  // Écriture AVANT les emails : si Resend tombe, la commande reste récupérable
-  // via /orders. Une commande payée mais perdue est le pire échec possible.
-  await env.SUBSCRIBERS.put(key, JSON.stringify(order));
-
-  if (isValidEmail(order.email)) {
-    try {
-      await sendOrderConfirmationEmail(order, env);
-    } catch (err) {
-      console.error('Order confirmation email failed:', err);
-    }
+  const existing = await env.SUBSCRIBERS.get(key);
+  let order;
+  if (existing) {
+    order = JSON.parse(existing);
+    // Les anciennes commandes ne sont ni modifiées ni renotifiées à la migration.
+    if (!order.notificationTracking) return;
   } else {
-    console.error('Order without valid email:', session.id);
+    order = { ...buildOrderRecord(session, new Date(Number(session.created || 0) * 1000).toISOString()), notificationTracking: true };
+    await env.SUBSCRIBERS.put(key, JSON.stringify(order));
   }
 
-  try {
-    await sendOrderAdminNotification(order, env);
-  } catch (err) {
-    console.error('Order admin notification failed:', err);
+  const notifications = [
+    [`payment:${session.id}:order-admin`, id => sendOrderAdminNotification(order, env, id)],
+  ];
+  if (isValidEmail(order.email)) {
+    notifications.unshift([`payment:${session.id}:order-client`, id => sendOrderConfirmationEmail(order, env, id)]);
   }
+  await deliverNotifications(notifications, env);
+}
+
+async function deliverNotifications(notifications, env) {
+  let failed = false;
+  for (const [key, send] of notifications) {
+    try {
+      if (await env.SUBSCRIBERS.get(`delivered:${key}`)) continue;
+      const result = await send(key);
+      if (!result.ok) throw new Error('Email provider refused delivery');
+      await env.SUBSCRIBERS.put(`delivered:${key}`, '1');
+    } catch {
+      failed = true;
+      console.error('Payment notification failed; retry required');
+    }
+  }
+  if (failed) throw new Error('Payment notifications incomplete');
 }
 
 // ============================================================
 // Emails de commande
 // ============================================================
-async function sendOrderConfirmationEmail(order, env) {
+async function sendOrderConfirmationEmail(order, env, idempotencyKey) {
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      ...(idempotencyKey ? { 'Idempotency-Key': idempotencyKey } : {}),
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -271,12 +320,13 @@ async function sendOrderConfirmationEmail(order, env) {
   return { ok: response.ok, status: response.status };
 }
 
-async function sendOrderAdminNotification(order, env) {
+async function sendOrderAdminNotification(order, env, idempotencyKey) {
   const montant = ((Number(order.amount_total) || 0) / 100).toFixed(2).replace('.', ',');
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      ...(idempotencyKey ? { 'Idempotency-Key': idempotencyKey } : {}),
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -303,9 +353,9 @@ async function verifyStripeSignature(payload, sigHeader, secret) {
   }
   if (!timestamp || signatures.length === 0) return false;
 
-  // Note : pas de contrôle de fraîcheur de l'horodatage — Stripe relance les
-  // events en échec pendant plusieurs heures/jours, et un éventuel rejeu ne
-  // ferait que renvoyer le guide (sans risque). La signature HMAC suffit.
+  // Stripe génère un nouvel horodatage et une nouvelle signature à chaque relance.
+  if (!/^\d+$/.test(timestamp) || !Number.isSafeInteger(Number(timestamp)) ||
+      Math.abs(Math.floor(Date.now() / 1000) - Number(timestamp)) > 300) return false;
   const signedPayload = `${timestamp}.${payload}`;
   const key = await crypto.subtle.importKey(
     'raw',
@@ -320,20 +370,12 @@ async function verifyStripeSignature(payload, sigHeader, secret) {
   return signatures.some((sig) => timingSafeEqual(sig, expected));
 }
 
-function timingSafeEqual(a, b) {
-  if (a.length !== b.length) return false;
-  let result = 0;
-  for (let i = 0; i < a.length; i++) {
-    result |= a.charCodeAt(i) ^ b.charCodeAt(i);
-  }
-  return result === 0;
-}
 
 // ============================================================
 // ENDPOINT : /subscribers (GET, admin)
 // ============================================================
 async function handleListSubscribers(request, env) {
-  if (!isAdminAuthorized(request, env)) {
+  if (!await adminAuthorized(request, env)) {
     return jsonResponse({ error: 'Non autorisé' }, 401, env);
   }
 
@@ -347,7 +389,7 @@ async function handleListSubscribers(request, env) {
 // ENDPOINT : /subscribers/export.csv (GET, admin)
 // ============================================================
 async function handleExportCsv(request, env) {
-  if (!isAdminAuthorized(request, env)) {
+  if (!await adminAuthorized(request, env)) {
     return new Response('Non autorisé', { status: 401 });
   }
 
@@ -356,7 +398,7 @@ async function handleExportCsv(request, env) {
 
   let csv = 'id,date,email,why\n';
   for (const s of subscribers) {
-    csv += `"${s.id}","${s.date}","${s.email}","${s.why}"\n`;
+    csv += [s.id, s.date, s.email, s.why].map(csvField).join(',') + '\n';
   }
 
   return new Response(csv, {
@@ -392,7 +434,7 @@ async function fetchAllOrders(env) {
 }
 
 async function handleListOrders(request, env) {
-  if (!isAdminAuthorized(request, env)) {
+  if (!await adminAuthorized(request, env)) {
     return jsonResponse({ error: 'Non autorisé' }, 401, env);
   }
   const orders = await fetchAllOrders(env);
@@ -400,7 +442,7 @@ async function handleListOrders(request, env) {
 }
 
 async function handleExportOrdersCsv(request, env) {
-  if (!isAdminAuthorized(request, env)) {
+  if (!await adminAuthorized(request, env)) {
     return new Response('Non autorisé', { status: 401 });
   }
   const orders = await fetchAllOrders(env);
@@ -413,11 +455,11 @@ async function handleExportOrdersCsv(request, env) {
 }
 
 // ============================================================
-// ENDPOINT : /admin?token=... (GET, page HTML lisible sur mobile)
+// ENDPOINT : /admin (GET, connexion puis page HTML lisible sur mobile)
 // ============================================================
 async function handleAdminPage(request, env) {
-  if (!isAdminAuthorized(request, env)) {
-    return new Response('<!DOCTYPE html><meta charset="utf-8"><body style="font-family:sans-serif;padding:40px;text-align:center;"><h1>⛔️ Non autorisé</h1><p>Token manquant ou invalide. Utilise <code>?token=...</code> dans l\'URL.</p></body>', {
+  if (!await adminAuthorized(request, env)) {
+    return new Response('<!DOCTYPE html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Connexion administrateur</title><body style="font-family:sans-serif;padding:40px;text-align:center;"><h1>Connexion administrateur</h1><p>Connecte-toi pour consulter les inscriptions.</p><form method="post" action="/admin"><label for="token">Clé administrateur</label><br><input id="token" name="token" type="password" required autocomplete="current-password" style="margin:16px;padding:12px"><br><button type="submit">Se connecter</button></form></body></html>', {
       status: 401,
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
     });
@@ -426,7 +468,6 @@ async function handleAdminPage(request, env) {
   const subscribers = await fetchAllSubscribers(env);
   subscribers.sort((a, b) => b.date.localeCompare(a.date));
 
-  const token = encodeURIComponent(env.ADMIN_TOKEN);
   const rows = subscribers.map((s, i) => {
     const dateFr = new Date(s.date).toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
     return `<tr>
@@ -468,8 +509,8 @@ async function handleAdminPage(request, env) {
     <p class="sub"><span class="count">${subscribers.length}</span> inscrits au total</p>
 
     <div class="actions">
-      <a href="/subscribers/export.csv?token=${token}" class="btn">⬇️ Télécharger CSV</a>
-      <a href="/admin?token=${token}" class="btn">🔄 Rafraîchir</a>
+      <a href="/subscribers/export.csv" class="btn">⬇️ Télécharger CSV</a>
+      <a href="/admin" class="btn">🔄 Rafraîchir</a>
     </div>
 
     ${subscribers.length === 0
@@ -510,20 +551,13 @@ async function fetchAllSubscribers(env) {
   return subscribers;
 }
 
-function isAdminAuthorized(request, env) {
-  const auth = request.headers.get('Authorization') || '';
-  if (auth === `Bearer ${env.ADMIN_TOKEN}`) return true;
-  const url = new URL(request.url);
-  const token = url.searchParams.get('token');
-  return token && token === env.ADMIN_TOKEN;
-}
 
 function normalizeEmail(input) {
   return (input || '').toString().trim().toLowerCase();
 }
 
 function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+  return email.length <= 254 && /^[^\s@<>"\u0000-\u001f]+@[^\s@<>"\u0000-\u001f]+\.[^\s@<>"\u0000-\u001f]{2,}$/.test(email);
 }
 
 function corsHeaders(env) {
@@ -545,11 +579,12 @@ function jsonResponse(data, status, env) {
 // ============================================================
 // Envoi d'email via Resend
 // ============================================================
-async function sendGuideEmail(to, env) {
+async function sendGuideEmail(to, env, idempotencyKey) {
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      ...(idempotencyKey ? { 'Idempotency-Key': idempotencyKey } : {}),
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -568,8 +603,8 @@ async function sendGuideEmail(to, env) {
 // ============================================================
 // Notification admin (Nicolas) à chaque nouvelle inscription
 // ============================================================
-async function sendAdminNotification({ email, why, totalCount, isNew = true }, env) {
-  const date = new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
+async function sendAdminNotification({ email, why, totalCount, isNew = true, sentAt = Date.now() }, env, idempotencyKey) {
+  const date = new Date(sentAt).toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
   const total = totalCount != null ? `<p style="margin:6px 0;"><strong>Total inscrits :</strong> ${totalCount}</p>` : '';
   const titre = isNew ? '📩 Nouveau téléchargement du guide' : '🔁 Guide re-téléchargé (email déjà inscrit)';
 
@@ -587,6 +622,7 @@ async function sendAdminNotification({ email, why, totalCount, isNew = true }, e
     method: 'POST',
     headers: {
       Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      ...(idempotencyKey ? { 'Idempotency-Key': idempotencyKey } : {}),
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({

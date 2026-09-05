@@ -1,0 +1,20 @@
+# Publication GitHub Pages/Jekyll : inclure la licence et exclure les outils.
+include:
+  - .well-known
+exclude:
+  - api
+  - docs
+  - temp
+  - tests
+  - scripts
+  - ebook
+  - campagnes-email
+  - node_modules
+  - vendor
+  - SECURITY-AUDIT-2026-09-05.md
+  - GEO-AUDIT-REPORT.md
+  - SEO-CHANGELOG.md
+  - style.css.backup
+  - blog-style.css.backup
+  - blog/ChessWebsite-main.lnk
+  - chess_service_account.json

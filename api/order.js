@@ -256,9 +256,9 @@ export function orderAdminHtml(order) {
  * Préfixe par une apostrophe les valeurs commençant par = + - @, qui seraient
  * sinon interprétées comme des formules par Excel et LibreOffice.
  */
-function csvField(value) {
+export function csvField(value) {
   let v = String(value ?? '');
-  if (/^[=+\-@]/.test(v)) v = `'${v}`;
+  if (/^[\s\u0000-\u001f]*[=+\-@]/.test(v) || /^[\t\r\n]/.test(v)) v = `'${v}`;
   return `"${v.replace(/"/g, '""')}"`;
 }
 

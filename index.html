@@ -726,10 +726,14 @@
                   successMsg.classList.add('show');
                   if (typeof window.chessTrack === 'function') window.chessTrack('ebook_signup', { source: 'home_lead_magnet' });
                 } else {
-                  throw new Error(data.error || 'Erreur inconnue');
+                  // Message explicite du serveur (adresse invalide, demande trop
+                  // rapprochée…) : plus utile que le texte générique du catch.
+                  const erreur = new Error(data.error || 'Erreur inconnue');
+                  erreur.fromServer = Boolean(data.error);
+                  throw erreur;
                 }
               } catch (err) {
-                errorMsg.textContent = "Oups, un problème est survenu. Réessaie dans quelques secondes, ou envoie-moi directement un email à nicolas.musicki@gmail.com.";
+                errorMsg.textContent = err.fromServer ? err.message : "Oups, un problème est survenu. Réessaie dans quelques secondes, ou envoie-moi directement un email à nicolas.musicki@gmail.com.";
                 errorMsg.classList.add('show');
                 btn.disabled = false;
                 btn.textContent = 'Je reçois mon guide';
