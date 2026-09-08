@@ -1,6 +1,36 @@
 {
   "articles": [
     {
+      "id": "exercices-echecs-debutant",
+      "title": "Exercices Échecs Débutant : 5 Corrections et Guide PDF",
+      "description": "Résolvez 5 exercices d’échecs débutant avec diagrammes et corrections : capture, échec, fourchette, clouage et mat. Retrouvez le guide PDF gratuit.",
+      "date": "2026-09-07",
+      "readTime": "7 min",
+      "author": "Nicolas Musicki",
+      "image": "images/chess-set.jpg",
+      "imageAlt": "Les six types de pièces Staunton sur un échiquier en bois : pion, cavalier, fou, tour, dame et roi"
+    },
+    {
+      "id": "apprendre-jouer-echecs",
+      "title": "Apprendre à Jouer aux Échecs : Guide PDF pour Débutant",
+      "description": "Par où commencer aux échecs ? Le but du jeu, les premiers repères et un ordre simple pour apprendre. Guide PDF gratuit avec exercices corrigés.",
+      "date": "2026-09-07",
+      "readTime": "8 min",
+      "author": "Nicolas Musicki",
+      "image": "images/chess-set.jpg",
+      "imageAlt": "Les six types de pièces d’échecs : roi, dame, tour, fou, cavalier et pion, réunis sur un plateau en bois"
+    },
+    {
+      "id": "finales-echecs",
+      "title": "Finales d'Échecs : les Mats de Base à Connaître (PDF)",
+      "description": "Mat avec une dame ou une tour, opposition et piège du pat : les finales de base expliquées avec 6 diagrammes. Guide PDF gratuit de Nicolas Musicki.",
+      "date": "2026-09-07",
+      "readTime": "8 min",
+      "author": "Nicolas Musicki",
+      "image": "images/regles-echecs-guide-complet.webp",
+      "imageAlt": "Un roi clair debout sur un échiquier en bois, entouré de pièces sombres couchées"
+    },
+    {
       "id": "comment-jouer-echecs-en-ligne",
       "title": "Comment Jouer aux Échecs en Ligne ? Guide Chess.com et Lichess",
       "description": "Première partie, cadence, adversaire, analyse : le guide simple pour jouer aux échecs en ligne et choisir entre Chess.com et Lichess.",
@@ -42,8 +72,8 @@
     },
     {
       "id": "combien-coute-cours-echecs",
-      "title": "Combien Coûte un Cours d'Échecs ? Les Vrais Tarifs en 2026",
-      "description": "Cours particuliers (25-80 €/h), clubs, plateformes en ligne : le comparatif honnête des prix des cours d'échecs, et les 4 critères pour bien choisir.",
+      "title": "Combien Coûte un Cours d'Échecs ? Tarifs 2026",
+      "description": "Comparez les formats, les éléments qui font varier le prix et mes tarifs publiés : 50 €/h à domicile ou 40 €/h en visio.",
       "date": "2026-07-02",
       "readTime": "12 min",
       "author": "Nicolas Musicki",
@@ -93,7 +123,7 @@
     {
       "id": "cours-echecs-adultes-paris",
       "title": "Cours d'Échecs Adultes à Paris | 1er Cours Offert",
-      "description": "Cours d'échecs pour adultes à Paris : débutants et confirmés. Professeur 2092 Elo FIDE, à domicile ou en visio. 1er cours offert !",
+      "description": "Cours d'échecs pour adultes à Paris : débutants et confirmés. Professeur 2086 Elo FIDE, à domicile ou en visio. 1er cours offert !",
       "date": "2026-04-12",
       "readTime": "12 min",
       "author": "Nicolas Musicki",
@@ -253,7 +283,7 @@
     {
       "id": "combien-temps-devenir-bon-echecs",
       "title": "Devenir Bon aux Échecs : Combien de Temps Faut-il ?",
-      "description": "6 mois pour battre vos amis, 2 ans pour 1600 Elo, 5 ans pour 2000. Timeline réaliste + les 3 facteurs qui accélèrent tout.",
+      "description": "Combien de temps pour apprendre les échecs et progresser ? Distinguez règles, premières parties et niveau de jeu, avec des repères pour vous entraîner.",
       "date": "2025-11-10",
       "readTime": "14 min",
       "author": "Nicolas Musicki",
@@ -302,8 +332,8 @@
     },
     {
       "id": "cours-echecs-enfants-paris",
-      "title": "Prof d'Échecs à Paris : 7 Critères pour Ne Pas Se Tromper",
-      "description": "Comment choisir un prof d'échecs pour votre enfant à Paris ? 7 critères, tarifs réels 2026, pièges à éviter. Le guide que j'aurais voulu avoir.",
+      "title": "Cours d'Échecs Enfants à Paris : Choisir Son Professeur",
+      "description": "Comment choisir un professeur d'échecs pour votre enfant à Paris ? Sept critères concrets, questions à poser et points à comparer avant de décider.",
       "date": "2025-11-05",
       "readTime": "12 min",
       "author": "Nicolas Musicki",

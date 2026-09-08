@@ -174,7 +174,7 @@ async function handleSubscribe(request, env) {
   return jsonResponse(
     {
       success: true,
-      message: 'Parfait ! Ton guide arrive dans ta boîte mail. Si tu ne le vois pas d\'ici 2 minutes, regarde dans Spams et dans l\'onglet Promotions (Gmail).',
+      message: 'Parfait ! Votre guide arrive dans votre boîte mail. Si vous ne le voyez pas d\'ici 2 minutes, regardez dans les spams et dans l\'onglet Promotions de Gmail.',
     },
     200,
     env
@@ -591,7 +591,7 @@ async function sendGuideEmail(to, env, idempotencyKey) {
       from: FROM_ADDRESS,
       to: [to],
       reply_to: REPLY_TO,
-      subject: 'Ton guide des échecs est prêt',
+      subject: 'Votre guide des échecs est prêt',
       html: guideEmailHtml(),
       text: guideEmailText(),
     }),
@@ -645,20 +645,20 @@ function escapeHtml(s) {
 function guideEmailText() {
   return `Bonjour,
 
-Merci pour ton inscription ! Comme promis, voici ton guide des échecs (PDF, 90 pages) :
+Merci pour votre inscription ! Comme promis, voici votre guide des échecs (PDF, 96 pages) :
 
 ${PDF_URL}
 
 Quelques conseils pour bien en profiter :
 - Lis dans l'ordre, chaque chapitre s'appuie sur le précédent.
-- Prends ton temps : un chapitre par jour, c'est parfait.
+- Prenez votre temps : un chapitre par jour constitue déjà un bon rythme.
 - Fais les exercices, les solutions sont en annexe.
 
 À très vite,
 Nicolas Musicki
 Professeur d'échecs — cours-echecs-paris.fr
 
-P.S. Si tu veux aller plus vite qu'en autodidacte, mon premier cours est offert, à domicile (Paris/Versailles) ou en visio : https://www.cours-echecs-paris.fr/#contact`;
+P.S. Si vous souhaitez progresser avec un accompagnement, mon premier cours est offert, à domicile (Paris/Versailles) ou en visio : https://www.cours-echecs-paris.fr/#contact`;
 }
 
 // ============================================================
@@ -670,7 +670,7 @@ function guideEmailHtml() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ton guide est prêt</title>
+<title>Votre guide est prêt</title>
 </head>
 <body style="margin:0; padding:0; background-color:#faf6ef; font-family: Georgia, 'Times New Roman', serif;">
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#faf6ef; padding:40px 20px;">
@@ -680,14 +680,14 @@ function guideEmailHtml() {
         <tr>
           <td style="background:linear-gradient(135deg,#F0D9B5 0%,#B58863 100%); padding:36px 40px; text-align:center;">
             <div style="font-family:Georgia,serif; font-size:12px; text-transform:uppercase; letter-spacing:3px; color:#3E2C1C; opacity:0.85; margin-bottom:6px;">Collection « Apprendre les Échecs »</div>
-            <div style="font-family:Georgia,serif; font-size:26px; font-weight:700; color:#3E2C1C; line-height:1.2;">Ton guide est prêt ! 🎁</div>
-            <div style="font-family:Georgia,serif; font-style:italic; font-size:14px; color:#3E2C1C; opacity:0.8; margin-top:8px;">Volume 1 — 90 pages illustrées</div>
+            <div style="font-family:Georgia,serif; font-size:26px; font-weight:700; color:#3E2C1C; line-height:1.2;">Votre guide est prêt</div>
+            <div style="font-family:Georgia,serif; font-style:italic; font-size:14px; color:#3E2C1C; opacity:0.8; margin-top:8px;">Volume 1 — 96 pages illustrées</div>
           </td>
         </tr>
         <tr>
           <td style="padding:40px 40px 20px; color:#3a3a3a; font-size:16px; line-height:1.65;">
             <p style="margin:0 0 20px; font-size:17px;">Bonjour,</p>
-            <p style="margin:0 0 20px;">Merci pour ton inscription ! Comme promis, voici ton guide à télécharger — <strong>c'est cadeau</strong> :</p>
+            <p style="margin:0 0 20px;">Merci pour votre inscription ! Comme promis, voici votre guide à télécharger — <strong>c'est cadeau</strong> :</p>
             <p style="margin:0 0 20px; text-align:center;">
               <a href="${PDF_URL}" target="_blank" style="display:inline-block; background:#3E2C1C; color:#F0D9B5; text-decoration:none; padding:16px 40px; border-radius:8px; font-family:Georgia,serif; font-size:16px; font-weight:700; letter-spacing:1px;">📕 Télécharger mon guide (PDF)</a>
             </p>
@@ -698,14 +698,14 @@ function guideEmailHtml() {
             <div style="margin:30px 0; padding:22px 24px; background:#faf6ef; border-left:4px solid #8B5A2B; border-radius:6px;">
               <p style="margin:0 0 10px; font-weight:700; color:#3E2C1C; font-size:15px;">Quelques conseils pour bien en profiter :</p>
               <p style="margin:0 0 8px; font-size:14.5px;">📖 <strong>Lis dans l'ordre.</strong> Chaque chapitre s'appuie sur le précédent.</p>
-              <p style="margin:0 0 8px; font-size:14.5px;">⏱️ <strong>Prends ton temps</strong> — 1 chapitre par jour, c'est parfait.</p>
+              <p style="margin:0 0 8px; font-size:14.5px;">⏱️ <strong>Prenez votre temps</strong> — un chapitre par jour constitue déjà un bon rythme.</p>
               <p style="margin:0; font-size:14.5px;">✍️ <strong>Fais les exercices</strong>, ne les saute pas. Les solutions sont en annexe.</p>
             </div>
             <p style="margin:0 0 8px;">À très vite,</p>
             <p style="margin:0 0 4px; font-weight:700; color:#3E2C1C;">Nicolas Musicki</p>
-            <p style="margin:0 0 25px; font-size:13px; color:#8B5A2B;">Professeur et entraîneur d'échecs — 2092 Elo FIDE</p>
+            <p style="margin:0 0 25px; font-size:13px; color:#8B5A2B;">Professeur et entraîneur d'échecs — 2086 Elo FIDE</p>
             <p style="margin:28px 0 0; padding-top:20px; border-top:1px solid #e8e0cc; font-size:14px; color:#5a5a5a; font-style:italic;">
-              <strong style="color:#3E2C1C; font-style:normal;">P.S.</strong> Si tu veux aller plus vite qu'en autodidacte, <a href="https://www.cours-echecs-paris.fr/#contact" style="color:#8B5A2B;">mon 1er cours est offert</a>, à domicile ou en visio.
+              <strong style="color:#3E2C1C; font-style:normal;">P.S.</strong> Si vous souhaitez progresser avec un accompagnement, <a href="https://www.cours-echecs-paris.fr/#contact" style="color:#8B5A2B;">mon 1er cours est offert</a>, à domicile ou en visio.
             </p>
           </td>
         </tr>

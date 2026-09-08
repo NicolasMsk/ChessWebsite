@@ -101,7 +101,7 @@
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/citations-echecs-inspirantes.html</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -129,7 +129,7 @@
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/combien-temps-devenir-bon-echecs.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -164,7 +164,7 @@
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/cours-echecs-enfants-paris.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -214,7 +214,7 @@
 
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/echecs-retraite-seniors.html</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -275,7 +275,7 @@
   </url>
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/combien-coute-cours-echecs.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -290,5 +290,23 @@
     <lastmod>2026-08-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/apprendre-jouer-echecs.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/finales-echecs.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/blog/exercices-echecs-debutant.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
