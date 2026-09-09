@@ -47,6 +47,8 @@
   <!-- <link rel="preload" href="style.min.css" as="style"> -->
   <link rel="stylesheet" href="style.min.css">
   <style>
+    .group-lessons{max-width:920px;margin:3rem auto;padding:clamp(1.25rem,4vw,2rem);background:var(--off-white);border:1px solid var(--silver);border-left:4px solid var(--accent)}
+    .group-lessons h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:1rem}.group-lessons p{line-height:1.7;margin-bottom:1rem}.group-lessons-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.group-lessons-actions a{overflow-wrap:anywhere}.group-lessons-actions .btn{white-space:normal;max-width:100%}
     .hero-buttons{gap:12px;margin-top:1.25rem;align-items:center}.hero-buttons .btn{flex:0 1 auto;min-width:0;padding:.7rem 1.15rem;font-size:.72rem;line-height:1.25}
     .book-referral{max-width:920px;margin:clamp(2rem,5vw,4rem) auto;padding:clamp(1rem,2.5vw,1.5rem);display:grid;grid-template-columns:minmax(180px,260px) 1fr;align-items:center;gap:clamp(1.25rem,3vw,2.25rem);background:var(--off-white);border:1px solid var(--silver);border-left:4px solid var(--accent)}
     .book-referral img{width:100%;aspect-ratio:4/3;object-fit:cover}.book-referral-eyebrow{margin-bottom:.45rem;color:var(--accent-dark);font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.book-referral h3{margin-bottom:.65rem;font-size:clamp(1.25rem,2.4vw,1.75rem)}.book-referral p{margin-bottom:.9rem;font-size:.96rem;line-height:1.65}.book-referral-link{display:inline-block;color:var(--walnut);border-bottom:1px solid var(--accent-dark);font-family:Montserrat,sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.03em}
@@ -935,6 +937,16 @@
         <p class="notice">
           <i class="fa-solid fa-gift"></i> N'oubliez pas : votre premier cours est totalement <strong>GRATUIT</strong> et sans engagement !
         </p>
+      </section>
+
+      <section class="group-lessons" id="cours-en-groupe" aria-labelledby="group-lessons-title">
+        <h2 id="group-lessons-title">Cours d'échecs en groupe</h2>
+        <p>Vous souhaitez apprendre les échecs à plusieurs ? Je propose aussi des cours en groupe. Nous définissons ensemble un format adapté aux participants et à vos objectifs.</p>
+        <p>Écrivez-moi ou appelez-moi pour m'expliquer votre projet : <strong>nombre de participants, âges, niveaux, lieu et créneaux souhaités</strong>. Nous pourrons discuter de l'organisation et du tarif selon votre situation.</p>
+        <div class="group-lessons-actions">
+          <a href="mailto:nicolas.musicki@gmail.com?subject=Cours%20d%27%C3%A9checs%20en%20groupe" class="btn">Me contacter par email</a>
+          <a href="tel:+33609365691">M'appeler au 06 09 36 56 91</a>
+        </div>
       </section>
 
       <!-- FAQ visible synchronisée avec le schema FAQPage -->
