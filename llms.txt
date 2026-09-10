@@ -21,7 +21,7 @@
 ## Guides pour débutants
 - [Apprendre à jouer aux échecs : point de départ et PDF](https://www.cours-echecs-paris.fr/blog/apprendre-jouer-echecs.html): Pour l’adulte débutant absolu : comprendre le but, préparer le plateau et apprendre dans le bon ordre. Guide PDF gratuit avec exercices corrigés.
 - [Règles des échecs — guide complet](https://www.cours-echecs-paris.fr/blog/regles-echecs-guide-complet.html): Toutes les règles expliquées simplement : pièces, roque, en passant, promotion, échec et mat.
-- [De zéro à 500 Elo](https://www.cours-echecs-paris.fr/blog/debuter-echecs-guide-complet-0-500-elo.html): Plan structuré sur 2-4 mois avec routine quotidienne de 30 minutes.
+- [De zéro à 500 Elo](https://www.cours-echecs-paris.fr/blog/debuter-echecs-guide-complet-0-500-elo.html): Parcours pour débutants en ligne : règles, tactique, finales et séances de travail adaptées au temps disponible.
 - [10 erreurs du débutant](https://www.cours-echecs-paris.fr/blog/10-erreurs-debutant-echecs.html): Les pièges classiques à éviter pour progresser plus vite.
 - [Combien de temps pour devenir bon aux échecs ?](https://www.cours-echecs-paris.fr/blog/combien-temps-devenir-bon-echecs.html): Estimation réaliste selon le niveau visé.
 - [Comment jouer aux échecs en ligne](https://www.cours-echecs-paris.fr/blog/comment-jouer-echecs-en-ligne.html): Guide pas à pas et comparatif honnête de Chess.com et Lichess pour débuter.
@@ -39,7 +39,7 @@
 ## Progression et stratégie
 - [Exercices d’échecs débutant : corrections et guide PDF](https://www.cours-echecs-paris.fr/blog/exercices-echecs-debutant.html): Cinq positions à résoudre avec corrections : capture, réponse à l’échec, fourchette, clouage et mat. Le formulaire propose le guide complet existant de Nicolas Musicki.
 - [Finales de base : mats, opposition et PDF](https://www.cours-echecs-paris.fr/blog/finales-echecs.html): Mat avec une dame, mat avec une tour, opposition et pat expliqués en 6 diagrammes. Le PDF offert est le guide de Nicolas Musicki, distinct de l’ouvrage Les 100 finales qu’il faut connaître.
-- [Stagnation aux échecs : comment progresser](https://www.cours-echecs-paris.fr/blog/stagnation-echecs-progresser.html): 8 erreurs qui bloquent votre progression entre 1200 et 1600 Elo.
+- [Stagnation aux échecs : comment progresser](https://www.cours-echecs-paris.fr/blog/stagnation-echecs-progresser.html): Huit pistes pour analyser un plateau et organiser un entraînement adapté, sans délai de progression garanti.
 - [Cours en ligne vs présentiel](https://www.cours-echecs-paris.fr/blog/cours-echecs-en-ligne-vs-presentiel.html): Comparaison objective pour choisir le bon format.
 - [Professeur ou autodidacte ?](https://www.cours-echecs-paris.fr/blog/professeur-ou-autodidacte-echecs.html): Analyse honnête des deux approches.
 - [Psychologie et biais mentaux aux échecs](https://www.cours-echecs-paris.fr/blog/psychologie-biais-mentaux-echecs.html): Les erreurs cognitives qui coûtent des points.

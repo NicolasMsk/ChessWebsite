@@ -213,7 +213,7 @@
     {
       "id": "debuter-echecs-guide-complet-0-500-elo",
       "title": "Débuter aux Échecs : De Zéro à 500 Elo (Plan Gratuit)",
-      "description": "Le guide complet pour apprendre les échecs de zéro. Règles, stratégies, ouvertures simples, tactiques. Plan étape par étape jusqu'à 500 Elo.",
+      "description": "Débuter aux échecs : règles, ouvertures, tactique et exercices. Un parcours progressif vers 500 en ligne, avec une routine adaptée à votre temps.",
       "date": "2025-11-16",
       "readTime": "18 min",
       "author": "Nicolas Musicki",
@@ -252,10 +252,10 @@
     },
     {
       "id": "psychologie-biais-mentaux-echecs",
-      "title": "7 Pièges Mentaux qui Vous Font Perdre aux Échecs",
-      "description": "Confirmation bias, ancrage, overconfidence... 7 biais psychologiques qui sabotent vos parties sans que vous le sachiez. Comment les repérer.",
+      "title": "Psychologie des Échecs : 7 Pièges à Repérer",
+      "description": "Précipitation, excès de confiance, plan figé : repérez sept pièges de raisonnement aux échecs et travaillez vos décisions avec cinq exercices.",
       "date": "2025-11-13",
-      "readTime": "16 min",
+      "readTime": "8 min",
       "author": "Nicolas Musicki",
       "image": "images/psychologie-biais-mentaux-echecs.webp",
       "imageAlt": "Joueur d'échecs en pleine réflexion illustrant les biais psychologiques et le mental aux échecs"
@@ -272,10 +272,10 @@
     },
     {
       "id": "stagnation-echecs-progresser",
-      "title": "Vous Stagnez aux Échecs ? 8 Raisons (et la Solution)",
-      "description": "Bloqué entre 1200 et 1600 Elo ? Vous faites probablement ces 8 erreurs. Solutions concrètes pour gagner +200 Elo en 6 mois.",
+      "title": "Stagnation aux Échecs : 8 Pistes pour Progresser",
+      "description": "Votre Elo stagne ? Analysez huit causes possibles, corrigez vos habitudes et construisez un programme adapté avec des objectifs observables.",
       "date": "2025-11-11",
-      "readTime": "15 min",
+      "readTime": "8 min",
       "author": "Nicolas Musicki",
       "image": "images/stagnation-echecs-progresser.webp",
       "imageAlt": "Joueur d'échecs bloqué à un plateau de progression avec graphique stagnant"
@@ -323,7 +323,7 @@
     {
       "id": "professeur-ou-autodidacte-echecs",
       "title": "Échecs : Prendre un Prof ou Apprendre Seul ? (Vrai Coût)",
-      "description": "Prof d'échecs vs autodidacte : le vrai coût, le vrai temps de progression. Réponse honnête d'un prof qui a formé 500+ élèves.",
+      "description": "Peut-on apprendre les échecs seul ? Comparez autonomie, cours et club, avec des budgets explicites et des critères pour choisir votre méthode.",
       "date": "2025-11-06",
       "readTime": "11 min",
       "author": "Nicolas Musicki",
