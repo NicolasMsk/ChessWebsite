@@ -15,8 +15,8 @@ import {
 
 // ---------- Constantes ----------
 
-test('le prix du pack est de 64,99 € en centimes', () => {
-  assert.equal(PACK_AMOUNT_CENTS, 6499);
+test('le prix du pack est de 39,99 € en centimes', () => {
+  assert.equal(PACK_AMOUNT_CENTS, 3999);
 });
 
 test('formatAmount convertit les centimes en euros français', () => {
@@ -138,15 +138,27 @@ test('formatAddressLines omet les lignes vides', () => {
 
 // ---------- Emails ----------
 
+test('une commande de rentrée conserve les 39,99 € payés dans les confirmations', () => {
+  const order = buildOrderRecord({ ...sessionModerne, amount_total: 3999 }, '2026-09-13T12:00:00.000Z');
+  assert.equal(order.amount_total, 3999);
+  for (const body of [orderConfirmationHtml(order), orderConfirmationText(order), orderAdminHtml(order)]) {
+    assert.match(body, /39,99/);
+    assert.doesNotMatch(body, /64,99/);
+  }
+});
+
 test("l'email client contient le montant, l'adresse et le délai", () => {
   const order = buildOrderRecord(sessionModerne, '2026-08-19T18:00:00.000Z');
   const html = orderConfirmationHtml(order);
   assert.match(html, /64,99/);
   assert.match(html, /12 rue des Lilas/);
-  assert.match(html, /5 à 10 jours ouvrés/);
+  assert.match(html, /14 jours maximum/);
   assert.match(html, /nicolas\.musicki@gmail\.com/);
   assert.match(html, /14 jours/);
-  assert.match(html, /50/); // mention de la série limitée
+  // La numérotation et la signature ne sont plus annoncées : c'est une surprise
+  // à la réception. Elles restent dans la fiche admin, pas dans l'email client.
+  assert.doesNotMatch(html, /num[ée]rot/i);
+  assert.doesNotMatch(html, /signe? &agrave; la main|signé à la main/i);
 });
 
 test("l'email client échappe le HTML des champs saisis par le client", () => {

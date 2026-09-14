@@ -14,10 +14,14 @@
   // ---------- Visionneuse ----------
 
   var PHOTOS = [
-    { src: assetRoot + 'images/reliure/pack-principal.webp', legende: 'Les deux volumes reliés à la main, sur un échiquier en bois' },
-    { src: assetRoot + 'images/reliure/pack-tranche.webp',   legende: 'Debout : la tranche cousue main est visible' },
-    { src: assetRoot + 'images/reliure/pack-rouge.webp',     legende: 'Le Volume I, couverture rouge, grain du papier ivoire' },
-    { src: assetRoot + 'images/reliure/pack-plongee.webp',   legende: 'Vue en plongée des deux volumes' }
+    { src: assetRoot + 'images/reliure/pack-2026-auteur.webp',    legende: 'Nicolas Musicki, l’auteur, avec un exemplaire de l’édition reliée' },
+    { src: assetRoot + 'images/reliure/pack-2026-echiquier.webp', legende: 'L’édition 200 pages, reliée en toile brune, debout sur l’échiquier' },
+    { src: assetRoot + 'images/reliure/pack-2026-main.webp',      legende: 'L’étiquette de titre au cavalier, posée à la main sur la toile' },
+    { src: assetRoot + 'images/reliure/pack-2026-dessus.webp',    legende: 'Le volume unique de 200 pages, au centre de l’échiquier' },
+    { src: assetRoot + 'images/reliure/pack-principal.webp',      legende: 'L’édition précédente, en deux volumes, sur un échiquier en bois' },
+    { src: assetRoot + 'images/reliure/pack-tranche.webp',        legende: 'Debout : la tranche cousue main est visible' },
+    { src: assetRoot + 'images/reliure/pack-rouge.webp',          legende: 'Le Volume I, couverture rouge, grain du papier ivoire' },
+    { src: assetRoot + 'images/reliure/pack-plongee.webp',        legende: 'Vue en plongée des deux volumes' }
   ];
 
   var lb = document.getElementById('pack-lightbox');

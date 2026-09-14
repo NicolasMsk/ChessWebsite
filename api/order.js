@@ -7,10 +7,9 @@
  */
 
 export const PACK_PRODUCT_ID = 'pack_livres_relies';
-export const PACK_AMOUNT_CENTS = 6499;
+export const PACK_AMOUNT_CENTS = 3999;
 export const PACK_NAME = 'Apprendre les Échecs — Volumes I & II (édition reliée à la main)';
-export const SERIE_TOTAL = 50;
-export const DELAI_LIVRAISON = '5 à 10 jours ouvrés';
+export const DELAI_LIVRAISON = '14 jours maximum';
 export const SERVICE_EMAIL = 'nicolas.musicki@gmail.com';
 export const SERVICE_TEL = '06 09 36 56 91';
 export const SITE_URL = 'https://www.cours-echecs-paris.fr';
@@ -149,9 +148,13 @@ export function orderConfirmationHtml(order) {
           </div>
 
           <p style="margin:0 0 20px;">
-            Je pr&eacute;pare ton exemplaire, je le <strong>num&eacute;rote</strong> (s&eacute;rie limit&eacute;e &agrave; ${SERIE_TOTAL}) et je le
-            <strong>signe &agrave; la main</strong>, puis je l'exp&eacute;die en Colissimo suivi.
+            Je pr&eacute;pare ton exemplaire &agrave; la main, puis je l'exp&eacute;die en Colissimo suivi.
             Compte <strong>${DELAI_LIVRAISON}</strong> avant de le recevoir.
+          </p>
+
+          <p style="margin:0 0 20px;">
+            Tu en as besoin plus vite&nbsp;? R&eacute;ponds &agrave; cet email&nbsp;:
+            je regarde ce que je peux faire en <strong>envoi express</strong>.
           </p>
 
           <p style="margin:0 0 20px;">
@@ -198,8 +201,11 @@ ${formatAmount(order.amount_total)} - livraison comprise
 ADRESSE DE LIVRAISON
 ${lignes}
 
-Je prepare ton exemplaire, je le numerote (serie limitee a ${SERIE_TOTAL}) et je le signe
-a la main, puis je l'expedie en Colissimo suivi. Compte ${DELAI_LIVRAISON} avant de le recevoir.
+Je prepare ton exemplaire a la main, puis je l'expedie en Colissimo suivi.
+Compte ${DELAI_LIVRAISON} avant de le recevoir.
+
+Tu en as besoin plus vite ? Reponds a cet email : je regarde ce que je peux faire
+en envoi express.
 
 Une adresse a corriger, une dedicace a ajouter ? Reponds simplement a cet email :
 tant que le colis n'est pas parti, tout est modifiable.

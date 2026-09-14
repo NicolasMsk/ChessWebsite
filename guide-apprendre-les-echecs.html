@@ -52,7 +52,7 @@
 
   <!-- Feuille de style principale -->
   <link rel="stylesheet" href="style.min.css">
-  <link rel="stylesheet" href="pack-livres.css?v=2">
+  <link rel="stylesheet" href="pack-livres.css?v=5">
 
   <!-- Structured data : Book + FAQPage + BreadcrumbList + Person -->
   <script type="application/ld+json">
@@ -157,23 +157,7 @@
             "name": "Existe-t-il une version papier du guide des échecs ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Oui : une édition reliée à la main des Volumes I et II, cousue main par une relieuse professionnelle, imprimée sur papier ivoire, avec couvertures rigides. Chaque exemplaire est numéroté et signé à la main, en série limitée à 50. Elle coûte 64,99 € livraison comprise. Le contenu est identique au PDF, qui reste gratuit : l'achat porte sur l'objet."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Combien de temps pour recevoir les livres reliés ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Entre 5 et 10 jours ouvrés après la commande, en Colissimo suivi. La livraison est limitée à la France métropolitaine et les frais de port sont compris dans le prix de 64,99 €."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Puis-je être remboursé après l'achat des livres reliés ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Oui. Un droit de rétractation de 14 jours à compter de la réception s'applique. Il suffit d'écrire à nicolas.musicki@gmail.com : l'adresse postale de retour est communiquée sous 48 heures ouvrées, et le remboursement est effectué dès réception du colis en bon état."
+              "text": "Oui : une édition reliée à la main qui réunit les deux volumes en 200 pages, cousue main par une relieuse professionnelle, imprimée sur papier ivoire, avec couverture rigide toilée. Le PDF gratuit ne contient que le Volume 1 ; la seconde moitié du livre n'est publiée nulle part ailleurs. Elle coûte 39,99 € livraison comprise. Les conditions de commande, de livraison et de retour figurent sur la page de l'édition reliée."
             }
           }
         ]
@@ -532,6 +516,8 @@
       .ebook-cover-preview img { max-width: 280px; }
     }
   </style>
+  <link rel="stylesheet" href="promo-rentree.css?v=2">
+  <script src="promo-rentree.js?v=2" defer></script>
 </head>
 
 <body>
@@ -650,168 +636,26 @@
   </section>
 
 
-  <!-- Pack des 2 volumes reliés à la main (produit payant — distinct du guide gratuit) -->
-  <section class="pack-livres" id="pack-livres" aria-labelledby="pack-title">
-    <div class="pack-wrap">
-
-      <div class="pack-visuals">
-        <div class="pack-hero-media pack-open-lb" id="pack-hero-media"
-             role="button" tabindex="0" data-index="0"
-             aria-label="Agrandir les photos de l'édition reliée">
-          <img src="images/reliure/pack-principal.webp"
-               alt="Les deux volumes reliés à la main d'Apprendre les Échecs, posés sur un échiquier en bois"
-               width="1080" height="810" loading="lazy" decoding="async">
-          <video muted loop playsinline preload="none"
-                 poster="images/reliure/pack-principal.webp"
-                 aria-label="Vidéo de présentation des deux volumes reliés">
-            <source src="images/reliure/pack-video.mp4" type="video/mp4">
-          </video>
-          <span class="pack-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir</span>
+  <!-- Renvoi vers le livre relié (produit payant, les deux volumes réunis).
+       La page de vente unique est edition-raffinee/ ; ici, une invitation courte. -->
+  <section class="livre-renvoi" id="livre-relie" aria-labelledby="livre-renvoi-title">
+    <div class="livre-renvoi__inner">
+      <a class="livre-renvoi__photo" href="edition-raffinee/" aria-label="Découvrir le livre relié">
+        <img src="images/reliure/pack-2026-auteur.webp"
+             alt="Nicolas Musicki tenant l'édition reliée à la main d'Apprendre les Échecs, devant un échiquier"
+             width="1086" height="1207" loading="lazy" decoding="async">
+      </a>
+      <div class="livre-renvoi__body">
+        <p class="livre-renvoi__eyebrow">Le livre relié · Les deux volumes réunis</p>
+        <h2 id="livre-renvoi-title">Envie de la méthode complète, loin de l'écran&nbsp;?</h2>
+        <p>Ce guide gratuit, c'est le Volume&nbsp;1 : 96 pages. Le livre relié en fait 200. La seconde moitié — la méthode pour arrêter de perdre bêtement, votre répertoire d'ouverture, le milieu de partie et les finales — <strong>n'est publiée nulle part ailleurs</strong>, ni en PDF ni en ligne. 23 chapitres au total, des diagrammes, des exercices corrigés, dans un volume cousu main, numéroté et signé.</p>
+        <p class="livre-renvoi__prix"><del aria-label="Ancien prix : 64,99 euros">64,99&nbsp;€</del> <strong>39,99&nbsp;€</strong> <span>Offre de rentrée · Livraison comprise</span></p>
+        <div class="livre-renvoi__actions">
+          <a class="livre-renvoi__cta" href="edition-raffinee/">Découvrir le livre relié →</a>
+          <a class="livre-renvoi__lien" href="edition-raffinee/#sommaire-livre">Voir le sommaire des 23 chapitres</a>
         </div>
-        <div class="pack-thumbs">
-          <button type="button" class="pack-open-lb" data-index="1" aria-label="Agrandir : les deux volumes debout, tranche cousue visible">
-            <img src="images/reliure/pack-tranche.webp"
-                 alt="Les deux volumes debout, tranche cousue visible"
-                 width="1080" height="810" loading="lazy" decoding="async">
-          </button>
-          <button type="button" class="pack-open-lb" data-index="2" aria-label="Agrandir : gros plan sur la couverture rouge du Volume I">
-            <img src="images/reliure/pack-rouge.webp"
-                 alt="Gros plan sur la couverture rouge du Volume I"
-                 width="810" height="1080" loading="lazy" decoding="async">
-          </button>
-          <button type="button" class="pack-open-lb" data-index="3" aria-label="Agrandir : vue en plongée des deux volumes sur l'échiquier">
-            <img src="images/reliure/pack-plongee.webp"
-                 alt="Vue en plongée des deux volumes sur l'échiquier"
-                 width="810" height="1080" loading="lazy" decoding="async">
-          </button>
-        </div>
-      </div>
-
-      <div class="pack-content">
-        <div class="pack-eyebrow">L'édition reliée à la main</div>
-        <h2 id="pack-title">Apprendre les Échecs<br>Volumes&nbsp;I &amp; II</h2>
-
-        <p class="pack-pitch">
-          Vous venez de télécharger le guide en PDF, qui reste gratuit.
-          Si vous souhaitez l'objet&nbsp;: deux volumes cousus main par une relieuse
-          professionnelle, sur papier ivoire, numérotés et signés. C'est ce qu'on offre,
-          et ce qu'on garde.
-        </p>
-
-        <ul class="pack-features">
-          <li><strong>Reliure cousue main</strong> par une relieuse professionnelle</li>
-          <li><strong>Papier ivoire</strong>, impression couleur, couvertures rigides</li>
-          <li><strong>Exemplaire numéroté et signé</strong> — série limitée à 50</li>
-          <li><strong>Les deux volumes</strong>&nbsp;: les bases, puis le répertoire et les finales</li>
-        </ul>
-
-        <div class="pack-price">
-          <span class="pack-price-amount">64,99&nbsp;€</span>
-          <span class="pack-price-note">Livraison comprise</span>
-        </div>
-
-        <a class="pack-cta" id="pack-cta"
-           href="https://buy.stripe.com/4gM4gB0KjgVQ1pj09idQQ03"
-           rel="noopener">Commander les 2 volumes</a>
-        <div class="pack-cta-reassure">
-          Paiement sécurisé par Stripe &middot; Livraison en France sous 5 à 10 jours ouvrés
-        </div>
-
-        <div class="pack-honesty">
-          <strong>Soyons clairs&nbsp;:</strong> le contenu est identique à celui du PDF que vous
-          recevez gratuitement. Ici, vous achetez le livre comme objet
-          fabriqué à la main.
-        </div>
-
-        <div class="pack-service">
-          Une question&nbsp;? <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
-          &nbsp;·&nbsp; <a href="tel:+33609365691">06&nbsp;09&nbsp;36&nbsp;56&nbsp;91</a><br>
-          <a href="cgv.html">Conditions générales de vente</a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="pack-faq">
-      <h3>Questions sur l'édition reliée</h3>
-
-      <details>
-        <summary>Pourquoi payer ce qui est gratuit&nbsp;?</summary>
-        <div class="pack-faq-answer">
-          <p>Vous ne payez pas un contenu supplémentaire : il reste identique et gratuit en PDF.</p>
-          <p>Vous achetez un objet&nbsp;: des cahiers cousus main un à un, du papier ivoire, une couverture rigide toilée, un numéro et une signature manuscrits. Si vous souhaitez simplement apprendre les échecs, conservez le PDF, il est fait pour ça.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Qu'est-ce qui est relié à la main exactement&nbsp;?</summary>
-        <div class="pack-faq-answer">
-          <p>Les cahiers sont cousus à la main, un à un, par une relieuse professionnelle — pas collés en dos carré comme un livre industriel. Les couvertures sont rigides, habillées de toile.</p>
-          <p>Conséquence concrète&nbsp;: le livre s'ouvre à plat sans se casser, et il tient des décennies. C'est aussi pour ça que la production est lente.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Les exemplaires sont-ils numérotés&nbsp;?</summary>
-        <div class="pack-faq-answer">
-          <p>Oui. Chaque exemplaire porte un numéro manuscrit sur la page de garde, sous la forme «&nbsp;n°&nbsp;7&nbsp;/&nbsp;50&nbsp;», accompagné de ma signature.</p>
-          <p>La première série est limitée à 50 exemplaires. Au-delà, j'ouvrirai une seconde série, numérotée séparément.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Combien de temps pour le recevoir&nbsp;?</summary>
-        <div class="pack-faq-answer">
-          <p>Entre 5 et 10 jours ouvrés après votre commande, en Colissimo suivi. Vous recevez un email de confirmation dès la validation du paiement.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Livrez-vous en dehors de la France&nbsp;?</summary>
-        <div class="pack-faq-answer">
-          <p>Pas pour le moment. La livraison est limitée à la France métropolitaine — c'est la seule zone où je peux garantir le délai et l'état du colis à l'arrivée.</p>
-          <p>Si vous êtes à l'étranger, écrivez-moi à <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>, pour étudier une solution au cas par cas.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Puis-je l'offrir&nbsp;?</summary>
-        <div class="pack-faq-answer">
-          <p>C'est même l'usage principal. Le colis est emballé en papier kraft, sans aucun prix visible sur l'emballage ni dans le paquet.</p>
-          <p>Si vous souhaitez une dédicace au nom de la personne, précisez-le par email après votre commande&nbsp;: j'écris à la main, sous réserve que le colis ne soit pas encore parti.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Comment se passe le paiement&nbsp;? Puis-je être remboursé&nbsp;?</summary>
-        <div class="pack-faq-answer">
-          <p>Le paiement se fait par carte bancaire sur une page sécurisée Stripe. Je n'ai pas accès à vos coordonnées bancaires.</p>
-          <p>Vous disposez d'un <strong>droit de rétractation de 14 jours</strong> à compter de la réception. Pour l'exercer, écrivez à <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>&nbsp;: je vous communique l'adresse postale de retour sous 48&nbsp;heures ouvrées et vous rembourse dès réception du colis en bon état.</p>
-          <p>Le détail figure dans les <a href="cgv.html">conditions générales de vente</a>.</p>
-        </div>
-      </details>
-
-      <div class="pack-service" style="text-align:center; margin-top:26px;">
-        Une autre question&nbsp;? <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a>
-        &nbsp;·&nbsp; <a href="tel:+33609365691">06&nbsp;09&nbsp;36&nbsp;56&nbsp;91</a>
       </div>
     </div>
-
-    <!-- Visionneuse plein écran des photos du pack -->
-    <div class="plb" id="pack-lightbox" role="dialog" aria-modal="true"
-         aria-label="Photos de l'édition reliée" hidden>
-      <button type="button" class="plb-close" id="plb-close" aria-label="Fermer">&times;</button>
-      <button type="button" class="plb-nav plb-prev" id="plb-prev" aria-label="Photo précédente">&#8249;</button>
-      <button type="button" class="plb-nav plb-next" id="plb-next" aria-label="Photo suivante">&#8250;</button>
-      <div class="plb-stage" id="plb-stage">
-        <img id="plb-img" src="" alt="">
-      </div>
-      <div class="plb-caption" id="plb-caption"></div>
-      <div class="plb-counter" id="plb-counter"></div>
-      <div class="plb-strip" id="plb-strip"></div>
-    </div>
-
-    <script src="pack-livres.js?v=3" defer></script>
   </section>
 
   <!-- AUTEUR -->

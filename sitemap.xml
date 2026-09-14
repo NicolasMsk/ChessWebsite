@@ -4,7 +4,7 @@
   <!-- Page d'accueil -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -20,7 +20,7 @@
   <!-- Guide gratuit (lead magnet — page de conversion) -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/guide-apprendre-les-echecs.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -28,7 +28,7 @@
   <!-- Bon cadeau pour offrir des cours d'échecs -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/idee-cadeau-echecs.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -36,7 +36,7 @@
   <!-- Édition artisanale reliée -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/edition-raffinee/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -287,7 +287,7 @@
   </url>
   <url>
     <loc>https://www.cours-echecs-paris.fr/cgv.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

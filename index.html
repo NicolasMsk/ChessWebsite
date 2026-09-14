@@ -51,8 +51,11 @@
     .group-lessons h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:1rem}.group-lessons p{line-height:1.7;margin-bottom:1rem}.group-lessons-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.group-lessons-actions a{overflow-wrap:anywhere}.group-lessons-actions .btn{white-space:normal;max-width:100%}
     .hero-buttons{gap:12px;margin-top:1.25rem;align-items:center}.hero-buttons .btn{flex:0 1 auto;min-width:0;padding:.7rem 1.15rem;font-size:.72rem;line-height:1.25}
     .book-referral{max-width:920px;margin:clamp(2rem,5vw,4rem) auto;padding:clamp(1rem,2.5vw,1.5rem);display:grid;grid-template-columns:minmax(180px,260px) 1fr;align-items:center;gap:clamp(1.25rem,3vw,2.25rem);background:var(--off-white);border:1px solid var(--silver);border-left:4px solid var(--accent)}
-    .book-referral img{width:100%;aspect-ratio:4/3;object-fit:cover}.book-referral-eyebrow{margin-bottom:.45rem;color:var(--accent-dark);font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.book-referral h3{margin-bottom:.65rem;font-size:clamp(1.25rem,2.4vw,1.75rem)}.book-referral p{margin-bottom:.9rem;font-size:.96rem;line-height:1.65}.book-referral-link{display:inline-block;color:var(--walnut);border-bottom:1px solid var(--accent-dark);font-family:Montserrat,sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.03em}
-    @media(max-width:640px){.book-referral{grid-template-columns:112px 1fr;gap:1rem}.book-referral p{display:none}}@media(max-width:575px){.hero-buttons{flex-direction:row;align-items:stretch;gap:8px}.hero-buttons .btn{width:auto;min-width:0;flex:1 1 calc(50% - 4px);padding:.6rem .65rem;font-size:.67rem}.hero-buttons .btn:last-child{flex-basis:100%}}@media(max-width:420px){.book-referral{grid-template-columns:1fr}.book-referral img{max-height:180px}}
+    .book-referral img{width:100%;aspect-ratio:9/10;object-fit:cover}.book-referral-eyebrow{margin-bottom:.45rem;color:var(--accent-dark);font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.book-referral h3{margin-bottom:.65rem;font-size:clamp(1.25rem,2.4vw,1.75rem)}.book-referral p{margin-bottom:.9rem;font-size:.96rem;line-height:1.65}
+    .book-referral-points{margin:0 0 1rem;padding:0;list-style:none;font-size:.9rem;line-height:1.5}
+    .book-referral-points li{position:relative;padding-left:1.15rem;margin:.4rem 0;color:var(--text-muted)}
+    .book-referral-points li::before{content:"♞";position:absolute;left:0;color:var(--accent-dark);font-size:.85rem;line-height:1.55}.book-referral-link{display:inline-block;color:var(--walnut);border-bottom:1px solid var(--accent-dark);font-family:Montserrat,sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.03em}
+    @media(max-width:640px){.book-referral{grid-template-columns:1fr;gap:1.1rem}.book-referral img{max-height:240px;object-position:center 22%}.book-referral-points{display:none}}@media(max-width:575px){.hero-buttons{flex-direction:row;align-items:stretch;gap:8px}.hero-buttons .btn{width:auto;min-width:0;flex:1 1 calc(50% - 4px);padding:.6rem .65rem;font-size:.67rem}.hero-buttons .btn:last-child{flex-basis:100%}}@media(max-width:420px){.book-referral{grid-template-columns:1fr}.book-referral img{max-height:180px}}
   </style>
 
  <!-- Favicons -->
@@ -326,6 +329,8 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="promo-rentree.css?v=2">
+  <script src="promo-rentree.js?v=2" defer></script>
 </head>
 <body class="has-promo">
   <!-- Bannière Promo -->
@@ -747,14 +752,19 @@
 
       <!-- Renvoi secondaire vers l'édition reliée : la réservation reste le CTA principal -->
       <aside class="book-referral" id="edition-reliee" aria-labelledby="book-referral-title">
-        <img src="images/reliure/pack-principal.webp"
-             alt="Apprendre les Échecs relié à la main, photographié dans l'édition précédente en deux volumes"
-             width="320" height="240" loading="lazy" decoding="async">
+        <img src="images/reliure/pack-2026-auteur.webp"
+             alt="Nicolas Musicki tenant l'édition reliée à la main d'Apprendre les Échecs, 200 pages"
+             width="240" height="267" loading="lazy" decoding="async">
         <div class="book-referral-content">
-          <div class="book-referral-eyebrow">Édition artisanale</div>
-          <h3 id="book-referral-title">Apprendre les Échecs, en livre relié</h3>
-          <p>Un volume unique cousu main par une relieuse professionnelle, imprimé sur papier ivoire, numéroté et signé.</p>
-          <a href="edition-raffinee/" class="book-referral-link">Découvrez le livre relié →</a>
+          <div class="book-referral-eyebrow">Apprendre chez soi · Livre relié à la main</div>
+          <h3 id="book-referral-title">Apprendre les échecs en partant de zéro</h3>
+          <p>De la première règle à votre première victoire&nbsp;: comment bougent les pièces, les erreurs qui coûtent une partie, les ouvertures à jouer, et comment conclure quand vous avez l'avantage. <strong>200 pages, 23 chapitres, des exercices corrigés.</strong></p>
+          <ul class="book-referral-points">
+            <li>Aucune connaissance préalable&nbsp;: on commence par l'échiquier</li>
+            <li>Des diagrammes à rejouer sur votre jeu, loin des écrans</li>
+            <li>Cousu main sur papier ivoire, un livre qui s'ouvre à plat</li>
+          </ul>
+          <a href="edition-raffinee/" class="book-referral-link">Voir le sommaire des 23 chapitres →</a>
         </div>
       </aside>
 

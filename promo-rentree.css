@@ -1,0 +1,40 @@
+/* Campagne temporaire : retirer les inclusions promo-rentree à la fin de l'offre. */
+body.has-rentree-promo { padding-top: 46px; }
+body.has-rentree-promo .navbar { top: 46px; }
+body.has-rentree-promo #pack-livres { scroll-margin-top: var(--rentree-anchor-offset, 140px); }
+.promo-banner.rentree-banner {
+  height: 46px;
+  padding: 5px 20px;
+  background: #203e35;
+  color: #fff9ed;
+  border-bottom: 1px solid #d8b878;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rentree-banner__inner { display: flex; align-items: center; justify-content: center; gap: 18px; max-width: 1200px; width: 100%; }
+.rentree-banner__copy { display: grid; gap: 2px; text-align: left; line-height: 1.25; }
+.rentree-banner__tag { color: #f0d39a; text-transform: uppercase; font-size: 9px; font-weight: 600; letter-spacing: .08em; }
+.rentree-banner__detail { font-size: 11px; color: #eee5d6; }
+.rentree-banner__offer { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+.rentree-banner__offer del { color: #dfd7c8; font-size: 12px; }
+.rentree-banner__offer strong { color: #fff9ed; font-size: 21px; }
+.rentree-banner__cta { background: #f0d39a; color: #203e35; padding: 8px 12px; font-size: 11px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.rentree-banner__cta:hover { background: #fff0cc; color: #203e35; }
+.rentree-banner__cta:focus-visible { outline: 2px solid #fff9ed; outline-offset: 3px; }
+.rentree-price-was { font-size: .55em; font-weight: 400; color: #70675d; margin-right: .45em; white-space: nowrap; }
+.rentree-saving { display: inline-block; background: #203e35; color: #fff9ed; padding: 5px 10px; font-size: 12px; font-weight: 600; }
+.pack-cta[aria-disabled="true"] { opacity: .7; cursor: not-allowed; }
+.rentree-payment-note { font-size: 13px; line-height: 1.5; margin: 10px 0; }
+@media (max-width: 800px) {
+  body.has-rentree-promo { padding-top: 74px; }
+  body.has-rentree-promo .navbar { top: 74px; }
+  .promo-banner.rentree-banner { height: 74px; padding: 5px 12px; }
+  .rentree-banner__inner { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; }
+  .rentree-banner__copy { grid-column: 1 / -1; gap: 1px; }
+  .rentree-banner__tag { font-size: 8px; }
+  .rentree-banner__detail { font-size: 10px; }
+  .rentree-banner__offer strong { font-size: 20px; }
+  .rentree-banner__cta { font-size: 11px; padding: 6px 10px; }
+}
+@media print { .rentree-banner { display: none !important; } body.has-rentree-promo { padding-top: 0; } }
