@@ -2,7 +2,7 @@
   "articles": [
     {
       "id": "exercices-echecs-debutant",
-      "title": "Exercices Échecs Débutant : 5 Corrections et Guide PDF",
+      "title": "5 exercices d’échecs pour débutants, avec leurs corrections",
       "description": "Résolvez 5 exercices d’échecs débutant avec diagrammes et corrections : capture, échec, fourchette, clouage et mat. Retrouvez le guide PDF gratuit.",
       "date": "2026-09-07",
       "readTime": "7 min",
@@ -12,7 +12,7 @@
     },
     {
       "id": "apprendre-jouer-echecs",
-      "title": "Apprendre à Jouer aux Échecs : Guide PDF pour Débutant",
+      "title": "Apprendre à jouer aux échecs quand on part de zéro",
       "description": "Par où commencer aux échecs ? Le but du jeu, les premiers repères et un ordre simple pour apprendre. Guide PDF gratuit avec exercices corrigés.",
       "date": "2026-09-07",
       "readTime": "8 min",
@@ -22,7 +22,7 @@
     },
     {
       "id": "finales-echecs",
-      "title": "Finales d'Échecs : les Mats de Base à Connaître (PDF)",
+      "title": "Les finales de base : mater avec une tour, avec une dame",
       "description": "Mat avec une dame ou une tour, opposition et piège du pat : les finales de base expliquées avec 6 diagrammes. Guide PDF gratuit de Nicolas Musicki.",
       "date": "2026-09-07",
       "readTime": "8 min",
