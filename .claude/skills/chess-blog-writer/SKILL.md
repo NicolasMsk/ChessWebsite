@@ -43,7 +43,11 @@ Utiliser le template de reference dans `article-template.html` de ce skill.
 ### Style d'ecriture (CRITIQUE)
 
 Le ton de Nicolas est **conversationnel, chaleureux, expert mais accessible** :
-- **Tutoyer ou vouvoyer** : TOUJOURS vouvoyer (pas de "tu")
+- **Tutoyer ou vouvoyer** : TOUJOURS vouvoyer (pas de "tu"). Trois exceptions,
+  et seulement celles-la : une citation de joueur qu'on reproduit telle quelle,
+  une phrase que le lecteur doit dire a son enfant ("Tu as bien reflechi, bravo !"),
+  et un titre de chapitre du livre cite mot pour mot. Le livre imprime, lui,
+  tutoie de bout en bout : c'est un choix assume, ne pas l'aligner sur le site.
 - **Emojis** : utiliser avec parcimonie (1-2 par section max)
 - **Adresse directe** : parler au lecteur ("Vous vous demandez...", "Imaginez...")
 - **Humour leger** : parentheses humoristiques, auto-derision douce

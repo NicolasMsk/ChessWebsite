@@ -130,14 +130,14 @@ export function orderConfirmationHtml(order) {
       <tr>
         <td style="background:linear-gradient(135deg,#F0D9B5 0%,#B58863 100%); padding:36px 40px; text-align:center;">
           <div style="font-family:Georgia,serif; font-size:12px; text-transform:uppercase; letter-spacing:3px; color:#3E2C1C; opacity:0.85; margin-bottom:6px;">Edition reliee a la main</div>
-          <div style="font-family:Georgia,serif; font-size:25px; font-weight:700; color:#3E2C1C; line-height:1.2;">Ta commande est confirm&eacute;e</div>
+          <div style="font-family:Georgia,serif; font-size:25px; font-weight:700; color:#3E2C1C; line-height:1.2;">Votre commande est confirm&eacute;e</div>
           <div style="font-family:Georgia,serif; font-style:italic; font-size:14px; color:#3E2C1C; opacity:0.8; margin-top:8px;">Apprendre les &Eacute;checs &mdash; Volumes I &amp; II</div>
         </td>
       </tr>
       <tr>
         <td style="padding:36px 40px 20px; color:#3a3a3a; font-size:16px; line-height:1.65;">
           <p style="margin:0 0 20px; font-size:17px;">Bonjour,</p>
-          <p style="margin:0 0 22px;">Merci beaucoup pour ta commande. Ton paiement a bien &eacute;t&eacute; re&ccedil;u, et je m'occupe de la suite.</p>
+          <p style="margin:0 0 22px;">Merci beaucoup pour votre commande. Votre paiement a bien &eacute;t&eacute; re&ccedil;u, et je m'occupe de la suite.</p>
 
           <div style="margin:0 0 22px; padding:20px 22px; background:#faf6ef; border-left:4px solid #8B5A2B; border-radius:6px;">
             <p style="margin:0 0 12px; font-weight:700; color:#3E2C1C; font-size:15px;">R&eacute;capitulatif</p>
@@ -148,17 +148,17 @@ export function orderConfirmationHtml(order) {
           </div>
 
           <p style="margin:0 0 20px;">
-            Je pr&eacute;pare ton exemplaire &agrave; la main, puis je l'exp&eacute;die en Colissimo suivi.
+            Je pr&eacute;pare votre exemplaire &agrave; la main, puis je l'exp&eacute;die en Colissimo suivi.
             Compte <strong>${DELAI_LIVRAISON}</strong> avant de le recevoir.
           </p>
 
           <p style="margin:0 0 20px;">
-            Tu en as besoin plus vite&nbsp;? R&eacute;ponds &agrave; cet email&nbsp;:
+            Vous en avez besoin plus vite&nbsp;? R&eacute;pondez &agrave; cet email&nbsp;:
             je regarde ce que je peux faire en <strong>envoi express</strong>.
           </p>
 
           <p style="margin:0 0 20px;">
-            Une adresse &agrave; corriger, une d&eacute;dicace &agrave; ajouter&nbsp;? R&eacute;ponds simplement &agrave; cet email&nbsp;:
+            Une adresse &agrave; corriger, une d&eacute;dicace &agrave; ajouter&nbsp;? R&eacute;pondez simplement &agrave; cet email&nbsp;:
             tant que le colis n'est pas parti, tout est modifiable.
           </p>
 
@@ -170,7 +170,7 @@ export function orderConfirmationHtml(order) {
             <strong style="color:#3E2C1C;">Service client</strong> &mdash;
             <a href="mailto:${SERVICE_EMAIL}" style="color:#8B5A2B;">${SERVICE_EMAIL}</a> &middot;
             ${SERVICE_TEL}<br>
-            Tu disposes d'un droit de r&eacute;tractation de <strong>14 jours</strong> &agrave; compter de la r&eacute;ception.
+            Vous disposez d'un droit de r&eacute;tractation de <strong>14 jours</strong> &agrave; compter de la r&eacute;ception.
             &Eacute;cris-moi pour l'exercer&nbsp;: je te communique l'adresse de retour sous 48&nbsp;heures ouvr&eacute;es.
             D&eacute;tails dans les <a href="${SITE_URL}/cgv.html" style="color:#8B5A2B;">conditions g&eacute;n&eacute;rales de vente</a>.
           </p>
@@ -192,7 +192,7 @@ export function orderConfirmationText(order) {
   const lignes = formatAddressLines(order).join('\n');
   return `Bonjour,
 
-Merci beaucoup pour ta commande. Ton paiement a bien ete recu.
+Merci beaucoup pour votre commande. Votre paiement a bien ete recu.
 
 RECAPITULATIF
 Apprendre les Echecs - Volumes I et II (edition reliee a la main)
@@ -201,13 +201,13 @@ ${formatAmount(order.amount_total)} - livraison comprise
 ADRESSE DE LIVRAISON
 ${lignes}
 
-Je prepare ton exemplaire a la main, puis je l'expedie en Colissimo suivi.
+Je prepare votre exemplaire a la main, puis je l'expedie en Colissimo suivi.
 Compte ${DELAI_LIVRAISON} avant de le recevoir.
 
-Tu en as besoin plus vite ? Reponds a cet email : je regarde ce que je peux faire
+Vous en avez besoin plus vite ? Repondez a cet email : je regarde ce que je peux faire
 en envoi express.
 
-Une adresse a corriger, une dedicace a ajouter ? Reponds simplement a cet email :
+Une adresse a corriger, une dedicace a ajouter ? Repondez simplement a cet email :
 tant que le colis n'est pas parti, tout est modifiable.
 
 A tres vite,
@@ -216,8 +216,8 @@ Professeur et entraineur d'echecs - 2092 Elo FIDE
 
 ---
 Service client : ${SERVICE_EMAIL} - ${SERVICE_TEL}
-Droit de retractation de 14 jours a compter de la reception. Ecris-moi pour l'exercer :
-l'adresse de retour t'est communiquee sous 48 heures ouvrees.
+Droit de retractation de 14 jours a compter de la reception. Ecrivez-moi pour l'exercer :
+l'adresse de retour vous est communiquee sous 48 heures ouvrees.
 Conditions generales de vente : ${SITE_URL}/cgv.html`;
 }
 
