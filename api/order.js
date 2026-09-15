@@ -164,7 +164,7 @@ export function orderConfirmationHtml(order) {
 
           <p style="margin:0 0 8px;">&Agrave; tr&egrave;s vite,</p>
           <p style="margin:0 0 4px; font-weight:700; color:#3E2C1C;">Nicolas Musicki</p>
-          <p style="margin:0 0 24px; font-size:13px; color:#8B5A2B;">Professeur et entra&icirc;neur d'&eacute;checs &mdash; 2092 Elo FIDE</p>
+          <p style="margin:0 0 24px; font-size:13px; color:#8B5A2B;">Professeur et entra&icirc;neur d'&eacute;checs &mdash; 2086 Elo FIDE</p>
 
           <p style="margin:26px 0 0; padding-top:18px; border-top:1px solid #e8e0cc; font-size:12.5px; color:#6a6a6a; line-height:1.6;">
             <strong style="color:#3E2C1C;">Service client</strong> &mdash;
@@ -212,7 +212,7 @@ tant que le colis n'est pas parti, tout est modifiable.
 
 A tres vite,
 Nicolas Musicki
-Professeur et entraineur d'echecs - 2092 Elo FIDE
+Professeur et entraineur d'echecs - 2086 Elo FIDE
 
 ---
 Service client : ${SERVICE_EMAIL} - ${SERVICE_TEL}
