@@ -312,7 +312,7 @@ async function sendOrderConfirmationEmail(order, env, idempotencyKey) {
       from: FROM_ADDRESS,
       to: [order.email],
       reply_to: REPLY_TO,
-      subject: 'Ta commande est confirmée — Apprendre les Échecs, Volumes I & II',
+      subject: 'Votre commande est confirmée — Apprendre les Échecs, Volumes I & II',
       html: orderConfirmationHtml(order),
       text: orderConfirmationText(order),
     }),
