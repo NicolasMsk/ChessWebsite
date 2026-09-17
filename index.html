@@ -55,7 +55,9 @@
     .book-referral-points{margin:0 0 1rem;padding:0;list-style:none;font-size:.9rem;line-height:1.5}
     .book-referral-points li{position:relative;padding-left:1.15rem;margin:.4rem 0;color:var(--text-muted)}
     .book-referral-points li::before{content:"♞";position:absolute;left:0;color:var(--accent-dark);font-size:.85rem;line-height:1.55}.book-referral-link{display:inline-block;color:var(--walnut);border-bottom:1px solid var(--accent-dark);font-family:Montserrat,sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.03em}
-    @media(max-width:640px){.book-referral{grid-template-columns:1fr;gap:1.1rem}.book-referral img{max-height:240px;object-position:center 22%}.book-referral-points{display:none}}@media(max-width:575px){.hero-buttons{flex-direction:row;align-items:stretch;gap:8px}.hero-buttons .btn{width:auto;min-width:0;flex:1 1 calc(50% - 4px);padding:.6rem .65rem;font-size:.67rem}.hero-buttons .btn:last-child{flex-basis:100%}}@media(max-width:420px){.book-referral{grid-template-columns:1fr}.book-referral img{max-height:180px}}
+    /* Sur mobile la photo passe pleine largeur : on libère la hauteur et le
+       ratio, sinon object-fit:cover recadre et coupe le haut du portrait. */
+    @media(max-width:640px){.book-referral{grid-template-columns:1fr;gap:1.1rem}.book-referral img{aspect-ratio:auto;max-height:none;height:auto;object-fit:contain;object-position:center}.book-referral-points{display:none}}@media(max-width:575px){.hero-buttons{flex-direction:row;align-items:stretch;gap:8px}.hero-buttons .btn{width:auto;min-width:0;flex:1 1 calc(50% - 4px);padding:.6rem .65rem;font-size:.67rem}.hero-buttons .btn:last-child{flex-basis:100%}}@media(max-width:420px){.book-referral{grid-template-columns:1fr}.book-referral img{aspect-ratio:auto;max-height:none;height:auto;object-fit:contain}}
   </style>
 
  <!-- Favicons -->
