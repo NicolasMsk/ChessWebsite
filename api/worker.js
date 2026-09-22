@@ -33,6 +33,11 @@ import {
 } from './security.js';
 
 const PDF_URL = 'https://www.cours-echecs-paris.fr/fichiers/guide-volume-1-7f3a9c.pdf';
+const SITE_URL = 'https://www.cours-echecs-paris.fr';
+// Page de vente du livre relie. Le prix n'est jamais ecrit dans les emails :
+// il vit uniquement sur cette page, pour qu'un changement de tarif ne demande
+// pas de redeployer le Worker.
+const BOOK_URL = 'https://www.cours-echecs-paris.fr/edition-raffinee/';
 const FROM_ADDRESS = 'Nicolas Musicki <contact@cours-echecs-paris.fr>';
 const REPLY_TO = 'nicolas.musicki@gmail.com';
 const ADMIN_EMAIL = 'nicolas.musicki@gmail.com';
@@ -645,14 +650,36 @@ function escapeHtml(s) {
 function guideEmailText() {
   return `Bonjour,
 
-Merci pour votre inscription ! Comme promis, voici votre guide des échecs (PDF, 96 pages) :
+Merci pour votre inscription ! Comme promis, voici votre guide des échecs (PDF, 95 pages) :
 
 ${PDF_URL}
 
 Quelques conseils pour bien en profiter :
-- Lis dans l'ordre, chaque chapitre s'appuie sur le précédent.
+- Lisez dans l'ordre, chaque chapitre s'appuie sur le précédent.
 - Prenez votre temps : un chapitre par jour constitue déjà un bon rythme.
-- Fais les exercices, les solutions sont en annexe.
+- Faites les exercices, les solutions sont en annexe.
+
+------------------------------------------------------------
+RELIE A LA MAIN - IDEE CADEAU
+Et si vous voulez la suite, sur papier
+
+Ce guide, c'est le Volume 1 : 95 pages, les regles et les premieres
+parties. Le livre relie en fait 200, et reunit les deux volumes.
+
+La seconde moitie n'est publiee nulle part ailleurs : la methode
+anti-gaffe, un repertoire d'ouverture complet, le milieu de partie, les
+finales a connaitre. 23 chapitres, des exercices corriges, un glossaire.
+
+Couverture toilee, papier ivoire, cousu et relie a la main, un par un.
+Il reste ouvert a plat a cote de l'echiquier. C'est aussi le cadeau
+qu'on offre a quelqu'un qui veut s'y mettre.
+
+Voir le livre et le sommaire des 23 chapitres :
+${BOOK_URL}
+
+Livraison en France sous 14 jours maximum, frais de port compris.
+Besoin de l'offrir plus vite ? Repondez a ce message.
+------------------------------------------------------------
 
 À très vite,
 Nicolas Musicki
@@ -681,7 +708,7 @@ function guideEmailHtml() {
           <td style="background:linear-gradient(135deg,#F0D9B5 0%,#B58863 100%); padding:36px 40px; text-align:center;">
             <div style="font-family:Georgia,serif; font-size:12px; text-transform:uppercase; letter-spacing:3px; color:#3E2C1C; opacity:0.85; margin-bottom:6px;">Collection « Apprendre les Échecs »</div>
             <div style="font-family:Georgia,serif; font-size:26px; font-weight:700; color:#3E2C1C; line-height:1.2;">Votre guide est prêt</div>
-            <div style="font-family:Georgia,serif; font-style:italic; font-size:14px; color:#3E2C1C; opacity:0.8; margin-top:8px;">Volume 1 — 96 pages illustrées</div>
+            <div style="font-family:Georgia,serif; font-style:italic; font-size:14px; color:#3E2C1C; opacity:0.8; margin-top:8px;">Volume 1 — 95 pages illustrées</div>
           </td>
         </tr>
         <tr>
@@ -692,16 +719,48 @@ function guideEmailHtml() {
               <a href="${PDF_URL}" target="_blank" style="display:inline-block; background:#3E2C1C; color:#F0D9B5; text-decoration:none; padding:16px 40px; border-radius:8px; font-family:Georgia,serif; font-size:16px; font-weight:700; letter-spacing:1px;">📕 Télécharger mon guide (PDF)</a>
             </p>
             <p style="margin:0 0 30px; font-size:13px; color:#8B5A2B; text-align:center;">
-              ou copie-colle ce lien :<br>
+              ou copiez-collez ce lien :<br>
               <a href="${PDF_URL}" style="color:#8B5A2B; word-break:break-all;">${PDF_URL}</a>
             </p>
             <div style="margin:30px 0; padding:22px 24px; background:#faf6ef; border-left:4px solid #8B5A2B; border-radius:6px;">
               <p style="margin:0 0 10px; font-weight:700; color:#3E2C1C; font-size:15px;">Quelques conseils pour bien en profiter :</p>
-              <p style="margin:0 0 8px; font-size:14.5px;">📖 <strong>Lis dans l'ordre.</strong> Chaque chapitre s'appuie sur le précédent.</p>
-              <p style="margin:0 0 8px; font-size:14.5px;">⏱️ <strong>Prenez votre temps</strong> — un chapitre par jour constitue déjà un bon rythme.</p>
-              <p style="margin:0; font-size:14.5px;">✍️ <strong>Fais les exercices</strong>, ne les saute pas. Les solutions sont en annexe.</p>
+              <p style="margin:0 0 8px; font-size:14.5px;">📖 <strong>Lisez dans l'ordre.</strong> Chaque chapitre s'appuie sur le précédent.</p>
+              <p style="margin:0 0 8px; font-size:14.5px;">⏱️ <strong>Prenez votre temps</strong>, un chapitre par jour constitue déjà un bon rythme.</p>
+              <p style="margin:0; font-size:14.5px;">✍️ <strong>Faites les exercices</strong>, ne les sautez pas. Les solutions sont en annexe.</p>
             </div>
-            <p style="margin:0 0 8px;">À très vite,</p>
+
+            <!-- Presentation du livre relie. Volontairement APRES le telechargement
+                 et les conseils : ce message reste un email de livraison, pas une
+                 publicite. Aucun prix ici : il change (offre de rentree puis tarif
+                 plein) et il ne doit exister qu'a un seul endroit, la page de vente. -->
+            <div style="margin:34px 0 0; padding-top:26px; border-top:1px solid #e8e0cc;">
+              <p style="margin:0 0 4px; font-family:Georgia,serif; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#8B5A2B;">Relié à la main &middot; Idée cadeau</p>
+              <p style="margin:0 0 16px; font-family:Georgia,serif; font-size:21px; line-height:1.3; color:#3E2C1C;">Et si vous voulez la suite, sur papier</p>
+
+              <a href="${BOOK_URL}" style="text-decoration:none;">
+                <img src="${SITE_URL}/images/email/mail-auteur.jpg" width="520" alt="Nicolas Musicki tenant un exemplaire du livre relié" style="display:block; width:100%; max-width:520px; height:auto; border-radius:6px;">
+              </a>
+              <p style="margin:8px 0 18px; font-size:13px; font-style:italic; color:#8B5A2B;">Chaque exemplaire est cousu et relié à la main, un par un.</p>
+
+              <p style="margin:0 0 14px; font-size:15px; line-height:1.7;">Ce guide, c'est le <strong>Volume 1</strong> : 95 pages, les règles et les premières parties. Le livre relié en fait <strong>200</strong>, et réunit les deux volumes.</p>
+              <p style="margin:0 0 16px; font-size:15px; line-height:1.7;">La seconde moitié n'est publiée nulle part ailleurs : la méthode anti-gaffe, un répertoire d'ouverture complet, le milieu de partie, les finales à connaître. <strong>23 chapitres</strong>, des exercices corrigés, un glossaire.</p>
+
+              <a href="${BOOK_URL}" style="text-decoration:none;">
+                <img src="${SITE_URL}/images/email/mail-livre.jpg" width="520" alt="Le livre relié posé sur un échiquier en bois" style="display:block; width:100%; max-width:520px; height:auto; border-radius:6px;">
+              </a>
+              <p style="margin:8px 0 20px; font-size:13px; font-style:italic; color:#8B5A2B;">Couverture toilée, papier ivoire : il reste ouvert à plat à côté de l'échiquier.</p>
+
+              <p style="margin:0 0 18px; font-size:15px; line-height:1.7;">C'est aussi le cadeau qu'on offre à quelqu'un qui veut s'y mettre : un objet qu'on pose près du plateau, pas un onglet de plus dans le navigateur.</p>
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 6px;">
+                <tr><td align="center" style="background:#3E2C1C; border:1px solid #8B5A2B; border-radius:8px;">
+                  <a href="${BOOK_URL}" style="display:block; padding:17px 24px; font-family:Georgia,serif; font-size:17px; font-weight:700; color:#F0D9B5; text-decoration:none;">Voir le livre et le sommaire des 23 chapitres &rarr;</a>
+                </td></tr>
+              </table>
+              <p style="margin:10px 0 0; font-size:13px; color:#8B5A2B;">Livraison en France sous 14 jours maximum, frais de port compris. Besoin de l'offrir plus vite&nbsp;? Répondez à ce message.</p>
+            </div>
+
+            <p style="margin:34px 0 8px;">À très vite,</p>
             <p style="margin:0 0 4px; font-weight:700; color:#3E2C1C;">Nicolas Musicki</p>
             <p style="margin:0 0 25px; font-size:13px; color:#8B5A2B;">Professeur et entraîneur d'échecs — 2086 Elo FIDE</p>
             <p style="margin:28px 0 0; padding-top:20px; border-top:1px solid #e8e0cc; font-size:14px; color:#5a5a5a; font-style:italic;">
