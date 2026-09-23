@@ -22,8 +22,9 @@ body.has-rentree-promo #pack-livres { scroll-margin-top: var(--rentree-anchor-of
 .rentree-banner__cta { background: #f0d39a; color: #203e35; padding: 8px 12px; font-size: 11px; font-weight: 600; text-decoration: none; white-space: nowrap; }
 .rentree-banner__cta:hover { background: #fff0cc; color: #203e35; }
 .rentree-banner__cta:focus-visible { outline: 2px solid #fff9ed; outline-offset: 3px; }
-.rentree-price-was { font-size: .55em; font-weight: 400; color: #70675d; margin-right: .45em; white-space: nowrap; }
-.rentree-saving { display: inline-block; background: #203e35; color: #fff9ed; padding: 5px 10px; font-size: 12px; font-weight: 600; }
+/* Le prix de référence barré et l'économie chiffrée ont été retirés : le tarif
+   prévu après l'offre n'a jamais été pratiqué, il ne pouvait donc pas servir de
+   prix de référence (article L112-1-1 du Code de la consommation). */
 .pack-cta[aria-disabled="true"] { opacity: .7; cursor: not-allowed; }
 .rentree-payment-note { font-size: 13px; line-height: 1.5; margin: 10px 0; }
 @media (max-width: 800px) {

@@ -25,7 +25,7 @@ export function escapeHtml(s) {
   );
 }
 
-/** 6499 → "64,99 €" */
+/** Formate un montant en centimes vers un prix en euros, au format français. */
 export function formatAmount(cents) {
   const n = Number(cents) || 0;
   return `${(n / 100).toFixed(2).replace('.', ',')} €`;

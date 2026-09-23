@@ -1,0 +1,15 @@
+{
+  "_lisezMoi": "Source unique du prix du livre relié. Toute modification doit être suivie de « node scripts/prix-livre.mjs --apply », puis de la recréation du lien de paiement Stripe (api/create-rentree-payment-link.mjs). Le dossier _data n'est pas publié par Jekyll.",
+
+  "prix": "39,99",
+  "prixCents": 3999,
+  "prixSchema": "39.99",
+
+  "finOffre": "2026-10-15",
+  "finOffreTexte": "15 octobre 2026",
+  "mention": "Offre jusqu’au 15 octobre",
+
+  "_prixPrevuApresOffre": "64,99",
+  "_prixPrevuApresOffreCents": 6499,
+  "_notePrixPrevu": "Tarif prévu après l'offre. Il n'a jamais été pratiqué : il ne doit donc JAMAIS être affiché comme prix de référence barré (article L112-1-1 du Code de la consommation). Le script vérifie qu'il n'apparaît nulle part dans les pages publiées."
+}

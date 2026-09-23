@@ -13,11 +13,11 @@
     document.body.insertBefore(banner, document.body.firstChild);
   }
   banner.className = 'promo-banner rentree-banner';
-  banner.setAttribute('aria-label', 'Offre de rentrée sur le livre relié à la main');
+  banner.setAttribute('aria-label', 'Offre sur le livre relié à la main');
   banner.innerHTML = '<div class="rentree-banner__inner">' +
-    '<div class="rentree-banner__copy"><span class="rentree-banner__tag">Offre de rentrée</span>' +
+    '<div class="rentree-banner__copy"><span class="rentree-banner__tag">Offre jusqu’au 15 octobre</span>' +
     '<span class="rentree-banner__detail">Livre relié à la main · 200 pages pour débuter · Livraison comprise</span></div>' +
-    '<div class="rentree-banner__offer"><del aria-label="Ancien prix : 64,99 euros">64,99 €</del><strong>39,99 €</strong></div>' +
+    '<div class="rentree-banner__offer"><strong>39,99 €</strong></div>' +
     '<a class="rentree-banner__cta">Découvrir le livre →</a></div>';
   banner.querySelector('.rentree-banner__cta').href = guideUrl.href;
   document.body.classList.add('has-promo', 'has-rentree-promo');
