@@ -217,6 +217,33 @@ test('un lien de désinscription altéré est refusé sans effet et limité en d
   assert.equal(db.size, 0);
 });
 
+test('le chemin legacy ?token= partage la limite de débit du formulaire ; les en-têtes durcis sont posés', async t => {
+  const { env } = fixture(t);
+  const racine = await worker.fetch(get('/'), env);
+  assert.equal(racine.headers.get('Strict-Transport-Security'), 'max-age=31536000; includeSubDomains');
+  assert.equal(racine.headers.get('Cross-Origin-Opener-Policy'), 'same-origin');
+  assert.match(racine.headers.get('Permissions-Policy'), /camera=\(\)/);
+  env.SUBSCRIBE_IP_LIMITER.limit = async ({ key }) => ({ success: !key.startsWith('admin:') });
+  const r = await worker.fetch(get('/admin?token=' + env.ADMIN_TOKEN), env);
+  assert.equal(r.status, 429);
+  assert.equal(r.headers.get('Retry-After'), '60');
+  assert.equal(r.headers.get('Set-Cookie'), null, 'aucune session ouverte quand la limite est atteinte');
+});
+
+test('la déconnexion efface le cookie de session et refuse les origines tierces', async t => {
+  const { env } = fixture(t);
+  const login = await worker.fetch(get('/admin?token=' + env.ADMIN_TOKEN), env);
+  assert.equal(login.status, 303);
+  const page = await worker.fetch(get('/admin', { Cookie: login.headers.get('Set-Cookie').split(';')[0] }), env);
+  assert.match(await page.text(), /action="\/logout"/);
+  const logout = await worker.fetch(new Request(base + '/logout', { method: 'POST', headers: { Origin: base } }), env);
+  assert.equal(logout.status, 303); assert.equal(logout.headers.get('Location'), '/admin');
+  const cookie = logout.headers.get('Set-Cookie');
+  assert.ok(cookie.startsWith('__Host-chess-admin=;'), cookie);
+  for (const flag of ['Max-Age=0', 'Secure', 'HttpOnly', 'Path=/']) assert.ok(cookie.includes(flag), flag);
+  assert.equal((await worker.fetch(new Request(base + '/logout', { method: 'POST', headers: { Origin: 'https://other.example' } }), env)).status, 403);
+});
+
 test('failed pack emails retry without losing or duplicating the stored order', async t => {
   const f = fixture(t); const session = { ...paid, metadata: { product: 'pack_livres_relies' }, amount_total: 6499 };
   f.failEmails();

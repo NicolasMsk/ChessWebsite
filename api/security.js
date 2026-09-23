@@ -50,10 +50,26 @@ export async function adminSessionRedirect(path, env) {
   } });
 }
 
+/** Efface le cookie de session côté navigateur. La session étant signée sans
+ *  état serveur, l'ancienne valeur resterait acceptée jusqu'à son expiration
+ *  (8 h au plus) si quelqu'un l'avait copiée : la déconnexion protège le poste,
+ *  pas contre un vol de cookie. */
+export function adminLogoutResponse() {
+  return new Response(null, { status: 303, headers: {
+    Location: '/admin',
+    'Set-Cookie': `${SESSION_COOKIE}=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0`,
+  } });
+}
+
 export function secureResponse(response) {
   const headers = new Headers(response.headers);
   headers.set('Cache-Control', 'no-store');
   headers.set('Referrer-Policy', 'no-referrer');
+  // workers.dev est déjà préchargé HSTS ; l'en-tête reste utile si le Worker
+  // est un jour servi sous un domaine à soi.
+  headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), payment=()');
+  headers.set('Cross-Origin-Opener-Policy', 'same-origin');
   headers.set('X-Content-Type-Options', 'nosniff');
   headers.set('X-Frame-Options', 'DENY');
   headers.set('X-Robots-Tag', 'noindex, nofollow');

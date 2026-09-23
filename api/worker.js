@@ -28,7 +28,7 @@ import {
   csvField,
 } from './order.js';
 import {
-  adminAuthorized, adminSessionRedirect, validAdminSecret, timingSafeEqual,
+  adminAuthorized, adminSessionRedirect, adminLogoutResponse, validAdminSecret, timingSafeEqual,
   secureResponse, readLimitedText, hash, hmac,
 } from './security.js';
 
@@ -66,10 +66,20 @@ async function routeRequest(request, env) {
       // dans les liens de navigation ni dans les réponses contenant des données.
       const adminPaths = ['/admin', '/subscribers', '/subscribers/export.csv', '/orders', '/orders/export.csv'];
       if (request.method === 'GET' && adminPaths.includes(path) && url.searchParams.has('token')) {
+        // Même budget que le formulaire de connexion : sans cela, ce chemin
+        // permettait d'essayer des jetons sans aucune limite.
+        if (env.SUBSCRIBE_IP_LIMITER && !(await env.SUBSCRIBE_IP_LIMITER.limit({ key: `admin:${request.headers.get('CF-Connecting-IP') || 'unknown'}` })).success) {
+          return new Response('Réessayez dans une minute', { status: 429, headers: { 'Retry-After': '60' } });
+        }
         if (!validAdminSecret(env.ADMIN_TOKEN) || !timingSafeEqual(url.searchParams.get('token'), env.ADMIN_TOKEN)) {
           return jsonResponse({ error: 'Non autorisé' }, 401, env);
         }
         return await adminSessionRedirect(path, env);
+      }
+      if (path === '/logout' && request.method === 'POST') {
+        const origin = request.headers.get('Origin');
+        if (origin && origin !== url.origin) return new Response('Non autorisé', { status: 403 });
+        return adminLogoutResponse();
       }
       if (path === '/admin' && request.method === 'POST') {
         const origin = request.headers.get('Origin');
@@ -650,6 +660,7 @@ async function handleAdminPage(request, env) {
     <div class="actions">
       <a href="/subscribers/export.csv" class="btn">⬇️ Télécharger CSV</a>
       <a href="/admin" class="btn">🔄 Rafraîchir</a>
+      <form method="post" action="/logout" style="display:inline;"><button type="submit" class="btn" style="cursor:pointer;font:inherit;">Se déconnecter</button></form>
     </div>
 
     ${subscribers.length === 0
