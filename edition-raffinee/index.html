@@ -26,7 +26,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="../style.min.css">
-  <link rel="stylesheet" href="../pack-livres.css?v=5">
+  <link rel="stylesheet" href="../pack-livres.css?v=6">
+  <!-- Photo de l'auteur : élément LCP mesuré par Lighthouse, à charger en priorité -->
+  <link rel="preload" as="image" href="../images/reliure/pack-2026-auteur.webp" fetchpriority="high">
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
@@ -151,6 +153,14 @@
     <div class="breadcrumb"><a href="../">Accueil</a> <i class="fa-solid fa-chevron-right"></i> Édition reliée</div>
     <h1>Votre premier livre pour apprendre les échecs</h1>
     <p>Vous partez de zéro&nbsp;? Apprenez les règles, comprenez quoi jouer et repérez les erreurs à éviter. Une méthode en 200 pages, à garder ouverte à côté de votre échiquier.</p>
+    <!-- Prix et commande visibles sans défiler : sur mobile, le prix n'arrivait
+         qu'après deux écrans, derrière la galerie et l'argumentaire. -->
+    <div class="product-offer" aria-label="Prix et commande">
+      <span class="product-offer__price">39,99&nbsp;€</span>
+      <span class="product-offer__note">Offre jusqu’au 15 octobre · Livraison comprise</span>
+      <a class="product-offer__cta" href="https://buy.stripe.com/eVq3cx8cLdJE8RLaNWdQQ04" rel="noopener">Commander le livre relié</a>
+      <span class="product-offer__reassure">Paiement par carte via Stripe · France métropolitaine · Livré sous 14 jours · Rétractation 14 jours</span>
+    </div>
   </header>
 
   <main>
@@ -165,7 +175,7 @@
                  aria-label="Agrandir les photos de l'édition reliée">
               <img src="../images/reliure/pack-2026-auteur.webp"
                    alt="Nicolas Musicki, l'auteur, tenant l'édition reliée à la main d'Apprendre les Échecs devant un échiquier"
-                   width="1086" height="1207" loading="lazy" decoding="async">
+                   width="1086" height="1207" fetchpriority="high" decoding="async">
               <span class="pack-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir</span>
             </div>
             <div class="pack-thumbs">
@@ -241,8 +251,7 @@
 
             <div class="pack-honesty">
               <strong>Vous pouvez lire la première moitié avant d'acheter.</strong>
-              Le Volume 1 — les règles et les premières parties — est téléchargeable en
-              <a href="../guide-apprendre-les-echecs.html">PDF gratuit</a>, 95 pages.
+              Le Volume 1 — les règles et les premières parties — est offert en PDF sur ce site, 95 pages.
               Le livre en fait 200&nbsp;: la seconde moitié, celle qui vous fait progresser,
               n'est disponible nulle part ailleurs.
             </div>
@@ -376,7 +385,7 @@
           <p class="book-kicker">Offre jusqu’au 15 octobre</p>
           <p class="book-offer-price"><strong>39,99 €</strong></p>
           <p>200 pages · Livre relié à la main<br>Livraison comprise en France métropolitaine</p>
-          <a class="book-return-cta" href="#pack-cta">Choisir mon livre relié →</a>
+          <a class="book-return-cta" href="https://buy.stripe.com/eVq3cx8cLdJE8RLaNWdQQ04" rel="noopener">Commander le livre relié →</a>
           <p class="book-offer-small">Livraison sous 14 jours maximum · envoi express possible sur demande.</p>
         </div>
       </section>
