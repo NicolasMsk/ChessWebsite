@@ -12,8 +12,13 @@ binding = "SUBSCRIBERS"
 id = "74b1be0e07f949ba86749422063c463f"
 
 # Les secrets sont configurés via : wrangler secret put <NOM>
-# - RESEND_API_KEY : ta clé API Resend
-# - ADMIN_TOKEN    : un token random que tu choisis (pour accéder à /subscribers)
+# - RESEND_API_KEY       : ta clé API Resend
+# - ADMIN_TOKEN          : un token random que tu choisis (pour accéder à /subscribers)
+# - STRIPE_WEBHOOK_SECRET : clé de signature du webhook Stripe (whsec_...)
+# - UNSUBSCRIBE_SECRET   : clé de signature des liens de désinscription. Ne JAMAIS
+#                          la changer une fois des emails partis : les liens qu'ils
+#                          contiennent cesseraient de fonctionner.
+#                          node -e "process.stdout.write(require('crypto').randomBytes(32).toString('hex'))" | wrangler secret put UNSUBSCRIBE_SECRET
 
 # Wrangler >= 4.36.0. Limites par point de présence Cloudflare.
 [[ratelimits]]

@@ -29,7 +29,7 @@ import {
 } from './order.js';
 import {
   adminAuthorized, adminSessionRedirect, validAdminSecret, timingSafeEqual,
-  secureResponse, readLimitedText, hash,
+  secureResponse, readLimitedText, hash, hmac,
 } from './security.js';
 
 const PDF_URL = 'https://www.cours-echecs-paris.fr/fichiers/guide-volume-1-7f3a9c.pdf';
@@ -41,6 +41,10 @@ const BOOK_URL = 'https://www.cours-echecs-paris.fr/edition-raffinee/';
 const FROM_ADDRESS = 'Nicolas Musicki <contact@cours-echecs-paris.fr>';
 const REPLY_TO = 'nicolas.musicki@gmail.com';
 const ADMIN_EMAIL = 'nicolas.musicki@gmail.com';
+// Route de désinscription. Le lien est signé, donc il ne peut pas être forgé,
+// et il reste valide à vie tant que UNSUBSCRIBE_SECRET n'est pas changé — un
+// email part dans une boîte et peut y rester des années.
+const UNSUBSCRIBE_PATH = '/desinscription';
 
 export default {
   async fetch(request, env) {
@@ -81,6 +85,12 @@ async function routeRequest(request, env) {
       }
       if (path === '/subscribe' && request.method === 'POST') {
         return await handleSubscribe(request, env);
+      }
+      // GET affiche une confirmation (les scanners de messagerie préchargent les
+      // liens : un GET ne doit donc rien détruire). POST désinscrit réellement,
+      // ce qui couvre le formulaire humain et le « un clic » RFC 8058.
+      if (path === UNSUBSCRIBE_PATH && (request.method === 'GET' || request.method === 'POST')) {
+        return await handleUnsubscribe(request, env);
       }
       if (path === '/stripe-webhook' && request.method === 'POST') {
         return await handleStripeWebhook(request, env);
@@ -160,7 +170,7 @@ async function handleSubscribe(request, env) {
   }
 
   // Envoi de l'email avec le PDF
-  const emailResult = await sendGuideEmail(email, env);
+  const emailResult = await sendGuideEmail(email, env, new URL(request.url).origin);
 
   // Notification admin à CHAQUE téléchargement (nouveau ou re-téléchargement) — non bloquant
   try {
@@ -183,6 +193,130 @@ async function handleSubscribe(request, env) {
     },
     200,
     env
+  );
+}
+
+// ============================================================
+// ENDPOINT : /desinscription (GET puis POST)
+// ============================================================
+
+/** Encode des octets en base64url, sans remplissage. */
+function toBase64Url(bytes) {
+  let binaire = '';
+  for (const octet of bytes) binaire += String.fromCharCode(octet);
+  return btoa(binaire).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+// Les adresses peuvent contenir de l'UTF-8 : on passe par les octets plutôt que
+// par btoa(chaîne), qui échoue hors Latin-1.
+function encodeEmail(email) {
+  return toBase64Url(new TextEncoder().encode(email));
+}
+
+function decodeEmail(encode) {
+  try {
+    const base64 = encode.replace(/-/g, '+').replace(/_/g, '/');
+    const binaire = atob(base64 + '='.repeat((4 - (base64.length % 4)) % 4));
+    return new TextDecoder().decode(Uint8Array.from(binaire, c => c.charCodeAt(0)));
+  } catch {
+    return '';
+  }
+}
+
+/**
+ * Lien de désinscription signé, ou null si le secret n'est pas configuré.
+ * Dans ce cas les emails retombent sur une désinscription par email : il doit
+ * toujours exister un moyen de sortir de la liste.
+ */
+export async function unsubscribeLink(email, env, origin) {
+  if (!validAdminSecret(env.UNSUBSCRIBE_SECRET) || !isValidEmail(email)) return null;
+  const signature = await hmac(`desinscription:${email}`, env.UNSUBSCRIBE_SECRET);
+  return `${origin}${UNSUBSCRIBE_PATH}?e=${encodeEmail(email)}&t=${signature}`;
+}
+
+function unsubscribePage(titre, corps, status) {
+  return new Response(
+    `<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">` +
+    `<meta name="viewport" content="width=device-width, initial-scale=1">` +
+    `<title>${escapeHtml(titre)}</title></head>` +
+    `<body style="margin:0;background:#faf6ef;color:#3E2C1C;font-family:Georgia,'Times New Roman',serif;">` +
+    `<div style="max-width:560px;margin:0 auto;padding:56px 24px;">` +
+    `<h1 style="font-size:26px;line-height:1.25;margin:0 0 16px;">${escapeHtml(titre)}</h1>` +
+    `<div style="font-size:16px;line-height:1.65;">${corps}</div>` +
+    `<p style="margin:40px 0 0;font-size:13px;color:#8B5A2B;">` +
+    `<a href="${SITE_URL}" style="color:#8B5A2B;">cours-echecs-paris.fr</a></p>` +
+    `</div></body></html>`,
+    { status, headers: { 'Content-Type': 'text/html; charset=utf-8' } }
+  );
+}
+
+function contactManuelHtml() {
+  return `Écrivez-moi à <a href="mailto:${escapeHtml(REPLY_TO)}?subject=Desinscription" ` +
+    `style="color:#8B5A2B;">${escapeHtml(REPLY_TO)}</a> et je vous retire de la liste moi-même.`;
+}
+
+async function handleUnsubscribe(request, env) {
+  const url = new URL(request.url);
+  const encode = url.searchParams.get('e') || '';
+  const signature = url.searchParams.get('t') || '';
+  const email = normalizeEmail(decodeEmail(encode));
+
+  if (!validAdminSecret(env.UNSUBSCRIBE_SECRET)) {
+    return unsubscribePage(
+      'Désinscription momentanément indisponible',
+      `<p>${contactManuelHtml()}</p>`,
+      503
+    );
+  }
+
+  const attendue = isValidEmail(email)
+    ? await hmac(`desinscription:${email}`, env.UNSUBSCRIBE_SECRET)
+    : '';
+  if (!attendue || !timingSafeEqual(signature, attendue)) {
+    // Seuls les liens invalides sont limités : jamais une désinscription
+    // légitime, qui peut arriver en masse depuis les serveurs d'une messagerie.
+    if (env.SUBSCRIBE_IP_LIMITER) {
+      const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+      const autorise = await env.SUBSCRIBE_IP_LIMITER.limit({ key: `desinscription:${ip}` });
+      if (!autorise.success) {
+        return new Response('Réessayez dans une minute', { status: 429, headers: { 'Retry-After': '60' } });
+      }
+    }
+    return unsubscribePage(
+      'Ce lien de désinscription n’est pas valide',
+      `<p>Il a peut-être été tronqué par votre logiciel de messagerie. ${contactManuelHtml()}</p>`,
+      400
+    );
+  }
+
+  if (request.method === 'GET') {
+    const action = `${UNSUBSCRIBE_PATH}?e=${encodeURIComponent(encode)}&t=${encodeURIComponent(signature)}`;
+    return unsubscribePage(
+      'Confirmer la désinscription',
+      `<p>Vous ne recevrez plus d’email de ma part à l’adresse <strong>${escapeHtml(email)}</strong>.</p>` +
+      `<form method="post" action="${escapeHtml(action)}" style="margin:28px 0 0;">` +
+      `<button type="submit" style="background:#3E2C1C;color:#F0D9B5;border:0;padding:15px 26px;` +
+      `font-family:Georgia,serif;font-size:16px;cursor:pointer;">Confirmer la désinscription</button>` +
+      `</form>` +
+      `<p style="margin:24px 0 0;font-size:14px;">Vous avez cliqué par erreur&nbsp;? ` +
+      `Fermez simplement cette page, rien n’a été modifié.</p>`,
+      200
+    );
+  }
+
+  // Volontairement idempotent : une adresse déjà retirée renvoie un succès.
+  // Le « un clic » des messageries ne doit jamais retomber sur une erreur.
+  const id = await env.SUBSCRIBERS.get(`email:${email}`);
+  if (id) {
+    await env.SUBSCRIBERS.delete(`subscriber:${id}`);
+    await env.SUBSCRIBERS.delete(`email:${email}`);
+  }
+  return unsubscribePage(
+    'C’est fait, vous êtes désinscrit',
+    `<p>L’adresse <strong>${escapeHtml(email)}</strong> a été retirée de ma liste et ses données supprimées.</p>` +
+    `<p>Le guide déjà téléchargé reste bien sûr à vous. Si vous changez d’avis, ` +
+    `vous pouvez le redemander à tout moment depuis le site.</p>`,
+    200
   );
 }
 
@@ -241,7 +375,7 @@ async function handleStripeWebhook(request, env) {
 
       // Ne relancer que les notifications qui n'ont pas encore réussi.
       await deliverNotifications([
-        [`payment:${session.id}:guide`, key => sendGuideEmail(email, env, key)],
+        [`payment:${session.id}:guide`, key => sendGuideEmail(email, env, new URL(request.url).origin, key)],
         [`payment:${session.id}:admin`, key => sendAdminNotification({ email, why: 'achat_stripe', totalCount: null, sentAt: Number(session.created || 0) * 1000 }, env, key)],
       ], env);
     }
@@ -584,7 +718,13 @@ function jsonResponse(data, status, env) {
 // ============================================================
 // Envoi d'email via Resend
 // ============================================================
-async function sendGuideEmail(to, env, idempotencyKey) {
+async function sendGuideEmail(to, env, origin, idempotencyKey) {
+  const lien = await unsubscribeLink(to, env, origin);
+  // En-têtes RFC 8058 : Gmail et Outlook affichent leur propre bouton
+  // « Se désabonner » et l'exigent des expéditeurs réguliers. Sans secret
+  // configuré, on garde au moins la variante mailto.
+  const mailto = `<mailto:${REPLY_TO}?subject=Desinscription>`;
+  const listUnsubscribe = lien ? `<${lien}>, ${mailto}` : mailto;
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
@@ -597,8 +737,12 @@ async function sendGuideEmail(to, env, idempotencyKey) {
       to: [to],
       reply_to: REPLY_TO,
       subject: 'Votre guide des échecs est prêt',
-      html: guideEmailHtml(),
-      text: guideEmailText(),
+      html: guideEmailHtml(lien),
+      text: guideEmailText(lien),
+      headers: {
+        'List-Unsubscribe': listUnsubscribe,
+        ...(lien ? { 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' } : {}),
+      },
     }),
   });
 
@@ -647,7 +791,10 @@ function escapeHtml(s) {
 }
 
 // Version texte brut (améliore la délivrabilité)
-function guideEmailText() {
+function guideEmailText(lienDesinscription) {
+  const desinscription = lienDesinscription
+    ? `Pour ne plus recevoir d'email de ma part : ${lienDesinscription}`
+    : `Pour ne plus recevoir d'email de ma part, répondez simplement « désinscription » à ce message.`;
   return `Bonjour,
 
 Merci pour votre inscription ! Comme promis, voici votre guide des échecs (PDF, 95 pages) :
@@ -685,13 +832,19 @@ Besoin de l'offrir plus vite ? Repondez a ce message.
 Nicolas Musicki
 Professeur d'échecs — cours-echecs-paris.fr
 
-P.S. Si vous souhaitez progresser avec un accompagnement, mon premier cours est offert, à domicile (Paris/Versailles) ou en visio : https://www.cours-echecs-paris.fr/#contact`;
+P.S. Si vous souhaitez progresser avec un accompagnement, mon premier cours est offert, à domicile (Paris/Versailles) ou en visio : https://www.cours-echecs-paris.fr/#contact
+
+--
+${desinscription}`;
 }
 
 // ============================================================
 // Template HTML de l'email
 // ============================================================
-function guideEmailHtml() {
+function guideEmailHtml(lienDesinscription) {
+  const desinscription = lienDesinscription
+    ? `<a href="${lienDesinscription}" style="color:#F0D9B5; text-decoration:underline;">Se désinscrire</a>`
+    : `<a href="mailto:${REPLY_TO}?subject=Desinscription" style="color:#F0D9B5; text-decoration:underline;">Se désinscrire</a>`;
   return `<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -773,6 +926,7 @@ function guideEmailHtml() {
             <a href="https://www.cours-echecs-paris.fr" style="color:#F0D9B5; text-decoration:none;">cours-echecs-paris.fr</a>
             &nbsp;·&nbsp;
             <a href="https://www.instagram.com/magickchess/" style="color:#F0D9B5; text-decoration:none;">Instagram @magickchess</a>
+            <br><span style="display:inline-block; margin-top:10px; opacity:0.85;">Vous recevez cet email parce que vous avez demandé le guide. ${desinscription}</span>
           </td>
         </tr>
       </table>

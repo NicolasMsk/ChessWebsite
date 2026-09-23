@@ -55,6 +55,16 @@ wrangler secret put ADMIN_TOKEN
 
 Garde le token admin précieusement — il te permet de lister/exporter les inscrits.
 
+La clé de signature des liens de désinscription (générée sans jamais s'afficher) :
+
+```bash
+node -e "process.stdout.write(require('crypto').randomBytes(32).toString('hex'))" | wrangler secret put UNSUBSCRIBE_SECRET
+```
+
+Ne la change **jamais** une fois des emails partis : chaque email du guide contient un lien
+signé avec cette clé, et ces liens doivent rester valides tant que l'email existe dans une
+boîte. Sans cette clé, le Worker retombe sur une désinscription par simple réponse à l'email.
+
 ### 4. Déployer
 
 ```bash

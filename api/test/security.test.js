@@ -25,6 +25,7 @@ function fixture(t) {
     SUBSCRIBERS: {
       get: async key => db.get(key) ?? null,
       put: async (key, value) => { db.set(key, value); },
+      delete: async key => { db.delete(key); },
       list: async ({ prefix }) => ({ keys: [...db.keys()].filter(k => k.startsWith(prefix)).map(name => ({ name })), list_complete: true }),
     },
   };
@@ -144,6 +145,76 @@ test('paid guide webhook is deduplicated and unpaid events do nothing', async t 
   assert.equal((await worker.fetch(signed(env, paid), env)).status, 200);
   assert.equal(calls.length, 2);
   for (const call of calls) assert.ok(call.headers['Idempotency-Key']);
+});
+
+test('sans secret, la désinscription retombe sur un contact par email et ne casse rien', async t => {
+  const { env, calls } = fixture(t);
+  assert.equal((await worker.fetch(subscribe(), env)).status, 200);
+  const guide = calls[0].body;
+  assert.equal(guide.headers['List-Unsubscribe'], '<mailto:nicolas.musicki@gmail.com?subject=Desinscription>');
+  assert.equal(guide.headers['List-Unsubscribe-Post'], undefined);
+  assert.match(guide.html, /mailto:nicolas\.musicki@gmail\.com\?subject=Desinscription/);
+  assert.match(guide.text, /répondez simplement/);
+  const page = await worker.fetch(get('/desinscription?e=x&t=y'), env);
+  assert.equal(page.status, 503);
+  assert.match(await page.text(), /mailto:nicolas\.musicki@gmail\.com/);
+});
+
+test('le lien de désinscription signé confirme en GET puis supprime en POST, de façon idempotente', async t => {
+  const { env, calls, db } = fixture(t);
+  env.UNSUBSCRIBE_SECRET = 'local-unsubscribe-secret';
+  assert.equal((await worker.fetch(subscribe(), env)).status, 200);
+  const guide = calls[0].body;
+  const lien = /https:\/\/worker\.example\/desinscription\?e=[A-Za-z0-9_-]+&t=[a-f0-9]{64}/.exec(guide.html)?.[0];
+  assert.ok(lien, 'le lien signé figure dans le corps HTML');
+  assert.ok(guide.text.includes(lien), 'le lien signé figure dans la version texte');
+  assert.equal(guide.headers['List-Unsubscribe'], `<${lien}>, <mailto:nicolas.musicki@gmail.com?subject=Desinscription>`);
+  assert.equal(guide.headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click');
+
+  const cles = () => [...db.keys()].filter(k => k.startsWith('subscriber:') || k.startsWith('email:'));
+  assert.equal(cles().length, 2);
+
+  const confirmation = await worker.fetch(new Request(lien), env);
+  assert.equal(confirmation.status, 200);
+  const html = await confirmation.text();
+  assert.match(html, /<form method="post"/);
+  assert.match(html, /person@example\.invalid/);
+  assert.equal(cles().length, 2, 'un GET ne détruit rien');
+
+  const oneClick = new Request(lien, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: 'List-Unsubscribe=One-Click' });
+  const fait = await worker.fetch(oneClick, env);
+  assert.equal(fait.status, 200);
+  assert.match(await fait.text(), /vous êtes désinscrit/);
+  assert.equal(cles().length, 0, 'les clés subscriber et email sont supprimées');
+
+  assert.equal((await worker.fetch(new Request(lien, { method: 'POST' }), env)).status, 200, 'rejouer le lien reste un succès');
+  assert.equal(calls.length, 2, 'la désinscription n’envoie aucun email');
+});
+
+test('un lien de désinscription altéré est refusé sans effet et limité en débit', async t => {
+  const { env, db } = fixture(t);
+  env.UNSUBSCRIBE_SECRET = 'local-unsubscribe-secret';
+  db.set('email:person@example.invalid', 'one');
+  db.set('subscriber:one', '{}');
+  const encode = Buffer.from('person@example.invalid').toString('base64url');
+  const bon = await hmac('desinscription:person@example.invalid', env.UNSUBSCRIBE_SECRET);
+  const faux = bon.replace(/^./, c => (c === 'a' ? 'b' : 'a'));
+  for (const url of [
+    `/desinscription?e=${encode}&t=${faux}`,
+    `/desinscription?e=${encode}`,
+    `/desinscription?e=%%%&t=${bon}`,
+    `/desinscription?e=${Buffer.from('autre@example.invalid').toString('base64url')}&t=${bon}`,
+  ]) {
+    for (const method of ['GET', 'POST']) {
+      assert.equal((await worker.fetch(new Request(base + url, { method }), env)).status, 400, `${method} ${url}`);
+    }
+  }
+  assert.equal(db.size, 2, 'aucune suppression');
+  env.SUBSCRIBE_IP_LIMITER.limit = async () => ({ success: false });
+  assert.equal((await worker.fetch(get(`/desinscription?e=${encode}&t=${faux}`), env)).status, 429);
+  env.SUBSCRIBE_IP_LIMITER.limit = async () => ({ success: true });
+  assert.equal((await worker.fetch(new Request(base + `/desinscription?e=${encode}&t=${bon}`, { method: 'POST' }), env)).status, 200, 'le lien valide n’est jamais limité');
+  assert.equal(db.size, 0);
 });
 
 test('failed pack emails retry without losing or duplicating the stored order', async t => {
