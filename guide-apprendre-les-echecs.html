@@ -36,7 +36,8 @@
   <meta name="twitter:image" content="https://www.cours-echecs-paris.fr/couverture-guide-v1.png">
 
   <link rel="canonical" href="https://www.cours-echecs-paris.fr/guide-apprendre-les-echecs.html">
-  <link rel="preload" as="image" href="couverture-guide-v1.png" fetchpriority="high">
+  <!-- Couverture = élément LCP. Le type restreint le préchargement aux navigateurs AVIF. -->
+  <link rel="preload" as="image" href="couverture-guide-v1-500.avif" type="image/avif" fetchpriority="high">
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -555,7 +556,11 @@
   <!-- MAIN : cover preview + form -->
   <section class="ebook-main">
     <div class="ebook-cover-preview">
-      <img src="couverture-guide-v1.png" alt="Couverture du guide « Apprendre les Échecs — Volume 1 » pour apprendre les échecs" width="720" height="1152" fetchpriority="high"/>
+      <picture>
+        <source srcset="couverture-guide-v1-500.avif" type="image/avif">
+        <source srcset="couverture-guide-v1-500.webp" type="image/webp">
+        <img src="couverture-guide-v1.png" alt="Couverture du guide « Apprendre les Échecs — Volume 1 » pour apprendre les échecs" width="720" height="1152" fetchpriority="high">
+      </picture>
       <div class="cover-stats">
         <div class="stat">
           <div class="stat-num">95</div>

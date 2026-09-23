@@ -30,8 +30,10 @@
 
   <title>Cours d'Échecs à Paris, Versailles et en Visio</title>
 
-  <!-- Préchargement image LCP pour améliorer les performances -->
-  <link rel="preload" as="image" href="nicolas_musicki.webp" fetchpriority="high">
+  <!-- L'élément LCP mesuré par Lighthouse est l'en-tête, dont le fond est
+       echiquier.avif déclaré en CSS : le navigateur ne le découvre qu'après la
+       feuille de style. Le précharger le fait partir avec le HTML. -->
+  <link rel="preload" as="image" href="echiquier.avif" type="image/avif" fetchpriority="high">
 
   <!-- Google Fonts - Préchargement pour améliorer les performances -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -413,7 +415,10 @@
 
         <div class="hero-image">
           <div class="image-wrapper">
-            <img src="nicolas_musicki.webp" alt="Nicolas Musicki, professeur d'échecs à Paris et Versailles" width="500" height="600" loading="eager" fetchpriority="high" />
+            <picture>
+              <source srcset="nicolas_musicki-640.avif" type="image/avif">
+              <img src="nicolas_musicki.webp" alt="Nicolas Musicki, professeur d'échecs à Paris et Versailles" width="500" height="600" loading="eager" />
+            </picture>
             <div class="image-badge">1<sup>er</sup> cours OFFERT</div>
           </div>
         </div>
@@ -672,7 +677,11 @@
 
         <div class="hlm-wrap">
           <div class="hlm-visual">
-            <img src="couverture-guide-v1.png" alt="Couverture du guide gratuit « Apprendre les Échecs » pour débutants" width="220" height="352" loading="lazy">
+            <picture>
+              <source srcset="couverture-guide-v1-220.avif, couverture-guide-v1-500.avif 2x" type="image/avif">
+              <source srcset="couverture-guide-v1-220.webp, couverture-guide-v1-500.webp 2x" type="image/webp">
+              <img src="couverture-guide-v1.png" alt="Couverture du guide gratuit « Apprendre les Échecs » pour débutants" width="220" height="352" loading="lazy">
+            </picture>
           </div>
           <div class="hlm-content">
             <div class="hlm-kicker">Guide offert · 95 pages PDF</div>
