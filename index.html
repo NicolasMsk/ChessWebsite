@@ -51,6 +51,7 @@
   <style>
     .group-lessons{max-width:920px;margin:3rem auto;padding:clamp(1.25rem,4vw,2rem);background:var(--off-white);border:1px solid var(--silver);border-left:4px solid var(--accent)}
     .group-lessons h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:1rem}.group-lessons p{line-height:1.7;margin-bottom:1rem}.group-lessons-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.group-lessons-actions a{overflow-wrap:anywhere}.group-lessons-actions .btn{white-space:normal;max-width:100%}
+    .form-consent{margin:.25rem 0 1rem;font-size:.82rem;line-height:1.5;color:var(--text-muted,#6b6b6b)}.form-consent a{color:var(--walnut);text-decoration:underline}
     .hero-buttons{gap:12px;margin-top:1.25rem;align-items:center}.hero-buttons .btn{flex:0 1 auto;min-width:0;padding:.7rem 1.15rem;font-size:.72rem;line-height:1.25}
     .book-referral{max-width:920px;margin:clamp(2rem,5vw,4rem) auto;padding:clamp(1rem,2.5vw,1.5rem);display:grid;grid-template-columns:minmax(180px,260px) 1fr;align-items:center;gap:clamp(1.25rem,3vw,2.25rem);background:var(--off-white);border:1px solid var(--silver);border-left:4px solid var(--accent)}
     .book-referral img{width:100%;aspect-ratio:9/10;object-fit:cover}.book-referral-eyebrow{margin-bottom:.45rem;color:var(--accent-dark);font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.book-referral h3{margin-bottom:.65rem;font-size:clamp(1.25rem,2.4vw,1.75rem)}.book-referral p{margin-bottom:.9rem;font-size:.96rem;line-height:1.65}
@@ -694,7 +695,7 @@
               <button type="submit" id="hlm-submit">Je reçois mon guide</button>
             </form>
             <p class="hlm-consent">
-              Vous recevez le guide et quelques conseils pédagogiques. Désinscription en un clic, à tout moment.
+              Vous recevez le guide et quelques conseils pédagogiques. Désinscription en un clic, à tout moment. Votre adresse est traitée par Nicolas Musicki, avec Cloudflare et Resend pour l'envoi&nbsp;: <a href="mentions-legales.html#rgpd" style="color:#3E2C1C;">politique de confidentialité</a>.
             </p>
             <div id="hlm-success" class="hlm-msg hlm-success"></div>
             <div id="hlm-error" class="hlm-msg hlm-error"></div>
@@ -1092,6 +1093,7 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="4" required></textarea>
             </div>
+            <p class="form-consent">Vos coordonnées servent uniquement à répondre à votre demande de cours et sont conservées 3 ans au plus. Le message transite par Formspree. <a href="mentions-legales.html#rgpd">Politique de confidentialité</a>.</p>
             <button type="submit" class="btn btn-full">Réserver mon cours gratuit</button>
           </form>
           
