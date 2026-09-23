@@ -133,6 +133,14 @@ Recommandations : Eleventy (Nunjucks, sortie HTML identique) avec layout unique 
 
 ## Plan d'action en 3 phases
 
+### Bilan de la phase 1 (exécutée le 23 septembre 2026, branche `phase-1-audit`)
+
+Neuf commits, deux déploiements du Worker. Fait : prix centralisé dans `_data/offre-livre.json` avec script et test (offre jusqu'au 15 octobre, prix barré retiré car jamais pratiqué) ; bandeau livre réservé aux deux pages du livre et retiré de 43 pages ; désinscription signée avec en-têtes RFC 8058, déployée ; Worker durci (limite sur `?token=`, déconnexion, HSTS, Permissions-Policy, COOP) ; prix et commande sous le H1 de la page livre, image LCP préchargée ; images critiques en AVIF et cinq fichiers morts supprimés ; CGV et mentions complétées, information près de chaque formulaire ; branches `seo/*` supprimées.
+
+Mesure locale après la tâche images, page du guide en mobile : performance 60 → 73, LCP 7,2 s → 4,4 s, poids 1 351 → 605 Kio. Le FCP à 4,1 s reste borné par les polices et Font Awesome bloquants, traités en phase 2. Mesure de l'accueil non obtenue (Lighthouse headless instable), à refaire en production après fusion.
+
+Reporté : purge du Volume 2 (phase 3, avec Cloudflare Pages) ; acceptation des CGV sur le Payment Link Stripe (nouveau lien à créer, `consent_collection[terms_of_service]=required`) ; adresse géographique du vendeur, que l'éditeur ne souhaite pas publier ; ligne `License:` de robots.txt conservée volontairement (déclaration RSL, signalée à tort par Lighthouse). Adhésion CM2C à finaliser en ligne.
+
 ### Phase 1 — Quick wins (cette semaine, ~2 jours)
 1. Route `/unsubscribe?t=<hmac(email)>` + lien dans les emails + `List-Unsubscribe` ; retirer la promesse tant que ce n'est pas livré.
 2. Bandeau accueil : ne plus écraser « 1er cours offert » (`promo-rentree.js:10`) ; bandeau livre réservé aux pages guide/livre/blog.
