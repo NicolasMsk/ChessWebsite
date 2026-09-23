@@ -9,7 +9,7 @@ Périmètre : code du dépôt (49 pages HTML publiées, Worker Cloudflare `api/`
 | 1 | Aucun mécanisme de désinscription dans les emails du guide, alors que le site et les mentions légales le promettent | Bloquant | Risque juridique RGPD/CPCE, image | 0,5 j |
 | 2 | Prix du livre codé en dur à 15 endroits / 6 fichiers + Worker + Stripe, aucune date de fin d'offre affichée | Bloquant | Écart page/Stripe au 30/09, litige prix barré | 0,5 j |
 | 3 | Bandeau promo livre écrase le bandeau « 1er cours offert » sur l'accueil | Bloquant | Le produit secondaire cannibalise l'objectif principal (réservation) | 1 h |
-| 4 | Volume 2 payant récupérable dans l'historique Git public (4 blobs PDF) | Bloquant | Fuite du bonus exclusif | 1 h |
+| 4 | Volume 2 payant téléchargeable dans l'historique Git public (4 blobs, 33 Mo) | Bloquant, reporté en phase 3 | Fuite du bonus exclusif | 1 h |
 | 5 | Livre invisible pour Google : 3 impressions/90 j, 0 lien depuis les 36 articles, absent nav et footer | Important | Zéro acquisition organique sur le seul produit payant | 1 j |
 | 6 | Prix du livre visible après ~2 écrans de scroll mobile, réassurance enterrée dans la FAQ, lien « PDF gratuit » sous le bouton Commander | Important | Conversion page livre | 0,5 j |
 | 7 | Zéro preuve sociale sur le livre, 4 photos/8 montrent l'ancienne édition 2 tomes, aucun extrait intérieur | Important | Confiance, conversion | 1 j + collecte |
@@ -122,7 +122,9 @@ GitHub Pages : les conditions interdisent explicitement « run your online busin
 | CI | aucune (`.github/` absent), pas de `.nvmrc`, html-validate 68 erreurs sur 3 pages |
 | Secrets | aucun dans l'historique, `.env*` et service account jamais committés |
 
-- **Volume 2 dans l'historique public** (bloquant) : commits `f904e37`, `4c53da6`, `83bdf18`, `0a02a22`, supprimé en `612c8ca`. Les blobs restent téléchargeables. Seul `git filter-repo` + force-push corrige.
+- **Volume 2 dans l'historique public** (bloquant) : commits `f904e37`, `4c53da6`, `83bdf18`, `0a02a22`, supprimé en `612c8ca`. Vérifié le 23 septembre, le PDF répond en HTTP 200 sur `raw.githubusercontent.com` : 9,2 Mo au commit `0a02a22`, 7,6 Mo au commit `f904e37` sous son ancien nom. Le dépôt est public mais compte 0 fork, 0 étoile et 0 observateur, ce qui limite la diffusion réelle à qui connaît le SHA.
+
+  Décision du 23 septembre : traitement reporté en phase 3. Une réécriture d'historique suivie d'un force-push ne suffit pas, GitHub conservant les objets devenus inaccessibles et les servant par SHA jusqu'à son ramasse-miettes, ce qui impose en plus un ticket au support. Rendre le dépôt privé coupe l'accès immédiatement mais exige un compte Pro tant que le site est servi par GitHub Pages. La migration vers Cloudflare Pages, déjà prévue en phase 3, lève cette contrainte et permet de traiter les deux sujets en une seule fois.
 - **Pipeline de fabrication du livre dans le dépôt du site** : 11 PDF (~120 Mo), 12 scripts, 2 dossiers de sauvegarde, protégés seulement par `.gitignore`. `scripts/impose-cahiers.py` et `edition-raffinee/impose-cahiers.py` divergent.
 - Menu mobile implémenté deux fois, `nav-mobile.js:36-41` recâble le clavier sur un `<div>`. Cache-busting incohérent (`nav-mobile.js?v=1` sur 4 pages, sans version sur 4, `cookies.js` jamais versionné). `blog/index.html` dépend de `fetch('articles.json')`.
 - `sitemap.xml` édité à la main 21 fois, `index.html` 25 fois sur 60 commits. Messages de commit mêlant français, anglais et kebab-case.
@@ -135,7 +137,7 @@ Recommandations : Eleventy (Nunjucks, sortie HTML identique) avec layout unique 
 1. Route `/unsubscribe?t=<hmac(email)>` + lien dans les emails + `List-Unsubscribe` ; retirer la promesse tant que ce n'est pas livré.
 2. Bandeau accueil : ne plus écraser « 1er cours offert » (`promo-rentree.js:10`) ; bandeau livre réservé aux pages guide/livre/blog.
 3. Centraliser le prix (constante lue par la page, le bandeau, le JSON-LD, `order.js`) ; afficher « jusqu'au 30 septembre, puis 64,99 € » ; `priceValidUntil` ; vérifier la légalité du prix barré.
-4. `git filter-repo` sur `fichiers/guide-volume-2*`, force-push, `gc`.
+4. ~~`git filter-repo` sur `fichiers/guide-volume-2*`~~ — reporté en phase 3, à traiter avec la migration Cloudflare Pages qui permettra de passer le dépôt en privé. Les deux branches `seo/*` obsolètes, entièrement fusionnées, ont été supprimées le 23 septembre.
 5. Page livre : prix + bouton + réassurance sous le H1, retirer `loading="lazy"` sur l'image LCP, supprimer le lien PDF gratuit sous le bouton, pointer le CTA bas vers Stripe.
 6. Images : couverture en AVIF ≤ 500 px, preload de `echiquier.avif`, AVIF 640 px pour la photo, supprimer les 4 images mortes.
 7. CGV/mentions : médiateur, formulaire rétractation, encadré garanties, adresse postale, sous-traitants, retirer ODR ; recréer le Payment Link avec `consent_collection[terms_of_service]=required`.
@@ -155,7 +157,7 @@ Recommandations : Eleventy (Nunjucks, sortie HTML identique) avec layout unique 
 ### Phase 3 — Structurant (1 à 2 mois)
 1. Migration vers Eleventy : layout unique, données centralisées (prix, URLs, nav), sitemap et llms.txt générés, hash des assets.
 2. GitHub Actions : html-validate, lychee, Lighthouse CI avec budgets, tests Worker ; `package.json` racine + `.nvmrc`.
-3. Hébergement Cloudflare Pages : `_headers` (HSTS, CSP, nosniff, XFO, Referrer-Policy), Brotli, cache long sur assets versionnés, sortie des conditions GitHub Pages.
+3. Hébergement Cloudflare Pages : `_headers` (HSTS, CSP, nosniff, XFO, Referrer-Policy), Brotli, cache long sur assets versionnés, sortie des conditions GitHub Pages. Une fois le site servi par Cloudflare, passer le dépôt GitHub en privé et purger l'historique du Volume 2 (`git filter-repo`, force-push, puis ticket au support GitHub pour le ramasse-miettes).
 4. Dépôt privé pour la fabrication du livre ; le site ne garde que `edition-raffinee/index.html`.
 5. Contenu : pages « cours d'échecs débutant » et « professeur d'échecs », liste blog statique, maillage des 9 articles sous-liés, décision sur `blog/cours-echecs-adultes-paris.html` vs accueil.
 6. Parcours cadeau sur la page livre (bouton Offrir, dédicace, ×2) et CTA sticky mobile pour la réservation.
