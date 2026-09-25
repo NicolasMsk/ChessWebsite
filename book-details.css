@@ -9,6 +9,9 @@
 .book-audience-grid article { border-top: 2px solid #bca274; padding-top: 18px; }
 .book-audience-grid h3 { color: #203e35; margin: 0 0 12px; font-size: 1.15rem; line-height: 1.4; }
 .book-learning .book-author { border-top: 1px solid #e3d9ca; padding-top: 32px; }
+.book-learning .book-practice,
+.book-learning .book-author { padding-inline: clamp(20px, 3vw, 44px); padding-bottom: clamp(24px, 3vw, 40px); }
+.book-learning .book-offer-recap .book-offer-price strong { color: #fff9ed; }
 .book-facts a, .book-author a, .book-practice > div:first-child a, .product-faq-wrap a { color: #674326; text-decoration: underline; text-underline-offset: 3px; }
 .book-page-nav a:focus-visible, .book-learning a:focus-visible { outline: 3px solid #742334; outline-offset: 4px; }
 #fiche-livre, #pour-qui, #auteur-livre, #faq, #commander-livre { scroll-margin-top: var(--rentree-anchor-offset, 150px); }
