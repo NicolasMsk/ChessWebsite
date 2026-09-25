@@ -1,0 +1,93 @@
+/* Encarts du livre relié : uniquement sur les articles débutants sélectionnés. */
+.article-container .book-promo {
+  display: grid;
+  grid-template-columns: minmax(130px, 30%) minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  margin: 40px 0;
+  padding: 24px;
+  border: 1px solid #d9c6a5;
+  border-top: 4px solid #8b5a2b;
+  border-radius: 12px;
+  background: #faf5eb;
+  color: #3e2c1c;
+  box-shadow: 0 8px 24px rgb(62 44 28 / 7%);
+}
+.book-promo__body { min-width: 0; }
+.article-container .book-promo__photo { display: block; border: 0; text-decoration: none; }
+.article-container .book-promo__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1122 / 1402;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 7px;
+  box-shadow: 0 5px 16px rgb(62 44 28 / 15%);
+}
+.article-container .book-promo__eyebrow {
+  margin: 0 0 9px;
+  color: #795329;
+  font: 700 11px/1.5 'Montserrat', Arial, sans-serif;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+.article-container .book-promo h3 {
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+  color: #3e2c1c;
+  font: 700 25px/1.22 'Playfair Display', Georgia, serif;
+  letter-spacing: -.3px;
+  overflow-wrap: anywhere;
+}
+.article-container .book-promo__copy {
+  margin: 0 0 12px;
+  color: #4e4032;
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: left;
+}
+.article-container .book-promo__details {
+  margin: 0 0 16px;
+  color: #68543c;
+  font: 600 12px/1.6 'Montserrat', Arial, sans-serif;
+}
+.book-promo__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+.article-container .book-promo__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 18px;
+  border: 1px solid #3e2c1c;
+  border-radius: 6px;
+  background: #3e2c1c;
+  color: #fff8e9;
+  font: 700 13px/1.4 'Montserrat', Arial, sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+.article-container .book-promo__cta:hover { background: #674326; border-color: #674326; color: #fff8e9; }
+.article-container .book-promo__contents {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #674326;
+  font: 600 12px/1.4 'Montserrat', Arial, sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.book-promo a:focus-visible { outline: 3px solid #742334; outline-offset: 4px; }
+@media (max-width: 600px) {
+  .article-container .book-promo { grid-template-columns: 90px minmax(0, 1fr); gap: 12px; padding: 18px; margin: 30px 0; }
+  .book-promo__body { display: contents; }
+  .book-promo__photo { grid-column: 1; grid-row: 1 / span 2; align-self: start; }
+  .article-container .book-promo__eyebrow { grid-column: 2; margin: 0; font-size: 10px; align-self: end; }
+  .article-container .book-promo h3 { grid-column: 2; margin: 0; font-size: 21px; }
+  .book-promo__copy, .book-promo__details, .book-promo__actions { grid-column: 1 / -1; }
+  .article-container .book-promo__copy, .article-container .book-promo__details { margin: 0; }
+  .book-promo__actions { gap: 6px; }
+  .article-container .book-promo__cta { width: 100%; }
+}
+@media print { .article-container .book-promo { display: none; } }

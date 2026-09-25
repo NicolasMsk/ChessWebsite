@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Le livre pour apprendre les échecs en partant de zéro : les deux volumes réunis en 200 pages reliées à la main, 23 chapitres. 39,99 €, livraison comprise.">
+  <meta name="description" content="Apprendre les Échecs, le livre de Nicolas Musicki pour débutants de 0 à 1 000 Elo : règles, exercices corrigés et méthode anti-gaffe. Relié à la main.">
   <meta name="author" content="Nicolas Musicki">
   <meta name="theme-color" content="#3b2314">
   <link rel="canonical" href="https://www.cours-echecs-paris.fr/edition-raffinee/">
-  <title>Livre pour Apprendre les Échecs — Relié, 200 Pages</title>
+  <title>Livre pour apprendre les échecs — Spécial débutants</title>
 
-  <meta property="og:title" content="Livre pour Apprendre les Échecs — Relié, 200 Pages">
-  <meta property="og:description" content="Des premières règles aux premières parties : 23 chapitres, des diagrammes et des exercices corrigés, dans un livre de 200 pages relié à la main. Découvrez le sommaire complet.">
+  <meta property="og:title" content="Livre pour apprendre les échecs — Spécial débutants">
+  <meta property="og:description" content="Apprendre les Échecs, par Nicolas Musicki : une méthode pour débutants de 0 à 1 000 Elo, avec diagrammes en couleur et exercices corrigés. Édition reliée à la main.">
   <meta property="og:type" content="product">
   <meta property="og:url" content="https://www.cours-echecs-paris.fr/edition-raffinee/">
   <meta property="og:image" content="https://www.cours-echecs-paris.fr/images/reliure/pack-2026-auteur.webp">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Nicolas Musicki">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Livre pour Apprendre les Échecs — Relié, 200 Pages">
-  <meta name="twitter:description" content="Des premières règles aux premières parties : 23 chapitres, des diagrammes et des exercices corrigés, dans un livre de 200 pages relié à la main. Découvrez le sommaire complet.">
+  <meta name="twitter:title" content="Livre pour apprendre les échecs — Spécial débutants">
+  <meta name="twitter:description" content="Apprendre les Échecs, par Nicolas Musicki : une méthode pour débutants de 0 à 1 000 Elo, avec diagrammes en couleur et exercices corrigés. Édition reliée à la main.">
   <meta name="twitter:image" content="https://www.cours-echecs-paris.fr/images/reliure/pack-2026-auteur.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="../style.min.css">
   <link rel="stylesheet" href="../pack-livres.css?v=6">
+  <link rel="stylesheet" href="../book-details.css">
   <!-- Photo de l'auteur : élément LCP mesuré par Lighthouse, à charger en priorité -->
   <link rel="preload" as="image" href="../images/reliure/pack-2026-auteur.webp" fetchpriority="high">
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -47,23 +48,29 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Book",
+    "@type": ["Book", "Product"],
     "@id": "https://www.cours-echecs-paris.fr/edition-raffinee/#book",
     "name": "Apprendre les Échecs — Édition reliée à la main",
-    "description": "Un livre d’échecs pour débuter : règles du jeu, erreurs à éviter, tactiques, ouvertures et finales. Les deux tomes réunis en 200 pages, avec diagrammes et exercices corrigés, dans un volume cousu main par une relieuse professionnelle.",
+    "description": "Apprendre les Échecs de Nicolas Musicki est un livre en français pour débutants de 0 à 1 000 Elo. Il réunit les deux volumes en 23 chapitres : règles, tactique, méthode anti-gaffe, ouvertures et finales, avec diagrammes en couleur et exercices corrigés. Édition reliée à la main.",
+    "mainEntityOfPage": "https://www.cours-echecs-paris.fr/edition-raffinee/",
+    "audience": { "@type": "Audience", "audienceType": "Débutants et faux débutants aux échecs, niveau indicatif de 0 à 1 000 Elo" },
+    "educationalLevel": "Débutant",
+    "about": ["Règles des échecs", "Tactique", "Ouvertures", "Finales"],
     "numberOfPages": 200,
     "url": "https://www.cours-echecs-paris.fr/edition-raffinee/",
     "image": [
       "https://www.cours-echecs-paris.fr/images/reliure/pack-2026-auteur.webp",
       "https://www.cours-echecs-paris.fr/images/reliure/pack-2026-echiquier.webp",
       "https://www.cours-echecs-paris.fr/images/reliure/pack-2026-main.webp",
-      "https://www.cours-echecs-paris.fr/images/reliure/pack-2026-dessus.webp",
-      "https://www.cours-echecs-paris.fr/images/reliure/pack-principal.webp",
-      "https://www.cours-echecs-paris.fr/images/reliure/pack-tranche.webp",
-      "https://www.cours-echecs-paris.fr/images/reliure/pack-rouge.webp",
-      "https://www.cours-echecs-paris.fr/images/reliure/pack-plongee.webp"
+      "https://www.cours-echecs-paris.fr/images/reliure/pack-2026-dessus.webp"
     ],
-    "author": { "@id": "https://www.cours-echecs-paris.fr/#nicolas-musicki" },
+    "author": {
+      "@type": "Person",
+      "@id": "https://www.cours-echecs-paris.fr/#nicolas-musicki",
+      "name": "Nicolas Musicki",
+      "jobTitle": "Professeur d'échecs",
+      "url": "https://www.cours-echecs-paris.fr/#about"
+    },
     "inLanguage": "fr",
     "bookFormat": "https://schema.org/Hardcover",
     "offers": {
@@ -72,6 +79,8 @@
       "price": "39.99",
       "priceCurrency": "EUR",
       "priceValidUntil": "2026-10-15",
+      "seller": { "@type": "Person", "@id": "https://www.cours-echecs-paris.fr/#nicolas-musicki", "name": "Nicolas Musicki" },
+      "eligibleRegion": { "@type": "Place", "name": "France métropolitaine" },
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition"
     }
@@ -81,37 +90,54 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://www.cours-echecs-paris.fr/edition-raffinee/#faq",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Le guide des échecs n'est-il pas gratuit ?",
+        "name": "Quel livre choisir pour apprendre les échecs quand on débute ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le Volume 1 l'est, et il le reste : 95 pages téléchargeables en PDF sur cours-echecs-paris.fr. Mais le livre en fait 200. La seconde moitié — la méthode anti-gaffe, le répertoire d'ouverture, le milieu de partie et les finales — n'est publiée nulle part ailleurs, ni en PDF ni en ligne. En achetant l'édition reliée, vous obtenez donc la suite de la méthode, dans un volume cousu main par une relieuse professionnelle, sur papier ivoire."
+          "text": "Pour débuter, cherchez un livre qui explique les règles avant la stratégie, avec des diagrammes lisibles et des exercices corrigés. Apprendre les Échecs de Nicolas Musicki suit ce parcours en 23 chapitres, puis aborde la méthode anti-gaffe, les ouvertures et les finales. Le premier volume peut être lu gratuitement en PDF avant de choisir le livre relié."
         }
       },
       {
         "@type": "Question",
-        "name": "Qu'est-ce qu'un livre relié à la main ?",
+        "name": "Ce livre convient-il à un adulte qui apprend les échecs seul ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Les cahiers sont cousus à la main un à un par une relieuse professionnelle, et non collés en dos carré comme un livre industriel. Les couvertures sont rigides et habillées de toile. Le livre s'ouvre à plat sans se casser et tient des décennies."
+          "text": "Oui. Apprendre les Échecs commence par le plateau et le déplacement des pièces, sans connaissance préalable nécessaire. Un adulte débutant peut suivre les chapitres à son rythme : lire une explication, rejouer la position sur un échiquier, chercher son coup et consulter le corrigé. Pour un enfant, un accompagnement par un adulte est conseillé."
         }
       },
       {
         "@type": "Question",
-        "name": "Combien de temps pour recevoir le livre relié ?",
+        "name": "Que signifie le niveau de 0 à 1 000 Elo ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sous 14 jours maximum après la commande, en Colissimo suivi. La livraison est limitée à la France métropolitaine et les frais de port sont compris dans le prix de 39,99 €. Pour un envoi express, il suffit de me contacter à nicolas.musicki@gmail.com : je regarde ce qui est possible au cas par cas."
+          "text": "Il s’agit d’un repère pour les débutants et faux débutants, depuis les premières règles jusqu’aux bases de la tactique, des ouvertures et des finales. Ce n’est pas une promesse de classement. Les échelles Elo varient selon les plateformes et les cadences ; le contenu ne suppose pas de classement officiel."
         }
       },
       {
         "@type": "Question",
-        "name": "Puis-je être remboursé après l'achat du livre relié ?",
+        "name": "Le livre contient-il des exercices corrigés et des ouvertures ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oui. Un droit de rétractation de 14 jours à compter de la réception s'applique. Il suffit d'écrire à nicolas.musicki@gmail.com : l'adresse postale de retour est communiquée sous 48 heures ouvrées, et le remboursement est effectué dès réception du colis en bon état."
+          "text": "Oui. Le livre contient des diagrammes en couleur, des exercices avec leurs solutions, une partie commentée et des fiches mémo. La partie consacrée aux ouvertures présente le système de Londres avec les Blancs et la défense Caro-Kann contre 1.e4 avec les Noirs. L’objectif est de comprendre les idées avant de mémoriser des coups."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle différence entre le guide PDF gratuit et le livre relié ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le PDF gratuit contient le Volume 1 : les règles et les premières parties. Le livre relié réunit les deux volumes, avec en plus la méthode anti-gaffe, le répertoire d’ouverture, les plans de milieu de partie et les techniques de finale. Le Volume 2 n’est pas proposé en PDF public ni vendu séparément."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Peut-on offrir ce livre à un débutant ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. L’édition papier possède une couverture rigide toilée, une reliure cousue à la main et une impression couleur. Elle convient à une personne qui veut apprendre les échecs, même si elle ne connaît pas encore les règles. Les commandes sont livrées en France métropolitaine ; une dédicace peut être demandée par email."
         }
       }
     ]
@@ -142,6 +168,7 @@
         <li><a href="../zones/" class="nav-link">Zones</a></li>
         <li><a href="../cours-echecs-en-visio.html" class="nav-link">Visio</a></li>
         <li><a href="../blog/" class="nav-link">Blog</a></li>
+        <li><a href="./" class="nav-link" aria-current="page">Le livre</a></li>
         <li><a href="../idee-cadeau-echecs.html" class="nav-link">Cadeau</a></li>
         <li><a href="../#tarifs" class="nav-link">Tarifs</a></li>
         <li><a href="../#contact" class="nav-link nav-cta">Réserver un cours</a></li>
@@ -151,8 +178,8 @@
 
   <header class="product-header">
     <div class="breadcrumb"><a href="../">Accueil</a> <i class="fa-solid fa-chevron-right"></i> Édition reliée</div>
-    <h1>Votre premier livre pour apprendre les échecs</h1>
-    <p>Vous partez de zéro&nbsp;? Apprenez les règles, comprenez quoi jouer et repérez les erreurs à éviter. Une méthode en 200 pages, à garder ouverte à côté de votre échiquier.</p>
+    <h1>Le livre d’échecs pour débuter et savoir quoi jouer</h1>
+    <p><strong>Niveau 0 à 1&nbsp;000 Elo · Spécial débutants</strong><br>Avec <em>Apprendre les Échecs</em> de Nicolas Musicki, passez des premières règles aux décisions sur l’échiquier : repérez les menaces, choisissez vos ouvertures et entraînez-vous avec les exercices corrigés.</p>
     <!-- Prix et commande visibles sans défiler : sur mobile, le prix n'arrivait
          qu'après deux écrans, derrière la galerie et l'argumentaire. -->
     <div class="product-offer" aria-label="Prix et commande">
@@ -164,6 +191,13 @@
   </header>
 
   <main>
+    <nav class="book-page-nav" aria-label="Dans cette page">
+      <a href="#fiche-livre">Le livre en bref</a>
+      <a href="#pour-qui">Pour quel niveau ?</a>
+      <a href="#sommaire-livre">Les 23 chapitres</a>
+      <a href="#auteur-livre">L’auteur</a>
+      <a href="#faq">Vos questions</a>
+    </nav>
 <!-- Livre relié à la main, volume unique réunissant les deux tomes (produit payant — distinct du guide gratuit).
      Page de vente unique : la page du guide ne fait qu'y renvoyer. -->
       <section class="pack-livres" id="pack-livres" data-asset-root="../" aria-labelledby="pack-title">
@@ -266,6 +300,34 @@
         </div>
 
     <div class="book-learning" aria-label="Découvrir le contenu du livre">
+      <section class="book-facts" aria-labelledby="fiche-livre">
+        <p class="book-kicker">Apprendre les Échecs · Nicolas Musicki</p>
+        <h2 id="fiche-livre">Un livre pour apprendre les échecs en partant de zéro</h2>
+        <p><strong><em>Apprendre les Échecs</em> est un livre en français de Nicolas Musicki destiné aux débutants et faux débutants, de 0 à environ 1&nbsp;000 Elo.</strong> Il réunit les deux volumes de sa méthode dans un livre relié à la main : comprendre les règles, repérer les menaces, choisir ses premiers plans et apprendre à conclure une partie.</p>
+        <dl class="book-facts-grid">
+          <div><dt>Public</dt><dd>Débutants, notamment adultes apprenant seuls ; enfants accompagnés d’un adulte.</dd></div>
+          <div><dt>Niveau</dt><dd>De zéro à environ 1&nbsp;000 Elo, à titre de repère pédagogique.</dd></div>
+          <div><dt>Contenu</dt><dd>23 chapitres : règles, tactique, méthode anti-gaffe, ouvertures et finales.</dd></div>
+          <div><dt>Pour pratiquer</dt><dd>Diagrammes en couleur, exercices corrigés, partie commentée et fiches mémo.</dd></div>
+          <div><dt>Format</dt><dd>Livre papier en français, couverture rigide toilée, reliure cousue à la main.</dd></div>
+          <div><dt>Avant d’acheter</dt><dd><a href="../guide-apprendre-les-echecs.html">Lire le Volume 1 avec le guide PDF gratuit</a>.</dd></div>
+        </dl>
+      </section>
+
+      <section class="book-audience" aria-labelledby="pour-qui">
+        <h2 id="pour-qui">Est-ce le bon livre pour votre niveau ?</h2>
+        <div class="book-audience-grid">
+          <article>
+            <h3>Vous débutez, ou vous jouez encore sans plan</h3>
+            <p>Vous cherchez un livre pour apprendre les échecs seul, sans devoir déjà connaître la notation ou les ouvertures ? Le parcours commence par le déplacement des pièces. Si vous connaissez les règles, vous pouvez ensuite travailler la méthode anti-gaffe, le système de Londres avec les Blancs et la défense Caro-Kann contre 1.e4.</p>
+          </article>
+          <article>
+            <h3>Vous cherchez un ouvrage de compétition avancée</h3>
+            <p>Ce livre privilégie les bases et les explications accessibles. Ce n’est ni une encyclopédie d’ouvertures ni un manuel de préparation avancée. Le repère « 0 à 1&nbsp;000 Elo » décrit le public visé : il ne promet pas un classement, et les échelles varient selon les plateformes et les cadences.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="book-learning-intro" aria-labelledby="apprendre-livre">
         <p class="book-kicker">Votre point de départ : aucune expérience requise</p>
         <h2 id="apprendre-livre">Tout pour bien débuter, puis savoir quoi jouer.</h2>
@@ -378,16 +440,23 @@
           <p class="book-kicker">Un livre qui se pratique</p>
           <h2 id="utiliser-livre">Ouvrez le livre. Installez les pièces. Essayez.</h2>
           <p>Lisez une explication, reproduisez la position, cherchez votre coup, puis vérifiez. Si vous débutez complètement, commencez par les deux premières parties. Les chapitres suivants vous accompagneront lorsque vous aurez envie d'aller plus loin.</p>
-          <p>Écrit par Nicolas Musicki, professeur d'échecs à Paris, Versailles et en visio.</p>
+          <p>Pour essayer cette façon de travailler avant l’achat, cherchez les <a href="../blog/exercices-echecs-debutant.html">cinq exercices gratuits pour débutants</a>, puis comparez votre raisonnement avec les corrections.</p>
           <p>Reliure cousue à la main par une relieuse professionnelle, papier ivoire, couverture rigide toilée : un livre fait pour apprendre loin d'un écran, ou pour offrir à quelqu'un qui veut se lancer.</p>
         </div>
-        <div class="book-offer-recap">
+        <div class="book-offer-recap" id="commander-livre">
           <p class="book-kicker">Offre jusqu’au 15 octobre</p>
           <p class="book-offer-price"><strong>39,99 €</strong></p>
           <p>200 pages · Livre relié à la main<br>Livraison comprise en France métropolitaine</p>
           <a class="book-return-cta" href="https://buy.stripe.com/eVq3cx8cLdJE8RLaNWdQQ04" rel="noopener">Commander le livre relié →</a>
           <p class="book-offer-small">Livraison sous 14 jours maximum · envoi express possible sur demande.</p>
         </div>
+      </section>
+      <section class="book-author" aria-labelledby="auteur-livre">
+        <p class="book-kicker">L’auteur et sa méthode</p>
+        <h2 id="auteur-livre">Nicolas Musicki, professeur d’échecs</h2>
+        <p>Nicolas Musicki enseigne les échecs aux enfants et aux adultes, à Paris, Versailles et en visio. Il est l’auteur d’<em>Apprendre les Échecs</em> et présente son livre directement sur ce site.</p>
+        <p>La méthode suit un ordre concret : comprendre une idée, l’observer sur un diagramme, chercher un coup et vérifier son raisonnement avec le corrigé. Les chapitres sur les erreurs de débutant et les fiches mémo servent de repères entre deux parties.</p>
+        <p><a href="../#about">Découvrir le parcours de Nicolas Musicki</a> · <a href="../guide-apprendre-les-echecs.html">Lire gratuitement le premier volume</a></p>
       </section>
     </div>
 
@@ -485,23 +554,31 @@
 
     <div class="container product-faq-wrap">
       <section class="schema-faq" id="faq" data-schema-faq="true" aria-labelledby="product-faq-title">
-        <h2 id="product-faq-title">Informations sur l'édition reliée</h2>
+        <h2 id="product-faq-title">Choisir votre premier livre d’échecs : vos questions</h2>
         <div class="schema-faq-list">
           <div class="schema-faq-item">
-            <h3>Le guide des échecs n'est-il pas gratuit ?</h3>
-            <p>Le Volume 1 l'est, et il le reste : 95 pages téléchargeables en PDF sur cours-echecs-paris.fr. Mais le livre en fait 200. La seconde moitié — la méthode anti-gaffe, le répertoire d'ouverture, le milieu de partie et les finales — n'est publiée nulle part ailleurs, ni en PDF ni en ligne. En achetant l'édition reliée, vous obtenez donc la suite de la méthode, dans un volume cousu main par une relieuse professionnelle, sur papier ivoire.</p>
+            <h3>Quel livre choisir pour apprendre les échecs quand on débute ?</h3>
+            <p>Pour débuter, cherchez un livre qui explique les règles avant la stratégie, avec des diagrammes lisibles et des exercices corrigés. Apprendre les Échecs de Nicolas Musicki suit ce parcours en 23 chapitres, puis aborde la méthode anti-gaffe, les ouvertures et les finales. Le premier volume peut être lu gratuitement en PDF avant de choisir le livre relié.</p>
           </div>
           <div class="schema-faq-item">
-            <h3>Qu'est-ce qu'un livre relié à la main ?</h3>
-            <p>Les cahiers sont cousus à la main un à un par une relieuse professionnelle, et non collés en dos carré comme un livre industriel. Les couvertures sont rigides et habillées de toile. Le livre s'ouvre à plat sans se casser et tient des décennies.</p>
+            <h3>Ce livre convient-il à un adulte qui apprend les échecs seul ?</h3>
+            <p>Oui. Apprendre les Échecs commence par le plateau et le déplacement des pièces, sans connaissance préalable nécessaire. Un adulte débutant peut suivre les chapitres à son rythme : lire une explication, rejouer la position sur un échiquier, chercher son coup et consulter le corrigé. Pour un enfant, un accompagnement par un adulte est conseillé.</p>
           </div>
           <div class="schema-faq-item">
-            <h3>Combien de temps pour recevoir le livre relié ?</h3>
-            <p>Sous 14 jours maximum après la commande, en Colissimo suivi. La livraison est limitée à la France métropolitaine et les frais de port sont compris dans le prix de 39,99 €. Pour un envoi express, il suffit de me contacter à <a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a> : je regarde ce qui est possible au cas par cas.</p>
+            <h3>Que signifie le niveau de 0 à 1 000 Elo ?</h3>
+            <p>Il s’agit d’un repère pour les débutants et faux débutants, depuis les premières règles jusqu’aux bases de la tactique, des ouvertures et des finales. Ce n’est pas une promesse de classement. Les échelles Elo varient selon les plateformes et les cadences ; le contenu ne suppose pas de classement officiel.</p>
           </div>
           <div class="schema-faq-item">
-            <h3>Puis-je être remboursé après l'achat du livre relié ?</h3>
-            <p>Oui. Un droit de rétractation de 14 jours à compter de la réception s'applique. Il suffit d'écrire à nicolas.musicki@gmail.com : l'adresse postale de retour est communiquée sous 48 heures ouvrées, et le remboursement est effectué dès réception du colis en bon état.</p>
+            <h3>Le livre contient-il des exercices corrigés et des ouvertures ?</h3>
+            <p>Oui. Le livre contient des diagrammes en couleur, des exercices avec leurs solutions, une partie commentée et des fiches mémo. La partie consacrée aux ouvertures présente le système de Londres avec les Blancs et la défense Caro-Kann contre 1.e4 avec les Noirs. L’objectif est de comprendre les idées avant de mémoriser des coups.</p>
+          </div>
+          <div class="schema-faq-item">
+            <h3>Quelle différence entre le guide PDF gratuit et le livre relié ?</h3>
+            <p>Le PDF gratuit contient le Volume 1 : les règles et les premières parties. Le livre relié réunit les deux volumes, avec en plus la méthode anti-gaffe, le répertoire d’ouverture, les plans de milieu de partie et les techniques de finale. Le Volume 2 n’est pas proposé en PDF public ni vendu séparément.</p>
+          </div>
+          <div class="schema-faq-item">
+            <h3>Peut-on offrir ce livre à un débutant ?</h3>
+            <p>Oui. L’édition papier possède une couverture rigide toilée, une reliure cousue à la main et une impression couleur. Elle convient à une personne qui veut apprendre les échecs, même si elle ne connaît pas encore les règles. Les commandes sont livrées en France métropolitaine ; une dédicace peut être demandée par email.</p>
           </div>
         </div>
       </section>

@@ -1,0 +1,19 @@
+/* Fiche produit et repères de lecture : contenu HTML accessible sans JavaScript. */
+.book-page-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; max-width: 1100px; margin: 0 auto; padding: 18px 20px; }
+.book-page-nav a { display: inline-flex; align-items: center; min-height: 44px; color: #3e2c1c; text-decoration: underline; text-underline-offset: 4px; font-size: .9rem; }
+.book-facts-grid, .book-audience-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.book-facts-grid { margin: 24px 0 0; }
+.book-facts-grid > div { background: #fffdf8; border: 1px solid #e3d9ca; padding: 20px; }
+.book-facts-grid dt { color: #203e35; font-weight: 700; margin-bottom: 8px; }
+.book-facts-grid dd { margin: 0; line-height: 1.7; }
+.book-audience-grid article { border-top: 2px solid #bca274; padding-top: 18px; }
+.book-audience-grid h3 { color: #203e35; margin: 0 0 12px; font-size: 1.15rem; line-height: 1.4; }
+.book-learning .book-author { border-top: 1px solid #e3d9ca; padding-top: 32px; }
+.book-facts a, .book-author a, .book-practice > div:first-child a, .product-faq-wrap a { color: #674326; text-decoration: underline; text-underline-offset: 3px; }
+.book-page-nav a:focus-visible, .book-learning a:focus-visible { outline: 3px solid #742334; outline-offset: 4px; }
+#fiche-livre, #pour-qui, #auteur-livre, #faq, #commander-livre { scroll-margin-top: var(--rentree-anchor-offset, 150px); }
+@media (max-width: 600px) {
+  .book-facts-grid, .book-audience-grid { grid-template-columns: minmax(0, 1fr); }
+  .book-page-nav { gap: 4px 16px; }
+  .book-facts-grid dd, .book-author a { overflow-wrap: anywhere; }
+}

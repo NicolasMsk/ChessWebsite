@@ -75,6 +75,7 @@
   <!-- Feuilles de style -->
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../blog-style.css">
+  <link rel="stylesheet" href="../blog-learning.css">
   
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -110,7 +111,7 @@
         <li><a href="../idee-cadeau-echecs.html" class="nav-link">Cadeau</a></li>
         <li><a href="../#tarifs" class="nav-link">Tarifs</a></li>
         <li><a href="../cours-echecs-en-visio.html" class="nav-link">Visio</a></li>
-        <li><a href="../#contact" class="nav-link">Contact</a></li>
+        <li><a href="../edition-raffinee/" class="nav-link">Le livre</a></li>
         <li><a href="../#contact" class="nav-link nav-cta">Réserver</a></li>
       </ul>
     </div>
@@ -136,6 +137,41 @@
         <a href="../#contact">cours particuliers</a> (1<sup>er</sup> cours offert) et le guide
         <a href="../guide-apprendre-les-echecs.html">« Apprendre les Échecs »</a>.
       </p>
+    </section>
+
+    <section class="learning-path" aria-labelledby="debuter-echecs">
+      <h2 id="debuter-echecs">Débuter aux échecs : par où commencer ?</h2>
+      <p>Une question précise, un peu de pratique ou une méthode à suivre : choisissez votre point de départ.</p>
+      <div class="learning-path__grid">
+        <article>
+          <h3>Comprendre les règles</h3>
+          <p>Découvrez le déplacement des pièces et préparez votre première partie.</p>
+          <ul>
+            <li><a href="apprendre-jouer-echecs.html">Apprendre à jouer aux échecs</a></li>
+            <li><a href="regles-echecs-guide-complet.html">Les règles, expliquées pas à pas</a></li>
+            <li><a href="debuter-echecs-guide-complet-0-500-elo.html">Le parcours débutant de 0 à 500 Elo</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Passer à la pratique</h3>
+          <p>Cherchez les bons coups et prenez de meilleures habitudes sur l’échiquier.</p>
+          <ul>
+            <li><a href="exercices-echecs-debutant.html">Les exercices pour débutants</a></li>
+            <li><a href="10-erreurs-debutant-echecs.html">Les 10 erreurs à éviter</a></li>
+            <li><a href="meilleures-ouvertures-echecs-debutants.html">Choisir ses premières ouvertures</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Commencer avec le guide gratuit</h3>
+          <p>Le Volume 1 en PDF : les règles et les bases pour jouer vos premières parties. À télécharger gratuitement.</p>
+          <a href="../guide-apprendre-les-echecs.html">Télécharger le guide PDF gratuit</a>
+        </article>
+        <article class="learning-path__book">
+          <h3>Progresser avec le livre relié</h3>
+          <p>Pour les débutants de 0 à 1&nbsp;000 Elo : les deux volumes réunis, de vos premières règles à la méthode anti-gaffe, aux ouvertures et aux finales.</p>
+          <a href="../edition-raffinee/">Découvrir le livre d’échecs pour débutants →</a>
+        </article>
+      </div>
     </section>
 
     <!-- Liste des articles (générée par JavaScript) -->
@@ -337,7 +373,7 @@
       }
 
       // Fonction pour aller à une page spécifique
-      function goToPage(page) {
+      function goToPage(page, scrollToList = true) {
         currentPage = page;
         const startIndex = (page - 1) * articlesPerPage;
         const endIndex = startIndex + articlesPerPage;
@@ -347,13 +383,13 @@
         displayPagination();
         
         // Scroll vers le haut de la liste
-        document.getElementById('blog-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (scrollToList) document.getElementById('blog-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
       // Fonction pour initialiser le blog avec tous les articles
       function initializeBlog(articles) {
         allArticles = articles;
-        goToPage(1);
+        goToPage(1, false);
       }
 
       // Articles de fallback (au cas où le JSON ne se charge pas)
