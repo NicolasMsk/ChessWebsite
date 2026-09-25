@@ -139,6 +139,8 @@
     .exercise-solution[open] summary { margin-bottom: 12px; }
     .exercise-solution p:last-child { margin-bottom: 0; }
   </style>
+  <link rel="stylesheet" href="/site-navigation.css">
+  <script src="/site-navigation.js" defer></script>
 </head>
 <body class="has-promo">
   <!-- Bannière Promo -->
@@ -149,21 +151,19 @@
   </div>
 
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar site-nav" aria-label="Navigation principale">
     <div class="container">
-      <a href="../" class="logo">&#9812; Nicolas Musicki</a>
-      <ul class="nav-menu">
-        <li><a href="../#about" class="nav-link">À propos</a></li>
-        <li><a href="../#tarifs" class="nav-link">Mes offres</a></li>
-        <li><a href="../zones/" class="nav-link">Zones</a></li>
-        <li><a href="../cours-echecs-en-visio.html" class="nav-link">Visio</a></li>
-        <li><a href="./" class="nav-link">Blog</a></li>
-        <li><a href="../#contact" class="nav-cta">Réserver un cours</a></li>
+      <a href="/" class="logo"><i class="fa-solid fa-chess-knight" aria-hidden="true"></i> Nicolas Musicki</a>
+      <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="/#cours" class="nav-link">Cours</a></li>
+        <li><a href="/#tarifs" class="nav-link">Tarifs</a></li>
+        <li><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li>
+        <li><a href="/edition-raffinee/" class="nav-link">Le livre</a></li>
+        <li><a href="/#contact" class="nav-link nav-cta">Réserver un cours</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Toggle menu"><span class="bar"></span>
- <span class="bar"></span>
- <span class="bar"></span>
- </button>
     </div>
   </nav>
 
@@ -385,34 +385,48 @@
     </article>
   </main>
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <i class="fa-solid fa-chess-knight"></i> Nicolas Musicki
-          <p>Professeur d'échecs à Paris et Versailles</p>
-        </div>
-        <div class="footer-links">
-          <h4>Liens rapides</h4>
+      <div class="site-footer__intro"><a href="/">Nicolas Musicki</a><p>Professeur d’échecs à Paris, Versailles et en visio.</p></div>
+      <div class="site-footer__grid">
+        <div class="site-footer__group">
+          <h2>Cours d’échecs</h2>
           <ul>
-            <li><a href="../#about">À propos</a></li>
-            <li><a href="../#advantages">Pourquoi les échecs</a></li>
-            <li><a href="./">Blog</a></li>
-            <li><a href="../#tarifs">Tarifs</a></li>
-            <li><a href="../#contact">Contact</a></li>
+            <li><a href="/zones/">À domicile</a></li>
+            <li><a href="/cours-echecs-en-visio.html">En visio</a></li>
+            <li><a href="/zones/cours-echecs-paris-versailles-alentours.html">Zones desservies</a></li>
+            <li><a href="/#tarifs">Tarifs et réservation</a></li>
           </ul>
         </div>
-        <div class="footer-social">
-          <h4>Suivez-moi</h4>
-          <div class="social-icons">
-            <a href="https://www.instagram.com/magickchess/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
-          </div>
+        <div class="site-footer__group">
+          <h2>Apprendre</h2>
+          <ul>
+            <li><a href="/blog/">Articles du blog</a></li>
+            <li><a href="/guide-apprendre-les-echecs.html">Guide PDF gratuit</a></li>
+            <li><a href="/edition-raffinee/">Livre pour débutants</a></li>
+            <li><a href="/blog/exercices-echecs-debutant.html">Exercices gratuits</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2>Nicolas Musicki</h2>
+          <ul>
+            <li><a href="/#about">À propos</a></li>
+            <li><a href="/idee-cadeau-echecs.html">Offrir un cadeau</a></li>
+            <li><a href="https://www.instagram.com/magickchess/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2>Informations</h2>
+          <ul>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/cgv.html">Conditions générales de vente</a></li>
+            <li><a href="/mentions-legales.html">Mentions légales et confidentialité</a></li>
+            <li><a href="/mentions-legales.html#rgpd" onclick="if (typeof chessCookiesReset === 'function') { chessCookiesReset(); return false; }">Gérer mes cookies</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Nicolas Musicki - Professeur d'échecs à Paris et Versailles. Tous droits réservés.</p>
-      </div>
+      <p class="site-footer__bottom">© 2026 Nicolas Musicki — Tous droits réservés.</p>
     </div>
   </footer>
 
