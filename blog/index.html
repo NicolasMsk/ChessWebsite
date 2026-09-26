@@ -168,6 +168,72 @@
     </section>
 
     <!-- Liste des articles (générée par JavaScript) -->
+    <!-- Archive statique : tous les articles restent accessibles sans JavaScript. -->
+    <nav class="article-directory" aria-labelledby="tous-les-articles">
+      <div class="article-directory__intro">
+        <h2 id="tous-les-articles">Tous les articles</h2>
+        <p>Parcourez les conseils, guides et portraits du blog par thème.</p>
+      </div>
+      <div class="article-directory__grid">
+        <section>
+          <h3>Apprendre et progresser</h3>
+          <ul>
+            <li><a href="apprendre-jouer-echecs.html">Apprendre à jouer aux échecs</a></li>
+            <li><a href="regles-echecs-guide-complet.html">Les règles des échecs</a></li>
+            <li><a href="debuter-echecs-guide-complet-0-500-elo.html">Débuter de zéro à 500 Elo</a></li>
+            <li><a href="exercices-echecs-debutant.html">5 exercices pour débutants</a></li>
+            <li><a href="finales-echecs.html">Les finales de base</a></li>
+            <li><a href="meilleures-ouvertures-echecs-debutants.html">Les ouvertures pour débutants</a></li>
+            <li><a href="10-erreurs-debutant-echecs.html">10 erreurs de débutant</a></li>
+            <li><a href="stagnation-echecs-progresser.html">Sortir d’une période de stagnation</a></li>
+            <li><a href="combien-temps-devenir-bon-echecs.html">Combien de temps pour devenir bon&nbsp;?</a></li>
+            <li><a href="comment-jouer-echecs-en-ligne.html">Jouer aux échecs en ligne</a></li>
+            <li><a href="professeur-ou-autodidacte-echecs.html">Professeur ou autodidacte&nbsp;?</a></li>
+            <li><a href="echecs-adultes-debutants-30-40-50-ans.html">Débuter à l’âge adulte</a></li>
+            <li><a href="meilleur-echiquier-pliable.html">Choisir un échiquier pliable</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Enfants et parents</h3>
+          <ul>
+            <li><a href="comment-apprendre-echecs-enfant.html">Apprendre les échecs à un enfant</a></li>
+            <li><a href="bienfaits-echecs-enfants.html">Les bienfaits pour les enfants</a></li>
+            <li><a href="echecs-tdah-concentration-enfants.html">TDAH, échecs et concentration</a></li>
+            <li><a href="echecs-intelligence-enfants-etudes.html">Échecs, intelligence et études</a></li>
+            <li><a href="echecs-vs-jeux-video.html">Échecs ou jeux vidéo&nbsp;?</a></li>
+            <li><a href="mon-enfant-perd-toujours-echecs.html">Aider un enfant qui perd souvent</a></li>
+            <li><a href="activites-enfants-vacances-echecs.html">Une activité pour les vacances</a></li>
+            <li><a href="cours-echecs-enfants-paris.html">Choisir un professeur pour son enfant</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Cours particuliers</h3>
+          <ul>
+            <li><a href="cours-echecs-en-ligne-vs-presentiel.html">En ligne ou en présentiel&nbsp;?</a></li>
+            <li><a href="combien-coute-cours-echecs.html">Combien coûte un cours&nbsp;?</a></li>
+            <li><a href="cours-echecs-adultes-paris.html">Cours pour adultes à Paris</a></li>
+            <li><a href="../zones/cours-echecs-versailles.html">Cours à Versailles</a></li>
+            <li><a href="../zones/cours-echecs-paris-versailles-alentours.html">Cours autour de Versailles</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Culture et champions</h3>
+          <ul>
+            <li><a href="judit-polgar-meilleure-joueuse-echecs.html">Judit Polgár</a></li>
+            <li><a href="maxime-vachier-lagrave.html">Maxime Vachier-Lagrave</a></li>
+            <li><a href="magnus-carlsen-parcours-champion-monde.html">Magnus Carlsen</a></li>
+            <li><a href="alireza-firouzja-numero-1-francais.html">Alireza Firouzja</a></li>
+            <li><a href="championnat-monde-echecs-2026.html">Championnat du monde 2026</a></li>
+            <li><a href="classement-elo-echecs.html">Comprendre le classement Elo</a></li>
+            <li><a href="meilleurs-films-series-echecs.html">Films et séries sur les échecs</a></li>
+            <li><a href="citations-echecs-inspirantes.html">25 citations sur les échecs</a></li>
+            <li><a href="psychologie-biais-mentaux-echecs.html">Psychologie et biais mentaux</a></li>
+            <li><a href="echecs-retraite-seniors.html">Les échecs à la retraite</a></li>
+          </ul>
+        </section>
+      </div>
+    </nav>
+
     <section class="blog-list" id="blog-list" aria-label="Liste des articles de blog">
       <p style="text-align: center; color: #666;">Chargement des articles...</p>
     </section>
@@ -281,7 +347,7 @@
                 <span><i class="fa-solid fa-user" aria-hidden="true"></i> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">${article.author}</span></span></span>
               </div>
               <p itemprop="description">${article.description}</p>
-              <a href="${article.id}.html" class="btn" itemprop="url" aria-label="Lire l'article complet : ${article.title}">Lire l'article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="${article.url || article.id + '.html'}" class="btn" itemprop="url" aria-label="Lire l'article complet : ${article.title}">Lire l'article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           `;
           

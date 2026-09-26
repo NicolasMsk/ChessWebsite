@@ -18,3 +18,26 @@
   .learning-path__grid { grid-template-columns: minmax(0, 1fr); }
   .learning-path__grid article { padding: 20px; }
 }
+
+/* Archive HTML permanente : découverte de tous les articles sans JavaScript. */
+.article-directory { max-width: 1180px; margin: 24px auto 50px; padding: 34px 28px; }
+.article-directory__intro { max-width: 720px; margin-bottom: 22px; }
+.article-directory__intro h2 { margin: 0 0 8px; font-size: clamp(24px, 4vw, 32px); color: #3e2c1c; }
+.article-directory__intro p { margin: 0; color: #51483e; line-height: 1.65; }
+.article-directory__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.article-directory__grid section { padding: 22px 24px; border: 1px solid #e2d8c9; border-radius: 10px; background: #fffdf8; min-width: 0; }
+.article-directory__grid h3 { margin: 0 0 10px; font-size: 20px; color: #3e2c1c; }
+.article-directory__grid ul { margin: 0; padding-left: 20px; columns: 2; column-gap: 28px; }
+.article-directory__grid li { break-inside: avoid; padding: 5px 0; color: #8b5a2b; }
+.article-directory__grid a { color: #674326; line-height: 1.45; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.article-directory__grid a:hover { color: #3e2c1c; }
+.article-directory__grid a:focus-visible { outline: 3px solid #742334; outline-offset: 3px; }
+
+@media (max-width: 900px) {
+  .article-directory__grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .article-directory { padding: 26px 20px; }
+  .article-directory__grid section { padding: 20px; }
+  .article-directory__grid ul { columns: 1; }
+}

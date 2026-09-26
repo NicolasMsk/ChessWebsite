@@ -13,16 +13,17 @@ Le sujet de l'article (ex: "les ouvertures pour debutants", "echecs et autisme")
 
 ## Pipeline - Checklist stricte
 
-Chaque article requiert **7 fichiers modifies/crees**. Ne rien oublier.
+Chaque article requiert **8 fichiers modifies/crees**. Ne rien oublier.
 
 ```
 1. [RECHERCHE]   Analyser le sujet, les articles existants, le maillage interne possible
 2. [ARTICLE]     Ecrire blog/{slug}.html (template complet)
 3. [ARTICLES.JSON] Ajouter l'entree en PREMIERE position dans blog/articles.json
-4. [SITEMAP ROOT]  Ajouter <url> dans sitemap.xml (racine)
-5. [SITEMAP BLOG]  Ajouter <url> dans blog/sitemap.xml
-6. [LLMS.TXT]      Ajouter la ligne dans llms.txt (section appropriee)
-7. [IMAGE]         Fournir : nom du fichier + prompt de generation d'image
+4. [ARCHIVE HTML]  Ajouter un lien statique dans blog/index.html (.article-directory)
+5. [SITEMAP ROOT]  Ajouter <url> dans sitemap.xml (racine)
+6. [SITEMAP BLOG]  Ajouter <url> dans blog/sitemap.xml
+7. [LLMS.TXT]      Ajouter la ligne dans llms.txt (section appropriee)
+8. [IMAGE]         Fournir : nom du fichier + prompt de generation d'image
 ```
 
 ## Etape 1 — Recherche prealable
@@ -115,7 +116,14 @@ Ajouter l'entree **en premiere position** du tableau `articles` dans `blog/artic
 }
 ```
 
-## Etape 4 — Mettre a jour sitemap.xml (racine)
+## Etape 4 — Mettre a jour l'archive HTML
+
+Ajouter un lien HTML direct vers `blog/{slug}.html` dans le groupe thematique approprie de
+`.article-directory` dans `blog/index.html`. Ce lien est obligatoire : la liste de cartes et sa
+pagination sont generees en JavaScript, tandis que l'archive doit rester accessible aux robots
+et aux lecteurs sans JavaScript.
+
+## Etape 5 — Mettre a jour sitemap.xml (racine)
 
 Ajouter avant `</urlset>` dans `sitemap.xml` :
 
@@ -128,11 +136,11 @@ Ajouter avant `</urlset>` dans `sitemap.xml` :
 </url>
 ```
 
-## Etape 5 — Mettre a jour blog/sitemap.xml
+## Etape 6 — Mettre a jour blog/sitemap.xml
 
 Meme format, ajouter dans `blog/sitemap.xml`.
 
-## Etape 6 — Mettre a jour llms.txt
+## Etape 7 — Mettre a jour llms.txt
 
 Ajouter la ligne dans la **section appropriee** de `llms.txt` :
 ```
@@ -141,7 +149,7 @@ Ajouter la ligne dans la **section appropriee** de `llms.txt` :
 
 Sections existantes : Services, Guides pour debutants, Ressources pour enfants et parents, Progression et strategie, References et culture echecs. Choisir la plus pertinente ou en creer une si necessaire.
 
-## Etape 7 — Image
+## Etape 8 — Image
 
 **Nom du fichier** : `blog/images/{slug}.webp`
 
