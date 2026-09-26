@@ -1025,6 +1025,12 @@ header .btn:hover {
   margin-top: 1.75rem;
 }
 
+@media (min-width: 769px) {
+  .location-actions {
+    gap: 0.4rem;
+  }
+}
+
 .location-map-note {
   margin-top: 0.75rem;
   color: var(--text-muted);
