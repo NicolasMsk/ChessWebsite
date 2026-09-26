@@ -14,6 +14,32 @@
 .learning-path__grid a:hover { color: #3e2c1c; }
 .learning-path__grid a:focus-visible { outline: 3px solid #742334; outline-offset: 3px; }
 .learning-path__grid .learning-path__book { background: #faf0dc; border-color: #c4a36c; }
+.learning-path__grid .learning-path__book-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 12px 18px;
+  border: 1px solid #3e2c1c;
+  border-radius: 8px;
+  background: #3e2c1c;
+  color: #f0d9b5;
+  box-shadow: 0 7px 16px rgba(59, 35, 20, .18);
+  font-family: Montserrat, sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-decoration: none;
+  transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+.learning-path__grid .learning-path__book-cta:hover {
+  background: #5c3317;
+  color: #fff3d6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(59, 35, 20, .24);
+}
+.learning-path__grid .learning-path__book-cta:focus-visible { outline: 3px solid #8b5a2b; outline-offset: 3px; }
 @media (max-width: 600px) {
   .learning-path__grid { grid-template-columns: minmax(0, 1fr); }
   .learning-path__grid article { padding: 20px; }

@@ -15,7 +15,7 @@ for (const file of ['index.html', 'blog/index.html', 'guide-apprendre-les-echecs
 }
 test('Le parcours débutant expose huit liens HTML valides', () => {
   const section = read('blog/index.html').match(/<section class="learning-path"[\s\S]*?<\/section>/)[0];
-  const links = [...section.matchAll(/<a href="([^"]+)">/g)];
+  const links = [...section.matchAll(/<a href="([^"]+)"[^>]*>/g)];
   assert.equal(links.length, 8);
   for (const [, href] of links) assert.ok(fs.existsSync(path.resolve(root, 'blog', href)), href);
   assert.match(section, /guide-apprendre-les-echecs.html/);
