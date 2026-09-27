@@ -34,7 +34,7 @@
         "description": "Offrir un ou plusieurs cours particuliers d'échecs à un enfant ou un adulte, à domicile à Paris et Versailles ou en visioconférence.",
         "inLanguage": "fr-FR",
         "datePublished": "2026-09-04",
-        "dateModified": "2026-09-04",
+        "dateModified": "2026-09-27",
         "mainEntity": {"@id": "https://www.cours-echecs-paris.fr/idee-cadeau-echecs.html#service"},
         "mentions": {
           "@type": "Book",
@@ -261,9 +261,11 @@
     .gift-idea h3 { font-size: 1.12rem; margin: 0 0 .6rem; }
     .gift-idea p { font-size: .96rem; margin: 0; }
     .gift-book { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: clamp(1.5rem,4vw,2.8rem); align-items: center; margin: 2rem 0 3rem; padding: clamp(1.5rem,4vw,2.4rem); background: var(--off-white); border: 1px solid var(--silver); }
-    .gift-book figure { margin: 0; }
-    .gift-book img { display: block; width: 100%; height: auto; border: 1px solid var(--silver); }
-    .gift-book figcaption { margin-top: .7rem; color: var(--text-muted); font-family: Montserrat,sans-serif; font-size: .82rem; line-height: 1.6; }
+    .gift-book__gallery { margin: 0; }
+    .gift-book__photos { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .6rem; }
+    .gift-book__photos img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border: 1px solid var(--silver); background: #fff; }
+    .gift-book__photos img:first-child { object-position: center 46%; }
+    .gift-book__gallery figcaption { margin-top: .7rem; color: var(--text-muted); font-family: Montserrat,sans-serif; font-size: .82rem; line-height: 1.6; }
     .gift-book__label { display: block; color: var(--gift-gold); font-family: Montserrat,sans-serif; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     .gift-book h3 { margin: .45rem 0 .8rem; }
     .gift-book__price { color: var(--walnut); font: 700 clamp(1.6rem,3.5vw,2.1rem)/1.1 'Playfair Display',serif; margin-bottom: .3rem; }
@@ -271,7 +273,7 @@
     .gift-book ul { margin: 0 0 1.4rem; padding: 0; list-style: none; }
     .gift-book li { position: relative; padding-left: 1.3rem; margin: .6rem 0; }
     .gift-book li::before { content: '✓'; position: absolute; left: 0; color: var(--gift-gold); font-weight: 700; }
-    @media (max-width: 760px) { .gift-book { grid-template-columns: 1fr; } }
+    @media (max-width: 760px) { .gift-book { grid-template-columns: 1fr; } .gift-book__photos { grid-template-columns: repeat(2,minmax(0,1fr)); } }
     .gift-cta { background: var(--walnut); color: #fff; padding: clamp(2rem,5vw,3.5rem); margin: 3rem 0; text-align: center; }
     .gift-cta h2, .gift-cta p, .gift-cta strong { color: #fff; }
     .gift-cta h2::after { left: 50%; transform: translateX(-50%); background: var(--accent); }
@@ -425,9 +427,18 @@
       <h2 id="livre">Offrir le livre relié à la main</h2>
       <p>Si vous cherchez un cadeau à déballer, il existe une autre option : <em>Apprendre les Échecs</em>, ma méthode complète, reliée à la main et fabriquée sur commande. Ce n'est pas un livre qu'on trouve en librairie, c'est un objet façonné à l'unité — et il se marie très bien avec une ou deux séances.</p>
       <div class="gift-book">
-        <figure>
-          <img src="images/reliure/pack-principal.webp" alt="L'édition d'Apprendre les Échecs reliée à la main, couvertures rouge et verte, posée sur un échiquier en bois" width="1080" height="810" loading="lazy" decoding="async">
-          <figcaption>Photo de l'édition en deux volumes. La reliure réunit désormais les deux tomes en un seul livre ; les photos du nouveau volume arrivent bientôt.</figcaption>
+        <figure class="gift-book__gallery">
+          <div class="gift-book__photos">
+            <img src="images/reliure/pack-2026-echiquier.webp" alt="Le livre relié Apprendre les Échecs présenté debout sur un échiquier en bois" width="1122" height="1402" loading="lazy" decoding="async">
+            <img src="images/reliure/pack-2026-main.webp" alt="Détail de la couverture artisanale du livre Apprendre les Échecs tenu en main" width="1122" height="1402" loading="lazy" decoding="async">
+            <img src="images/reliure/pack-2026-dessus.webp" alt="Le livre relié Apprendre les Échecs vu du dessus au milieu des pièces" width="1086" height="1448" loading="lazy" decoding="async">
+            <img src="images/reliure/pack-2026-auteur.webp" alt="Nicolas Musicki présentant son livre relié Apprendre les Échecs" width="1086" height="1207" loading="lazy" decoding="async">
+            <img src="images/reliure/pack-rouge.webp" alt="Reliures rouge et vert olive du livre Apprendre les Échecs disposées sur un échiquier" width="810" height="1080" loading="lazy" decoding="async">
+            <img src="images/reliure/pack-tranche.webp" alt="Les coloris rouge et vert olive du livre relié Apprendre les Échecs présentés debout" width="1080" height="810" loading="lazy" decoding="async">
+            <img src="images/reliure/pack-plongee.webp" alt="Ancienne présentation rouge et vert olive du livre relié photographiée en plongée" width="810" height="1080" loading="lazy" decoding="async">
+            <img src="images/reliure/pack-principal.webp" alt="Ancienne édition en deux tomes avec reliures rouge et vert olive sur un échiquier" width="1080" height="810" loading="lazy" decoding="async">
+          </div>
+          <figcaption>L'édition actuelle réunit la méthode en un volume. Les anciennes photos en deux tomes montrent également les coloris rouge et vert olive disponibles, en plus du brun.</figcaption>
         </figure>
         <div>
           <span class="gift-book__label">Offre jusqu’au 15 octobre · Fait sur commande</span>
@@ -436,6 +447,7 @@
           <p class="gift-book__ship">Frais de port compris, France métropolitaine.</p>
           <ul>
             <li>Cousu et relié à la main, exemplaire par exemplaire</li>
+            <li>Coloris brun, rouge ou vert olive</li>
             <li>Papier ivoire, impression couleur</li>
             <li>La méthode complète, des règles aux premières parties</li>
             <li>Fabriqué à la commande : prévoyez un délai avant la date du cadeau</li>
