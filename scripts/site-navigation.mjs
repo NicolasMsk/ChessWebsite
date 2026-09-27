@@ -23,16 +23,25 @@ export function footer(){
  const groups=[
   ['Cours d’échecs',[['À domicile','/zones/'],['En visio','/cours-echecs-en-visio.html'],['Zones desservies','/zones/cours-echecs-paris-versailles-alentours.html'],['Tarifs et réservation','/#tarifs']]],
   ['Apprendre',[['Articles du blog','/blog/'],['Guide PDF gratuit','/guide-apprendre-les-echecs.html'],['Livre pour débutants','/edition-raffinee/'],['Cahiers d’exercices','/cahiers-exercices-echecs.html'],['Exercices gratuits','/blog/exercices-echecs-debutant.html']]],
-  ['Nicolas Musicki',[['À propos','/#about'],['Offrir un cadeau','/idee-cadeau-echecs.html'],['Instagram','https://www.instagram.com/magickchess/'],['LinkedIn','https://www.linkedin.com/in/nicolas-musicki-4867a4184/']]],
+  ['Nicolas Musicki',[['À propos','/#about'],['Tous les livres','/livres.html'],['Offrir un cadeau','/idee-cadeau-echecs.html']]],
   ['Informations',[['Contact','/#contact'],['Conditions générales de vente','/cgv.html'],['Mentions légales et confidentialité','/mentions-legales.html'],['Gérer mes cookies','/mentions-legales.html#rgpd']]],
  ];
  return `<footer class="site-footer">
     <div class="container">
-      <div class="site-footer__intro"><a href="/">Nicolas Musicki</a><p>Professeur d’échecs à Paris, Versailles et en visio.</p></div>
-      <div class="site-footer__grid">
-${groups.map(([title,links])=>`        <div class="site-footer__group">\n          <h2>${title}</h2>\n          <ul>\n${links.map(([label,href])=>`            <li><a href="${href}"${label==='Gérer mes cookies'?' onclick="if (typeof chessCookiesReset === \'function\') { chessCookiesReset(); return false; }"':''}>${label}</a></li>`).join('\n')}\n          </ul>\n        </div>`).join('\n')}
+      <div class="site-footer__top">
+        <div class="site-footer__intro">
+          <a href="/" class="site-footer__brand"><i class="fa-solid fa-chess-knight" aria-hidden="true"></i> Nicolas Musicki</a>
+          <p>Professeur d’échecs à Paris, Versailles et en visio. Cours particuliers, livres et cahiers d’exercices pour débutants.</p>
+          <div class="site-footer__social">
+            <a href="https://www.instagram.com/magickchess/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="site-footer__grid">
+${groups.map(([title,links])=>`          <div class="site-footer__group">\n            <h2>${title}</h2>\n            <ul>\n${links.map(([label,href])=>`              <li><a href="${href}"${label==='Gérer mes cookies'?' onclick="if (typeof chessCookiesReset === \'function\') { chessCookiesReset(); return false; }"':''}>${label}</a></li>`).join('\n')}\n            </ul>\n          </div>`).join('\n')}
+        </div>
       </div>
-      <p class="site-footer__bottom">© 2026 Nicolas Musicki — Tous droits réservés.</p>
+      <p class="site-footer__bottom"><span>© 2026 Nicolas Musicki — Tous droits réservés.</span><span>Paris · Versailles · En visio partout</span></p>
     </div>
   </footer>`;
 }

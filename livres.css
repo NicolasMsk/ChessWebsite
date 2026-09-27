@@ -60,7 +60,31 @@
 .cahier-etapes .num { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; margin-bottom: 8px; border: 1px solid #9a7445; border-radius: 50%; color: #9a7445; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
 .cahier-etapes p { margin: 0; font-size: .86rem; line-height: 1.5; }
 
+/* ---------- Doubles pages d'aperçu ---------- */
+.cahier-spread { grid-column: 1 / -1; margin: clamp(20px, 4vw, 36px) 0 0; text-align: center; }
+.cahier-spread img { max-width: min(100%, 860px); border: 1px solid #e8dfd0; box-shadow: 0 10px 26px rgba(59, 35, 20, .12); }
+.cahier-spread + .cahier-spread { margin-top: 22px; }
+.cahier-spread figcaption { margin-top: 12px; font-size: .82rem; color: #6d5d4d; }
+
+/* ---------- Pourquoi ça fait progresser ---------- */
+.cahier-pourquoi { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; padding: clamp(32px, 5vw, 48px) 0; border-top: 1px solid #e8dfd0; }
+.cahier-pourquoi article { padding: 0 4px; }
+.cahier-pourquoi i { color: #9a7445; font-size: 1.35rem; }
+.cahier-pourquoi h3 { margin: 12px 0 8px; color: #203e35; font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; }
+.cahier-pourquoi p { margin: 0; font-size: .9rem; line-height: 1.7; text-align: left; }
+
+/* ---------- Renvoi vers le livre relié ---------- */
+.cahier-livre { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(24px, 4vw, 44px); align-items: center; margin-top: clamp(40px, 6vw, 64px); padding: clamp(24px, 4vw, 40px); background: #f5efe6; }
+.cahier-livre img { width: 100%; height: auto; box-shadow: 0 10px 24px rgba(59, 35, 20, .2); }
+.cahier-livre h2 { margin: 0 0 10px; color: #203e35; font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; text-align: left; }
+.cahier-livre p { margin: 0 0 18px; line-height: 1.7; text-align: left; }
+
 /* ---------- Commande & FAQ ---------- */
+.commande-etapes { max-width: 56ch; margin: 0 auto 22px; padding: 0 0 0 22px; text-align: left; }
+.commande-etapes li { margin-bottom: 10px; line-height: 1.65; }
+.commande-etapes li::marker { color: #9a7445; font-weight: 700; }
+.commande-reassurance { margin: 20px auto 0 !important; font-size: .8rem; color: #6d5d4d; }
+.commande-reassurance i { color: #9a7445; margin-right: 4px; }
 .cahier-commande { margin-top: 8px; padding: 30px; background: #fffdf8; border: 1px solid #e3d9ca; text-align: center; }
 .cahier-commande h2 { margin: 0 0 10px; color: #203e35; font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; }
 .cahier-commande p { max-width: 62ch; margin: 0 auto 18px; line-height: 1.7; }
@@ -75,6 +99,9 @@
   .cahier-section { grid-template-columns: minmax(0, 1fr); }
   .cahier-figure img { max-width: 240px; }
   .cahier-etapes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cahier-pourquoi { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .cahier-livre { grid-template-columns: minmax(0, 1fr); }
+  .cahier-livre img { max-width: 300px; margin: 0 auto; }
 }
 @media (max-width: 480px) {
   .cahier-specs { grid-template-columns: minmax(0, 1fr); }
