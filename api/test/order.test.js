@@ -245,3 +245,41 @@ test('ordersToCsv neutralise les injections de formule et les guillemets', () =>
   assert.match(csv, /"'=SOMME\(A1:A9\)"/, 'la formule doit être préfixée par une apostrophe');
   assert.match(csv, /rue du ""Test""/, 'les guillemets doivent être doublés');
 });
+
+// ---------- Produits multiples (cahiers d'exercices) ----------
+
+test('une commande de cahier décrit le cahier, jamais le livre relié', () => {
+  const order = buildOrderRecord({
+    id: 'cs_cahier', metadata: { product: 'cahier_mats' }, amount_total: 1500, currency: 'eur',
+    customer_details: { email: 'x@y.fr', name: 'Ana' },
+    collected_information: { shipping_details: { name: 'Ana', address: { line1: '1 rue A', postal_code: '75001', city: 'Paris', country: 'FR' } } },
+  }, '2026-09-27T10:00:00Z');
+  for (const rendu of [orderConfirmationHtml(order), orderConfirmationText(order)]) {
+    assert.match(rendu, /Mes premiers mats en un coup/);
+    assert.match(rendu, /15,00 €|15,00 &euro;|15,00/);
+    assert.doesNotMatch(rendu, /Volumes I/);
+    assert.doesNotMatch(rendu, /Colissimo/);
+  }
+  assert.match(orderAdminHtml(order), /cahier_mats/);
+  assert.match(orderAdminHtml(order), /coudre/);
+});
+
+test('le pack des deux cahiers annonce les deux titres et 25 €', () => {
+  const order = buildOrderRecord({
+    id: 'cs_pack2', metadata: { product: 'cahiers_pack' }, amount_total: 2500, currency: 'eur',
+    customer_details: { email: 'x@y.fr' },
+    collected_information: { shipping_details: { name: 'Bo', address: { line1: '2 rue B', postal_code: '78000', city: 'Versailles', country: 'FR' } } },
+  }, '2026-09-27T10:00:00Z');
+  const texte = orderConfirmationText(order);
+  assert.match(texte, /deux cahiers nomades/);
+  assert.match(texte, /25,00 €/);
+});
+
+test('un produit inconnu retombe sur le livre relié (comportement historique)', () => {
+  const order = buildOrderRecord({
+    id: 'cs_inconnu', metadata: { product: 'mystere' }, amount_total: 3999, currency: 'eur',
+    customer_details: { email: 'x@y.fr' },
+    collected_information: { shipping_details: { name: 'C', address: { line1: '3 rue C', postal_code: '75002', city: 'Paris', country: 'FR' } } },
+  }, '2026-09-27T10:00:00Z');
+  assert.match(orderConfirmationText(order), /Volumes I et II|Volumes I & II/);
+});

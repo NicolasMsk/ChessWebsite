@@ -10,6 +10,47 @@ export const PACK_PRODUCT_ID = 'pack_livres_relies';
 export const PACK_AMOUNT_CENTS = 3999;
 export const PACK_NAME = 'Apprendre les Échecs — Volumes I & II (édition reliée à la main)';
 export const DELAI_LIVRAISON = '14 jours maximum';
+
+/**
+ * Catalogue des produits physiques vendus par Payment Link. La clé est la
+ * métadonnée `product` posée sur le lien Stripe ; elle pilote le contenu des
+ * emails de confirmation. Un produit inconnu retombe sur le livre relié.
+ */
+export const PRODUITS = {
+  [PACK_PRODUCT_ID]: {
+    nom: PACK_NAME,
+    entete: 'Édition reliée à la main',
+    sousTitre: 'Apprendre les Échecs — Volumes I & II',
+    fabrication: "Je prépare votre exemplaire à la main, puis je l'expédie en Colissimo suivi.",
+    consigne: 'Numéroter, signer, emballer en kraft (sans prix visible), expédier en Colissimo suivi.',
+  },
+  cahier_mats: {
+    nom: 'Mes premiers mats en un coup — cahier d’exercices A6 cousu main',
+    entete: 'Le cahier nomade N° 1',
+    sousTitre: 'Mes premiers mats en un coup',
+    fabrication: "J'imprime puis je couds votre cahier à la main, avant de l'expédier en envoi suivi.",
+    consigne: 'Imprimer, coudre, emballer (sans prix visible), expédier en envoi suivi.',
+  },
+  cahier_tactiques: {
+    nom: 'Mes premières tactiques — cahier d’exercices A6 cousu main',
+    entete: 'Le cahier nomade N° 2',
+    sousTitre: 'Mes premières tactiques',
+    fabrication: "J'imprime puis je couds votre cahier à la main, avant de l'expédier en envoi suivi.",
+    consigne: 'Imprimer, coudre, emballer (sans prix visible), expédier en envoi suivi.',
+  },
+  cahiers_pack: {
+    nom: 'Les deux cahiers nomades — mats + tactiques (A6, cousus main)',
+    entete: 'Les cahiers nomades',
+    sousTitre: 'Mes premiers mats + Mes premières tactiques',
+    fabrication: "J'imprime puis je couds vos deux cahiers à la main, avant de les expédier en envoi suivi.",
+    consigne: 'Imprimer et coudre les DEUX cahiers, emballer (sans prix visible), expédier en envoi suivi.',
+  },
+};
+
+/** Fiche produit d'une commande ; le livre relié sert de valeur par défaut. */
+export function produitDe(order) {
+  return PRODUITS[order?.product] || PRODUITS[PACK_PRODUCT_ID];
+}
 export const SERVICE_EMAIL = 'nicolas.musicki@gmail.com';
 export const SERVICE_TEL = '06 09 36 56 91';
 export const SITE_URL = 'https://www.cours-echecs-paris.fr';
@@ -116,6 +157,7 @@ export function formatAddressLines(order) {
 // ============================================================
 
 export function orderConfirmationHtml(order) {
+  const p = produitDe(order);
   const lignes = formatAddressLines(order)
     .map((l) => escapeHtml(l))
     .join('<br>');
@@ -129,9 +171,9 @@ export function orderConfirmationHtml(order) {
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="560" style="max-width:560px; background-color:#ffffff; border-radius:10px; overflow:hidden; box-shadow:0 4px 20px rgba(62,44,28,0.1);">
       <tr>
         <td style="background:linear-gradient(135deg,#F0D9B5 0%,#B58863 100%); padding:36px 40px; text-align:center;">
-          <div style="font-family:Georgia,serif; font-size:12px; text-transform:uppercase; letter-spacing:3px; color:#3E2C1C; opacity:0.85; margin-bottom:6px;">Edition reliee a la main</div>
+          <div style="font-family:Georgia,serif; font-size:12px; text-transform:uppercase; letter-spacing:3px; color:#3E2C1C; opacity:0.85; margin-bottom:6px;">${escapeHtml(p.entete)}</div>
           <div style="font-family:Georgia,serif; font-size:25px; font-weight:700; color:#3E2C1C; line-height:1.2;">Votre commande est confirm&eacute;e</div>
-          <div style="font-family:Georgia,serif; font-style:italic; font-size:14px; color:#3E2C1C; opacity:0.8; margin-top:8px;">Apprendre les &Eacute;checs &mdash; Volumes I &amp; II</div>
+          <div style="font-family:Georgia,serif; font-style:italic; font-size:14px; color:#3E2C1C; opacity:0.8; margin-top:8px;">${escapeHtml(p.sousTitre)}</div>
         </td>
       </tr>
       <tr>
@@ -141,14 +183,14 @@ export function orderConfirmationHtml(order) {
 
           <div style="margin:0 0 22px; padding:20px 22px; background:#faf6ef; border-left:4px solid #8B5A2B; border-radius:6px;">
             <p style="margin:0 0 12px; font-weight:700; color:#3E2C1C; font-size:15px;">R&eacute;capitulatif</p>
-            <p style="margin:0 0 6px; font-size:14.5px;">${escapeHtml(PACK_NAME)}</p>
+            <p style="margin:0 0 6px; font-size:14.5px;">${escapeHtml(p.nom)}</p>
             <p style="margin:0 0 14px; font-size:14.5px;"><strong>${formatAmount(order.amount_total)}</strong> &mdash; livraison comprise</p>
             <p style="margin:0 0 6px; font-weight:700; color:#3E2C1C; font-size:14.5px;">Adresse de livraison</p>
             <p style="margin:0; font-size:14.5px; line-height:1.55;">${lignes}</p>
           </div>
 
           <p style="margin:0 0 20px;">
-            Je pr&eacute;pare votre exemplaire &agrave; la main, puis je l'exp&eacute;die en Colissimo suivi.
+            ${escapeHtml(p.fabrication)}
             Compte <strong>${DELAI_LIVRAISON}</strong> avant de le recevoir.
           </p>
 
@@ -189,19 +231,20 @@ export function orderConfirmationHtml(order) {
 }
 
 export function orderConfirmationText(order) {
+  const p = produitDe(order);
   const lignes = formatAddressLines(order).join('\n');
   return `Bonjour,
 
 Merci beaucoup pour votre commande. Votre paiement a bien ete recu.
 
 RECAPITULATIF
-Apprendre les Echecs - Volumes I et II (edition reliee a la main)
+${p.nom}
 ${formatAmount(order.amount_total)} - livraison comprise
 
 ADRESSE DE LIVRAISON
 ${lignes}
 
-Je prepare votre exemplaire a la main, puis je l'expedie en Colissimo suivi.
+${p.fabrication}
 Compte ${DELAI_LIVRAISON} avant de le recevoir.
 
 Vous en avez besoin plus vite ? Repondez a cet email : je regarde ce que je peux faire
@@ -241,13 +284,13 @@ export function orderAdminHtml(order) {
 
     <p style="margin:6px 0;"><strong>Email :</strong> <a href="mailto:${escapeHtml(order.email)}">${escapeHtml(order.email)}</a></p>
     <p style="margin:6px 0;"><strong>Telephone :</strong> ${escapeHtml(order.phone) || '&mdash;'}</p>
-    <p style="margin:6px 0;"><strong>Produit :</strong> ${escapeHtml(order.product)}</p>
+    <p style="margin:6px 0;"><strong>Produit :</strong> ${escapeHtml(produitDe(order).nom)} <span style="color:#999;">(${escapeHtml(order.product)})</span></p>
     <p style="margin:6px 0;"><strong>Montant :</strong> ${formatAmount(order.amount_total)}</p>
     <p style="margin:6px 0;"><strong>Date :</strong> ${escapeHtml(order.date)}</p>
     <p style="margin:6px 0; font-size:12px; color:#777;"><strong>Session Stripe :</strong> ${escapeHtml(order.id)}</p>
 
     <p style="margin:18px 0 0; padding-top:14px; border-top:1px solid #eee; font-size:13px; color:#555;">
-      A faire : numeroter, signer, emballer en kraft (sans prix visible), expedier en Colissimo suivi.
+      A faire : ${escapeHtml(produitDe(order).consigne)}
     </p>
   </div>
 </body></html>`;
