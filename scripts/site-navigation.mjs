@@ -5,52 +5,68 @@ export const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'
 export function pages(){
  return ['', 'blog','zones','edition-raffinee'].flatMap(dir=>fs.readdirSync(path.join(root,dir),{withFileTypes:true}).filter(e=>e.isFile()&&e.name.endsWith('.html')&&(dir!=='edition-raffinee'||e.name==='index.html')).map(e=>[dir,e.name].filter(Boolean).join('/'))).filter(file=>/<nav\b[^>]*class="[^"]*navbar/.test(fs.readFileSync(path.join(root,file),'utf8')));
 }
+// Tous les liens sont relatifs à la page (préfixe ../ selon la profondeur) :
+// le site se consulte donc aussi en local, en ouvrant simplement un fichier
+// dans le navigateur, sans serveur — menu, pied de page et styles compris.
+export function prefixe(file){ return '../'.repeat(file.split('/').length-1); }
 export function navigation(file){
+ const p=prefixe(file);
  const current=['edition-raffinee/index.html','livres.html','cahiers-exercices-echecs.html'].includes(file)?'Livres':file.startsWith('blog/')?'Blog':file.startsWith('zones/')||file==='cours-echecs-en-visio.html'?'Cours':null;
  return `<nav class="navbar site-nav" aria-label="Navigation principale">
     <div class="container">
-      <a href="/" class="logo"><i class="fa-solid fa-chess-knight" aria-hidden="true"></i> Nicolas Musicki</a>
+      <a href="${p}index.html" class="logo"><i class="fa-solid fa-chess-knight" aria-hidden="true"></i> Nicolas Musicki</a>
       <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
       <ul class="nav-menu" id="nav-menu">
-${[['Cours','/#cours'],['Tarifs','/#tarifs'],['Blog','/blog/'],['Livres','/livres.html'],['Réserver un cours','/#contact']].map(([label,href],i)=>`        <li><a href="${href}" class="nav-link${i===4?' nav-cta':''}"${label===current?' aria-current="'+(label==='Cours'?'location':'page')+'"':''}>${label}</a></li>`).join('\n')}
+${[['Cours','index.html#cours'],['Tarifs','index.html#tarifs'],['Blog','blog/index.html'],['Livres','livres.html'],['Réserver un cours','index.html#contact']].map(([label,href],i)=>`        <li><a href="${p}${href}" class="nav-link${i===4?' nav-cta':''}"${label===current?' aria-current="'+(label==='Cours'?'location':'page')+'"':''}>${label}</a></li>`).join('\n')}
       </ul>
     </div>
   </nav>`;
 }
-export function footer(){
+export function footer(file){
+ const p=prefixe(file);
  const groups=[
-  ['Cours d’échecs',[['À domicile','/zones/'],['En visio','/cours-echecs-en-visio.html'],['Zones desservies','/zones/cours-echecs-paris-versailles-alentours.html'],['Tarifs et réservation','/#tarifs']]],
-  ['Apprendre',[['Articles du blog','/blog/'],['Guide PDF gratuit','/guide-apprendre-les-echecs.html'],['Livre pour débutants','/edition-raffinee/'],['Cahiers d’exercices','/cahiers-exercices-echecs.html'],['Exercices gratuits','/blog/exercices-echecs-debutant.html']]],
-  ['Nicolas Musicki',[['À propos','/#about'],['Tous les livres','/livres.html'],['Offrir un cadeau','/idee-cadeau-echecs.html']]],
-  ['Informations',[['Contact','/#contact'],['Conditions générales de vente','/cgv.html'],['Mentions légales et confidentialité','/mentions-legales.html'],['Gérer mes cookies','/mentions-legales.html#rgpd']]],
- ];
- return `<footer class="site-footer">
+  ['Cours d’échecs',[['À domicile','zones/index.html'],['En visio','cours-echecs-en-visio.html'],['Zones desservies','zones/cours-echecs-paris-versailles-alentours.html'],['Tarifs et réservation','index.html#tarifs']]],
+  ['Apprendre',[['Articles du blog','blog/index.html'],['Guide PDF gratuit','guide-apprendre-les-echecs.html'],['Livre pour débutants','edition-raffinee/index.html'],['Cahiers d’exercices','cahiers-exercices-echecs.html'],['Exercices gratuits','blog/exercices-echecs-debutant.html']]],
+  ['Nicolas Musicki',[['À propos','index.html#about'],['Tous les livres','livres.html'],['Offrir un cadeau','idee-cadeau-echecs.html']]],
+  ['Informations',[['Contact','index.html#contact'],['Conditions générales de vente','cgv.html'],['Mentions légales et confidentialité','mentions-legales.html'],['Gérer mes cookies','mentions-legales.html#rgpd']]],
+ ].map(([title,links])=>[title,links.map(([label,href])=>[label,p+href])]);
+ // Balisage et classes du pied de page HISTORIQUE du site (.footer-content,
+ // .footer-links, .footer-social…) : ils sont déjà stylés par style.css et
+ // blog-style.css sur toutes les pages. On ne change que le contenu des rubriques.
+ return `<footer>
     <div class="container">
-      <div class="site-footer__top">
-        <div class="site-footer__intro">
-          <a href="/" class="site-footer__brand"><i class="fa-solid fa-chess-knight" aria-hidden="true"></i> Nicolas Musicki</a>
-          <p>Professeur d’échecs à Paris, Versailles et en visio. Cours particuliers, livres et cahiers d’exercices pour débutants.</p>
-          <div class="site-footer__social">
-            <a href="https://www.instagram.com/magickchess/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fa-solid fa-chess-knight"></i> Nicolas Musicki
+          <p>Professeur d’échecs à Paris, Versailles et en visio</p>
+        </div>
+${groups.map(([title,links])=>`        <div class="footer-links">\n          <h4>${title}</h4>\n          <ul>\n${links.map(([label,href])=>`            <li><a href="${href}"${label==='Gérer mes cookies'?' onclick="if (typeof chessCookiesReset === \'function\') { chessCookiesReset(); return false; }"':''}>${label}</a></li>`).join('\n')}\n          </ul>\n        </div>`).join('\n')}
+        <div class="footer-social">
+          <h4>Suivez-moi</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/magickchess/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/nicolas-musicki-4867a4184/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
         </div>
-        <div class="site-footer__grid">
-${groups.map(([title,links])=>`          <div class="site-footer__group">\n            <h2>${title}</h2>\n            <ul>\n${links.map(([label,href])=>`              <li><a href="${href}"${label==='Gérer mes cookies'?' onclick="if (typeof chessCookiesReset === \'function\') { chessCookiesReset(); return false; }"':''}>${label}</a></li>`).join('\n')}\n            </ul>\n          </div>`).join('\n')}
-        </div>
       </div>
-      <p class="site-footer__bottom"><span>© 2026 Nicolas Musicki — Tous droits réservés.</span><span>Paris · Versailles · En visio partout</span></p>
+      <div class="footer-bottom">
+        <p>© 2026 Nicolas Musicki — Tous droits réservés.</p>
+      </div>
     </div>
   </footer>`;
 }
 export function transform(source,file){
+ const p=prefixe(file);
  let result=source.replace(/<nav\b[^>]*class="[^"]*navbar[^>]*>[\s\S]*?<\/nav>/,navigation(file));
  const footers=[...result.matchAll(/<footer\b[^>]*>[\s\S]*?<\/footer>/g)];
  const last=footers.at(-1);if(!last)throw Error('Footer manquant : '+file);
- result=result.slice(0,last.index)+footer()+result.slice(last.index+last[0].length);
- if(!result.includes('href="/site-navigation.css"'))result=result.replace('</head>','  <link rel="stylesheet" href="/site-navigation.css">\n  <script src="/site-navigation.js" defer></script>\n</head>');
+ result=result.slice(0,last.index)+footer(file)+result.slice(last.index+last[0].length);
+ // Chemins relatifs vers la feuille et le script communs : la page reste
+ // consultable en local, ouverte directement dans le navigateur.
+ result=result.replace(/(href|src)="(?:\.\.\/)*\/?site-navigation\.(css|js)"/g,(_m,attr,ext)=>`${attr}="${p}site-navigation.${ext}"`);
+ if(!result.includes(`href="${p}site-navigation.css"`))result=result.replace('</head>',`  <link rel="stylesheet" href="${p}site-navigation.css">\n  <script src="${p}site-navigation.js" defer></script>\n</head>`);
  return result;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
@@ -69,14 +85,14 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   patch+='*** Update File: '+file+'\n';
   const oldNav=old.match(/<nav\b[^>]*class="[^"]*navbar[^>]*>[\s\S]*?<\/nav>/)[0];
   const oldFooter=[...old.matchAll(/<footer\b[^>]*>[\s\S]*?<\/footer>/g)].at(-1)[0];
-  for(const [before,after] of [[oldNav,navigation(file)],[oldFooter,footer()]]){
+  for(const [before,after] of [[oldNav,navigation(file)],[oldFooter,footer(file)]]){
    if(before===after)continue;
    // La première ligne conserve son indentation d'origine.
    const lineStart=old.lastIndexOf('\n',old.indexOf(before))+1;
    const indent=old.slice(lineStart,old.indexOf(before));
    patch+='@@\n'+(indent+before).split('\n').map(l=>'-'+l).join('\n')+'\n'+(indent+after).split('\n').map(l=>'+'+l).join('\n')+'\n';
   }
-  if(!old.includes('href="/site-navigation.css"'))patch+='@@\n-</head>\n+  <link rel="stylesheet" href="/site-navigation.css">\n+  <script src="/site-navigation.js" defer></script>\n+</head>\n';
+  if(!/site-navigation\.css/.test(old)){const p=prefixe(file);patch+=`@@\n-</head>\n+  <link rel="stylesheet" href="${p}site-navigation.css">\n+  <script src="${p}site-navigation.js" defer></script>\n+</head>\n`;}
  }
  if(process.argv.includes('--check'))process.exitCode=changes?1:0;
  else if(process.argv.includes('--write'))console.log(changes+' page(s) réécrite(s).');

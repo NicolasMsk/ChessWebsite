@@ -14,9 +14,11 @@
 /* ---------- Cartes du catalogue ---------- */
 .livres-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .livre-card { display: flex; flex-direction: column; background: #fffdf8; border: 1px solid #e3d9ca; }
-.livre-card figure { margin: 0; padding: 26px 26px 0; background: #f5efe6; text-align: center; }
-.livre-card img { width: auto; max-width: 100%; max-height: 240px; box-shadow: 0 10px 22px rgba(59, 35, 20, .18); }
-.livre-card figcaption { padding: 8px 0 14px; font-size: .72rem; color: #8a7a63; }
+/* Hauteur fixe et image en `contain` : les trois vignettes (photo paysage du
+   livre, couvertures portrait des cahiers) s'alignent sur la même ligne de base. */
+.livre-card figure { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 320px; margin: 0; padding: 22px 22px 10px; background: #f5efe6; text-align: center; }
+.livre-card img { flex: 1; min-height: 0; width: auto; max-width: 100%; object-fit: contain; box-shadow: 0 10px 22px rgba(59, 35, 20, .18); }
+.livre-card figcaption { flex: 0 0 auto; min-height: 30px; padding: 10px 0 4px; font-size: .72rem; color: #8a7a63; }
 .livre-body { display: flex; flex-direction: column; flex: 1; padding: 22px 24px 26px; }
 .livre-badge { align-self: flex-start; margin: 0 0 10px; padding: 4px 10px; background: #203e35; color: #f0d39a; font-family: Montserrat, sans-serif; font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .livre-badge--nouveau { background: #7b433c; color: #fff4e4; }

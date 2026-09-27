@@ -18,9 +18,13 @@ test('le menu tient en cinq entrées, la dernière étant le bouton Réserver', 
 });
 
 test('le pied de page regroupe les liens retirés du menu en quatre sections', () => {
-  const html = footer();
-  const titles = [...html.matchAll(/<h2>([^<]+)<\/h2>/g)].map(m => m[1]);
-  assert.deepEqual(titles, ['Cours d’échecs', 'Apprendre', 'Nicolas Musicki', 'Informations']);
+  const html = footer('index.html');
+  const titles = [...html.matchAll(/<h4>([^<]+)<\/h4>/g)].map(m => m[1]);
+  assert.deepEqual(titles, ['Cours d’échecs', 'Apprendre', 'Nicolas Musicki', 'Informations', 'Suivez-moi']);
+  // Il réutilise les classes historiques du site, déjà stylées sur chaque page.
+  for (const classe of ['footer-content', 'footer-logo', 'footer-links', 'footer-social', 'social-icon', 'footer-bottom']) {
+    assert.ok(html.includes(`class="${classe}`), `classe manquante : ${classe}`);
+  }
   for (const label of ['À domicile', 'En visio', 'Zones desservies', 'Guide PDF gratuit', 'Cahiers d’exercices', 'À propos', 'Offrir un cadeau', 'Conditions générales de vente', 'Mentions légales et confidentialité', 'Gérer mes cookies']) {
     assert.ok(html.includes(`>${label}<`), `lien manquant : ${label}`);
   }

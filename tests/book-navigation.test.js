@@ -11,7 +11,10 @@ for (const file of ['index.html', 'blog/index.html', 'guide-apprendre-les-echecs
     const nav = read(file).match(/<nav\b[\s\S]*?<\/nav>/)[0];
     const link = nav.match(/<a href="([^"]+)"[^>]*>Livres<\/a>/);
     assert.ok(link, 'entrée « Livres » absente du menu');
-    assert.equal(link[1], '/livres.html');
+    // Lien relatif (consultable en local) qui pointe toujours vers livres.html à la racine.
+    assert.equal(link[1].replace(/^(\.\.\/)*/, ''), 'livres.html');
+    const target = path.resolve(root, path.dirname(file), link[1]);
+    assert.equal(target, path.join(root, 'livres.html'));
   });
 }
 test('Le catalogue relie le livre et les deux cahiers', () => {
