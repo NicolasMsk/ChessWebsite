@@ -41,6 +41,22 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Catalogue des livres et cahiers -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/livres.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Cahiers d'exercices (page de vente) -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/cahiers-exercices-echecs.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
   <!-- Page principale du blog -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/blog/</loc>

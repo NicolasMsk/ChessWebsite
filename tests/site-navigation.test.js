@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {root, pages, transform, navigation, footer} from '../scripts/site-navigation.mjs';
 
-const MENU = ['Cours', 'Tarifs', 'Blog', 'Le livre', 'Réserver un cours'];
+const MENU = ['Cours', 'Tarifs', 'Blog', 'Livres', 'Réserver un cours'];
 
 test('le menu tient en cinq entrées, la dernière étant le bouton Réserver', () => {
   const html = navigation('index.html');
@@ -21,7 +21,7 @@ test('le pied de page regroupe les liens retirés du menu en quatre sections', (
   const html = footer();
   const titles = [...html.matchAll(/<h2>([^<]+)<\/h2>/g)].map(m => m[1]);
   assert.deepEqual(titles, ['Cours d’échecs', 'Apprendre', 'Nicolas Musicki', 'Informations']);
-  for (const label of ['À domicile', 'En visio', 'Zones desservies', 'Guide PDF gratuit', 'À propos', 'Offrir un cadeau', 'Conditions générales de vente', 'Mentions légales et confidentialité', 'Gérer mes cookies']) {
+  for (const label of ['À domicile', 'En visio', 'Zones desservies', 'Guide PDF gratuit', 'Cahiers d’exercices', 'À propos', 'Offrir un cadeau', 'Conditions générales de vente', 'Mentions légales et confidentialité', 'Gérer mes cookies']) {
     assert.ok(html.includes(`>${label}<`), `lien manquant : ${label}`);
   }
 });
@@ -41,7 +41,7 @@ test('les cibles du menu existent sur la page d’accueil', () => {
   for (const id of ['cours', 'tarifs', 'contact', 'about']) {
     assert.match(home, new RegExp(`id="${id}"`), `ancre #${id} absente de index.html`);
   }
-  for (const file of ['blog/index.html', 'edition-raffinee/index.html', 'zones/index.html', 'cours-echecs-en-visio.html', 'guide-apprendre-les-echecs.html', 'idee-cadeau-echecs.html', 'cgv.html', 'mentions-legales.html', 'blog/exercices-echecs-debutant.html', 'zones/cours-echecs-paris-versailles-alentours.html']) {
+  for (const file of ['blog/index.html', 'edition-raffinee/index.html', 'livres.html', 'cahiers-exercices-echecs.html', 'zones/index.html', 'cours-echecs-en-visio.html', 'guide-apprendre-les-echecs.html', 'idee-cadeau-echecs.html', 'cgv.html', 'mentions-legales.html', 'blog/exercices-echecs-debutant.html', 'zones/cours-echecs-paris-versailles-alentours.html']) {
     assert.ok(fs.existsSync(path.join(root, file)), `page liée absente : ${file}`);
   }
 });

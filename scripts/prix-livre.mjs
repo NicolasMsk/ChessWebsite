@@ -30,6 +30,7 @@ const RACINE = join(dirname(fileURLToPath(import.meta.url)), '..');
 /** Fichiers publiés qui portent le prix du livre. */
 const FICHIERS_PRIX = [
   'edition-raffinee/index.html',
+  'livres.html',
   'guide-apprendre-les-echecs.html',
   'idee-cadeau-echecs.html',
   'cgv.html',

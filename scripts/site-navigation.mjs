@@ -6,7 +6,7 @@ export function pages(){
  return ['', 'blog','zones','edition-raffinee'].flatMap(dir=>fs.readdirSync(path.join(root,dir),{withFileTypes:true}).filter(e=>e.isFile()&&e.name.endsWith('.html')&&(dir!=='edition-raffinee'||e.name==='index.html')).map(e=>[dir,e.name].filter(Boolean).join('/'))).filter(file=>/<nav\b[^>]*class="[^"]*navbar/.test(fs.readFileSync(path.join(root,file),'utf8')));
 }
 export function navigation(file){
- const current=file==='edition-raffinee/index.html'?'Le livre':file.startsWith('blog/')?'Blog':file.startsWith('zones/')||file==='cours-echecs-en-visio.html'?'Cours':null;
+ const current=['edition-raffinee/index.html','livres.html','cahiers-exercices-echecs.html'].includes(file)?'Livres':file.startsWith('blog/')?'Blog':file.startsWith('zones/')||file==='cours-echecs-en-visio.html'?'Cours':null;
  return `<nav class="navbar site-nav" aria-label="Navigation principale">
     <div class="container">
       <a href="/" class="logo"><i class="fa-solid fa-chess-knight" aria-hidden="true"></i> Nicolas Musicki</a>
@@ -14,7 +14,7 @@ export function navigation(file){
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
       <ul class="nav-menu" id="nav-menu">
-${[['Cours','/#cours'],['Tarifs','/#tarifs'],['Blog','/blog/'],['Le livre','/edition-raffinee/'],['Réserver un cours','/#contact']].map(([label,href],i)=>`        <li><a href="${href}" class="nav-link${i===4?' nav-cta':''}"${label===current?' aria-current="'+(label==='Cours'?'location':'page')+'"':''}>${label}</a></li>`).join('\n')}
+${[['Cours','/#cours'],['Tarifs','/#tarifs'],['Blog','/blog/'],['Livres','/livres.html'],['Réserver un cours','/#contact']].map(([label,href],i)=>`        <li><a href="${href}" class="nav-link${i===4?' nav-cta':''}"${label===current?' aria-current="'+(label==='Cours'?'location':'page')+'"':''}>${label}</a></li>`).join('\n')}
       </ul>
     </div>
   </nav>`;
@@ -22,7 +22,7 @@ ${[['Cours','/#cours'],['Tarifs','/#tarifs'],['Blog','/blog/'],['Le livre','/edi
 export function footer(){
  const groups=[
   ['Cours d’échecs',[['À domicile','/zones/'],['En visio','/cours-echecs-en-visio.html'],['Zones desservies','/zones/cours-echecs-paris-versailles-alentours.html'],['Tarifs et réservation','/#tarifs']]],
-  ['Apprendre',[['Articles du blog','/blog/'],['Guide PDF gratuit','/guide-apprendre-les-echecs.html'],['Livre pour débutants','/edition-raffinee/'],['Exercices gratuits','/blog/exercices-echecs-debutant.html']]],
+  ['Apprendre',[['Articles du blog','/blog/'],['Guide PDF gratuit','/guide-apprendre-les-echecs.html'],['Livre pour débutants','/edition-raffinee/'],['Cahiers d’exercices','/cahiers-exercices-echecs.html'],['Exercices gratuits','/blog/exercices-echecs-debutant.html']]],
   ['Nicolas Musicki',[['À propos','/#about'],['Offrir un cadeau','/idee-cadeau-echecs.html'],['Instagram','https://www.instagram.com/magickchess/'],['LinkedIn','https://www.linkedin.com/in/nicolas-musicki-4867a4184/']]],
   ['Informations',[['Contact','/#contact'],['Conditions générales de vente','/cgv.html'],['Mentions légales et confidentialité','/mentions-legales.html'],['Gérer mes cookies','/mentions-legales.html#rgpd']]],
  ];

@@ -1,0 +1,84 @@
+/* ==========================================================
+   LIVRES & CAHIERS — catalogue (livres.html) et page de vente
+   des cahiers (cahiers-exercices-echecs.html).
+   Chargé APRÈS style.min.css, réutilise la palette du site.
+   ========================================================== */
+
+.livres-hero { background: #203e35; color: #fff9ed; text-align: center; padding: clamp(48px, 8vw, 88px) 20px; }
+.livres-hero .kicker { margin: 0 0 12px; color: #f0d39a; font-family: Montserrat, sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.livres-hero h1 { margin: 0 auto 16px; max-width: 21ch; color: #fff9ed; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.9rem, 4.6vw, 3rem); line-height: 1.15; }
+.livres-hero p { margin: 0 auto; max-width: 56ch; line-height: 1.7; color: #f4ecdd; }
+
+.livres-main { max-width: 1100px; margin: 0 auto; padding: clamp(40px, 6vw, 72px) 20px; }
+
+/* ---------- Cartes du catalogue ---------- */
+.livres-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.livre-card { display: flex; flex-direction: column; background: #fffdf8; border: 1px solid #e3d9ca; }
+.livre-card figure { margin: 0; padding: 26px 26px 0; background: #f5efe6; text-align: center; }
+.livre-card img { width: auto; max-width: 100%; max-height: 240px; box-shadow: 0 10px 22px rgba(59, 35, 20, .18); }
+.livre-card figcaption { padding: 8px 0 14px; font-size: .72rem; color: #8a7a63; }
+.livre-body { display: flex; flex-direction: column; flex: 1; padding: 22px 24px 26px; }
+.livre-badge { align-self: flex-start; margin: 0 0 10px; padding: 4px 10px; background: #203e35; color: #f0d39a; font-family: Montserrat, sans-serif; font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.livre-badge--nouveau { background: #7b433c; color: #fff4e4; }
+.livre-body h2 { margin: 0 0 4px; color: #203e35; font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; line-height: 1.25; text-align: left; }
+.livre-body .livre-sub { margin: 0 0 14px; color: #6e5832; font-size: .84rem; }
+.livre-body ul { margin: 0 0 18px; padding: 0; list-style: none; }
+.livre-body li { position: relative; margin: 0 0 8px; padding-left: 18px; font-size: .92rem; line-height: 1.55; }
+.livre-body li::before { content: '♞'; position: absolute; left: 0; color: #9a7445; font-size: .8rem; }
+.livre-prix { margin: auto 0 14px; padding-top: 14px; border-top: 1px solid #e8dfd0; }
+.livre-prix strong { color: #203e35; font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; }
+.livre-prix span { display: block; margin-top: 2px; font-size: .78rem; color: #6d5d4d; }
+.livre-cta { display: block; padding: 13px 18px; background: #b98b4e; color: #fff; font-family: Montserrat, sans-serif; font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-align: center; text-decoration: none; text-transform: uppercase; transition: background .2s; }
+.livre-cta:hover { background: #a4763c; color: #fff; }
+.livre-cta--secondaire { background: #203e35; }
+.livre-cta--secondaire:hover { background: #16302a; }
+
+/* ---------- Bandeau pack ---------- */
+.pack-bandeau { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between; margin-top: 34px; padding: 26px 30px; background: #203e35; color: #fff9ed; }
+.pack-bandeau h2 { margin: 0 0 4px; color: #f0d39a; font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; text-align: left; }
+.pack-bandeau p { margin: 0; font-size: .92rem; color: #f4ecdd; }
+.pack-bandeau .livre-cta { flex-shrink: 0; }
+
+/* ---------- Page cahiers : sections produit ---------- */
+.cahier-section { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: clamp(28px, 5vw, 56px); align-items: start; padding: clamp(40px, 6vw, 64px) 0; border-top: 1px solid #e8dfd0; }
+.cahier-section:first-of-type { border-top: 0; }
+.cahier-figure { margin: 0; text-align: center; }
+.cahier-figure img { max-width: min(100%, 300px); box-shadow: 0 14px 30px rgba(59, 35, 20, .2); }
+.cahier-figure figcaption { margin-top: 10px; font-size: .72rem; color: #8a7a63; }
+.cahier-texte h2 { margin: 0 0 6px; color: #203e35; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.5rem, 3vw, 2rem); text-align: left; }
+.cahier-texte .livre-sub { display: block; margin: 0 0 16px; color: #6e5832; font-size: .88rem; }
+.cahier-texte p { line-height: 1.75; text-align: left; }
+.cahier-specs { margin: 18px 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; }
+.cahier-specs li { position: relative; padding-left: 18px; font-size: .9rem; line-height: 1.5; }
+.cahier-specs li::before { content: '✓'; position: absolute; left: 0; color: #9a7445; font-weight: 700; }
+.cahier-achat { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 20px; }
+.cahier-achat .livre-prix { margin: 0; padding: 0; border: 0; }
+
+/* ---------- Comment ça marche ---------- */
+.cahier-etapes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin: 0 0 8px; padding: 26px; background: #f5efe6; }
+.cahier-etapes article { text-align: center; }
+.cahier-etapes .num { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; margin-bottom: 8px; border: 1px solid #9a7445; border-radius: 50%; color: #9a7445; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
+.cahier-etapes p { margin: 0; font-size: .86rem; line-height: 1.5; }
+
+/* ---------- Commande & FAQ ---------- */
+.cahier-commande { margin-top: 8px; padding: 30px; background: #fffdf8; border: 1px solid #e3d9ca; text-align: center; }
+.cahier-commande h2 { margin: 0 0 10px; color: #203e35; font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; }
+.cahier-commande p { max-width: 62ch; margin: 0 auto 18px; line-height: 1.7; }
+.cahier-faq { margin-top: clamp(40px, 6vw, 64px); }
+.cahier-faq h2 { margin: 0 0 20px; color: #203e35; font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; text-align: left; }
+.cahier-faq details { margin-bottom: 10px; padding: 14px 18px; background: #fffdf8; border: 1px solid #e8dfd0; }
+.cahier-faq summary { color: #203e35; font-weight: 600; cursor: pointer; }
+.cahier-faq details p { margin: 12px 0 0; line-height: 1.7; text-align: left; }
+
+@media (max-width: 900px) {
+  .livres-grid { grid-template-columns: minmax(0, 1fr); max-width: 460px; margin: 0 auto; }
+  .cahier-section { grid-template-columns: minmax(0, 1fr); }
+  .cahier-figure img { max-width: 240px; }
+  .cahier-etapes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .cahier-specs { grid-template-columns: minmax(0, 1fr); }
+  .cahier-etapes { grid-template-columns: minmax(0, 1fr); }
+  .pack-bandeau { justify-content: center; text-align: center; }
+  .pack-bandeau h2 { text-align: center; }
+}
