@@ -7,7 +7,7 @@
  */
 
 export const PACK_PRODUCT_ID = 'pack_livres_relies';
-export const PACK_AMOUNT_CENTS = 3999;
+export const PACK_AMOUNT_CENTS = 4000;
 export const PACK_NAME = 'Apprendre les Échecs — Volumes I & II (édition reliée à la main)';
 export const DELAI_LIVRAISON = '14 jours maximum';
 

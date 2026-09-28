@@ -1,9 +1,9 @@
 {
   "_lisezMoi": "Source unique du prix du livre relié. Toute modification doit être suivie de « node scripts/prix-livre.mjs --apply », puis de la recréation du lien de paiement Stripe (api/create-rentree-payment-link.mjs). Le dossier _data n'est pas publié par Jekyll.",
 
-  "prix": "39,99",
-  "prixCents": 3999,
-  "prixSchema": "39.99",
+  "prix": "40,00",
+  "prixCents": 4000,
+  "prixSchema": "40.00",
 
   "finOffre": "2026-10-15",
   "finOffreTexte": "15 octobre 2026",

@@ -15,8 +15,8 @@ import {
 
 // ---------- Constantes ----------
 
-test('le prix du pack est de 39,99 € en centimes', () => {
-  assert.equal(PACK_AMOUNT_CENTS, 3999);
+test('le prix du pack est de 40,00 € en centimes', () => {
+  assert.equal(PACK_AMOUNT_CENTS, 4000);
 });
 
 test('formatAmount convertit les centimes en euros français', () => {
@@ -138,11 +138,11 @@ test('formatAddressLines omet les lignes vides', () => {
 
 // ---------- Emails ----------
 
-test('une commande de rentrée conserve les 39,99 € payés dans les confirmations', () => {
-  const order = buildOrderRecord({ ...sessionModerne, amount_total: 3999 }, '2026-09-13T12:00:00.000Z');
-  assert.equal(order.amount_total, 3999);
+test('une commande du livre conserve les 40,00 € payés dans les confirmations', () => {
+  const order = buildOrderRecord({ ...sessionModerne, amount_total: 4000 }, '2026-09-13T12:00:00.000Z');
+  assert.equal(order.amount_total, 4000);
   for (const body of [orderConfirmationHtml(order), orderConfirmationText(order), orderAdminHtml(order)]) {
-    assert.match(body, /39,99/);
+    assert.match(body, /40,00/);
     assert.doesNotMatch(body, /64,99/);
   }
 });
