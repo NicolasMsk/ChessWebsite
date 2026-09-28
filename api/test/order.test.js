@@ -283,3 +283,15 @@ test('un produit inconnu retombe sur le livre relié (comportement historique)',
   }, '2026-09-27T10:00:00Z');
   assert.match(orderConfirmationText(order), /Volumes I et II|Volumes I & II/);
 });
+
+test('le trio livre + cahiers annonce les trois ouvrages et 60 €', () => {
+  const order = buildOrderRecord({
+    id: 'cs_trio', metadata: { product: 'trio_livre_cahiers' }, amount_total: 6000, currency: 'eur',
+    customer_details: { email: 'x@y.fr' },
+    collected_information: { shipping_details: { name: 'D', address: { line1: '4 rue D', postal_code: '75003', city: 'Paris', country: 'FR' } } },
+  }, '2026-09-28T10:00:00Z');
+  const texte = orderConfirmationText(order);
+  assert.match(texte, /trio complet/);
+  assert.match(texte, /60,00 €/);
+  assert.match(orderAdminHtml(order), /TRIO/);
+});

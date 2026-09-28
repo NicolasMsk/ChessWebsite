@@ -39,6 +39,13 @@ const CAHIERS = [
     name: 'Les deux cahiers nomades — mats + tactiques (A6, cousus main)',
     message: '25 € TTC les deux cahiers, envoi compris en France métropolitaine. Cahiers A6 couleur cousus main. Expédition sous 14 jours maximum. CGV : ' + site + '/cgv.html',
   },
+  {
+    campaign: 'trio-livre-cahiers-6000',
+    product: 'trio_livre_cahiers',
+    amount: 6000,
+    name: 'Le trio complet — livre relié « Apprendre les Échecs » + les deux cahiers nomades',
+    message: '60 € TTC le livre relié (200 pages) et les deux cahiers d’exercices A6 cousus main, envoi compris en France métropolitaine. Expédition sous 14 jours maximum. CGV : ' + site + '/cgv.html',
+  },
 ];
 
 async function stripe(path, values, idempotencyKey) {

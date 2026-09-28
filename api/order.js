@@ -45,6 +45,13 @@ export const PRODUITS = {
     fabrication: "J'imprime puis je couds vos deux cahiers à la main, avant de les expédier en envoi suivi.",
     consigne: 'Imprimer et coudre les DEUX cahiers, emballer (sans prix visible), expédier en envoi suivi.',
   },
+  trio_livre_cahiers: {
+    nom: 'Le trio complet — livre relié « Apprendre les Échecs » + les deux cahiers nomades',
+    entete: 'Le trio complet',
+    sousTitre: 'Apprendre les Échecs + les deux cahiers nomades',
+    fabrication: "Je prépare votre livre relié et je couds vos deux cahiers à la main, puis j'expédie le tout ensemble en Colissimo suivi.",
+    consigne: 'TRIO : livre (numéroter, signer) + les DEUX cahiers (imprimer, coudre). Emballer ensemble (sans prix visible), expédier en Colissimo suivi.',
+  },
 };
 
 /** Fiche produit d'une commande ; le livre relié sert de valeur par défaut. */

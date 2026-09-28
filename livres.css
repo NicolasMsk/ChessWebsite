@@ -40,6 +40,8 @@
 .pack-bandeau h2 { margin: 0 0 4px; color: #f0d39a; font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; text-align: left; }
 .pack-bandeau p { margin: 0; font-size: .92rem; color: #f4ecdd; }
 .pack-bandeau .livre-cta { flex-shrink: 0; }
+.pack-bandeau--trio { margin-top: 16px; background: #7b433c; }
+.pack-bandeau--trio h2 { color: #ffe9c9; }
 
 /* ---------- Page cahiers : sections produit ---------- */
 .cahier-section { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: clamp(28px, 5vw, 56px); align-items: start; padding: clamp(40px, 6vw, 64px) 0; border-top: 1px solid #e8dfd0; }
