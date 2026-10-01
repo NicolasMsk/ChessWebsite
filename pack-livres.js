@@ -21,7 +21,12 @@
     { src: assetRoot + 'images/reliure/pack-principal.webp',      legende: 'L’édition précédente, en deux volumes, sur un échiquier en bois' },
     { src: assetRoot + 'images/reliure/pack-tranche.webp',        legende: 'Debout : la tranche cousue main est visible' },
     { src: assetRoot + 'images/reliure/pack-rouge.webp',          legende: 'Le Volume I, couverture rouge, grain du papier ivoire' },
-    { src: assetRoot + 'images/reliure/pack-plongee.webp',        legende: 'Vue en plongée des deux volumes' }
+    { src: assetRoot + 'images/reliure/pack-plongee.webp',        legende: 'Vue en plongée des deux volumes' },
+    // Extrait de lecture : quatre pages du chapitre « La méthode anti-gaffe »
+    { src: assetRoot + 'images/extrait-livre/page-91.png', legende: 'Page 91 — Les trois questions à se poser avant de jouer' },
+    { src: assetRoot + 'images/extrait-livre/page-92.png', legende: 'Page 92 — Une pièce qui bouge peut en abandonner une autre' },
+    { src: assetRoot + 'images/extrait-livre/page-96.png', legende: 'Page 96 — Pourquoi un coup naturel de cavalier perd une pièce' },
+    { src: assetRoot + 'images/extrait-livre/page-98.png', legende: 'Page 98 — Les exercices pour appliquer la méthode à ses parties' }
   ];
 
   var lb = document.getElementById('pack-lightbox');

@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="../style.min.css">
   <link rel="stylesheet" href="../contenu-produits.css">
-  <link rel="stylesheet" href="../pack-livres.css?v=6">
+  <link rel="stylesheet" href="../pack-livres.css?v=7">
   <link rel="stylesheet" href="../book-details.css">
   <!-- Photo de l'auteur : élément LCP mesuré par Lighthouse, à charger en priorité -->
   <link rel="preload" as="image" href="../images/reliure/pack-2026-auteur.webp" fetchpriority="high">
@@ -543,6 +543,39 @@
           </div>
         </div>
 
+        <!-- Extrait de lecture : quatre pages du chapitre 13, ouvertes dans la visionneuse -->
+        <div class="extrait-livre" id="extrait">
+          <h3 class="extrait-titre">Feuilletez un extrait&nbsp;: éviter les pièces perdues</h3>
+          <p class="extrait-intro">Quatre pages du chapitre «&nbsp;La méthode anti-gaffe&nbsp;», telles qu'imprimées dans le livre. Cliquez pour agrandir.</p>
+          <div class="extrait-grid">
+            <figure>
+              <button type="button" class="pack-open-lb" data-index="8" aria-label="Agrandir la page 91 : les trois questions à se poser avant de jouer">
+                <img src="../images/extrait-livre/page-91.png" alt="Page 91 du livre : les trois questions à se poser avant chaque coup" loading="lazy" width="1190" height="1684">
+              </button>
+              <figcaption>Les trois questions avant chaque coup</figcaption>
+            </figure>
+            <figure>
+              <button type="button" class="pack-open-lb" data-index="9" aria-label="Agrandir la page 92 : une pièce qui bouge peut en abandonner une autre">
+                <img src="../images/extrait-livre/page-92.png" alt="Page 92 du livre : une pièce en prise, expliquée avec un diagramme" loading="lazy" width="1190" height="1684">
+              </button>
+              <figcaption>«&nbsp;Une pièce en prise&nbsp;?&nbsp;», avec diagramme</figcaption>
+            </figure>
+            <figure>
+              <button type="button" class="pack-open-lb" data-index="10" aria-label="Agrandir la page 96 : pourquoi un coup naturel de cavalier perd une pièce">
+                <img src="../images/extrait-livre/page-96.png" alt="Page 96 du livre : un coup de cavalier naturel qui perd une pièce" loading="lazy" width="1190" height="1684">
+              </button>
+              <figcaption>Le piège du «&nbsp;coup naturel&nbsp;»</figcaption>
+            </figure>
+            <figure>
+              <button type="button" class="pack-open-lb" data-index="11" aria-label="Agrandir la page 98 : les exercices pour appliquer la méthode">
+                <img src="../images/extrait-livre/page-98.png" alt="Page 98 du livre : les exercices du chapitre anti-gaffe" loading="lazy" width="1190" height="1684">
+              </button>
+              <figcaption>Les exercices pour s'entraîner</figcaption>
+            </figure>
+          </div>
+          <p class="extrait-pdf"><a href="../fichiers/extrait-methode-anti-gaffe.pdf">Télécharger ces quatre pages en PDF</a> — extrait du chapitre 13, version imprimée.</p>
+        </div>
+
         <!-- Visionneuse plein écran des photos du pack -->
         <div class="plb" id="pack-lightbox" role="dialog" aria-modal="true"
              aria-label="Photos de l'édition reliée" hidden>
@@ -557,7 +590,7 @@
           <div class="plb-strip" id="plb-strip"></div>
         </div>
 
-        <script src="../pack-livres.js?v=6" defer></script>
+        <script src="../pack-livres.js?v=7" defer></script>
       </section>
 
     <div class="container product-faq-wrap">
