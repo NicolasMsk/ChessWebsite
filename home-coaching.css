@@ -1,0 +1,46 @@
+/* Premier cours et parcours d'élève : contenu HTML lisible sans JavaScript. */
+.first-lesson{margin:clamp(2.5rem,6vw,5rem) auto;max-width:1100px;scroll-margin-top:140px}
+.coaching-eyebrow{font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:#8a602e;margin:0 0 .8rem}
+.first-lesson__heading{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem}
+.first-lesson h2{font-size:clamp(1.65rem,3.2vw,2.55rem);line-height:1.25;margin:0 0 1.3rem;letter-spacing:-.025em}
+.first-lesson h2::after,.joris-story h2::after{display:none}
+.first-lesson h2 em{color:#886039;font-weight:400}
+.first-lesson__badge{display:inline-flex;align-items:center;gap:.6rem;flex-shrink:0;padding:.7rem .9rem;background:#f0e5d3;border:1px solid #dcc7a6;border-radius:50px;color:#59371b;font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:700}
+.first-lesson__badge i{font-size:1rem}
+.first-lesson__intro{max-width:760px;line-height:1.8;color:#62574c;margin:0 0 2rem}
+.lesson-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.lesson-steps li{position:relative;padding:1.5rem;border:1px solid #e6dac9;border-radius:12px;background:linear-gradient(145deg,#fffcf7,#f5ede1);min-width:0}
+.lesson-steps__top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem;color:#8a602e}
+.lesson-steps__number{font-family:'Playfair Display',Georgia,serif;font-size:2.2rem;line-height:1;color:#967446}
+.lesson-steps__top i{display:grid;place-items:center;width:38px;height:38px;border:1px solid #deceb7;border-radius:50%;font-size:1rem}
+.lesson-steps h3{font-size:1.15rem;margin:0 0 .7rem;line-height:1.4;color:#3b2314}
+.lesson-steps p{font-size:.92rem;line-height:1.75;margin:0;color:#62574c}
+.first-lesson__footer{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-top:1.5rem;padding:1.3rem 0}
+.first-lesson__footer p{margin:0;max-width:640px;font-size:.9rem;line-height:1.75;color:#62574c}
+.coaching-cta{display:inline-flex;align-items:center;justify-content:center;gap:1rem;flex-shrink:0;padding:1rem 1.2rem;border-radius:8px;background:#3b2314;color:#fff4e1;font:600 .8rem/1.5 Montserrat,sans-serif;text-decoration:none;text-align:center}
+.coaching-cta:hover{background:#5b3821;color:#fff}
+.coaching-cta:focus-visible,.joris-story a:focus-visible{outline:3px solid #bd934d;outline-offset:5px}
+.joris-story{max-width:1100px;display:grid;grid-template-columns:.9fr 1.1fr;margin:0 auto clamp(3rem,7vw,5rem);border:1px solid #deceb7;border-radius:16px;overflow:hidden;background:#fffcf7;scroll-margin-top:140px}
+.joris-story__result{padding:clamp(1.5rem,3.5vw,2.8rem);background:radial-gradient(ellipse at top left,#67422b,transparent 75%),#302015;color:#fff3e0;display:flex;flex-direction:column;justify-content:center}
+.joris-story__result .coaching-eyebrow{color:#e5c28a}
+.joris-story h2{font-size:clamp(1.7rem,3vw,2.4rem);color:#fff3e0;margin:0 0 .75rem;line-height:1.25}
+.joris-story__cadence{color:#e4d1b9;font-size:.85rem;line-height:1.6;margin:0}
+.joris-story__scores{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin:2.4rem 0 1.5rem}
+.joris-story__scores>div{display:flex;flex-direction:column;gap:.5rem}
+.joris-story__scores>div>span:last-child{font:500 .7rem/1.5 Montserrat,sans-serif;color:#e4d1b9}
+.joris-story__score{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.3rem,4vw,3.6rem);line-height:1;white-space:nowrap;color:#fff3e0;font-variant-numeric:lining-nums tabular-nums}
+.joris-story__arrow{font-size:1.8rem;color:#d7b479}
+.joris-story__gain{margin:0 0 1.25rem;padding:.8rem 0;border-top:1px solid #826344;border-bottom:1px solid #826344;font:700 1rem/1.7 Montserrat,sans-serif;color:#efca87}
+.joris-story__gain span{display:block;font-size:.75rem;font-weight:400;color:#e4d1b9}
+.joris-story__note{font-size:.75rem;line-height:1.7;color:#d7c6af;margin:0}
+.joris-story__work{padding:clamp(1.5rem,3.5vw,2.8rem)}
+.joris-story__work h3{font-size:1.3rem;line-height:1.4;margin:0 0 1rem;color:#3b2314}
+.joris-story__work>p{font-size:.92rem;line-height:1.8;color:#62574c;margin:0 0 1.5rem}
+.joris-story__work ul{list-style:none;padding:0;margin:0 0 1.4rem}
+.joris-story__work li{display:flex;gap:1rem;margin:1.1rem 0;align-items:flex-start}
+.joris-story__marker{flex-shrink:0;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#efe3ce;color:#77512a;font:600 .65rem Montserrat,sans-serif}
+.joris-story__work strong{display:block;font-size:.92rem;line-height:1.5;color:#3b2314}
+.joris-story__work li p{font-size:.86rem;line-height:1.7;margin:.3rem 0 0;color:#62574c}
+.joris-story__link{color:#654322;font-size:.88rem;line-height:1.7;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.first-lesson__heading{flex-direction:column;gap:0}.first-lesson__badge{margin-bottom:1.3rem}.lesson-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.first-lesson__footer{flex-direction:column;align-items:flex-start;gap:1.2rem}.joris-story{grid-template-columns:1fr}.joris-story__scores{max-width:360px;width:100%;margin:1.8rem 0}.joris-story__score{font-size:3.4rem}}
+@media(max-width:520px){.lesson-steps{grid-template-columns:1fr;gap:.75rem}.lesson-steps li{padding:1.25rem}.lesson-steps__top{margin-bottom:.75rem}.lesson-steps__number{font-size:1.8rem}.coaching-cta{width:100%;box-sizing:border-box}.joris-story__score{font-size:2.8rem}.joris-story__work,.joris-story__result{padding:1.5rem}}
