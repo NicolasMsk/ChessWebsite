@@ -27,7 +27,7 @@ ${[['Cours','index.html#cours'],['Tarifs','index.html#tarifs'],['Guide gratuit',
 export function footer(file){
  const p=prefixe(file);
  const groups=[
-  ['Cours d’échecs',[['À domicile','zones/index.html'],['En visio','cours-echecs-en-visio.html'],['Zones desservies','zones/cours-echecs-paris-versailles-alentours.html'],['Tarifs et réservation','index.html#tarifs']]],
+  ['Cours d’échecs',[['À domicile','zones/index.html'],['En visio','cours-echecs-en-visio.html'],['Cours pour seniors','cours-echecs-seniors.html'],['Chess lessons in English','chess-lessons-paris.html'],['Zones desservies','zones/cours-echecs-paris-versailles-alentours.html'],['Tarifs et réservation','index.html#tarifs']]],
   ['Apprendre',[['Articles du blog','blog/index.html'],['Guide PDF gratuit','guide-apprendre-les-echecs.html'],['Livre pour débutants','edition-raffinee/index.html'],['Cahiers d’exercices','cahiers-exercices-echecs.html'],['Exercices gratuits','blog/exercices-echecs-debutant.html']]],
   ['Nicolas Musicki',[['À propos','index.html#about'],['Tous les livres','livres.html'],['Offrir un cadeau','idee-cadeau-echecs.html']]],
   ['Informations',[['Contact','index.html#contact'],['Conditions générales de vente','cgv.html'],['Mentions légales et confidentialité','mentions-legales.html'],['Gérer mes cookies','mentions-legales.html#rgpd']]],

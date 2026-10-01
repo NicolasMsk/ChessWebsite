@@ -41,6 +41,30 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Cours pour seniors (page d'offre) -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/cours-echecs-seniors.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Cours en anglais (page d'offre) -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/chess-lessons-paris.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Zone Le Chesnay-Rocquencourt -->
+  <url>
+    <loc>https://www.cours-echecs-paris.fr/zones/cours-echecs-le-chesnay.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Catalogue des livres et cahiers -->
   <url>
     <loc>https://www.cours-echecs-paris.fr/livres.html</loc>
