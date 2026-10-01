@@ -11,7 +11,7 @@ export function pages(){
 export function prefixe(file){ return '../'.repeat(file.split('/').length-1); }
 export function navigation(file){
  const p=prefixe(file);
- const current=['edition-raffinee/index.html','livres.html','cahiers-exercices-echecs.html'].includes(file)?'Livres':file.startsWith('blog/')?'Blog':file.startsWith('zones/')||file==='cours-echecs-en-visio.html'?'Cours':null;
+ const current=file==='guide-apprendre-les-echecs.html'?'Guide gratuit':['edition-raffinee/index.html','livres.html','cahiers-exercices-echecs.html'].includes(file)?'Livres':file.startsWith('blog/')?'Blog':file.startsWith('zones/')||file==='cours-echecs-en-visio.html'?'Cours':null;
  return `<nav class="navbar site-nav" aria-label="Navigation principale">
     <div class="container">
       <a href="${p}index.html" class="logo"><i class="fa-solid fa-chess-knight" aria-hidden="true"></i> Nicolas Musicki</a>
@@ -19,7 +19,7 @@ export function navigation(file){
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
       <ul class="nav-menu" id="nav-menu">
-${[['Cours','index.html#cours'],['Tarifs','index.html#tarifs'],['Blog','blog/index.html'],['Livres','livres.html'],['Réserver un cours','index.html#contact']].map(([label,href],i)=>`        <li><a href="${p}${href}" class="nav-link${i===4?' nav-cta':''}"${label===current?' aria-current="'+(label==='Cours'?'location':'page')+'"':''}>${label}</a></li>`).join('\n')}
+${[['Cours','index.html#cours'],['Tarifs','index.html#tarifs'],['Guide gratuit','guide-apprendre-les-echecs.html'],['Livres','livres.html'],['Blog','blog/index.html'],['Réserver un cours','index.html#contact']].map(([label,href])=>`        <li><a href="${p}${href}" class="nav-link${label==='Réserver un cours'?' nav-cta':''}"${label===current?' aria-current="'+(label==='Cours'?'location':'page')+'"':''}>${label}</a></li>`).join('\n')}
       </ul>
     </div>
   </nav>`;

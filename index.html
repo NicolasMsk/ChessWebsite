@@ -48,6 +48,7 @@
   <!-- Lien vers la feuille de style externe -->
   <!-- <link rel="preload" href="style.min.css" as="style"> -->
   <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="contenu-produits.css">
   <style>
     .group-lessons{max-width:920px;margin:3rem auto;padding:clamp(1.25rem,4vw,2rem);background:var(--off-white);border:1px solid var(--silver);border-left:4px solid var(--accent)}
     .group-lessons h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:1rem}.group-lessons p{line-height:1.7;margin-bottom:1rem}.group-lessons-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.group-lessons-actions a{overflow-wrap:anywhere}.group-lessons-actions .btn{white-space:normal;max-width:100%}
@@ -347,8 +348,9 @@
       <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html#cours" class="nav-link">Cours</a></li>
         <li><a href="index.html#tarifs" class="nav-link">Tarifs</a></li>
-        <li><a href="blog/index.html" class="nav-link">Blog</a></li>
+        <li><a href="guide-apprendre-les-echecs.html" class="nav-link">Guide gratuit</a></li>
         <li><a href="livres.html" class="nav-link">Livres</a></li>
+        <li><a href="blog/index.html" class="nav-link">Blog</a></li>
         <li><a href="index.html#contact" class="nav-link nav-cta">Réserver un cours</a></li>
       </ul>
     </div>
@@ -357,7 +359,7 @@
 <!-- En-tête / Bannière avec image d'échiquier -->
   <header class="header-with-chessboard">
     <div class="container">
-      <h1>Cours d'Échecs à Paris et dans les Yvelines</h1>
+      <h1>Cours d'échecs à Paris, Versailles et en visio</h1>
       <h2>Apprendre et progresser avec <span class="name-accent">Nicolas Musicki</span></h2>
       <p class="intro">
         Professeur passionné – Cours pour enfants, adultes et tous niveaux
@@ -457,7 +459,7 @@
       <!-- À propos -->
       <section class="course-formats" id="cours" aria-labelledby="course-formats-title">
         <h2 id="course-formats-title">Choisissez votre format de cours d’échecs</h2>
-        <p>Enfants ou adultes, débutants ou joueurs confirmés : un accompagnement adapté à votre niveau, à domicile ou à distance.</p>
+        <p><strong>Nicolas Musicki propose des cours particuliers d'échecs pour enfants et adultes, à domicile à Paris et Versailles ou en visioconférence.</strong> Une séance d'une heure coûte 50&nbsp;€ à domicile ou 40&nbsp;€ en visio. Le premier cours est offert et sans engagement ; il permet de faire connaissance et d'évaluer votre niveau.</p>
         <div class="course-formats__grid">
           <article>
             <h3>À domicile</h3>
@@ -468,6 +470,32 @@
             <h3>En visio</h3>
             <p>Depuis chez vous, partout en France et dans le monde. Un échiquier partagé permet d’analyser vos parties et de chercher les coups ensemble.</p>
             <a href="cours-echecs-en-visio.html">Découvrir les cours d’échecs en visio</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-panel" aria-labelledby="course-audience-title">
+        <h2 id="course-audience-title">Quel cours d'échecs choisir selon votre objectif ?</h2>
+        <div class="content-panel__grid">
+          <article>
+            <h3>Pour un enfant qui découvre les échecs</h3>
+            <p>Le cours commence par les règles et les déplacements, puis introduit les menaces et les premiers mats avec des exercices adaptés à son niveau. L'objectif est de comprendre ce qui se passe sur l'échiquier et de prendre plaisir à jouer.</p>
+            <a href="blog/cours-echecs-enfants-paris.html">Voir les cours d'échecs pour enfants à Paris</a>
+          </article>
+          <article>
+            <h3>Pour un adulte débutant ou qui reprend</h3>
+            <p>Nous travaillons les bases, les pièces laissées en prise et les décisions dans l'ouverture. Vos parties servent de point de départ pour choisir les exercices et construire une progression adaptée.</p>
+            <a href="blog/cours-echecs-adultes-paris.html">Voir les cours d'échecs pour adultes à Paris</a>
+          </article>
+          <article>
+            <h3>Pour progresser ou préparer un tournoi</h3>
+            <p>L'analyse de vos parties permet de cibler le calcul, la tactique, les finales ou votre répertoire d'ouvertures. Le travail dépend de vos difficultés et de vos objectifs, sans promesse de gain de classement.</p>
+            <a href="#contact">Présenter votre niveau et vos objectifs</a>
+          </article>
+          <article>
+            <h3>Pour apprendre depuis chez vous</h3>
+            <p>Les cours en visio utilisent un échiquier partagé pour chercher les coups et commenter vos parties ensemble. Ils sont accessibles depuis Paris, ailleurs en France ou à l'étranger.</p>
+            <a href="cours-echecs-en-visio.html">Découvrir le déroulement des cours en visio</a>
           </article>
         </div>
       </section>
@@ -507,6 +535,28 @@
         </div>
       </section>
 
+
+      <section class="content-panel google-reviews" id="avis-google" aria-labelledby="google-reviews-title">
+        <h2 id="google-reviews-title">Avis Google sur les cours d'échecs de Nicolas Musicki</h2>
+        <p>Deux élèves racontent leur expérience des cours. Voici leurs avis tels qu'ils apparaissent sur Google.</p>
+        <div class="content-panel__grid">
+          <article aria-labelledby="review-sarah-name">
+            <p class="review-stars" aria-label="Note : 5 sur 5"><span aria-hidden="true">★★★★★</span></p>
+            <blockquote><p>J’ai commencé les échecs avec Nicolas il y a quelques mois et je suis très satisfaite, j’ai nettement progressé et je peux enfin jouer avec mes enfants. Nicolas est très attentif, patient et sympathique. Je le recommande pour toute personne qui souhaiterait s’exercer aux échecs pour le plaisir ou pour la compét’!</p></blockquote>
+            <p class="review-author" id="review-sarah-name">Sarah Sanchez</p>
+            <p class="review-source">Avis publié sur Google · 5/5</p>
+            <details><summary>Voir la capture de l'avis de Sarah</summary><img src="images/avis-google/sarah-sanchez.png" alt="Capture de l'avis Google cinq étoiles de Sarah Sanchez, retranscrit ci-dessus" width="583" height="386" loading="lazy" decoding="async"></details>
+          </article>
+          <article aria-labelledby="review-amine-name">
+            <p class="review-stars" aria-label="Note : 5 sur 5"><span aria-hidden="true">★★★★★</span></p>
+            <blockquote><p>Excellent coach !<br>Un pédagogue passionné disponible et très à l'écoute. Il a su repérer rapidement mes points faibles et m'expliquer des concepts complexes de manière vraiment simple et claire ce qui m’a aidé à progresser.</p></blockquote>
+            <p class="review-author" id="review-amine-name">Amine Ouerghi</p>
+            <p class="review-source">Avis publié sur Google · 5/5</p>
+            <details><summary>Voir la capture de l'avis d'Amine</summary><img src="images/avis-google/amine-ouerghi.png" alt="Capture de l'avis Google cinq étoiles d'Amine Ouerghi, retranscrit ci-dessus" width="604" height="348" loading="lazy" decoding="async"></details>
+          </article>
+        </div>
+        <p style="margin-top:1.5rem;margin-bottom:0"><a href="https://share.google/vYHYWuskatkblxEM5" target="_blank" rel="noopener noreferrer" aria-label="Consulter ma fiche et les avis sur Google (nouvel onglet)">Consulter ma fiche et les avis sur Google <span aria-hidden="true">↗</span></a></p>
+      </section>
 
       <!-- Témoignages -->
       <section class="testimonials-inline">
@@ -780,6 +830,34 @@
           <a href="edition-raffinee/" class="book-referral-link">Découvrir le livre d’échecs pour débutants →</a>
         </div>
       </aside>
+
+      <section class="content-panel home-workbooks" id="cahiers-exercices" aria-labelledby="home-workbooks-title">
+        <p class="book-referral-eyebrow">Nouveau · Les cahiers nomades</p>
+        <h2 id="home-workbooks-title">Deux cahiers d'exercices d'échecs pour débutants</h2>
+        <p>Un cahier, un crayon et une position à résoudre : entraînez-vous à trouver le mat ou à gagner du matériel. Chaque cahier propose 50 exercices, avec la correction au verso, dans un format de poche cousu à la main.</p>
+        <div class="content-panel__grid">
+          <article>
+            <figure class="home-workbooks__photo">
+              <img src="images/reliure/pack-rouge.webp" alt="Livres reliés rouge et vert olive sur un échiquier, visuel provisoire en attendant les photos des cahiers" width="810" height="1080" loading="lazy" decoding="async">
+            </figure>
+            <h3>Mes premiers mats en un coup</h3>
+            <p>50 positions pour apprendre à terminer la partie : cherchez le coup qui mate, écrivez votre réponse, puis vérifiez la solution au verso.</p>
+            <p><strong>15&nbsp;€</strong> · Envoi compris en France métropolitaine</p>
+            <a href="cahiers-exercices-echecs.html#mats" class="book-referral-link">Découvrir le cahier des mats →</a>
+          </article>
+          <article>
+            <figure class="home-workbooks__photo">
+              <img src="images/reliure/pack-principal.webp" alt="Livres reliés vert olive et rouge photographiés de dessus, visuel provisoire en attendant les photos des cahiers" width="1080" height="810" loading="lazy" decoding="async">
+            </figure>
+            <h3>Mes premières tactiques</h3>
+            <p>50 exercices pour repérer les coups qui gagnent du matériel : fourchettes, attaques doubles, clouages, enfilades et échecs à la découverte.</p>
+            <p><strong>15&nbsp;€</strong> · Envoi compris en France métropolitaine</p>
+            <a href="cahiers-exercices-echecs.html#tactiques" class="book-referral-link">Découvrir le cahier des tactiques →</a>
+          </article>
+        </div>
+        <p class="home-workbooks__note">Photos provisoires de mes livres reliés rouge et vert olive. Les photos des deux cahiers seront ajoutées prochainement.</p>
+        <p class="home-workbooks__pack"><strong>Les deux cahiers : 25&nbsp;€ au lieu de 30&nbsp;€</strong>, envoi compris en France métropolitaine. <a href="cahiers-exercices-echecs.html#pack">Découvrir le duo de cahiers</a>.</p>
+      </section>
 
       <!-- Avantages des échecs -->
       <section class="advantages" id="advantages">

@@ -7,14 +7,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {root, pages, transform, navigation, footer} from '../scripts/site-navigation.mjs';
 
-const MENU = ['Cours', 'Tarifs', 'Blog', 'Livres', 'Réserver un cours'];
+const MENU = ['Cours', 'Tarifs', 'Guide gratuit', 'Livres', 'Blog', 'Réserver un cours'];
 
-test('le menu tient en cinq entrées, la dernière étant le bouton Réserver', () => {
+test('le menu inclut le guide gratuit, la dernière entrée étant le bouton Réserver', () => {
   const html = navigation('index.html');
   const labels = [...html.matchAll(/class="nav-link[^"]*"[^>]*>([^<]+)</g)].map(m => m[1]);
   assert.deepEqual(labels, MENU);
   assert.match(html, /class="nav-link nav-cta"[^>]*>Réserver un cours/);
-  assert.doesNotMatch(html, /À propos|Zones|Visio|Cadeau|Guide gratuit/);
+  assert.doesNotMatch(html, /À propos|Zones|Visio|Cadeau/);
 });
 
 test('le pied de page regroupe les liens retirés du menu en quatre sections', () => {
