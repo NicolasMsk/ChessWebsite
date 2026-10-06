@@ -32,7 +32,7 @@ test('le pied de page regroupe les liens retirés du menu en quatre sections', (
 
 test('toutes les pages avec menu sont synchronisées avec le générateur', () => {
   const list = pages();
-  assert.ok(list.length >= 40, `seulement ${list.length} pages détectées`);
+  assert.ok(list.length >= 51, `seulement ${list.length} pages détectées`);
   const desync = list.filter(file => {
     const source = fs.readFileSync(path.join(root, file), 'utf8').replace(/\r\n/g, '\n');
     return transform(source, file) !== source;
@@ -47,5 +47,24 @@ test('les cibles du menu existent sur la page d’accueil', () => {
   }
   for (const file of ['blog/index.html', 'edition-raffinee/index.html', 'livres.html', 'cahiers-exercices-echecs.html', 'zones/index.html', 'cours-echecs-en-visio.html', 'guide-apprendre-les-echecs.html', 'idee-cadeau-echecs.html', 'cgv.html', 'mentions-legales.html', 'blog/exercices-echecs-debutant.html', 'zones/cours-echecs-paris-versailles-alentours.html']) {
     assert.ok(fs.existsSync(path.join(root, file)), `page liée absente : ${file}`);
+  }
+});
+
+test('toutes les pages affichent une seule offre du livre avec un lien valide', () => {
+  for (const file of pages()) {
+    const html = fs.readFileSync(path.join(root, file), 'utf8');
+    const banners = [...html.matchAll(/<aside class="promo-banner rentree-banner"[\s\S]*?<\/aside>/g)];
+    assert.equal(banners.length, 1, file);
+    assert.equal((html.match(/class="promo-banner/g) || []).length, 1, file);
+    assert.match(banners[0][0], /<strong>40,00 €<\/strong>/, file);
+    assert.match(html, /<body[^>]*class="[^"]*has-rentree-promo/, file);
+    for (const asset of ['css', 'js']) {
+      const references = [...html.matchAll(new RegExp('(?:href|src)="([^"]*promo-rentree\\.' + asset + ')\\?v=4"', 'g'))];
+      assert.equal(references.length, 1, file);
+      assert.ok(fs.existsSync(path.resolve(root, path.dirname(file), references[0][1])), file);
+    }
+    const href = banners[0][0].match(/class="rentree-banner__cta" href="([^"]+)"/)[1];
+    if (file === 'edition-raffinee/index.html') assert.equal(href, '#pack-livres');
+    else assert.equal(path.resolve(root, path.dirname(file), href), path.join(root, 'edition-raffinee'));
   }
 });

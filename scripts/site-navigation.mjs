@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {chargerOffre} from './prix-livre.mjs';
 export const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export function pages(){
  return ['', 'blog','zones','edition-raffinee'].flatMap(dir=>fs.readdirSync(path.join(root,dir),{withFileTypes:true}).filter(e=>e.isFile()&&e.name.endsWith('.html')&&(dir!=='edition-raffinee'||e.name==='index.html')).map(e=>[dir,e.name].filter(Boolean).join('/'))).filter(file=>/<nav\b[^>]*class="[^"]*navbar/.test(fs.readFileSync(path.join(root,file),'utf8')));
@@ -9,6 +10,14 @@ export function pages(){
 // le site se consulte donc aussi en local, en ouvrant simplement un fichier
 // dans le navigateur, sans serveur — menu, pied de page et styles compris.
 export function prefixe(file){ return '../'.repeat(file.split('/').length-1); }
+export function bandeau(file){
+ const offre=chargerOffre();
+ const vente=file==='edition-raffinee/index.html';
+ return '<aside class="promo-banner rentree-banner" aria-label="Offre sur le livre relié à la main"><div class="rentree-banner__inner">'+
+ '<div class="rentree-banner__copy"><span class="rentree-banner__tag">'+offre.mention+'</span><span class="rentree-banner__detail">Livre relié à la main · 200 pages pour débuter · Livraison comprise</span></div>'+
+ '<div class="rentree-banner__offer"><strong>'+offre.prix+' €</strong></div>'+
+ '<a class="rentree-banner__cta" href="'+(vente?'#pack-livres':prefixe(file)+'edition-raffinee/')+'">'+(vente?'Voir l’offre':'Découvrir le livre')+' →</a></div></aside>';
+}
 export function navigation(file){
  const p=prefixe(file);
  const current=file==='guide-apprendre-les-echecs.html'?'Guide gratuit':['edition-raffinee/index.html','livres.html','cahiers-exercices-echecs.html'].includes(file)?'Livres':file.startsWith('blog/')?'Blog':file.startsWith('zones/')||file==='cours-echecs-en-visio.html'?'Cours':null;
@@ -57,6 +66,18 @@ ${groups.map(([title,links])=>`        <div class="footer-links">\n          <h4
     </div>
   </footer>`;
 }
+function retirerBandeau(source){
+ const opening=/<(div|aside)\b[^>]*class="promo-banner[^>]*>/.exec(source);
+ if(!opening)return source;
+ const tags=new RegExp('<(/?)'+opening[1]+'\\b[^>]*>','g');
+ tags.lastIndex=opening.index;
+ let depth=0;
+ for(let tag;(tag=tags.exec(source));){
+   depth+=tag[1]?-1:1;
+   if(depth===0)return source.slice(0,opening.index)+source.slice(tags.lastIndex).replace(/^\s*/, '');
+ }
+ throw Error('Bandeau non fermé');
+}
 export function transform(source,file){
  const p=prefixe(file);
  let result=source.replace(/<nav\b[^>]*class="[^"]*navbar[^>]*>[\s\S]*?<\/nav>/,navigation(file));
@@ -67,6 +88,16 @@ export function transform(source,file){
  // consultable en local, ouverte directement dans le navigateur.
  result=result.replace(/(href|src)="(?:\.\.\/)*\/?site-navigation\.(css|js)"/g,(_m,attr,ext)=>`${attr}="${p}site-navigation.${ext}"`);
  if(!result.includes(`href="${p}site-navigation.css"`))result=result.replace('</head>',`  <link rel="stylesheet" href="${p}site-navigation.css">\n  <script src="${p}site-navigation.js" defer></script>\n</head>`);
+ // Le bandeau est présent sans JavaScript sur toutes les pages du site.
+ result=retirerBandeau(result);
+ result=result.replace(/<body\b([^>]*)>/,(_m,attrs)=>{
+   if(/class="/.test(attrs)) attrs=attrs.replace(/class="([^"]*)"/,(_c,classes)=>'class="'+[...new Set([...classes.split(/\s+/).filter(Boolean),'has-promo','has-rentree-promo'])].join(' ')+'"');
+   else attrs+=' class="has-promo has-rentree-promo"';
+   return '<body'+attrs+'>';
+ });
+ result=result.replace(/^[ \t]*<(?:link|script)\b[^>]*(?:href|src)="[^"]*promo-rentree\.(?:css|js)[^"]*"[^>]*>(?:<\/script>)?\r?\n/gm,'');
+ result=result.replace('</head>','  <link rel="stylesheet" href="'+p+'promo-rentree.css?v=4">\n  <script src="'+p+'promo-rentree.js?v=4" defer></script>\n</head>');
+ result=result.replace(/<nav\b[^>]*class="[^"]*navbar/,bandeau(file)+'\n  <nav class="navbar');
  return result;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){

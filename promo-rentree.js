@@ -1,14 +1,8 @@
-/* Bandeau de l'offre sur le livre relié, réservé aux deux pages du livre. */
+/* Bandeau de l’offre sur le livre relié, commun à toutes les pages du site. */
 (function () {
   'use strict';
-  // Les deux pages du livre se reconnaissent à leur ancre : #pack-livres pour la
-  // page de vente, #livre-relie pour le renvoi depuis le guide gratuit. Partout
-  // ailleurs, on sort avant toute écriture : ce script écrasait auparavant le
-  // .promo-banner déjà présent dans le HTML, ce qui remplaçait le « 1er cours
-  // offert » — le CTA principal du site — par la promotion d'un produit
-  // secondaire, sur l'accueil comme sur les 43 autres pages qui le chargeaient.
+  // La page de vente renvoie directement au bloc de commande.
   var pageDeVente = document.getElementById('pack-livres');
-  if (!pageDeVente && !document.getElementById('livre-relie')) return;
 
   // Résolu depuis ce script pour fonctionner aussi en ouvrant les fichiers locaux.
   var pageLivreUrl = new URL('edition-raffinee/', document.currentScript.src);
@@ -25,7 +19,7 @@
     '<div class="rentree-banner__offer"><strong>40,00 €</strong></div>' +
     '<a class="rentree-banner__cta"></a></div>';
   // Sur la page de vente, renvoyer vers la page elle-même n'avait aucun effet :
-  // on descend vers le bloc de l'offre. Depuis le guide, on va à la page du livre.
+  // on descend vers le bloc de l'offre. Depuis les autres pages, on va à la page du livre.
   var cta = banner.querySelector('.rentree-banner__cta');
   cta.href = pageDeVente ? '#pack-livres' : pageLivreUrl.href;
   cta.textContent = pageDeVente ? 'Voir l’offre →' : 'Découvrir le livre →';

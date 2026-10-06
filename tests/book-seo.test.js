@@ -37,7 +37,7 @@ test('Les six réponses structurées correspondent exactement aux réponses visi
  visible.forEach(([,q,a],i)=>{assert.equal(plain(q),faq.mainEntity[i].name);assert.equal(plain(a),faq.mainEntity[i].acceptedAnswer.text);});
 });
 test('Ancres uniques, liens locaux valides et prix de commande conservé',()=>{
- const body=html.split('<body>')[1];
+ const body=html.split(/<body\b[^>]*>/)[1];
  const ids=[...body.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
  assert.equal(new Set(ids).size,ids.length);
  for(const [,href] of body.matchAll(/href="([^"]+)"/g)){
