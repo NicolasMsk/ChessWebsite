@@ -14,7 +14,7 @@
   banner.className = 'promo-banner rentree-banner';
   banner.setAttribute('aria-label', 'Offre sur le livre relié à la main');
   banner.innerHTML = '<div class="rentree-banner__inner">' +
-    '<div class="rentree-banner__copy"><span class="rentree-banner__tag">Offre jusqu’au 15 octobre</span>' +
+    '<div class="rentree-banner__copy"><span class="rentree-banner__tag">Offre jusqu’au 15 janvier</span>' +
     '<span class="rentree-banner__detail">Livre relié à la main · 200 pages pour débuter · Livraison comprise</span></div>' +
     '<div class="rentree-banner__offer"><strong>40,00 €</strong></div>' +
     '<a class="rentree-banner__cta"></a></div>';
