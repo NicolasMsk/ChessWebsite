@@ -47,7 +47,13 @@
 .cahier-section { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: clamp(28px, 5vw, 56px); align-items: start; padding: clamp(40px, 6vw, 64px) 0; border-top: 1px solid #e8dfd0; }
 .cahier-section:first-of-type { border-top: 0; }
 .cahier-figure { margin: 0; text-align: center; }
-.cahier-figure img { max-width: min(100%, 300px); box-shadow: 0 14px 30px rgba(59, 35, 20, .2); }
+.cahier-figure img { max-width: min(100%, 300px); height: auto; box-shadow: 0 14px 30px rgba(59, 35, 20, .2); }
+.cahiers-photos { padding: 32px 0; border-top: 1px solid #e8dfd0; }
+.cahiers-photos h2 { color: #203e35; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.5rem, 3vw, 2rem); }
+.cahiers-photos__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; }
+.cahiers-photos figure { margin: 0; }
+.cahiers-photos img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.cahiers-photos figcaption { margin-top: 12px; color: #6d5d4d; font-size: .9rem; line-height: 1.6; }
 .cahier-figure figcaption { margin-top: 10px; font-size: .72rem; color: #8a7a63; }
 .cahier-texte h2 { margin: 0 0 6px; color: #203e35; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.5rem, 3vw, 2rem); text-align: left; }
 .cahier-texte .livre-sub { display: block; margin: 0 0 16px; color: #6e5832; font-size: .88rem; }
