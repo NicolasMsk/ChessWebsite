@@ -9,7 +9,16 @@
 export const PACK_PRODUCT_ID = 'pack_livres_relies';
 export const PACK_AMOUNT_CENTS = 4000;
 export const PACK_NAME = 'Apprendre les Échecs — Volumes I & II (édition reliée à la main)';
-export const DELAI_LIVRAISON = '14 jours maximum';
+export const DELAI_LIVRAISON = '7 jours maximum';
+export const BOOK_COLORS = Object.freeze({ rouge: 'Rouge', vert: 'Vert', bleu: 'Bleu', marron: 'Marron' });
+function bookColor(session) {
+  const product = session.metadata?.product || PACK_PRODUCT_ID;
+  if (![PACK_PRODUCT_ID, 'trio_livre_cahiers'].includes(product)) return '';
+  const field = Array.isArray(session.custom_fields) ? session.custom_fields.find(f => f?.key === 'couleur_livre') : null;
+  const value = session.metadata?.book_color || field?.dropdown?.value || '';
+  return Object.hasOwn(BOOK_COLORS, value) ? value : '';
+}
+function colorLabel(order) { return Object.hasOwn(BOOK_COLORS, order.book_color) ? BOOK_COLORS[order.book_color] : ''; }
 
 /**
  * Catalogue des produits physiques vendus par Payment Link. La clé est la
@@ -21,36 +30,36 @@ export const PRODUITS = {
     nom: PACK_NAME,
     entete: 'Édition reliée à la main',
     sousTitre: 'Apprendre les Échecs — Volumes I & II',
-    fabrication: "Je prépare votre exemplaire à la main, puis je l'expédie en Colissimo suivi.",
+    fabrication: "Votre exemplaire est en stock : je prépare votre colis, puis je l'expédie en Colissimo suivi.",
     consigne: 'Numéroter, signer, emballer en kraft (sans prix visible), expédier en Colissimo suivi.',
   },
   cahier_mats: {
     nom: 'Mes premiers mats en un coup — cahier d’exercices A6 cousu main',
     entete: 'Le cahier nomade N° 1',
     sousTitre: 'Mes premiers mats en un coup',
-    fabrication: "J'imprime puis je couds votre cahier à la main, avant de l'expédier en envoi suivi.",
-    consigne: 'Imprimer, coudre, emballer (sans prix visible), expédier en envoi suivi.',
+    fabrication: "Votre cahier cousu main est en stock : je prépare votre colis, puis je l'expédie en envoi suivi.",
+    consigne: 'Prélever le cahier cousu main en stock, emballer (sans prix visible), expédier en envoi suivi.',
   },
   cahier_tactiques: {
     nom: 'Mes premières tactiques — cahier d’exercices A6 cousu main',
     entete: 'Le cahier nomade N° 2',
     sousTitre: 'Mes premières tactiques',
-    fabrication: "J'imprime puis je couds votre cahier à la main, avant de l'expédier en envoi suivi.",
-    consigne: 'Imprimer, coudre, emballer (sans prix visible), expédier en envoi suivi.',
+    fabrication: "Votre cahier cousu main est en stock : je prépare votre colis, puis je l'expédie en envoi suivi.",
+    consigne: 'Prélever le cahier cousu main en stock, emballer (sans prix visible), expédier en envoi suivi.',
   },
   cahiers_pack: {
     nom: 'Les deux cahiers nomades — mats + tactiques (A6, cousus main)',
     entete: 'Les cahiers nomades',
     sousTitre: 'Mes premiers mats + Mes premières tactiques',
-    fabrication: "J'imprime puis je couds vos deux cahiers à la main, avant de les expédier en envoi suivi.",
-    consigne: 'Imprimer et coudre les DEUX cahiers, emballer (sans prix visible), expédier en envoi suivi.',
+    fabrication: "Vos deux cahiers cousus main sont en stock : je prépare votre colis, puis je l'expédie en envoi suivi.",
+    consigne: 'Prélever les DEUX cahiers cousus main en stock, emballer (sans prix visible), expédier en envoi suivi.',
   },
   trio_livre_cahiers: {
     nom: 'Le trio complet — livre relié « Apprendre les Échecs » + les deux cahiers nomades',
     entete: 'Le trio complet',
     sousTitre: 'Apprendre les Échecs + les deux cahiers nomades',
-    fabrication: "Je prépare votre livre relié et je couds vos deux cahiers à la main, puis j'expédie le tout ensemble en Colissimo suivi.",
-    consigne: 'TRIO : livre (numéroter, signer) + les DEUX cahiers (imprimer, coudre). Emballer ensemble (sans prix visible), expédier en Colissimo suivi.',
+    fabrication: "Votre livre relié et vos deux cahiers cousus main sont en stock : je prépare le tout pour un envoi en Colissimo suivi.",
+    consigne: 'TRIO : livre (numéroter, signer) + les DEUX cahiers cousus main en stock. Emballer ensemble (sans prix visible), expédier en Colissimo suivi.',
   },
 };
 
@@ -137,6 +146,7 @@ export function buildOrderRecord(session, nowIso) {
     email: str(customer.email || s.customer_email).toLowerCase(),
     name: str(shipping.name || customer.name),
     phone: str(customer.phone || shipping.phone),
+    book_color: bookColor(s),
     address: {
       line1: str(address.line1),
       line2: str(address.line2),
@@ -197,6 +207,7 @@ export function orderConfirmationHtml(order) {
           </div>
 
           <p style="margin:0 0 20px;">
+            ${colorLabel(order) ? '<strong>Couleur du livre : ' + escapeHtml(colorLabel(order)) + '</strong><br>' : ''}
             ${escapeHtml(p.fabrication)}
             Compte <strong>${DELAI_LIVRAISON}</strong> avant de le recevoir.
           </p>
@@ -251,7 +262,7 @@ ${formatAmount(order.amount_total)} - livraison comprise
 ADRESSE DE LIVRAISON
 ${lignes}
 
-${p.fabrication}
+${colorLabel(order) ? 'Couleur du livre : ' + colorLabel(order) + '\n' : ''}${p.fabrication}
 Compte ${DELAI_LIVRAISON} avant de le recevoir.
 
 Vous en avez besoin plus vite ? Repondez a cet email : je regarde ce que je peux faire
@@ -291,6 +302,7 @@ export function orderAdminHtml(order) {
 
     <p style="margin:6px 0;"><strong>Email :</strong> <a href="mailto:${escapeHtml(order.email)}">${escapeHtml(order.email)}</a></p>
     <p style="margin:6px 0;"><strong>Telephone :</strong> ${escapeHtml(order.phone) || '&mdash;'}</p>
+    ${colorLabel(order) ? '<p style="margin:6px 0;"><strong>Couleur du livre :</strong> ' + escapeHtml(colorLabel(order)) + '</p>' : ''}
     <p style="margin:6px 0;"><strong>Produit :</strong> ${escapeHtml(produitDe(order).nom)} <span style="color:#999;">(${escapeHtml(order.product)})</span></p>
     <p style="margin:6px 0;"><strong>Montant :</strong> ${formatAmount(order.amount_total)}</p>
     <p style="margin:6px 0;"><strong>Date :</strong> ${escapeHtml(order.date)}</p>
@@ -320,7 +332,7 @@ export function csvField(value) {
 
 export function ordersToCsv(orders) {
   const entete =
-    'date,id,email,nom,telephone,adresse1,adresse2,code_postal,ville,pays,montant_eur,statut';
+    'date,id,email,nom,telephone,adresse1,adresse2,code_postal,ville,pays,montant_eur,statut,couleur_livre';
   const lignes = orders.map((o) =>
     [
       o.date,
@@ -335,6 +347,7 @@ export function ordersToCsv(orders) {
       o.address?.country,
       ((Number(o.amount_total) || 0) / 100).toFixed(2),
       o.status,
+      colorLabel(o),
     ]
       .map(csvField)
       .join(',')

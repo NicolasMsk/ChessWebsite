@@ -1,0 +1,32 @@
+/* Sélection de Noël, partagée entre l’accueil et les pages commerciales. */
+.commercial-breadcrumb { margin: 0 auto 20px; color: #fff9ed; font-size: .9rem; line-height: 1.7; }
+.commercial-breadcrumb a { color: #fff9ed; text-decoration: underline; text-underline-offset: 3px; }
+.gift-selection, .christmas-product { scroll-margin-top: 180px; }
+.gift-hero { scroll-margin-top: 180px; }
+.article-container [id] { scroll-margin-top: 190px; }
+.gift-selection__photos { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; margin: 24px 0; }
+.gift-selection__photos figure { margin: 0; }
+.gift-selection__photos img { display: block; width: 100%; height: 300px; object-fit: contain; background: #203e35; border-radius: 8px; }
+.gift-selection__photos figcaption { margin-top: 10px; font-size: .9rem; line-height: 1.6; }
+.gift-selection__table th { text-align: left; }
+.gift-selection__table a { text-underline-offset: 3px; }
+.gift-selection__table th[scope="row"] { white-space: nowrap; }
+.gift-black-friday[hidden] { display: none !important; }
+.christmas-home { padding: clamp(28px, 5vw, 56px) 20px; background: #203e35; color: #fff9ed; }
+.christmas-home__inner { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(24px, 5vw, 56px); }
+.christmas-home__photo img { display: block; width: 100%; height: auto; max-height: 340px; object-fit: contain; border-radius: 8px; }
+.christmas-home h2 { color: #fff9ed; text-align: left; font-size: clamp(1.6rem, 3vw, 2.3rem); }
+.christmas-home p { color: #fff9ed; line-height: 1.7; }
+.christmas-home .christmas-eyebrow { color: #f0d39a; font-weight: 700; }
+.christmas-product { max-width: 1060px; margin: 24px auto; padding: 24px; background: #203e35; color: #fff9ed; border-radius: 8px; }
+.christmas-product p { color: #fff9ed; font-size: 1rem; line-height: 1.7; }
+.christmas-product a { color: #f0d39a; text-decoration: underline; text-underline-offset: 3px; }
+.christmas-product strong { font-size: 1.15rem; }
+.gift-cahier img { height: auto; object-fit: contain; }
+@media (max-width: 640px) {
+  .gift-selection__photos { grid-template-columns: 1fr; }
+  .gift-selection__photos img { height: 240px; }
+  .christmas-home__inner { grid-template-columns: 1fr; }
+  .christmas-home__photo img { max-height: 260px; }
+  .christmas-product { margin: 20px 12px; padding: 20px; }
+}

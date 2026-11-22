@@ -33,6 +33,8 @@ const FICHIERS_PRIX = [
   'livres.html',
   'guide-apprendre-les-echecs.html',
   'idee-cadeau-echecs.html',
+  'blog/cadeau-joueur-echecs-deja-echiquier.html',
+  'blog/cadeau-echecs-enfant-debutant.html',
   'cgv.html',
   'llms.txt',
   'promo-rentree.js',

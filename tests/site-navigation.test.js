@@ -7,14 +7,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {root, pages, transform, navigation, footer} from '../scripts/site-navigation.mjs';
 
-const MENU = ['Cours', 'Tarifs', 'Guide gratuit', 'Livres', 'Blog', 'Réserver un cours'];
+const MENU = ['Cours', 'Tarifs', 'Guide gratuit', 'Livres', 'Cadeaux de Noël', 'Blog', 'Réserver un cours'];
 
 test('le menu inclut le guide gratuit, la dernière entrée étant le bouton Réserver', () => {
   const html = navigation('index.html');
   const labels = [...html.matchAll(/class="nav-link[^"]*"[^>]*>([^<]+)</g)].map(m => m[1]);
   assert.deepEqual(labels, MENU);
   assert.match(html, /class="nav-link nav-cta"[^>]*>Réserver un cours/);
-  assert.doesNotMatch(html, /À propos|Zones|Visio|Cadeau/);
+  assert.doesNotMatch(html, /À propos|Zones|Visio/);
 });
 
 test('le pied de page regroupe les liens retirés du menu en quatre sections', () => {
@@ -50,21 +50,21 @@ test('les cibles du menu existent sur la page d’accueil', () => {
   }
 });
 
-test('toutes les pages affichent une seule offre du livre avec un lien valide', () => {
+test('toutes les pages affichent une seule sélection cadeaux avec un lien valide', () => {
   for (const file of pages()) {
     const html = fs.readFileSync(path.join(root, file), 'utf8');
     const banners = [...html.matchAll(/<aside class="promo-banner rentree-banner"[\s\S]*?<\/aside>/g)];
     assert.equal(banners.length, 1, file);
     assert.equal((html.match(/class="promo-banner/g) || []).length, 1, file);
-    assert.match(banners[0][0], /<strong>40,00 €<\/strong>/, file);
+    assert.match(banners[0][0], /<strong>Dès 15 €<\/strong>/, file);
     assert.match(html, /<body[^>]*class="[^"]*has-rentree-promo/, file);
     for (const asset of ['css', 'js']) {
-      const references = [...html.matchAll(new RegExp('(?:href|src)="([^"]*promo-rentree\\.' + asset + ')\\?v=4"', 'g'))];
+      const references = [...html.matchAll(new RegExp('(?:href|src)="([^"]*promo-rentree\\.' + asset + ')\\?v=7"', 'g'))];
       assert.equal(references.length, 1, file);
       assert.ok(fs.existsSync(path.resolve(root, path.dirname(file), references[0][1])), file);
     }
     const href = banners[0][0].match(/class="rentree-banner__cta" href="([^"]+)"/)[1];
-    if (file === 'edition-raffinee/index.html') assert.equal(href, '#pack-livres');
-    else assert.equal(path.resolve(root, path.dirname(file), href), path.join(root, 'edition-raffinee'));
+    if (file === 'idee-cadeau-echecs.html') assert.equal(href, '#choisir-cadeau');
+    else assert.equal(path.resolve(root, path.dirname(file), href), path.join(root, 'idee-cadeau-echecs.html'));
   }
 });

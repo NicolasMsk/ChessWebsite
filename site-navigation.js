@@ -5,7 +5,7 @@
   const toggle = nav.querySelector('.menu-toggle');
   const menu = nav.querySelector('.nav-menu');
   toggle.dataset.navBound = '1';
-  const mobile = matchMedia('(max-width: 1100px)');
+  const mobile = matchMedia('(max-width: 1280px)');
   function setOpen(open) {
     toggle.classList.toggle('active', open);
     menu.classList.toggle('active', open);

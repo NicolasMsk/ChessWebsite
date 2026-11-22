@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {chargerOffre} from './prix-livre.mjs';
 export const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export function pages(){
  return ['', 'blog','zones','edition-raffinee'].flatMap(dir=>fs.readdirSync(path.join(root,dir),{withFileTypes:true}).filter(e=>e.isFile()&&e.name.endsWith('.html')&&(dir!=='edition-raffinee'||e.name==='index.html')).map(e=>[dir,e.name].filter(Boolean).join('/'))).filter(file=>/<nav\b[^>]*class="[^"]*navbar/.test(fs.readFileSync(path.join(root,file),'utf8')));
@@ -11,16 +10,14 @@ export function pages(){
 // dans le navigateur, sans serveur — menu, pied de page et styles compris.
 export function prefixe(file){ return '../'.repeat(file.split('/').length-1); }
 export function bandeau(file){
- const offre=chargerOffre();
- const vente=file==='edition-raffinee/index.html';
- return '<aside class="promo-banner rentree-banner" aria-label="Offre sur le livre relié à la main"><div class="rentree-banner__inner">'+
- '<div class="rentree-banner__copy"><span class="rentree-banner__tag">'+offre.mention+'</span><span class="rentree-banner__detail">Livre relié à la main · 200 pages pour débuter · Livraison comprise</span></div>'+
- '<div class="rentree-banner__offer"><strong>'+offre.prix+' €</strong></div>'+
- '<a class="rentree-banner__cta" href="'+(vente?'#pack-livres':prefixe(file)+'edition-raffinee/')+'">'+(vente?'Voir l’offre':'Découvrir le livre')+' →</a></div></aside>';
+ return '<aside class="promo-banner rentree-banner" aria-label="Cadeaux d’échecs pour Noël"><div class="rentree-banner__inner">'+
+ '<div class="rentree-banner__copy"><span class="rentree-banner__tag">Des échecs sous le sapin</span><span class="rentree-banner__detail">Ouvrages en stock · Livrés sous 7 jours maximum</span></div>'+
+ '<div class="rentree-banner__offer"><strong>Dès 15 €</strong></div>'+
+ '<a class="rentree-banner__cta" href="'+(file==='idee-cadeau-echecs.html'?'#choisir-cadeau':prefixe(file)+'idee-cadeau-echecs.html')+'">Choisir un cadeau</a></div></aside>';
 }
 export function navigation(file){
  const p=prefixe(file);
- const current=file==='guide-apprendre-les-echecs.html'?'Guide gratuit':['edition-raffinee/index.html','livres.html','cahiers-exercices-echecs.html'].includes(file)?'Livres':file.startsWith('blog/')?'Blog':file.startsWith('zones/')||file==='cours-echecs-en-visio.html'?'Cours':null;
+ const current=file==='idee-cadeau-echecs.html'?'Cadeaux de Noël':file==='guide-apprendre-les-echecs.html'?'Guide gratuit':['edition-raffinee/index.html','livres.html','cahiers-exercices-echecs.html'].includes(file)?'Livres':file.startsWith('blog/')?'Blog':file.startsWith('zones/')||file==='cours-echecs-en-visio.html'?'Cours':null;
  return `<nav class="navbar site-nav" aria-label="Navigation principale">
     <div class="container">
       <a href="${p}index.html" class="logo"><i class="fa-solid fa-chess-knight" aria-hidden="true"></i> Nicolas Musicki</a>
@@ -28,7 +25,7 @@ export function navigation(file){
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
       <ul class="nav-menu" id="nav-menu">
-${[['Cours','index.html#cours'],['Tarifs','index.html#tarifs'],['Guide gratuit','guide-apprendre-les-echecs.html'],['Livres','livres.html'],['Blog','blog/index.html'],['Réserver un cours','index.html#contact']].map(([label,href])=>`        <li><a href="${p}${href}" class="nav-link${label==='Réserver un cours'?' nav-cta':''}"${label===current?' aria-current="'+(label==='Cours'?'location':'page')+'"':''}>${label}</a></li>`).join('\n')}
+${[['Cours','index.html#cours'],['Tarifs','index.html#tarifs'],['Guide gratuit','guide-apprendre-les-echecs.html'],['Livres','livres.html'],['Cadeaux de Noël','idee-cadeau-echecs.html'],['Blog','blog/index.html'],['Réserver un cours','index.html#contact']].map(([label,href])=>`        <li><a href="${p}${href}" class="nav-link${label==='Réserver un cours'?' nav-cta':''}"${label===current?' aria-current="'+(label==='Cours'?'location':'page')+'"':''}>${label}</a></li>`).join('\n')}
       </ul>
     </div>
   </nav>`;
@@ -96,7 +93,7 @@ export function transform(source,file){
    return '<body'+attrs+'>';
  });
  result=result.replace(/^[ \t]*<(?:link|script)\b[^>]*(?:href|src)="[^"]*promo-rentree\.(?:css|js)[^"]*"[^>]*>(?:<\/script>)?\r?\n/gm,'');
- result=result.replace('</head>','  <link rel="stylesheet" href="'+p+'promo-rentree.css?v=4">\n  <script src="'+p+'promo-rentree.js?v=4" defer></script>\n</head>');
+ result=result.replace('</head>','  <link rel="stylesheet" href="'+p+'promo-rentree.css?v=7">\n  <script src="'+p+'promo-rentree.js?v=7" defer></script>\n</head>');
  result=result.replace(/<nav\b[^>]*class="[^"]*navbar/,bandeau(file)+'\n  <nav class="navbar');
  return result;
 }

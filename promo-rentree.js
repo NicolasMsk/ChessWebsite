@@ -1,28 +1,24 @@
 /* Bandeau de l’offre sur le livre relié, commun à toutes les pages du site. */
 (function () {
   'use strict';
-  // La page de vente renvoie directement au bloc de commande.
-  var pageDeVente = document.getElementById('pack-livres');
 
   // Résolu depuis ce script pour fonctionner aussi en ouvrant les fichiers locaux.
-  var pageLivreUrl = new URL('edition-raffinee/', document.currentScript.src);
+  var pageCadeauxUrl = new URL('idee-cadeau-echecs.html', document.currentScript.src);
   var banner = document.querySelector('.promo-banner');
   if (!banner) {
     banner = document.createElement('aside');
     document.body.insertBefore(banner, document.body.firstChild);
   }
   banner.className = 'promo-banner rentree-banner';
-  banner.setAttribute('aria-label', 'Offre sur le livre relié à la main');
+  banner.setAttribute('aria-label', 'Cadeaux d’échecs pour Noël');
   banner.innerHTML = '<div class="rentree-banner__inner">' +
-    '<div class="rentree-banner__copy"><span class="rentree-banner__tag">Idée cadeau de Noël</span>' +
-    '<span class="rentree-banner__detail">Livre relié à la main · 200 pages pour débuter · Livraison comprise</span></div>' +
-    '<div class="rentree-banner__offer"><strong>40,00 €</strong></div>' +
+    '<div class="rentree-banner__copy"><span class="rentree-banner__tag">Des échecs sous le sapin</span>' +
+    '<span class="rentree-banner__detail">Ouvrages en stock · Livrés sous 7 jours maximum</span></div>' +
+    '<div class="rentree-banner__offer"><strong>Dès 15 €</strong></div>' +
     '<a class="rentree-banner__cta"></a></div>';
-  // Sur la page de vente, renvoyer vers la page elle-même n'avait aucun effet :
-  // on descend vers le bloc de l'offre. Depuis les autres pages, on va à la page du livre.
   var cta = banner.querySelector('.rentree-banner__cta');
-  cta.href = pageDeVente ? '#pack-livres' : pageLivreUrl.href;
-  cta.textContent = pageDeVente ? 'Voir l’offre →' : 'Découvrir le livre →';
+  cta.href = location.pathname === pageCadeauxUrl.pathname ? '#choisir-cadeau' : pageCadeauxUrl.href;
+  cta.textContent = 'Choisir un cadeau';
   document.body.classList.add('has-promo', 'has-rentree-promo');
   function updateAnchorOffset() {
     var nav = document.querySelector('.navbar');

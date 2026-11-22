@@ -23,28 +23,28 @@ const CAHIERS = [
     product: 'cahier_mats',
     amount: 1500,
     name: 'Mes premiers mats en un coup — cahier d’exercices A6 cousu main',
-    message: '15 € TTC, envoi compris en France métropolitaine. Cahier A6 couleur cousu main, 50 exercices avec solutions au verso. Expédition sous 14 jours maximum. CGV : ' + site + '/cgv.html',
+    message: '15 € TTC, envoi compris en France métropolitaine. Cahier A6 couleur cousu main, 50 exercices avec solutions regroupées à la fin. Livraison sous 7 jours maximum. CGV : ' + site + '/cgv.html',
   },
   {
     campaign: 'cahier-tactiques-1500',
     product: 'cahier_tactiques',
     amount: 1500,
     name: 'Mes premières tactiques — cahier d’exercices A6 cousu main',
-    message: '15 € TTC, envoi compris en France métropolitaine. Cahier A6 couleur cousu main, 50 exercices avec solutions au verso. Expédition sous 14 jours maximum. CGV : ' + site + '/cgv.html',
+    message: '15 € TTC, envoi compris en France métropolitaine. Cahier A6 couleur cousu main, 50 exercices avec solutions regroupées à la fin. Livraison sous 7 jours maximum. CGV : ' + site + '/cgv.html',
   },
   {
     campaign: 'cahiers-pack-2500',
     product: 'cahiers_pack',
     amount: 2500,
     name: 'Les deux cahiers nomades — mats + tactiques (A6, cousus main)',
-    message: '25 € TTC les deux cahiers, envoi compris en France métropolitaine. Cahiers A6 couleur cousus main. Expédition sous 14 jours maximum. CGV : ' + site + '/cgv.html',
+    message: '25 € TTC les deux cahiers, envoi compris en France métropolitaine. Cahiers A6 couleur cousus main. Livraison sous 7 jours maximum. CGV : ' + site + '/cgv.html',
   },
   {
     campaign: 'trio-livre-cahiers-6000',
     product: 'trio_livre_cahiers',
     amount: 6000,
     name: 'Le trio complet — livre relié « Apprendre les Échecs » + les deux cahiers nomades',
-    message: '60 € TTC le livre relié (200 pages) et les deux cahiers d’exercices A6 cousus main, envoi compris en France métropolitaine. Expédition sous 14 jours maximum. CGV : ' + site + '/cgv.html',
+    message: '60 € TTC le livre relié (200 pages) et les deux cahiers d’exercices A6 cousus main, envoi compris en France métropolitaine. Livraison sous 7 jours maximum. CGV : ' + site + '/cgv.html',
   },
 ];
 

@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "id": "cadeau-echecs-enfant-debutant",
+      "title": "Quel cadeau d'échecs choisir pour un enfant débutant ?",
+      "description": "Échiquier, livre, cahier d'exercices, cours ou club : quel cadeau d'échecs choisir pour un enfant qui débute, selon son âge, ce qu'il sait déjà et votre budget.",
+      "date": "2026-11-22",
+      "readTime": "11 min",
+      "author": "Nicolas Musicki",
+      "image": "images/cadeau-echecs-enfant-debutant.webp",
+      "imageAlt": "Les deux cahiers d'exercices Mes premiers mats et Mes premières tactiques, reliés en toile rouge et brune"
+    },
+    {
+      "id": "cadeau-joueur-echecs-deja-echiquier",
+      "title": "Quel cadeau offrir à un joueur d'échecs qui a déjà un échiquier ?",
+      "description": "Pendule, pièces, livre, cours ou tournoi : comment choisir un cadeau d'échecs selon le niveau, le budget et les goûts d'un joueur déjà équipé.",
+      "date": "2026-11-22",
+      "readTime": "11 min",
+      "author": "Nicolas Musicki",
+      "image": "images/cadeau-joueur-echecs-deja-echiquier.webp",
+      "imageAlt": "Échiquier en bois garni de ses pièces, avec le livre Apprendre les Échecs posé debout au milieu"
+    },
+    {
       "id": "exercices-echecs-debutant",
       "title": "5 exercices d’échecs pour débutants, avec leurs corrections",
       "description": "Résolvez 5 exercices d’échecs débutant avec diagrammes et corrections : capture, échec, fourchette, clouage et mat. Retrouvez le guide PDF gratuit.",

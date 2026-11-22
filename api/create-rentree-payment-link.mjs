@@ -3,6 +3,7 @@
  * API : https://docs.stripe.com/api/payment_links/payment_links/create
  */
 import { existsSync } from 'node:fs';
+import { chargerOffre } from '../scripts/prix-livre.mjs';
 
 const secretFile = new URL('./.env.stripe', import.meta.url);
 if (existsSync(secretFile)) process.loadEnvFile(secretFile);
@@ -12,7 +13,8 @@ if (!/^(sk|rk)_live_/.test(secret || '')) {
   process.exit(1);
 }
 
-const campaign = 'rentree-2026-livre-3999';
+const offre = chargerOffre();
+const campaign = 'livre-' + offre.prixCents + '-' + offre.finOffre;
 const site = 'https://www.cours-echecs-paris.fr';
 async function stripe(path, values, idempotencyKey) {
   const response = await fetch('https://api.stripe.com/v1/' + path, {
@@ -32,12 +34,12 @@ async function stripe(path, values, idempotencyKey) {
 try {
   const prices = await stripe('prices?lookup_keys[]=' + campaign);
   const price = prices.data[0] || await stripe('prices', {
-    currency: 'eur', unit_amount: '3999', tax_behavior: 'inclusive',
+    currency: 'eur', unit_amount: String(offre.prixCents), tax_behavior: 'inclusive',
     lookup_key: campaign,
-    'product_data[name]': 'Apprendre les Échecs — Livre relié à la main, 200 pages — Offre de rentrée',
+    'product_data[name]': 'Apprendre les Échecs — Livre relié à la main, 200 pages',
     'metadata[campaign]': campaign,
   }, campaign + '-price');
-  if (!price.livemode || !price.active || price.unit_amount !== 3999 || price.currency !== 'eur') throw new Error('Le prix Stripe ne correspond pas à l’offre.');
+  if (!price.livemode || !price.active || price.unit_amount !== offre.prixCents || price.currency !== 'eur') throw new Error('Le prix Stripe ne correspond pas à l’offre.');
 
   let link;
   let cursor = '';
@@ -54,14 +56,14 @@ try {
     'metadata[campaign]': campaign,
     'after_completion[type]': 'redirect',
     'after_completion[redirect][url]': site + '/commande-confirmee.html',
-    'custom_text[submit][message]': '39,99 € TTC, livraison comprise en France métropolitaine. Livre relié à la main, 200 pages. Livraison sous 14 jours maximum. CGV : ' + site + '/cgv.html',
+    'custom_text[submit][message]': offre.prix + ' € TTC, livraison comprise en France métropolitaine. Livre relié à la main, 200 pages. Livraison sous 7 jours maximum. CGV : ' + site + '/cgv.html',
   }, campaign + '-link');
 
   const items = await stripe('payment_links/' + link.id + '/line_items');
   if (!link.livemode || !link.active || items.data.length !== 1 || items.data[0].price.id !== price.id || items.data[0].quantity !== 1 || link.metadata?.product !== 'pack_livres_relies') {
     throw new Error('Le lien Stripe ne correspond pas à l’offre.');
   }
-  console.log(JSON.stringify({ url: link.url, id: link.id, price: price.id, amount: 3999, currency: 'eur', livemode: true }, null, 2));
+  console.log(JSON.stringify({ url: link.url, id: link.id, price: price.id, amount: offre.prixCents, currency: 'eur', livemode: true }, null, 2));
 } catch (error) {
   // Ni en-têtes, ni clé, ni réponse brute de Stripe dans les journaux.
   console.error(error.message);

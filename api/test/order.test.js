@@ -152,7 +152,7 @@ test("l'email client contient le montant, l'adresse et le délai", () => {
   const html = orderConfirmationHtml(order);
   assert.match(html, /64,99/);
   assert.match(html, /12 rue des Lilas/);
-  assert.match(html, /14 jours maximum/);
+  assert.match(html, /7 jours maximum/);
   assert.match(html, /nicolas\.musicki@gmail\.com/);
   assert.match(html, /14 jours/);
   // La numérotation et la signature ne sont plus annoncées : c'est une surprise
@@ -223,7 +223,7 @@ test('ordersToCsv produit un en-tête et une ligne par commande', () => {
   assert.equal(lignes.length, 2);
   assert.equal(
     lignes[0],
-    'date,id,email,nom,telephone,adresse1,adresse2,code_postal,ville,pays,montant_eur,statut'
+    'date,id,email,nom,telephone,adresse1,adresse2,code_postal,ville,pays,montant_eur,statut,couleur_livre'
   );
   assert.match(lignes[1], /Marie Dupont/);
   assert.match(lignes[1], /64\.99/);
@@ -261,7 +261,7 @@ test('une commande de cahier décrit le cahier, jamais le livre relié', () => {
     assert.doesNotMatch(rendu, /Colissimo/);
   }
   assert.match(orderAdminHtml(order), /cahier_mats/);
-  assert.match(orderAdminHtml(order), /coudre/);
+  assert.match(orderAdminHtml(order), /en stock/);
 });
 
 test('le pack des deux cahiers annonce les deux titres et 25 €', () => {
@@ -294,4 +294,16 @@ test('le trio livre + cahiers annonce les trois ouvrages et 60 €', () => {
   assert.match(texte, /trio complet/);
   assert.match(texte, /60,00 €/);
   assert.match(orderAdminHtml(order), /TRIO/);
+});
+
+test('couleur du livre conservée depuis Elements et Payment Links jusque dans emails et CSV',()=>{
+ for(const product of [PACK_PRODUCT_ID,'trio_livre_cahiers'])for(const source of [{metadata:{product,book_color:'bleu'}},{metadata:{product},custom_fields:[{key:'couleur_livre',dropdown:{value:'bleu'}}]}]){
+  const order=buildOrderRecord({...sessionModerne,...source},'2026-11-22T12:00:00Z');assert.equal(order.book_color,'bleu');
+  for(const body of [orderConfirmationHtml(order),orderConfirmationText(order),orderAdminHtml(order),ordersToCsv([order])])assert.match(body,/Bleu/);
+ }
+});
+test('couleur absente ou invalide reste vide, cahiers sans choix de couleur',()=>{
+ for(const source of [{metadata:{product:PACK_PRODUCT_ID,book_color:'<script>'}},{metadata:{product:'cahier_mats',book_color:'rouge'}},{}]){
+ const order=buildOrderRecord({...sessionModerne,...source},'2026-11-22T12:00:00Z');assert.equal(order.book_color,'');assert.doesNotMatch(orderConfirmationHtml(order),/Couleur du livre/);
+ }
 });

@@ -31,6 +31,7 @@ import {
   adminAuthorized, adminSessionRedirect, adminLogoutResponse, validAdminSecret, timingSafeEqual,
   secureResponse, readLimitedText, hash, hmac,
 } from './security.js';
+import {handleCheckout} from './checkout.js';
 
 const PDF_URL = 'https://www.cours-echecs-paris.fr/fichiers/guide-volume-1-7f3a9c.pdf';
 const SITE_URL = 'https://www.cours-echecs-paris.fr';
@@ -62,6 +63,9 @@ async function routeRequest(request, env) {
     const path = url.pathname;
 
     try {
+      if (['/checkout-config', '/checkout-session', '/checkout-status'].includes(path)) {
+        return await handleCheckout(request, env);
+      }
       // Les anciens favoris restent utilisables, mais le secret ne figure plus
       // dans les liens de navigation ni dans les réponses contenant des données.
       const adminPaths = ['/admin', '/subscribers', '/subscribers/export.csv', '/orders', '/orders/export.csv'];
@@ -835,7 +839,7 @@ qu'on offre a quelqu'un qui veut s'y mettre.
 Voir le livre et le sommaire des 23 chapitres :
 ${BOOK_URL}
 
-Livraison en France sous 14 jours maximum, frais de port compris.
+Livraison en France sous 7 jours maximum, frais de port compris.
 Besoin de l'offrir plus vite ? Repondez a ce message.
 ------------------------------------------------------------
 
@@ -921,7 +925,7 @@ function guideEmailHtml(lienDesinscription) {
                   <a href="${BOOK_URL}" style="display:block; padding:17px 24px; font-family:Georgia,serif; font-size:17px; font-weight:700; color:#F0D9B5; text-decoration:none;">Voir le livre et le sommaire des 23 chapitres &rarr;</a>
                 </td></tr>
               </table>
-              <p style="margin:10px 0 0; font-size:13px; color:#8B5A2B;">Livraison en France sous 14 jours maximum, frais de port compris. Besoin de l'offrir plus vite&nbsp;? Répondez à ce message.</p>
+              <p style="margin:10px 0 0; font-size:13px; color:#8B5A2B;">Livraison en France sous 7 jours maximum, frais de port compris. Besoin de l'offrir plus vite&nbsp;? Répondez à ce message.</p>
             </div>
 
             <p style="margin:34px 0 8px;">À très vite,</p>

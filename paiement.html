@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta name="description" content="Commandez les livres et cahiers d’échecs de Nicolas Musicki. Paiement sécurisé, livraison comprise en France métropolitaine.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Votre commande — Nicolas Musicki</title>
+  <link rel="canonical" href="https://www.cours-echecs-paris.fr/paiement.html">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="paiement.css?v=1">
+  <script src="https://js.stripe.com/endive/stripe.js" defer></script>
+  <script src="paiement.js?v=1" defer></script>
+</head>
+<body>
+  <header class="checkout-header"><a href="livres.html" class="checkout-brand">♞ Nicolas Musicki</a><span>Paiement sécurisé</span></header>
+  <main class="checkout-layout">
+    <aside class="order-summary" aria-labelledby="order-summary-title">
+      <p class="eyebrow">Les échecs, à offrir ou à s’offrir</p>
+      <h1 id="order-summary-title">Votre commande</h1>
+      <img id="product-image" src="images/reliure/pack-2026-echiquier.webp" alt="Le livre d’échecs relié à la main" width="1122" height="1402">
+      <h2 id="product-name">Apprendre les Échecs — livre relié à la main</h2>
+      <p class="order-total" id="summary-total">40,00 €</p>
+      <p>Livraison comprise en France métropolitaine.</p>
+      <ul class="order-promises"><li>Ouvrages en stock</li><li>Livraison sous 7 jours maximum après validation du paiement</li><li>Rétractation : 14 jours après réception</li></ul>
+      <p>Une question ? <a href="tel:+33609365691">06 09 36 56 91</a><br><a href="mailto:nicolas.musicki@gmail.com">nicolas.musicki@gmail.com</a></p>
+      <a href="livres.html">Revenir aux livres et cahiers</a>
+    </aside>
+    <section class="checkout-panel" aria-labelledby="checkout-title">
+      <p class="eyebrow">Envoi suivi · Prix TTC</p>
+      <h2 id="checkout-title">Préparer votre envoi</h2>
+      <p id="checkout-loading" role="status">Chargement du paiement sécurisé…</p>
+      <div id="checkout-error" class="checkout-error" role="alert" hidden></div>
+      <form id="details-form" hidden>
+        <fieldset id="book-color"><legend>Couleur du livre <span>(obligatoire)</span></legend><p class="field-help">Le choix concerne la couverture du livre relié, y compris dans le trio. Les cahiers gardent leurs couleurs.</p>
+          <div class="color-options">
+            <label><input type="radio" name="book_color" value="rouge" required><span class="swatch swatch-red" aria-hidden="true"></span>Rouge</label>
+            <label><input type="radio" name="book_color" value="vert" required><span class="swatch swatch-green" aria-hidden="true"></span>Vert</label>
+            <label><input type="radio" name="book_color" value="bleu" required><span class="swatch swatch-blue" aria-hidden="true"></span>Bleu</label>
+            <label><input type="radio" name="book_color" value="marron" required><span class="swatch swatch-brown" aria-hidden="true"></span>Marron</label>
+          </div>
+        </fieldset>
+        <label for="customer-email">Adresse email</label><input id="customer-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+        <label for="customer-phone">Téléphone <span>(obligatoire)</span></label><input id="customer-phone" name="phone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78" maxlength="26" required>
+        <p class="field-help">Pour vous joindre au sujet de votre commande ou de la livraison.</p>
+        <button class="checkout-button" id="continue-button" type="submit">Continuer vers l’adresse et le paiement</button>
+      </form>
+      <form id="payment-form" hidden>
+        <p id="contact-recap"></p><p><a href="paiement.html" id="change-order">Modifier mes informations</a></p>
+        <h3>Adresse de livraison</h3><p class="field-help">Livraison en France métropolitaine uniquement.</p><div id="shipping-address-element"></div>
+        <h3>Règlement</h3><div id="payment-element"></div>
+        <p class="field-help">Le règlement est traité par Stripe. Vos coordonnées bancaires sont saisies dans ses champs sécurisés.</p>
+        <label class="terms-label"><input id="accept-terms" type="checkbox" required><span>J’accepte les <a href="cgv.html" target="_blank" rel="noopener">conditions générales de vente</a>.</span></label>
+        <button id="pay-button" class="checkout-button" type="submit" disabled>Payer</button>
+      </form>
+      <p id="payment-fallback" hidden>Vous pouvez aussi <a id="fallback-link" href="https://buy.stripe.com/14AcN72Sr8pk0lfg8gdQQ09">ouvrir la page de paiement sécurisée</a>.</p>
+      <noscript><p>Activez JavaScript pour utiliser le paiement intégré, ou <a href="livres.html">revenez au catalogue</a>.</p></noscript>
+      <footer class="checkout-footer"><a href="cgv.html">Conditions de vente</a><a href="mentions-legales.html#rgpd">Confidentialité</a></footer>
+    </section>
+  </main>
+</body>
+</html>

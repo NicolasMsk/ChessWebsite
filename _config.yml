@@ -6,6 +6,7 @@ exclude:
   - api
   - docs
   - temp
+  - tmp
   - tests
   - scripts
   - ebook
