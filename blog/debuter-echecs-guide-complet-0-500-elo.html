@@ -20,7 +20,7 @@
   <meta property="og:site_name" content="Nicolas Musicki">
   <meta property="article:author" content="Nicolas Musicki">
   <meta property="article:published_time" content="2025-11-16">
-  <meta property="article:modified_time" content="2026-09-09">
+  <meta property="article:modified_time" content="2026-11-23">
   <meta property="article:section" content="Échecs et Débutants">
   
   <!-- Twitter Card -->
@@ -61,7 +61,7 @@
     ]
   },
   "datePublished": "2025-11-16",
-  "dateModified": "2026-09-09",
+  "dateModified": "2026-11-23",
   "publisher": {
     "@type": "Organization",
     "name": "Nicolas Musicki",
@@ -260,6 +260,11 @@
         <!-- Section 1 -->
         <section id="niveau-0">
           <h2>1. Niveau 0 : Vous connaissez les règles de base</h2>
+          <figure class="diagramme">
+            <img src="images/diagrammes/position-depart.svg" alt="Position initiale complète, dames sur d1 et d8" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>La position initiale : les dames occupent une case de leur couleur. La case h1, à droite des Blancs, est claire ; les Blancs jouent en premier.</figcaption>
+          </figure>
+
           <p>Vous découvrez tout juste le jeu ? Commencez par <a href="apprendre-jouer-echecs.html">apprendre à jouer aux échecs avec le guide PDF pour débutant absolu</a>, puis revenez à ce programme une fois vos premiers repères acquis.</p>
           
           <p>
@@ -277,7 +282,7 @@
               <ul>
                 <li>Ni le roi ni la tour n'ont bougé</li>
                 <li>Aucune pièce entre les deux</li>
-                <li>Le roi ne traverse pas une case attaquée</li>
+                <li>Le roi ne traverse pas une case attaquée et n’arrive pas sur une case attaquée</li>
                 <li>Le roi n'est pas en échec</li>
               </ul>
               <p><strong>Erreur fréquente :</strong> Roquer alors que le roi est "passé" par une case attaquée.</p>
@@ -285,16 +290,17 @@
 
             <div class="card warning">
               <h4>La prise en passant</h4>
-              <p>Si un pion adverse avance de 2 cases et se retrouve à côté de votre pion, vous pouvez le capturer "en passant".</p>
+              <p>Si votre pion blanc est sur la cinquième rangée (ou votre pion noir sur la quatrième) et qu’un pion adverse vient d’avancer de deux cases pour arriver à côté, une prise en passant peut être possible. Elle doit être jouée immédiatement et ne doit pas exposer votre roi.</p>
               <p><strong>Important :</strong> Ça ne marche QUE au coup suivant. Après, c'est trop tard.</p>
-              <p><strong>Fréquence :</strong> Rare, mais arrive 1-2 fois par partie en moyenne.</p>
+              <figure class="diagramme"><img src="images/diagrammes/prise-en-passant.svg" alt="Pion blanc e5 et pion noir d5 après d7-d5, prise en passant possible en d6" width="360" height="350" loading="lazy" decoding="async"><figcaption>Les Noirs viennent de jouer …d5 depuis d7. Les Blancs peuvent répondre immédiatement <strong>exd6 en passant</strong> : le pion d5 est retiré.</figcaption></figure>
             </div>
 
             <div class="card warning">
               <h4>La promotion du pion</h4>
-              <p>Un pion qui arrive en fin de rangée devient n'importe quelle pièce (sauf roi).</p>
+              <p>Un pion qui atteint la dernière rangée doit être remplacé par une dame, une tour, un fou ou un cavalier de sa couleur. Le choix ne dépend pas des pièces déjà capturées.</p>
               <p><strong>Le choix habituel :</strong> choisissez une dame, après avoir vérifié que cela ne provoque pas un pat.</p>
               <p><strong>Astuce :</strong> Vous POUVEZ avoir 2 dames (ou plus) en même temps.</p>
+<figure class="diagramme"><img src="images/diagrammes/promotion-pion.svg" alt="Pion blanc a7 prêt à atteindre a8 pour être promu" width="360" height="350" loading="lazy" decoding="async"><figcaption>Aux Blancs : <strong>a8=D+</strong> transforme le pion en dame et donne échec. Une promotion en tour, fou ou cavalier est aussi légale.</figcaption></figure>
             </div>
 
             <div class="card warning">
@@ -441,6 +447,11 @@
               <p>Les cases <strong>e4, d4, e5, d5</strong> sont les plus importantes de l'échiquier.</p>
               <p><strong>Pourquoi :</strong> Une pièce au centre contrôle plus de cases qu'une pièce sur le bord.</p>
               <p><strong>Comment :</strong> Avancez vos pions e et d (1.e4 ou 1.d4), développez cavaliers et fous vers le centre.</p>
+          <figure class="diagramme">
+            <img src="images/diagrammes/centre-developpement.svg" alt="Position après 1.e4 e5 2.Cf3 Cc6, centre et cavaliers surlignés" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>Après <strong>1.e4 e5 2.Cf3 Cc6</strong>, les pions occupent le centre et les cavaliers participent à son contrôle. Aux Blancs de jouer.</figcaption>
+          </figure>
+
             </div>
 
             <div class="card success">
@@ -466,12 +477,24 @@
               </ul>
               <p><strong>Objectif :</strong> Roquer avant le coup 12.</p>
               <p><strong>Astuce :</strong> le petit roque (0-0) demande de libérer moins de cases que le grand roque (0-0-0). Choisissez surtout le côté où votre roi sera en sécurité.</p>
+          <div class="diagrammes-2">
+          <figure class="diagramme">
+            <img src="images/diagrammes/roque-avant.svg" alt="Avant le petit roque : roi blanc e1 et tour h1, flèches vers g1 et f1" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>Avant <strong>O-O</strong> : le roi e1 et la tour h1 n’ont pas bougé. Ici, les cases entre eux sont libres et le roi n’est pas attaqué sur e1, f1 ou g1.</figcaption>
+          </figure>
+
+          <figure class="diagramme">
+            <img src="images/diagrammes/roque-apres.svg" alt="Après le petit roque : roi blanc g1 et tour f1" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>Après <strong>O-O</strong> : le roi est en g1 et la tour en f1. Il s’agit d’un seul coup ; les Noirs jouent ensuite.</figcaption>
+          </figure>
+          </div>
+
             </div>
 
             <div class="card neutral">
               <h4>Bonus : Ne bougez pas 2 fois la même pièce</h4>
               <p>Sauf si vous gagnez du matériel ou évitez de perdre une pièce.</p>
-              <p><strong>Exemple de mauvais coup :</strong> Jouer Cc3 puis Cb1 puis Cd2. Vous avez perdu 3 coups pour rien.</p>
+              <p><strong>Exemple de mauvais coup :</strong> Jouer Cc3 puis revenir en b1 sans menace à parer ni objectif précis. Pendant cet aller-retour, une autre pièce aurait pu se développer.</p>
             </div>
           </div>
 
@@ -505,38 +528,63 @@
             <h4>1. La fourchette (fork)</h4>
             <p><strong>Définition :</strong> Attaquer 2 pièces en même temps avec une seule pièce.</p>
             <p><strong>Exemple classique :</strong> Cavalier en e4 qui attaque le roi en g5 et la tour en c3.</p>
+          <figure class="diagramme">
+            <img src="images/diagrammes/debutant-fourchette.svg" alt="Cavalier blanc e4 donnant échec au roi noir g5 et attaquant la tour c3" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>Le cavalier e4 attaque deux cibles : le roi g5 et la tour c3. Aux Noirs de parer l’échec ; après <strong>…Rh6, Cxc3</strong>, les Blancs prennent la tour. Position simplifiée.</figcaption>
+          </figure>
+
             <p><strong>Comment la repérer :</strong> Cherchez des cases où votre cavalier/pion/dame peut attaquer 2 pièces.</p>
-            <p><strong>Fréquence :</strong> 2-3 fois par partie. C'est LA tactique la plus courante.</p>
+            <p><strong>À reconnaître :</strong> un échec peut obliger le roi à se déplacer pendant que la seconde pièce reste attaquée.</p>
           </div>
 
           <div class="card success">
             <h4>2. Le clouage (pin)</h4>
-            <p><strong>Définition :</strong> Une pièce ne peut pas bouger car elle protège une pièce plus importante derrière elle.</p>
-            <p><strong>Exemple :</strong> Fou en g5 qui cloue le cavalier f6 (si le cavalier bouge, le roi en e8 est en échec).</p>
+            <p><strong>Définition :</strong> Dans un clouage absolu, une pièce masque une attaque contre son roi : elle ne peut pas quitter cette ligne si cela expose le roi à un échec.</p>
+            <p><strong>Exemple :</strong> Fou blanc en b5, cavalier noir en c6 et roi noir en e8, avec d7 libre : le cavalier ne peut pas bouger, car il découvrirait l’attaque du fou contre son roi.</p>
+          <figure class="diagramme">
+            <img src="images/diagrammes/debutant-clouage.svg" alt="Fou blanc b5, cavalier noir c6 cloué contre le roi e8" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>Le fou b5, le cavalier c6 et le roi e8 sont sur la même diagonale. Le cavalier ne peut pas quitter c6 : il exposerait son roi. Position simplifiée, trait aux Noirs.</figcaption>
+          </figure>
+
             <p><strong>Comment l'utiliser :</strong> Alignez fou/dame/tour avec une pièce adverse + le roi/la dame derrière.</p>
-            <p><strong>Astuce :</strong> Une pièce clouée = une pièce morte (elle ne peut rien faire).</p>
+            <p><strong>Astuce :</strong> Un cavalier ainsi cloué ne peut pas jouer. Une tour ou un fou cloué peut parfois se déplacer le long de la ligne du clouage. Un clouage contre la dame est relatif : se dégager reste légal, mais peut coûter du matériel.</p>
           </div>
 
           <div class="card success">
             <h4>3. L'attaque double (double attack)</h4>
-            <p><strong>Définition :</strong> Similaire à la fourchette, mais avec n'importe quelle pièce.</p>
-            <p><strong>Exemple :</strong> Dame en d4 qui attaque la tour en a1 ET le fou en h8.</p>
-            <p><strong>Comment la créer :</strong> Cherchez des pièces adverses non alignées sur la même diagonale/colonne/rangée.</p>
+            <p><strong>Définition :</strong> Une seule pièce crée deux menaces simultanées. Une fourchette est une forme d’attaque double.</p>
+            <p><strong>Exemple :</strong> Dame blanche en d4 qui donne échec au roi noir g7 tout en attaquant la tour a1. Les diagonales d4-g7 et d4-a1 sont libres.</p>
+          <figure class="diagramme">
+            <img src="images/diagrammes/debutant-attaque-double.svg" alt="Dame blanche d4 attaquant le roi noir g7 et la tour a1" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>La dame d4 donne échec en g7 et vise aussi a1. Après <strong>…Rf7, Dxa1</strong>, elle prend la tour. Position simplifiée, trait aux Noirs.</figcaption>
+          </figure>
+
+            <p><strong>Comment la créer :</strong> Cherchez une case depuis laquelle une seule pièce peut viser deux cibles. Vérifiez les obstacles et les réponses adverses.</p>
           </div>
 
           <div class="card success">
             <h4>4. L'échec à la découverte (discovered check)</h4>
             <p><strong>Définition :</strong> Vous bougez une pièce, et une autre pièce derrière donne échec.</p>
-            <p><strong>Exemple :</strong> Fou en e4, tour en e1, roi noir en e8. Vous bougez le fou → la tour donne échec.</p>
-            <p><strong>Puissance :</strong> TRÈS fort car la pièce qui bouge peut prendre n'importe quoi gratuitement (l'adversaire doit parer l'échec).</p>
+            <p><strong>Exemple :</strong> Fou en e4, tour en e1, roi noir en e8. Jouer Ff5+ libère la colonne e : la tour e1 donne alors échec au roi noir e8.</p>
+          <figure class="diagramme">
+            <img src="images/diagrammes/debutant-decouverte.svg" alt="Fou e4 devant la tour e1, flèche vers f5 pour découvrir un échec au roi e8" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>Aux Blancs : <strong>Ff5+</strong> libère la colonne e. C’est la tour e1, derrière le fou, qui donne échec au roi e8. Les cases intermédiaires sont libres.</figcaption>
+          </figure>
+
+            <p><strong>Puissance :</strong> L’adversaire doit parer l’échec. Cela peut permettre à la pièce déplacée de créer une autre menace, mais il faut vérifier les défenses et les échanges possibles.</p>
           </div>
 
           <div class="card success">
             <h4>5. Le mat du couloir (back rank mate)</h4>
             <p><strong>Définition :</strong> Mat avec tour/dame sur la dernière rangée, quand le roi est bloqué par ses propres pions.</p>
             <p><strong>Exemple :</strong> Roi noir en g8, pions en f7/g7/h7, tour blanche en d8 = mat.</p>
+          <figure class="diagramme">
+            <img src="images/diagrammes/echec-et-mat.svg" alt="Mat du couloir, tour blanche d8 et roi noir g8 bloqué par ses pions" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>Le roi g8 est en échec par la tour d8. Les cases f8 et h8 sont attaquées ; ses pions f7, g7 et h7 ferment les autres sorties. Trait aux Noirs : c’est mat.</figcaption>
+          </figure>
+
             <p><strong>Comment l'éviter :</strong> Créez une "porte de sortie" pour votre roi (avancez le pion h ou f).</p>
-            <p><strong>Fréquence :</strong> 1 partie sur 3 se termine comme ça au niveau débutant.</p>
+            <p><strong>À vérifier :</strong> le roi peut-il fuir, capturer la pièce qui donne échec ou interposer une pièce ?</p>
           </div>
 
           <h3>Comment s'entraîner aux tactiques</h3>
@@ -573,7 +621,12 @@
             </ol>
             <p><strong>Idée :</strong> Contrôle du centre, développement rapide, pression sur f7 (point faible des noirs).</p>
             <p><strong>Plan :</strong> d3, Cc3, 0-0, puis attaquer ou échanger au centre.</p>
-            <p><strong>Pourquoi c'est simple :</strong> Principes naturels, peu de théorie, fonctionne contre tout.</p>
+            <p><strong>Pourquoi c'est simple :</strong> Développement naturel dans les parties ouvertes après 1.e4 e5. Si les Noirs répondent autrement, adaptez vos coups.</p>
+          <figure class="diagramme">
+            <img src="images/diagrammes/italienne.svg" alt="Italienne après 1.e4 e5 2.Cf3 Cc6 3.Fc4, fou blanc en c4 visant f7" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>Après <strong>1.e4 e5 2.Cf3 Cc6 3.Fc4</strong>, le fou c4 vise f7 et les Blancs préparent leur petit roque. Aux Noirs de jouer.</figcaption>
+          </figure>
+
           </div>
 
           <h3>2. Ouverture de Londres (avec les blancs)</h3>
@@ -581,13 +634,18 @@
           <div class="card success">
             <h4>Coups de base</h4>
             <ol>
-              <li><strong>1.d4</strong> (n'importe quelle réponse noire)</li>
-              <li><strong>2.Ff4</strong> (système de Londres)</li>
-              <li><strong>3.e3, Cf3, Cbd2, c3, Fd3, 0-0</strong></li>
+              <li><strong>1.d4 d5</strong> (un exemple de réponse noire)</li>
+              <li><strong>2.Ff4 Cf6</strong> (système de Londres)</li>
+              <li><strong>3.e3</strong>, puis préparer Cf3, Cbd2, c3, Fd3 et O-O selon les réponses noires</li>
             </ol>
-            <p><strong>Idée :</strong> Développement solide, peu importe ce que jouent les noirs.</p>
+            <p><strong>Idée :</strong> Sortir le fou avant de jouer e3, puis construire un centre solide en surveillant les menaces adverses.</p>
             <p><strong>Plan :</strong> Structure solide, puis attaque sur le roque adverse ou jeu au centre.</p>
-            <p><strong>Pourquoi c'est simple :</strong> Vous jouez les MÊMES coups contre toutes les défenses noires.</p>
+            <p><strong>Pourquoi c'est simple :</strong> Les plans se ressemblent d’une partie à l’autre, mais l’ordre des coups doit tenir compte de l’adversaire.</p>
+          <figure class="diagramme">
+            <img src="images/diagrammes/londres.svg" alt="Londres après 1.d4 d5 2.Ff4 Cf6 3.e3" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>Un exemple précis : <strong>1.d4 d5 2.Ff4 Cf6 3.e3</strong>. Le fou f4 est sorti avant de fermer la diagonale par e3. Aux Noirs de jouer.</figcaption>
+          </figure>
+
           </div>
 
           <h3>3. Défense française (avec les noirs contre 1.e4)</h3>
@@ -597,11 +655,16 @@
             <ol>
               <li><strong>1.e4 e6</strong></li>
               <li><strong>2.d4 d5</strong></li>
-              <li><strong>3.(n'importe) ...c5</strong> (contre-attaquer le centre)</li>
+              <li><strong>3.e5 c5</strong> (variante d’avance : les Noirs attaquent d4)</li>
             </ol>
             <p><strong>Idée :</strong> Bloquer le centre, puis contre-attaquer.</p>
-            <p><strong>Plan :</strong> ...Cc6, ...Cf6, ...cxd4, développer les pièces.</p>
+            <p><strong>Plan dans cet exemple :</strong> mettre la pression sur d4 avec ...Cc6 et, selon les réponses blanches, ...cxd4. Après e5, le pion blanc contrôle f6 : le cavalier noir ne doit pas s’y installer automatiquement.</p>
             <p><strong>Pourquoi c'est simple :</strong> Structure solide, difficile à casser pour les débutants blancs.</p>
+          <figure class="diagramme">
+            <img src="images/diagrammes/francaise-avance.svg" alt="Défense française après 3.e5 c5, vue côté Noirs, pression du pion c5 sur d4" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption>Après <strong>1.e4 e6 2.d4 d5 3.e5 c5</strong>, vue côté Noirs : le pion c5 attaque d4. Le pion e5 contrôle f6 ; chaque coup de développement doit en tenir compte. Aux Blancs de jouer.</figcaption>
+          </figure>
+
           </div>
 
           <div class="highlight-box">
@@ -627,7 +690,7 @@
           </p>
 
           <p>
-            Si vous ne savez pas faire ça, vous allez <strong>faire pat</strong> et perdre des parties gagnées. 
+            Si vous ne savez pas faire ça, vous allez <strong>faire pat</strong> et laisser échapper des parties gagnantes.
             C'est la finale n°1 à maîtriser.
           </p>
 
@@ -636,7 +699,7 @@
           <div class="card success">
             <h4>Étape 1 : Réduire l'espace du roi adverse</h4>
             <p>Utilisez votre dame pour créer une "barrière" que le roi adverse ne peut pas franchir.</p>
-            <p><strong>Exemple :</strong> Dame en d4 → Le roi noir ne peut plus aller sur la moitié sud de l'échiquier.</p>
+            <p><strong>Exemple :</strong> Sur un échiquier dégagé, une dame en d4 contrôle la quatrième rangée et la colonne d. Elle peut réduire l’espace du roi adverse ; vérifiez toujours qu’il ne peut pas la capturer.</p>
             <p><strong>Conseil :</strong> Gardez toujours 1-2 cases entre la dame et le roi adverse (pour éviter qu'il la prenne).</p>
           </div>
 
@@ -644,7 +707,7 @@
             <h4>Étape 2 : Avancer votre roi</h4>
             <p>Amenez votre roi pour aider la dame.</p>
             <p><strong>Objectif :</strong> Votre roi doit se rapprocher du roi adverse.</p>
-            <p><strong>Distance idéale :</strong> 2-3 cases du roi adverse (c'est ce qu'on appelle "l'opposition").</p>
+            <p><strong>Distance idéale :</strong> approchez votre roi sans rendre les deux rois adjacents. Dans une opposition directe, les rois se font face sur une rangée ou une colonne, avec une case entre eux.</p>
           </div>
 
           <div class="card success">
@@ -660,14 +723,26 @@
 
           <div class="warning-box">
             <h4>Attention au pat</h4>
-            <p><strong>Erreur classique :</strong> Donner échec sans arrêt avec la dame, et accidentellement bloquer toutes les cases du roi → pat.</p>
-            <p><strong>Règle d'or :</strong> Avant de jouer, vérifiez que le roi adverse a AU MOINS une case légale (même si vous la contrôlez).</p>
+            <p><strong>Erreur classique :</strong> Priver le roi de toutes ses cases sans lui donner échec, alors que son camp n’a aucun autre coup légal : c’est pat.</p>
+            <p><strong>Règle d'or :</strong> Avant de jouer, vérifiez le résultat : roi en échec sans défense légale = mat ; aucun coup légal et roi non attaqué = pat. Une case contrôlée par l’adversaire n’est pas une fuite légale pour le roi.</p>
+          <div class="diagrammes-2">
+          <figure class="diagramme">
+            <img src="images/diagrammes/debutant-mat-dame.svg" alt="Mat avec roi noir a8, roi blanc b6 et dame blanche b7" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption><strong>Mat, trait aux Noirs :</strong> la dame b7 attaque a8 et le roi b6 la protège. Aucune défense légale.</figcaption>
+          </figure>
+
+          <figure class="diagramme">
+            <img src="images/diagrammes/debutant-pat-dame.svg" alt="Pat avec roi noir a8, roi blanc b6 et dame blanche c7" width="360" height="350" loading="lazy" decoding="async">
+            <figcaption><strong>Pat, trait aux Noirs :</strong> la dame c7 ne donne pas échec, mais aucune case de fuite n’est légale. La partie est nulle.</figcaption>
+          </figure>
+          </div>
+
           </div>
 
           <div class="info-box">
             <h4>Entraînement</h4>
             <p>Allez sur Chess.com ou Lichess → Apprendre → Finales → "Roi + Dame vs Roi"</p>
-            <p><strong>Objectif :</strong> Être capable de mater en moins de 10 coups à chaque fois.</p>
+            <p><strong>Objectif :</strong> Répéter la méthode depuis plusieurs positions, en gardant la dame protégée et en évitant le pat.</p>
             <p><strong>Temps nécessaire :</strong> 15-30 minutes de pratique.</p>
           </div>
         </section>

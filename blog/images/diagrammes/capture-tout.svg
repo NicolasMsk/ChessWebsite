@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -10 360 350" width="360" height="350" role="img">
 <defs>
 <pattern id="cases" width="80" height="80" patternUnits="userSpaceOnUse">
-<rect width="80" height="80" fill="#F0D9B5"/><rect width="40" height="40" fill="#B58863"/><rect x="40" y="40" width="40" height="40" fill="#B58863"/>
+<rect width="80" height="80" fill="#B58863"/><rect width="40" height="40" fill="#F0D9B5"/><rect x="40" y="40" width="40" height="40" fill="#F0D9B5"/>
 </pattern>
 <marker id="pointe" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B05E17"/></marker>
 <symbol id="bP" viewBox="0 0 45 45"><path stroke="#000" stroke-linecap="round" stroke-width="1.5" d="M22.5 9a4 4 0 0 0-3.22 6.38 6.48 6.48 0 0 0-.87 10.65c-3 1.06-7.41 5.55-7.41 13.47h23c0-7.92-4.41-12.41-7.41-13.47a6.46 6.46 0 0 0-.87-10.65A4.01 4.01 0 0 0 22.5 9z"/></symbol>

@@ -1,0 +1,988 @@
+[
+  {
+    "file": "apprendre-pdf-position-initiale.svg",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "kind": "position",
+    "checks": [],
+    "moves": ""
+  },
+  {
+    "file": "apprendre-pdf-premiers-coups.svg",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2",
+    "kind": "position",
+    "checks": [],
+    "moves": "e4 e5 Nf3"
+  },
+  {
+    "file": "capture-tout.svg",
+    "orientation": "white",
+    "fen": "8/3p4/8/8/p2R3p/8/8/3p4 w - - 0 1",
+    "kind": "exercise",
+    "checks": [
+      {
+        "type": "miniGame",
+        "from": "d4",
+        "route": [
+          "d7",
+          "d1",
+          "a1",
+          "a4",
+          "h4"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "caro-kann.svg",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq d6 0 3",
+    "kind": "position",
+    "checks": [],
+    "moves": "e4 c6 d4 d5"
+  },
+  {
+    "file": "cavalier.svg",
+    "orientation": "white",
+    "fen": "8/8/8/8/3N4/8/8/8 w - - 0 1",
+    "kind": "movement",
+    "checks": [
+      {
+        "type": "destinations",
+        "from": "d4",
+        "squares": [
+          "c2",
+          "e2",
+          "b3",
+          "f3",
+          "b5",
+          "f5",
+          "c6",
+          "e6"
+        ]
+      }
+    ],
+    "highlights": [
+      "c2",
+      "e2",
+      "b3",
+      "f3",
+      "b5",
+      "f5",
+      "c6",
+      "e6"
+    ]
+  },
+  {
+    "file": "course-de-pions.svg",
+    "orientation": "white",
+    "fen": "4k3/pppppppp/8/8/8/8/PPPPPPPP/4K3 w - - 0 1",
+    "kind": "exercise",
+    "checks": []
+  },
+  {
+    "file": "dame-sortie-tot.svg",
+    "orientation": "white",
+    "fen": "rnb1kbnr/pppp1ppp/8/4p3/4P2q/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nxh4",
+        "piece": "h4:N"
+      }
+    ],
+    "moves": "e4 e5 Nf3 Qh4",
+    "arrows": [
+      [
+        "f3",
+        "h4"
+      ]
+    ]
+  },
+  {
+    "file": "dame.svg",
+    "orientation": "white",
+    "fen": "8/8/8/8/3Q4/8/8/8 w - - 0 1",
+    "kind": "movement",
+    "checks": [
+      {
+        "type": "destinations",
+        "from": "d4",
+        "squares": [
+          "a1",
+          "d1",
+          "g1",
+          "b2",
+          "d2",
+          "f2",
+          "c3",
+          "d3",
+          "e3",
+          "a4",
+          "b4",
+          "c4",
+          "e4",
+          "f4",
+          "g4",
+          "h4",
+          "c5",
+          "d5",
+          "e5",
+          "b6",
+          "d6",
+          "f6",
+          "a7",
+          "d7",
+          "g7",
+          "d8",
+          "h8"
+        ]
+      }
+    ],
+    "highlights": [
+      "a1",
+      "d1",
+      "g1",
+      "b2",
+      "d2",
+      "f2",
+      "c3",
+      "d3",
+      "e3",
+      "a4",
+      "b4",
+      "c4",
+      "e4",
+      "f4",
+      "g4",
+      "h4",
+      "c5",
+      "d5",
+      "e5",
+      "b6",
+      "d6",
+      "f6",
+      "a7",
+      "d7",
+      "g7",
+      "d8",
+      "h8"
+    ]
+  },
+  {
+    "file": "e4-e5.svg",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq e6 0 2",
+    "kind": "position",
+    "checks": [],
+    "moves": "e4 e5"
+  },
+  {
+    "file": "echec-et-mat.svg",
+    "orientation": "white",
+    "fen": "3R2k1/5ppp/8/8/8/8/5PPP/6K1 b - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "checkmate"
+      }
+    ]
+  },
+  {
+    "file": "exercices-pdf-capture.svg",
+    "orientation": "white",
+    "fen": "6k1/8/8/3q4/8/8/8/3R2K1 w - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Rxd5",
+        "piece": "d5:R"
+      }
+    ]
+  },
+  {
+    "file": "exercices-pdf-clouage.svg",
+    "orientation": "white",
+    "fen": "k3r3/8/8/8/8/8/n3R3/4K3 w - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "pinned",
+        "square": "e2"
+      },
+      {
+        "type": "illegal",
+        "move": "e2a2"
+      },
+      {
+        "type": "line",
+        "moves": "Re3"
+      },
+      {
+        "type": "line",
+        "moves": "Rxe8+",
+        "check": true
+      }
+    ]
+  },
+  {
+    "file": "exercices-pdf-echec.svg",
+    "orientation": "white",
+    "fen": "k3r3/8/8/8/8/8/8/4K2R w - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "check"
+      },
+      {
+        "type": "line",
+        "moves": "Kf2"
+      },
+      {
+        "type": "line",
+        "moves": "Kd1"
+      },
+      {
+        "type": "line",
+        "moves": "Kf1"
+      },
+      {
+        "type": "line",
+        "moves": "Kd2"
+      },
+      {
+        "type": "illegal",
+        "move": "h1h2"
+      }
+    ]
+  },
+  {
+    "file": "exercices-pdf-fourchette.svg",
+    "orientation": "white",
+    "fen": "8/p7/2k3q1/8/2N5/8/P7/7K w - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Ne5+ Kd6 Nxg6",
+        "piece": "g6:N"
+      }
+    ]
+  },
+  {
+    "file": "exercices-pdf-mat.svg",
+    "orientation": "white",
+    "fen": "6k1/5ppp/8/8/8/8/8/4R1K1 w - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Re8#",
+        "mate": true
+      }
+    ]
+  },
+  {
+    "file": "finales-pdf-dame-avant.svg",
+    "orientation": "white",
+    "fen": "4k3/Q7/4K3/8/8/8/8/8 w - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Qe7#",
+        "mate": true
+      }
+    ]
+  },
+  {
+    "file": "finales-pdf-dame-mat.svg",
+    "orientation": "white",
+    "fen": "4k3/4Q3/4K3/8/8/8/8/8 b - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "checkmate"
+      }
+    ]
+  },
+  {
+    "file": "finales-pdf-opposition.svg",
+    "orientation": "white",
+    "fen": "8/4k3/8/4K3/4P3/8/8/8 b - - 0 1",
+    "kind": "position",
+    "checks": []
+  },
+  {
+    "file": "finales-pdf-pat.svg",
+    "orientation": "white",
+    "fen": "7k/8/5KQ1/8/8/8/8/8 b - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "stalemate"
+      }
+    ]
+  },
+  {
+    "file": "finales-pdf-tour-avant.svg",
+    "orientation": "white",
+    "fen": "4k3/R7/4K3/8/8/8/8/8 w - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Ra8#",
+        "mate": true
+      }
+    ]
+  },
+  {
+    "file": "finales-pdf-tour-mat.svg",
+    "orientation": "white",
+    "fen": "R3k3/8/4K3/8/8/8/8/8 b - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "checkmate"
+      }
+    ]
+  },
+  {
+    "file": "fou.svg",
+    "orientation": "white",
+    "fen": "8/8/8/8/3B4/8/8/8 w - - 0 1",
+    "kind": "movement",
+    "checks": [
+      {
+        "type": "destinations",
+        "from": "d4",
+        "squares": [
+          "a1",
+          "g1",
+          "b2",
+          "f2",
+          "c3",
+          "e3",
+          "c5",
+          "e5",
+          "b6",
+          "f6",
+          "a7",
+          "g7",
+          "h8"
+        ]
+      }
+    ],
+    "highlights": [
+      "a1",
+      "g1",
+      "b2",
+      "f2",
+      "c3",
+      "e3",
+      "c5",
+      "e5",
+      "b6",
+      "f6",
+      "a7",
+      "g7",
+      "h8"
+    ]
+  },
+  {
+    "file": "italienne.svg",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
+    "kind": "position",
+    "checks": [],
+    "moves": "e4 e5 Nf3 Nc6 Bc4"
+  },
+  {
+    "file": "londres.svg",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3",
+    "kind": "position",
+    "checks": [],
+    "moves": "d4 d5 Bf4 Nf6 e3"
+  },
+  {
+    "file": "mat-en-1.svg",
+    "orientation": "white",
+    "fen": "7k/6pp/8/8/8/8/6PP/3R2K1 w - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Rd8#",
+        "mate": true
+      }
+    ],
+    "arrows": [
+      [
+        "d1",
+        "d8"
+      ]
+    ]
+  },
+  {
+    "file": "pat.svg",
+    "orientation": "white",
+    "fen": "7k/8/6Q1/8/8/8/8/4K3 b - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "stalemate"
+      }
+    ]
+  },
+  {
+    "file": "pion.svg",
+    "orientation": "white",
+    "fen": "8/8/8/8/8/3p1p2/4P3/8 w - - 0 1",
+    "kind": "movement",
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "e2",
+        "targets": [
+          "d3",
+          "f3"
+        ]
+      }
+    ],
+    "arrows": [
+      [
+        "e2",
+        "d3"
+      ],
+      [
+        "e2",
+        "f3"
+      ]
+    ],
+    "highlights": [
+      "e3",
+      "e4"
+    ]
+  },
+  {
+    "file": "position-depart.svg",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "kind": "position",
+    "checks": [],
+    "moves": ""
+  },
+  {
+    "file": "principes-centre.svg",
+    "orientation": "white",
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 6 5",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "O-O"
+      },
+      {
+        "type": "line",
+        "moves": "d3 O-O"
+      }
+    ],
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 Nc3 Nf6"
+  },
+  {
+    "file": "prise-en-passant.svg",
+    "orientation": "white",
+    "fen": "4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 2",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "exd6",
+        "piece": "d6:P"
+      }
+    ],
+    "startFen": "4k3/3p4/8/4P3/8/8/8/4K3 b - - 0 1",
+    "moves": "d5",
+    "arrows": [
+      [
+        "d7",
+        "d5"
+      ],
+      [
+        "e5",
+        "d6"
+      ]
+    ]
+  },
+  {
+    "file": "roi.svg",
+    "orientation": "white",
+    "fen": "8/8/8/8/4K3/8/8/8 w - - 0 1",
+    "kind": "movement",
+    "checks": [
+      {
+        "type": "destinations",
+        "from": "e4",
+        "squares": [
+          "d3",
+          "e3",
+          "f3",
+          "d4",
+          "f4",
+          "d5",
+          "e5",
+          "f5"
+        ]
+      }
+    ],
+    "highlights": [
+      "d3",
+      "e3",
+      "f3",
+      "d4",
+      "f4",
+      "d5",
+      "e5",
+      "f5"
+    ]
+  },
+  {
+    "file": "roque-apres.svg",
+    "orientation": "white",
+    "fen": "4k3/8/8/8/8/8/8/R4RK1 w - - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "f1",
+        "targets": [
+          "f8"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "roque-avant.svg",
+    "orientation": "white",
+    "fen": "4k3/8/8/8/8/8/8/R3K2R w KQ - 0 1",
+    "kind": "position",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "O-O",
+        "piece": "g1:K"
+      }
+    ],
+    "arrows": [
+      [
+        "e1",
+        "g1"
+      ],
+      [
+        "h1",
+        "f1"
+      ]
+    ]
+  },
+  {
+    "file": "slave.svg",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3",
+    "kind": "position",
+    "checks": [],
+    "moves": "d4 d5 c4 c6"
+  },
+  {
+    "file": "tour.svg",
+    "orientation": "white",
+    "fen": "8/8/8/8/3R4/8/8/8 w - - 0 1",
+    "kind": "movement",
+    "checks": [
+      {
+        "type": "destinations",
+        "from": "d4",
+        "squares": [
+          "d1",
+          "d2",
+          "d3",
+          "a4",
+          "b4",
+          "c4",
+          "e4",
+          "f4",
+          "g4",
+          "h4",
+          "d5",
+          "d6",
+          "d7",
+          "d8"
+        ]
+      }
+    ],
+    "highlights": [
+      "d1",
+      "d2",
+      "d3",
+      "a4",
+      "b4",
+      "c4",
+      "e4",
+      "f4",
+      "g4",
+      "h4",
+      "d5",
+      "d6",
+      "d7",
+      "d8"
+    ]
+  },
+  {
+    "file": "centre-developpement.svg",
+    "generated": true,
+    "title": "Après 1.e4 e5 2.Cf3 Cc6 : pions centraux et cavaliers développés",
+    "orientation": "white",
+    "checks": [],
+    "highlights": [
+      "d4",
+      "e4",
+      "d5",
+      "e5",
+      "f3",
+      "c6"
+    ],
+    "arrows": [],
+    "moves": "e4 e5 Nf3 Nc6",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3"
+  },
+  {
+    "file": "debutant-fourchette.svg",
+    "generated": true,
+    "title": "Le cavalier e4 attaque le roi g5 et la tour c3",
+    "orientation": "white",
+    "checks": [
+      {
+        "type": "check"
+      },
+      {
+        "type": "attacks",
+        "from": "e4",
+        "targets": [
+          "g5",
+          "c3"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Kh6 Nxc3",
+        "piece": "c3:N"
+      }
+    ],
+    "highlights": [
+      "e4",
+      "g5",
+      "c3"
+    ],
+    "arrows": [
+      [
+        "e4",
+        "g5"
+      ],
+      [
+        "e4",
+        "c3"
+      ]
+    ],
+    "fen": "8/8/8/6k1/4N3/2r5/8/6K1 b - - 0 1"
+  },
+  {
+    "file": "debutant-clouage.svg",
+    "generated": true,
+    "title": "Le fou b5 cloue le cavalier c6 contre le roi e8",
+    "orientation": "white",
+    "checks": [
+      {
+        "type": "pinned",
+        "square": "c6"
+      },
+      {
+        "type": "illegal",
+        "move": "c6d4"
+      }
+    ],
+    "highlights": [
+      "b5",
+      "c6",
+      "e8"
+    ],
+    "arrows": [
+      [
+        "b5",
+        "c6"
+      ]
+    ],
+    "fen": "4k3/8/2n5/1B6/8/8/8/6K1 b - - 0 1"
+  },
+  {
+    "file": "debutant-attaque-double.svg",
+    "generated": true,
+    "title": "La dame d4 attaque le roi g7 et la tour a1",
+    "orientation": "white",
+    "checks": [
+      {
+        "type": "check"
+      },
+      {
+        "type": "attacks",
+        "from": "d4",
+        "targets": [
+          "g7",
+          "a1"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Kf7 Qxa1",
+        "piece": "a1:Q"
+      }
+    ],
+    "highlights": [
+      "d4",
+      "g7",
+      "a1"
+    ],
+    "arrows": [
+      [
+        "d4",
+        "g7"
+      ],
+      [
+        "d4",
+        "a1"
+      ]
+    ],
+    "fen": "8/6k1/8/8/3Q4/8/7K/r7 b - - 0 1"
+  },
+  {
+    "file": "debutant-decouverte.svg",
+    "generated": true,
+    "title": "Ff5+ libère la colonne e et donne échec à la découverte",
+    "orientation": "white",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Bf5+",
+        "check": true
+      }
+    ],
+    "highlights": [
+      "e1",
+      "e4",
+      "e8",
+      "f5"
+    ],
+    "arrows": [
+      [
+        "e4",
+        "f5"
+      ]
+    ],
+    "fen": "4k3/8/8/8/4B3/8/8/4R1K1 w - - 0 1"
+  },
+  {
+    "file": "francaise-centre.svg",
+    "generated": true,
+    "title": "Défense française après 1.e4 e6 2.d4 d5",
+    "orientation": "black",
+    "checks": [],
+    "highlights": [
+      "e6",
+      "d5",
+      "e4",
+      "d4"
+    ],
+    "arrows": [],
+    "moves": "e4 e6 d4 d5",
+    "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq d6 0 3"
+  },
+  {
+    "file": "francaise-avance.svg",
+    "generated": true,
+    "title": "Française, variante d’avance : 1.e4 e6 2.d4 d5 3.e5 c5",
+    "orientation": "black",
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "c5",
+        "targets": [
+          "d4"
+        ]
+      }
+    ],
+    "highlights": [
+      "e5",
+      "d4",
+      "c5",
+      "d5"
+    ],
+    "arrows": [
+      [
+        "c5",
+        "d4"
+      ]
+    ],
+    "moves": "e4 e6 d4 d5 e5 c5",
+    "fen": "rnbqkbnr/pp3ppp/4p3/2ppP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq c6 0 4"
+  },
+  {
+    "file": "espagnole.svg",
+    "generated": true,
+    "title": "Ouverture espagnole après 1.e4 e5 2.Cf3 Cc6 3.Fb5",
+    "orientation": "white",
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "b5",
+        "targets": [
+          "c6"
+        ]
+      }
+    ],
+    "highlights": [
+      "b5",
+      "c6"
+    ],
+    "arrows": [
+      [
+        "b5",
+        "c6"
+      ]
+    ],
+    "moves": "e4 e5 Nf3 Nc6 Bb5",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3"
+  },
+  {
+    "file": "dame-tempos.svg",
+    "generated": true,
+    "title": "Après 4…Cf6, deux cavaliers noirs développés face à une dame déjà déplacée deux fois",
+    "orientation": "white",
+    "checks": [],
+    "highlights": [
+      "f3",
+      "c6",
+      "f6"
+    ],
+    "arrows": [],
+    "moves": "e4 e5 Qh5 Nc6 Bc4 g6 Qf3 Nf6",
+    "fen": "r1bqkb1r/pppp1p1p/2n2np1/4p3/2B1P3/5Q2/PPPP1PPP/RNB1K1NR w KQkq - 2 5"
+  },
+  {
+    "file": "dame-en-prise.svg",
+    "generated": true,
+    "title": "Après 3.Dxe5+?, le cavalier c6 peut prendre la dame",
+    "orientation": "white",
+    "checks": [
+      {
+        "type": "check"
+      },
+      {
+        "type": "line",
+        "moves": "Nxe5",
+        "piece": "e5:n"
+      }
+    ],
+    "highlights": [
+      "c6",
+      "e5"
+    ],
+    "arrows": [
+      [
+        "c6",
+        "e5"
+      ]
+    ],
+    "moves": "e4 e5 Qh5 Nc6 Qxe5+",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4Q3/4P3/8/PPPP1PPP/RNB1KBNR b KQkq - 0 3"
+  },
+  {
+    "file": "debutant-mat-dame.svg",
+    "generated": true,
+    "title": "Mat : roi noir a8, roi blanc b6 et dame blanche b7",
+    "orientation": "white",
+    "checks": [
+      {
+        "type": "checkmate"
+      }
+    ],
+    "highlights": [
+      "a8",
+      "b7",
+      "b6"
+    ],
+    "arrows": [],
+    "fen": "k7/1Q6/1K6/8/8/8/8/8 b - - 0 1"
+  },
+  {
+    "file": "debutant-pat-dame.svg",
+    "generated": true,
+    "title": "Pat : roi noir a8, roi blanc b6 et dame blanche c7",
+    "orientation": "white",
+    "checks": [
+      {
+        "type": "stalemate"
+      }
+    ],
+    "highlights": [
+      "a8",
+      "c7",
+      "b6"
+    ],
+    "arrows": [],
+    "fen": "k7/2Q5/1K6/8/8/8/8/8 b - - 0 1"
+  },
+  {
+    "file": "promotion-pion.svg",
+    "generated": true,
+    "title": "Le pion a7 peut être promu en a8 : dame, tour, fou ou cavalier",
+    "orientation": "white",
+    "fen": "4k3/P7/8/8/8/8/8/4K3 w - - 0 1",
+    "highlights": [
+      "a7",
+      "a8"
+    ],
+    "arrows": [
+      [
+        "a7",
+        "a8"
+      ]
+    ],
+    "checks": [
+      {
+        "type": "line",
+        "moves": "a8=Q+",
+        "check": true,
+        "piece": "a8:Q"
+      },
+      {
+        "type": "line",
+        "moves": "a8=R+",
+        "check": true,
+        "piece": "a8:R"
+      },
+      {
+        "type": "line",
+        "moves": "a8=B",
+        "piece": "a8:B"
+      },
+      {
+        "type": "line",
+        "moves": "a8=N",
+        "piece": "a8:N"
+      }
+    ]
+  }
+]
