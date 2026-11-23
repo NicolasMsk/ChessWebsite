@@ -349,14 +349,13 @@
     /* --gift-gold : or assombri, 4.8:1 sur blanc (WCAG AA petit texte) */
     body { --gift-gold: #8a6f22; }
     .gift-hero { background: linear-gradient(110deg, rgba(30,17,10,.96), rgba(59,35,20,.88)), url('echiquier.avif') center/cover; padding: clamp(4rem,8vw,7rem) 1.2rem; color: #fff; }
-    .gift-hero .container { max-width: 1050px; }
+    .gift-hero .container { max-width: 1050px; text-align: center; }
     .gift-hero .breadcrumb { color: rgba(255,255,255,.72); font-family: Montserrat,sans-serif; font-size: .78rem; margin-bottom: 1.6rem; }
     .gift-hero .breadcrumb a { color: #fff; }
-    .gift-hero h1 { max-width: 900px; margin-bottom: 1rem; }
-    .gift-hero__lead { max-width: 760px; color: rgba(255,255,255,.9); font-size: clamp(1.05rem,2vw,1.28rem); line-height: 1.75; }
-    .gift-hero__actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
-    .gift-hero .gift-secondary { background: transparent !important; border-color: #fff !important; color: #fff !important; }
-    .gift-hero .gift-secondary:hover { background: #fff !important; color: var(--walnut) !important; }
+    .gift-hero h1 { max-width: 900px; margin: 0 auto 1.4rem; text-wrap: balance; }
+    .gift-hero__lead { max-width: 760px; margin: 0 auto; color: rgba(255,255,255,.9); font-size: clamp(1.05rem,2vw,1.28rem); line-height: 1.75; text-wrap: pretty; }
+    .gift-hero__actions { display: flex; justify-content: center; align-items: stretch; flex-wrap: wrap; gap: 1rem; margin-top: 2.2rem; }
+    .gift-hero .breadcrumb { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: .7rem; opacity: 1; }
     .answer-box { margin: 0 0 2.5rem; padding: 1.5rem 1.7rem; border: 1px solid var(--silver); border-left: 4px solid var(--accent); background: var(--off-white); }
     .answer-box p { margin: 0; font-size: 1.1rem; line-height: 1.8; }
     .gift-plans { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.2rem; margin: 2rem 0 3rem; }
@@ -423,6 +422,28 @@
     .gift-cta .btn { background: #fff; color: var(--walnut); border-color: #fff; }
     .gift-cta .btn-outline { background: transparent; color: #fff; }
     .gift-cta .btn:hover { background: var(--accent); border-color: var(--accent); }
+    /* Boutons de cette page : même hauteur, libellés lisibles et hiérarchie claire. */
+    .gift-hero__actions .btn, .gift-book .btn, .gift-cta__actions .btn, .gift-cahier a, .gift-packs a {
+      display: inline-flex; align-items: center; justify-content: center; gap: .7rem;
+      min-height: 52px; max-width: 100%; padding: .95rem 1.5rem; box-sizing: border-box;
+      border: 1px solid #203e35; border-radius: 8px; background: #203e35; color: #fff9ed;
+      font: 600 .9rem/1.45 Montserrat,sans-serif; letter-spacing: .015em; text-transform: none;
+      text-decoration: none; text-align: center;
+      transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+    .gift-book .btn:hover, .gift-cahier a:hover, .gift-packs a:hover { background: #142d25; border-color: #142d25; color: #fff9ed; box-shadow: 0 4px 12px rgba(20,45,37,.15); }
+    .gift-hero__actions .btn, .gift-cta__actions .btn { min-width: 230px; background: #f0d39a; border-color: #f0d39a; color: #302315; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+    .gift-hero__actions .btn:hover, .gift-cta__actions .btn:hover { background: #ffe4b3; border-color: #ffe4b3; color: #302315; }
+    .gift-hero__actions .gift-secondary, .gift-cta__actions .btn-outline { background: transparent; border-color: rgba(255,249,237,.6); color: #fff9ed; box-shadow: none; }
+    .gift-hero__actions .gift-secondary:hover, .gift-cta__actions .btn-outline:hover { background: rgba(255,249,237,.12); border-color: #fff9ed; color: #fff9ed; }
+    .gift-hero__actions .btn-light::after, .gift-book .btn::after, .gift-packs a::after { content: '\2192'; font-size: 1.2rem; line-height: 1; }
+    .gift-hero__actions .btn:focus-visible, .gift-book .btn:focus-visible, .gift-cta__actions .btn:focus-visible, .gift-cahier a:focus-visible, .gift-packs a:focus-visible { outline: 3px solid #b08a38; outline-offset: 4px; }
+    .gift-hero__actions .btn:focus-visible, .gift-cta__actions .btn:focus-visible { outline-color: #fff9ed; }
+    .gift-packs a { align-self: flex-start; margin-top: auto; }
+    .gift-packs > div { gap: .8rem; }
+    .gift-cahier a { min-height: 44px; padding: .7rem 1rem; margin-top: .4rem; }
+    @media (max-width: 760px) { .gift-hero__actions, .gift-cta__actions { flex-direction: column; align-items: stretch; } .gift-hero__actions .btn, .gift-cta__actions .btn { min-width: 0; } .gift-hero .container { padding-inline: 0; } }
+    @media (prefers-reduced-motion: reduce) { .gift-hero__actions .btn, .gift-book .btn, .gift-cta__actions .btn, .gift-cahier a, .gift-packs a { transition: none; } }
     @media (max-width: 760px) { .gift-plans, .gift-ideas { grid-template-columns: 1fr; } .gift-hero__actions .btn, .gift-cta__actions .btn { width: 100%; } }
     /* Impression : la page cadeau est faite pour être imprimée et offerte */
     @media print {
@@ -439,6 +460,7 @@
   <link rel="stylesheet" href="site-navigation.css">
   <script src="site-navigation.js" defer></script>
   <link rel="stylesheet" href="cadeaux-noel.css?v=1">
+  <script src="paiement-liens.js?v=1" defer></script>
   <link rel="stylesheet" href="promo-rentree.css?v=7">
   <script src="promo-rentree.js?v=7" defer></script>
 </head>

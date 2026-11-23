@@ -1,6 +1,6 @@
 # Paiement intégré — préparation du 22 novembre 2026
 
-État au 22 novembre 2026 (soir) : le site est publié avec les cinq liens Stripe hébergés ; les inclusions de paiement-liens.js ont été retirées de cahiers-exercices-echecs.html, idee-cadeau-echecs.html, livres.html et edition-raffinee/index.html, car le Worker n'a pas pu être déployé (Wrangler non connecté, et la clé api/.env.stripe est restreinte aux produits, prix et liens de paiement : elle ne permet pas de créer des Checkout Sessions). Pour activer : wrangler login, secret STRIPE_SECRET_KEY avec la permission Checkout Sessions en écriture, test complet, déploiement du Worker, puis remettre la ligne <script src="paiement-liens.js?v=1" defer></script> (préfixe ../ pour edition-raffinee) dans ces quatre pages. Les cinq Payment Links existants ont déjà été mis à jour par API avec son autorisation. Les prix et URL sont conservés. Aucun paiement n'a été effectué.
+État au 23 novembre 2026 : paiement intégré ACTIF. Worker déployé (version ed4bc3d4) avec STRIPE_SECRET_KEY (clé restreinte avec Checkout Sessions en écriture) et CHECKOUT_IP_LIMITER ; checkout-config refuse les origines externes (403). Test serveur réel sans paiement : session trio à 60 € créée par le Worker avec couleur et produit en métadonnées, puis expirée. paiement-liens.js est réinclus dans les quatre pages commerciales ; paiement.html reprend l'en-tête, le pied de page, les polices et les couleurs du site. Retour au parcours hébergé : retirer ces quatre inclusions.
 
 ## Architecture
 

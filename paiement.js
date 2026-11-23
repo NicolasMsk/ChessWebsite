@@ -17,12 +17,12 @@
   try{
    var session=await request('/checkout-session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({product:id,color:color,email:email,phone:phone,guestToken:config.guestToken})});
    var stripe=Stripe(config.publishableKey,{locale:'fr'});
-   var checkout=stripe.initCheckoutElementsSdk({clientSecret:session.clientSecret,defaultValues:{email:email,phoneNumber:phone},elementsOptions:{appearance:{theme:'flat',variables:{colorPrimary:'#203e35',colorBackground:'#fffdf9',colorText:'#3e2c1c',colorDanger:'#9a342b',fontFamily:'Georgia, serif',fontSizeBase:'16px',borderRadius:'6px'}}}});
+   var checkout=stripe.initCheckoutElementsSdk({clientSecret:session.clientSecret,defaultValues:{email:email,phoneNumber:phone},elementsOptions:{fonts:[{cssSrc:'https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:wght@500;600&display=swap'}],appearance:{theme:'stripe',variables:{colorPrimary:'#3b2314',colorBackground:'#ffffff',colorText:'#111111',colorTextSecondary:'#555555',colorDanger:'#8b3a3a',fontFamily:'Lora, Georgia, serif',fontSizeBase:'16px',borderRadius:'0px',spacingUnit:'4px'},rules:{'.Label':{fontFamily:'Montserrat, sans-serif',fontWeight:'600',fontSize:'14px',color:'#111111'},'.Input':{border:'1px solid #c9bfb1',boxShadow:'none'},'.Input:focus':{border:'1px solid #3b2314',boxShadow:'0 0 0 2px rgba(201,168,76,.45)'},'.Tab, .Block':{border:'1px solid #e4ddd2',boxShadow:'none'},'.Tab--selected':{borderColor:'#3b2314'}}}}});
    var result=await checkout.loadActions();if(result.type!=='success')throw new Error('Le paiement sécurisé n’a pas pu être préparé.');actions=result.actions;
    checkout.createShippingAddressElement({autocomplete:{mode:'disabled'}}).mount('#shipping-address-element');checkout.createPaymentElement().mount('#payment-element');
    function updateTotal(){var current=actions.getSession();var amount=current.total.total.amount;$('summary-total').textContent=amount;$('pay-button').textContent='Payer '+amount;}
    updateTotal();checkout.on('change',updateTotal);
-   $('contact-recap').textContent=email+' · '+phone+(color?' · Livre '+config.colors[color].toLowerCase():'');$('details-form').hidden=true;$('payment-form').hidden=false;$('pay-button').disabled=false;
+   $('contact-recap').textContent=email+' · '+phone+(color?' · Livre '+config.colors[color].toLowerCase():'');$('details-form').hidden=true;$('payment-form').hidden=false;var steps=document.querySelectorAll('.checkout-steps li');if(steps.length===2){steps[0].classList.remove('is-current');steps[1].classList.add('is-current');}$('pay-button').disabled=false;
   }catch(e){error(e.message);$('continue-button').disabled=false;}
  });
  $('payment-form').addEventListener('submit',async function(event){event.preventDefault();if(!this.reportValidity()||!actions)return;$('checkout-error').hidden=true;$('pay-button').disabled=true;
