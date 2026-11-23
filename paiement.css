@@ -72,10 +72,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; 
 .checkout-panel .color-options label:has(input:checked) { border: 2px solid var(--walnut); padding: calc(.75rem - 1px) calc(.8rem - 1px); background: var(--beige); }
 .color-options input { accent-color: var(--walnut); }
 .swatch { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,0,0,.2); flex-shrink: 0; }
-.swatch-red { background: #902c35; }
-.swatch-green { background: #425d41; }
-.swatch-blue { background: #294c73; }
-.swatch-brown { background: #795139; }
+.color-choice + .color-choice { margin-top: 1.4rem; }
+.swatch-rouge { background: #6e1f2b; }  /* bordeaux */
+.swatch-vert { background: #5f6a36; }   /* vert olive */
+.swatch-bleu { background: #1f3152; }   /* bleu marine */
+.swatch-marron { background: #6b4630; }
 
 /* Boutons : ceux du site (noyer, capitales espacées, angles droits) */
 .checkout-button { display: block; width: 100%; min-height: 52px; margin: 1.5rem 0 .8rem; padding: .95rem 1.2rem; border: 2px solid var(--walnut); border-radius: 0; background: var(--walnut); color: #fff; font: 600 .9rem 'Montserrat', sans-serif; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; transition: background .2s, border-color .2s; }

@@ -10,15 +10,39 @@ export const PACK_PRODUCT_ID = 'pack_livres_relies';
 export const PACK_AMOUNT_CENTS = 4000;
 export const PACK_NAME = 'Apprendre les Échecs — Volumes I & II (édition reliée à la main)';
 export const DELAI_LIVRAISON = '7 jours maximum';
-export const BOOK_COLORS = Object.freeze({ rouge: 'Rouge', vert: 'Vert', bleu: 'Bleu', marron: 'Marron' });
-function bookColor(session) {
+/** Coloris des couvertures (clés historiques conservées pour les Payment Links). */
+export const BOOK_COLORS = Object.freeze({ rouge: 'Bordeaux', vert: 'Vert olive', bleu: 'Bleu marine', marron: 'Marron' });
+/** Ouvrages dont le client choisit la couleur, et leur présence dans chaque produit. */
+export const OUVRAGES = Object.freeze({
+  livre: 'Livre relié',
+  mats: 'Cahier « Mes premiers mats »',
+  tactiques: 'Cahier « Mes premières tactiques »',
+});
+export const OUVRAGES_PAR_PRODUIT = Object.freeze({
+  [PACK_PRODUCT_ID]: ['livre'],
+  cahier_mats: ['mats'],
+  cahier_tactiques: ['tactiques'],
+  cahiers_pack: ['mats', 'tactiques'],
+  trio_livre_cahiers: ['livre', 'mats', 'tactiques'],
+});
+/** Couleurs lues dans la session : metadata couleur_<ouvrage>, ou anciens champs du livre. */
+function sessionColors(session) {
   const product = session.metadata?.product || PACK_PRODUCT_ID;
-  if (![PACK_PRODUCT_ID, 'trio_livre_cahiers'].includes(product)) return '';
+  const items = OUVRAGES_PAR_PRODUIT[product] || [];
   const field = Array.isArray(session.custom_fields) ? session.custom_fields.find(f => f?.key === 'couleur_livre') : null;
-  const value = session.metadata?.book_color || field?.dropdown?.value || '';
-  return Object.hasOwn(BOOK_COLORS, value) ? value : '';
+  const colors = {};
+  for (const item of items) {
+    let value = session.metadata?.['couleur_' + item] || '';
+    if (item === 'livre' && !value) value = session.metadata?.book_color || field?.dropdown?.value || '';
+    if (Object.hasOwn(BOOK_COLORS, value)) colors[item] = value;
+  }
+  return colors;
 }
-function colorLabel(order) { return Object.hasOwn(BOOK_COLORS, order.book_color) ? BOOK_COLORS[order.book_color] : ''; }
+/** Lignes « Livre relié : Bordeaux », y compris pour les commandes enregistrées avant le choix par ouvrage. */
+function colorLines(order) {
+  const colors = order.colors && typeof order.colors === 'object' ? order.colors : (order.book_color ? { livre: order.book_color } : {});
+  return Object.keys(OUVRAGES).filter(k => Object.hasOwn(BOOK_COLORS, colors[k])).map(k => OUVRAGES[k] + ' : ' + BOOK_COLORS[colors[k]]);
+}
 
 /**
  * Catalogue des produits physiques vendus par Payment Link. La clé est la
@@ -146,7 +170,8 @@ export function buildOrderRecord(session, nowIso) {
     email: str(customer.email || s.customer_email).toLowerCase(),
     name: str(shipping.name || customer.name),
     phone: str(customer.phone || shipping.phone),
-    book_color: bookColor(s),
+    colors: sessionColors(s),
+    book_color: sessionColors(s).livre || '',
     address: {
       line1: str(address.line1),
       line2: str(address.line2),
@@ -207,7 +232,7 @@ export function orderConfirmationHtml(order) {
           </div>
 
           <p style="margin:0 0 20px;">
-            ${colorLabel(order) ? '<strong>Couleur du livre : ' + escapeHtml(colorLabel(order)) + '</strong><br>' : ''}
+            ${colorLines(order).length ? '<strong>Couleur' + (colorLines(order).length > 1 ? 's' : '') + ' choisie' + (colorLines(order).length > 1 ? 's' : '') + '</strong><br>' + colorLines(order).map(escapeHtml).join('<br>') + '<br><br>' : ''}
             ${escapeHtml(p.fabrication)}
             Compte <strong>${DELAI_LIVRAISON}</strong> avant de le recevoir.
           </p>
@@ -262,7 +287,7 @@ ${formatAmount(order.amount_total)} - livraison comprise
 ADRESSE DE LIVRAISON
 ${lignes}
 
-${colorLabel(order) ? 'Couleur du livre : ' + colorLabel(order) + '\n' : ''}${p.fabrication}
+${colorLines(order).length ? 'COULEURS CHOISIES\n' + colorLines(order).join('\n') + '\n\n' : ''}${p.fabrication}
 Compte ${DELAI_LIVRAISON} avant de le recevoir.
 
 Vous en avez besoin plus vite ? Repondez a cet email : je regarde ce que je peux faire
@@ -302,7 +327,7 @@ export function orderAdminHtml(order) {
 
     <p style="margin:6px 0;"><strong>Email :</strong> <a href="mailto:${escapeHtml(order.email)}">${escapeHtml(order.email)}</a></p>
     <p style="margin:6px 0;"><strong>Telephone :</strong> ${escapeHtml(order.phone) || '&mdash;'}</p>
-    ${colorLabel(order) ? '<p style="margin:6px 0;"><strong>Couleur du livre :</strong> ' + escapeHtml(colorLabel(order)) + '</p>' : ''}
+    ${colorLines(order).map((l) => '<p style="margin:6px 0;"><strong>Couleur</strong> &mdash; ' + escapeHtml(l) + '</p>').join('')}
     <p style="margin:6px 0;"><strong>Produit :</strong> ${escapeHtml(produitDe(order).nom)} <span style="color:#999;">(${escapeHtml(order.product)})</span></p>
     <p style="margin:6px 0;"><strong>Montant :</strong> ${formatAmount(order.amount_total)}</p>
     <p style="margin:6px 0;"><strong>Date :</strong> ${escapeHtml(order.date)}</p>
@@ -332,7 +357,7 @@ export function csvField(value) {
 
 export function ordersToCsv(orders) {
   const entete =
-    'date,id,email,nom,telephone,adresse1,adresse2,code_postal,ville,pays,montant_eur,statut,couleur_livre';
+    'date,id,email,nom,telephone,adresse1,adresse2,code_postal,ville,pays,montant_eur,statut,couleurs';
   const lignes = orders.map((o) =>
     [
       o.date,
@@ -347,7 +372,7 @@ export function ordersToCsv(orders) {
       o.address?.country,
       ((Number(o.amount_total) || 0) / 100).toFixed(2),
       o.status,
-      colorLabel(o),
+      colorLines(o).join(' / '),
     ]
       .map(csvField)
       .join(',')

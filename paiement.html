@@ -15,9 +15,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="paiement.css?v=3">
+  <link rel="stylesheet" href="paiement.css?v=4">
   <script src="https://js.stripe.com/endive/stripe.js" defer></script>
-  <script src="paiement.js?v=2" defer></script>
+  <script src="paiement.js?v=3" defer></script>
 </head>
 <body>
   <header class="checkout-header">
@@ -61,14 +61,7 @@
       <p id="checkout-loading" role="status">Chargement du paiement sécurisé…</p>
       <div id="checkout-error" class="checkout-error" role="alert" hidden></div>
       <form id="details-form" hidden>
-        <fieldset id="book-color"><legend>Couleur du livre <span>(obligatoire)</span></legend><p class="field-help">Le choix concerne la couverture du livre relié, y compris dans le trio. Les cahiers gardent leurs couleurs.</p>
-          <div class="color-options">
-            <label><input type="radio" name="book_color" value="rouge" required><span class="swatch swatch-red" aria-hidden="true"></span>Rouge</label>
-            <label><input type="radio" name="book_color" value="vert" required><span class="swatch swatch-green" aria-hidden="true"></span>Vert</label>
-            <label><input type="radio" name="book_color" value="bleu" required><span class="swatch swatch-blue" aria-hidden="true"></span>Bleu</label>
-            <label><input type="radio" name="book_color" value="marron" required><span class="swatch swatch-brown" aria-hidden="true"></span>Marron</label>
-          </div>
-        </fieldset>
+        <div id="color-choices"><p class="field-help">Chaque ouvrage est cousu à la main : choisissez la couleur de couverture de chacun.</p></div>
         <label for="customer-email">Adresse email</label><input id="customer-email" name="email" type="email" autocomplete="email" maxlength="254" required>
         <label for="customer-phone">Téléphone <span>(obligatoire)</span></label><input id="customer-phone" name="phone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78" maxlength="26" required>
         <p class="field-help">Pour vous joindre au sujet de votre commande ou de la livraison.</p>

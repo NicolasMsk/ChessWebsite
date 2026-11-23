@@ -10,7 +10,7 @@ const faq=schemas.find(s=>s['@type']==='FAQPage');
 const plain=s=>s.replace(/<[^>]+>/g,'').replaceAll('&nbsp;',' ').replaceAll('&amp;','&').replace(/\s+/g,' ').trim();
 test('Titre, description et H1 ciblent le livre débutant sans duplication',()=>{
  assert.equal((html.match(/<h1>/g)||[]).length,1);
- assert.match(html,/<title>Livre pour apprendre les échecs — Spécial débutants<\/title>/);
+ assert.match(html,/<title>Livre d’échecs fait main : un cadeau unique à 40 €<\/title>/);
  const description=html.match(/name="description" content="([^"]+)"/)[1];
  assert.ok(description.length<=165);
  assert.match(description,/Nicolas Musicki/);

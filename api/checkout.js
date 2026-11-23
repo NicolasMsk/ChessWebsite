@@ -1,31 +1,41 @@
 import {readLimitedText,hash} from './security.js';
-import {PACK_AMOUNT_CENTS,PACK_PRODUCT_ID,PACK_NAME,DELAI_LIVRAISON,BOOK_COLORS} from './order.js';
+import {PACK_AMOUNT_CENTS,PACK_PRODUCT_ID,PACK_NAME,DELAI_LIVRAISON,BOOK_COLORS,OUVRAGES,OUVRAGES_PAR_PRODUIT} from './order.js';
 
-export {BOOK_COLORS};
+export {BOOK_COLORS,OUVRAGES,OUVRAGES_PAR_PRODUIT};
 export const CHECKOUT_PRODUCTS=Object.freeze({
- [PACK_PRODUCT_ID]:{name:PACK_NAME,amount:PACK_AMOUNT_CENTS,book:true,image:'images/reliure/pack-2026-echiquier.webp'},
- cahier_mats:{name:'Mes premiers mats en un coup — cahier A6',amount:1500,book:false,image:'images/cahiers/cahiers-duo-photo.webp'},
- cahier_tactiques:{name:'Mes premières tactiques — cahier A6',amount:1500,book:false,image:'images/cahiers/cahier-tactiques-photo.webp'},
- cahiers_pack:{name:'Les deux cahiers nomades — mats et tactiques',amount:2500,book:false,image:'images/cahiers/cahiers-duo-photo.webp'},
- trio_livre_cahiers:{name:'Le trio — livre relié et deux cahiers',amount:6000,book:true,image:'images/reliure/pack-2026-echiquier.webp'}
+ [PACK_PRODUCT_ID]:{name:PACK_NAME,amount:PACK_AMOUNT_CENTS,book:true,items:OUVRAGES_PAR_PRODUIT[PACK_PRODUCT_ID],image:'images/reliure/pack-2026-echiquier.webp'},
+ cahier_mats:{name:'Mes premiers mats en un coup — cahier A6',amount:1500,book:false,items:OUVRAGES_PAR_PRODUIT.cahier_mats,image:'images/cahiers/cahiers-duo-photo.webp'},
+ cahier_tactiques:{name:'Mes premières tactiques — cahier A6',amount:1500,book:false,items:OUVRAGES_PAR_PRODUIT.cahier_tactiques,image:'images/cahiers/cahier-tactiques-photo.webp'},
+ cahiers_pack:{name:'Les deux cahiers nomades — mats et tactiques',amount:2500,book:false,items:OUVRAGES_PAR_PRODUIT.cahiers_pack,image:'images/cahiers/cahiers-duo-photo.webp'},
+ trio_livre_cahiers:{name:'Le trio — livre relié et deux cahiers',amount:6000,book:true,items:OUVRAGES_PAR_PRODUIT.trio_livre_cahiers,image:'images/reliure/pack-2026-echiquier.webp'}
 });
 const API_VERSION='2026-11-18.endive';
 const SITE='https://www.cours-echecs-paris.fr';
 const fail=(message,status=400)=>Object.assign(new Error(message),{status});
 function reply(data,status,origin){return new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json','Access-Control-Allow-Origin':origin,'Vary':'Origin','Cache-Control':'no-store'}})}
-export function sessionParameters(product,color){
+/** Une couleur par ouvrage du produit : {livre:'rouge', mats:'vert', …}. Aucune clé en trop. */
+export function normalizeColors(product,colors){
  if(!Object.hasOwn(CHECKOUT_PRODUCTS,product))throw fail('Choisissez un ouvrage.');
+ const items=CHECKOUT_PRODUCTS[product].items;
+ if(!colors||typeof colors!=='object'||Array.isArray(colors))throw fail('Choisissez la couleur de chaque ouvrage.');
+ for(const key of Object.keys(colors))if(!items.includes(key))throw fail('Couleur demandée pour un ouvrage absent de la commande.');
+ const out={};
+ for(const item of items){if(!Object.hasOwn(BOOK_COLORS,colors[item]))throw fail('Choisissez la couleur : '+OUVRAGES[item]+'.');out[item]=colors[item];}
+ return out;
+}
+export function sessionParameters(product,colors){
+ const chosen=normalizeColors(product,colors);
  const p=CHECKOUT_PRODUCTS[product];
- if(p.book&&!Object.hasOwn(BOOK_COLORS,color))throw fail('Choisissez la couleur du livre.');
- if(!p.book&&color)throw fail('Ce produit ne propose pas de couleur au choix.');
+ const summary=p.items.map(i=>OUVRAGES[i]+' : '+BOOK_COLORS[chosen[i]].toLowerCase()).join(' ; ');
  const values={mode:'payment',ui_mode:'elements',locale:'fr',
   'line_items[0][price_data][currency]':'eur','line_items[0][price_data][unit_amount]':String(p.amount),
   'line_items[0][price_data][product_data][name]':p.name,
-  'line_items[0][price_data][product_data][description]':'Livraison comprise sous '+DELAI_LIVRAISON+' en France métropolitaine.',
+  'line_items[0][price_data][product_data][description]':'Couleurs — '+summary+'. Livraison comprise sous '+DELAI_LIVRAISON+' en France métropolitaine.',
   'line_items[0][quantity]':'1','metadata[product]':product,'payment_intent_data[metadata][product]':product,
   'phone_number_collection[enabled]':'true','shipping_address_collection[allowed_countries][0]':'FR',
   'return_url':SITE+'/commande-confirmee.html?session_id={CHECKOUT_SESSION_ID}'};
- if(p.book){values['metadata[book_color]']=color;values['payment_intent_data[metadata][book_color]']=color;}
+ for(const item of p.items){values['metadata[couleur_'+item+']']=chosen[item];values['payment_intent_data[metadata][couleur_'+item+']']=chosen[item];}
+ if(chosen.livre){values['metadata[book_color]']=chosen.livre;values['payment_intent_data[metadata][book_color]']=chosen.livre;}
  return values;
 }
 async function stripe(endpoint,env,values,idempotencyKey){
@@ -45,7 +55,7 @@ export async function handleCheckout(request,env){
   if(url.pathname==='/checkout-config'&&request.method==='GET'){
    const token=crypto.randomUUID();
    await env.SUBSCRIBERS.put('checkout:guest:'+await hash(token),JSON.stringify({ip:await hash(ip)}),{expirationTtl:900});
-   return reply({publishableKey:env.STRIPE_PUBLISHABLE_KEY,guestToken:token,products:CHECKOUT_PRODUCTS,colors:BOOK_COLORS},200,origin);
+   return reply({publishableKey:env.STRIPE_PUBLISHABLE_KEY,guestToken:token,products:CHECKOUT_PRODUCTS,colors:BOOK_COLORS,items:OUVRAGES},200,origin);
   }
   if(url.pathname==='/checkout-session'&&request.method==='POST'){
    if(!request.headers.get('Content-Type')?.startsWith('application/json'))throw fail('Format de requête non valide.',415);
@@ -56,8 +66,10 @@ export async function handleCheckout(request,env){
    const raw=await env.SUBSCRIBERS.get(guestKey);
    const guest=raw?JSON.parse(raw):null;
    if(!guest||guest.ip!==await hash(ip))throw fail('Votre session a expiré. Rechargez la page.',403);
-   const color=input.color||'';
-   const values=sessionParameters(input.product,color);
+   // Ancienne page en cache : une seule couleur, celle du livre.
+   const requested=input.colors!==undefined?input.colors:(input.color?{livre:input.color}:{});
+   const values=sessionParameters(input.product,requested);
+   const color=CHECKOUT_PRODUCTS[input.product].items.map(i=>i+'='+values['metadata[couleur_'+i+']']).join(',');
    if(!/^[^\s@<>"\u0000-\u001f]+@[^\s@<>"\u0000-\u001f]+\.[^\s@<>"\u0000-\u001f]{2,}$/.test(input.email||'')||input.email.length>254)throw fail('Vérifiez votre adresse email.');
    if(!/^[+\d][\d ().-]{6,24}$/.test(input.phone||'')||(input.phone.match(/\d/g)||[]).length<8)throw fail('Indiquez un numéro de téléphone valide.');
    if(guest.selection&&guest.selection!==input.product+':'+color+':'+input.email)throw fail('Rechargez la page pour changer votre commande.',409);

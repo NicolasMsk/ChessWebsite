@@ -223,7 +223,7 @@ test('ordersToCsv produit un en-tête et une ligne par commande', () => {
   assert.equal(lignes.length, 2);
   assert.equal(
     lignes[0],
-    'date,id,email,nom,telephone,adresse1,adresse2,code_postal,ville,pays,montant_eur,statut,couleur_livre'
+    'date,id,email,nom,telephone,adresse1,adresse2,code_postal,ville,pays,montant_eur,statut,couleurs'
   );
   assert.match(lignes[1], /Marie Dupont/);
   assert.match(lignes[1], /64\.99/);
@@ -302,7 +302,15 @@ test('couleur du livre conservée depuis Elements et Payment Links jusque dans e
   for(const body of [orderConfirmationHtml(order),orderConfirmationText(order),orderAdminHtml(order),ordersToCsv([order])])assert.match(body,/Bleu/);
  }
 });
-test('couleur absente ou invalide reste vide, cahiers sans choix de couleur',()=>{
+test('couleur de chaque ouvrage du duo et du trio conservée jusque dans emails et CSV',()=>{
+ const order=buildOrderRecord({...sessionModerne,metadata:{product:'trio_livre_cahiers',couleur_livre:'rouge',couleur_mats:'vert',couleur_tactiques:'bleu'}},'2026-11-23T12:00:00Z');
+ assert.deepEqual(order.colors,{livre:'rouge',mats:'vert',tactiques:'bleu'});assert.equal(order.book_color,'rouge');
+ for(const body of [orderConfirmationHtml(order),orderConfirmationText(order),orderAdminHtml(order),ordersToCsv([order])]){assert.match(body,/Bordeaux/);assert.match(body,/Vert olive/);assert.match(body,/Bleu marine/);assert.match(body,/premières tactiques/);}
+ const duo=buildOrderRecord({...sessionModerne,metadata:{product:'cahiers_pack',couleur_mats:'marron',couleur_tactiques:'<b>',couleur_livre:'rouge'}},'2026-11-23T12:00:00Z');
+ assert.deepEqual(duo.colors,{mats:'marron'});assert.equal(duo.book_color,'');assert.doesNotMatch(orderConfirmationHtml(duo),/<b>|Livre relié :/);
+ assert.match(ordersToCsv([{date:'x',book_color:'vert'}]),/Livre relié : Vert olive/);
+});
+test('couleur absente ou invalide reste vide',()=>{
  for(const source of [{metadata:{product:PACK_PRODUCT_ID,book_color:'<script>'}},{metadata:{product:'cahier_mats',book_color:'rouge'}},{}]){
  const order=buildOrderRecord({...sessionModerne,...source},'2026-11-22T12:00:00Z');assert.equal(order.book_color,'');assert.doesNotMatch(orderConfirmationHtml(order),/Couleur du livre/);
  }
