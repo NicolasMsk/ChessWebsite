@@ -43,7 +43,7 @@ const FICHIERS_PRIX = [
 
 /** Dossiers jamais publiés ou hors périmètre du site. */
 const DOSSIERS_IGNORES = new Set([
-  '.git', '.claude', '.playwright-mcp', 'node_modules', 'temp', 'tmp', 'docs', 'tests',
+  '.git', '.claude', '.playwright-mcp', '.pytest_cache', 'node_modules', 'temp', 'tmp', 'docs', 'tests',
   'scripts', 'ebook', 'campagnes-email', 'analytics-local', 'api', '_data', 'fichiers', 'images',
 ]);
 

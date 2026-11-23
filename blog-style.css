@@ -1120,6 +1120,23 @@ button:focus {
   }
 }
 
+/* Lectures complémentaires : liens HTML choisis pour chaque article. */
+.blog-related { margin: 40px 0; padding: clamp(22px, 4vw, 32px); background: #faf6ef; border: 1px solid #e5dccc; border-radius: 12px; }
+.blog-related .blog-related__eyebrow { margin: 0 0 8px; color: #77613a; font: 600 .75rem/1.5 Montserrat,sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.blog-related .blog-related__title { margin: 0 0 22px; padding: 0; border: 0; color: #3e2c1c; text-align: left; font-size: clamp(1.5rem, 3vw, 1.9rem); }
+.blog-related .blog-related__title::after { display: none; }
+.blog-related .blog-related__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; padding: 0; margin: 0; }
+.blog-related .blog-related__list > li { display: flex; min-width: 0; padding: 0; margin: 0; list-style: none; }
+.blog-related .blog-related__list > li::before { content: none; }
+.blog-related .blog-related__card { display: flex; flex-direction: column; width: 100%; min-width: 0; box-sizing: border-box; padding: 20px; border: 1px solid #dfd5c5; border-radius: 8px; background: #fff; color: #3e2c1c; text-decoration: none; transition: border-color .18s ease, box-shadow .18s ease; }
+.blog-related .blog-related__card h3 { margin: 0 0 12px; padding: 0; color: #203e35; font: 600 1.15rem/1.45 'Playfair Display',Georgia,serif; text-transform: none; letter-spacing: 0; }
+.blog-related .blog-related__card p { margin: 0 0 18px; color: #665d51; font: 400 .9rem/1.65 Lora,Georgia,serif; }
+.blog-related .blog-related__read { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; color: #203e35; font: 600 .8rem/1.5 Montserrat,sans-serif; }
+.blog-related .blog-related__card:hover { border-color: #8a6f22; box-shadow: 0 4px 16px rgba(62,44,28,.08); }
+.blog-related .blog-related__card:focus-visible { outline: 3px solid #8a6f22; outline-offset: 4px; }
+@media (max-width: 800px) { .blog-related .blog-related__list { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .blog-related .blog-related__card { transition: none; } }
+
 /* Diagrammes d'échiquier (SVG générés depuis les positions du guide) */
 .diagramme {
   margin: 28px auto;

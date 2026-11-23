@@ -32,6 +32,7 @@ dist/
 build/
 *.tsbuildinfo
 __pycache__/
+.pytest_cache/
 
 # ============================================================
 #  TRAVAIL EN COURS — non destiné au site publié
