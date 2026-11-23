@@ -37,7 +37,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; 
 
 /* Récapitulatif */
 .order-card { display: grid; grid-template-columns: 7.5rem minmax(0,1fr); gap: 1.2rem; align-items: center; padding: 1.2rem; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--accent); }
-.order-card img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--beige); border: 1px solid var(--line); }
+/* height:auto obligatoire : sans lui, l'attribut height="1402" du HTML fixe la hauteur réelle de l'image. */
+.order-card img { display: block; width: 100%; height: auto; max-height: 11rem; object-fit: contain; background: var(--beige); border: 1px solid var(--line); }
 .order-card h2 { font-size: 1.2rem; line-height: 1.3; margin: 0 0 .5rem; }
 .order-total { font: 700 1.9rem/1.1 'Playfair Display', Georgia, serif; color: var(--walnut); margin: 0; }
 .order-shipping { font: 500 .82rem 'Montserrat', sans-serif; color: var(--muted); margin: .4rem 0 0; }
