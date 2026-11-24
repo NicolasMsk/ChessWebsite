@@ -66,4 +66,19 @@ class DiagrammesTests(unittest.TestCase):
         check['afterChecks'][0]['targets']=['c4','f3']
         with self.assertRaises(AssertionError):module.board_for(record)
 
+    def test_caro_kann_g4_is_defended_by_the_queen(self):
+        board=module.board_for(DATA['ouverture-caro-kann-decision.svg'])
+        self.assertIsNone(board.piece_at(module.chess.F3))
+        self.assertEqual(board.piece_at(module.chess.G1),module.chess.Piece.from_symbol('N'))
+        self.assertEqual(board.piece_at(module.chess.C3),module.chess.Piece.from_symbol('N'))
+        self.assertIn(module.chess.G4,board.attacks(module.chess.D1))
+        board.push_san('Bxg4')
+        board.push_san('Qxg4')
+        self.assertEqual(board.piece_at(module.chess.G4),module.chess.Piece.from_symbol('Q'))
+
+    def test_caro_kann_knight_on_f3_breaks_the_queen_defence(self):
+        board=module.chess.Board()
+        for move in 'e4 c6 d4 d5 e5 Bf5 Nf3 e6 g4 Bxg4'.split():board.push_san(move)
+        with self.assertRaises(ValueError):board.parse_san('Qxg4')
+
 if __name__=='__main__':unittest.main()

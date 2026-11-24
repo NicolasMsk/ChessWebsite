@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -10 360 350" width="360" height="350" role="img" aria-labelledby="diagram-title" data-fen="r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQ1RK1 b kq - 2 5">
-<title id="diagram-title">Italienne : roi blanc en sécurité après le petit roque</title>
+<title id="diagram-title">Après 5. O-O, le roi blanc est en g1 et la tour en f1 ; les Noirs ont leurs cavaliers en c6 et f6 et leur fou en c5.</title>
 <defs>
 <pattern id="cases" width="80" height="80" patternUnits="userSpaceOnUse"><rect width="80" height="80" fill="#B58863"/><rect width="40" height="40" fill="#F0D9B5"/><rect x="40" y="40" width="40" height="40" fill="#F0D9B5"/></pattern>
 <marker id="pointe" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B05E17"/></marker>

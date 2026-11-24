@@ -150,7 +150,18 @@
     "san": "e4 c6 d4 d5 e5",
     "solutionSan": "Bf5",
     "turn": "black",
-    "answer": "3…Ff5 : le fou passe par d7 et e6, puis rejoint f5. Les deux cases sont libres puisque le pion d a quitté d7 et le pion e n’a pas encore avancé. Le fou pourra ensuite être visé : sa sécurité reste à vérifier."
+    "answer": "3…Ff5 : le fou passe par d7 et e6, puis rejoint f5. Les deux cases sont libres puisque le pion d a quitté d7 et le pion e n’a pas encore avancé. Le fou pourra ensuite être visé : sa sécurité reste à vérifier.",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Bf5",
+        "afterChecks": [
+          {
+            "type": "notCheck"
+          }
+        ]
+      }
+    ]
   },
   "sources": [
     {
@@ -222,15 +233,15 @@
     ],
     "caseStudy": {
       "title": "Le fou est sorti : il faut encore le garder en sécurité",
-      "context": "Les Noirs ont joué …Ff5 puis …e6 dans la variante d’avance. Les Blancs viennent d’avancer g4. Le pion g4 attaque directement le fou f5 ; la solidité du centre ne protège pas cette pièce.",
+      "context": "Les Noirs ont joué …Ff5 puis …e6 dans la variante d’avance. Les Blancs ont développé Cc3 et viennent d’avancer g4. Le pion g4 attaque le fou f5. Le cavalier g1 n’a pas bougé : la diagonale d1–e2–f3–g4 est libre et la dame blanche défend g4.",
       "question": "Quelle retraite peut sortir le fou de l’attaque immédiate du pion g4 ?",
-      "answer": "5…Fg6 est une retraite possible dans cette position. Le pion g4 attaque f5 et h5, pas g6. Mais les Blancs peuvent encore réfléchir à h4 puis h5 : les Noirs devront regarder les suites au lieu de considérer leur fou définitivement sauvé. Le but de la position est d’apprendre à réévaluer la sécurité d’une pièce après une poussée de pion.",
-      "san": "e4 c6 d4 d5 e5 Bf5 Nf3 e6 g4",
-      "movesFr": "1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6 5. g4",
+      "answer": "5…Fg6 retire le fou de l’attaque du pion g4, qui contrôle f5 et h5. Prendre le pion par 5…Fxg4 ne résout pas le problème : 6. Dxg4 gagne le fou contre un pion. C’est précisément l’absence de cavalier blanc en f3 qui permet cette reprise de dame. Après …Fg6, les Noirs devront encore surveiller une éventuelle avancée h4 puis h5 : la retraite répond à la menace immédiate, pas à toutes les menaces futures.",
+      "san": "e4 c6 d4 d5 e5 Bf5 Nc3 e6 g4",
+      "movesFr": "1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cc3 e6 5. g4",
       "solutionSan": "Bg6",
       "turn": "black",
       "diagram": "ouverture-caro-kann-decision.svg",
-      "alt": "Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6 5. g4. Trait aux Noirs.",
+      "alt": "Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cc3 e6 5. g4. Le cavalier g1 est resté à sa place. Trait aux Noirs.",
       "highlights": [
         "g4",
         "f5"
@@ -241,6 +252,37 @@
           "from": "g4",
           "targets": [
             "f5"
+          ]
+        },
+        {
+          "type": "attacks",
+          "from": "d1",
+          "targets": [
+            "g4"
+          ]
+        },
+        {
+          "type": "line",
+          "moves": "Bxg4 Qxg4",
+          "piece": "g4:Q",
+          "afterChecks": [
+            {
+              "type": "material",
+              "balance": 2
+            }
+          ]
+        },
+        {
+          "type": "line",
+          "moves": "Bg6",
+          "afterChecks": [
+            {
+              "type": "notAttacks",
+              "from": "g4",
+              "targets": [
+                "g6"
+              ]
+            }
           ]
         }
       ]

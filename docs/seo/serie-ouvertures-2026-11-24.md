@@ -164,3 +164,11 @@ Ajout de trois repères propres à chaque ouverture et de deux comparaisons cont
 Le sommaire reste ouvert sans JavaScript et devient repliable sur téléphone. Grilles d’étude en une colonne sous 900 px, marges réduites sur téléphone, contrôle des retours à la ligne, cibles tactiles et décalage des ancres calculé depuis la bannière existante. Styles limités aux pages d’ouverture.
 
 Référence éditoriale : https://developers.google.com/search/docs/appearance/ai-features — contenu utile, texte accessible et données structurées fidèles ; aucune garantie de citation. Les navigateurs CUA et le module de rendu local étaient indisponibles : vérifications de code et tests automatisés, sans validation visuelle mobile dans cette passe. Aucune publication.
+
+## Correction pédagogique et suppression des encarts — 24 novembre 2026
+
+À la demande de Nicolas, retrait des blocs visibles « Sources et vérification » et des liens qui pointaient vers eux dans les onze fiches, ainsi que de l’encart homonyme du guide de jeu en ligne. Les références de travail sont conservées dans les données éditoriales.
+
+Caro-Kann : la position commentée utilise désormais 4. Cc3 au lieu de 4. Cf3. Le cavalier g1 reste en g1 et la dame d1 défend g4 ; …Fxg4 permet Dxg4. Séquence, SVG, légende, contexte, réponse et preuves ont été synchronisés. Une régression vérifie également que l’ancienne position avec Cf3 bloque cette reprise.
+
+Relecture des 22 exercices et positions commentées, ainsi que des quiz des ateliers ; ajout de preuves après les solutions pour contrôler les propriétés réellement expliquées. Ces contrôles ne constituent pas une analyse moteur ni une preuve que chaque réponse pédagogique serait le seul meilleur coup.

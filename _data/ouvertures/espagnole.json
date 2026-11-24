@@ -157,7 +157,22 @@
     "san": "e4 e5 Nf3 Nc6 Bb5 a6",
     "solutionSan": "Ba4",
     "turn": "white",
-    "answer": "4. Fa4 conserve le fou et sa diagonale vers le cavalier c6. Ce n’est pas le seul coup légal : Fxc6 constitue un autre choix, avec une autre idée. Ici, l’objectif de l’exercice est de reculer sans échanger."
+    "answer": "4. Fa4 conserve le fou et sa diagonale vers le cavalier c6. Ce n’est pas le seul coup légal : Fxc6 constitue un autre choix, avec une autre idée. Ici, l’objectif de l’exercice est de reculer sans échanger.",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Ba4",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "a4",
+            "targets": [
+              "c6"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "sources": [
     {
@@ -244,6 +259,19 @@
           "targets": [
             "e4",
             "e5"
+          ]
+        },
+        {
+          "type": "line",
+          "moves": "Nf3 Qxe4+",
+          "afterChecks": [
+            {
+              "type": "material",
+              "balance": 0
+            },
+            {
+              "type": "check"
+            }
           ]
         }
       ]

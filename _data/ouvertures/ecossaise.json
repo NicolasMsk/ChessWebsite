@@ -157,7 +157,19 @@
     "san": "e4 e5 Nf3 Nc6 d4 exd4",
     "solutionSan": "Nxd4",
     "turn": "white",
-    "answer": "4. Cxd4 : le cavalier f3 reprend en d4. La dame reste sur sa case et le cavalier participe directement au contrôle du centre. Après une réponse comme …Cf6, il faudra encore surveiller e4."
+    "answer": "4. Cxd4 : le cavalier f3 reprend en d4. La dame reste sur sa case et le cavalier participe directement au contrôle du centre. Après une réponse comme …Cf6, il faudra encore surveiller e4.",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nxd4",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      }
+    ]
   },
   "sources": [
     {
@@ -248,6 +260,16 @@
           "from": "c6",
           "targets": [
             "d4"
+          ]
+        },
+        {
+          "type": "line",
+          "moves": "Nxd4",
+          "afterChecks": [
+            {
+              "type": "material",
+              "balance": -9
+            }
           ]
         }
       ]

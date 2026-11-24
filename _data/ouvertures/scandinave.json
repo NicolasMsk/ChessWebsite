@@ -2,7 +2,7 @@
   "slug": "ouverture-scandinave",
   "datePublished": "2026-11-24",
   "dateModified": "2026-11-24",
-  "readTime": "16 min",
+  "readTime": "15 min",
   "side": "Avec les Noirs",
   "movesSan": "e4 d5",
   "movesFr": "1. e4 d5",
@@ -136,7 +136,25 @@
     "san": "e4 d5 exd5 Qxd5 Nc3",
     "solutionSan": "Qa5",
     "turn": "black",
-    "answer": "3…Da5 est une retraite possible : la dame quitte d5 et parcourt c5 et b5, libres, jusqu’à a5. Le cavalier c3 n’attaque pas cette case. Ce n’est pas la seule retraite légale ; l’exercice montre un choix classique de placement."
+    "answer": "3…Da5 est une retraite possible : la dame quitte d5 et parcourt c5 et b5, libres, jusqu’à a5. Le cavalier c3 n’attaque pas cette case. Ce n’est pas la seule retraite légale ; l’exercice montre un choix classique de placement.",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Qa5",
+        "afterChecks": [
+          {
+            "type": "notAttacks",
+            "from": "c3",
+            "targets": [
+              "a5"
+            ]
+          },
+          {
+            "type": "notCheck"
+          }
+        ]
+      }
+    ]
   },
   "sources": [
     {
@@ -221,7 +239,28 @@
         "c8",
         "f3"
       ],
-      "checks": []
+      "checks": [
+        {
+          "type": "line",
+          "moves": "Bg4",
+          "afterChecks": [
+            {
+              "type": "attacks",
+              "from": "g4",
+              "targets": [
+                "f3"
+              ]
+            },
+            {
+              "type": "notAttacks",
+              "from": "g4",
+              "targets": [
+                "d1"
+              ]
+            }
+          ]
+        }
+      ]
     },
     "transition": [
       "Une fois la dame stabilisée et les pièces légères sorties, la question devient celle du centre blanc et des colonnes disponibles. Où le roi peut-il se mettre en sécurité ? Quelle pièce noire reste inactive ? Les déplacements de dame n’expliquent plus toute la position : votre plan doit maintenant impliquer les autres pièces.",

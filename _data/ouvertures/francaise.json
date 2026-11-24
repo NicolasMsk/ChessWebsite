@@ -2,7 +2,7 @@
   "slug": "ouverture-francaise",
   "datePublished": "2026-11-24",
   "dateModified": "2026-11-24",
-  "readTime": "16 min",
+  "readTime": "15 min",
   "side": "Avec les Noirs",
   "movesSan": "e4 e6 d4 d5",
   "movesFr": "1. e4 e6 2. d4 d5",
@@ -150,7 +150,22 @@
     "san": "e4 e6 d4 d5 e5",
     "solutionSan": "c5",
     "turn": "black",
-    "answer": "3…c5 : le pion c7 avance de deux cases et attaque d4. Le coup met la chaîne blanche sous pression à sa base. Les Blancs peuvent la soutenir, par exemple avec c3 : la tension ne se résout donc pas automatiquement."
+    "answer": "3…c5 : le pion c7 avance de deux cases et attaque d4. Le coup met la chaîne blanche sous pression à sa base. Les Blancs peuvent la soutenir, par exemple avec c3 : la tension ne se résout donc pas automatiquement.",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "c5",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "c5",
+            "targets": [
+              "d4"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "sources": [
     {
@@ -230,7 +245,21 @@
         "e6",
         "f5"
       ],
-      "checks": []
+      "checks": [
+        {
+          "type": "line",
+          "moves": "Bf5",
+          "afterChecks": [
+            {
+              "type": "attacks",
+              "from": "f5",
+              "targets": [
+                "d3"
+              ]
+            }
+          ]
+        }
+      ]
     },
     "transition": [
       "Quand les pièces sortent, vos décisions doivent dépendre de la structure réellement obtenue. Dans un centre fermé, cherchez les ruptures qui ouvriront des lignes au bon moment. Dans une structure d’échange, regardez davantage l’activité immédiate des pièces et les colonnes qui peuvent servir aux tours.",

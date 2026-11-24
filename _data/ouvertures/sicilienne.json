@@ -136,7 +136,19 @@
     "san": "e4 c5 Nf3 d6 d4",
     "solutionSan": "cxd4",
     "turn": "black",
-    "answer": "3…cxd4 : le pion c5 capture le pion en d4. Après une reprise comme Cxd4, le pion c noir a disparu et les Noirs disposent d’une colonne c semi-ouverte. Ce changement de structure explique l’échange, sans promettre un avantage."
+    "answer": "3…cxd4 : le pion c5 capture le pion en d4. Après une reprise comme Cxd4, le pion c noir a disparu et les Noirs disposent d’une colonne c semi-ouverte. Ce changement de structure explique l’échange, sans promettre un avantage.",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "cxd4",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -1
+          }
+        ]
+      }
+    ]
   },
   "sources": [
     {
@@ -221,7 +233,28 @@
         "c3",
         "d4"
       ],
-      "checks": []
+      "checks": [
+        {
+          "type": "line",
+          "moves": "d4",
+          "afterChecks": [
+            {
+              "type": "attacks",
+              "from": "c3",
+              "targets": [
+                "d4"
+              ]
+            },
+            {
+              "type": "notAttacks",
+              "from": "d4",
+              "targets": [
+                "d5"
+              ]
+            }
+          ]
+        }
+      ]
     },
     "transition": [
       "Quand l’ouverture se transforme en milieu de partie, comparez les colonnes, les cases centrales et la sécurité des rois. Une poussée de l’aile dame n’a pas la même valeur si votre roi est encore exposé au centre. L’asymétrie crée des possibilités des deux côtés, pas une permission d’attaquer sans développement.",

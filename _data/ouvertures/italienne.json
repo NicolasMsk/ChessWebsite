@@ -7,7 +7,7 @@
   "subtitle": "Un pion au centre, deux pièces qui sortent, un roi à mettre en sécurité.",
   "datePublished": "2026-11-24",
   "dateModified": "2026-11-24",
-  "readTime": "18 min",
+  "readTime": "17 min",
   "side": "Avec les Blancs",
   "movesFr": "1. e4 e5 2. Cf3 Cc6 3. Fc4",
   "movesSan": "e4 e5 Nf3 Nc6 Bc4",
@@ -125,7 +125,18 @@
     "alt": "Position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. d3 Cf6 ; trait aux Blancs.",
     "san": "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6",
     "solutionSan": "O-O",
-    "answer": "5. O-O, le petit roque : le roi va de e1 à g1 et la tour de h1 à f1. Dans cette position, le roi n’est pas en échec et les cases e1, f1 et g1 ne sont pas attaquées. Le roque est donc légal. Il reste ensuite à développer l’aile dame."
+    "answer": "5. O-O, le petit roque : le roi va de e1 à g1 et la tour de h1 à f1. Dans cette position, le roi n’est pas en échec et les cases e1, f1 et g1 ne sont pas attaquées. Le roque est donc légal. Il reste ensuite à développer l’aile dame.",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "O-O",
+        "afterChecks": [
+          {
+            "type": "notCheck"
+          }
+        ]
+      }
+    ]
   },
   "pdf": {
     "title": "Comprendre l’ouverture, puis s’entraîner sur l’échiquier",
@@ -256,6 +267,19 @@
           "from": "f6",
           "targets": [
             "e4"
+          ]
+        },
+        {
+          "type": "line",
+          "moves": "d3",
+          "afterChecks": [
+            {
+              "type": "attacks",
+              "from": "d3",
+              "targets": [
+                "e4"
+              ]
+            }
           ]
         }
       ]

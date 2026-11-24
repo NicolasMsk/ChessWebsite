@@ -150,7 +150,19 @@
     "san": "d4 d5 c4 c6 cxd5",
     "solutionSan": "cxd5",
     "turn": "black",
-    "answer": "3…cxd5 : le pion c6 capture le pion blanc en d5. Le pion de soutien remplace ainsi le pion d noir qui a été pris. Les deux pions c ont changé la structure : il faut ensuite développer les pièces."
+    "answer": "3…cxd5 : le pion c6 capture le pion blanc en d5. Le pion de soutien remplace ainsi le pion d noir qui a été pris. Les deux pions c ont changé la structure : il faut ensuite développer les pièces.",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "cxd5",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      }
+    ]
   },
   "sources": [
     {
@@ -243,6 +255,26 @@
           "targets": [
             "b7",
             "d5"
+          ]
+        },
+        {
+          "type": "line",
+          "moves": "Qb6",
+          "afterChecks": [
+            {
+              "type": "attacks",
+              "from": "b6",
+              "targets": [
+                "b7"
+              ]
+            },
+            {
+              "type": "attacks",
+              "from": "f6",
+              "targets": [
+                "d5"
+              ]
+            }
           ]
         }
       ]

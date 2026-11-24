@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -10 360 350" width="360" height="350" role="img" aria-labelledby="diagram-title" data-fen="rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P2P1/5N2/PPP2P1P/RNBQKB1R b KQkq g3 0 5">
-<title id="diagram-title">Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6 5. g4. Trait aux Noirs.</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -10 360 350" width="360" height="350" role="img" aria-labelledby="diagram-title" data-fen="rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P2P1/2N5/PPP2P1P/R1BQKBNR b KQkq g3 0 5">
+<title id="diagram-title">Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cc3 e6 5. g4. Le cavalier g1 est resté à sa place. Trait aux Noirs.</title>
 <defs>
 <pattern id="cases" width="80" height="80" patternUnits="userSpaceOnUse"><rect width="80" height="80" fill="#B58863"/><rect width="40" height="40" fill="#F0D9B5"/><rect x="40" y="40" width="40" height="40" fill="#F0D9B5"/></pattern>
 <marker id="pointe" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B05E17"/></marker>
@@ -20,18 +20,18 @@
 <rect x="40" y="120" width="40" height="40" fill="#FFD54F" opacity="0.5"/>
 <rect x="80" y="160" width="40" height="40" fill="#FFD54F" opacity="0.5"/>
 <use href="#wR" x="280" y="0" width="40" height="40"/>
-<use href="#wN" x="240" y="0" width="40" height="40"/>
 <use href="#wB" x="200" y="0" width="40" height="40"/>
 <use href="#wQ" x="160" y="0" width="40" height="40"/>
 <use href="#wK" x="120" y="0" width="40" height="40"/>
 <use href="#wB" x="80" y="0" width="40" height="40"/>
+<use href="#wN" x="40" y="0" width="40" height="40"/>
 <use href="#wR" x="0" y="0" width="40" height="40"/>
 <use href="#wP" x="280" y="40" width="40" height="40"/>
 <use href="#wP" x="240" y="40" width="40" height="40"/>
 <use href="#wP" x="200" y="40" width="40" height="40"/>
 <use href="#wP" x="80" y="40" width="40" height="40"/>
 <use href="#wP" x="0" y="40" width="40" height="40"/>
-<use href="#wN" x="80" y="80" width="40" height="40"/>
+<use href="#wN" x="200" y="80" width="40" height="40"/>
 <use href="#wP" x="160" y="120" width="40" height="40"/>
 <use href="#wP" x="40" y="120" width="40" height="40"/>
 <use href="#bP" x="160" y="160" width="40" height="40"/>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -10 360 350" width="360" height="350" role="img" aria-labelledby="diagram-title" data-fen="rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2">
-<title id="diagram-title">Italienne après 3 demi-coups</title>
+<title id="diagram-title">Après 2. Cf3, le cavalier blanc en f3 attaque le pion e5.</title>
 <defs>
 <pattern id="cases" width="80" height="80" patternUnits="userSpaceOnUse"><rect width="80" height="80" fill="#B58863"/><rect width="40" height="40" fill="#F0D9B5"/><rect x="40" y="40" width="40" height="40" fill="#F0D9B5"/></pattern>
 <marker id="pointe" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B05E17"/></marker>

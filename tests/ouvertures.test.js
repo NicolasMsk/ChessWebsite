@@ -108,7 +108,7 @@ test('les positions commentées disposent de preuves et les onze leçons expliqu
  assert.equal(scotch.lesson.caseStudy.san,'e4 e5 Nf3 Nc6 d4 exd4 Qxd4');
  assert.equal(scotch.lesson.caseStudy.solutionSan,'Nxd4');
  const spanish=JSON.parse(fs.readFileSync(path.join(directory,'espagnole.json'),'utf8'));
- assert.deepEqual(spanish.lesson.caseStudy.checks,[{type:'attacks',from:'d4',targets:['e4','e5']}]);
+ assert.deepEqual(spanish.lesson.caseStudy.checks.filter(c=>c.type==='attacks'),[{type:'attacks',from:'d4',targets:['e4','e5']}]);
 });
 
 test('les ateliers relient leurs coups, diagrammes et quiz sans remplacer le maillage ou le PDF',()=>{
@@ -177,4 +177,20 @@ test('le sommaire mobile se replie, reste ouvrable et réagit au changement de l
  assert.equal(contents.open,false);contents.open=true;links[0].click();assert.equal(contents.open,false);
  media.matches=false;events.change();assert.equal(contents.open,true);
  links[1].click();assert.equal(contents.open,true);
+});
+
+test('aucun jeton de modèle {{…}} ne reste dans les pages publiées', () => {
+  const fs = require('node:fs'), path = require('node:path');
+  const dir = path.join(__dirname, '..', 'blog');
+  for (const file of fs.readdirSync(dir).filter(f => f.endsWith('.html'))) {
+    assert.doesNotMatch(fs.readFileSync(path.join(dir, file), 'utf8'), /\{\{[^{}]*\}\}/, file);
+  }
+});
+
+test('les encarts Sources et vérification et leurs ancres ne sont plus affichés',()=>{
+ for(const name of fs.readdirSync(path.join(root,'blog')).filter(n=>n.endsWith('.html'))){
+  const html=fs.readFileSync(path.join(root,'blog',name),'utf8');
+  assert.doesNotMatch(html,/Sources et vérification/,name);
+  if(name.startsWith('ouverture-'))assert.doesNotMatch(html,/href="#sources?[^"]*"|class="opening-sources"/,name);
+ }
 });

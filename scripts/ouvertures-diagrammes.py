@@ -72,10 +72,6 @@ def main():
                 checks.append({'type': 'line', 'moves': item['solutionSan'],
                                'piece': diagrammes.chess.square_name(move.to_square) + ':' + piece})
             existing = by_file.get(item['diagram'])
-            if existing:
-                assert existing['moves'] == item['san'], 'Séquence déjà enregistrée différente'
-                diagrammes.board_for(existing)
-                continue
             record = {
                 'file': item['diagram'], 'title': item['alt'],
                 'orientation': orientation, 'fen': board.fen(en_passant='fen'),
@@ -83,14 +79,21 @@ def main():
                 'highlights': item.get('highlights', []),
             }
             diagrammes.board_for(record)
+            if existing == record:
+                continue
+            assert existing is None or existing.get('generated'), 'Diagramme manuel à préserver'
             additions.append((record, diagrammes.render(record, board)))
             by_file[record['file']] = record
     # Valider toutes les suites avant la première écriture.
     for record, svg in additions:
         (diagrammes.DIRECTORY / record['file']).write_text(svg, encoding='utf-8', newline='\n')
-        records.append(record)
+        previous = next((i for i, r in enumerate(records) if r['file'] == record['file']), None)
+        if previous is None:
+            records.append(record)
+        else:
+            records[previous] = record
     manifest.write_text(json.dumps(records, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(f'{len(additions)} nouveaux diagrammes ; séquences et solutions légales.')
+    print(f'{len(additions)} diagrammes créés ou actualisés ; séquences et solutions légales.')
 
 
 if __name__ == '__main__':

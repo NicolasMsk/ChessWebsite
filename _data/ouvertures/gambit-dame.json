@@ -143,7 +143,19 @@
     "san": "d4 d5 c4 dxc4 Nf3 Nf6 e3 e6",
     "solutionSan": "Bxc4",
     "turn": "white",
-    "answer": "5. Fxc4 : le fou f1 parcourt e2 et d3, libérés, puis capture le pion en c4. Les Blancs récupèrent le pion tout en sortant une pièce et en préparant le roque."
+    "answer": "5. Fxc4 : le fou f1 parcourt e2 et d3, libérés, puis capture le pion en c4. Les Blancs récupèrent le pion tout en sortant une pièce et en préparant le roque.",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Bxc4",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      }
+    ]
   },
   "sources": [
     {
@@ -223,7 +235,21 @@
         "d5",
         "c8"
       ],
-      "checks": []
+      "checks": [
+        {
+          "type": "line",
+          "moves": "Nf3",
+          "afterChecks": [
+            {
+              "type": "attacks",
+              "from": "f3",
+              "targets": [
+                "d4"
+              ]
+            }
+          ]
+        }
+      ]
     },
     "transition": [
       "Une fois le pion récupéré ou le centre stabilisé, cherchez les colonnes semi-ouvertes et les pièces qui manquent de cases. Si les structures sont symétriques, l’activité des pièces reste un enjeu. Si un échange a créé un pion isolé, ce pion aura besoin de soutien : ne le jugez ni comme une catastrophe ni comme un atout avant de regarder les pièces.",

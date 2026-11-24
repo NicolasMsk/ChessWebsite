@@ -987,85 +987,73 @@
   },
   {
     "file": "ouverture-italienne-0.svg",
-    "title": "Position initiale",
+    "title": "Position initiale, les Blancs vont jouer 1. e4.",
     "orientation": "white",
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
     "moves": "",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-italienne-1.svg",
-    "title": "Italienne après 1 demi-coups",
+    "title": "Après 1. e4, le pion blanc occupe e4.",
     "orientation": "white",
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
     "moves": "e4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-italienne-2.svg",
-    "title": "Italienne après 2 demi-coups",
+    "title": "Après 1…e5, les pions e4 et e5 se font face.",
     "orientation": "white",
     "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq e6 0 2",
     "moves": "e4 e5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-italienne-3.svg",
-    "title": "Italienne après 3 demi-coups",
+    "title": "Après 2. Cf3, le cavalier blanc en f3 attaque le pion e5.",
     "orientation": "white",
     "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2",
     "moves": "e4 e5 Nf3",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-italienne-4.svg",
-    "title": "Italienne après 4 demi-coups",
+    "title": "Après 2…Cc6, le cavalier noir en c6 défend le pion e5.",
     "orientation": "white",
     "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
     "moves": "e4 e5 Nf3 Nc6",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-italienne-5.svg",
-    "title": "Italienne après 5 demi-coups",
+    "title": "Après 3. Fc4, le fou blanc c4 vise f7 ; la flèche montre cette diagonale.",
     "orientation": "white",
     "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
     "moves": "e4 e5 Nf3 Nc6 Bc4",
     "kind": "position",
     "generated": true,
-    "checks": [
-      {
-        "type": "attacks",
-        "from": "c4",
-        "targets": [
-          "f7"
-        ]
-      }
-    ],
-    "highlights": [
-      "c4",
-      "f7"
-    ],
-    "arrows": [
-      [
-        "c4",
-        "f7"
-      ]
-    ]
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-italienne-exercice.svg",
-    "title": "Italienne : préparer le roque",
+    "title": "Position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. d3 Cf6 ; trait aux Blancs.",
     "orientation": "white",
     "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
     "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6",
@@ -1075,19 +1063,30 @@
       {
         "type": "line",
         "moves": "O-O",
+        "afterChecks": [
+          {
+            "type": "notCheck"
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "O-O",
         "piece": "g1:K"
       }
-    ]
+    ],
+    "highlights": []
   },
   {
     "file": "ouverture-italienne-plan.svg",
-    "title": "Italienne : roi blanc en sécurité après le petit roque",
+    "title": "Après 5. O-O, le roi blanc est en g1 et la tour en f1 ; les Noirs ont leurs cavaliers en c6 et f6 et leur fou en c5.",
     "orientation": "white",
     "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQ1RK1 b kq - 2 5",
     "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6 O-O",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-anglaise-0.svg",
@@ -1097,7 +1096,8 @@
     "moves": "",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-anglaise-1.svg",
@@ -1107,7 +1107,8 @@
     "moves": "c4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-anglaise-plan.svg",
@@ -1117,7 +1118,8 @@
     "moves": "c4 e5 Nc3 Nf6 g3 d5 cxd5 Nxd5 Bg2",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-anglaise-exercice.svg",
@@ -1131,9 +1133,30 @@
       {
         "type": "line",
         "moves": "Nc3",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "c3",
+            "targets": [
+              "d5"
+            ]
+          },
+          {
+            "type": "attacks",
+            "from": "c4",
+            "targets": [
+              "d5"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Nc3",
         "piece": "c3:N"
       }
-    ]
+    ],
+    "highlights": []
   },
   {
     "file": "ouverture-caro-kann-0.svg",
@@ -1143,7 +1166,8 @@
     "moves": "",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-caro-kann-1.svg",
@@ -1153,7 +1177,8 @@
     "moves": "e4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-caro-kann-2.svg",
@@ -1163,7 +1188,8 @@
     "moves": "e4 c6",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-caro-kann-3.svg",
@@ -1173,7 +1199,8 @@
     "moves": "e4 c6 d4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-caro-kann-4.svg",
@@ -1183,7 +1210,8 @@
     "moves": "e4 c6 d4 d5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-caro-kann-plan.svg",
@@ -1193,7 +1221,8 @@
     "moves": "e4 c6 d4 d5 e5 Bf5 Nf3 e6",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-caro-kann-exercice.svg",
@@ -1207,9 +1236,19 @@
       {
         "type": "line",
         "moves": "Bf5",
+        "afterChecks": [
+          {
+            "type": "notCheck"
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Bf5",
         "piece": "f5:b"
       }
-    ]
+    ],
+    "highlights": []
   },
   {
     "file": "ouverture-ecossaise-0.svg",
@@ -1219,7 +1258,8 @@
     "moves": "",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-ecossaise-1.svg",
@@ -1229,7 +1269,8 @@
     "moves": "e4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-ecossaise-2.svg",
@@ -1239,7 +1280,8 @@
     "moves": "e4 e5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-ecossaise-3.svg",
@@ -1249,7 +1291,8 @@
     "moves": "e4 e5 Nf3",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-ecossaise-4.svg",
@@ -1259,7 +1302,8 @@
     "moves": "e4 e5 Nf3 Nc6",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-ecossaise-5.svg",
@@ -1269,7 +1313,8 @@
     "moves": "e4 e5 Nf3 Nc6 d4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-ecossaise-plan.svg",
@@ -1279,7 +1324,8 @@
     "moves": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nc3",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-ecossaise-exercice.svg",
@@ -1293,9 +1339,20 @@
       {
         "type": "line",
         "moves": "Nxd4",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Nxd4",
         "piece": "d4:N"
       }
-    ]
+    ],
+    "highlights": []
   },
   {
     "file": "ouverture-espagnole-0.svg",
@@ -1305,7 +1362,8 @@
     "moves": "",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-espagnole-1.svg",
@@ -1315,7 +1373,8 @@
     "moves": "e4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-espagnole-2.svg",
@@ -1325,7 +1384,8 @@
     "moves": "e4 e5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-espagnole-3.svg",
@@ -1335,7 +1395,8 @@
     "moves": "e4 e5 Nf3",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-espagnole-4.svg",
@@ -1345,7 +1406,8 @@
     "moves": "e4 e5 Nf3 Nc6",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-espagnole-5.svg",
@@ -1355,7 +1417,8 @@
     "moves": "e4 e5 Nf3 Nc6 Bb5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-espagnole-plan.svg",
@@ -1365,7 +1428,8 @@
     "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-espagnole-exercice.svg",
@@ -1379,9 +1443,23 @@
       {
         "type": "line",
         "moves": "Ba4",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "a4",
+            "targets": [
+              "c6"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Ba4",
         "piece": "a4:B"
       }
-    ]
+    ],
+    "highlights": []
   },
   {
     "file": "ouverture-francaise-0.svg",
@@ -1391,7 +1469,8 @@
     "moves": "",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-francaise-1.svg",
@@ -1401,7 +1480,8 @@
     "moves": "e4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-francaise-2.svg",
@@ -1411,7 +1491,8 @@
     "moves": "e4 e6",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-francaise-3.svg",
@@ -1421,7 +1502,8 @@
     "moves": "e4 e6 d4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-francaise-4.svg",
@@ -1431,7 +1513,8 @@
     "moves": "e4 e6 d4 d5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-francaise-plan.svg",
@@ -1441,7 +1524,8 @@
     "moves": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-francaise-exercice.svg",
@@ -1455,9 +1539,23 @@
       {
         "type": "line",
         "moves": "c5",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "c5",
+            "targets": [
+              "d4"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "c5",
         "piece": "c5:p"
       }
-    ]
+    ],
+    "highlights": []
   },
   {
     "file": "ouverture-gambit-dame-0.svg",
@@ -1467,7 +1565,8 @@
     "moves": "",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-gambit-dame-1.svg",
@@ -1477,7 +1576,8 @@
     "moves": "d4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-gambit-dame-2.svg",
@@ -1487,7 +1587,8 @@
     "moves": "d4 d5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-gambit-dame-3.svg",
@@ -1497,7 +1598,8 @@
     "moves": "d4 d5 c4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-gambit-dame-plan.svg",
@@ -1507,7 +1609,8 @@
     "moves": "d4 d5 c4 dxc4 Nf3 Nf6 e3 e6 Bxc4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-gambit-dame-exercice.svg",
@@ -1521,9 +1624,20 @@
       {
         "type": "line",
         "moves": "Bxc4",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Bxc4",
         "piece": "c4:B"
       }
-    ]
+    ],
+    "highlights": []
   },
   {
     "file": "ouverture-londres-0.svg",
@@ -1533,7 +1647,8 @@
     "moves": "",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-londres-1.svg",
@@ -1543,7 +1658,8 @@
     "moves": "d4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-londres-2.svg",
@@ -1553,7 +1669,8 @@
     "moves": "d4 d5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-londres-3.svg",
@@ -1563,7 +1680,8 @@
     "moves": "d4 d5 Nf3",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-londres-4.svg",
@@ -1573,7 +1691,8 @@
     "moves": "d4 d5 Nf3 Nf6",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-londres-5.svg",
@@ -1583,7 +1702,8 @@
     "moves": "d4 d5 Nf3 Nf6 Bf4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-londres-plan.svg",
@@ -1593,7 +1713,8 @@
     "moves": "d4 d5 Nf3 Nf6 Bf4 e6 e3 Bd6 Bd3",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-londres-exercice.svg",
@@ -1607,9 +1728,23 @@
       {
         "type": "line",
         "moves": "Bf4",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "f4",
+            "targets": [
+              "e5"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Bf4",
         "piece": "f4:B"
       }
-    ]
+    ],
+    "highlights": []
   },
   {
     "file": "ouverture-scandinave-0.svg",
@@ -1619,7 +1754,8 @@
     "moves": "",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-scandinave-1.svg",
@@ -1629,7 +1765,8 @@
     "moves": "e4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-scandinave-2.svg",
@@ -1639,7 +1776,8 @@
     "moves": "e4 d5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-scandinave-plan.svg",
@@ -1649,7 +1787,8 @@
     "moves": "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-scandinave-exercice.svg",
@@ -1663,9 +1802,26 @@
       {
         "type": "line",
         "moves": "Qa5",
+        "afterChecks": [
+          {
+            "type": "notAttacks",
+            "from": "c3",
+            "targets": [
+              "a5"
+            ]
+          },
+          {
+            "type": "notCheck"
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Qa5",
         "piece": "a5:q"
       }
-    ]
+    ],
+    "highlights": []
   },
   {
     "file": "ouverture-sicilienne-0.svg",
@@ -1675,7 +1831,8 @@
     "moves": "",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-sicilienne-1.svg",
@@ -1685,7 +1842,8 @@
     "moves": "e4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-sicilienne-2.svg",
@@ -1695,7 +1853,8 @@
     "moves": "e4 c5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-sicilienne-plan.svg",
@@ -1705,7 +1864,8 @@
     "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-sicilienne-exercice.svg",
@@ -1719,9 +1879,20 @@
       {
         "type": "line",
         "moves": "cxd4",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -1
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "cxd4",
         "piece": "d4:p"
       }
-    ]
+    ],
+    "highlights": []
   },
   {
     "file": "ouverture-slave-0.svg",
@@ -1731,7 +1902,8 @@
     "moves": "",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-slave-1.svg",
@@ -1741,7 +1913,8 @@
     "moves": "d4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-slave-2.svg",
@@ -1751,7 +1924,8 @@
     "moves": "d4 d5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-slave-3.svg",
@@ -1761,7 +1935,8 @@
     "moves": "d4 d5 c4",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-slave-4.svg",
@@ -1771,7 +1946,8 @@
     "moves": "d4 d5 c4 c6",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-slave-plan.svg",
@@ -1781,7 +1957,8 @@
     "moves": "d4 d5 c4 c6 Nf3 Nf6 Nc3 dxc4 a4 Bf5",
     "kind": "position",
     "generated": true,
-    "checks": []
+    "checks": [],
+    "highlights": []
   },
   {
     "file": "ouverture-slave-exercice.svg",
@@ -1795,9 +1972,20 @@
       {
         "type": "line",
         "moves": "cxd5",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "cxd5",
         "piece": "d5:p"
       }
-    ]
+    ],
+    "highlights": []
   },
   {
     "file": "ouverture-anglaise-decision.svg",
@@ -1825,6 +2013,16 @@
       {
         "type": "line",
         "moves": "cxd5 Nxd5 Bg2 Nxc3 bxc3",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "cxd5 Nxd5 Bg2 Nxc3 bxc3",
         "piece": "c3:P"
       }
     ],
@@ -1836,10 +2034,10 @@
   },
   {
     "file": "ouverture-caro-kann-decision.svg",
-    "title": "Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6 5. g4. Trait aux Noirs.",
+    "title": "Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cc3 e6 5. g4. Le cavalier g1 est resté à sa place. Trait aux Noirs.",
     "orientation": "black",
-    "fen": "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P2P1/5N2/PPP2P1P/RNBQKB1R b KQkq g3 0 5",
-    "moves": "e4 c6 d4 d5 e5 Bf5 Nf3 e6 g4",
+    "fen": "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P2P1/2N5/PPP2P1P/R1BQKBNR b KQkq g3 0 5",
+    "moves": "e4 c6 d4 d5 e5 Bf5 Nc3 e6 g4",
     "kind": "position",
     "generated": true,
     "checks": [
@@ -1848,6 +2046,37 @@
         "from": "g4",
         "targets": [
           "f5"
+        ]
+      },
+      {
+        "type": "attacks",
+        "from": "d1",
+        "targets": [
+          "g4"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Bxg4 Qxg4",
+        "piece": "g4:Q",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 2
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Bg6",
+        "afterChecks": [
+          {
+            "type": "notAttacks",
+            "from": "g4",
+            "targets": [
+              "g6"
+            ]
+          }
         ]
       },
       {
@@ -1875,6 +2104,16 @@
         "from": "c6",
         "targets": [
           "d4"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Nxd4",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -9
+          }
         ]
       },
       {
@@ -1908,6 +2147,19 @@
       {
         "type": "line",
         "moves": "Nf3 Qxe4+",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          },
+          {
+            "type": "check"
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Nf3 Qxe4+",
         "piece": "e4:q"
       }
     ],
@@ -1929,6 +2181,19 @@
       {
         "type": "line",
         "moves": "Bf5",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "f5",
+            "targets": [
+              "d3"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Bf5",
         "piece": "f5:b"
       }
     ],
@@ -1947,6 +2212,19 @@
     "kind": "position",
     "generated": true,
     "checks": [
+      {
+        "type": "line",
+        "moves": "Nf3",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "f3",
+            "targets": [
+              "d4"
+            ]
+          }
+        ]
+      },
       {
         "type": "line",
         "moves": "Nf3",
@@ -1973,6 +2251,19 @@
         "from": "f6",
         "targets": [
           "e4"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "d3",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "d3",
+            "targets": [
+              "e4"
+            ]
+          }
         ]
       },
       {
@@ -2005,6 +2296,20 @@
       {
         "type": "line",
         "moves": "Qb3",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "b3",
+            "targets": [
+              "b2",
+              "b6"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Qb3",
         "piece": "b3:Q"
       }
     ],
@@ -2025,6 +2330,26 @@
       {
         "type": "line",
         "moves": "Bg4",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "g4",
+            "targets": [
+              "f3"
+            ]
+          },
+          {
+            "type": "notAttacks",
+            "from": "g4",
+            "targets": [
+              "d1"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Bg4",
         "piece": "g4:b"
       }
     ],
@@ -2042,6 +2367,26 @@
     "kind": "position",
     "generated": true,
     "checks": [
+      {
+        "type": "line",
+        "moves": "d4",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "c3",
+            "targets": [
+              "d4"
+            ]
+          },
+          {
+            "type": "notAttacks",
+            "from": "d4",
+            "targets": [
+              "d5"
+            ]
+          }
+        ]
+      },
       {
         "type": "line",
         "moves": "d4",
@@ -2068,6 +2413,26 @@
         "targets": [
           "b7",
           "d5"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Qb6",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "b6",
+            "targets": [
+              "b7"
+            ]
+          },
+          {
+            "type": "attacks",
+            "from": "f6",
+            "targets": [
+              "d5"
+            ]
+          }
         ]
       },
       {

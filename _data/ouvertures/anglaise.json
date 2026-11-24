@@ -2,7 +2,7 @@
   "slug": "ouverture-anglaise",
   "datePublished": "2026-11-24",
   "dateModified": "2026-11-24",
-  "readTime": "16 min",
+  "readTime": "15 min",
   "side": "Avec les Blancs",
   "movesSan": "c4",
   "movesFr": "1. c4",
@@ -129,7 +129,29 @@
     "san": "c4 e5",
     "solutionSan": "Nc3",
     "turn": "white",
-    "answer": "2. Cc3 développe le cavalier b1 et ajoute un contrôle sur d5. Le pion c4 contrôle déjà cette case. Il s’agit d’un choix cohérent avec l’idée étudiée, pas d’un coup qui gagne de force."
+    "answer": "2. Cc3 développe le cavalier b1 et ajoute un contrôle sur d5. Le pion c4 contrôle déjà cette case. Il s’agit d’un choix cohérent avec l’idée étudiée, pas d’un coup qui gagne de force.",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nc3",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "c3",
+            "targets": [
+              "d5"
+            ]
+          },
+          {
+            "type": "attacks",
+            "from": "c4",
+            "targets": [
+              "d5"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "sources": [
     {
@@ -228,6 +250,16 @@
           "from": "c3",
           "targets": [
             "d5"
+          ]
+        },
+        {
+          "type": "line",
+          "moves": "cxd5 Nxd5 Bg2 Nxc3 bxc3",
+          "afterChecks": [
+            {
+              "type": "material",
+              "balance": 0
+            }
           ]
         }
       ]

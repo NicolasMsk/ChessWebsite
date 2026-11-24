@@ -157,7 +157,22 @@
     "san": "d4 d5 Nf3 Nf6",
     "solutionSan": "Bf4",
     "turn": "white",
-    "answer": "3. Ff4 développe le fou avant que e3 ne bloque sa diagonale de départ. Le pion d a déjà quitté d2, ce qui libère le passage c1–d2–e3–f4."
+    "answer": "3. Ff4 développe le fou avant que e3 ne bloque sa diagonale de départ. Le pion d a déjà quitté d2, ce qui libère le passage c1–d2–e3–f4.",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Bf4",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "f4",
+            "targets": [
+              "e5"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "sources": [
     {
@@ -248,6 +263,20 @@
           "from": "b6",
           "targets": [
             "b2"
+          ]
+        },
+        {
+          "type": "line",
+          "moves": "Qb3",
+          "afterChecks": [
+            {
+              "type": "attacks",
+              "from": "b3",
+              "targets": [
+                "b2",
+                "b6"
+              ]
+            }
           ]
         }
       ]
