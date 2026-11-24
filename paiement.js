@@ -1,6 +1,6 @@
 (function(){'use strict';
  var api='https://chess-lead-magnet.chess-musicki.workers.dev';
- var colorNames={rouge:'Bordeaux',vert:'Vert olive',bleu:'Bleu marine',marron:'Marron'};
+ var colorNames={rouge:'Bordeaux',vert:'Vert olive',marron:'Marron'};
  var itemLabels={livre:'Couleur du livre relié',mats:'Couleur du cahier « Mes premiers mats »',tactiques:'Couleur du cahier « Mes premières tactiques »'};
  var itemShort={livre:'Livre',mats:'Cahier mats',tactiques:'Cahier tactiques'};
  var products={pack_livres_relies:{name:'Apprendre les Échecs — livre relié à la main',amount:4000,items:['livre'],image:'images/reliure/pack-2026-echiquier.webp',link:'https://buy.stripe.com/14AcN72Sr8pk0lfg8gdQQ09'},cahier_mats:{name:'Mes premiers mats en un coup — cahier A6',amount:1500,items:['mats'],image:'images/cahiers/cahiers-duo-photo.webp',link:'https://buy.stripe.com/dRm14p0Kj4940lf2hqdQQ05'},cahier_tactiques:{name:'Mes premières tactiques — cahier A6',amount:1500,items:['tactiques'],image:'images/cahiers/cahier-tactiques-photo.webp',link:'https://buy.stripe.com/eVqbJ38cL3501pjf4cdQQ06'},cahiers_pack:{name:'Les deux cahiers nomades — mats et tactiques',amount:2500,items:['mats','tactiques'],image:'images/cahiers/cahiers-duo-photo.webp',link:'https://buy.stripe.com/9B65kFeB93503xrcW4dQQ07'},trio_livre_cahiers:{name:'Le trio — livre relié et deux cahiers',amount:6000,items:['livre','mats','tactiques'],image:'images/reliure/pack-2026-echiquier.webp',link:'https://buy.stripe.com/dRm3cxct19to4Bvf4cdQQ08'}};

@@ -1,0 +1,383 @@
+{
+  "slug": "ouverture-ecossaise",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "readTime": "16 min",
+  "side": "Avec les Blancs",
+  "movesSan": "e4 e5 Nf3 Nc6 d4",
+  "movesFr": "1. e4 e5 2. Cf3 Cc6 3. d4",
+  "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+  "imageAlt": "Ouverture écossaise : les premiers coups expliqués aux débutants.",
+  "name": "Ouverture écossaise",
+  "title": "Ouverture écossaise : variantes, plans et pièges pour débuter",
+  "description": "Jouez l’Écossaise avec un plan : centre ouvert, réponses …Fc5 et …Cf6, reprises en d4 et pièges de dame. Diagrammes et exercices commentés.",
+  "h1": "L’ouverture écossaise : apprendre à ouvrir le centre",
+  "subtitle": "Avec 3. d4, les pions entrent en contact très tôt.",
+  "eco": "C45",
+  "answer": "L’ouverture écossaise commence par 1. e4 e5 2. Cf3 Cc6 3. d4. Les Blancs contestent immédiatement le pion e5 avec leur pion d. Après …exd4, ils peuvent reprendre par Cxd4. L’objectif est d’obtenir de l’espace et des lignes pour les pièces, sans sortir la dame trop tôt.",
+  "intro": "Certaines ouvertures préparent longtemps l’action centrale. L’Écossaise vous fait observer un échange de pions dès les premiers coups. Elle permet de travailler une question très concrète : avec quelle pièce reprendre, et que devient le centre après l’échange ?",
+  "fit": "Elle convient à un joueur qui souhaite des positions plus ouvertes après 1. e4 e5. Elle ne s’impose pas si les Noirs ont choisi une autre défense dès leur premier ou deuxième coup.",
+  "ideas": [
+    {
+      "title": "Comprendre l’échange central",
+      "text": "Après …exd4, le pion noir a quitté e5. Observez les colonnes qui s’ouvrent et les nouvelles cases accessibles aux pièces."
+    },
+    {
+      "title": "Reprendre avec une pièce utile",
+      "text": "Cxd4 ramène le cavalier au centre. La dame reste à l’abri des attaques de développement qui peuvent suivre une sortie trop précoce."
+    },
+    {
+      "title": "Développer autour du cavalier",
+      "text": "Le cavalier d4 est actif mais peut être attaqué. Continuez le développement et vérifiez les menaces sur e4 au lieu de considérer le centre comme définitivement gagné."
+    }
+  ],
+  "replies": [
+    {
+      "move": "3…exd4",
+      "name": "L’échange central",
+      "text": "Le pion e5 capture en d4. Regardez la reprise Cxd4 et les pièces qui vont contrôler le centre."
+    },
+    {
+      "move": "Après Cxd4 : …Cf6",
+      "name": "Viser le pion e4",
+      "text": "Les Noirs se développent en attaquant un pion. Défendre e4 peut se faire tout en développant une pièce, comme dans l’exemple avec Cc3."
+    }
+  ],
+  "mistakes": [
+    {
+      "title": "Sortir la dame par réflexe",
+      "text": "Après 3…exd4, 4. Dxd4 place la dame sur une case attaquée par le cavalier c6 : …Cxd4 peut la capturer immédiatement. La reprise 4. Cxd4 étudiée ici ne doit pas être confondue avec elle."
+    },
+    {
+      "title": "Laisser e4 sans défense",
+      "text": "Le départ du cavalier f3 ne rend pas tous les pions intouchables. Sur …Cf6, repérez l’attaque contre e4."
+    },
+    {
+      "title": "Pousser les pions sans développer",
+      "text": "Ouvrir le centre donne des lignes aux deux camps. Si vos pièces restent sur la première rangée, l’ouverture des lignes peut aussi aider l’adversaire."
+    }
+  ],
+  "pdf": {
+    "title": "Faire le lien entre échange de pions et développement",
+    "text": "Le guide PDF gratuit explique les principes d’ouverture. Rejouez l’échange en d4 puis demandez-vous quelles lignes et quelles cases il libère.",
+    "note": "95 pages · PDF reçu par email · Sans carte bancaire. Guide général des principes, et non répertoire complet de ouverture écossaise.",
+    "label": "Recevoir le guide PDF gratuit",
+    "href": "../guide-apprendre-les-echecs.html#ebook-form"
+  },
+  "practice": [
+    "Rejouez …exd4 et Cxd4 en nommant chaque pion ou pièce déplacé.",
+    "Avant et après l’échange, comparez les colonnes d et e.",
+    "Après …Cf6, trouvez la menace sur e4 puis une réponse de développement."
+  ],
+  "faq": [
+    {
+      "q": "Quels coups définissent l’Écossaise ?",
+      "a": "La position caractéristique apparaît après 1. e4 e5 2. Cf3 Cc6 3. d4. Le pion d attaque immédiatement le pion noir e5."
+    },
+    {
+      "q": "Pourquoi appelle-t-on cette ouverture écossaise ?",
+      "a": "Son nom est lié au match par correspondance Londres–Édimbourg de 1824 à 1828. La suite avait déjà été étudiée avant ce match, notamment par del Rio en 1750."
+    },
+    {
+      "q": "Faut-il reprendre d4 avec la dame ?",
+      "a": "Après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4, la reprise 4. Dxd4 permet …Cxd4 : le cavalier noir c6 peut capturer la dame. La reprise 4. Cxd4 centralise un cavalier sans exposer la dame de cette manière."
+    }
+  ],
+  "related": [
+    "ouverture-italienne",
+    "ouverture-espagnole",
+    "meilleures-ouvertures-echecs-debutants"
+  ],
+  "history": {
+    "title": "D’où vient le nom « ouverture écossaise » ?",
+    "paragraphs": [
+      "Le nom vient du match par correspondance disputé entre les clubs de Londres et d’Édimbourg de 1824 à 1828. Son adoption par les joueurs d’Édimbourg a contribué à attacher le nom écossais à cette suite.",
+      "L’ouverture ne naît pourtant pas au début de ce match : Ercole del Rio l’avait déjà analysée dans un traité de 1750. Il faut distinguer l’ancienneté des coups et l’épisode qui a popularisé leur nom."
+    ],
+    "source": "history",
+    "note": "Au XIXe siècle, les coups d’une partie par correspondance étaient transmis à distance. Le mot « écossaise » raconte cet épisode, pas une règle particulière du jeu.",
+    "noteSource": "history"
+  },
+  "steps": [
+    {
+      "label": "Position de départ",
+      "san": "",
+      "diagram": "ouverture-ecossaise-0.svg",
+      "alt": "Position initiale avant les premiers coups de Ouverture écossaise.",
+      "text": "Les deux camps commencent avec leurs pièces sur les cases de départ."
+    },
+    {
+      "label": "1. e4",
+      "san": "e4",
+      "diagram": "ouverture-ecossaise-1.svg",
+      "alt": "Ouverture écossaise après 1. e4.",
+      "text": "Le pion blanc avance au centre."
+    },
+    {
+      "label": "1…e5",
+      "san": "e4 e5",
+      "diagram": "ouverture-ecossaise-2.svg",
+      "alt": "Ouverture écossaise après 1. e4 e5.",
+      "text": "Le pion noir lui fait face en e5."
+    },
+    {
+      "label": "2. Cf3",
+      "san": "e4 e5 Nf3",
+      "diagram": "ouverture-ecossaise-3.svg",
+      "alt": "Ouverture écossaise après 1. e4 e5 2. Cf3.",
+      "text": "Le cavalier attaque e5 et quitte sa case de départ."
+    },
+    {
+      "label": "2…Cc6",
+      "san": "e4 e5 Nf3 Nc6",
+      "diagram": "ouverture-ecossaise-4.svg",
+      "alt": "Ouverture écossaise après 1. e4 e5 2. Cf3 Cc6.",
+      "text": "Les Noirs développent leur cavalier et défendent e5."
+    },
+    {
+      "label": "3. d4",
+      "san": "e4 e5 Nf3 Nc6 d4",
+      "diagram": "ouverture-ecossaise-5.svg",
+      "alt": "Ouverture écossaise après 1. e4 e5 2. Cf3 Cc6 3. d4.",
+      "text": "Le pion d4 attaque e5 : le centre peut s’ouvrir par un échange."
+    }
+  ],
+  "plan": {
+    "title": "Un exemple court pour comprendre le plan",
+    "movesFr": "1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Cf6 5. Cc3",
+    "san": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nc3",
+    "diagram": "ouverture-ecossaise-plan.svg",
+    "alt": "Ouverture écossaise : position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Cf6 5. Cc3.",
+    "text": "Cette courte suite montre l’idée : le cavalier reprend en d4, les Noirs attaquent e4 par …Cf6 et les Blancs développent Cc3 pour défendre ce pion. Le prochain objectif est de sortir un fou puis de mettre le roi en sécurité."
+  },
+  "exercise": {
+    "question": "Quel coup reprend le pion d4 tout en centralisant une pièce légère ?",
+    "diagram": "ouverture-ecossaise-exercice.svg",
+    "alt": "Ouverture écossaise : position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4.",
+    "san": "e4 e5 Nf3 Nc6 d4 exd4",
+    "solutionSan": "Nxd4",
+    "turn": "white",
+    "answer": "4. Cxd4 : le cavalier f3 reprend en d4. La dame reste sur sa case et le cavalier participe directement au contrôle du centre. Après une réponse comme …Cf6, il faudra encore surveiller e4."
+  },
+  "sources": [
+    {
+      "id": "history",
+      "title": "Ouverture écossaise — histoire et origine du nom",
+      "url": "https://shop.chessbase.com/en/openings/scotch",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "opening",
+      "title": "Ouverture écossaise — premiers coups et idées",
+      "url": "https://www.chess.com/openings/Scotch-Game",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "variantes-lichess",
+      "title": "Lichess — nomenclature et suites des ouvertures",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "checked": "2026-11-24"
+    }
+  ],
+  "repliesTitle": "Deux réponses noires à reconnaître",
+  "lesson": {
+    "structure": [
+      "Le coup d4 met immédiatement les pions en contact. Après …exd4, le pion e noir quitte e5 pour capturer le pion d blanc. La reprise Cxd4 fait ensuite disparaître ce pion noir et centralise le cavalier. Il ne reste plus de pion blanc sur la colonne d, tandis que les Noirs conservent leur pion d7. Vous devez donc distinguer une colonne ouverte pour les deux camps d’une colonne seulement semi-ouverte.",
+      "Le cavalier d4 a gagné une case centrale, mais il n’est pas invulnérable. Le cavalier noir c6 l’attaque déjà ; une capture peut être suivie d’une reprise. Avant d’annoncer qu’un cavalier est en prise, comptez la séquence complète. Un échange de cavaliers n’est pas une perte de pièce si une reprise est possible et cohérente avec le reste de la position.",
+      "Le départ du cavalier f3 change aussi les équilibres autour d’e4. La poussée centrale n’a pas réglé la sécurité de tous vos pions. Après …Cf6, votre pion e4 est attaqué ; Cc3 peut le défendre en développant une autre pièce. Le fou f1 doit ensuite sortir pour que le roi puisse roquer. L’Écossaise reste une ouverture de développement, pas seulement un échange de pions."
+    ],
+    "pieces": [
+      {
+        "piece": "Cavalier g1",
+        "squares": "f3 puis d4 dans la reprise principale",
+        "condition": "Cxd4 reprend le pion et occupe le centre. Après une attaque sur ce cavalier, calculez les échanges avant de le déplacer."
+      },
+      {
+        "piece": "Cavalier b1",
+        "squares": "c3 dans l’exemple étudié",
+        "condition": "Il défend e4 et développe l’aile dame. Sa case doit être choisie selon les autres pions présents."
+      },
+      {
+        "piece": "Fou f1",
+        "squares": "une diagonale active, souvent c4 ou e2 selon les réponses",
+        "condition": "La sortie du fou prépare le roque. La case exacte dépend des menaces sur d4 et de l’organisation noire."
+      },
+      {
+        "piece": "Dame d1",
+        "squares": "rester en retrait tant que sa sortie n’est pas nécessaire",
+        "condition": "Après …exd4, Dxd4 peut perdre la dame contre le cavalier c6. Une reprise de dame n’est pas interchangeable avec une reprise de cavalier."
+      },
+      {
+        "piece": "Roi et tours",
+        "squares": "roquer, puis observer les colonnes centrales",
+        "condition": "Une colonne semi-ouverte peut devenir un axe pour une tour. Il faut toutefois finir de développer les pièces avant de lui attribuer une cible."
+      }
+    ],
+    "reactions": [
+      {
+        "title": "Si les Noirs prennent en d4",
+        "text": "Comparez les reprises légales et les cases contrôlées. Le cavalier c6 attaque d4 : reprendre avec la dame la place sur une case où elle peut être capturée. Avec Cxd4, une éventuelle capture noire porte sur un cavalier et s’inscrit dans une autre séquence d’échanges. Le matériel exposé n’est pas du tout le même."
+      },
+      {
+        "title": "Si les Noirs jouent …Cf6",
+        "text": "Le pion e4 est attaqué. Cc3 fournit un défenseur et développe une pièce. Mais cette réponse doit être choisie dans une position où elle est légale et utile : regardez également les menaces éventuelles contre le cavalier d4 et votre roi."
+      },
+      {
+        "title": "Si les cavaliers s’échangent en d4",
+        "text": "Ne comptez pas seulement la première capture. Identifiez la pièce qui reprend, les lignes ouvertes et le développement restant. Une dame centralisée après des échanges peut être acceptable dans une position précise ; cela ne justifie pas une reprise prématurée quand un cavalier adverse peut la prendre immédiatement."
+      }
+    ],
+    "caseStudy": {
+      "title": "Une reprise naturelle en apparence qui perd la dame",
+      "context": "Les Blancs viennent de reprendre le pion d4 avec leur dame, alors que le cavalier noir se trouve déjà en c6. C’est une différence essentielle avec d’autres débuts où le cavalier n’est pas encore sorti.",
+      "question": "Quel coup noir capture immédiatement la dame blanche ?",
+      "answer": "4…Cxd4 : le cavalier c6 peut aller en d4 et prendre la dame. Une reprise blanche ultérieure ne rendrait qu’un cavalier, pas la dame perdue. Dans la position précédente, 4. Cxd4 était la reprise de développement étudiée. La leçon est de vérifier les attaquants de la case d’arrivée avant de reprendre.",
+      "san": "e4 e5 Nf3 Nc6 d4 exd4 Qxd4",
+      "movesFr": "1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Dxd4",
+      "solutionSan": "Nxd4",
+      "turn": "black",
+      "diagram": "ouverture-ecossaise-decision.svg",
+      "alt": "Ouverture écossaise : position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Dxd4. Trait aux Noirs.",
+      "highlights": [
+        "c6",
+        "d4"
+      ],
+      "checks": [
+        {
+          "type": "attacks",
+          "from": "c6",
+          "targets": [
+            "d4"
+          ]
+        }
+      ]
+    },
+    "transition": [
+      "Après les échanges centraux, choisissez une case pour votre fou f1 et sécurisez le roi. Le milieu de partie commence avec des pièces plus libres, mais aussi des lignes qui peuvent atteindre plus vite votre position. Repérez la colonne où votre adversaire n’a plus de pion et les pions qui sont devenus des cibles.",
+      "Pour analyser une partie d’Écossaise, notez séparément les captures centrales et les coups de développement. Si vous avez passé plusieurs coups à déplacer la dame pendant que les fous restaient bloqués, vous avez identifié un objectif de travail concret."
+    ]
+  },
+  "workshop": {
+    "title": "Reprendre avec la dame : ce qui devient possible après l’échange des cavaliers",
+    "introduction": [
+      "La reprise immédiate Dxd4 étudiée plus haut exposait la dame au cavalier c6. Il ne faut pas en tirer la règle « une dame ne reprend jamais au centre ». Une capture modifie les pièces présentes et les attaques : c’est la nouvelle position qui décide.",
+      "Dans cet atelier, les Blancs ont d’abord repris le pion avec Cxd4, puis les Noirs ont joué …Cxd4 avec leur cavalier c6. Les deux cavaliers concernés ont donc quitté leur trajet initial. La dame blanche peut maintenant reprendre la pièce en d4 : le cavalier qui pouvait la capturer n’est plus en c6."
+    ],
+    "choices": [
+      {
+        "title": "Dxd4 : une reprise rendue possible par l’échange",
+        "explanation": [
+          "5. Dxd4 capture le cavalier noir qui vient d’arriver en d4. Les deux camps ont échangé un pion et un cavalier ; le matériel est équilibré. La dame blanche occupe le centre, mais elle n’est plus exposée à une capture immédiate par un cavalier c6, puisque celui-ci a disparu.",
+          "Cela ne prouve pas que tous les développements blancs sont terminés. Les fous doivent encore sortir et le roi doit être sécurisé. La dame centralisée est une conséquence de l’échange, pas une autorisation de la déplacer plusieurs fois sans raison."
+        ],
+        "lineSan": "Qxd4",
+        "lineFr": "5. Dxd4",
+        "san": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nxd4 Qxd4",
+        "diagram": "ouverture-ecossaise-atelier-reprendre.svg",
+        "alt": "Ouverture écossaise — Dxd4 : une reprise rendue possible par l’échange. Position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Cxd4 5. Dxd4.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "title": "…c5 puis De3 : une attaque de pion sur la dame",
+        "explanation": [
+          "Dans la suite 5…c5 6. De3, le pion noir c5 attaque la dame d4 en diagonale. Les Blancs la déplacent sur une case libre. De3 est une retraite illustrative ; le point à comprendre est que les Noirs peuvent chercher un coup utile tout en gagnant un temps sur la dame.",
+          "Le matériel ne change pas dans cette suite, mais le rythme du développement change. Les Noirs ont joué un coup de pion et les Blancs un nouveau coup de dame. Il faut ensuite juger les pièces encore inactives et les possibilités de roque, plutôt que de déclarer la position gagnée pour l’un des camps."
+        ],
+        "lineSan": "Qxd4 c5 Qe3",
+        "lineFr": "5. Dxd4 c5 6. De3",
+        "san": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nxd4 Qxd4 c5 Qe3",
+        "diagram": "ouverture-ecossaise-atelier-repondre.svg",
+        "alt": "Ouverture écossaise — …c5 puis De3 : une attaque de pion sur la dame. Position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Cxd4 5. Dxd4 c5 6. De3.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Pourquoi Dxd4 perdait-il la dame dans la première position mais pas ici ?",
+        "a": "Dans la première position, le cavalier noir était encore en c6 et pouvait capturer d4. Ici, il a déjà pris le cavalier blanc en d4 et la dame le capture à son tour."
+      },
+      {
+        "q": "Après …c5, le pion noir attaque-t-il la dame en d4 ?",
+        "a": "Oui. Un pion noir en c5 contrôle b4 et d4. La dame d4 doit tenir compte de cette attaque."
+      },
+      {
+        "q": "Un échange matériellement équilibré produit-il toujours la même activité ?",
+        "a": "Non. Les pièces retirées, la position de la dame et les coups de développement encore nécessaires changent les possibilités des deux camps."
+      }
+    ],
+    "review": "Pour chaque reprise, arrêtez-vous une seconde sur la nouvelle position. Demandez-vous quelle pièce a disparu et quelles attaques n’existent plus. Cette habitude évite aussi bien une perte de dame qu’une interdiction trop rigide de la développer.",
+    "startSan": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nxd4",
+    "startFr": "1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Cxd4"
+  },
+  "variants": [
+    {
+      "title": "…Fc5 : attaquer le cavalier central",
+      "san": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3",
+      "idea": "Le fou c5 attaque le cavalier d4. Les Blancs jouent Fe3 : ils développent une pièce et renforcent d4. Ce soutien ne rend pas la position immobile ; il crée aussi la possibilité d’échanges entre les fous.",
+      "plan": "Avant chaque coup de développement, recomptez les attaquants de d4. Les Blancs cherchent à conserver leur activité centrale ; les Noirs veulent faire travailler ce cavalier ou le remplacer par une pièce moins active. Le roque dépend ensuite de la sortie du fou f1.",
+      "movesFr": "1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Fc5 5. Fe3",
+      "diagram": "ouverture-ecossaise-variante-1.svg",
+      "alt": "…Fc5 : attaquer le cavalier central — position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Fc5 5. Fe3."
+    },
+    {
+      "title": "…Cf6 : prendre e4 pour cible",
+      "san": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nc3",
+      "idea": "Le cavalier noir f6 attaque e4. Avec Cc3, les Blancs défendent ce pion tout en développant leur dernière pièce de l’aile dame. Le centre ouvert rend les menaces sur les pièces particulièrement importantes.",
+      "plan": "Les Noirs peuvent envisager …Fb4 pour augmenter la pression sur le cavalier c3. Les Blancs doivent alors regarder leur roi e1 avant de déplacer ce cavalier : un clouage peut modifier sa capacité à défendre e4 en pratique.",
+      "movesFr": "1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Cf6 5. Cc3",
+      "diagram": "ouverture-ecossaise-variante-2.svg",
+      "alt": "…Cf6 : prendre e4 pour cible — position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Cf6 5. Cc3."
+    }
+  ],
+  "trap": {
+    "title": "Une dame prise par le cavalier oublié",
+    "san": "e4 e5 Nf3 Nc6 d4 exd4 Qxd4",
+    "solutionSan": "Nxd4",
+    "explanation": "La dame d4 se trouve sur une case contrôlée par le cavalier c6. Les Noirs peuvent la prendre immédiatement. Ce n’est pas seulement une sortie de dame trop précoce : c’est une perte concrète de neuf points de dame contre aucune pièce dans ce coup. Le contrôle de d4 était visible avant la reprise.",
+    "prevention": "Reprenez avec 4. Cxd4 dans cette position. Après un échange ultérieur des cavaliers sur d4, une reprise de dame pourra devenir possible, car le cavalier c6 aura disparu. Le même mouvement de dame peut donc être une faute dans un ordre de coups et être légalement sûr dans un autre.",
+    "avoidSan": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nxd4",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -9
+          }
+        ]
+      }
+    ],
+    "movesFr": "1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Dxd4",
+    "diagram": "ouverture-ecossaise-piege.svg",
+    "alt": "Une dame prise par le cavalier oublié — position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Dxd4.",
+    "solutionFr": "4… Cxd4",
+    "avoidFr": "1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4",
+    "turn": "black"
+  },
+  "quickReference": [
+    "Ouvrir le centre tôt et donner une activité immédiate aux pièces.",
+    "Après d4 exd4, reprendre avec le cavalier et surveiller les pressions sur d4 et e4.",
+    "Une reprise immédiate Dxd4 laisse la dame en prise au cavalier c6."
+  ],
+  "comparisons": [
+    {
+      "slug": "ouverture-italienne",
+      "text": "Comparer d4 immédiat à un développement où cette poussée se prépare."
+    },
+    {
+      "slug": "ouverture-espagnole",
+      "text": "Étudier une pression centrale plus progressive."
+    }
+  ]
+}

@@ -10,8 +10,10 @@ export const PACK_PRODUCT_ID = 'pack_livres_relies';
 export const PACK_AMOUNT_CENTS = 4000;
 export const PACK_NAME = 'Apprendre les Échecs — Volumes I & II (édition reliée à la main)';
 export const DELAI_LIVRAISON = '7 jours maximum';
-/** Coloris des couvertures (clés historiques conservées pour les Payment Links). */
-export const BOOK_COLORS = Object.freeze({ rouge: 'Bordeaux', vert: 'Vert olive', bleu: 'Bleu marine', marron: 'Marron' });
+/** Libellés de tous les coloris, y compris ceux retirés (bleu marine), pour afficher les anciennes commandes. */
+export const COLOR_LABELS = Object.freeze({ rouge: 'Bordeaux', vert: 'Vert olive', bleu: 'Bleu marine', marron: 'Marron' });
+/** Coloris proposés à la commande (clés historiques conservées pour les Payment Links). Bleu marine retiré le 23 nov. 2026. */
+export const BOOK_COLORS = Object.freeze({ rouge: 'Bordeaux', vert: 'Vert olive', marron: 'Marron' });
 /** Ouvrages dont le client choisit la couleur, et leur présence dans chaque produit. */
 export const OUVRAGES = Object.freeze({
   livre: 'Livre relié',
@@ -34,14 +36,14 @@ function sessionColors(session) {
   for (const item of items) {
     let value = session.metadata?.['couleur_' + item] || '';
     if (item === 'livre' && !value) value = session.metadata?.book_color || field?.dropdown?.value || '';
-    if (Object.hasOwn(BOOK_COLORS, value)) colors[item] = value;
+    if (Object.hasOwn(COLOR_LABELS, value)) colors[item] = value;
   }
   return colors;
 }
 /** Lignes « Livre relié : Bordeaux », y compris pour les commandes enregistrées avant le choix par ouvrage. */
 function colorLines(order) {
   const colors = order.colors && typeof order.colors === 'object' ? order.colors : (order.book_color ? { livre: order.book_color } : {});
-  return Object.keys(OUVRAGES).filter(k => Object.hasOwn(BOOK_COLORS, colors[k])).map(k => OUVRAGES[k] + ' : ' + BOOK_COLORS[colors[k]]);
+  return Object.keys(OUVRAGES).filter(k => Object.hasOwn(COLOR_LABELS, colors[k])).map(k => OUVRAGES[k] + ' : ' + COLOR_LABELS[colors[k]]);
 }
 
 /**
@@ -146,7 +148,8 @@ function extractShipping(session) {
  */
 export function isPackSession(session) {
   if (!session) return false;
-  if (session.metadata?.product === PACK_PRODUCT_ID) return true;
+  // Tout produit physique du catalogue (livre, cahiers, packs) est une commande à expédier.
+  if (Object.hasOwn(PRODUITS, session.metadata?.product || '')) return true;
   const shipping = extractShipping(session);
   return Boolean(shipping?.address?.line1);
 }

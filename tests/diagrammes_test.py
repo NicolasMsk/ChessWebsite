@@ -36,4 +36,34 @@ class DiagrammesTests(unittest.TestCase):
         source=source.replace('#F0D9B5','__LIGHT__').replace('#B58863','#F0D9B5').replace('__LIGHT__','#B58863')
         with self.assertRaises(AssertionError):module.read_svg(io.StringIO(source))
 
+    def test_material_claims_include_both_capture_and_recapture(self):
+        record=copy.deepcopy(DATA['ouverture-francaise-atelier-automatisme.svg'])
+        module.board_for(record)
+        record['checks']=[{'type':'material','balance':0}]
+        with self.assertRaises(AssertionError):module.board_for(record)
+
+    def test_a_blocked_diagonal_is_not_an_attack(self):
+        record=copy.deepcopy(DATA['ouverture-anglaise-atelier-occuper.svg'])
+        record['checks']=[{'type':'attacks','from':'g2','targets':['d5']}]
+        with self.assertRaises(AssertionError):module.board_for(record)
+        record['checks']=[{'type':'notAttacks','from':'g2','targets':['d5']}]
+        module.board_for(record)
+
+    def test_queen_on_a5_does_not_check_through_the_c3_knight(self):
+        record=copy.deepcopy(DATA['ouverture-scandinave-atelier-active.svg'])
+        record['checks']=[{'type':'check'}]
+        with self.assertRaises(AssertionError):module.board_for(record)
+
+    def test_material_after_a_tactical_line_is_not_only_legality(self):
+        record=copy.deepcopy(DATA['ouverture-gambit-dame-piege.svg'])
+        check=next(c for c in record['checks'] if c.get('afterChecks'))
+        check['afterChecks']=[{'type':'material','balance':-3}]
+        with self.assertRaises(AssertionError):module.board_for(record)
+
+    def test_sicilian_pawn_fork_really_attacks_both_pieces(self):
+        record=copy.deepcopy(DATA['ouverture-sicilienne-piege.svg'])
+        check=next(c for c in record['checks'] if c.get('afterChecks') and c['afterChecks'][0]['type']=='attacks')
+        check['afterChecks'][0]['targets']=['c4','f3']
+        with self.assertRaises(AssertionError):module.board_for(record)
+
 if __name__=='__main__':unittest.main()

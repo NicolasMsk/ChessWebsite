@@ -1,0 +1,395 @@
+{
+  "slug": "ouverture-italienne",
+  "name": "Ouverture italienne",
+  "title": "Ouverture italienne : variantes, plans et pièges pour débuter",
+  "description": "Apprenez l’Italienne pas à pas : jeu calme, deux cavaliers, plans au centre et pièges expliqués avec diagrammes, exercices et guide PDF gratuit.",
+  "h1": "L’ouverture italienne : comprendre ses premiers coups",
+  "subtitle": "Un pion au centre, deux pièces qui sortent, un roi à mettre en sécurité.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "readTime": "18 min",
+  "side": "Avec les Blancs",
+  "movesFr": "1. e4 e5 2. Cf3 Cc6 3. Fc4",
+  "movesSan": "e4 e5 Nf3 Nc6 Bc4",
+  "eco": "C50",
+  "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+  "imageAlt": "Échiquier illustrant les premiers coups d’une partie d’échecs",
+  "answer": "L’ouverture italienne commence par 1. e4 e5 2. Cf3 Cc6 3. Fc4. Les Blancs occupent le centre, développent le cavalier vers f3 puis placent le fou en c4, sur la diagonale de f7. Pour débuter, le but est de sortir ses pièces et de préparer le roque, avant de chercher une attaque.",
+  "intro": "Si vous avez appris les déplacements et voulez donner un sens à vos premiers coups, l’Italienne constitue un bon terrain d’apprentissage. Vous allez voir où placer vos pièces et pourquoi, sans apprendre une longue liste de variantes.",
+  "fit": "Elle vous convient si vous aimez ouvrir la partie avec 1. e4 et développer rapidement vos pièces. Elle dépend aussi de la réponse adverse : face à 1…c5 ou 1…e6, on entre dans d’autres ouvertures.",
+  "history": {
+    "title": "Pourquoi dit-on « ouverture italienne » ?",
+    "paragraphs": [
+      "Ce nom renvoie à la tradition des maîtres italiens qui ont étudié et transmis cette ouverture. Il ne désigne pas une invention attribuable avec certitude à une seule personne.",
+      "Des analyses anciennes figurent chez Damiano, dans son traité de 1512, puis chez Giulio Cesare Polerio au XVIe siècle et Gioachino Greco au XVIIe siècle. L’Italienne s’est construite au fil de ces travaux ; mieux vaut parler d’une histoire collective que d’un créateur unique."
+    ],
+    "source": "italian-game",
+    "note": "Après 3…Fc5, on parle de Giuoco Piano, généralement traduit par « jeu calme ». Ce nom désigne une branche de l’Italienne : il ne signifie pas que toutes les parties seront tranquilles.",
+    "noteSource": "giuoco-piano"
+  },
+  "steps": [
+    {
+      "label": "Position de départ",
+      "san": "",
+      "diagram": "ouverture-italienne-0.svg",
+      "alt": "Position initiale, les Blancs vont jouer 1. e4.",
+      "text": "Les deux camps disposent encore de toutes leurs pièces sur les cases de départ."
+    },
+    {
+      "label": "1. e4",
+      "san": "e4",
+      "diagram": "ouverture-italienne-1.svg",
+      "alt": "Après 1. e4, le pion blanc occupe e4.",
+      "text": "Le pion blanc avance au centre. Il libère une diagonale pour le fou f1 et pour la dame."
+    },
+    {
+      "label": "1…e5",
+      "san": "e4 e5",
+      "diagram": "ouverture-italienne-2.svg",
+      "alt": "Après 1…e5, les pions e4 et e5 se font face.",
+      "text": "Les Noirs occupent à leur tour le centre et ouvrent une diagonale à leur fou f8."
+    },
+    {
+      "label": "2. Cf3",
+      "san": "e4 e5 Nf3",
+      "diagram": "ouverture-italienne-3.svg",
+      "alt": "Après 2. Cf3, le cavalier blanc en f3 attaque le pion e5.",
+      "text": "Le cavalier sort et attaque le pion e5. Le développement crée déjà une menace concrète."
+    },
+    {
+      "label": "2…Cc6",
+      "san": "e4 e5 Nf3 Nc6",
+      "diagram": "ouverture-italienne-4.svg",
+      "alt": "Après 2…Cc6, le cavalier noir en c6 défend le pion e5.",
+      "text": "Les Noirs développent une pièce tout en défendant leur pion e5."
+    },
+    {
+      "label": "3. Fc4",
+      "san": "e4 e5 Nf3 Nc6 Bc4",
+      "diagram": "ouverture-italienne-5.svg",
+      "alt": "Après 3. Fc4, le fou blanc c4 vise f7 ; la flèche montre cette diagonale.",
+      "text": "Le fou rejoint c4 : c’est la position caractéristique de l’Italienne. Il vise f7, mais cela ne suffit pas à lancer une attaque."
+    }
+  ],
+  "ideas": [
+    {
+      "title": "Finir de sortir les pièces",
+      "text": "Le cavalier b1 et le fou c1 doivent aussi entrer en jeu. Cherchez une case utile en regardant les menaces adverses, au lieu de rejouer immédiatement le fou c4."
+    },
+    {
+      "title": "Préparer le petit roque",
+      "text": "Le cavalier g1 et le fou f1 ont quitté leur case : le passage est dégagé. Il faut encore vérifier les conditions du roque, notamment l’absence d’échec et de cases traversées attaquées."
+    },
+    {
+      "title": "Surveiller le centre",
+      "text": "Le pion e4 peut devenir une cible. Avant d’avancer un autre pion ou de viser le roi, vérifiez comment e4 est défendu et ce que change le dernier coup noir."
+    }
+  ],
+  "plan": {
+    "title": "Un exemple simple pour préparer le roque",
+    "movesFr": "1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. d3 Cf6 5. O-O",
+    "san": "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6 O-O",
+    "diagram": "ouverture-italienne-plan.svg",
+    "alt": "Après 5. O-O, le roi blanc est en g1 et la tour en f1 ; les Noirs ont leurs cavaliers en c6 et f6 et leur fou en c5.",
+    "text": "Dans cet exemple, d3 soutient e4 et ouvre une diagonale au fou c1 ; le roque place le roi en g1. C’est une illustration, pas une suite à reproduire sans regarder les coups adverses. Les autres pièces blanches restent à développer."
+  },
+  "replies": [
+    {
+      "move": "3…Fc5",
+      "name": "Le Giuoco Piano",
+      "text": "Les Noirs sortent leur fou vers une diagonale active. Continuez à développer vos pièces ; d3 est une façon simple de soutenir e4."
+    },
+    {
+      "move": "3…Cf6",
+      "name": "La défense des deux cavaliers",
+      "text": "Les Noirs attaquent immédiatement e4. Votre priorité est de vérifier ce pion et les menaces : ne recopiez pas automatiquement le plan montré contre …Fc5."
+    }
+  ],
+  "mistakes": [
+    {
+      "title": "Confondre une cible avec une victoire",
+      "text": "Le fou c4 vise f7, un pion initialement défendu seulement par le roi. Ce constat ne justifie pas à lui seul un sacrifice ou une sortie précipitée de la dame."
+    },
+    {
+      "title": "Jouer le plan sans regarder les Noirs",
+      "text": "Après …Cf6, les Noirs attaquent e4. Avant chaque coup, demandez-vous quelle menace vient d’apparaître et si une de vos pièces est en prise."
+    },
+    {
+      "title": "Ne sortir que le fou et le cavalier roi",
+      "text": "L’Italienne ne se termine pas au troisième coup. Le cavalier b1 et le fou c1 doivent participer ; gardez aussi votre roi en sécurité."
+    }
+  ],
+  "exercise": {
+    "question": "Les Blancs jouent. Quel coup met le roi à l’abri tout en activant la tour h1 ?",
+    "diagram": "ouverture-italienne-exercice.svg",
+    "alt": "Position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. d3 Cf6 ; trait aux Blancs.",
+    "san": "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6",
+    "solutionSan": "O-O",
+    "answer": "5. O-O, le petit roque : le roi va de e1 à g1 et la tour de h1 à f1. Dans cette position, le roi n’est pas en échec et les cases e1, f1 et g1 ne sont pas attaquées. Le roque est donc légal. Il reste ensuite à développer l’aile dame."
+  },
+  "pdf": {
+    "title": "Comprendre l’ouverture, puis s’entraîner sur l’échiquier",
+    "text": "Le guide gratuit « Apprendre les Échecs — Volume 1 » explique les principes d’ouverture : centre, développement et sécurité du roi. Reprenez ensuite les premiers coups de l’Italienne en expliquant chaque déplacement à voix haute.",
+    "note": "95 pages · PDF reçu par email · Sans carte bancaire. Guide général pour débutants, et non répertoire complet de l’Italienne.",
+    "label": "Recevoir le guide PDF gratuit",
+    "href": "../guide-apprendre-les-echecs.html#ebook-form"
+  },
+  "practice": [
+    "Rejouez les cinq premiers demi-coups et expliquez leur rôle sans regarder le texte.",
+    "Reprenez la position après 3. Fc4 : comparez les idées de …Fc5 et …Cf6, sans apprendre de variante longue.",
+    "Jouez une partie lente. Après la partie, vérifiez le développement des pièces et la sécurité de votre roi."
+  ],
+  "faq": [
+    {
+      "q": "Quels sont les premiers coups de l’ouverture italienne ?",
+      "a": "L’Italienne commence par 1. e4 e5 2. Cf3 Cc6 3. Fc4. C signifie cavalier et F signifie fou dans la notation française. Les Noirs choisissent ensuite leur réponse."
+    },
+    {
+      "q": "Qui a inventé l’ouverture italienne ?",
+      "a": "On ne peut pas attribuer sa création à un inventeur unique. Damiano, Polerio et Greco font partie des auteurs anciens qui ont étudié les positions associées à cette ouverture."
+    },
+    {
+      "q": "Quelle différence entre l’Italienne et le Giuoco Piano ?",
+      "a": "L’Italienne est définie après 1. e4 e5 2. Cf3 Cc6 3. Fc4. Le Giuoco Piano est la branche où les Noirs répondent 3…Fc5. Après 3…Cf6, on parle de défense des deux cavaliers."
+    },
+    {
+      "q": "Peut-on jouer l’Italienne contre toutes les défenses ?",
+      "a": "Non. La position caractéristique suppose notamment les réponses …e5 et …Cc6. Si les Noirs choisissent une autre structure, appliquez les principes d’ouverture en vous adaptant à la position."
+    }
+  ],
+  "sources": [
+    {
+      "id": "italian-game",
+      "title": "Chess.com — Italian Game : position initiale et histoire",
+      "url": "https://www.chess.com/openings/Italian-Game",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "giuoco-piano",
+      "title": "Bill Wall — The Giuoco Piano is No Quiet Game",
+      "url": "https://www.chess.com/article/view/the-giuoco-piano-is-no-quiet-game",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "lichess",
+      "title": "Lichess — nomenclature des ouvertures, fichier C",
+      "url": "https://github.com/lichess-org/chess-openings/blob/master/c.tsv",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "variantes-lichess",
+      "title": "Lichess — nomenclature et suites des ouvertures",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "checked": "2026-11-24"
+    }
+  ],
+  "related": [
+    "meilleures-ouvertures-echecs-debutants",
+    "10-erreurs-debutant-echecs",
+    "exercices-echecs-debutant"
+  ],
+  "lesson": {
+    "structure": [
+      "Après e4 et …e5, les deux pions centraux se bloquent mutuellement : ils ne s’attaquent pas, car un pion capture en diagonale. Leurs soutiens vont donc compter. Le cavalier f3 attaque e5 ; celui de c6 le défend. Le fou c4 apporte une pression sur la diagonale c4–d5–e6–f7, mais une poussée noire …d5 peut interrompre cette ligne. Le centre et l’activité du fou sont ainsi liés.",
+      "Le choix entre d3 et d4 change la nature de la partie. Avec d3, vous soutenez e4 et libérez le fou c1 tout en conservant le contact des pions e4 et e5. Avec d4, vous contestez e5 et acceptez plus vite des échanges. Il faut alors calculer les prises possibles. Une position ouverte récompense les pièces déjà développées, mais profite aussi aux pièces adverses : ouvrir le centre n’est pas un avantage automatique.",
+      "La case f7 est une faiblesse initiale parce que seul le roi noir la défend dans la position de départ. Cela en fait un repère d’observation, pas un ordre de sacrifier. Avant de viser f7 avec un cavalier ou une dame, comparez le nombre d’attaquants, les réponses du roi et le temps laissé aux autres pièces noires. Une attaque menée avec deux pièces tandis que les autres dorment peut s’arrêter très vite."
+    ],
+    "pieces": [
+      {
+        "piece": "Cavalier g1",
+        "squares": "f3",
+        "condition": "Il attaque e5 et contrôle d4. S’il repart attaquer ailleurs, vérifiez ce qu’il cesse de défendre."
+      },
+      {
+        "piece": "Fou f1",
+        "squares": "c4",
+        "condition": "Sa diagonale vise f7 tant qu’aucun pion ou échange ne l’interrompt. Une attaque de pion sur le fou oblige à réévaluer sa case."
+      },
+      {
+        "piece": "Fou c1",
+        "squares": "une diagonale libérée par d3 ou d4",
+        "condition": "Ne le laissez pas définitivement enfermé. Sa sortie dépend du centre et des pièces qu’il peut viser."
+      },
+      {
+        "piece": "Cavalier b1",
+        "squares": "c3 ou d2 selon les pions",
+        "condition": "Si vous voulez placer un pion en c3 pour préparer d4, Cc3 et c3 ne sont pas immédiatement compatibles."
+      },
+      {
+        "piece": "Roi et tours",
+        "squares": "petit roque, puis une colonne utile",
+        "condition": "Le roque peut rendre f1 disponible à une tour. La placer en e1 n’a de sens qu’en fonction du centre et du rôle du pion e4."
+      }
+    ],
+    "reactions": [
+      {
+        "title": "Si les Noirs jouent …Cf6",
+        "text": "Le cavalier attaque e4. Commencez par compter les défenseurs du pion : après les seuls coups e4, Cf3 et Fc4, aucun pion blanc ne le protège encore. Jouer d3 ajoute ce soutien tout en ouvrant le fou c1. Cc3 est aussi une idée de développement dans certaines positions, mais il occupe une case que vous pourriez vouloir réserver au pion c."
+      },
+      {
+        "title": "Si les Noirs préparent …d5",
+        "text": "La poussée peut gagner de l’espace, toucher le fou c4 et réduire son action vers f7. Ne pensez pas uniquement à votre attaque sur le roi : demandez-vous quelles captures centrales deviennent possibles. Si un échange ouvre des colonnes, le camp dont le roi reste au centre peut subir les conséquences."
+      },
+      {
+        "title": "Si votre fou est attaqué",
+        "text": "Un coup de pion qui gagne un temps sur le fou ne gagne pas forcément une pièce. Cherchez d’abord les retraites légales, puis comparez le maintien de la diagonale et le coût en temps. Reculer un fou pour le conserver peut être raisonnable ; répéter ses déplacements sans menace réelle retarde les autres pièces."
+      }
+    ],
+    "caseStudy": {
+      "title": "Les deux cavaliers : voir la menace avant de poursuivre le plan",
+      "context": "Les Noirs viennent de jouer 3…Cf6 au lieu de …Fc5. Le dessin ressemble à votre développement habituel, mais le pion e4 est attaqué. Il faut mettre cette différence au premier plan.",
+      "question": "Comment soutenir e4 sans sortir la dame et en donnant une diagonale au fou c1 ?",
+      "answer": "4. d3 est une réponse cohérente : le pion d3 défend e4 et ouvre la diagonale du fou c1. Ce coup ne gagne rien de force ; il résout un problème concret tout en préparant le développement. La leçon est de donner une fonction à votre prochain coup plutôt que de recopier celui d’une autre partie.",
+      "san": "e4 e5 Nf3 Nc6 Bc4 Nf6",
+      "movesFr": "1. e4 e5 2. Cf3 Cc6 3. Fc4 Cf6",
+      "solutionSan": "d3",
+      "turn": "white",
+      "diagram": "ouverture-italienne-decision.svg",
+      "alt": "Ouverture italienne : position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Cf6. Trait aux Blancs.",
+      "highlights": [
+        "e4",
+        "f6"
+      ],
+      "checks": [
+        {
+          "type": "attacks",
+          "from": "f6",
+          "targets": [
+            "e4"
+          ]
+        }
+      ]
+    },
+    "transition": [
+      "Vous avez dépassé les seuls coups d’ouverture lorsque vos deux cavaliers et vos fous ont un rôle, que le roi est en sécurité et que vous savez ce que vous voulez faire au centre. Votre prochaine question sera alors : préparer d4, maintenir la tension ou améliorer une pièce ? La réponse dépend des pions et des échanges déjà joués.",
+      "Après une partie, cherchez le premier moment où une menace sur e4, sur votre fou ou sur votre roi vous a échappé. Cette position est plus utile à retravailler qu’une nouvelle liste de dix coups théoriques."
+    ]
+  },
+  "workshop": {
+    "title": "Ouvrir le centre : regarder aussi les échecs adverses",
+    "introduction": [
+      "Préparer c3 puis d4 permet aux Blancs de contester e5 et de reconstruire un centre avec deux pions après un échange. Mais la transformation du centre ouvre aussi des diagonales aux Noirs. Pour choisir une poussée, il faut examiner les échecs adverses avant de compter seulement l’espace gagné.",
+      "Dans la position de départ de l’atelier, les Blancs viennent de reprendre en d4 avec le pion c3. Leurs pions d4 et e4 sont côte à côte : ils occupent de l’espace, mais ne se protègent pas mutuellement. La case c3 est redevenue libre et le pion d2 a disparu. Ces deux détails rendent possible un échec du fou noir sur la diagonale vers e1."
+    ],
+    "choices": [
+      {
+        "title": "Le centre blanc ouvre une diagonale noire",
+        "explanation": [
+          "Les Noirs jouent 6…Fb4+. Le fou quitte c5 pour b4 et donne échec au roi e1 en passant par c3 et d2, deux cases désormais libres. L’échec ne signifie pas que le centre blanc était une erreur : il montre qu’une rupture centrale doit être accompagnée d’un calcul des lignes ouvertes.",
+          "Le roi ne peut pas ignorer l’échec pour continuer son propre plan. Avant de choisir une parade, examinez si une pièce peut s’interposer en se développant. Dans cette position, plusieurs décisions sont possibles ; l’atelier poursuit avec une solution de développement."
+        ],
+        "lineSan": "Bb4+",
+        "lineFr": "6… Fb4+",
+        "san": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+",
+        "diagram": "ouverture-italienne-atelier-echec.svg",
+        "alt": "Ouverture italienne — Le centre blanc ouvre une diagonale noire. Position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. c3 Cf6 5. d4 exd4 6. cxd4 Fb4+.",
+        "checks": [
+          {
+            "type": "check"
+          }
+        ]
+      },
+      {
+        "title": "Parer l’échec en développant",
+        "explanation": [
+          "Après 7. Fd2, les Blancs interposent leur fou c1. Dans la suite illustrative …Fxd2+ 8. Cbxd2, le cavalier b1 reprend le fou noir en d2. Les fous échangés ont la même valeur habituelle ; aucun camp n’a gagné de matériel dans cette séquence.",
+          "Le résultat important est ailleurs : les Blancs ont répondu aux échecs et développé une pièce, tandis que la structure centrale demeure. La notation Cbxd2 précise le cavalier venant de b1, car celui de f3 peut lui aussi atteindre d2. Lire cette précision aide à suivre la position réelle."
+        ],
+        "lineSan": "Bb4+ Bd2 Bxd2+ Nbxd2",
+        "lineFr": "6… Fb4+ 7. Fd2 Fxd2+ 8. Cbxd2",
+        "san": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+ Bd2 Bxd2+ Nbxd2",
+        "diagram": "ouverture-italienne-atelier-parade.svg",
+        "alt": "Ouverture italienne — Parer l’échec en développant. Position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. c3 Cf6 5. d4 exd4 6. cxd4 Fb4+ 7. Fd2 Fxd2+ 8. Cbxd2.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Le pion e4 protège-t-il le pion d4 ?",
+        "a": "Non. Deux pions côte à côte ne se défendent pas. Le pion e4 contrôle d5 et f5 ; le pion d4 contrôle c5 et e5."
+      },
+      {
+        "q": "Pourquoi …Fb4 donne-t-il échec après la reprise cxd4 ?",
+        "a": "Le pion qui était en c3 a quitté cette case et le pion d2 n’y est plus. La diagonale b4–c3–d2–e1 est donc ouverte jusqu’au roi."
+      },
+      {
+        "q": "Pourquoi écrire Cbxd2 plutôt que seulement Cxd2 dans l’exemple ?",
+        "a": "Les cavaliers b1 et f3 peuvent tous deux prendre en d2. La lettre b identifie celui qui reprend et permet de reconstruire la position sans ambiguïté."
+      }
+    ],
+    "review": "En partie, avant d’avancer d4, vérifiez ce que les captures enlèvent comme obstacles autour de votre roi. Dans votre analyse, cherchez une rupture centrale puis tracez toutes les nouvelles diagonales : vous entraînerez le calcul, pas seulement la mémoire de l’Italienne.",
+    "startSan": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4",
+    "startFr": "1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. c3 Cf6 5. d4 exd4 6. cxd4"
+  },
+  "variants": [
+    {
+      "title": "Le jeu calme : d3 avant d4",
+      "san": "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6",
+      "idea": "Avec 4. d3, les Blancs soutiennent e4 et ouvrent le passage au fou c1. Le centre reste en place : les deux camps peuvent terminer leur développement avant de décider comment le transformer.",
+      "plan": "Développez le cavalier b1, mettez le roi à l’abri et observez si c3 puis d4 sont possibles. Un coup comme c3 a un coût : il retire temporairement la case c3 au cavalier. Il faut choisir un ordre cohérent, pas empiler des coups connus.",
+      "movesFr": "1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. d3 Cf6",
+      "diagram": "ouverture-italienne-variante-1.svg",
+      "alt": "Le jeu calme : d3 avant d4 — position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. d3 Cf6."
+    },
+    {
+      "title": "Les deux cavaliers : la pression immédiate sur e4",
+      "san": "e4 e5 Nf3 Nc6 Bc4 Nf6 d3 Bc5",
+      "idea": "Le coup 3…Cf6 attaque e4. Après 4. d3, les Blancs répondent à cette menace par un soutien de pion ; les Noirs développent leur fou. Cette position peut rejoindre le jeu calme par un ordre de coups différent.",
+      "plan": "La différence utile n’est pas seulement le nom de la variante : avant d3, e4 était menacé. En comparant les deux suites, repérez le moment où vous devez traiter cette attaque. C’est ainsi que vous éviterez de jouer une préparation de mémoire.",
+      "movesFr": "1. e4 e5 2. Cf3 Cc6 3. Fc4 Cf6 4. d3 Fc5",
+      "diagram": "ouverture-italienne-variante-2.svg",
+      "alt": "Les deux cavaliers : la pression immédiate sur e4 — position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Cf6 4. d3 Fc5."
+    }
+  ],
+  "trap": {
+    "title": "Le pion empoisonné et le mat du cavalier",
+    "san": "e4 e5 Nf3 Nc6 Bc4 Nd4 Nxe5 Qg5 Nxf7 Qxg2 Rf1 Qxe4+ Be2",
+    "solutionSan": "Nf3#",
+    "explanation": "Les Blancs ont cherché deux pions avec Cxe5 puis Cxf7. Pendant ce temps, la dame noire est entrée sur les cases g2 et e4. Après 7. Fe2, le cavalier d4 peut donner mat en f3 : le fou e2 ne peut pas le prendre, car il est cloué par la dame e4 devant le roi e1. La dernière position est un mat réel, pas simplement une attaque prometteuse.",
+    "prevention": "Au lieu de 4. Cxe5, 4. Cxd4 échange le cavalier intrus ; après …exd4, les Blancs peuvent roquer. La leçon est de vérifier les entrées de dame contre votre roi avant de ramasser un pion central. Cette suite de mat dépend des erreurs blanches : les Noirs ne peuvent pas l’imposer à toute réponse.",
+    "avoidSan": "e4 e5 Nf3 Nc6 Bc4 Nd4 Nxd4 exd4 O-O",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nf3#",
+        "mate": true
+      },
+      {
+        "type": "line",
+        "moves": "Nf3#",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      }
+    ],
+    "movesFr": "1. e4 e5 2. Cf3 Cc6 3. Fc4 Cd4 4. Cxe5 Dg5 5. Cxf7 Dxg2 6. Tf1 Dxe4+ 7. Fe2",
+    "diagram": "ouverture-italienne-piege.svg",
+    "alt": "Le pion empoisonné et le mat du cavalier — position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Cd4 4. Cxe5 Dg5 5. Cxf7 Dxg2 6. Tf1 Dxe4+ 7. Fe2.",
+    "solutionFr": "7… Cf3#",
+    "avoidFr": "1. e4 e5 2. Cf3 Cc6 3. Fc4 Cd4 4. Cxd4 exd4 5. O-O",
+    "turn": "black"
+  },
+  "quickReference": [
+    "Développer rapidement les pièces et mettre le roi à l’abri avant d’attaquer f7.",
+    "Préparer d4, souvent avec c3 et d3, en vérifiant les lignes qui s’ouvrent vers votre roi.",
+    "Sur …Cf6, regarder la menace sur e4 avant de poursuivre votre dispositif."
+  ],
+  "comparisons": [
+    {
+      "slug": "ouverture-espagnole",
+      "text": "Comparer le placement du fou en b5 à celui en c4."
+    },
+    {
+      "slug": "ouverture-ecossaise",
+      "text": "Étudier une ouverture où les Blancs jouent d4 dès le troisième coup."
+    }
+  ]
+}

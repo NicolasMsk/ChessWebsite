@@ -1,0 +1,374 @@
+{
+  "slug": "ouverture-gambit-dame",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "readTime": "16 min",
+  "side": "Avec les Blancs",
+  "movesSan": "d4 d5 c4",
+  "movesFr": "1. d4 d5 2. c4",
+  "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+  "imageAlt": "Gambit dame : les premiers coups expliqués aux débutants.",
+  "name": "Gambit dame",
+  "title": "Gambit dame : accepté, refusé et pièges expliqués",
+  "description": "Découvrez le gambit dame accepté et refusé : tension centrale, reprise en c4 et pièges de clouage. Plans, diagrammes et exercices pour débutants.",
+  "h1": "Le gambit dame : offrir un pion pour discuter le centre",
+  "subtitle": "Pourquoi le pion c avance, et ce que les Noirs peuvent choisir.",
+  "eco": "D06",
+  "answer": "Le gambit dame commence par 1. d4 d5 2. c4. Les Blancs proposent leur pion c pour contester le pion noir d5. Les Noirs peuvent accepter par …dxc4 ou maintenir leur centre, par exemple avec …e6. Le nom ne signifie pas que la dame blanche est sacrifiée.",
+  "intro": "Un gambit est une offre de matériel faite pour obtenir une autre forme d’activité. Ici, la question de débutant est simple : faut-il chercher à conserver un pion ou développer ses pièces ? Vous allez observer comment une capture transforme le centre.",
+  "fit": "Cette ouverture convient pour découvrir la lutte centrale après 1. d4. Elle vous fera comparer des structures de pions plutôt que chercher une attaque immédiate contre le roi.",
+  "ideas": [
+    {
+      "title": "Échanger un pion de côté contre un pion central",
+      "text": "Si le pion d5 prend en c4, il quitte le centre. Les Blancs peuvent alors chercher de l’activité et un soutien solide pour d4."
+    },
+    {
+      "title": "Préparer la récupération",
+      "text": "Après …dxc4, e3 ouvre la diagonale du fou f1 vers c4. Le pion pourra être repris si les réponses noires le permettent."
+    },
+    {
+      "title": "Développer avant de chasser tous les pions",
+      "text": "Ne dépensez pas plusieurs coups de dame pour récupérer le pion à tout prix. Observez comment une sortie de fou peut faire ce travail tout en développant une pièce."
+    }
+  ],
+  "replies": [
+    {
+      "move": "2…dxc4",
+      "name": "Le gambit accepté",
+      "text": "Le pion d5 capture le pion c4. Cherchez le développement et une manière de préparer la reprise, sans paniquer devant le pion de moins."
+    },
+    {
+      "move": "2…e6",
+      "name": "Le gambit refusé",
+      "text": "Le pion e6 soutient d5. La tension entre les pions c4 et d5 reste présente ; les deux camps continuent leur développement."
+    }
+  ],
+  "mistakes": [
+    {
+      "title": "Croire que la dame doit être donnée",
+      "text": "Le terme « dame » indique l’aile du plateau. La dame blanche reste en d1 au moment où le pion c avance."
+    },
+    {
+      "title": "Essayer de gagner un pion sans compter",
+      "text": "Après un échange central, vérifiez toutes les reprises possibles. Une capture ne donne pas forcément un avantage matériel durable."
+    },
+    {
+      "title": "Oublier le fou c1 après e3",
+      "text": "Le pion e3 aide le fou f1 mais restreint la diagonale du fou c1. Il faudra trouver un rôle à ce second fou."
+    }
+  ],
+  "pdf": {
+    "title": "Apprendre à comparer matériel et activité",
+    "text": "Le guide PDF gratuit donne les principes pour développer les pièces et contrôler le centre. Rejouez le gambit accepté en expliquant comment le fou récupère le pion.",
+    "note": "95 pages · PDF reçu par email · Sans carte bancaire. Guide général des principes, et non répertoire complet de gambit dame.",
+    "label": "Recevoir le guide PDF gratuit",
+    "href": "../guide-apprendre-les-echecs.html#ebook-form"
+  },
+  "practice": [
+    "Après 2. c4, identifiez quel pion peut prendre et quelle case centrale il abandonne.",
+    "Rejouez l’exemple accepté puis vérifiez le trajet du fou f1 vers c4.",
+    "Comparez …dxc4 et …e6 sans chercher à apprendre leurs variantes."
+  ],
+  "faq": [
+    {
+      "q": "Donne-t-on sa dame dans le gambit dame ?",
+      "a": "Non. Les Blancs offrent le pion c4. Le mot dame renvoie à l’aile dame du plateau ; la dame blanche reste en d1 dans la position de départ du gambit."
+    },
+    {
+      "q": "Quelle différence entre gambit accepté et refusé ?",
+      "a": "Après 1. d4 d5 2. c4, les Noirs acceptent par …dxc4. Une réponse comme …e6 refuse l’offre immédiate et soutient le pion d5."
+    },
+    {
+      "q": "Le gambit dame perd-il forcément un pion ?",
+      "a": "Non. Dans plusieurs suites, les Blancs peuvent préparer la reprise du pion c4 grâce au développement. Cela dépend des coups réellement joués par les deux camps."
+    }
+  ],
+  "related": [
+    "ouverture-slave",
+    "ouverture-londres",
+    "meilleures-ouvertures-echecs-debutants"
+  ],
+  "history": {
+    "title": "D’où vient le nom « gambit dame » ?",
+    "paragraphs": [
+      "Le gambit dame appartient aux ouvertures anciennes : la fiche historique de Chess.com en relève un témoignage dans le manuscrit de Göttingen, daté approximativement de la fin du XVe siècle. Salvio et Greco l’ont ensuite étudié au XVIIe siècle.",
+      "Le nom décrit le côté du plateau concerné : le pion c se situe à l’aile dame. Il n’attribue pas l’ouverture à une personne précise, et surtout il ne propose pas de donner la dame."
+    ],
+    "source": "history",
+    "note": "L’appellation « gambit » ne garantit pas une perte durable de pion. Après une acceptation, les Blancs peuvent souvent organiser sa récupération ; la position précise décide de la manière.",
+    "noteSource": "history"
+  },
+  "steps": [
+    {
+      "label": "Position de départ",
+      "san": "",
+      "diagram": "ouverture-gambit-dame-0.svg",
+      "alt": "Position initiale avant les premiers coups de Gambit dame.",
+      "text": "Les deux camps commencent avec leurs pièces sur les cases de départ."
+    },
+    {
+      "label": "1. d4",
+      "san": "d4",
+      "diagram": "ouverture-gambit-dame-1.svg",
+      "alt": "Gambit dame après 1. d4.",
+      "text": "Le pion d4 occupe le centre et libère la diagonale du fou c1."
+    },
+    {
+      "label": "1…d5",
+      "san": "d4 d5",
+      "diagram": "ouverture-gambit-dame-2.svg",
+      "alt": "Gambit dame après 1. d4 d5.",
+      "text": "Les Noirs occupent d5 et s’opposent au pion blanc."
+    },
+    {
+      "label": "2. c4",
+      "san": "d4 d5 c4",
+      "diagram": "ouverture-gambit-dame-3.svg",
+      "alt": "Gambit dame après 1. d4 d5 2. c4.",
+      "text": "Le pion c4 attaque d5 et peut être capturé par ce pion : c’est l’offre du gambit dame."
+    }
+  ],
+  "plan": {
+    "title": "Un exemple court pour comprendre le plan",
+    "movesFr": "1. d4 d5 2. c4 dxc4 3. Cf3 Cf6 4. e3 e6 5. Fxc4",
+    "san": "d4 d5 c4 dxc4 Nf3 Nf6 e3 e6 Bxc4",
+    "diagram": "ouverture-gambit-dame-plan.svg",
+    "alt": "Gambit dame : position après 1. d4 d5 2. c4 dxc4 3. Cf3 Cf6 4. e3 e6 5. Fxc4.",
+    "text": "Les Noirs ont accepté l’offre. Les Blancs développent Cf3, ouvrent le passage du fou avec e3 puis reprennent en c4 après …e6. Cela illustre une récupération naturelle ; les Noirs ne sont pas obligés de choisir exactement cette suite."
+  },
+  "exercise": {
+    "question": "Quel coup reprend le pion c4 en développant une pièce ?",
+    "diagram": "ouverture-gambit-dame-exercice.svg",
+    "alt": "Gambit dame : position après 1. d4 d5 2. c4 dxc4 3. Cf3 Cf6 4. e3 e6.",
+    "san": "d4 d5 c4 dxc4 Nf3 Nf6 e3 e6",
+    "solutionSan": "Bxc4",
+    "turn": "white",
+    "answer": "5. Fxc4 : le fou f1 parcourt e2 et d3, libérés, puis capture le pion en c4. Les Blancs récupèrent le pion tout en sortant une pièce et en préparant le roque."
+  },
+  "sources": [
+    {
+      "id": "history",
+      "title": "Gambit dame — histoire et origine du nom",
+      "url": "https://www.chess.com/openings/queens-gambit",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "variantes-lichess",
+      "title": "Lichess — nomenclature et suites des ouvertures",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "checked": "2026-11-24"
+    }
+  ],
+  "repliesTitle": "Deux réponses noires à reconnaître",
+  "lesson": {
+    "structure": [
+      "Le pion c4 attaque d5 sans être soutenu par le pion d4 : les deux pions blancs sont côte à côte, ils ne se défendent pas. L’offre est donc réelle sur le coup, mais elle possède une idée centrale. Si le pion d5 prend c4, les Noirs retirent un de leurs pions du centre. Les Blancs peuvent alors chercher du développement et préparer une récupération du pion.",
+      "Après un refus par …e6, les Noirs renforcent d5 avec le pion e6. Si les Blancs jouent cxd5 et que les Noirs répondent …exd5, le pion arrivé en d5 n’est plus le même : c’est l’ancien pion e. Les pions c blanc et d noir ont disparu. Le fou c8 peut retrouver une diagonale grâce au départ du pion e6. L’échange a donc un effet matériel, mais aussi un effet sur les pièces.",
+      "Dans le gambit accepté, e3 peut ouvrir la diagonale f1–e2–d3–c4 pour le fou blanc. Cela fournit une manière de récupérer le pion qui contribue en même temps au développement. Mais les Noirs peuvent tenter d’autres défenses du pion, ou rendre le matériel pour développer leurs pièces. Il faut regarder ce qu’ils font réellement et éviter de transformer « souvent récupérable » en « automatiquement repris »."
+    ],
+    "pieces": [
+      {
+        "piece": "Cavalier g1",
+        "squares": "f3",
+        "condition": "Il soutient d4 et participe à la lutte pour e5. Son développement évite de consacrer tous les coups à la récupération d’un pion."
+      },
+      {
+        "piece": "Cavalier b1",
+        "squares": "c3 selon la structure",
+        "condition": "Il renforce d5 et e4. Vérifiez les clouages et les attaques possibles avant de compter toutes ses défenses comme permanentes."
+      },
+      {
+        "piece": "Fou f1",
+        "squares": "c4 après e3 dans le gambit accepté",
+        "condition": "La reprise Fxc4 est possible si la diagonale est libre et si la position permet de reprendre sans danger."
+      },
+      {
+        "piece": "Fou c1",
+        "squares": "une diagonale choisie avant ou après e3",
+        "condition": "Le pion e3 peut gêner sa sortie. Ne développez pas tous les autres éléments du schéma en oubliant ce fou."
+      },
+      {
+        "piece": "Pion d4 et roi",
+        "squares": "maintenir un centre défendable, puis roquer",
+        "condition": "L’espace central doit être soutenu. Un pion en d4 devient une cible si les pièces chargées de le défendre partent ailleurs."
+      }
+    ],
+    "reactions": [
+      {
+        "title": "Si les Noirs prennent en c4",
+        "text": "Identifiez les moyens de développer une pièce en préparant la reprise. e3 peut libérer le fou f1 ; Cf3 peut être joué sans chercher tout de suite le pion. Si les Noirs veulent le soutenir par des pions de l’aile dame, cela crée d’autres décisions : ne sortez pas la dame au hasard pour courir après lui."
+      },
+      {
+        "title": "Si les Noirs soutiennent d5 par …e6",
+        "text": "Vous pouvez maintenir la tension ou envisager cxd5. Avant de prendre, imaginez …exd5 : quelle diagonale s’ouvre pour le fou c8 ? Quelle colonne perd un pion ? Cette lecture évite de choisir un échange seulement parce qu’il est disponible."
+      },
+      {
+        "title": "Si les Noirs choisissent …c6",
+        "text": "Vous entrez dans une structure de défense slave. Le pion c6 peut reprendre en d5 et le pion e7 n’a pas encore fermé le fou c8. La réponse au gambit ne se résume donc pas à « accepté ou refusé » : le pion utilisé pour soutenir d5 change le travail des pièces."
+      }
+    ],
+    "caseStudy": {
+      "title": "Un échange peut aussi libérer une pièce adverse",
+      "context": "Les Blancs ont pris en d5, les Noirs ont repris avec leur pion e6. Comparez la position à celle d’avant l’échange : le pion e6 a quitté la diagonale du fou c8.",
+      "question": "Que faut-il voir avant de continuer le développement blanc ?",
+      "answer": "Les Noirs possèdent maintenant un pion en d5 et une diagonale de fou c8 plus libre. Les Blancs peuvent poursuivre par 5. Cf3, qui développe une pièce et soutient d4. Ce coup illustre un développement cohérent, sans prétendre être forcé. La vraie question de lecture était de reconnaître le changement de structure et l’activité rendue au fou adverse.",
+      "san": "d4 d5 c4 e6 Nc3 Nf6 cxd5 exd5",
+      "movesFr": "1. d4 d5 2. c4 e6 3. Cc3 Cf6 4. cxd5 exd5",
+      "solutionSan": "Nf3",
+      "turn": "white",
+      "diagram": "ouverture-gambit-dame-decision.svg",
+      "alt": "Gambit dame : position après 1. d4 d5 2. c4 e6 3. Cc3 Cf6 4. cxd5 exd5. Trait aux Blancs.",
+      "highlights": [
+        "d4",
+        "d5",
+        "c8"
+      ],
+      "checks": []
+    },
+    "transition": [
+      "Une fois le pion récupéré ou le centre stabilisé, cherchez les colonnes semi-ouvertes et les pièces qui manquent de cases. Si les structures sont symétriques, l’activité des pièces reste un enjeu. Si un échange a créé un pion isolé, ce pion aura besoin de soutien : ne le jugez ni comme une catastrophe ni comme un atout avant de regarder les pièces.",
+      "Pour progresser avec le gambit dame, rejouez d’abord les échanges de pions sans les autres pièces, puis remettez les fous. Vous verrez immédiatement pourquoi une même capture peut améliorer une diagonale et modifier l’intérêt d’un développement."
+    ]
+  },
+  "workshop": {
+    "title": "Garder le pion du gambit : les diagonales comptent aussi",
+    "introduction": [
+      "Les Noirs peuvent chercher à conserver le pion pris en c4 en avançant leurs pions de l’aile dame. Les Blancs doivent alors observer les lignes libérées, pas seulement compter le pion de moins. Une chaîne de soutien coûte des coups et peut déplacer les obstacles qui protégeaient une tour.",
+      "L’atelier part d’une tentative de maintien du pion : …b5, a4, …c6, axb5 et …cxb5. Le pion b7 a quitté sa case et le pion c6 s’est déplacé en b5. La grande diagonale f3–e4–d5–c6–b7–a8 peut donc devenir libre. Cette suite sert à apprendre à lire une diagonale ; elle n’est pas une réponse noire recommandée."
+    ],
+    "choices": [
+      {
+        "title": "Df3 : voir la tour derrière les cases libérées",
+        "explanation": [
+          "6. Df3 développe la dame sur une diagonale qui vise la tour a8. À cet instant, les Noirs ont encore un pion de plus selon le compte matériel, mais leur tour est menacée. Compter uniquement les pions donnait donc une image incomplète de la position.",
+          "La dame peut atteindre f3 parce que le pion e a quitté e2 pour e3. La menace dépend à la fois de ce passage blanc et des cases c6 et b7 libérées par les pions noirs. Reconstituez ces deux trajets avant de mémoriser le coup."
+        ],
+        "lineSan": "Qf3",
+        "lineFr": "6. Df3",
+        "san": "d4 d5 c4 dxc4 e3 b5 a4 c6 axb5 cxb5 Qf3",
+        "diagram": "ouverture-gambit-dame-atelier-menace.svg",
+        "alt": "Gambit dame — Df3 : voir la tour derrière les cases libérées. Position après 1. d4 d5 2. c4 dxc4 3. e3 b5 4. a4 c6 5. axb5 cxb5 6. Df3.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": -1
+          },
+          {
+            "type": "attacks",
+            "from": "f3",
+            "targets": [
+              "a8"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Une interposition qui ne règle pas tout",
+        "explanation": [
+          "Après …Cc6, le cavalier coupe momentanément la diagonale de la dame vers a8. Mais il arrive en c6 sur une case attaquée par cette même dame. Dans l’illustration 6…Cc6 7. Dxc6+, les Blancs le capturent avec échec, et la dame c6 vise aussi la tour a8.",
+          "À la position affichée, les Blancs ont gagné un cavalier en échange du pion supplémentaire que les Noirs détenaient : le bilan habituel est de deux points en faveur des Blancs. Ce compte n’est pas une évaluation de toute la partie. Il démontre simplement pourquoi une apparente défense doit être calculée jusqu’à la capture et aux échecs suivants."
+        ],
+        "lineSan": "Qf3 Nc6 Qxc6+",
+        "lineFr": "6. Df3 Cc6 7. Dxc6+",
+        "san": "d4 d5 c4 dxc4 e3 b5 a4 c6 axb5 cxb5 Qf3 Nc6 Qxc6+",
+        "diagram": "ouverture-gambit-dame-atelier-interposer.svg",
+        "alt": "Gambit dame — Une interposition qui ne règle pas tout. Position après 1. d4 d5 2. c4 dxc4 3. e3 b5 4. a4 c6 5. axb5 cxb5 6. Df3 Cc6 7. Dxc6+.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 2
+          },
+          {
+            "type": "check"
+          },
+          {
+            "type": "attacks",
+            "from": "c6",
+            "targets": [
+              "a8",
+              "e8"
+            ]
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Pourquoi Df3 peut-elle viser a8 dans cet exemple ?",
+        "a": "Les cases e4, d5, c6 et b7 sont libres. La dame suit leur diagonale jusqu’à la tour a8."
+      },
+      {
+        "q": "Pourquoi …Cc6 ne suffit-il pas à effacer la menace ?",
+        "a": "Le cavalier s’interpose sur une case attaquée. Dxc6+ capture ce cavalier avec échec et la dame peut encore regarder a8."
+      },
+      {
+        "q": "Faut-il conserver le pion c4 à tout prix avec les Noirs ?",
+        "a": "Non. La sécurité des pièces et leur développement doivent être comparés au pion supplémentaire. Rendre un pion peut être préférable à une série de coups qui expose une tour."
+      }
+    ],
+    "review": "Quand un adversaire veut garder le pion du gambit, cherchez les lignes ouvertes par ses soutiens. Quand vous jouez les Noirs, posez-vous la question inverse : quelle pièce cesse d’être protégée si mon pion avance ?",
+    "startSan": "d4 d5 c4 dxc4 e3 b5 a4 c6 axb5 cxb5",
+    "startFr": "1. d4 d5 2. c4 dxc4 3. e3 b5 4. a4 c6 5. axb5 cxb5"
+  },
+  "variants": [
+    {
+      "title": "Le gambit refusé : les Noirs consolident d5",
+      "san": "d4 d5 c4 e6 Nc3 Nf6 Nf3",
+      "idea": "Avec …e6, les Noirs défendent d5 par un pion. Les Blancs développent leurs cavaliers et maintiennent la tension : tant que c4 et d5 restent face à face en diagonale, chaque camp doit tenir compte d’une capture.",
+      "plan": "Évitez d’échanger uniquement pour simplifier vos calculs. Après cxd5 exd5, le pion e noir aura quitté e6 et le fou c8 trouvera une diagonale. Vous devez savoir ce que cet échange libère chez l’adversaire avant de le choisir.",
+      "movesFr": "1. d4 d5 2. c4 e6 3. Cc3 Cf6 4. Cf3",
+      "diagram": "ouverture-gambit-dame-variante-1.svg",
+      "alt": "Le gambit refusé : les Noirs consolident d5 — position après 1. d4 d5 2. c4 e6 3. Cc3 Cf6 4. Cf3."
+    },
+    {
+      "title": "Le gambit accepté : développer pour retrouver le pion",
+      "san": "d4 d5 c4 dxc4 Nf3 Nf6 e3 e6 Bxc4",
+      "idea": "Les Noirs prennent c4, puis développent leurs pièces au lieu de défendre ce pion à tout prix. Les Blancs ouvrent leur fou par e3 et reprennent en c4. La séquence se termine à égalité de matériel.",
+      "plan": "Les Blancs disposent de pions d4 et e3 ; les Noirs ont échangé leur pion d contre le pion c blanc. La suite se joue donc sur le développement et les poussées centrales, pas sur la défense éternelle d’un pion de gambit. Pensez au roque et à la réponse à …c5.",
+      "movesFr": "1. d4 d5 2. c4 dxc4 3. Cf3 Cf6 4. e3 e6 5. Fxc4",
+      "diagram": "ouverture-gambit-dame-variante-2.svg",
+      "alt": "Le gambit accepté : développer pour retrouver le pion — position après 1. d4 d5 2. c4 dxc4 3. Cf3 Cf6 4. e3 e6 5. Fxc4."
+    }
+  ],
+  "trap": {
+    "title": "Un cavalier cloué à la dame peut encore bouger",
+    "san": "d4 d5 c4 e6 Nc3 Nf6 Bg5 Nbd7 cxd5 exd5 Nxd5",
+    "solutionSan": "Nxd5 Bxd8 Bb4+ Qd2 Bxd2+ Kxd2 Kxd8",
+    "explanation": "Les Blancs prennent d5 en supposant que Cf6 ne peut pas quitter la diagonale du fou g5 vers la dame d8. Mais ce clouage est relatif : le roi n’est pas derrière le cavalier. Dans la suite montrée, …Cxd5 laisse prendre la dame, puis …Fb4+ force les Blancs à traiter l’échec. Après les échanges indiqués, les Noirs ont une pièce mineure de plus contre un pion. Cette combinaison est plus avancée ; son idée essentielle reste la priorité des échecs.",
+    "prevention": "Après …exd5, 6. e3 développe le jeu sans compter sur un clouage relatif. Avant de prendre une pièce prétendument clouée, recherchez les échecs intermédiaires adverses. La suite montrée explique le mécanisme après Fxd8 ; elle ne prétend pas que chaque réponse blanche conduit à ces mêmes cases.",
+    "avoidSan": "d4 d5 c4 e6 Nc3 Nf6 Bg5 Nbd7 cxd5 exd5 e3",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nxd5 Bxd8 Bb4+ Qd2 Bxd2+ Kxd2 Kxd8",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -2
+          }
+        ]
+      }
+    ],
+    "movesFr": "1. d4 d5 2. c4 e6 3. Cc3 Cf6 4. Fg5 Cbd7 5. cxd5 exd5 6. Cxd5",
+    "diagram": "ouverture-gambit-dame-piege.svg",
+    "alt": "Un cavalier cloué à la dame peut encore bouger — position après 1. d4 d5 2. c4 e6 3. Cc3 Cf6 4. Fg5 Cbd7 5. cxd5 exd5 6. Cxd5.",
+    "solutionFr": "6… Cxd5 7. Fxd8 Fb4+ 8. Dd2 Fxd2+ 9. Rxd2 Rxd8",
+    "avoidFr": "1. d4 d5 2. c4 e6 3. Cc3 Cf6 4. Fg5 Cbd7 5. cxd5 exd5 6. e3",
+    "turn": "black"
+  },
+  "quickReference": [
+    "Contester d5 avec c4 et profiter du développement pour récupérer le pion si les Noirs le prennent.",
+    "Choisir entre maintenir la tension et échanger en d5 selon les diagonales libérées.",
+    "Un cavalier cloué devant la dame peut encore bouger : vérifier les échecs intermédiaires."
+  ],
+  "comparisons": [
+    {
+      "slug": "ouverture-slave",
+      "text": "Comprendre la réponse noire …c6 au gambit dame."
+    },
+    {
+      "slug": "ouverture-londres",
+      "text": "Comparer deux approches blanches qui commencent par d4."
+    }
+  ]
+}

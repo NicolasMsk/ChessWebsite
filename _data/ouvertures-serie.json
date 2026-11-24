@@ -1,0 +1,104 @@
+{
+  "scope": "Onze pages rédigées, générées et vérifiées en local ; aucune publication automatique.",
+  "openings": [
+    {
+      "id": "italienne",
+      "name": "Ouverture italienne",
+      "slug": "ouverture-italienne",
+      "status": "redige",
+      "san": "e4 e5 Nf3 Nc6 Bc4",
+      "angle": "Comprendre le développement et la diagonale c4–f7.",
+      "historyResearch": "Tradition italienne, rôle de Damiano, Polerio et Greco ; éviter l’inventeur unique."
+    },
+    {
+      "id": "espagnole",
+      "name": "Ouverture espagnole",
+      "slug": "ouverture-espagnole",
+      "status": "redige",
+      "san": "e4 e5 Nf3 Nc6 Bb5",
+      "angle": "Comprendre pourquoi le fou vise le cavalier qui défend e5.",
+      "historyResearch": "Ruy López, traité de 1561 ; distinguer popularisation et invention."
+    },
+    {
+      "id": "ecossaise",
+      "name": "Ouverture écossaise",
+      "slug": "ouverture-ecossaise",
+      "status": "redige",
+      "san": "e4 e5 Nf3 Nc6 d4",
+      "angle": "Ouvrir le centre avec d4 et apprendre à reprendre un pion.",
+      "historyResearch": "Match par correspondance Édimbourg–Londres : vérifier dates et rôle dans le nom."
+    },
+    {
+      "id": "londres",
+      "name": "Système de Londres",
+      "slug": "ouverture-londres",
+      "status": "redige",
+      "san": "d4 d5 Nf3 Nf6 Bf4",
+      "angle": "Comprendre un système de développement, sans le jouer automatiquement.",
+      "historyResearch": "Tournoi de Londres de 1922 : vérifier le lien exact avec la dénomination."
+    },
+    {
+      "id": "gambit-dame",
+      "name": "Gambit dame",
+      "slug": "ouverture-gambit-dame",
+      "status": "redige",
+      "san": "d4 d5 c4",
+      "angle": "Distinguer offre de pion et véritable perte de matériel.",
+      "historyResearch": "Sources anciennes et sens du mot gambit ; ne pas attribuer un inventeur unique."
+    },
+    {
+      "id": "anglaise",
+      "name": "Ouverture anglaise",
+      "slug": "ouverture-anglaise",
+      "status": "redige",
+      "san": "c4",
+      "angle": "Contrôler d5 avec un pion de côté et reconnaître les transpositions.",
+      "historyResearch": "Howard Staunton et le match contre Saint-Amant : vérifier dates et attribution."
+    },
+    {
+      "id": "caro-kann",
+      "name": "Défense Caro-Kann",
+      "slug": "ouverture-caro-kann",
+      "status": "redige",
+      "san": "e4 c6 d4 d5",
+      "angle": "Soutenir d5 avec c6 et comprendre le rôle du fou c8.",
+      "historyResearch": "Horatio Caro et Marcus Kann : vérifier analyses, dates et noms."
+    },
+    {
+      "id": "sicilienne",
+      "name": "Défense sicilienne",
+      "slug": "ouverture-sicilienne",
+      "status": "redige",
+      "san": "e4 c5",
+      "angle": "Créer une structure asymétrique sans catalogue de variantes.",
+      "historyResearch": "Polerio, Greco et l’appellation sicilienne : distinguer première analyse et nom."
+    },
+    {
+      "id": "francaise",
+      "name": "Défense française",
+      "slug": "ouverture-francaise",
+      "status": "redige",
+      "san": "e4 e6 d4 d5",
+      "angle": "Attaquer le centre et expliquer le fou c8 encore enfermé.",
+      "historyResearch": "Match Paris–Londres par correspondance : vérifier dates et choix des Français."
+    },
+    {
+      "id": "scandinave",
+      "name": "Défense scandinave",
+      "slug": "ouverture-scandinave",
+      "status": "redige",
+      "san": "e4 d5",
+      "angle": "Contester e4 immédiatement et distinguer …Dxd5 et …Cf6.",
+      "historyResearch": "Ancienneté de …d5 et origine du nom scandinave : ne pas confondre les deux."
+    },
+    {
+      "id": "slave",
+      "name": "Défense slave",
+      "slug": "ouverture-slave",
+      "status": "redige",
+      "san": "d4 d5 c4 c6",
+      "angle": "Soutenir d5 sans enfermer immédiatement le fou c8.",
+      "historyResearch": "Origine géographique du nom et contributions des maîtres slaves : sourcer sans inventeur unique."
+    }
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "slug": "ouverture-londres",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "readTime": "16 min",
+  "side": "Avec les Blancs",
+  "movesSan": "d4 d5 Nf3 Nf6 Bf4",
+  "movesFr": "1. d4 d5 2. Cf3 Cf6 3. Ff4",
+  "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+  "imageAlt": "Système de Londres : les premiers coups expliqués aux débutants.",
+  "name": "Système de Londres",
+  "title": "Système de Londres : variantes, plans et pièges à connaître",
+  "description": "Comprenez le Londres face à …d5 ou au fianchetto : placement des pièces, échanges de fous et attaques de pions. Diagrammes et exercices pour débuter.",
+  "h1": "Le système de Londres : un plan, pas un pilote automatique",
+  "subtitle": "Sortir le fou avant de construire sa chaîne de pions.",
+  "eco": "D02",
+  "answer": "Le système de Londres repose souvent sur d4, Cf3 et Ff4 avec les Blancs. Un ordre de coups possible est 1. d4 d5 2. Cf3 Cf6 3. Ff4. Les Blancs développent leur fou c1 avant de jouer e3, puis organisent leurs pièces autour du centre.",
+  "intro": "Un système propose des repères de placement plutôt qu’une seule suite forcée. Le Londres est utile pour comprendre comment une structure de pions aide les pièces. Il faut pourtant regarder les coups adverses : b2, d4 et votre fou peuvent devenir des cibles.",
+  "fit": "Il peut vous convenir si vous souhaitez retrouver une organisation familière avec les Blancs. Les Noirs disposent de plusieurs réponses ; connaître un schéma ne dispense pas de vérifier les menaces.",
+  "ideas": [
+    {
+      "title": "Sortir le fou avant e3",
+      "text": "Ff4 permet au fou c1 de rester actif à l’extérieur de la future chaîne de pions d4–e3. Le placement exact doit rester compatible avec les menaces noires."
+    },
+    {
+      "title": "Soutenir le centre avec des pièces",
+      "text": "Cf3 contribue à défendre d4. Les pions e3 et parfois c3 peuvent compléter le soutien, mais n’ont pas à être joués sans raison."
+    },
+    {
+      "title": "Préparer un développement complet",
+      "text": "Le fou f1 peut souvent sortir en d3 après e3. Pensez aussi au cavalier b1, à la dame et à la sécurité du roi."
+    }
+  ],
+  "replies": [
+    {
+      "move": "…c5",
+      "name": "Contester d4",
+      "text": "Les Noirs peuvent attaquer votre pion central. Comptez ses défenseurs et regardez si un échange ouvre une colonne."
+    },
+    {
+      "move": "…Db6",
+      "name": "Regarder b2",
+      "text": "La dame peut viser b2, que le fou c1 ne protège plus depuis f4. Vérifiez aussi les autres cibles de la dame avant de poursuivre votre schéma."
+    }
+  ],
+  "mistakes": [
+    {
+      "title": "Construire un triangle sans regarder",
+      "text": "Jouer e3, c3 et Fd3 mécaniquement peut laisser une menace sans réponse. Commencez chaque décision par le dernier coup adverse."
+    },
+    {
+      "title": "Oublier b2 après la sortie du fou",
+      "text": "Le fou c1 protégeait b2 sur sa diagonale initiale. Une fois en f4, ce travail n’est plus assuré par lui."
+    },
+    {
+      "title": "Traiter le fou f4 comme intouchable",
+      "text": "Des coups tels que …Fd6 ou …Ch5 peuvent le viser. Le conserver, l’échanger ou le reculer dépend de la position."
+    }
+  ],
+  "pdf": {
+    "title": "Comprendre ce que votre système doit accomplir",
+    "text": "Le guide gratuit explique centre, développement et sécurité du roi. Utilisez ces objectifs pour juger vos coups du Londres, plutôt que d’empiler des placements appris par cœur.",
+    "note": "95 pages · PDF reçu par email · Sans carte bancaire. Guide général des principes, et non répertoire complet de système de londres.",
+    "label": "Recevoir le guide PDF gratuit",
+    "href": "../guide-apprendre-les-echecs.html#ebook-form"
+  },
+  "practice": [
+    "Après Ff4, identifiez les cases que le fou contrôle et celles qu’il ne défend plus.",
+    "Placez une dame noire en b6 dans une position légale et cherchez ses cibles.",
+    "Jouez une partie en vérifiant les menaces avant chaque coup du schéma."
+  ],
+  "faq": [
+    {
+      "q": "Le Londres commence-t-il toujours par le même ordre de coups ?",
+      "a": "Non. La suite 1. d4 d5 2. Cf3 Cf6 3. Ff4 est un exemple. Le fou peut aussi sortir plus tôt ; les choix adverses peuvent modifier l’ordre et le placement des autres pièces."
+    },
+    {
+      "q": "Pourquoi sortir le fou avant e3 ?",
+      "a": "Le pion en e3 ferme la diagonale qui part de c1 vers f4. Sortir le fou auparavant lui permet de rester à l’extérieur de la chaîne de pions."
+    },
+    {
+      "q": "Le système de Londres fonctionne-t-il sans regarder l’adversaire ?",
+      "a": "Non. Le pion d4, le pion b2 et le fou f4 peuvent être attaqués. Les repères de développement ne remplacent pas la vérification des menaces."
+    }
+  ],
+  "related": [
+    "ouverture-gambit-dame",
+    "ouverture-anglaise",
+    "meilleures-ouvertures-echecs-debutants"
+  ],
+  "history": {
+    "title": "D’où vient le nom « système de londres » ?",
+    "paragraphs": [
+      "Le nom renvoie au tournoi de Londres de 1922, qui a contribué à populariser cette organisation des pièces. Il rappelle un événement de l’histoire des échecs plutôt qu’un inventeur individuel.",
+      "La dénomination « système » correspond bien au sujet : des placements voisins peuvent être obtenus dans plusieurs ordres de coups. La position illustrée ici est un point de départ pédagogique, pas l’unique manière de jouer le Londres."
+    ],
+    "source": "history",
+    "note": "Il ne faut pas dater la création de toutes les idées du Londres à 1922. Le tournoi sert de repère pour sa popularisation et son nom.",
+    "noteSource": "history"
+  },
+  "steps": [
+    {
+      "label": "Position de départ",
+      "san": "",
+      "diagram": "ouverture-londres-0.svg",
+      "alt": "Position initiale avant les premiers coups de Système de Londres.",
+      "text": "Les deux camps commencent avec leurs pièces sur les cases de départ."
+    },
+    {
+      "label": "1. d4",
+      "san": "d4",
+      "diagram": "ouverture-londres-1.svg",
+      "alt": "Système de Londres après 1. d4.",
+      "text": "Le pion d4 occupe le centre et ouvre la diagonale du fou c1."
+    },
+    {
+      "label": "1…d5",
+      "san": "d4 d5",
+      "diagram": "ouverture-londres-2.svg",
+      "alt": "Système de Londres après 1. d4 d5.",
+      "text": "Les Noirs occupent d5 et contestent eux aussi le centre."
+    },
+    {
+      "label": "2. Cf3",
+      "san": "d4 d5 Nf3",
+      "diagram": "ouverture-londres-3.svg",
+      "alt": "Système de Londres après 1. d4 d5 2. Cf3.",
+      "text": "Le cavalier se développe en f3 et soutient d4."
+    },
+    {
+      "label": "2…Cf6",
+      "san": "d4 d5 Nf3 Nf6",
+      "diagram": "ouverture-londres-4.svg",
+      "alt": "Système de Londres après 1. d4 d5 2. Cf3 Cf6.",
+      "text": "Le cavalier noir se développe en contrôlant notamment e4."
+    },
+    {
+      "label": "3. Ff4",
+      "san": "d4 d5 Nf3 Nf6 Bf4",
+      "diagram": "ouverture-londres-5.svg",
+      "alt": "Système de Londres après 1. d4 d5 2. Cf3 Cf6 3. Ff4.",
+      "text": "Le fou c1 rejoint f4 avant que le pion e ne ferme sa diagonale de sortie."
+    }
+  ],
+  "plan": {
+    "title": "Un exemple court pour comprendre le plan",
+    "movesFr": "1. d4 d5 2. Cf3 Cf6 3. Ff4 e6 4. e3 Fd6 5. Fd3",
+    "san": "d4 d5 Nf3 Nf6 Bf4 e6 e3 Bd6 Bd3",
+    "diagram": "ouverture-londres-plan.svg",
+    "alt": "Système de Londres : position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 e6 4. e3 Fd6 5. Fd3.",
+    "text": "Dans cet exemple, les Blancs ont sorti le fou c1 avant e3, puis développé le fou f1 en d3. Le fou noir d6 attaque f4 : il faut remarquer cette tension et décider si l’on accepte un échange. La position reste à jouer, pas à réciter."
+  },
+  "exercise": {
+    "question": "Quel coup sort le fou c1 sur la diagonale h2–b8 avant de jouer e3 ?",
+    "diagram": "ouverture-londres-exercice.svg",
+    "alt": "Système de Londres : position après 1. d4 d5 2. Cf3 Cf6.",
+    "san": "d4 d5 Nf3 Nf6",
+    "solutionSan": "Bf4",
+    "turn": "white",
+    "answer": "3. Ff4 développe le fou avant que e3 ne bloque sa diagonale de départ. Le pion d a déjà quitté d2, ce qui libère le passage c1–d2–e3–f4."
+  },
+  "sources": [
+    {
+      "id": "history",
+      "title": "Système de Londres — histoire et origine du nom",
+      "url": "https://en.chessbase.com/newsroom/post/the-london-system-an-opening-for-you",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "opening",
+      "title": "Système de Londres — premiers coups et idées",
+      "url": "https://www.chess.com/openings/London-System",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "variantes-lichess",
+      "title": "Lichess — nomenclature et suites des ouvertures",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "checked": "2026-11-24"
+    }
+  ],
+  "repliesTitle": "Deux réponses noires à reconnaître",
+  "lesson": {
+    "structure": [
+      "Le Londres associe généralement un pion d4, un cavalier f3 et un fou f4. Si vous ajoutez e3, le pion e3 soutient d4 ; si vous ajoutez c3, le pion c3 apporte un autre soutien à d4. Cette organisation peut rendre le centre plus résistant, mais elle ne développe pas à elle seule les autres pièces. Chaque coup de pion coûte un temps que les Noirs peuvent utiliser pour attaquer le centre.",
+      "Le placement du fou en f4 a deux conséquences opposées. Il sort avant que le pion e3 ne ferme sa diagonale, ce qui lui donne de l’activité. Mais il ne protège plus b2 depuis c1. Une dame noire en b6 peut alors viser ce pion. Ce détail explique pourquoi un développement qui semble harmonieux doit rester attentif aux menaces sur l’aile dame.",
+      "Le couple de pions d4 et e3 ne signifie pas que la partie doit se jouer uniquement à l’aile roi. Les poussées noires …c5 et parfois …e5 peuvent contester le centre. Avant de penser à une attaque, regardez si vous pouvez conserver d4, échanger utilement ou ouvrir une diagonale. La structure fournit des repères, pas une destination imposée à chaque pièce."
+    ],
+    "pieces": [
+      {
+        "piece": "Fou c1",
+        "squares": "f4 avant e3 dans le schéma étudié",
+        "condition": "Il contrôle notamment e5. Une attaque comme …Fd6 oblige à réfléchir à l’échange ou à une retraite."
+      },
+      {
+        "piece": "Cavalier g1",
+        "squares": "f3",
+        "condition": "Il défend d4 et contrôle e5. Le déplacer pour attaquer ailleurs peut modifier la défense de votre centre."
+      },
+      {
+        "piece": "Fou f1",
+        "squares": "d3 si la position s’y prête",
+        "condition": "Le pion e3 libère sa sortie. Depuis d3, il vise h7, mais une diagonale dirigée vers le roi ne constitue pas encore une attaque gagnante."
+      },
+      {
+        "piece": "Cavalier b1",
+        "squares": "d2 dans de nombreuses constructions avec c3",
+        "condition": "La présence du pion c3 interdit Cc3 immédiatement. En d2, le cavalier peut soutenir des projets centraux, tout en nécessitant un passage pour le fou c1 déjà sorti."
+      },
+      {
+        "piece": "Dame et roi",
+        "squares": "répondre aux menaces, puis roquer",
+        "condition": "Une sortie de dame pour défendre b2 peut devenir nécessaire. Elle doit répondre à la position, pas à une règle qui interdirait toute adaptation au schéma."
+      }
+    ],
+    "reactions": [
+      {
+        "title": "Si la dame noire vient en b6",
+        "text": "Regardez d’abord sa ligne vers b2. Le pion c n’a pas le même rôle s’il est encore en c2 ou s’il a avancé : après c3, la diagonale d1–c2–b3 devient libre et Db3 peut être une réponse à examiner. Cela n’en fait pas une solution universelle ; vérifiez les cases intermédiaires et les échanges possibles."
+      },
+      {
+        "title": "Si les Noirs jouent …Fd6",
+        "text": "Le fou noir vise votre fou f4. Échanger peut simplifier, reculer peut préserver votre pièce : comparez les diagonales et les pions qui resteront après la reprise. Ne faites pas un autre coup du schéma en oubliant qu’une pièce est désormais attaquée."
+      },
+      {
+        "title": "Si les Noirs attaquent d4 par …c5",
+        "text": "Comptez les défenseurs de d4, puis imaginez la structure après une capture. Le soutien e3 ou c3 peut permettre une reprise, mais déplacer un de ces pions plus tard changera votre solidité. Cherchez également si une colonne ouverte peut servir aux tours, plutôt que d’ajouter automatiquement un troisième coup de soutien."
+      }
+    ],
+    "caseStudy": {
+      "title": "La dame en b6 : le schéma doit s’adapter",
+      "context": "Les Blancs ont sorti le fou f4 et joué c3. La dame noire arrive en b6 et vise b2, que le fou c1 ne défend plus. Le pion c ayant quitté c2, une réponse de dame devient possible.",
+      "question": "Quel coup peut défendre b2 tout en proposant un échange des dames sur la colonne b ?",
+      "answer": "5. Db3 est une possibilité : la dame passe par c2, désormais libre, et arrive en b3. Elle protège b2 et fait face à la dame b6. Si un échange a lieu, il faudra observer les pions obtenus après la reprise. L’objectif n’est pas de proclamer Db3 obligatoire, mais de voir comment un détail du schéma crée une réponse concrète.",
+      "san": "d4 d5 Nf3 Nf6 Bf4 c5 c3 Qb6",
+      "movesFr": "1. d4 d5 2. Cf3 Cf6 3. Ff4 c5 4. c3 Db6",
+      "solutionSan": "Qb3",
+      "turn": "white",
+      "diagram": "ouverture-londres-decision.svg",
+      "alt": "Système de Londres : position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 c5 4. c3 Db6. Trait aux Blancs.",
+      "highlights": [
+        "b6",
+        "b2"
+      ],
+      "checks": [
+        {
+          "type": "attacks",
+          "from": "b6",
+          "targets": [
+            "b2"
+          ]
+        }
+      ]
+    },
+    "transition": [
+      "Quand les pièces sont développées, regardez les possibilités centrales avant une attaque sur h7. Le cavalier peut-il réellement s’installer en e5 ? Le pion e peut-il avancer sans perdre d4 ? Le fou f4 échange-t-il une pièce importante ? Ces questions font du Londres une position à jouer, plutôt qu’une liste à terminer.",
+      "À l’analyse, vérifiez si votre premier problème est venu d’une menace sur b2, d’un échange de fou ignoré ou d’un centre contesté. Rejouez ce moment avec les pièces adverses visibles : le bon apprentissage consiste à reconnaître le changement, pas à refaire le même schéma plus vite."
+    ]
+  },
+  "workshop": {
+    "title": "L’échange des fous : deux reprises, deux conséquences différentes",
+    "introduction": [
+      "Quand le fou noir arrive en d6, il vise le fou blanc f4. Les Blancs ne sont pas obligés de conserver leur fou à tout prix, et un recul ne garantit pas que l’échange disparaîtra. Pour décider, regardez où les pièces seront reprises et quels pions devront bouger.",
+      "La position de départ montre le Londres avec d4, Cf3, Ff4 et e3 face à …d5, …Cf6, …e6 et …Fd6. Les deux branches suivantes gardent le matériel équilibré. Elles produisent pourtant des positions différentes pour la dame noire et les pions proches du roi blanc."
+    ],
+    "choices": [
+      {
+        "title": "Fxd6 et …Dxd6 : la dame noire reprend",
+        "explanation": [
+          "5. Fxd6 Dxd6 échange les deux fous sur d6. La dame noire reprend et devient plus centrale, tandis que les pions blancs ne changent pas. Les Blancs ont supprimé la tension entre les fous, mais ont aussi aidé la dame adverse à trouver une case active.",
+          "Cette activité de dame ne signifie pas qu’une menace décisive existe. Vérifiez ses lignes et les cases où vos cavaliers peuvent se développer. Vous avez choisi une simplification : le prochain travail est de coordonner les pièces restantes, pas de continuer à chercher le fou f4 qui a disparu."
+        ],
+        "lineSan": "Bxd6 Qxd6",
+        "lineFr": "5. Fxd6 Dxd6",
+        "san": "d4 d5 Nf3 Nf6 Bf4 e6 e3 Bd6 Bxd6 Qxd6",
+        "diagram": "ouverture-londres-atelier-echanger.svg",
+        "alt": "Système de Londres — Fxd6 et …Dxd6 : la dame noire reprend. Position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 e6 4. e3 Fd6 5. Fxd6 Dxd6.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "title": "Fg3, …Fxg3 et hxg3 : la structure blanche change",
+        "explanation": [
+          "Après 5. Fg3, le fou noir peut encore atteindre g3 par la diagonale d6–e5–f4–g3. Dans la suite illustrative …Fxg3 6. hxg3, le pion h blanc reprend le fou en g3. Les Blancs possèdent alors des pions en g2 et g3, et n’ont plus de pion blanc sur la colonne h.",
+          "Les deux fous ont été échangés sans déséquilibre matériel, mais le résultat n’est pas celui de la première branche. La tour h1 dispose d’une colonne semi-ouverte, tandis que la structure autour d’un éventuel roi roqué a changé. Il faut regarder les possibilités d’attaque et de défense avant de juger ces pions."
+        ],
+        "lineSan": "Bg3 Bxg3 hxg3",
+        "lineFr": "5. Fg3 Fxg3 6. hxg3",
+        "san": "d4 d5 Nf3 Nf6 Bf4 e6 e3 Bd6 Bg3 Bxg3 hxg3",
+        "diagram": "ouverture-londres-atelier-structure.svg",
+        "alt": "Système de Londres — Fg3, …Fxg3 et hxg3 : la structure blanche change. Position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 e6 4. e3 Fd6 5. Fg3 Fxg3 6. hxg3.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Le recul Fg3 empêche-t-il le fou d6 d’échanger ?",
+        "a": "Non. Si e5 et f4 sont libres, le fou d6 peut capturer en g3. Un recul doit être examiné avec toute la diagonale adverse."
+      },
+      {
+        "q": "Après hxg3, la colonne h est-elle entièrement ouverte ?",
+        "a": "Non : les Noirs conservent leur pion h7. Elle est semi-ouverte pour les Blancs, puisqu’ils n’ont plus de pion blanc sur cette colonne."
+      },
+      {
+        "q": "Des pions doublés en g2 et g3 signifient-ils automatiquement que les Blancs sont perdus ?",
+        "a": "Non. Ils modifient la protection du roi et les colonnes disponibles. Leur valeur pratique dépend de l’activité des pièces, des menaces et du placement des rois."
+      }
+    ],
+    "review": "Dans vos parties de Londres, comparez les reprises possibles avant d’accepter un échange de fous. Notez la structure obtenue et le rôle nouveau des tours : c’est une manière concrète de sortir du jeu automatique.",
+    "startSan": "d4 d5 Nf3 Nf6 Bf4 e6 e3 Bd6",
+    "startFr": "1. d4 d5 2. Cf3 Cf6 3. Ff4 e6 4. e3 Fd6"
+  },
+  "variants": [
+    {
+      "title": "Face à …d5 et …e6 : construire sans bloquer son fou",
+      "san": "d4 d5 Nf3 Nf6 Bf4 e6 e3 Bd6",
+      "idea": "Les Blancs ont sorti leur fou c1 avant de jouer e3. Les Noirs proposent maintenant l’échange avec …Fd6 : le fou f4 doit faire l’objet d’une décision, même si vous connaissez déjà votre triangle de pions.",
+      "plan": "Comparez l’échange Fxd6 à une retraite du fou. L’échange change les pièces présentes ; la retraite conserve des possibilités mais consomme un temps. Ensuite seulement, décidez où placer le cavalier b1 et le fou f1.",
+      "movesFr": "1. d4 d5 2. Cf3 Cf6 3. Ff4 e6 4. e3 Fd6",
+      "diagram": "ouverture-londres-variante-1.svg",
+      "alt": "Face à …d5 et …e6 : construire sans bloquer son fou — position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 e6 4. e3 Fd6."
+    },
+    {
+      "title": "Face au fianchetto : surveiller le centre",
+      "san": "d4 Nf6 Nf3 g6 Bf4 Bg7 e3 O-O",
+      "idea": "Les Noirs ont développé leur fou en g7 et roqué sans occuper d5 avec un pion. Copier un dispositif prévu contre …d5 serait trop automatique : les Noirs peuvent encore choisir leurs poussées centrales.",
+      "plan": "Les Blancs peuvent développer leur fou f1 et préparer le roque. Observez surtout les futurs …d6, …d5 ou …c5. L’absence de pion noir en d5 peut permettre une préparation différente de e4 ; elle ne signifie pas que cette poussée est immédiatement protégée.",
+      "movesFr": "1. d4 Cf6 2. Cf3 g6 3. Ff4 Fg7 4. e3 O-O",
+      "diagram": "ouverture-londres-variante-2.svg",
+      "alt": "Face au fianchetto : surveiller le centre — position après 1. d4 Cf6 2. Cf3 g6 3. Ff4 Fg7 4. e3 O-O."
+    }
+  ],
+  "trap": {
+    "title": "Le fou attaqué pendant que l’on roque",
+    "san": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 Bd3 c4 O-O",
+    "solutionSan": "cxd3",
+    "explanation": "Le pion noir venu de c5 attaque le fou d3. Les Blancs viennent de roquer en ignorant cette attaque : …cxd3 prend le fou. Même si le pion noir peut être repris ensuite, cela ne rendra pas la pièce perdue. La structure du Londres ne protège pas automatiquement les pièces développées devant elle.",
+    "prevention": "Après …c4, 6. Fe2 retire le fou de la case attaquée et maintient la possibilité de roquer. Un roque utile reste un mauvais choix si vous laissez une pièce en prise. Regardez d’abord la menace créée par le dernier coup adverse.",
+    "avoidSan": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 Bd3 c4 Be2",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "cxd3",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -3
+          }
+        ]
+      }
+    ],
+    "movesFr": "1. d4 d5 2. Cf3 Cf6 3. Ff4 c5 4. e3 Cc6 5. Fd3 c4 6. O-O",
+    "diagram": "ouverture-londres-piege.svg",
+    "alt": "Le fou attaqué pendant que l’on roque — position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 c5 4. e3 Cc6 5. Fd3 c4 6. O-O.",
+    "solutionFr": "6… cxd3",
+    "avoidFr": "1. d4 d5 2. Cf3 Cf6 3. Ff4 c5 4. e3 Cc6 5. Fd3 c4 6. Fe2",
+    "turn": "black"
+  },
+  "quickReference": [
+    "Sortir le fou c1 avant e3, puis coordonner les pièces autour du pion d4.",
+    "Préparer e4 si la position le permet, tout en répondant aux poussées …c5 et …c4.",
+    "Un dispositif connu ne dispense pas de retirer un fou attaqué par un pion."
+  ],
+  "comparisons": [
+    {
+      "slug": "ouverture-gambit-dame",
+      "text": "Comparer le dispositif avec Ff4 à la contestation de d5 par c4."
+    },
+    {
+      "slug": "ouverture-anglaise",
+      "text": "Découvrir une autre manière de développer les pièces autour du centre."
+    }
+  ]
+}

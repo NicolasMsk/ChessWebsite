@@ -1,0 +1,377 @@
+{
+  "slug": "ouverture-anglaise",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "readTime": "16 min",
+  "side": "Avec les Blancs",
+  "movesSan": "c4",
+  "movesFr": "1. c4",
+  "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+  "imageAlt": "Ouverture anglaise : les premiers coups expliqués aux débutants.",
+  "name": "Ouverture anglaise",
+  "title": "Ouverture anglaise : variantes et pièges après 1. c4",
+  "description": "Apprenez l’Anglaise symétrique et les positions avec …e5 : fianchetto, poussée d4 et pièges de pions. Des diagrammes pour comprendre chaque décision.",
+  "h1": "L’ouverture anglaise : contrôler le centre depuis le côté",
+  "subtitle": "Un premier coup de pion qui vise d5 au lieu d’occuper e4 ou d4.",
+  "eco": "A10",
+  "answer": "L’ouverture anglaise commence par 1. c4. Le pion blanc contrôle d5 depuis l’aile dame, sans occuper immédiatement e4 ou d4. Les Blancs peuvent ensuite développer leurs pièces selon la réponse noire. C’est une ouverture souple, qui peut rejoindre d’autres structures.",
+  "intro": "Contrôler une case ne signifie pas forcément y placer un pion. L’Anglaise permet de découvrir cette différence dès le premier coup. La première leçon sera donc de repérer d5, puis de choisir des cases de développement cohérentes avec les pions adverses.",
+  "fit": "Elle peut intéresser un débutant curieux des structures de pions. Ses nombreux changements de structure demandent toutefois de l’attention : si vous voulez une première expérience plus directe, l’Italienne reste un autre point de départ.",
+  "ideas": [
+    {
+      "title": "Observer d5",
+      "text": "Le pion c4 attaque d5. Cela n’empêche pas les Noirs de lutter pour cette case, mais il faut en tenir compte dans les échanges centraux."
+    },
+    {
+      "title": "Développer en fonction de la structure",
+      "text": "Cc3 renforce le contrôle de d5. Cf3 ou un fou en g2 sont d’autres idées possibles dans certaines positions, pas une liste à exécuter contre toute réponse."
+    },
+    {
+      "title": "Reconnaître un changement de famille",
+      "text": "Si les pions d et c des deux camps avancent, une position issue de 1. c4 peut rejoindre un gambit dame ou une autre ouverture. Regardez les pions plutôt que le seul nom."
+    }
+  ],
+  "replies": [
+    {
+      "move": "1…e5",
+      "name": "Occuper une case centrale",
+      "text": "Les Noirs prennent de l’espace au centre. Les Blancs peuvent continuer à développer leurs pièces et surveiller la poussée …d5."
+    },
+    {
+      "move": "1…c5",
+      "name": "Une structure symétrique",
+      "text": "Les deux pions c se trouvent avancés. Symétrique ne signifie pas sans décisions : les développements et les poussées d changeront les possibilités."
+    }
+  ],
+  "mistakes": [
+    {
+      "title": "Croire qu’un pion de côté ignore le centre",
+      "text": "Le pion c4 agit sur d5. Tracez mentalement ses diagonales avant de juger son utilité."
+    },
+    {
+      "title": "Copier un placement contre toutes les réponses",
+      "text": "Les réponses …e5 et …c5 ne construisent pas la même position. Un plan choisi sans regarder les pions adverses peut perdre son sens."
+    },
+    {
+      "title": "Multiplier les coups de pion",
+      "text": "Même dans une ouverture souple, les pièces doivent sortir et le roi doit être protégé. Les coups g3 ou b3 ont un coût en temps."
+    }
+  ],
+  "pdf": {
+    "title": "Distinguer occuper le centre et le contrôler",
+    "text": "Le guide gratuit explique la lutte pour le centre et le développement. Comparez 1. c4 à 1. e4 sur un échiquier pour voir les cases attaquées dans chaque cas.",
+    "note": "95 pages · PDF reçu par email · Sans carte bancaire. Guide général des principes, et non répertoire complet de ouverture anglaise.",
+    "label": "Recevoir le guide PDF gratuit",
+    "href": "../guide-apprendre-les-echecs.html#ebook-form"
+  },
+  "practice": [
+    "Placez seulement le pion c4 et nommez les deux cases qu’il attaque : b5 et d5.",
+    "Rejouez la courte suite avec …d5 et observez la reprise du cavalier noir.",
+    "Comparez les structures après 1…e5 et 1…c5 sans apprendre de variante."
+  ],
+  "faq": [
+    {
+      "q": "Quel coup définit l’ouverture anglaise ?",
+      "a": "Le premier coup blanc 1. c4 définit l’Anglaise. Ce pion contrôle d5, tout en laissant les pions d et e sur leurs cases initiales."
+    },
+    {
+      "q": "Pourquoi l’appelle-t-on anglaise ?",
+      "a": "Le nom est associé à Howard Staunton, maître anglais qui employa 1. c4 dans son match de 1843 contre Pierre de Saint-Amant."
+    },
+    {
+      "q": "Qu’est-ce qu’une transposition ?",
+      "a": "C’est l’obtention d’une même position par des ordres de coups différents. Une partie commencée par l’Anglaise peut ainsi rejoindre une autre famille d’ouvertures."
+    }
+  ],
+  "related": [
+    "ouverture-londres",
+    "ouverture-gambit-dame",
+    "meilleures-ouvertures-echecs-debutants"
+  ],
+  "history": {
+    "title": "D’où vient le nom « ouverture anglaise » ?",
+    "paragraphs": [
+      "L’appellation anglaise est associée au maître anglais Howard Staunton, qui joua 1. c4 contre Pierre de Saint-Amant lors de leur match de 1843. Ce lien explique le nom géographique.",
+      "Staunton est une figure de sa diffusion, pas une raison d’affirmer que le coup c4 aurait été inventé ce jour-là. La réputation et la pratique de l’ouverture se sont développées bien après cet épisode."
+    ],
+    "source": "history",
+    "note": "L’Anglaise peut transposer : cela signifie que des ordres de coups différents aboutissent à une même position. Le nom initial ne décrit donc pas toujours toute la partie.",
+    "noteSource": "history"
+  },
+  "steps": [
+    {
+      "label": "Position de départ",
+      "san": "",
+      "diagram": "ouverture-anglaise-0.svg",
+      "alt": "Position initiale avant les premiers coups de Ouverture anglaise.",
+      "text": "Les deux camps commencent avec leurs pièces sur les cases de départ."
+    },
+    {
+      "label": "1. c4",
+      "san": "c4",
+      "diagram": "ouverture-anglaise-1.svg",
+      "alt": "Ouverture anglaise après 1. c4.",
+      "text": "Le pion c4 contrôle d5. Les deux pions centraux blancs restent encore en d2 et e2 : vous gardez plusieurs choix de structure."
+    }
+  ],
+  "plan": {
+    "title": "Un exemple court pour comprendre le plan",
+    "movesFr": "1. c4 e5 2. Cc3 Cf6 3. g3 d5 4. cxd5 Cxd5 5. Fg2",
+    "san": "c4 e5 Nc3 Nf6 g3 d5 cxd5 Nxd5 Bg2",
+    "diagram": "ouverture-anglaise-plan.svg",
+    "alt": "Ouverture anglaise : position après 1. c4 e5 2. Cc3 Cf6 3. g3 d5 4. cxd5 Cxd5 5. Fg2.",
+    "text": "L’exemple montre la contestation de d5 : les Noirs y avancent un pion, les Blancs l’échangent puis développent leur fou en g2. Ce développement du fou sur une grande diagonale est appelé fianchetto. Les Noirs peuvent choisir une tout autre organisation."
+  },
+  "exercise": {
+    "question": "Quel cavalier peut sortir pour renforcer le contrôle de d5 ?",
+    "diagram": "ouverture-anglaise-exercice.svg",
+    "alt": "Ouverture anglaise : position après 1. c4 e5.",
+    "san": "c4 e5",
+    "solutionSan": "Nc3",
+    "turn": "white",
+    "answer": "2. Cc3 développe le cavalier b1 et ajoute un contrôle sur d5. Le pion c4 contrôle déjà cette case. Il s’agit d’un choix cohérent avec l’idée étudiée, pas d’un coup qui gagne de force."
+  },
+  "sources": [
+    {
+      "id": "history",
+      "title": "Ouverture anglaise — histoire et origine du nom",
+      "url": "https://www.chess.com/article/view/english-opening",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "opening",
+      "title": "Ouverture anglaise — premiers coups et idées",
+      "url": "https://www.chess.com/openings/english-opening",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "variantes-lichess",
+      "title": "Lichess — nomenclature et suites des ouvertures",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "checked": "2026-11-24"
+    }
+  ],
+  "repliesTitle": "Deux réponses noires à reconnaître",
+  "lesson": {
+    "structure": [
+      "Le pion c4 attaque b5 et d5. Il ne soutient ni e4 ni d4 depuis c4 : ce sont d’autres pions et pièces qui devront s’en charger si vous occupez ces cases. Le mot « contrôle » a donc un sens précis. Une case peut être attaquée sans être occupée, et le fait de contrôler d5 n’empêche pas les Noirs d’y avancer un pion si leur position le permet.",
+      "Après …e5, les Noirs prennent de l’espace et peuvent préparer …d5. Avec Cc3, les Blancs ajoutent un contrôle sur d5 ; avec g3 puis Fg2, ils peuvent placer leur fou sur une grande diagonale. Ces coups n’ont pas la même fonction : Cc3 agit immédiatement au centre, tandis que g3 prépare la sortie d’une pièce. Il faut compter le temps consacré à cette préparation.",
+      "Si les Noirs jouent …d5 et que vous répondez cxd5, le pion c quitte sa colonne. Une reprise noire par un cavalier place une pièce au centre et modifie les lignes. Le fou g2 pourra parfois viser le cavalier d5, à condition que la diagonale g2–f3–e4–d5 ne soit pas obstruée. Un pion blanc e4 ou un cavalier blanc f3 changerait ce trajet."
+    ],
+    "pieces": [
+      {
+        "piece": "Cavalier b1",
+        "squares": "c3",
+        "condition": "Il contrôle d5 et e4. La case est disponible tant que le pion c ne l’occupe pas."
+      },
+      {
+        "piece": "Fou f1",
+        "squares": "g2 dans un plan de fianchetto",
+        "condition": "g3 prépare sa sortie. Regardez ensuite les obstacles sur la diagonale, plutôt que de supposer que le fou attaque tout ce qui se trouve loin devant lui."
+      },
+      {
+        "piece": "Cavalier g1",
+        "squares": "f3 selon le centre",
+        "condition": "Il développe l’aile roi et contrôle d4 et e5. Mais sa présence en f3 peut interrompre momentanément la diagonale du fou g2."
+      },
+      {
+        "piece": "Pions d et e",
+        "squares": "choisir leur avance selon les réponses",
+        "condition": "d4 peut rapprocher la partie d’une autre ouverture. e4 prend de l’espace mais change les cases et les diagonales disponibles."
+      },
+      {
+        "piece": "Roi et tours",
+        "squares": "sécuriser le roi avant d’utiliser les colonnes",
+        "condition": "Si le pion c est échangé, une tour pourra s’intéresser à cette colonne. Cela suppose un trajet libre et une cible pertinente."
+      }
+    ],
+    "reactions": [
+      {
+        "title": "Si les Noirs occupent e5",
+        "text": "Ne cherchez pas à copier e4 uniquement pour obtenir une image symétrique. Demandez-vous comment ils préparent …d5 et quelles pièces vont contrôler cette case. Cc3 offre un développement compréhensible ; les autres choix de pions peuvent attendre que vous sachiez quelle structure vous voulez."
+      },
+      {
+        "title": "Si les Noirs répondent …c5",
+        "text": "Les deux camps ont avancé leur pion c. La symétrie peut durer quelques coups ou disparaître après une poussée d. Le premier camp qui ouvre le centre doit avoir vérifié le développement, les reprises et la sécurité de son roi. Copier sans regarder ne garantit pas l’égalité."
+      },
+      {
+        "title": "Si les Noirs jouent …d5",
+        "text": "Vérifiez les prises possibles sur d5 et les pièces qui peuvent reprendre. cxd5 peut permettre une reprise de cavalier ; développer ensuite Fg2 peut viser cette pièce si la diagonale est libre. Ce lien entre échange de pion et activité du fou est plus instructif qu’une mémorisation de noms de variantes."
+      }
+    ],
+    "caseStudy": {
+      "title": "L’échange en d5 prépare une diagonale, pas un gain automatique",
+      "context": "Les Blancs ont joué Cc3 et g3. Les Noirs avancent leur pion d en d5, au contact du pion c4. Le fou blanc est encore en f1, mais sa future diagonale commence à prendre un sens.",
+      "question": "Que produit la suite cxd5, …Cxd5 puis Fg2 ?",
+      "answer": "4. cxd5 Cxd5 5. Fg2 échange le pion c blanc contre le pion d noir et développe le fou. Comme f3 et e4 sont libres, le fou g2 vise le cavalier d5. Les Noirs ont maintenant le trait : ils peuvent notamment échanger par …Cxc3, suivi de bxc3 dans cet exemple. La pression sur un cavalier ne prouve donc pas une pièce gagnée ; il faut examiner les réponses adverses et les reprises.",
+      "san": "c4 e5 Nc3 Nf6 g3 d5",
+      "movesFr": "1. c4 e5 2. Cc3 Cf6 3. g3 d5",
+      "solutionSan": "cxd5 Nxd5 Bg2 Nxc3 bxc3",
+      "turn": "white",
+      "diagram": "ouverture-anglaise-decision.svg",
+      "alt": "Ouverture anglaise : position après 1. c4 e5 2. Cc3 Cf6 3. g3 d5. Trait aux Blancs.",
+      "highlights": [
+        "c4",
+        "d5",
+        "c3"
+      ],
+      "checks": [
+        {
+          "type": "attacks",
+          "from": "c4",
+          "targets": [
+            "d5"
+          ]
+        },
+        {
+          "type": "attacks",
+          "from": "c3",
+          "targets": [
+            "d5"
+          ]
+        }
+      ]
+    },
+    "transition": [
+      "Après le développement, regardez ce que deviennent d4, d5 et la grande diagonale du fou. Votre plan pourra changer si un pion occupe e4, si le cavalier se place en f3 ou si les Noirs ferment le centre. Une pièce active dans une structure peut devenir moins utile dans une autre : c’est une raison de relire la position après chaque échange.",
+      "Pour votre analyse, dessinez les diagonales du fou g2 avant et après les poussées centrales. Nommez le premier obstacle rencontré. Cet exercice simple vous évitera de compter une attaque qui n’existe pas encore."
+    ]
+  },
+  "workshop": {
+    "title": "Le fou g2 ne traverse pas vos propres pièces",
+    "introduction": [
+      "Un fou placé sur la grande diagonale n’attaque pas automatiquement toutes ses cases. Le premier obstacle arrête son action, même si cet obstacle est une pièce blanche. Cette règle de déplacement devient une décision stratégique lorsque vous choisissez entre avancer un pion central et développer un cavalier.",
+      "Dans la position de départ, le fou g2 regarde vers f3, e4 et d5. Ces cases sont encore libres. Les deux choix suivants sont légaux et peuvent avoir un sens, mais ils interrompent tous deux la diagonale d’une manière différente. Le but n’est pas de condamner e4 ou Cf3 : c’est de voir ce qu’ils changent."
+    ],
+    "choices": [
+      {
+        "title": "e4 : gagner de l’espace et fermer momentanément la diagonale",
+        "explanation": [
+          "5. e4 place un pion au centre. Ce pion contrôle d5 et f5, et est défendu par le cavalier c3. En revanche, il bloque le trajet du fou g2 sur e4. Le fou ne contrôle donc plus directement d5 à travers ce pion.",
+          "Vous avez échangé une forme de contrôle contre une autre : un pion occupe e4 et contrôle des cases, tandis que le fou doit attendre une évolution de la structure pour retrouver sa grande diagonale. Pour juger le coup, examinez l’espace gagné, les possibilités de rupture et le développement restant."
+        ],
+        "lineSan": "e4",
+        "lineFr": "5. e4",
+        "san": "c4 e5 Nc3 Nf6 g3 Bc5 Bg2 d6 e4",
+        "diagram": "ouverture-anglaise-atelier-occuper.svg",
+        "alt": "Ouverture anglaise — e4 : gagner de l’espace et fermer momentanément la diagonale. Position après 1. c4 e5 2. Cc3 Cf6 3. g3 Fc5 4. Fg2 d6 5. e4.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          },
+          {
+            "type": "notAttacks",
+            "from": "g2",
+            "targets": [
+              "d5"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cf3 : développer une pièce en modifiant aussi les lignes",
+        "explanation": [
+          "5. Cf3 développe le cavalier et prépare le petit roque. Le cavalier contrôle notamment d4 et e5, mais il occupe f3, première case de la diagonale du fou g2. Là encore, le fou ne contrôle pas directement d5 tant que cet obstacle reste en place.",
+          "Ce placement peut être tout à fait cohérent. Une pièce peut développer ses propres menaces avant de libérer une diagonale. Ce qui serait faux, c’est de compter simultanément le cavalier f3 comme un défenseur actif et le fou g2 comme s’il traversait ce cavalier."
+        ],
+        "lineSan": "Nf3",
+        "lineFr": "5. Cf3",
+        "san": "c4 e5 Nc3 Nf6 g3 Bc5 Bg2 d6 Nf3",
+        "diagram": "ouverture-anglaise-atelier-developper.svg",
+        "alt": "Ouverture anglaise — Cf3 : développer une pièce en modifiant aussi les lignes. Position après 1. c4 e5 2. Cc3 Cf6 3. g3 Fc5 4. Fg2 d6 5. Cf3.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          },
+          {
+            "type": "notAttacks",
+            "from": "g2",
+            "targets": [
+              "d5"
+            ]
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Après e4, le fou g2 contrôle-t-il encore d5 ?",
+        "a": "Non. Le pion blanc e4 bloque sa diagonale. Le pion e4 contrôle lui-même d5, ce qui constitue une autre forme de contrôle."
+      },
+      {
+        "q": "Après Cf3, quelle pièce empêche le fou de voir e4 et d5 ?",
+        "a": "Le cavalier blanc f3. Un fou ne saute pas au-dessus des pièces de son camp."
+      },
+      {
+        "q": "Faut-il donc interdire e4 et Cf3 dans l’Anglaise ?",
+        "a": "Non. Les deux coups peuvent poursuivre des objectifs cohérents. Il faut simplement identifier les changements de contrôle et prévoir la coordination des pièces."
+      }
+    ],
+    "review": "À chaque coup central dans une Anglaise avec Fg2, tracez la diagonale et nommez son premier obstacle. Cet exercice vous aide à distinguer une pression actuelle d’un potentiel qui ne s’exprimera qu’après un échange ou un déplacement.",
+    "startSan": "c4 e5 Nc3 Nf6 g3 Bc5 Bg2 d6",
+    "startFr": "1. c4 e5 2. Cc3 Cf6 3. g3 Fc5 4. Fg2 d6"
+  },
+  "variants": [
+    {
+      "title": "L’Anglaise symétrique : deux pions c avancés",
+      "san": "c4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7",
+      "idea": "Les deux camps contestent le centre depuis l’aile dame et développent leur fou en fianchetto. La symétrie de départ ne signifie pas que l’on peut copier chaque coup sans risque : les Blancs ont le premier temps.",
+      "plan": "Préparez le développement du cavalier g1 et le roque, puis regardez si d4 est réalisable. La poussée d4 peut provoquer …cxd4 ; il faut déjà savoir avec quelle pièce reprendre et quelles lignes cet échange ouvrirait.",
+      "movesFr": "1. c4 c5 2. Cc3 Cc6 3. g3 g6 4. Fg2 Fg7",
+      "diagram": "ouverture-anglaise-variante-1.svg",
+      "alt": "L’Anglaise symétrique : deux pions c avancés — position après 1. c4 c5 2. Cc3 Cc6 3. g3 g6 4. Fg2 Fg7."
+    },
+    {
+      "title": "Le dispositif avec …e5 : une autre tension centrale",
+      "san": "c4 e5 Nc3 Nf6 g3 d5 cxd5 Nxd5",
+      "idea": "Les Noirs occupent e5 puis avancent d5. Après l’échange cxd5 Cxd5, leur cavalier occupe le centre et les Blancs ont quitté la colonne c avec leur pion. Cette structure diffère immédiatement de la branche symétrique.",
+      "plan": "Le fou peut sortir en g2, mais le cavalier d5 peut échanger en c3. Comparez les structures après une éventuelle reprise bxc3 : les pions blancs ne forment plus le même dessin. Un fianchetto n’efface ni les captures centrales ni leurs conséquences.",
+      "movesFr": "1. c4 e5 2. Cc3 Cf6 3. g3 d5 4. cxd5 Cxd5",
+      "diagram": "ouverture-anglaise-variante-2.svg",
+      "alt": "Le dispositif avec …e5 : une autre tension centrale — position après 1. c4 e5 2. Cc3 Cf6 3. g3 d5 4. cxd5 Cxd5."
+    }
+  ],
+  "trap": {
+    "title": "Un pion qui avance attaque aussi une pièce",
+    "san": "c4 e5 Nc3 Nf6 Nf3 Nc6 g3 d5 cxd5 Nxd5 Bg2 Nxc3 bxc3 e4 O-O",
+    "solutionSan": "exf3",
+    "explanation": "La poussée …e4 attaque le cavalier f3. En roquant sans le déplacer, les Blancs permettent …exf3 : le pion prend le cavalier. L’échange préalable en c3 a modifié la position, mais ne dispense pas de vérifier les attaques d’un pion sur les cases voisines.",
+    "prevention": "Après …e4, le recul 8. Cg1 évite cette perte immédiate, même s’il coûte du temps. L’exemple n’en fait pas un plan idéal : il montre pourquoi il faut prévoir une case de retrait avant de laisser l’adversaire avancer sur son cavalier.",
+    "avoidSan": "c4 e5 Nc3 Nf6 Nf3 Nc6 g3 d5 cxd5 Nxd5 Bg2 Nxc3 bxc3 e4 Ng1",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "exf3",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -3
+          }
+        ]
+      }
+    ],
+    "movesFr": "1. c4 e5 2. Cc3 Cf6 3. Cf3 Cc6 4. g3 d5 5. cxd5 Cxd5 6. Fg2 Cxc3 7. bxc3 e4 8. O-O",
+    "diagram": "ouverture-anglaise-piege.svg",
+    "alt": "Un pion qui avance attaque aussi une pièce — position après 1. c4 e5 2. Cc3 Cf6 3. Cf3 Cc6 4. g3 d5 5. cxd5 Cxd5 6. Fg2 Cxc3 7. bxc3 e4 8. O-O.",
+    "solutionFr": "8… exf3",
+    "avoidFr": "1. c4 e5 2. Cc3 Cf6 3. Cf3 Cc6 4. g3 d5 5. cxd5 Cxd5 6. Fg2 Cxc3 7. bxc3 e4 8. Cg1",
+    "turn": "black"
+  },
+  "quickReference": [
+    "Contrôler d5 avec le pion c4 et développer les pièces selon le centre choisi par les Noirs.",
+    "Préparer d4 ou garder une pression à distance ; le fianchetto ne remplace pas le calcul des échanges.",
+    "Une poussée …e4 peut chasser le cavalier f3 : prévoir sa case de retrait."
+  ],
+  "comparisons": [
+    {
+      "slug": "ouverture-gambit-dame",
+      "text": "Comparer la pression de c4 avec un centre blanc déjà occupé par d4."
+    },
+    {
+      "slug": "ouverture-londres",
+      "text": "Comparer des choix de développement et de structure différents."
+    }
+  ]
+}

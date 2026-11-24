@@ -1,0 +1,378 @@
+{
+  "slug": "ouverture-slave",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "readTime": "16 min",
+  "side": "Avec les Noirs",
+  "movesSan": "d4 d5 c4 c6",
+  "movesFr": "1. d4 d5 2. c4 c6",
+  "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+  "imageAlt": "Défense slave : les premiers coups expliqués aux débutants.",
+  "name": "Défense slave",
+  "title": "Défense slave : variantes, plans et pièges à connaître",
+  "description": "Découvrez la Slave : variante d’échange, capture en c4 et poussées à l’aile dame. Diagrammes, pièges et plans expliqués pour répondre au gambit dame.",
+  "h1": "La défense slave : soutenir d5 sans enfermer tout de suite le fou",
+  "subtitle": "Une réponse au gambit dame, à comprendre pion par pion.",
+  "eco": "D10",
+  "answer": "La défense slave commence par 1. d4 d5 2. c4 c6. Les Noirs soutiennent leur pion d5 avec le pion c6 plutôt qu’avec …e6 immédiatement. Le fou c8 garde sa diagonale de sortie, mais son développement doit rester compatible avec la défense du centre et de b7.",
+  "intro": "Vous venez de voir les Blancs proposer le pion c dans un gambit dame. La Slave choisit d’abord de renforcer d5. Cette décision permet de comparer deux soutiens de pion : …c6 et …e6 ne donnent pas les mêmes cases aux pièces.",
+  "fit": "Elle peut vous convenir si vous cherchez une réponse structurée à 1. d4 suivi de c4. Le début ressemble visuellement à la Caro-Kann, mais les pions blancs et les menaces ne sont pas les mêmes.",
+  "ideas": [
+    {
+      "title": "Comprendre le pion de soutien",
+      "text": "Si les Blancs capturent d5 par cxd5, le pion c6 peut reprendre. Observez quelle colonne s’ouvre et quel pion occupe ensuite le centre."
+    },
+    {
+      "title": "Garder un projet pour le fou c8",
+      "text": "Sa diagonale est disponible avant …e6, mais le sortir immédiatement n’est pas toujours approprié. Vérifiez notamment le centre et le pion b7."
+    },
+    {
+      "title": "Développer sans copier la Caro-Kann",
+      "text": "Le cavalier b8 ne peut pas aller tout de suite en c6, occupé par votre pion. Les autres pièces doivent trouver un développement cohérent avec les pions blancs d4 et c4."
+    }
+  ],
+  "replies": [
+    {
+      "move": "3. cxd5",
+      "name": "La variante d’échange",
+      "text": "Le pion c blanc prend d5. Les Noirs peuvent reprendre avec …cxd5 : le pion c6 joue son rôle de soutien."
+    },
+    {
+      "move": "3. Cf3",
+      "name": "Développer et garder la tension",
+      "text": "Les Blancs sortent une pièce sans régler immédiatement le contact des pions c4 et d5. Les Noirs peuvent eux aussi développer leur cavalier."
+    }
+  ],
+  "mistakes": [
+    {
+      "title": "Jouer …Ff5 sans regarder b7 et le centre",
+      "text": "La diagonale du fou est libre, mais cela ne rend pas tous ses départs bons. Certaines positions demandent d’abord de résoudre une menace centrale ou de dame."
+    },
+    {
+      "title": "Confondre Slave et Caro-Kann",
+      "text": "Les deux peuvent montrer des pions noirs en c6 et d5. La Slave répond ici à d4 et c4 ; la Caro-Kann commence contre e4."
+    },
+    {
+      "title": "Oublier la reprise après cxd5",
+      "text": "Le rôle de …c6 est aussi de préparer …cxd5. Avant une capture, imaginez la structure après la reprise, pas seulement le pion momentanément perdu."
+    }
+  ],
+  "pdf": {
+    "title": "Comparer deux défenses qui se ressemblent sans les confondre",
+    "text": "Le guide gratuit explique les principes du centre et du développement. Rejouez la Slave puis la Caro-Kann en observant les pions blancs : leur placement change les décisions.",
+    "note": "95 pages · PDF reçu par email · Sans carte bancaire. Guide général des principes, et non répertoire complet de défense slave.",
+    "label": "Recevoir le guide PDF gratuit",
+    "href": "../guide-apprendre-les-echecs.html#ebook-form"
+  },
+  "practice": [
+    "Après …c6, identifiez le pion soutenu et la diagonale encore disponible au fou c8.",
+    "Rejouez cxd5 et …cxd5 puis nommez le pion noir resté au centre.",
+    "Comparez les positions de départ de la Slave et de la Caro-Kann sans déplacer les pions blancs."
+  ],
+  "faq": [
+    {
+      "q": "Quels coups définissent la défense slave ?",
+      "a": "La suite 1. d4 d5 2. c4 c6 caractérise la Slave. Le pion c6 soutient d5 en réponse au gambit dame."
+    },
+    {
+      "q": "Quelle différence entre Slave et Caro-Kann ?",
+      "a": "La Slave répond à une structure blanche avec d4 et c4. La Caro-Kann commence par 1. e4 c6. Des pions noirs semblables ne signifient pas que les plans et les menaces sont identiques."
+    },
+    {
+      "q": "Le fou c8 doit-il sortir immédiatement ?",
+      "a": "Non. Sa diagonale est disponible avant …e6, mais il faut vérifier les menaces centrales, b7 et les possibilités adverses avant de choisir sa case."
+    }
+  ],
+  "related": [
+    "ouverture-gambit-dame",
+    "ouverture-caro-kann",
+    "meilleures-ouvertures-echecs-debutants"
+  ],
+  "history": {
+    "title": "D’où vient le nom « défense slave » ?",
+    "paragraphs": [
+      "Le nom « slave » renvoie aux maîtres d’origine slave qui ont contribué à sa théorie, parmi lesquels Alapin, Alekhine et Bogoljubov. Il ne désigne ni un inventeur unique ni une seule partie fondatrice.",
+      "La défense a notamment été mise en lumière par la pratique des matchs de championnat du monde entre Alekhine et Euwe dans les années 1930. Son histoire combine des analyses et des utilisations successives."
+    ],
+    "source": "history",
+    "note": "Le nom ne permet pas de déduire une année de création certaine. Pour une première leçon, la définition utile reste la structure après d4, …d5, c4 et …c6.",
+    "noteSource": "history"
+  },
+  "steps": [
+    {
+      "label": "Position de départ",
+      "san": "",
+      "diagram": "ouverture-slave-0.svg",
+      "alt": "Position initiale avant les premiers coups de Défense slave.",
+      "text": "Les deux camps commencent avec leurs pièces sur les cases de départ."
+    },
+    {
+      "label": "1. d4",
+      "san": "d4",
+      "diagram": "ouverture-slave-1.svg",
+      "alt": "Défense slave après 1. d4.",
+      "text": "Les Blancs occupent d4 et ouvrent leur fou c1."
+    },
+    {
+      "label": "1…d5",
+      "san": "d4 d5",
+      "diagram": "ouverture-slave-2.svg",
+      "alt": "Défense slave après 1. d4 d5.",
+      "text": "Les Noirs répondent par un pion central en d5."
+    },
+    {
+      "label": "2. c4",
+      "san": "d4 d5 c4",
+      "diagram": "ouverture-slave-3.svg",
+      "alt": "Défense slave après 1. d4 d5 2. c4.",
+      "text": "Le pion c4 attaque d5 et propose l’offre du gambit dame."
+    },
+    {
+      "label": "2…c6",
+      "san": "d4 d5 c4 c6",
+      "diagram": "ouverture-slave-4.svg",
+      "alt": "Défense slave après 1. d4 d5 2. c4 c6.",
+      "text": "Le pion c6 soutient d5. Le pion e7 ne ferme pas encore la diagonale du fou c8."
+    }
+  ],
+  "plan": {
+    "title": "Un exemple court pour comprendre le plan",
+    "movesFr": "1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 dxc4 5. a4 Ff5",
+    "san": "d4 d5 c4 c6 Nf3 Nf6 Nc3 dxc4 a4 Bf5",
+    "diagram": "ouverture-slave-plan.svg",
+    "alt": "Défense slave : position après 1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 dxc4 5. a4 Ff5.",
+    "text": "Cette illustration donne une place au fou c8 après un échange en c4. Les Blancs ont joué a4, les Noirs développent alors …Ff5. La prise en c4 est un choix, pas une obligation ; ne copiez pas cet ordre si l’adversaire a changé la position."
+  },
+  "exercise": {
+    "question": "Quel pion peut reprendre en d5 pour rétablir une présence noire au centre ?",
+    "diagram": "ouverture-slave-exercice.svg",
+    "alt": "Défense slave : position après 1. d4 d5 2. c4 c6 3. cxd5.",
+    "san": "d4 d5 c4 c6 cxd5",
+    "solutionSan": "cxd5",
+    "turn": "black",
+    "answer": "3…cxd5 : le pion c6 capture le pion blanc en d5. Le pion de soutien remplace ainsi le pion d noir qui a été pris. Les deux pions c ont changé la structure : il faut ensuite développer les pièces."
+  },
+  "sources": [
+    {
+      "id": "history",
+      "title": "Défense slave — histoire et origine du nom",
+      "url": "https://chessklub.com/chess-openings/the-slav-defense/",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "opening",
+      "title": "Défense slave — premiers coups et idées",
+      "url": "https://www.chess.com/openings/Slav-Defense",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "variantes-lichess",
+      "title": "Lichess — nomenclature et suites des ouvertures",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "checked": "2026-11-24"
+    }
+  ],
+  "repliesTitle": "Deux choix des Blancs à reconnaître",
+  "lesson": {
+    "structure": [
+      "Le pion c6 soutient d5 tandis que le pion e reste en e7. La différence avec un soutien immédiat par …e6 concerne notamment le fou c8 : sa diagonale d7–e6–f5 n’est pas encore fermée par le pion e. Cela crée une possibilité de sortie, pas une obligation de jouer …Ff5 à la première occasion.",
+      "Le pion b7 est initialement défendu par ce fou depuis c8. Quand le fou part, une dame blanche en b3 peut le viser par la colonne b si le passage est libre. Pour compter d’autres attaques de cette dame, regardez aussi les obstacles : tant que le pion blanc reste en c4, il interrompt la diagonale b3–c4–d5. Après un échange cxd5, cette diagonale peut s’ouvrir. Les deux situations ne doivent pas être confondues.",
+      "Après cxd5 et …cxd5, c6 se libère et l’ancien pion c noir remplace le pion d au centre. La structure est différente de celle où les Noirs ont pris en c4. Le rôle du fou, les cases du cavalier b8 et les colonnes disponibles doivent être réévalués. La réputation « solide » de la Slave n’empêche pas une faiblesse ponctuelle sur b7 ou une menace centrale."
+    ],
+    "pieces": [
+      {
+        "piece": "Pion c7",
+        "squares": "c6 pour soutenir d5",
+        "condition": "S’il reprend plus tard en d5, la case c6 devient disponible et le centre change de détenteur."
+      },
+      {
+        "piece": "Cavalier g8",
+        "squares": "f6",
+        "condition": "Il participe notamment au contrôle de d5 et e4. Comptez son rôle avant de l’envoyer vers une autre aile."
+      },
+      {
+        "piece": "Fou c8",
+        "squares": "f5 ou une autre case selon la position",
+        "condition": "Sa sortie doit tenir compte de b7, des échanges centraux et de la dame blanche. Une diagonale libre ne suffit pas à prouver qu’un coup est bon."
+      },
+      {
+        "piece": "Cavalier b8",
+        "squares": "une case compatible avec le pion c6",
+        "condition": "Cc6 n’est pas disponible tant que c6 est occupée. Un échange de pions peut modifier cette contrainte."
+      },
+      {
+        "piece": "Dame et roi",
+        "squares": "répondre aux pressions avant le placement idéal",
+        "condition": "Une défense de b7 peut demander un coup précis. Évitez de poursuivre votre développement en laissant une menace matérielle sans réponse."
+      }
+    ],
+    "reactions": [
+      {
+        "title": "Si les Blancs jouent Db3",
+        "text": "Inspectez la colonne b jusqu’à b7 et la diagonale vers d5. La présence ou l’absence du pion c4 change les attaques réelles. Le fou c8 a-t-il déjà quitté sa case ? Le cavalier f6 défend-il d5 ? Cette lecture pièce par pièce vaut mieux qu’une règle qui condamnerait toujours la sortie du fou."
+      },
+      {
+        "title": "Si les Blancs échangent en d5",
+        "text": "Après …cxd5, ne continuez pas à compter un pion en c6. Cette case est libre et les deux camps ont transformé leur structure. Certaines diagonales de dame deviennent plus actives ; réexaminez aussi la défense du pion qui vient d’arriver en d5."
+      },
+      {
+        "title": "Si vous prenez vous-même en c4",
+        "text": "Vous quittez temporairement le centre d5 pour prendre le pion proposé. Les Blancs peuvent chercher à reprendre en développant un fou, ou empêcher un soutien …b5 par a4. Ne consacrez pas tous vos coups à garder ce pion si vos pièces et votre roi restent en retard."
+      }
+    ],
+    "caseStudy": {
+      "title": "Le fou sorti et les deux cibles de la dame blanche",
+      "context": "Les Noirs ont développé le fou en f5. Après l’échange cxd5 et …cxd5, la dame blanche arrive en b3. Elle vise b7 et, cette fois, la diagonale vers d5 est libre puisque le pion c4 a disparu.",
+      "question": "Quel coup de dame peut défendre b7 et proposer un échange des dames ?",
+      "answer": "6…Db6 est une possibilité. La dame b6 défend b7 et se place face à la dame b3. Le pion d5 reste soutenu par le cavalier f6. Avant de choisir une défense, il fallait distinguer les deux cibles et leurs défenseurs. Si les dames s’échangent, les conséquences de la reprise sur la structure de pions devront aussi être examinées.",
+      "san": "d4 d5 c4 c6 Nf3 Nf6 Nc3 Bf5 cxd5 cxd5 Qb3",
+      "movesFr": "1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 Ff5 5. cxd5 cxd5 6. Db3",
+      "solutionSan": "Qb6",
+      "turn": "black",
+      "diagram": "ouverture-slave-decision.svg",
+      "alt": "Défense slave : position après 1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 Ff5 5. cxd5 cxd5 6. Db3. Trait aux Noirs.",
+      "highlights": [
+        "b3",
+        "b7",
+        "d5"
+      ],
+      "checks": [
+        {
+          "type": "attacks",
+          "from": "b3",
+          "targets": [
+            "b7",
+            "d5"
+          ]
+        }
+      ]
+    },
+    "transition": [
+      "Lorsque le centre est fixé, les deux camps cherchent souvent à améliorer leurs pièces et à préparer une rupture centrale. Demandez-vous quelles pièces contrôlent e4 et e5, et quel échange de pions peut ouvrir une colonne utile. La première poussée disponible n’est pas forcément celle qui aide le mieux vos pièces.",
+      "Pour retravailler une partie de Slave, repérez le moment du départ du fou c8 et celui du premier échange central. Redessinez ensuite les attaques de dame sur b7 et d5. Vous apprendrez à reconnaître quand une faiblesse est réelle, plutôt qu’à craindre toutes les sorties de dame adverses."
+    ]
+  },
+  "workshop": {
+    "title": "Reprendre avec le pion ou la dame : l’effet sur le développement",
+    "introduction": [
+      "Après l’échange blanc cxd5, les Noirs disposent de plusieurs reprises légales dans la position étudiée. La présence du pion c6 sert précisément à pouvoir reprendre avec …cxd5. Une reprise de dame est également possible ici, mais elle expose la dame à un coup de développement blanc.",
+      "Comparer ces deux branches ne sert pas à interdire toutes les reprises de dame. Il s’agit de voir la différence entre conserver la dame en retrait et la placer sur une case où le cavalier blanc peut l’attaquer. Le matériel reste équilibré dans les deux illustrations."
+    ],
+    "choices": [
+      {
+        "title": "…cxd5 : le pion de soutien remplace le pion capturé",
+        "explanation": [
+          "3…cxd5 reprend le pion blanc avec celui de c6. La dame reste en d8 et la case c6 se libère. Le pion arrivé en d5 provient de la colonne c ; le pion d noir a disparu dans l’échange. Vous pouvez maintenant choisir vos développements en tenant compte de cette nouvelle structure.",
+          "Les Blancs n’ont plus de pion sur la colonne c, et les Noirs n’ont plus de pion sur leur colonne c non plus après la reprise en d5. Cette colonne est ouverte si aucun autre pion n’y arrive ensuite. Avant d’y imaginer une tour, il faut tout de même développer les pièces qui en bloquent l’accès."
+        ],
+        "lineSan": "cxd5",
+        "lineFr": "3… cxd5",
+        "san": "d4 d5 c4 c6 cxd5 cxd5",
+        "diagram": "ouverture-slave-atelier-pion.svg",
+        "alt": "Défense slave — …cxd5 : le pion de soutien remplace le pion capturé. Position après 1. d4 d5 2. c4 c6 3. cxd5 cxd5.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "title": "…Dxd5 puis Cc3 : la dame devient une cible de développement",
+        "explanation": [
+          "Après 3…Dxd5 4. Cc3, le cavalier blanc sort en attaquant la dame d5. Dans la suite illustrative …Da5, la dame recule encore. Les Noirs ont conservé leur pion c6 et doivent donc toujours en tenir compte pour le développement du cavalier b8.",
+          "Le matériel n’a pas changé par rapport à l’autre reprise, mais le rythme n’est pas le même. Les Blancs ont développé une pièce avec une menace, et la dame noire a consommé un coup supplémentaire. Ne concluez pas pour autant à une victoire forcée : identifiez les pièces qui doivent maintenant sortir et les points centraux à défendre."
+        ],
+        "lineSan": "Qxd5 Nc3 Qa5",
+        "lineFr": "3… Dxd5 4. Cc3 Da5",
+        "san": "d4 d5 c4 c6 cxd5 Qxd5 Nc3 Qa5",
+        "diagram": "ouverture-slave-atelier-dame.svg",
+        "alt": "Défense slave — …Dxd5 puis Cc3 : la dame devient une cible de développement. Position après 1. d4 d5 2. c4 c6 3. cxd5 Dxd5 4. Cc3 Da5.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Quel était l’un des rôles du pion c6 ?",
+        "a": "Soutenir d5 et pouvoir reprendre après cxd5. La reprise …cxd5 illustre directement ce rôle."
+      },
+      {
+        "q": "Après …Dxd5 et Cc3, pourquoi faut-il considérer une retraite de dame ?",
+        "a": "Le cavalier c3 attaque d5. Dans l’illustration, …Da5 traite cette attaque ; il ne s’agit pas d’un échec automatique contre le roi e1."
+      },
+      {
+        "q": "Pourquoi la case c6 n’a-t-elle pas le même statut dans les deux branches ?",
+        "a": "Après …cxd5, elle est libre. Après …Dxd5, le pion noir est encore en c6 et peut gêner le développement habituel du cavalier b8."
+      }
+    ],
+    "review": "Quand vous reprenez un pion, ne regardez pas seulement le matériel rétabli. Comparez aussi les cases libérées et la possibilité pour l’adversaire de développer une pièce avec une menace. Vous saurez mieux pourquoi une reprise de pion est souvent plus simple à organiser ici.",
+    "startSan": "d4 d5 c4 c6 cxd5",
+    "startFr": "1. d4 d5 2. c4 c6 3. cxd5"
+  },
+  "variants": [
+    {
+      "title": "La Slave d’échange : ouvrir la colonne c",
+      "san": "d4 d5 c4 c6 cxd5 cxd5 Nc3 Nf6 Nf3",
+      "idea": "Les pions c des deux camps quittent la colonne c : le blanc a capturé en d5, puis le noir l’a repris. Les pièces lourdes pourront plus tard utiliser cette colonne, une fois leur développement organisé.",
+      "plan": "La structure paraît symétrique, mais le premier joueur conserve un temps d’avance. Les Noirs doivent développer leur fou c8 et choisir des cases actives pour leurs cavaliers. Une colonne ouverte ne gagne rien si les tours restent enfermées sur leur case initiale.",
+      "movesFr": "1. d4 d5 2. c4 c6 3. cxd5 cxd5 4. Cc3 Cf6 5. Cf3",
+      "diagram": "ouverture-slave-variante-1.svg",
+      "alt": "La Slave d’échange : ouvrir la colonne c — position après 1. d4 d5 2. c4 c6 3. cxd5 cxd5 4. Cc3 Cf6 5. Cf3."
+    },
+    {
+      "title": "La capture en c4 : le centre devient une décision",
+      "san": "d4 d5 c4 c6 Nf3 Nf6 Nc3 dxc4 a4 Bf5",
+      "idea": "Les Noirs prennent c4. Avec a4, les Blancs contrôlent b5 et compliquent la défense de ce pion par …b5 ; le fou noir sort ensuite en f5. Les Blancs devront encore organiser la reprise du pion c4.",
+      "plan": "L’idée à retenir est le lien entre le centre et l’aile dame : défendre un pion avancé demande souvent d’autres poussées de pions. Les Blancs peuvent préparer e3 et Fxc4, tandis que les Noirs doivent terminer leur développement sans s’accrocher au pion à n’importe quel prix.",
+      "movesFr": "1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 dxc4 5. a4 Ff5",
+      "diagram": "ouverture-slave-variante-2.svg",
+      "alt": "La capture en c4 : le centre devient une décision — position après 1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 dxc4 5. a4 Ff5."
+    }
+  ],
+  "trap": {
+    "title": "Pousser sur un cavalier puis ignorer l’attaque",
+    "san": "d4 d5 c4 c6 Nf3 Nf6 Nc3 dxc4 e4 b5 a4 b4 Be2",
+    "solutionSan": "bxc3",
+    "explanation": "Le pion noir arrivé en b4 attaque le cavalier c3. Si les Blancs développent leur fou en e2 sans déplacer le cavalier, …bxc3 le capture. Les coups a4 et …b4 ont transformé l’aile dame en zone tactique : continuer le développement normal perd une pièce.",
+    "prevention": "Après …b4, 7. Ca2 met le cavalier à l’abri de cette capture immédiate. Ce recul n’est pas proposé comme un objectif idéal d’ouverture ; il montre le coût d’un cavalier chassé par des pions. Anticipez sa case de retrait avant de provoquer une avance à l’aile dame.",
+    "avoidSan": "d4 d5 c4 c6 Nf3 Nf6 Nc3 dxc4 e4 b5 a4 b4 Na2",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "bxc3",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -4
+          }
+        ]
+      }
+    ],
+    "movesFr": "1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 dxc4 5. e4 b5 6. a4 b4 7. Fe2",
+    "diagram": "ouverture-slave-piege.svg",
+    "alt": "Pousser sur un cavalier puis ignorer l’attaque — position après 1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 dxc4 5. e4 b5 6. a4 b4 7. Fe2.",
+    "solutionFr": "7… bxc3",
+    "avoidFr": "1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 dxc4 5. e4 b5 6. a4 b4 7. Ca2",
+    "turn": "black"
+  },
+  "quickReference": [
+    "Soutenir d5 par c6 tout en conservant des possibilités de développement pour le fou c8.",
+    "Après cxd5 cxd5, utiliser la colonne c ouverte ; après …dxc4, organiser le jeu autour du pion avancé.",
+    "Une avance …b4 peut attaquer le cavalier c3 : le développement ne doit pas ignorer cette menace."
+  ],
+  "comparisons": [
+    {
+      "slug": "ouverture-gambit-dame",
+      "text": "Revoir les objectifs blancs auxquels répond la Slave."
+    },
+    {
+      "slug": "ouverture-caro-kann",
+      "text": "Comparer le rôle de …c6 dans deux réponses à des premiers coups différents."
+    }
+  ]
+}

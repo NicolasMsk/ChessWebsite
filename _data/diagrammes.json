@@ -984,5 +984,2072 @@
         "piece": "a8:N"
       }
     ]
+  },
+  {
+    "file": "ouverture-italienne-0.svg",
+    "title": "Position initiale",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": "",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-italienne-1.svg",
+    "title": "Italienne après 1 demi-coups",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "moves": "e4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-italienne-2.svg",
+    "title": "Italienne après 2 demi-coups",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq e6 0 2",
+    "moves": "e4 e5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-italienne-3.svg",
+    "title": "Italienne après 3 demi-coups",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2",
+    "moves": "e4 e5 Nf3",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-italienne-4.svg",
+    "title": "Italienne après 4 demi-coups",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+    "moves": "e4 e5 Nf3 Nc6",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-italienne-5.svg",
+    "title": "Italienne après 5 demi-coups",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
+    "moves": "e4 e5 Nf3 Nc6 Bc4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "c4",
+        "targets": [
+          "f7"
+        ]
+      }
+    ],
+    "highlights": [
+      "c4",
+      "f7"
+    ],
+    "arrows": [
+      [
+        "c4",
+        "f7"
+      ]
+    ]
+  },
+  {
+    "file": "ouverture-italienne-exercice.svg",
+    "title": "Italienne : préparer le roque",
+    "orientation": "white",
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "O-O",
+        "piece": "g1:K"
+      }
+    ]
+  },
+  {
+    "file": "ouverture-italienne-plan.svg",
+    "title": "Italienne : roi blanc en sécurité après le petit roque",
+    "orientation": "white",
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQ1RK1 b kq - 2 5",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6 O-O",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-anglaise-0.svg",
+    "title": "Position initiale avant les premiers coups de Ouverture anglaise.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": "",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-anglaise-1.svg",
+    "title": "Ouverture anglaise après 1. c4.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq c3 0 1",
+    "moves": "c4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-anglaise-plan.svg",
+    "title": "Ouverture anglaise : position après 1. c4 e5 2. Cc3 Cf6 3. g3 d5 4. cxd5 Cxd5 5. Fg2.",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp2ppp/8/3np3/8/2N3P1/PP1PPPBP/R1BQK1NR b KQkq - 1 5",
+    "moves": "c4 e5 Nc3 Nf6 g3 d5 cxd5 Nxd5 Bg2",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-anglaise-exercice.svg",
+    "title": "Ouverture anglaise : position après 1. c4 e5.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/2P5/8/PP1PPPPP/RNBQKBNR w KQkq e6 0 2",
+    "moves": "c4 e5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nc3",
+        "piece": "c3:N"
+      }
+    ]
+  },
+  {
+    "file": "ouverture-caro-kann-0.svg",
+    "title": "Position initiale avant les premiers coups de Défense Caro-Kann.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": "",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-caro-kann-1.svg",
+    "title": "Défense Caro-Kann après 1. e4.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "moves": "e4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-caro-kann-2.svg",
+    "title": "Défense Caro-Kann après 1. e4 c6.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+    "moves": "e4 c6",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-caro-kann-3.svg",
+    "title": "Défense Caro-Kann après 1. e4 c6 2. d4.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp1ppppp/2p5/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq d3 0 2",
+    "moves": "e4 c6 d4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-caro-kann-4.svg",
+    "title": "Défense Caro-Kann après 1. e4 c6 2. d4 d5.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq d6 0 3",
+    "moves": "e4 c6 d4 d5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-caro-kann-plan.svg",
+    "title": "Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6.",
+    "orientation": "black",
+    "fen": "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5",
+    "moves": "e4 c6 d4 d5 e5 Bf5 Nf3 e6",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-caro-kann-exercice.svg",
+    "title": "Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+    "moves": "e4 c6 d4 d5 e5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Bf5",
+        "piece": "f5:b"
+      }
+    ]
+  },
+  {
+    "file": "ouverture-ecossaise-0.svg",
+    "title": "Position initiale avant les premiers coups de Ouverture écossaise.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": "",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-ecossaise-1.svg",
+    "title": "Ouverture écossaise après 1. e4.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "moves": "e4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-ecossaise-2.svg",
+    "title": "Ouverture écossaise après 1. e4 e5.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq e6 0 2",
+    "moves": "e4 e5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-ecossaise-3.svg",
+    "title": "Ouverture écossaise après 1. e4 e5 2. Cf3.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2",
+    "moves": "e4 e5 Nf3",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-ecossaise-4.svg",
+    "title": "Ouverture écossaise après 1. e4 e5 2. Cf3 Cc6.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+    "moves": "e4 e5 Nf3 Nc6",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-ecossaise-5.svg",
+    "title": "Ouverture écossaise après 1. e4 e5 2. Cf3 Cc6 3. d4.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq d3 0 3",
+    "moves": "e4 e5 Nf3 Nc6 d4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-ecossaise-plan.svg",
+    "title": "Ouverture écossaise : position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Cf6 5. Cc3.",
+    "orientation": "white",
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R b KQkq - 2 5",
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nc3",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-ecossaise-exercice.svg",
+    "title": "Ouverture écossaise : position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4",
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nxd4",
+        "piece": "d4:N"
+      }
+    ]
+  },
+  {
+    "file": "ouverture-espagnole-0.svg",
+    "title": "Position initiale avant les premiers coups de Ouverture espagnole.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": "",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-espagnole-1.svg",
+    "title": "Ouverture espagnole après 1. e4.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "moves": "e4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-espagnole-2.svg",
+    "title": "Ouverture espagnole après 1. e4 e5.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq e6 0 2",
+    "moves": "e4 e5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-espagnole-3.svg",
+    "title": "Ouverture espagnole après 1. e4 e5 2. Cf3.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2",
+    "moves": "e4 e5 Nf3",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-espagnole-4.svg",
+    "title": "Ouverture espagnole après 1. e4 e5 2. Cf3 Cc6.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+    "moves": "e4 e5 Nf3 Nc6",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-espagnole-5.svg",
+    "title": "Ouverture espagnole après 1. e4 e5 2. Cf3 Cc6 3. Fb5.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
+    "moves": "e4 e5 Nf3 Nc6 Bb5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-espagnole-plan.svg",
+    "title": "Ouverture espagnole : position après 1. e4 e5 2. Cf3 Cc6 3. Fb5 a6 4. Fa4 Cf6 5. O-O.",
+    "orientation": "white",
+    "fen": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 3 5",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-espagnole-exercice.svg",
+    "title": "Ouverture espagnole : position après 1. e4 e5 2. Cf3 Cc6 3. Fb5 a6.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/1ppp1ppp/p1n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 a6",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Ba4",
+        "piece": "a4:B"
+      }
+    ]
+  },
+  {
+    "file": "ouverture-francaise-0.svg",
+    "title": "Position initiale avant les premiers coups de Défense française.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": "",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-francaise-1.svg",
+    "title": "Défense française après 1. e4.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "moves": "e4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-francaise-2.svg",
+    "title": "Défense française après 1. e4 e6.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppp1ppp/4p3/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+    "moves": "e4 e6",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-francaise-3.svg",
+    "title": "Défense française après 1. e4 e6 2. d4.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppp1ppp/4p3/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq d3 0 2",
+    "moves": "e4 e6 d4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-francaise-4.svg",
+    "title": "Défense française après 1. e4 e6 2. d4 d5.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq d6 0 3",
+    "moves": "e4 e6 d4 d5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-francaise-plan.svg",
+    "title": "Défense française : position après 1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Cc6 5. Cf3.",
+    "orientation": "black",
+    "fen": "r1bqkbnr/pp3ppp/2n1p3/2ppP3/3P4/2P2N2/PP3PPP/RNBQKB1R b KQkq - 2 5",
+    "moves": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-francaise-exercice.svg",
+    "title": "Défense française : position après 1. e4 e6 2. d4 d5 3. e5.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+    "moves": "e4 e6 d4 d5 e5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "c5",
+        "piece": "c5:p"
+      }
+    ]
+  },
+  {
+    "file": "ouverture-gambit-dame-0.svg",
+    "title": "Position initiale avant les premiers coups de Gambit dame.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": "",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-gambit-dame-1.svg",
+    "title": "Gambit dame après 1. d4.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+    "moves": "d4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-gambit-dame-2.svg",
+    "title": "Gambit dame après 1. d4 d5.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq d6 0 2",
+    "moves": "d4 d5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-gambit-dame-3.svg",
+    "title": "Gambit dame après 1. d4 d5 2. c4.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq c3 0 2",
+    "moves": "d4 d5 c4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-gambit-dame-plan.svg",
+    "title": "Gambit dame : position après 1. d4 d5 2. c4 dxc4 3. Cf3 Cf6 4. e3 e6 5. Fxc4.",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp2ppp/4pn2/8/2BP4/4PN2/PP3PPP/RNBQK2R b KQkq - 0 5",
+    "moves": "d4 d5 c4 dxc4 Nf3 Nf6 e3 e6 Bxc4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-gambit-dame-exercice.svg",
+    "title": "Gambit dame : position après 1. d4 d5 2. c4 dxc4 3. Cf3 Cf6 4. e3 e6.",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp2ppp/4pn2/8/2pP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 5",
+    "moves": "d4 d5 c4 dxc4 Nf3 Nf6 e3 e6",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Bxc4",
+        "piece": "c4:B"
+      }
+    ]
+  },
+  {
+    "file": "ouverture-londres-0.svg",
+    "title": "Position initiale avant les premiers coups de Système de Londres.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": "",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-londres-1.svg",
+    "title": "Système de Londres après 1. d4.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+    "moves": "d4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-londres-2.svg",
+    "title": "Système de Londres après 1. d4 d5.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq d6 0 2",
+    "moves": "d4 d5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-londres-3.svg",
+    "title": "Système de Londres après 1. d4 d5 2. Cf3.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 2",
+    "moves": "d4 d5 Nf3",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-londres-4.svg",
+    "title": "Système de Londres après 1. d4 d5 2. Cf3 Cf6.",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3",
+    "moves": "d4 d5 Nf3 Nf6",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-londres-5.svg",
+    "title": "Système de Londres après 1. d4 d5 2. Cf3 Cf6 3. Ff4.",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3",
+    "moves": "d4 d5 Nf3 Nf6 Bf4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-londres-plan.svg",
+    "title": "Système de Londres : position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 e6 4. e3 Fd6 5. Fd3.",
+    "orientation": "white",
+    "fen": "rnbqk2r/ppp2ppp/3bpn2/3p4/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq - 2 5",
+    "moves": "d4 d5 Nf3 Nf6 Bf4 e6 e3 Bd6 Bd3",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-londres-exercice.svg",
+    "title": "Système de Londres : position après 1. d4 d5 2. Cf3 Cf6.",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3",
+    "moves": "d4 d5 Nf3 Nf6",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Bf4",
+        "piece": "f4:B"
+      }
+    ]
+  },
+  {
+    "file": "ouverture-scandinave-0.svg",
+    "title": "Position initiale avant les premiers coups de Défense scandinave.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": "",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-scandinave-1.svg",
+    "title": "Défense scandinave après 1. e4.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "moves": "e4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-scandinave-2.svg",
+    "title": "Défense scandinave après 1. e4 d5.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/ppp1pppp/8/3p4/4P3/8/PPPP1PPP/RNBQKBNR w KQkq d6 0 2",
+    "moves": "e4 d5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-scandinave-plan.svg",
+    "title": "Défense scandinave : position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5 4. d4 Cf6.",
+    "orientation": "black",
+    "fen": "rnb1kb1r/ppp1pppp/5n2/q7/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5",
+    "moves": "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-scandinave-exercice.svg",
+    "title": "Défense scandinave : position après 1. e4 d5 2. exd5 Dxd5 3. Cc3.",
+    "orientation": "black",
+    "fen": "rnb1kbnr/ppp1pppp/8/3q4/8/2N5/PPPP1PPP/R1BQKBNR b KQkq - 1 3",
+    "moves": "e4 d5 exd5 Qxd5 Nc3",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Qa5",
+        "piece": "a5:q"
+      }
+    ]
+  },
+  {
+    "file": "ouverture-sicilienne-0.svg",
+    "title": "Position initiale avant les premiers coups de Défense sicilienne.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": "",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-sicilienne-1.svg",
+    "title": "Défense sicilienne après 1. e4.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "moves": "e4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-sicilienne-2.svg",
+    "title": "Défense sicilienne après 1. e4 c5.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq c6 0 2",
+    "moves": "e4 c5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-sicilienne-plan.svg",
+    "title": "Défense sicilienne : position après 1. e4 c5 2. Cf3 d6 3. d4 cxd4 4. Cxd4 Cf6 5. Cc3.",
+    "orientation": "black",
+    "fen": "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R b KQkq - 2 5",
+    "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-sicilienne-exercice.svg",
+    "title": "Défense sicilienne : position après 1. e4 c5 2. Cf3 d6 3. d4.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp2pppp/3p4/2p5/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq d3 0 3",
+    "moves": "e4 c5 Nf3 d6 d4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "cxd4",
+        "piece": "d4:p"
+      }
+    ]
+  },
+  {
+    "file": "ouverture-slave-0.svg",
+    "title": "Position initiale avant les premiers coups de Défense slave.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": "",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-slave-1.svg",
+    "title": "Défense slave après 1. d4.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+    "moves": "d4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-slave-2.svg",
+    "title": "Défense slave après 1. d4 d5.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq d6 0 2",
+    "moves": "d4 d5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-slave-3.svg",
+    "title": "Défense slave après 1. d4 d5 2. c4.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq c3 0 2",
+    "moves": "d4 d5 c4",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-slave-4.svg",
+    "title": "Défense slave après 1. d4 d5 2. c4 c6.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3",
+    "moves": "d4 d5 c4 c6",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-slave-plan.svg",
+    "title": "Défense slave : position après 1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 dxc4 5. a4 Ff5.",
+    "orientation": "black",
+    "fen": "rn1qkb1r/pp2pppp/2p2n2/5b2/P1pP4/2N2N2/1P2PPPP/R1BQKB1R w KQkq - 1 6",
+    "moves": "d4 d5 c4 c6 Nf3 Nf6 Nc3 dxc4 a4 Bf5",
+    "kind": "position",
+    "generated": true,
+    "checks": []
+  },
+  {
+    "file": "ouverture-slave-exercice.svg",
+    "title": "Défense slave : position après 1. d4 d5 2. c4 c6 3. cxd5.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3P4/3P4/8/PP2PPPP/RNBQKBNR b KQkq - 0 3",
+    "moves": "d4 d5 c4 c6 cxd5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "cxd5",
+        "piece": "d5:p"
+      }
+    ]
+  },
+  {
+    "file": "ouverture-anglaise-decision.svg",
+    "title": "Ouverture anglaise : position après 1. c4 e5 2. Cc3 Cf6 3. g3 d5. Trait aux Blancs.",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp2ppp/5n2/3pp3/2P5/2N3P1/PP1PPP1P/R1BQKBNR w KQkq d6 0 4",
+    "moves": "c4 e5 Nc3 Nf6 g3 d5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "c4",
+        "targets": [
+          "d5"
+        ]
+      },
+      {
+        "type": "attacks",
+        "from": "c3",
+        "targets": [
+          "d5"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "cxd5 Nxd5 Bg2 Nxc3 bxc3",
+        "piece": "c3:P"
+      }
+    ],
+    "highlights": [
+      "c4",
+      "d5",
+      "c3"
+    ]
+  },
+  {
+    "file": "ouverture-caro-kann-decision.svg",
+    "title": "Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6 5. g4. Trait aux Noirs.",
+    "orientation": "black",
+    "fen": "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P2P1/5N2/PPP2P1P/RNBQKB1R b KQkq g3 0 5",
+    "moves": "e4 c6 d4 d5 e5 Bf5 Nf3 e6 g4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "g4",
+        "targets": [
+          "f5"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Bg6",
+        "piece": "g6:b"
+      }
+    ],
+    "highlights": [
+      "g4",
+      "f5"
+    ]
+  },
+  {
+    "file": "ouverture-ecossaise-decision.svg",
+    "title": "Ouverture écossaise : position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Dxd4. Trait aux Noirs.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/8/3QP3/5N2/PPP2PPP/RNB1KB1R b KQkq - 0 4",
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Qxd4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "c6",
+        "targets": [
+          "d4"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Nxd4",
+        "piece": "d4:n"
+      }
+    ],
+    "highlights": [
+      "c6",
+      "d4"
+    ]
+  },
+  {
+    "file": "ouverture-espagnole-decision.svg",
+    "title": "Ouverture espagnole : position après 1. e4 e5 2. Cf3 Cc6 3. Fb5 a6 4. Fxc6 dxc6 5. Cxe5 Dd4. Trait aux Blancs.",
+    "orientation": "white",
+    "fen": "r1b1kbnr/1pp2ppp/p1p5/4N3/3qP3/8/PPPP1PPP/RNBQK2R w KQkq - 1 6",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 Nxe5 Qd4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "d4",
+        "targets": [
+          "e4",
+          "e5"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Nf3 Qxe4+",
+        "piece": "e4:q"
+      }
+    ],
+    "highlights": [
+      "d4",
+      "e4",
+      "e5"
+    ]
+  },
+  {
+    "file": "ouverture-francaise-decision.svg",
+    "title": "Défense française : position après 1. e4 e6 2. d4 d5 3. exd5 exd5 4. Cf3. Trait aux Noirs.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/ppp2ppp/8/3p4/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq - 1 4",
+    "moves": "e4 e6 d4 d5 exd5 exd5 Nf3",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Bf5",
+        "piece": "f5:b"
+      }
+    ],
+    "highlights": [
+      "c8",
+      "e6",
+      "f5"
+    ]
+  },
+  {
+    "file": "ouverture-gambit-dame-decision.svg",
+    "title": "Gambit dame : position après 1. d4 d5 2. c4 e6 3. Cc3 Cf6 4. cxd5 exd5. Trait aux Blancs.",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp2ppp/5n2/3p4/3P4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 5",
+    "moves": "d4 d5 c4 e6 Nc3 Nf6 cxd5 exd5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nf3",
+        "piece": "f3:N"
+      }
+    ],
+    "highlights": [
+      "d4",
+      "d5",
+      "c8"
+    ]
+  },
+  {
+    "file": "ouverture-italienne-decision.svg",
+    "title": "Ouverture italienne : position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Cf6. Trait aux Blancs.",
+    "orientation": "white",
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "f6",
+        "targets": [
+          "e4"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "d3",
+        "piece": "d3:P"
+      }
+    ],
+    "highlights": [
+      "e4",
+      "f6"
+    ]
+  },
+  {
+    "file": "ouverture-londres-decision.svg",
+    "title": "Système de Londres : position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 c5 4. c3 Db6. Trait aux Blancs.",
+    "orientation": "white",
+    "fen": "rnb1kb1r/pp2pppp/1q3n2/2pp4/3P1B2/2P2N2/PP2PPPP/RN1QKB1R w KQkq - 1 5",
+    "moves": "d4 d5 Nf3 Nf6 Bf4 c5 c3 Qb6",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "b6",
+        "targets": [
+          "b2"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Qb3",
+        "piece": "b3:Q"
+      }
+    ],
+    "highlights": [
+      "b6",
+      "b2"
+    ]
+  },
+  {
+    "file": "ouverture-scandinave-decision.svg",
+    "title": "Défense scandinave : position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5 4. d4 Cf6 5. Cf3. Trait aux Noirs.",
+    "orientation": "black",
+    "fen": "rnb1kb1r/ppp1pppp/5n2/q7/3P4/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 2 5",
+    "moves": "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6 Nf3",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Bg4",
+        "piece": "g4:b"
+      }
+    ],
+    "highlights": [
+      "c8",
+      "f3"
+    ]
+  },
+  {
+    "file": "ouverture-sicilienne-decision.svg",
+    "title": "Défense sicilienne : position après 1. e4 c5 2. c3 d5 3. exd5 Dxd5. Trait aux Blancs.",
+    "orientation": "black",
+    "fen": "rnb1kbnr/pp2pppp/8/2pq4/8/2P5/PP1P1PPP/RNBQKBNR w KQkq - 0 4",
+    "moves": "e4 c5 c3 d5 exd5 Qxd5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "d4",
+        "piece": "d4:P"
+      }
+    ],
+    "highlights": [
+      "c3",
+      "d4"
+    ]
+  },
+  {
+    "file": "ouverture-slave-decision.svg",
+    "title": "Défense slave : position après 1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 Ff5 5. cxd5 cxd5 6. Db3. Trait aux Noirs.",
+    "orientation": "black",
+    "fen": "rn1qkb1r/pp2pppp/5n2/3p1b2/3P4/1QN2N2/PP2PPPP/R1B1KB1R b KQkq - 1 6",
+    "moves": "d4 d5 c4 c6 Nf3 Nf6 Nc3 Bf5 cxd5 cxd5 Qb3",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "attacks",
+        "from": "b3",
+        "targets": [
+          "b7",
+          "d5"
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Qb6",
+        "piece": "b6:q"
+      }
+    ],
+    "highlights": [
+      "b3",
+      "b7",
+      "d5"
+    ]
+  },
+  {
+    "file": "ouverture-anglaise-atelier-occuper.svg",
+    "title": "Ouverture anglaise — e4 : gagner de l’espace et fermer momentanément la diagonale. Position après 1. c4 e5 2. Cc3 Cf6 3. g3 Fc5 4. Fg2 d6 5. e4.",
+    "orientation": "white",
+    "fen": "rnbqk2r/ppp2ppp/3p1n2/2b1p3/2P1P3/2N3P1/PP1P1PBP/R1BQK1NR b KQkq e3 0 5",
+    "moves": "c4 e5 Nc3 Nf6 g3 Bc5 Bg2 d6 e4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      },
+      {
+        "type": "notAttacks",
+        "from": "g2",
+        "targets": [
+          "d5"
+        ]
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-anglaise-atelier-developper.svg",
+    "title": "Ouverture anglaise — Cf3 : développer une pièce en modifiant aussi les lignes. Position après 1. c4 e5 2. Cc3 Cf6 3. g3 Fc5 4. Fg2 d6 5. Cf3.",
+    "orientation": "white",
+    "fen": "rnbqk2r/ppp2ppp/3p1n2/2b1p3/2P5/2N2NP1/PP1PPPBP/R1BQK2R b KQkq - 1 5",
+    "moves": "c4 e5 Nc3 Nf6 g3 Bc5 Bg2 d6 Nf3",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      },
+      {
+        "type": "notAttacks",
+        "from": "g2",
+        "targets": [
+          "d5"
+        ]
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-caro-kann-atelier-avance.svg",
+    "title": "Défense Caro-Kann — e5 : espace blanc et contrainte sur f6. Position après 1. e4 c6 2. d4 d5 3. e5.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+    "moves": "e4 c6 d4 d5 e5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-caro-kann-atelier-echange.svg",
+    "title": "Défense Caro-Kann — L’échange puis c4 : contester le nouveau pion d5. Position après 1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp2pppp/8/3p4/2PP4/8/PP3PPP/RNBQKBNR b KQkq c3 0 4",
+    "moves": "e4 c6 d4 d5 exd5 cxd5 c4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-ecossaise-atelier-reprendre.svg",
+    "title": "Ouverture écossaise — Dxd4 : une reprise rendue possible par l’échange. Position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Cxd4 5. Dxd4.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pppp1ppp/8/8/3QP3/8/PPP2PPP/RNB1KB1R b KQkq - 0 5",
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nxd4 Qxd4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-ecossaise-atelier-repondre.svg",
+    "title": "Ouverture écossaise — …c5 puis De3 : une attaque de pion sur la dame. Position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Cxd4 5. Dxd4 c5 6. De3.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pp1p1ppp/8/2p5/4P3/4Q3/PPP2PPP/RNB1KB1R b KQkq - 1 6",
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nxd4 Qxd4 c5 Qe3",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-espagnole-atelier-conserver.svg",
+    "title": "Ouverture espagnole — Fa4 : conserver la pièce et la pression. Position après 1. e4 e5 2. Cf3 Cc6 3. Fb5 a6 4. Fa4.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/1ppp1ppp/p1n5/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 1 4",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-espagnole-atelier-echanger.svg",
+    "title": "Ouverture espagnole — Fxc6 puis …dxc6 : changer la structure. Position après 1. e4 e5 2. Cf3 Cc6 3. Fb5 a6 4. Fxc6 dxc6.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/1pp2ppp/p1p5/4p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 5",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-francaise-atelier-rupture.svg",
+    "title": "Défense française — …c5 : attaquer un soutien de la chaîne. Position après 1. e4 e6 2. d4 d5 3. e5 c5.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp3ppp/4p3/2ppP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq c6 0 4",
+    "moves": "e4 e6 d4 d5 e5 c5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-francaise-atelier-automatisme.svg",
+    "title": "Défense française — …Cf6 ? puis exf6 : calculer le coût réel. Position après 1. e4 e6 2. d4 d5 3. e5 Cf6 4. exf6 Dxf6.",
+    "orientation": "black",
+    "fen": "rnb1kb1r/ppp2ppp/4pq2/3p4/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 5",
+    "moves": "e4 e6 d4 d5 e5 Nf6 exf6 Qxf6",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 2
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-gambit-dame-atelier-menace.svg",
+    "title": "Gambit dame — Df3 : voir la tour derrière les cases libérées. Position après 1. d4 d5 2. c4 dxc4 3. e3 b5 4. a4 c6 5. axb5 cxb5 6. Df3.",
+    "orientation": "white",
+    "fen": "rnbqkbnr/p3pppp/8/1p6/2pP4/4PQ2/1P3PPP/RNB1KBNR b KQkq - 1 6",
+    "moves": "d4 d5 c4 dxc4 e3 b5 a4 c6 axb5 cxb5 Qf3",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": -1
+      },
+      {
+        "type": "attacks",
+        "from": "f3",
+        "targets": [
+          "a8"
+        ]
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-gambit-dame-atelier-interposer.svg",
+    "title": "Gambit dame — Une interposition qui ne règle pas tout. Position après 1. d4 d5 2. c4 dxc4 3. e3 b5 4. a4 c6 5. axb5 cxb5 6. Df3 Cc6 7. Dxc6+.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/p3pppp/2Q5/1p6/2pP4/4P3/1P3PPP/RNB1KBNR b KQkq - 0 7",
+    "moves": "d4 d5 c4 dxc4 e3 b5 a4 c6 axb5 cxb5 Qf3 Nc6 Qxc6+",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 2
+      },
+      {
+        "type": "check"
+      },
+      {
+        "type": "attacks",
+        "from": "c6",
+        "targets": [
+          "a8",
+          "e8"
+        ]
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-italienne-atelier-echec.svg",
+    "title": "Ouverture italienne — Le centre blanc ouvre une diagonale noire. Position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. c3 Cf6 5. d4 exd4 6. cxd4 Fb4+.",
+    "orientation": "white",
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/8/1bBPP3/5N2/PP3PPP/RNBQK2R w KQkq - 1 7",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "check"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-italienne-atelier-parade.svg",
+    "title": "Ouverture italienne — Parer l’échec en développant. Position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. c3 Cf6 5. d4 exd4 6. cxd4 Fb4+ 7. Fd2 Fxd2+ 8. Cbxd2.",
+    "orientation": "white",
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/8/2BPP3/5N2/PP1N1PPP/R2QK2R b KQkq - 0 8",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+ Bd2 Bxd2+ Nbxd2",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-londres-atelier-echanger.svg",
+    "title": "Système de Londres — Fxd6 et …Dxd6 : la dame noire reprend. Position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 e6 4. e3 Fd6 5. Fxd6 Dxd6.",
+    "orientation": "white",
+    "fen": "rnb1k2r/ppp2ppp/3qpn2/3p4/3P4/4PN2/PPP2PPP/RN1QKB1R w KQkq - 0 6",
+    "moves": "d4 d5 Nf3 Nf6 Bf4 e6 e3 Bd6 Bxd6 Qxd6",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-londres-atelier-structure.svg",
+    "title": "Système de Londres — Fg3, …Fxg3 et hxg3 : la structure blanche change. Position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 e6 4. e3 Fd6 5. Fg3 Fxg3 6. hxg3.",
+    "orientation": "white",
+    "fen": "rnbqk2r/ppp2ppp/4pn2/3p4/3P4/4PNP1/PPP2PP1/RN1QKB1R b KQkq - 0 6",
+    "moves": "d4 d5 Nf3 Nf6 Bf4 e6 e3 Bd6 Bg3 Bxg3 hxg3",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-scandinave-atelier-active.svg",
+    "title": "Défense scandinave — …Da5 : une diagonale dont il faut voir l’obstacle. Position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5.",
+    "orientation": "black",
+    "fen": "rnb1kbnr/ppp1pppp/8/q7/8/2N5/PPPP1PPP/R1BQKBNR w KQkq - 2 4",
+    "moves": "e4 d5 exd5 Qxd5 Nc3 Qa5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      },
+      {
+        "type": "notCheck"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-scandinave-atelier-retrait.svg",
+    "title": "Défense scandinave — …Dd8 : revenir à l’abri sans récupérer le temps dépensé. Position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Dd8.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/ppp1pppp/8/8/8/2N5/PPPP1PPP/R1BQKBNR w KQkq - 2 4",
+    "moves": "e4 d5 exd5 Qxd5 Nc3 Qd8",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      },
+      {
+        "type": "notCheck"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-sicilienne-atelier-reculer.svg",
+    "title": "Défense sicilienne — Cb3 : conserver les deux cavaliers. Position après 1. e4 c5 2. Cf3 Cc6 3. d4 cxd4 4. Cxd4 e5 5. Cb3.",
+    "orientation": "black",
+    "fen": "r1bqkbnr/pp1p1ppp/2n5/4p3/4P3/1N6/PPP2PPP/RNBQKB1R b KQkq - 1 5",
+    "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e5 Nb3",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-sicilienne-atelier-echanger.svg",
+    "title": "Défense sicilienne — Cxc6 et …dxc6 : modifier les pièces et les colonnes. Position après 1. e4 c5 2. Cf3 Cc6 3. d4 cxd4 4. Cxd4 e5 5. Cxc6 dxc6.",
+    "orientation": "black",
+    "fen": "r1bqkbnr/pp3ppp/2p5/4p3/4P3/8/PPP2PPP/RNBQKB1R w KQkq - 0 6",
+    "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e5 Nxc6 dxc6",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-slave-atelier-pion.svg",
+    "title": "Défense slave — …cxd5 : le pion de soutien remplace le pion capturé. Position après 1. d4 d5 2. c4 c6 3. cxd5 cxd5.",
+    "orientation": "black",
+    "fen": "rnbqkbnr/pp2pppp/8/3p4/3P4/8/PP2PPPP/RNBQKBNR w KQkq - 0 4",
+    "moves": "d4 d5 c4 c6 cxd5 cxd5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-slave-atelier-dame.svg",
+    "title": "Défense slave — …Dxd5 puis Cc3 : la dame devient une cible de développement. Position après 1. d4 d5 2. c4 c6 3. cxd5 Dxd5 4. Cc3 Da5.",
+    "orientation": "black",
+    "fen": "rnb1kbnr/pp2pppp/2p5/q7/3P4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 5",
+    "moves": "d4 d5 c4 c6 cxd5 Qxd5 Nc3 Qa5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "material",
+        "balance": 0
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-anglaise-variante-1.svg",
+    "title": "L’Anglaise symétrique : deux pions c avancés — position après 1. c4 c5 2. Cc3 Cc6 3. g3 g6 4. Fg2 Fg7.",
+    "orientation": "white",
+    "fen": "r1bqk1nr/pp1pppbp/2n3p1/2p5/2P5/2N3P1/PP1PPPBP/R1BQK1NR w KQkq - 2 5",
+    "moves": "c4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-anglaise-variante-2.svg",
+    "title": "Le dispositif avec …e5 : une autre tension centrale — position après 1. c4 e5 2. Cc3 Cf6 3. g3 d5 4. cxd5 Cxd5.",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp2ppp/8/3np3/8/2N3P1/PP1PPP1P/R1BQKBNR w KQkq - 0 5",
+    "moves": "c4 e5 Nc3 Nf6 g3 d5 cxd5 Nxd5",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-anglaise-piege.svg",
+    "title": "Un pion qui avance attaque aussi une pièce — position après 1. c4 e5 2. Cc3 Cf6 3. Cf3 Cc6 4. g3 d5 5. cxd5 Cxd5 6. Fg2 Cxc3 7. bxc3 e4 8. O-O.",
+    "orientation": "white",
+    "fen": "r1bqkb1r/ppp2ppp/2n5/8/4p3/2P2NP1/P2PPPBP/R1BQ1RK1 b kq - 1 8",
+    "moves": "c4 e5 Nc3 Nf6 Nf3 Nc6 g3 d5 cxd5 Nxd5 Bg2 Nxc3 bxc3 e4 O-O",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "exf3",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -3
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "exf3",
+        "piece": "f3:p"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-caro-kann-variante-1.svg",
+    "title": "L’avance : sortir le fou avant …e6 — position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6.",
+    "orientation": "black",
+    "fen": "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5",
+    "moves": "e4 c6 d4 d5 e5 Bf5 Nf3 e6",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-caro-kann-variante-2.svg",
+    "title": "La classique : développer le fou en attaquant le cavalier — position après 1. e4 c6 2. d4 d5 3. Cc3 dxe4 4. Cxe4 Ff5 5. Cg3 Fg6.",
+    "orientation": "black",
+    "fen": "rn1qkbnr/pp2pppp/2p3b1/8/3P4/6N1/PPP2PPP/R1BQKBNR w KQkq - 3 6",
+    "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-caro-kann-piege.svg",
+    "title": "Le mat en d6 derrière un pion cloué — position après 1. e4 c6 2. d4 d5 3. Cc3 dxe4 4. Cxe4 Cd7 5. De2 Cgf6.",
+    "orientation": "black",
+    "fen": "r1bqkb1r/pp1npppp/2p2n2/8/3PN3/8/PPP1QPPP/R1B1KBNR w KQkq - 3 6",
+    "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Qe2 Ngf6",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nd6#",
+        "mate": true
+      },
+      {
+        "type": "line",
+        "moves": "Nd6#",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Nd6#",
+        "piece": "d6:N"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-ecossaise-variante-1.svg",
+    "title": "…Fc5 : attaquer le cavalier central — position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Fc5 5. Fe3.",
+    "orientation": "white",
+    "fen": "r1bqk1nr/pppp1ppp/2n5/2b5/3NP3/4B3/PPP2PPP/RN1QKB1R b KQkq - 2 5",
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Bc5 Be3",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-ecossaise-variante-2.svg",
+    "title": "…Cf6 : prendre e4 pour cible — position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Cxd4 Cf6 5. Cc3.",
+    "orientation": "white",
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R b KQkq - 2 5",
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nc3",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-ecossaise-piege.svg",
+    "title": "Une dame prise par le cavalier oublié — position après 1. e4 e5 2. Cf3 Cc6 3. d4 exd4 4. Dxd4.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/8/3QP3/5N2/PPP2PPP/RNB1KB1R b KQkq - 0 4",
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Qxd4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nxd4",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -9
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Nxd4",
+        "piece": "d4:n"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-espagnole-variante-1.svg",
+    "title": "La défense Morphy : répondre à …a6 — position après 1. e4 e5 2. Cf3 Cc6 3. Fb5 a6 4. Fa4 Cf6.",
+    "orientation": "white",
+    "fen": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 5",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-espagnole-variante-2.svg",
+    "title": "La défense berlinoise : …Cf6 sans …a6 — position après 1. e4 e5 2. Cf3 Cc6 3. Fb5 Cf6 4. d3 Fc5.",
+    "orientation": "white",
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/1Bb1p3/4P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 Nf6 d3 Bc5",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-espagnole-piege.svg",
+    "title": "Échanger le défenseur ne suffit pas à gagner e5 — position après 1. e4 e5 2. Cf3 Cc6 3. Fb5 a6 4. Fxc6 dxc6 5. Cxe5.",
+    "orientation": "white",
+    "fen": "r1bqkbnr/1pp2ppp/p1p5/4N3/4P3/8/PPPP1PPP/RNBQK2R b KQkq - 0 5",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 Nxe5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Qd4 Nf3 Qxe4+ Qe2 Qxe2+ Kxe2",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Qd4 Nf3 Qxe4+ Qe2 Qxe2+ Kxe2",
+        "piece": "e2:K"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-francaise-variante-1.svg",
+    "title": "L’avance : attaquer la base d4 — position après 1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Cc6.",
+    "orientation": "black",
+    "fen": "r1bqkbnr/pp3ppp/2n1p3/2ppP3/3P4/2P5/PP3PPP/RNBQKBNR w KQkq - 1 5",
+    "moves": "e4 e6 d4 d5 e5 c5 c3 Nc6",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-francaise-variante-2.svg",
+    "title": "La variante d’échange : une diagonale libérée — position après 1. e4 e6 2. d4 d5 3. exd5 exd5 4. Cf3 Cf6 5. Fd3.",
+    "orientation": "black",
+    "fen": "rnbqkb1r/ppp2ppp/5n2/3p4/3P4/3B1N2/PPP2PPP/RNBQK2R b KQkq - 3 5",
+    "moves": "e4 e6 d4 d5 exd5 exd5 Nf3 Nf6 Bd3",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-francaise-piege.svg",
+    "title": "Une dame attaquée par un cavalier qui ne peut pas bouger — position après 1. e4 e6 2. d4 d5 3. Cc3 Fb4 4. exd5 Dxd5.",
+    "orientation": "black",
+    "fen": "rnb1k1nr/ppp2ppp/4p3/3q4/1b1P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 5",
+    "moves": "e4 e6 d4 d5 Nc3 Bb4 exd5 Qxd5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "pinned",
+        "square": "c3"
+      },
+      {
+        "type": "illegal",
+        "move": "c3d5"
+      },
+      {
+        "type": "line",
+        "moves": "Bd2",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Bd2",
+        "piece": "d2:B"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-gambit-dame-variante-1.svg",
+    "title": "Le gambit refusé : les Noirs consolident d5 — position après 1. d4 d5 2. c4 e6 3. Cc3 Cf6 4. Cf3.",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 3 4",
+    "moves": "d4 d5 c4 e6 Nc3 Nf6 Nf3",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-gambit-dame-variante-2.svg",
+    "title": "Le gambit accepté : développer pour retrouver le pion — position après 1. d4 d5 2. c4 dxc4 3. Cf3 Cf6 4. e3 e6 5. Fxc4.",
+    "orientation": "white",
+    "fen": "rnbqkb1r/ppp2ppp/4pn2/8/2BP4/4PN2/PP3PPP/RNBQK2R b KQkq - 0 5",
+    "moves": "d4 d5 c4 dxc4 Nf3 Nf6 e3 e6 Bxc4",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-gambit-dame-piege.svg",
+    "title": "Un cavalier cloué à la dame peut encore bouger — position après 1. d4 d5 2. c4 e6 3. Cc3 Cf6 4. Fg5 Cbd7 5. cxd5 exd5 6. Cxd5.",
+    "orientation": "white",
+    "fen": "r1bqkb1r/pppn1ppp/5n2/3N2B1/3P4/8/PP2PPPP/R2QKBNR b KQkq - 0 6",
+    "moves": "d4 d5 c4 e6 Nc3 Nf6 Bg5 Nbd7 cxd5 exd5 Nxd5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nxd5 Bxd8 Bb4+ Qd2 Bxd2+ Kxd2 Kxd8",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -2
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Nxd5 Bxd8 Bb4+ Qd2 Bxd2+ Kxd2 Kxd8",
+        "piece": "d8:k"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-italienne-variante-1.svg",
+    "title": "Le jeu calme : d3 avant d4 — position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. d3 Cf6.",
+    "orientation": "white",
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 Nf6",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-italienne-variante-2.svg",
+    "title": "Les deux cavaliers : la pression immédiate sur e4 — position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Cf6 4. d3 Fc5.",
+    "orientation": "white",
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 d3 Bc5",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-italienne-piege.svg",
+    "title": "Le pion empoisonné et le mat du cavalier — position après 1. e4 e5 2. Cf3 Cc6 3. Fc4 Cd4 4. Cxe5 Dg5 5. Cxf7 Dxg2 6. Tf1 Dxe4+ 7. Fe2.",
+    "orientation": "white",
+    "fen": "r1b1kbnr/pppp1Npp/8/8/3nq3/8/PPPPBP1P/RNBQKR2 b Qkq - 1 7",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Nd4 Nxe5 Qg5 Nxf7 Qxg2 Rf1 Qxe4+ Be2",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nf3#",
+        "mate": true
+      },
+      {
+        "type": "line",
+        "moves": "Nf3#",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Nf3#",
+        "piece": "f3:n"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-londres-variante-1.svg",
+    "title": "Face à …d5 et …e6 : construire sans bloquer son fou — position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 e6 4. e3 Fd6.",
+    "orientation": "white",
+    "fen": "rnbqk2r/ppp2ppp/3bpn2/3p4/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQkq - 1 5",
+    "moves": "d4 d5 Nf3 Nf6 Bf4 e6 e3 Bd6",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-londres-variante-2.svg",
+    "title": "Face au fianchetto : surveiller le centre — position après 1. d4 Cf6 2. Cf3 g6 3. Ff4 Fg7 4. e3 O-O.",
+    "orientation": "white",
+    "fen": "rnbq1rk1/ppppppbp/5np1/8/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQ - 1 5",
+    "moves": "d4 Nf6 Nf3 g6 Bf4 Bg7 e3 O-O",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-londres-piege.svg",
+    "title": "Le fou attaqué pendant que l’on roque — position après 1. d4 d5 2. Cf3 Cf6 3. Ff4 c5 4. e3 Cc6 5. Fd3 c4 6. O-O.",
+    "orientation": "white",
+    "fen": "r1bqkb1r/pp2pppp/2n2n2/3p4/2pP1B2/3BPN2/PPP2PPP/RN1Q1RK1 b kq - 1 6",
+    "moves": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 Bd3 c4 O-O",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "cxd3",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -3
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "cxd3",
+        "piece": "d3:p"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-scandinave-variante-1.svg",
+    "title": "La reprise de dame et le recul en a5 — position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5 4. d4 Cf6.",
+    "orientation": "black",
+    "fen": "rnb1kb1r/ppp1pppp/5n2/q7/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5",
+    "moves": "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-scandinave-variante-2.svg",
+    "title": "…Cf6 : différer la reprise du pion — position après 1. e4 d5 2. exd5 Cf6 3. d4 Cxd5 4. Cf3.",
+    "orientation": "black",
+    "fen": "rnbqkb1r/ppp1pppp/8/3n4/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq - 1 4",
+    "moves": "e4 d5 exd5 Nf6 d4 Nxd5 Nf3",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-scandinave-piege.svg",
+    "title": "Prendre un fou protégé avec sa dame — position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Dc6 4. Fb5 Dxb5.",
+    "orientation": "black",
+    "fen": "rnb1kbnr/ppp1pppp/8/1q6/8/2N5/PPPP1PPP/R1BQK1NR w KQkq - 0 5",
+    "moves": "e4 d5 exd5 Qxd5 Nc3 Qc6 Bb5 Qxb5",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nxb5",
+        "piece": "b5:N"
+      },
+      {
+        "type": "line",
+        "moves": "Nxb5",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 6
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "Nxb5",
+        "piece": "b5:N"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-sicilienne-variante-1.svg",
+    "title": "La Sicilienne ouverte : la colonne c se libère — position après 1. e4 c5 2. Cf3 d6 3. d4 cxd4 4. Cxd4 Cf6 5. Cc3.",
+    "orientation": "black",
+    "fen": "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R b KQkq - 2 5",
+    "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-sicilienne-variante-2.svg",
+    "title": "L’Alapine : préparer d4 avec le pion c — position après 1. e4 c5 2. c3 d5 3. exd5 Dxd5 4. d4.",
+    "orientation": "black",
+    "fen": "rnb1kbnr/pp2pppp/8/2pq4/3P4/2P5/PP3PPP/RNBQKBNR b KQkq d3 0 4",
+    "moves": "e4 c5 c3 d5 exd5 Qxd5 d4",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-sicilienne-piege.svg",
+    "title": "La fourchette de pion après un sacrifice temporaire — position après 1. e4 c5 2. Cf3 d6 3. Fc4 Cf6 4. Cc3 Cxe4 5. Cxe4.",
+    "orientation": "black",
+    "fen": "rnbqkb1r/pp2pppp/3p4/2p5/2B1N3/5N2/PPPP1PPP/R1BQK2R b KQkq - 0 5",
+    "moves": "e4 c5 Nf3 d6 Bc4 Nf6 Nc3 Nxe4 Nxe4",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "d5",
+        "piece": "d5:p"
+      },
+      {
+        "type": "line",
+        "moves": "d5",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 2
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "d5",
+        "afterChecks": [
+          {
+            "type": "attacks",
+            "from": "d5",
+            "targets": [
+              "c4",
+              "e4"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "d5",
+        "piece": "d5:p"
+      }
+    ],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-slave-variante-1.svg",
+    "title": "La Slave d’échange : ouvrir la colonne c — position après 1. d4 d5 2. c4 c6 3. cxd5 cxd5 4. Cc3 Cf6 5. Cf3.",
+    "orientation": "black",
+    "fen": "rnbqkb1r/pp2pppp/5n2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 3 5",
+    "moves": "d4 d5 c4 c6 cxd5 cxd5 Nc3 Nf6 Nf3",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-slave-variante-2.svg",
+    "title": "La capture en c4 : le centre devient une décision — position après 1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 dxc4 5. a4 Ff5.",
+    "orientation": "black",
+    "fen": "rn1qkb1r/pp2pppp/2p2n2/5b2/P1pP4/2N2N2/1P2PPPP/R1BQKB1R w KQkq - 1 6",
+    "moves": "d4 d5 c4 c6 Nf3 Nf6 Nc3 dxc4 a4 Bf5",
+    "kind": "position",
+    "generated": true,
+    "checks": [],
+    "highlights": []
+  },
+  {
+    "file": "ouverture-slave-piege.svg",
+    "title": "Pousser sur un cavalier puis ignorer l’attaque — position après 1. d4 d5 2. c4 c6 3. Cf3 Cf6 4. Cc3 dxc4 5. e4 b5 6. a4 b4 7. Fe2.",
+    "orientation": "black",
+    "fen": "rnbqkb1r/p3pppp/2p2n2/8/PppPP3/2N2N2/1P2BPPP/R1BQK2R b KQkq - 1 7",
+    "moves": "d4 d5 c4 c6 Nf3 Nf6 Nc3 dxc4 e4 b5 a4 b4 Be2",
+    "kind": "position",
+    "generated": true,
+    "checks": [
+      {
+        "type": "line",
+        "moves": "bxc3",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": -4
+          }
+        ]
+      },
+      {
+        "type": "line",
+        "moves": "bxc3",
+        "piece": "c3:p"
+      }
+    ],
+    "highlights": []
   }
 ]

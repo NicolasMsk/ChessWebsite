@@ -58,10 +58,19 @@ def board_for(record):
         elif kind=='checkmate': assert board.is_checkmate(), 'Ce n’est pas un mat'
         elif kind=='stalemate': assert board.is_stalemate(), 'Ce n’est pas un pat'
         elif kind=='check': assert board.is_check(), 'Ce n’est pas un échec'
+        elif kind=='notCheck': assert not board.is_check(), 'Un échec est présent malgré l’explication'
+        elif kind=='notAttacks':
+            attacks=board.attacks(chess.parse_square(check['from']))
+            assert all(chess.parse_square(s) not in attacks for s in check['targets']), 'Une attaque annoncée bloquée existe'
+        elif kind=='material':
+            values={chess.PAWN:1,chess.KNIGHT:3,chess.BISHOP:3,chess.ROOK:5,chess.QUEEN:9,chess.KING:0}
+            balance=sum(values[p.piece_type]*(1 if p.color else -1) for p in board.piece_map().values())
+            assert balance==check['balance'], 'Bilan matériel incorrect : '+str(balance)
         elif kind=='illegal': assert chess.Move.from_uci(check['move']) not in board.legal_moves, 'Coup annoncé interdit mais légal'
         elif kind=='line':
             after=board.copy()
             for move in check['moves'].split(): after.push_san(move)
+            if check.get('afterChecks'): board_for({'fen':after.fen(en_passant='fen'),'checks':check['afterChecks']})
             if check.get('mate'): assert after.is_checkmate(), 'La solution ne donne pas mat'
             if check.get('check'): assert after.is_check(), 'La solution ne donne pas échec'
             if 'piece' in check:

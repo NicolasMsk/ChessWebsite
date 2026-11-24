@@ -1,0 +1,365 @@
+{
+  "slug": "ouverture-scandinave",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "readTime": "16 min",
+  "side": "Avec les Noirs",
+  "movesSan": "e4 d5",
+  "movesFr": "1. e4 d5",
+  "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+  "imageAlt": "Défense scandinave : les premiers coups expliqués aux débutants.",
+  "name": "Défense scandinave",
+  "title": "Défense scandinave : variantes et pièges de dame",
+  "description": "Apprenez la Scandinave avec …Dxd5 ou …Cf6 : développement, retraites de dame et clouages à éviter. Diagrammes, plans et exercices pour débutants.",
+  "h1": "La défense scandinave : contester e4 dès le premier coup",
+  "subtitle": "Reprendre un pion tout en surveillant le temps donné à la dame.",
+  "eco": "B01",
+  "answer": "La défense scandinave commence par 1. e4 d5. Les Noirs attaquent immédiatement le pion e4. Après 2. exd5, ils peuvent reprendre par …Dxd5 ou préparer une reprise autrement avec …Cf6. Dans le chemin avec la dame, il faut prévoir les coups qui vont l’attaquer.",
+  "intro": "La Scandinave pose une question que l’on rencontre partout aux échecs : une capture utile peut-elle coûter du temps ? En reprenant avec la dame, les Noirs récupèrent un pion, mais les Blancs peuvent développer leur cavalier avec une menace.",
+  "fit": "Elle peut vous intéresser si vous aimez clarifier le centre rapidement. Pour la découvrir, comprenez le trajet de la dame et le développement plutôt que de rechercher un piège.",
+  "ideas": [
+    {
+      "title": "Comprendre ce que la capture libère",
+      "text": "Après exd5, le pion noir d a disparu et la colonne d se transforme. La reprise par la dame utilise la colonne qui part de d8."
+    },
+    {
+      "title": "Prévoir l’attaque de développement",
+      "text": "Après …Dxd5, Cc3 sort une pièce blanche en attaquant la dame. Prévoir une retraite évite de découvrir cette menace trop tard."
+    },
+    {
+      "title": "Ne pas déplacer la dame sans nécessité",
+      "text": "Une fois la dame à l’abri, développez les cavaliers et les fous. Chaque trajet supplémentaire doit répondre à une vraie raison."
+    }
+  ],
+  "replies": [
+    {
+      "move": "2. exd5",
+      "name": "Capturer le pion avancé",
+      "text": "C’est le chemin illustré ici. La question noire devient le choix de la reprise et le développement qui la suivra."
+    },
+    {
+      "move": "3. Cc3 après …Dxd5",
+      "name": "Développer en attaquant",
+      "text": "Le cavalier blanc attaque la dame d5. Les Noirs doivent vérifier ses cases de retraite et les menaces sur la position."
+    }
+  ],
+  "mistakes": [
+    {
+      "title": "Oublier que le cavalier attaque d5",
+      "text": "Cc3 gagne un temps sur la dame. Repérer les cases contrôlées par un cavalier évite de perdre une dame dès l’ouverture."
+    },
+    {
+      "title": "Jouer plusieurs coups de dame sans développer",
+      "text": "La reprise en d5 ne doit pas devenir une promenade. Sortez vos autres pièces dès que la position le permet."
+    },
+    {
+      "title": "Croire que toute sortie précoce de dame est interdite",
+      "text": "Il s’agit d’une décision concrète avec des conséquences de développement. Le bon apprentissage consiste à comprendre ces conséquences, pas à remplacer le calcul par une interdiction absolue."
+    }
+  ],
+  "pdf": {
+    "title": "Reconnaître un développement avec une menace",
+    "text": "Le guide gratuit présente les principes de développement et les erreurs à éviter. Rejouez Cc3 contre la dame d5 pour voir comment un même coup peut sortir une pièce et créer une attaque.",
+    "note": "95 pages · PDF reçu par email · Sans carte bancaire. Guide général des principes, et non répertoire complet de défense scandinave.",
+    "label": "Recevoir le guide PDF gratuit",
+    "href": "../guide-apprendre-les-echecs.html#ebook-form"
+  },
+  "practice": [
+    "Après …Dxd5, tracez toutes les cases attaquées par le cavalier qui arrive en c3.",
+    "Rejouez …Da5 puis cherchez quels cavaliers noirs restent à développer.",
+    "Dans votre prochaine partie, repérez les coups qui développent une pièce avec une menace."
+  ],
+  "faq": [
+    {
+      "q": "Quels sont les premiers coups de la Scandinave ?",
+      "a": "Elle commence par 1. e4 d5. Après 2. exd5, les Noirs peuvent reprendre avec la dame ou choisir …Cf6 pour développer une pièce avant de récupérer le pion."
+    },
+    {
+      "q": "La dame doit-elle toujours aller en a5 ?",
+      "a": "Non. Après …Dxd5 et Cc3, plusieurs retraites existent selon le plan choisi. …Da5 est seulement la possibilité illustrée dans cette page."
+    },
+    {
+      "q": "Pourquoi le nom scandinave si les coups sont plus anciens ?",
+      "a": "Le nom renvoie à sa diffusion par des joueurs scandinaves, notamment à la fin du XIXe siècle. Des témoignages de e4 suivi de …d5 existent bien avant cette période."
+    }
+  ],
+  "related": [
+    "ouverture-sicilienne",
+    "ouverture-francaise",
+    "meilleures-ouvertures-echecs-debutants"
+  ],
+  "history": {
+    "title": "D’où vient le nom « défense scandinave » ?",
+    "paragraphs": [
+      "Le nom actuel est associé au travail des joueurs scandinaves qui ont étudié et popularisé la défense, notamment les frères Collijn à la fin du XIXe siècle. Leur pratique au championnat nordique de Stockholm de 1897 fait partie de cette histoire.",
+      "Les coups sont beaucoup plus anciens que ce nom : une partie conservée dans le poème valencien Scachs d’amor, vers 1475, commence déjà par e4 et …d5. Il faut distinguer ce témoignage ancien de la diffusion scandinave ultérieure."
+    ],
+    "source": "history",
+    "note": "Le poème valencien ne prouve pas une invention de l’ouverture en Scandinavie. Le nom reflète une étape de sa popularisation ; on rencontre aussi l’appellation anglaise Center Counter.",
+    "noteSource": "history"
+  },
+  "steps": [
+    {
+      "label": "Position de départ",
+      "san": "",
+      "diagram": "ouverture-scandinave-0.svg",
+      "alt": "Position initiale avant les premiers coups de Défense scandinave.",
+      "text": "Les deux camps commencent avec leurs pièces sur les cases de départ."
+    },
+    {
+      "label": "1. e4",
+      "san": "e4",
+      "diagram": "ouverture-scandinave-1.svg",
+      "alt": "Défense scandinave après 1. e4.",
+      "text": "Les Blancs occupent e4 et ouvrent des lignes pour leurs pièces."
+    },
+    {
+      "label": "1…d5",
+      "san": "e4 d5",
+      "diagram": "ouverture-scandinave-2.svg",
+      "alt": "Défense scandinave après 1. e4 d5.",
+      "text": "Le pion d5 attaque immédiatement e4. Les Blancs peuvent capturer ce pion avec exd5."
+    }
+  ],
+  "plan": {
+    "title": "Un exemple court pour comprendre le plan",
+    "movesFr": "1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5 4. d4 Cf6",
+    "san": "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6",
+    "diagram": "ouverture-scandinave-plan.svg",
+    "alt": "Défense scandinave : position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5 4. d4 Cf6.",
+    "text": "Dans cette illustration, la dame reprend en d5 puis recule en a5 après Cc3. Les Blancs ont développé leur cavalier avec une menace ; les Noirs commencent ensuite à développer le leur en f6. …Da5 est une possibilité, pas l’unique retraite de la dame."
+  },
+  "exercise": {
+    "question": "Quelle retraite place la dame sur la colonne a, hors de l’attaque du cavalier c3 ?",
+    "diagram": "ouverture-scandinave-exercice.svg",
+    "alt": "Défense scandinave : position après 1. e4 d5 2. exd5 Dxd5 3. Cc3.",
+    "san": "e4 d5 exd5 Qxd5 Nc3",
+    "solutionSan": "Qa5",
+    "turn": "black",
+    "answer": "3…Da5 est une retraite possible : la dame quitte d5 et parcourt c5 et b5, libres, jusqu’à a5. Le cavalier c3 n’attaque pas cette case. Ce n’est pas la seule retraite légale ; l’exercice montre un choix classique de placement."
+  },
+  "sources": [
+    {
+      "id": "history",
+      "title": "Défense scandinave — histoire et origine du nom",
+      "url": "https://en.chessbase.com/post/the-valencian-variation-in-the-scandinavian",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "opening",
+      "title": "Défense scandinave — premiers coups et idées",
+      "url": "https://www.chess.com/openings/Scandinavian-Defense",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "variantes-lichess",
+      "title": "Lichess — nomenclature et suites des ouvertures",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "checked": "2026-11-24"
+    }
+  ],
+  "repliesTitle": "Deux choix des Blancs à reconnaître",
+  "lesson": {
+    "structure": [
+      "Après e4, …d5 et exd5, les Noirs ont fait disparaître le pion central blanc e. La reprise …Dxd5 récupère le pion blanc qui se trouve en d5, mais met la dame sur une case accessible au cavalier b1. Le coup Cc3 développe ainsi une pièce blanche tout en attaquant une pièce de valeur supérieure. C’est le sens concret d’un « développement avec gain de temps ».",
+      "La retraite de dame n’est pas une catastrophe en elle-même : les Noirs peuvent construire une position cohérente après …Da5. Mais ils ont déjà consacré plusieurs coups à une seule pièce tandis que les Blancs ont sorti un cavalier. Il faut ensuite donner un rôle aux autres pièces. Rechercher de nouveaux échecs de dame uniquement parce qu’ils sont disponibles peut prolonger ce retard.",
+      "Le départ du pion d ouvre le passage du fou c8 par d7. Tant que le pion e n’a pas avancé en e6, une sortie vers g4 peut être disponible. Le fou peut alors viser le cavalier f3, situé sur la diagonale de la dame d1. Ce n’est pas un clouage absolu au roi : le cavalier peut légalement bouger, mais il faut regarder ce que ce mouvement exposerait derrière lui."
+    ],
+    "pieces": [
+      {
+        "piece": "Dame d8",
+        "squares": "d5 pour reprendre, puis une retraite préparée",
+        "condition": "Après Cc3, vérifiez les cases attaquées et la sécurité de la nouvelle case. Le déplacement ne doit pas devenir votre seul plan."
+      },
+      {
+        "piece": "Cavalier g8",
+        "squares": "f6 dans l’exemple étudié",
+        "condition": "Il contrôle des cases centrales et commence à réduire le retard de développement."
+      },
+      {
+        "piece": "Fou c8",
+        "squares": "g4 si la diagonale est libre et utile",
+        "condition": "Depuis g4, il peut exercer une pression sur Cf3 et la dame derrière. Vérifiez les pions qui peuvent l’attaquer."
+      },
+      {
+        "piece": "Cavalier b8",
+        "squares": "une sortie compatible avec les pions choisis",
+        "condition": "Une organisation ultérieure par …c6 peut réserver c6 au pion et demander une autre route au cavalier."
+      },
+      {
+        "piece": "Fou f8 et roi",
+        "squares": "préparer le roque par un développement coordonné",
+        "condition": "Le roi doit être protégé avant que les colonnes centrales ne deviennent dangereuses. Déplacez aussi le fou, pas seulement la dame."
+      }
+    ],
+    "reactions": [
+      {
+        "title": "Si les Blancs développent Cc3 contre la dame",
+        "text": "C’est une menace réelle sur d5. Choisissez une retraite en tenant compte des pions et des pièces, puis reprenez le développement. Le fait de connaître …Da5 ne dispense pas de vérifier que le trajet et la case d’arrivée sont sûrs dans la position jouée."
+      },
+      {
+        "title": "Si les Blancs installent d4",
+        "text": "Ils gagnent un point d’appui central et libèrent le fou c1. Votre priorité est de sortir vos pièces et d’examiner ce centre. Des coups de pion comme …c6 et …e6 peuvent participer à une construction, mais il faut comprendre ce qu’ils ferment ou rendent disponible."
+      },
+      {
+        "title": "Si vous pouvez développer le fou avec une menace",
+        "text": "Un coup tel que …Fg4 peut sortir une pièce tout en mettant une pression sur Cf3. Regardez la pièce derrière le cavalier : si c’est la dame, le déplacement du cavalier peut avoir un coût matériel, sans être illégal. Distinguer clouage relatif et clouage au roi évite de fausses conclusions."
+      }
+    ],
+    "caseStudy": {
+      "title": "Après la retraite de dame, développer une autre pièce",
+      "context": "La dame noire est déjà en a5. Les Blancs ont occupé d4 et développé Cf3. Les Noirs peuvent maintenant chercher une sortie utile pour leur fou c8, dont la diagonale a été libérée par le départ du pion d.",
+      "question": "Quel développement de fou peut mettre une pression sur le cavalier f3 et la dame derrière lui ?",
+      "answer": "5…Fg4 sort le fou c8 par d7, e6 et f5, puis vise le cavalier f3. Derrière ce cavalier, la diagonale continue par e2 vers la dame d1. Le cavalier n’est pas cloué au roi : il peut légalement se déplacer, mais doit tenir compte de la dame exposée. Le coup illustre un développement avec une idée, pas une pièce gagnée de force.",
+      "san": "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6 Nf3",
+      "movesFr": "1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5 4. d4 Cf6 5. Cf3",
+      "solutionSan": "Bg4",
+      "turn": "black",
+      "diagram": "ouverture-scandinave-decision.svg",
+      "alt": "Défense scandinave : position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5 4. d4 Cf6 5. Cf3. Trait aux Noirs.",
+      "highlights": [
+        "c8",
+        "f3"
+      ],
+      "checks": []
+    },
+    "transition": [
+      "Une fois la dame stabilisée et les pièces légères sorties, la question devient celle du centre blanc et des colonnes disponibles. Où le roi peut-il se mettre en sécurité ? Quelle pièce noire reste inactive ? Les déplacements de dame n’expliquent plus toute la position : votre plan doit maintenant impliquer les autres pièces.",
+      "En analysant une partie, comptez les coups de dame joués avant la sortie du second cavalier et des deux fous. Cherchez ensuite lesquels répondaient à une menace réelle et lesquels étaient seulement des tentatives d’échec sans suite."
+    ]
+  },
+  "workshop": {
+    "title": "Da5 ou Dd8 : distinguer activité de dame et menace réelle",
+    "introduction": [
+      "Après …Dxd5 et Cc3, la dame noire doit tenir compte de l’attaque du cavalier. Plusieurs retraites sont possibles. Le choix ne se résume pas à « une case active est forcément meilleure » ou « revenir en arrière est forcément mauvais ». Il faut observer la sécurité de la dame et le développement restant.",
+      "Dans les deux branches, le matériel reste équilibré et les Blancs ont développé un cavalier en gagnant un temps sur la dame. Les Noirs devront ensuite sortir les autres pièces. L’atelier apprend aussi à ne pas annoncer un échec quand une pièce bloque la diagonale."
+    ],
+    "choices": [
+      {
+        "title": "…Da5 : une diagonale dont il faut voir l’obstacle",
+        "explanation": [
+          "3…Da5 place la dame sur une case active de l’aile dame. On pourrait croire qu’elle donne échec au roi e1 par la diagonale a5–b4–c3–d2–e1. Ce n’est pas le cas : le cavalier blanc c3 interrompt cette diagonale. Le coup n’est donc pas un échec dans cette position.",
+          "Cela peut devenir un motif de pression si la position change. Mais un potentiel futur n’est pas une menace déjà réalisée. Continuez à compter les obstacles après chaque déplacement du cavalier ou d’un pion, sans attribuer à la dame des attaques qu’elle ne possède pas encore."
+        ],
+        "lineSan": "Qa5",
+        "lineFr": "3… Da5",
+        "san": "e4 d5 exd5 Qxd5 Nc3 Qa5",
+        "diagram": "ouverture-scandinave-atelier-active.svg",
+        "alt": "Défense scandinave — …Da5 : une diagonale dont il faut voir l’obstacle. Position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          },
+          {
+            "type": "notCheck"
+          }
+        ]
+      },
+      {
+        "title": "…Dd8 : revenir à l’abri sans récupérer le temps dépensé",
+        "explanation": [
+          "3…Dd8 replace la dame sur sa case de départ. Elle n’est plus directement attaquée par le cavalier c3, mais les coups consacrés à sa sortie et à son retour ont bien été joués. Les Blancs ont une pièce développée, tandis que les Noirs doivent commencer le développement des leurs.",
+          "Cette observation de rythme ne constitue pas une démonstration de défaite. Il faut encore jouer la position. Le bon réflexe noir consiste à chercher des coups de pièces utiles et une organisation centrale, plutôt qu’à vouloir justifier immédiatement la retraite par une nouvelle sortie de dame."
+        ],
+        "lineSan": "Qd8",
+        "lineFr": "3… Dd8",
+        "san": "e4 d5 exd5 Qxd5 Nc3 Qd8",
+        "diagram": "ouverture-scandinave-atelier-retrait.svg",
+        "alt": "Défense scandinave — …Dd8 : revenir à l’abri sans récupérer le temps dépensé. Position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Dd8.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          },
+          {
+            "type": "notCheck"
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "…Da5 donne-t-il échec dans la position affichée ?",
+        "a": "Non. Le cavalier c3 bloque la diagonale vers e1. La présence du roi au bout d’une ligne ne suffit pas si un obstacle la coupe."
+      },
+      {
+        "q": "Le retour en d8 rend-il aux Noirs les coups qu’ils ont dépensés ?",
+        "a": "Non. Les coups de dame ont consommé du temps. L’état du développement doit être évalué dans la position actuelle."
+      },
+      {
+        "q": "Le matériel suffit-il à comparer ces deux retraites ?",
+        "a": "Non. Il est équilibré dans les deux cas. La sécurité de la dame, l’activité des pièces et le temps nécessaire au roque comptent aussi."
+      }
+    ],
+    "review": "Pour chaque sortie de dame, tracez ses lignes jusqu’au premier obstacle. Pour chaque retraite, comparez ensuite le nombre de pièces actives des deux camps. Vous éviterez de confondre une dame visible avec une attaque déjà dangereuse.",
+    "startSan": "e4 d5 exd5 Qxd5 Nc3",
+    "startFr": "1. e4 d5 2. exd5 Dxd5 3. Cc3"
+  },
+  "variants": [
+    {
+      "title": "La reprise de dame et le recul en a5",
+      "san": "e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6",
+      "idea": "Les Blancs attaquent la dame par Cc3, puis occupent d4. La dame a5 reste active sur la diagonale vers e1, mais le cavalier c3 s’y interpose : la dame ne donne pas échec dans cette position.",
+      "plan": "Les Noirs peuvent développer leur fou c8 avant …e6. Vérifiez cependant les attaques possibles sur la dame : une dame active devient un problème si elle oblige à perdre plusieurs temps pendant que les pièces adverses sortent.",
+      "movesFr": "1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5 4. d4 Cf6",
+      "diagram": "ouverture-scandinave-variante-1.svg",
+      "alt": "La reprise de dame et le recul en a5 — position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5 4. d4 Cf6."
+    },
+    {
+      "title": "…Cf6 : différer la reprise du pion",
+      "san": "e4 d5 exd5 Nf6 d4 Nxd5 Nf3",
+      "idea": "Les Noirs développent le cavalier g8 au lieu de reprendre tout de suite avec la dame. Dans cette suite, ils récupèrent d5 au coup suivant ; les Blancs ont installé d4 et développé un cavalier.",
+      "plan": "Les deux camps ont retrouvé l’égalité matérielle, avec des pièces différentes sur les cases centrales. Les Noirs doivent surveiller les coups qui gagnent un temps sur Cd5. Cette branche ne garantit pas la reprise dans tous les ordres de coups : les Blancs peuvent aussi chercher à conserver leur pion.",
+      "movesFr": "1. e4 d5 2. exd5 Cf6 3. d4 Cxd5 4. Cf3",
+      "diagram": "ouverture-scandinave-variante-2.svg",
+      "alt": "…Cf6 : différer la reprise du pion — position après 1. e4 d5 2. exd5 Cf6 3. d4 Cxd5 4. Cf3."
+    }
+  ],
+  "trap": {
+    "title": "Prendre un fou protégé avec sa dame",
+    "san": "e4 d5 exd5 Qxd5 Nc3 Qc6 Bb5 Qxb5",
+    "solutionSan": "Nxb5",
+    "explanation": "Le fou blanc b5 était protégé par le cavalier c3. En prenant ce fou, la dame noire arrive sur une case où Cxb5 la capture. Au bilan de cette opération, les Noirs ont donné leur dame pour un fou : une perte matérielle nette de six points avec les valeurs habituelles.",
+    "prevention": "Le problème commence avec 3…Dc6 : après Fb5, la dame est clouée sur la diagonale b5–c6–d7–e8 et ne peut pas simplement s’enfuir en d6. Jouer 3…Da5 évite ce piège précis. Avant de choisir une case pour la dame, regardez aussi les lignes qui la relient à votre roi : une attaque de fou peut devenir un clouage décisif.",
+    "avoidSan": "e4 d5 exd5 Qxd5 Nc3 Qa5",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nxb5",
+        "piece": "b5:N"
+      },
+      {
+        "type": "line",
+        "moves": "Nxb5",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 6
+          }
+        ]
+      }
+    ],
+    "movesFr": "1. e4 d5 2. exd5 Dxd5 3. Cc3 Dc6 4. Fb5 Dxb5",
+    "diagram": "ouverture-scandinave-piege.svg",
+    "alt": "Prendre un fou protégé avec sa dame — position après 1. e4 d5 2. exd5 Dxd5 3. Cc3 Dc6 4. Fb5 Dxb5.",
+    "solutionFr": "5. Cxb5",
+    "avoidFr": "1. e4 d5 2. exd5 Dxd5 3. Cc3 Da5",
+    "turn": "white"
+  },
+  "quickReference": [
+    "Contester e4 dès le premier coup et terminer le développement après la reprise du pion.",
+    "Choisir entre la reprise immédiate de dame et le développement …Cf6 avant de reprendre.",
+    "Une case de dame doit être contrôlée aussi pour les clouages possibles, pas seulement les attaques directes."
+  ],
+  "comparisons": [
+    {
+      "slug": "ouverture-caro-kann",
+      "text": "Comparer …d5 immédiat à sa préparation par …c6."
+    },
+    {
+      "slug": "ouverture-francaise",
+      "text": "Comparer le développement de la dame et la construction du centre."
+    }
+  ]
+}

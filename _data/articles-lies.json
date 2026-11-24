@@ -8,7 +8,7 @@
   "comment-jouer-echecs-en-ligne": {"description":"Choisir une plateforme, une cadence et des habitudes d’analyse.","related":["apprendre-jouer-echecs","exercices-echecs-debutant","cours-echecs-en-ligne-vs-presentiel"]},
   "alireza-firouzja-numero-1-francais": {"description":"Découvrir le parcours et le style d’Alireza Firouzja.","related":["maxime-vachier-lagrave","championnat-monde-echecs-2026","magnus-carlsen-parcours-champion-monde"]},
   "championnat-monde-echecs-2026": {"description":"Comprendre le championnat du monde et suivre les parties.","related":["magnus-carlsen-parcours-champion-monde","alireza-firouzja-numero-1-francais","classement-elo-echecs"]},
-  "meilleures-ouvertures-echecs-debutants": {"description":"Visualiser les principes d’ouverture et cinq débuts de partie.","related":["10-erreurs-debutant-echecs","debuter-echecs-guide-complet-0-500-elo","exercices-echecs-debutant"]},
+  "meilleures-ouvertures-echecs-debutants": {"description":"Visualiser les principes d’ouverture et cinq débuts de partie.","related":["ouverture-italienne","10-erreurs-debutant-echecs","debuter-echecs-guide-complet-0-500-elo"]},
   "combien-coute-cours-echecs": {"description":"Comparer les formats de cours et comprendre les critères de prix.","related":["cours-echecs-en-ligne-vs-presentiel","professeur-ou-autodidacte-echecs","cours-echecs-adultes-paris"]},
   "judit-polgar-meilleure-joueuse-echecs": {"description":"Explorer le parcours de Judit Polgar et son approche des échecs.","related":["magnus-carlsen-parcours-champion-monde","alireza-firouzja-numero-1-francais","comment-apprendre-echecs-enfant"]},
   "classement-elo-echecs": {"description":"Comprendre le classement Elo et les différences entre plateformes.","related":["combien-temps-devenir-bon-echecs","debuter-echecs-guide-complet-0-500-elo","stagnation-echecs-progresser"]},
@@ -34,5 +34,16 @@
   "professeur-ou-autodidacte-echecs": {"description":"Choisir entre apprentissage autonome et accompagnement.","related":["debuter-echecs-guide-complet-0-500-elo","cours-echecs-en-ligne-vs-presentiel","combien-coute-cours-echecs"]},
   "cours-echecs-enfants-paris": {"description":"Découvrir comment organiser des cours pour un enfant.","related":["comment-apprendre-echecs-enfant","bienfaits-echecs-enfants","activites-enfants-vacances-echecs"]},
   "comment-apprendre-echecs-enfant": {"description":"Introduire les règles avec des jeux et une progression adaptée.","related":["mon-enfant-perd-toujours-echecs","regles-echecs-guide-complet","cours-echecs-enfants-paris"]},
-  "bienfaits-echecs-enfants": {"description":"Explorer les apports des échecs et les conditions d’une pratique adaptée.","related":["echecs-intelligence-enfants-etudes","echecs-tdah-concentration-enfants","comment-apprendre-echecs-enfant"]}
+  "bienfaits-echecs-enfants": {"description":"Explorer les apports des échecs et les conditions d’une pratique adaptée.","related":["echecs-intelligence-enfants-etudes","echecs-tdah-concentration-enfants","comment-apprendre-echecs-enfant"]},
+  "ouverture-italienne": {"description":"Comprendre les premiers coups de l’Italienne, son histoire et les idées à appliquer.","related":["meilleures-ouvertures-echecs-debutants","10-erreurs-debutant-echecs","exercices-echecs-debutant"]},
+  "ouverture-anglaise": {"description":"Un premier coup de pion qui vise d5 au lieu d’occuper e4 ou d4.","related":["ouverture-londres","ouverture-gambit-dame","meilleures-ouvertures-echecs-debutants"]},
+  "ouverture-caro-kann": {"description":"Construire son centre sans fermer tout de suite la diagonale du fou c8.","related":["ouverture-francaise","ouverture-slave","meilleures-ouvertures-echecs-debutants"]},
+  "ouverture-ecossaise": {"description":"Avec 3. d4, les pions entrent en contact très tôt.","related":["ouverture-italienne","ouverture-espagnole","meilleures-ouvertures-echecs-debutants"]},
+  "ouverture-espagnole": {"description":"Une pression sur le centre, plutôt qu’une attaque immédiate du roi.","related":["ouverture-italienne","ouverture-ecossaise","meilleures-ouvertures-echecs-debutants"]},
+  "ouverture-francaise": {"description":"Le pion e prépare d5, mais le fou c8 demande un projet.","related":["ouverture-caro-kann","ouverture-sicilienne","meilleures-ouvertures-echecs-debutants"]},
+  "ouverture-gambit-dame": {"description":"Pourquoi le pion c avance, et ce que les Noirs peuvent choisir.","related":["ouverture-slave","ouverture-londres","meilleures-ouvertures-echecs-debutants"]},
+  "ouverture-londres": {"description":"Sortir le fou avant de construire sa chaîne de pions.","related":["ouverture-gambit-dame","ouverture-anglaise","meilleures-ouvertures-echecs-debutants"]},
+  "ouverture-scandinave": {"description":"Reprendre un pion tout en surveillant le temps donné à la dame.","related":["ouverture-sicilienne","ouverture-francaise","meilleures-ouvertures-echecs-debutants"]},
+  "ouverture-sicilienne": {"description":"Contester d4 avec un pion de côté et accepter une structure asymétrique.","related":["ouverture-scandinave","ouverture-caro-kann","meilleures-ouvertures-echecs-debutants"]},
+  "ouverture-slave": {"description":"Une réponse au gambit dame, à comprendre pion par pion.","related":["ouverture-gambit-dame","ouverture-caro-kann","meilleures-ouvertures-echecs-debutants"]}
 }

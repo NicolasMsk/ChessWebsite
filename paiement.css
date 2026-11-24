@@ -67,7 +67,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; 
 .checkout-panel fieldset { margin: 1rem 0 0; padding: 0; border: 0; }
 .field-help { font-size: .9rem; color: var(--muted); line-height: 1.65; margin: .4rem 0; }
 #contact-recap { font: 500 .92rem 'Montserrat', sans-serif; padding: .8rem 1rem; background: var(--beige); margin: 0 0 .3rem; }
-.color-options { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .6rem; margin-top: .6rem; }
+.color-options { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .6rem; margin-top: .6rem; }
 .checkout-panel .color-options label { display: flex; align-items: center; gap: .7rem; padding: .75rem .8rem; margin: 0; border: 1px solid var(--line); font-weight: 500; cursor: pointer; background: #fff; }
 .checkout-panel .color-options label:has(input:checked) { border: 2px solid var(--walnut); padding: calc(.75rem - 1px) calc(.8rem - 1px); background: var(--beige); }
 .color-options input { accent-color: var(--walnut); }
@@ -75,7 +75,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; 
 .color-choice + .color-choice { margin-top: 1.4rem; }
 .swatch-rouge { background: #6e1f2b; }  /* bordeaux */
 .swatch-vert { background: #5f6a36; }   /* vert olive */
-.swatch-bleu { background: #1f3152; }   /* bleu marine */
 .swatch-marron { background: #6b4630; }
 
 /* Boutons : ceux du site (noyer, capitales espacées, angles droits) */
@@ -110,6 +109,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; 
   .order-card { grid-template-columns: 5.5rem minmax(0,1fr); }
   .order-total { font-size: 1.6rem; }
   .checkout-steps { gap: .9rem; font-size: .7rem; }
-  .color-options { grid-template-columns: 1fr 1fr; }
+  .color-options { grid-template-columns: minmax(0,1fr); }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }

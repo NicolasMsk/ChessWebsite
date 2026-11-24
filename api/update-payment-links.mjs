@@ -32,12 +32,12 @@ try{
  }
  console.log(JSON.stringify({mode:apply?'application':'aperçu',changes:plan.map(p=>({url:p.link.url,product:p.product,phoneRequired:true,message:p.message,bookColors:p.fields.filter(f=>f.key==='couleur_livre').flatMap(f=>f.dropdown.options.map(o=>o.label))}))},null,2));
  if(apply){
-  fs.writeFileSync(new URL('../tmp/payment-links-before-update.json',import.meta.url),JSON.stringify(plan.map(p=>({id:p.link.id,url:p.link.url,phone:p.link.phone_number_collection,custom_text:p.link.custom_text,custom_fields:p.link.custom_fields})),null,2));
+  fs.mkdirSync(new URL('../tmp/',import.meta.url),{recursive:true});fs.writeFileSync(new URL('../tmp/payment-links-before-update-'+new Date().toISOString().slice(0,10)+'.json',import.meta.url),JSON.stringify(plan.map(p=>({id:p.link.id,url:p.link.url,phone:p.link.phone_number_collection,custom_text:p.link.custom_text,custom_fields:p.link.custom_fields})),null,2));
   for(const p of plan){
    const changed=await stripe('payment_links/'+p.link.id,p.values);
    if(changed.url!==p.link.url||!changed.active||!changed.phone_number_collection?.enabled||changed.custom_text?.submit?.message!==p.message)throw Error('Vérification de la mise à jour impossible.');
    if(CHECKOUT_PRODUCTS[p.product].book){const c=changed.custom_fields.find(f=>f.key==='couleur_livre');if(!c||c.optional||c.dropdown.options.map(o=>o.value).join(',')!==Object.keys(BOOK_COLORS).join(','))throw Error('Le choix de couleur n’est pas correctement enregistré.');}
-   console.log('Vérifié : '+p.product+' — téléphone obligatoire'+(CHECKOUT_PRODUCTS[p.product].book?', 4 couleurs au choix':'')+'.');
+   console.log('Vérifié : '+p.product+' — téléphone obligatoire'+(CHECKOUT_PRODUCTS[p.product].book?', '+Object.keys(BOOK_COLORS).length+' couleurs au choix':'')+'.');
   }
  }
 }catch(e){console.error(e.message);process.exitCode=1}

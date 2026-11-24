@@ -1,6 +1,116 @@
 {
   "articles": [
     {
+      "id": "ouverture-slave",
+      "title": "Défense slave : répondre au gambit dame avec 2…c6",
+      "description": "La défense slave pour débutants : soutenir d5 avec c6, comprendre le fou c8 et répondre au gambit dame. Histoire, diagrammes et exercice corrigé.",
+      "date": "2026-11-24",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Défense slave : les premiers coups expliqués aux débutants."
+    },
+    {
+      "id": "ouverture-sicilienne",
+      "title": "Défense sicilienne : comprendre 1…c5 pour débuter",
+      "description": "La Sicilienne sans arbre de variantes : pourquoi jouer c5, contrôler d4 et ouvrir la colonne c. Histoire, diagrammes et exercice pour débutants.",
+      "date": "2026-11-24",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Défense sicilienne : les premiers coups expliqués aux débutants."
+    },
+    {
+      "id": "ouverture-scandinave",
+      "title": "Défense scandinave : comprendre 1…d5 et la sortie de dame",
+      "description": "Découvrez la Scandinave : 1…d5, la reprise en d5 et les attaques sur la dame. Premiers coups illustrés, origine du nom et exercice pour débutants.",
+      "date": "2026-11-24",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Défense scandinave : les premiers coups expliqués aux débutants."
+    },
+    {
+      "id": "ouverture-londres",
+      "title": "Système de Londres : le plan expliqué aux débutants",
+      "description": "Apprenez le système de Londres : d4, Cf3, Ff4, développement du fou avant e3, erreurs typiques et origine du nom. Diagrammes et exercice corrigé.",
+      "date": "2026-11-24",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Système de Londres : les premiers coups expliqués aux débutants."
+    },
+    {
+      "id": "ouverture-gambit-dame",
+      "title": "Gambit dame : comprendre 1. d4 d5 2. c4 simplement",
+      "description": "Le gambit dame pour débutants : pourquoi offrir c4, accepté ou refusé, histoire du nom et premiers coups illustrés. Plans simples et exercice corrigé.",
+      "date": "2026-11-24",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Gambit dame : les premiers coups expliqués aux débutants."
+    },
+    {
+      "id": "ouverture-francaise",
+      "title": "Défense française : comprendre e6, d5 et le centre",
+      "description": "Découvrez la Française pour débutants : e6 et d5, chaîne de pions, rôle du fou c8, histoire du nom et premiers coups illustrés. Exercice corrigé.",
+      "date": "2026-11-24",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Défense française : les premiers coups expliqués aux débutants."
+    },
+    {
+      "id": "ouverture-espagnole",
+      "title": "Ouverture espagnole : premiers coups et plans pour débuter",
+      "description": "Découvrez l’ouverture espagnole : le rôle de Fb5, ses premiers coups illustrés, son histoire et les erreurs à éviter. Explications pour débutants.",
+      "date": "2026-11-24",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Ouverture espagnole : les premiers coups expliqués aux débutants."
+    },
+    {
+      "id": "ouverture-ecossaise",
+      "title": "Ouverture écossaise : ouvrir le centre avec 3. d4",
+      "description": "Comprenez l’Écossaise : 3. d4, la reprise du cavalier, des diagrammes pas à pas et une histoire liée à Édimbourg. Guide simple pour débutants.",
+      "date": "2026-11-24",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Ouverture écossaise : les premiers coups expliqués aux débutants."
+    },
+    {
+      "id": "ouverture-caro-kann",
+      "title": "Défense Caro-Kann : comprendre c6 et d5 pour débuter",
+      "description": "La Caro-Kann expliquée aux débutants : soutien de d5, développement du fou c8, premiers coups illustrés et histoire de Caro et Kann. Exercice corrigé.",
+      "date": "2026-11-24",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Défense Caro-Kann : les premiers coups expliqués aux débutants."
+    },
+    {
+      "id": "ouverture-anglaise",
+      "title": "Ouverture anglaise : comprendre 1. c4 sans théorie longue",
+      "description": "Pourquoi jouer 1. c4 ? Découvrez l’Anglaise avec ses premiers coups, le contrôle de d5, son nom lié à Staunton et un exercice pour débutants.",
+      "date": "2026-11-24",
+      "readTime": "16 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Ouverture anglaise : les premiers coups expliqués aux débutants."
+    },
+    {
+      "id": "ouverture-italienne",
+      "title": "Ouverture italienne : les premiers coups expliqués simplement",
+      "description": "Apprenez l’ouverture italienne : premiers coups illustrés, plans simples, erreurs à éviter et histoire du nom. Guide débutant et PDF gratuit des principes.",
+      "date": "2026-11-24",
+      "readTime": "18 min",
+      "author": "Nicolas Musicki",
+      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+      "imageAlt": "Échiquier illustrant les premiers coups d’une partie d’échecs"
+    },
+    {
       "id": "cadeau-echecs-enfant-debutant",
       "title": "Quel cadeau d'échecs choisir pour un enfant débutant ?",
       "description": "Échiquier, livre, cahier d'exercices, cours ou club : quel cadeau d'échecs choisir pour un enfant qui débute, selon son âge, ce qu'il sait déjà et votre budget.",

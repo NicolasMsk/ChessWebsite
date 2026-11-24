@@ -9,7 +9,8 @@ test('catalogue serveur impose prix, une couleur par ouvrage et collecte du tél
  for(const [product,p] of Object.entries(CHECKOUT_PRODUCTS))for(const color of Object.keys(BOOK_COLORS)){const colors=Object.fromEntries(p.items.map(i=>[i,color]));const values=sessionParameters(product,colors);assert.equal(values['line_items[0][price_data][unit_amount]'],String(p.amount));assert.equal(values['phone_number_collection[enabled]'],'true');assert.equal(values.ui_mode,'elements');for(const i of p.items)assert.equal(values['metadata[couleur_'+i+']'],color);if(p.items.includes('livre'))assert.equal(values['metadata[book_color]'],color);}
  assert.deepEqual(CHECKOUT_PRODUCTS.cahiers_pack.items,['mats','tactiques']);assert.deepEqual(CHECKOUT_PRODUCTS.trio_livre_cahiers.items,['livre','mats','tactiques']);
  for(const [product,colors] of [['__proto__',{livre:'rouge'}],['pack_livres_relies',{}],['pack_livres_relies',{livre:'or'}],['cahiers_pack',{mats:'bleu'}],['cahier_mats',{mats:'bleu',livre:'rouge'}],['cahier_mats','bleu'],['trio_livre_cahiers',{livre:'rouge',mats:'vert',tactiques:'__proto__'}]])assert.throws(()=>sessionParameters(product,colors));
- const trio=sessionParameters('trio_livre_cahiers',{livre:'rouge',mats:'vert',tactiques:'bleu'});assert.match(trio['line_items[0][price_data][product_data][description]'],/Livre relié : bordeaux ; Cahier « Mes premiers mats » : vert olive ; Cahier « Mes premières tactiques » : bleu marine/);
+ const trio=sessionParameters('trio_livre_cahiers',{livre:'rouge',mats:'vert',tactiques:'marron'});assert.match(trio['line_items[0][price_data][product_data][description]'],/Livre relié : bordeaux ; Cahier « Mes premiers mats » : vert olive ; Cahier « Mes premières tactiques » : marron/);
+ assert.deepEqual(Object.keys(BOOK_COLORS),['rouge','vert','marron']);for(const product of Object.keys(CHECKOUT_PRODUCTS))assert.throws(()=>sessionParameters(product,Object.fromEntries(CHECKOUT_PRODUCTS[product].items.map(i=>[i,'bleu']))),/couleur/i);
 });
 test('paiement refuse origine externe, configuration absente, modes divergents et débit excessif',async()=>{
  const env=environment();assert.equal((await handleCheckout(new Request('https://worker.example/checkout-config'),env)).status,403);
@@ -18,7 +19,7 @@ test('paiement refuse origine externe, configuration absente, modes divergents e
  assert.equal((await handleCheckout(request('/checkout-config'),{...env,CHECKOUT_IP_LIMITER:{limit:async()=>({success:false})}})).status,429);
 });
 test('session refuse jeton expiré, autre IP, téléphone absent, couleur manquante et JSON nul',async()=>{
- const env=environment(),token=await guest(env);const valid={guestToken:token,product:'pack_livres_relies',color:'bleu',email:'client@example.fr',phone:'+33612345678'};
+ const env=environment(),token=await guest(env);const valid={guestToken:token,product:'pack_livres_relies',color:'vert',email:'client@example.fr',phone:'+33612345678'};
  for(const [body,ip,status] of [[{...valid,guestToken:crypto.randomUUID()},undefined,403],[valid,'192.0.2.2',403],[{...valid,phone:''},undefined,400],[{...valid,color:''},undefined,400],[{...valid,product:'cahiers_pack',color:undefined,colors:{mats:'vert'}},undefined,400],[null,undefined,400]])assert.equal((await handleCheckout(request('/checkout-session',body,ip),env)).status,status);
 });
 test('création conserve prix serveur et couleur, retries idempotents et verrouillage du choix',async()=>{

@@ -266,3 +266,16 @@ test('historical orders are untouched and do not trigger migration emails', asyn
   assert.equal((await worker.fetch(signed(env, { ...paid, metadata: { product: 'pack_livres_relies' } }), env)).status, 200);
   assert.equal(db.get('order:' + paid.id), original); assert.equal(calls.length, 0);
 });
+
+test('chaque produit vendu déclenche l’alerte de commande, même sans adresse dans la session', async t => {
+  for (const product of ['pack_livres_relies', 'cahier_mats', 'cahier_tactiques', 'cahiers_pack', 'trio_livre_cahiers']) {
+    const { env, calls } = fixture(t);
+    const session = { ...paid, id: 'cs_test_' + product, amount_total: 1500, metadata: { product } };
+    assert.equal((await worker.fetch(signed(env, session), env)).status, 200);
+    const admin = calls.filter(c => c.body.to.includes('nicolas.musicki@gmail.com'));
+    assert.equal(admin.length, 1, product);
+    assert.match(admin[0].body.subject, /Nouvelle commande/);
+    assert.ok(!calls.some(c => /guide/i.test(c.body.subject)), product + ' ne doit pas recevoir le guide');
+    assert.ok(calls.some(c => c.body.to.includes('buyer@example.invalid') && /confirmée/.test(c.body.subject)), product);
+  }
+});

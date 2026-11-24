@@ -20,6 +20,7 @@
 
 import {
   isPackSession,
+  produitDe,
   buildOrderRecord,
   orderConfirmationHtml,
   orderConfirmationText,
@@ -465,7 +466,7 @@ async function sendOrderConfirmationEmail(order, env, idempotencyKey) {
       from: FROM_ADDRESS,
       to: [order.email],
       reply_to: REPLY_TO,
-      subject: 'Votre commande est confirmée — Apprendre les Échecs, Volumes I & II',
+      subject: `Votre commande est confirmée — ${produitDe(order).sousTitre}`,
       html: orderConfirmationHtml(order),
       text: orderConfirmationText(order),
     }),
@@ -486,7 +487,7 @@ async function sendOrderAdminNotification(order, env, idempotencyKey) {
       from: FROM_ADDRESS,
       to: [ADMIN_EMAIL],
       reply_to: order.email || REPLY_TO,
-      subject: `🎉 Nouvelle commande — ${montant} € — ${order.name || order.email}`,
+      subject: `🎉 Nouvelle commande — ${produitDe(order).sousTitre} — ${montant} € — ${order.name || order.email}`,
       html: orderAdminHtml(order),
     }),
   });

@@ -1,0 +1,381 @@
+{
+  "slug": "ouverture-caro-kann",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "readTime": "16 min",
+  "side": "Avec les Noirs",
+  "movesSan": "e4 c6 d4 d5",
+  "movesFr": "1. e4 c6 2. d4 d5",
+  "image": "images/meilleures-ouvertures-echecs-debutants.webp",
+  "imageAlt": "Défense Caro-Kann : les premiers coups expliqués aux débutants.",
+  "name": "Défense Caro-Kann",
+  "title": "Caro-Kann : variantes, plans et pièges pour débuter",
+  "description": "Comprenez la Caro-Kann : avance, variante classique, sortie du fou et piège du mat en d6. Plans commentés, diagrammes et exercices pour débutants.",
+  "h1": "La défense Caro-Kann : préparer d5 avec le pion c",
+  "subtitle": "Construire son centre sans fermer tout de suite la diagonale du fou c8.",
+  "eco": "B12",
+  "answer": "La Caro-Kann commence par 1. e4 c6, souvent suivi de 2. d4 d5. Les Noirs préparent la poussée …d5 avec leur pion c6. Le fou c8 conserve une possibilité de sortie avant …e6. Le centre obtenu dépend ensuite du choix des Blancs : avancer, échanger ou défendre.",
+  "intro": "Vous jouez les Noirs contre 1. e4 et cherchez une idée facile à formuler : préparer …d5 et discuter le centre. La Caro-Kann permet d’observer le rôle d’un pion de soutien, puis la question pratique du fou de cases blanches.",
+  "fit": "Elle peut vous convenir si vous aimez organiser vos pions avant de choisir les échanges. Elle reste une réponse à 1. e4 : les mêmes premiers coups n’ont pas automatiquement le même sens contre 1. d4.",
+  "ideas": [
+    {
+      "title": "Contester le centre sans se précipiter",
+      "text": "Le coup …c6 prend du temps mais prépare …d5. Une fois le centre atteint, regardez si les Blancs avancent leur pion ou échangent."
+    },
+    {
+      "title": "Donner une place au fou c8",
+      "text": "Avant …e6, sa diagonale reste ouverte. Dans certaines structures, …Ff5 le développe hors de la chaîne de pions ; il faudra ensuite surveiller les attaques sur ce fou."
+    },
+    {
+      "title": "Développer malgré le pion c6",
+      "text": "Le pion en c6 occupe une case habituelle du cavalier b8. Pensez à son développement ultérieur au lieu d’attendre que toutes les cases se libèrent seules."
+    }
+  ],
+  "replies": [
+    {
+      "move": "3. e5",
+      "name": "L’avance",
+      "text": "Les Blancs gagnent de l’espace et ferment le contact entre les pions e4 et d5. Le développement du fou c8 devient une décision importante."
+    },
+    {
+      "move": "3. exd5",
+      "name": "L’échange",
+      "text": "Les Blancs prennent en d5. La reprise …cxd5 utilise le pion de soutien c6 ; la structure obtenue diffère de la variante d’avance."
+    }
+  ],
+  "mistakes": [
+    {
+      "title": "Jouer …e6 sans penser au fou",
+      "text": "Ce coup peut être utile, mais il ferme la diagonale de c8. Sachez quel rôle vous prévoyez pour ce fou."
+    },
+    {
+      "title": "Croire qu’une structure solide ne demande aucun calcul",
+      "text": "Votre fou sorti en f5 peut être attaqué. Une organisation cohérente de pions n’empêche pas les menaces tactiques."
+    },
+    {
+      "title": "Oublier le cavalier b8",
+      "text": "La case c6 est occupée par un pion. Le cavalier aura besoin d’un autre trajet ou d’une évolution de la structure."
+    }
+  ],
+  "pdf": {
+    "title": "Comprendre le soutien des pions et la sortie des pièces",
+    "text": "Le guide PDF gratuit présente les principes qui aident à juger …c6, …d5 et la sortie du fou. Rejouez ces coups en nommant ce qu’ils préparent.",
+    "note": "95 pages · PDF reçu par email · Sans carte bancaire. Guide général des principes, et non répertoire complet de défense caro-kann.",
+    "label": "Recevoir le guide PDF gratuit",
+    "href": "../guide-apprendre-les-echecs.html#ebook-form"
+  },
+  "practice": [
+    "Après …c6, vérifiez que ce pion contrôle d5.",
+    "Dans la variante d’avance, sortez le fou c8 avant …e6 puis observez sa diagonale.",
+    "Après exd5 et …cxd5, comparez la structure à celle où le pion blanc a avancé en e5."
+  ],
+  "faq": [
+    {
+      "q": "À quoi sert 1…c6 dans la Caro-Kann ?",
+      "a": "Le pion c6 contrôle d5 et prépare l’installation du pion d en d5. Les Noirs contestent ainsi le centre blanc après 1. e4."
+    },
+    {
+      "q": "Qui sont Caro et Kann ?",
+      "a": "Horatio Caro et Marcus Kann sont deux joueurs associés à l’analyse et à la pratique de cette défense au XIXe siècle. Leurs noms ne prouvent pas une invention commune en un seul événement."
+    },
+    {
+      "q": "Pourquoi parle-t-on autant du fou c8 ?",
+      "a": "Contrairement à un début immédiat par …e6, …c6 ne ferme pas sa diagonale. Les Noirs peuvent, selon la position, le développer avant de construire leur chaîne de pions."
+    }
+  ],
+  "related": [
+    "ouverture-francaise",
+    "ouverture-slave",
+    "meilleures-ouvertures-echecs-debutants"
+  ],
+  "history": {
+    "title": "D’où vient le nom « défense caro-kann » ?",
+    "paragraphs": [
+      "Le nom réunit Horatio Caro et Marcus Kann. L’étude historique du grand maître Bryan Smith distingue les analyses publiées par Caro en 1886 et l’association de Kann à cette défense, notamment par sa victoire contre Mieses en 1885.",
+      "Ces noms ne signifient pas que les deux joueurs auraient inventé ensemble la défense à une date précise. Des parties antérieures existent, et le nom composé s’est fixé progressivement."
+    ],
+    "source": "history",
+    "note": "Pour comprendre le nom, il faut distinguer les travaux publiés de Caro et la pratique de Kann. Les présenter comme coauteurs d’une même invention simplifierait excessivement cette histoire.",
+    "noteSource": "history"
+  },
+  "steps": [
+    {
+      "label": "Position de départ",
+      "san": "",
+      "diagram": "ouverture-caro-kann-0.svg",
+      "alt": "Position initiale avant les premiers coups de Défense Caro-Kann.",
+      "text": "Les deux camps commencent avec leurs pièces sur les cases de départ."
+    },
+    {
+      "label": "1. e4",
+      "san": "e4",
+      "diagram": "ouverture-caro-kann-1.svg",
+      "alt": "Défense Caro-Kann après 1. e4.",
+      "text": "Les Blancs installent un pion en e4."
+    },
+    {
+      "label": "1…c6",
+      "san": "e4 c6",
+      "diagram": "ouverture-caro-kann-2.svg",
+      "alt": "Défense Caro-Kann après 1. e4 c6.",
+      "text": "Le pion c6 prépare …d5 en contrôlant cette case."
+    },
+    {
+      "label": "2. d4",
+      "san": "e4 c6 d4",
+      "diagram": "ouverture-caro-kann-3.svg",
+      "alt": "Défense Caro-Kann après 1. e4 c6 2. d4.",
+      "text": "Les Blancs occupent aussi d4 et disposent d’un centre de deux pions."
+    },
+    {
+      "label": "2…d5",
+      "san": "e4 c6 d4 d5",
+      "diagram": "ouverture-caro-kann-4.svg",
+      "alt": "Défense Caro-Kann après 1. e4 c6 2. d4 d5.",
+      "text": "Les Noirs attaquent e4 avec leur pion d5, soutenu par c6."
+    }
+  ],
+  "plan": {
+    "title": "Un exemple court pour comprendre le plan",
+    "movesFr": "1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6",
+    "san": "e4 c6 d4 d5 e5 Bf5 Nf3 e6",
+    "diagram": "ouverture-caro-kann-plan.svg",
+    "alt": "Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6.",
+    "text": "Les Blancs ferment le centre par e5. Dans cette illustration, les Noirs sortent leur fou en f5 avant de jouer …e6. Le fou n’est donc pas enfermé derrière le pion e. Il reste à développer les cavaliers et à surveiller l’espace pris par les Blancs."
+  },
+  "exercise": {
+    "question": "Quel coup développe le fou c8 hors de la chaîne avant …e6 ?",
+    "diagram": "ouverture-caro-kann-exercice.svg",
+    "alt": "Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5.",
+    "san": "e4 c6 d4 d5 e5",
+    "solutionSan": "Bf5",
+    "turn": "black",
+    "answer": "3…Ff5 : le fou passe par d7 et e6, puis rejoint f5. Les deux cases sont libres puisque le pion d a quitté d7 et le pion e n’a pas encore avancé. Le fou pourra ensuite être visé : sa sécurité reste à vérifier."
+  },
+  "sources": [
+    {
+      "id": "history",
+      "title": "Défense Caro-Kann — histoire et origine du nom",
+      "url": "https://www.chess.com/article/view/the-caro-kann-a-history",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "opening",
+      "title": "Défense Caro-Kann — premiers coups et idées",
+      "url": "https://www.chess.com/openings/Caro-Kann-Defense",
+      "checked": "2026-11-24"
+    },
+    {
+      "id": "variantes-lichess",
+      "title": "Lichess — nomenclature et suites des ouvertures",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "checked": "2026-11-24"
+    }
+  ],
+  "repliesTitle": "Deux choix des Blancs à reconnaître",
+  "lesson": {
+    "structure": [
+      "Le duo de pions c6–d5 est construit pour que le pion c soutienne d5. Si les Blancs prennent en d5, …cxd5 remplace le pion capturé au centre. Si les Blancs avancent e5, les pions d4 et e5 gagnent de l’espace et le contact central se ferme autrement. La même ouverture mène donc à des positions dont les besoins ne sont pas identiques.",
+      "Dans la variante d’avance étudiée, le fou c8 sort en f5 avant …e6. Il échappe ainsi à l’enfermement derrière le pion e. Mais il devient aussi une pièce accessible aux pions blancs : g4 peut l’attaquer, et une retraite doit être anticipée. Le développement du fou résout un problème de mobilité sans rendre la pièce intouchable.",
+      "Le pion c6 prend une case souvent utilisée par le cavalier b8. Ce cavalier devra parfois passer par d7, ou bénéficier plus tard d’un changement de structure. Quant au cavalier g8, le pion blanc e5 contrôle f6 : la case habituelle f6 n’est donc pas libre de conséquences dans la structure d’avance. C’est un exemple concret de la nécessité de regarder les pions adverses avant d’appliquer les cases de développement habituelles."
+    ],
+    "pieces": [
+      {
+        "piece": "Fou c8",
+        "squares": "f5 dans l’exemple avec e5",
+        "condition": "Le sortir avant …e6 conserve une diagonale active. Prévoyez ce qu’il fera si g4 l’attaque."
+      },
+      {
+        "piece": "Cavalier b8",
+        "squares": "d7 dans certaines structures avec c6",
+        "condition": "Le pion c6 bloque Cc6. Une case de développement doit aussi laisser du travail aux autres pièces."
+      },
+      {
+        "piece": "Cavalier g8",
+        "squares": "une route adaptée au pion e5",
+        "condition": "Dans la structure d’avance, f6 est contrôlée par e5. Des développements par e7 ou h6 peuvent exister, selon la position et les pièces qui occupent ces cases."
+      },
+      {
+        "piece": "Fou f8",
+        "squares": "une diagonale ouverte après …e6",
+        "condition": "Le pion e6 peut aider ce fou à sortir. Sa case dépend de la défense du roi et des pions blancs."
+      },
+      {
+        "piece": "Pions c et d",
+        "squares": "soutien puis transformation du centre",
+        "condition": "Après un échange en d5, le pion c peut occuper d5. Ne continuez pas à raisonner comme si c6 était encore occupée."
+      }
+    ],
+    "reactions": [
+      {
+        "title": "Si les Blancs avancent e5",
+        "text": "Ils gagnent de l’espace et contrôlent notamment f6. Sortir le fou c8 avant …e6 est une idée importante, mais le développement des cavaliers doit ensuite être adapté. Ne posez pas mécaniquement un cavalier en f6 sur une case attaquée par un pion."
+      },
+      {
+        "title": "Si les Blancs échangent en d5",
+        "text": "Après exd5 et …cxd5, la case c6 se libère et le pion noir arrivé en d5 remplace le pion d initial. Les trajets des pièces et les possibilités du pion c blanc peuvent changer la structure. Relisez la position au lieu de poursuivre le plan de la variante d’avance."
+      },
+      {
+        "title": "Si le fou f5 est attaqué par g4",
+        "text": "La menace vient d’un pion : le fou ne peut pas l’ignorer. Une retraite comme …Fg6 peut être disponible, mais il faut déjà examiner les poussées h4 et h5 possibles ensuite. Un coup qui sauve une pièce maintenant ne termine pas forcément sa question de sécurité."
+      }
+    ],
+    "caseStudy": {
+      "title": "Le fou est sorti : il faut encore le garder en sécurité",
+      "context": "Les Noirs ont joué …Ff5 puis …e6 dans la variante d’avance. Les Blancs viennent d’avancer g4. Le pion g4 attaque directement le fou f5 ; la solidité du centre ne protège pas cette pièce.",
+      "question": "Quelle retraite peut sortir le fou de l’attaque immédiate du pion g4 ?",
+      "answer": "5…Fg6 est une retraite possible dans cette position. Le pion g4 attaque f5 et h5, pas g6. Mais les Blancs peuvent encore réfléchir à h4 puis h5 : les Noirs devront regarder les suites au lieu de considérer leur fou définitivement sauvé. Le but de la position est d’apprendre à réévaluer la sécurité d’une pièce après une poussée de pion.",
+      "san": "e4 c6 d4 d5 e5 Bf5 Nf3 e6 g4",
+      "movesFr": "1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6 5. g4",
+      "solutionSan": "Bg6",
+      "turn": "black",
+      "diagram": "ouverture-caro-kann-decision.svg",
+      "alt": "Défense Caro-Kann : position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6 5. g4. Trait aux Noirs.",
+      "highlights": [
+        "g4",
+        "f5"
+      ],
+      "checks": [
+        {
+          "type": "attacks",
+          "from": "g4",
+          "targets": [
+            "f5"
+          ]
+        }
+      ]
+    },
+    "transition": [
+      "À la fin du développement, les Noirs cherchent généralement à améliorer leurs pièces et à contester les pions avancés, sans se laisser enfermer. Une rupture comme …c5 peut devenir un projet dans certaines positions, mais le pion a déjà joué …c6 : il faudra juger le coût en temps et les captures possibles. Ce n’est pas un coup à pousser par habitude.",
+      "À l’analyse, comparez la position de vos deux cavaliers et celle du fou c8. Si vous avez gardé un centre de pions intact mais laissé deux pièces inactives, votre prochain objectif est de leur trouver un rôle, pas d’ajouter un nouveau coup de soutien."
+    ]
+  },
+  "workshop": {
+    "title": "Avance ou échange : pourquoi le plan des pièces doit changer",
+    "introduction": [
+      "Après e4, …c6, d4 et …d5, les Blancs choisissent ce qu’ils veulent faire du contact entre les pions. Avancer e5 garde davantage de pions au centre et gagne de l’espace. Échanger en d5 enlève deux pions de leurs trajets initiaux et oblige les Noirs à reprendre.",
+      "Ces choix ont un effet direct sur les cavaliers et les fous. Dans la structure d’avance, le pion e5 contrôle f6. Après l’échange, ce pion n’existe plus. De même, le pion noir c6 peut rester en c6 ou se retrouver en d5. Une fiche utile doit donc enseigner la différence entre les structures, plutôt qu’un placement unique des pièces."
+    ],
+    "choices": [
+      {
+        "title": "e5 : espace blanc et contrainte sur f6",
+        "explanation": [
+          "3. e5 avance le pion blanc et ferme le contact immédiat avec le pion d5. Le pion blanc contrôle d6 et f6. Les Noirs ne peuvent donc pas installer mécaniquement leur cavalier g8 en f6 sans examiner la capture exf6.",
+          "Le fou c8 conserve encore sa diagonale de sortie : le pion e7 n’a pas avancé. Le développement de ce fou avant …e6 est une idée de la Caro-Kann, mais il faudra ensuite prévoir les attaques de pions contre sa nouvelle case. Le centre fermé n’annule pas les problèmes tactiques."
+        ],
+        "lineSan": "e5",
+        "lineFr": "3. e5",
+        "san": "e4 c6 d4 d5 e5",
+        "diagram": "ouverture-caro-kann-atelier-avance.svg",
+        "alt": "Défense Caro-Kann — e5 : espace blanc et contrainte sur f6. Position après 1. e4 c6 2. d4 d5 3. e5.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      },
+      {
+        "title": "L’échange puis c4 : contester le nouveau pion d5",
+        "explanation": [
+          "Après 3. exd5 cxd5, le pion noir c6 a repris en d5. Les Blancs peuvent jouer 4. c4 pour attaquer ce pion avec leur pion c. La case c6 est désormais libre et le pion blanc e a disparu : les conditions de développement ne sont plus celles de la branche d’avance.",
+          "L’équilibre matériel est conservé. Mais les Blancs disposent de pions d4 et c4 qui contestent le centre, tandis que les Noirs doivent coordonner leurs pièces autour de d5. Ces deux pions blancs sont côte à côte : ils ne se soutiennent pas mutuellement. La présence de c4 ouvre une question de structure à étudier, pas un gain de pion automatique."
+        ],
+        "lineSan": "exd5 cxd5 c4",
+        "lineFr": "3. exd5 cxd5 4. c4",
+        "san": "e4 c6 d4 d5 exd5 cxd5 c4",
+        "diagram": "ouverture-caro-kann-atelier-echange.svg",
+        "alt": "Défense Caro-Kann — L’échange puis c4 : contester le nouveau pion d5. Position après 1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4.",
+        "checks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Après exd5 et …cxd5, quel pion noir se trouve en d5 ?",
+        "a": "Le pion venu de c7, passé par c6. Le pion d noir a été capturé en d5."
+      },
+      {
+        "q": "Pourquoi le cavalier b8 n’a-t-il pas les mêmes contraintes dans les deux branches ?",
+        "a": "Dans la branche d’avance, c6 reste occupée par le pion noir. Après …cxd5, cette case est libre ; le développement doit être réévalué."
+      },
+      {
+        "q": "Le coup c4 prend-il le pion d5 ?",
+        "a": "Non. Il l’attaque. Il faudra ensuite regarder les soutiens, les captures et les reprises possibles pour les deux camps."
+      }
+    ],
+    "review": "Après chaque choix blanc au troisième coup, nommez les pions qui ont disparu ou changé de colonne. Choisissez ensuite les cases de vos cavaliers à partir de cette position, plutôt qu’à partir d’une image apprise dans une autre variante.",
+    "startSan": "e4 c6 d4 d5",
+    "startFr": "1. e4 c6 2. d4 d5"
+  },
+  "variants": [
+    {
+      "title": "L’avance : sortir le fou avant …e6",
+      "san": "e4 c6 d4 d5 e5 Bf5 Nf3 e6",
+      "idea": "Les Blancs ferment le centre par e5. Les Noirs sortent leur fou c8 en f5 avant de fermer la diagonale avec …e6. C’est une différence de développement importante avec certaines positions de la Française.",
+      "plan": "Le fou f5 reste une cible possible pour les pions blancs. Surveillez les avances g4 et h4, et gardez une case de retrait disponible. Ensuite, la pression sur d4 peut se préparer par …c5 : les pièces doivent accompagner cette rupture.",
+      "movesFr": "1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6",
+      "diagram": "ouverture-caro-kann-variante-1.svg",
+      "alt": "L’avance : sortir le fou avant …e6 — position après 1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cf3 e6."
+    },
+    {
+      "title": "La classique : développer le fou en attaquant le cavalier",
+      "san": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6",
+      "idea": "Après l’échange en e4, le cavalier blanc reprend et le fou f5 l’attaque. Les Blancs le déplacent en g3, d’où il touche f5 ; le fou noir recule en g6. Chaque camp a utilisé son développement pour poser une question à une pièce adverse.",
+      "plan": "Ne retenez pas seulement les cases finales. La suite fonctionne parce que chaque déplacement répond à une attaque réelle. Les Noirs doivent ensuite développer leurs cavaliers et préparer le roi ; le fou g6 peut encore être visé par une avance de pion.",
+      "movesFr": "1. e4 c6 2. d4 d5 3. Cc3 dxe4 4. Cxe4 Ff5 5. Cg3 Fg6",
+      "diagram": "ouverture-caro-kann-variante-2.svg",
+      "alt": "La classique : développer le fou en attaquant le cavalier — position après 1. e4 c6 2. d4 d5 3. Cc3 dxe4 4. Cxe4 Ff5 5. Cg3 Fg6."
+    }
+  ],
+  "trap": {
+    "title": "Le mat en d6 derrière un pion cloué",
+    "san": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Qe2 Ngf6",
+    "solutionSan": "Nd6#",
+    "explanation": "Le cavalier e4 saute en d6 et donne mat. Le pion e7 semble pouvoir le prendre, mais son départ ouvrirait la colonne e entre la dame e2 et le roi e8 : cette capture est illégale. Les propres pièces noires occupent les autres cases de fuite du roi. C’est un exemple de mat où un défenseur apparent ne peut pas intervenir.",
+    "prevention": "Après 5. De2, 5…e6 évite cette configuration : le pion e a déjà quitté e7 et le roi obtient notamment la case e7 si un cavalier donne échec en d6. Ne développez pas mécaniquement …Cgf6 sans regarder la dame sur la colonne du roi.",
+    "avoidSan": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Qe2 e6",
+    "checks": [
+      {
+        "type": "line",
+        "moves": "Nd6#",
+        "mate": true
+      },
+      {
+        "type": "line",
+        "moves": "Nd6#",
+        "afterChecks": [
+          {
+            "type": "material",
+            "balance": 0
+          }
+        ]
+      }
+    ],
+    "movesFr": "1. e4 c6 2. d4 d5 3. Cc3 dxe4 4. Cxe4 Cd7 5. De2 Cgf6",
+    "diagram": "ouverture-caro-kann-piege.svg",
+    "alt": "Le mat en d6 derrière un pion cloué — position après 1. e4 c6 2. d4 d5 3. Cc3 dxe4 4. Cxe4 Cd7 5. De2 Cgf6.",
+    "solutionFr": "6. Cd6#",
+    "avoidFr": "1. e4 c6 2. d4 d5 3. Cc3 dxe4 4. Cxe4 Cd7 5. De2 e6",
+    "turn": "white"
+  },
+  "quickReference": [
+    "Soutenir …d5 par …c6 et développer le fou c8 avant de fermer sa diagonale lorsque c’est possible.",
+    "Comparer l’avance e5 à l’échange en d5 : ces choix demandent des placements différents.",
+    "Une dame blanche en e2 peut clouer le pion e7 et rendre possible un mat en d6."
+  ],
+  "comparisons": [
+    {
+      "slug": "ouverture-francaise",
+      "text": "Comparer le rôle du fou c8 après …c6 ou …e6."
+    },
+    {
+      "slug": "ouverture-scandinave",
+      "text": "Comparer deux façons noires de contester e4 avec …d5."
+    }
+  ]
+}
