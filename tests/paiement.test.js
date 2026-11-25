@@ -11,3 +11,12 @@ test('les cinq achats pointent vers le formulaire depuis pages racine et sous-r�
  for(let i=0;i<5;i++){const url=new URL(links[i].href);assert.equal(url.searchParams.get('produit'),Object.values(ids)[i]);assert.equal(url.pathname,new URL('paiement.html',src).pathname);assert.match(links[i].dataset.stripeFallback,/buy.stripe.com/);}assert.equal(links[5].href,'https://buy.stripe.com/other-link');
  }
 });
+test('la page de paiement ne redéfinit pas l’email déjà fixé par le serveur',()=>{
+ // Le Worker pose customer_email sur la Checkout Session : Stripe refuse alors toute
+ // mise à jour de l'email depuis le navigateur (« You cannot update the email… »).
+ const js=fs.readFileSync(path.resolve(__dirname,'..','paiement.js'),'utf8');
+ assert.match(fs.readFileSync(path.resolve(__dirname,'..','api','checkout.js'),'utf8'),/customer_email=input\.email/);
+ assert.doesNotMatch(js,/defaultValues:\{[^}]*email/);
+ assert.doesNotMatch(js,/updateEmail\(/);
+ assert.doesNotMatch(js,/confirm\(\{[^}]*email/);
+});
