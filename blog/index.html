@@ -365,7 +365,7 @@
           articleCard.setAttribute('itemtype', 'https://schema.org/Article');
           
           const imageHTML = article.image 
-            ? `<img src="${article.image}" ${article.imageSrcSet ? `srcset="${article.imageSrcSet}" sizes="(max-width: 768px) calc(100vw - 40px), (max-width: 1100px) 45vw, 370px" width="1536" height="1024"` : ''} alt="${article.imageAlt || article.title}" loading="lazy" decoding="async" style="width: 100%; ${article.imageSrcSet ? 'height: auto; aspect-ratio: 3 / 2;' : 'height: 250px;'} object-fit: cover;" itemprop="image">`
+            ? `<img src="${article.image}" ${article.imageSrcSet ? `srcset="${article.imageSrcSet}" sizes="(max-width: 768px) calc(100vw - 40px), 960px" width="1536" height="1024"` : ''} alt="${article.imageAlt || article.title}" loading="lazy" decoding="async" style="width: 100%; height: 250px; object-fit: cover;" itemprop="image">`
             : '';
             
           articleCard.innerHTML = `
