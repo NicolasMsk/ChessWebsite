@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Flux produits Google Merchant Center (fiches gratuites Shopping).
+     Prix et descriptions alignés sur livres.html, cahiers-exercices-echecs.html et edition-raffinee/.
+     Livraison : France métropolitaine, point relais Mondial Relay, envoi compris. -->
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>Livres et cahiers d’échecs de Nicolas Musicki</title>
+    <link>https://www.cours-echecs-paris.fr/livres.html</link>
+    <description>Livre et cahiers d’échecs cousus à la main, envoi compris en France métropolitaine.</description>
+
+    <item>
+      <g:id>LIVRE-RELIE</g:id>
+      <g:title>Apprendre les Échecs – livre relié à la main, 200 pages, couverture imitation daim</g:title>
+      <g:description>Une méthode complète pour apprendre les échecs, des règles aux finales, en 200 pages. Chaque exemplaire est relié et cousu à la main par l’auteur, Nicolas Musicki, professeur d’échecs à Paris et Versailles. Couverture en imitation daim, douce au toucher, au choix : bordeaux, vert olive ou marron. Un cadeau d’échecs fait main, livré en point relais Mondial Relay en France métropolitaine, envoi compris.</g:description>
+      <g:link>https://www.cours-echecs-paris.fr/edition-raffinee/</g:link>
+      <g:image_link>https://www.cours-echecs-paris.fr/images/reliure/pack-2026-echiquier.webp</g:image_link>
+      <g:additional_image_link>https://www.cours-echecs-paris.fr/images/reliure/pack-2026-dessus.webp</g:additional_image_link>
+      <g:additional_image_link>https://www.cours-echecs-paris.fr/images/reliure/pack-2026-main.webp</g:additional_image_link>
+      <g:additional_image_link>https://www.cours-echecs-paris.fr/images/reliure/pack-tranche.webp</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>40.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Nicolas Musicki</g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:google_product_category>784</g:google_product_category>
+      <g:product_type>Livres &gt; Échecs &gt; Livre relié</g:product_type>
+      <g:shipping><g:country>FR</g:country><g:price>0.00 EUR</g:price></g:shipping>
+    </item>
+
+    <item>
+      <g:id>CAHIER-MATS</g:id>
+      <g:title>Cahier d’exercices d’échecs « Mes premiers mats en un coup » – 50 exercices, format poche, cousu main</g:title>
+      <g:description>50 exercices de mat en un coup, au format de poche A6, avec les solutions expliquées en fin de cahier. Pour les enfants et les adultes débutants qui connaissent déjà le déplacement des pièces. Cahier cousu à la main, couverture en imitation daim au choix : bordeaux, vert olive ou marron. Livré en point relais Mondial Relay en France métropolitaine, envoi compris.</g:description>
+      <g:link>https://www.cours-echecs-paris.fr/cahiers-exercices-echecs.html</g:link>
+      <g:image_link>https://www.cours-echecs-paris.fr/images/cahiers/cahier-mats-maquette.png</g:image_link>
+      <g:additional_image_link>https://www.cours-echecs-paris.fr/images/cahiers/cahier-mats-pages.png</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>15.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Nicolas Musicki</g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:google_product_category>784</g:google_product_category>
+      <g:product_type>Livres &gt; Échecs &gt; Cahier d’exercices</g:product_type>
+      <g:shipping><g:country>FR</g:country><g:price>0.00 EUR</g:price></g:shipping>
+    </item>
+
+    <item>
+      <g:id>CAHIER-TACTIQUES</g:id>
+      <g:title>Cahier d’exercices d’échecs « Mes premières tactiques » – 50 exercices, format poche, cousu main</g:title>
+      <g:description>50 exercices pour découvrir les tactiques et gagner du matériel, au format de poche A6, avec les solutions expliquées en fin de cahier. Pour les enfants et les adultes débutants qui connaissent déjà le déplacement des pièces. Cahier cousu à la main, couverture en imitation daim au choix : bordeaux, vert olive ou marron. Livré en point relais Mondial Relay en France métropolitaine, envoi compris.</g:description>
+      <g:link>https://www.cours-echecs-paris.fr/cahiers-exercices-echecs.html</g:link>
+      <g:image_link>https://www.cours-echecs-paris.fr/images/cahiers/cahier-tactiques-photo.webp</g:image_link>
+      <g:additional_image_link>https://www.cours-echecs-paris.fr/images/cahiers/cahier-tactiques-maquette.png</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>15.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Nicolas Musicki</g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:google_product_category>784</g:google_product_category>
+      <g:product_type>Livres &gt; Échecs &gt; Cahier d’exercices</g:product_type>
+      <g:shipping><g:country>FR</g:country><g:price>0.00 EUR</g:price></g:shipping>
+    </item>
+
+    <item>
+      <g:id>DUO-CAHIERS</g:id>
+      <g:title>Les deux cahiers d’exercices d’échecs – mats en un coup et premières tactiques, 100 exercices</g:title>
+      <g:description>Les deux cahiers de poche « Mes premiers mats en un coup » et « Mes premières tactiques » : 100 exercices au total, avec les solutions expliquées. Pour les débutants qui connaissent déjà le déplacement des pièces. Cahiers cousus à la main, couverture en imitation daim, couleur de chaque cahier au choix : bordeaux, vert olive ou marron. Livrés en point relais Mondial Relay en France métropolitaine, envoi compris.</g:description>
+      <g:link>https://www.cours-echecs-paris.fr/cahiers-exercices-echecs.html</g:link>
+      <g:image_link>https://www.cours-echecs-paris.fr/images/cahiers/cahiers-duo-photo.webp</g:image_link>
+      <g:additional_image_link>https://www.cours-echecs-paris.fr/images/cahiers/cahiers-duo-detail.webp</g:additional_image_link>
+      <g:additional_image_link>https://www.cours-echecs-paris.fr/images/cahiers/cahiers-atelier.webp</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>25.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Nicolas Musicki</g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:is_bundle>yes</g:is_bundle>
+      <g:google_product_category>784</g:google_product_category>
+      <g:product_type>Livres &gt; Échecs &gt; Lot de cahiers</g:product_type>
+      <g:shipping><g:country>FR</g:country><g:price>0.00 EUR</g:price></g:shipping>
+    </item>
+
+    <item>
+      <g:id>TRIO-LIVRE-CAHIERS</g:id>
+      <g:title>Coffret cadeau échecs – livre relié « Apprendre les Échecs » et deux cahiers d’exercices</g:title>
+      <g:description>Le livre relié « Apprendre les Échecs » (200 pages, des règles aux finales) et les deux cahiers de poche « Mes premiers mats en un coup » et « Mes premières tactiques » : la méthode pour comprendre, les exercices pour pratiquer. Ouvrages cousus à la main, couverture en imitation daim, couleur de chaque ouvrage au choix : bordeaux, vert olive ou marron. Livré en point relais Mondial Relay en France métropolitaine, envoi compris.</g:description>
+      <g:link>https://www.cours-echecs-paris.fr/livres.html</g:link>
+      <g:image_link>https://www.cours-echecs-paris.fr/images/reliure/pack-2026-echiquier.webp</g:image_link>
+      <g:additional_image_link>https://www.cours-echecs-paris.fr/images/cahiers/cahiers-duo-photo.webp</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>60.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Nicolas Musicki</g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:is_bundle>yes</g:is_bundle>
+      <g:google_product_category>784</g:google_product_category>
+      <g:product_type>Livres &gt; Échecs &gt; Coffret</g:product_type>
+      <g:shipping><g:country>FR</g:country><g:price>0.00 EUR</g:price></g:shipping>
+    </item>
+  </channel>
+</rss>
