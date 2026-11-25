@@ -25,7 +25,7 @@ try{
   if(items.data.length!==1||items.data[0].quantity!==1||items.data[0].price.unit_amount!==p.amount||items.data[0].price.currency!=='eur')throw Error('Le prix du lien ne correspond pas au catalogue.');
   if(p.book&&(link.custom_fields||[]).some(f=>f.key!=='couleur_livre'))throw Error('Le lien contient déjà des champs personnalisés à préserver : examen nécessaire.');
   const amount=new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR'}).format(p.amount/100);
-  const message=amount+' TTC, livraison comprise en France métropolitaine sous 7 jours maximum après validation du paiement. '+(p.book?'Livre relié cousu main, couleur au choix.':'Cahiers A6 cousus main, solutions regroupées à la fin.')+' CGV : https://www.cours-echecs-paris.fr/cgv.html';
+  const message=amount+' TTC, livraison en point relais Mondial Relay comprise en France métropolitaine, sous 7 jours maximum après validation du paiement. '+(p.book?'Livre relié cousu main, couleur au choix.':'Cahiers A6 cousus main, solutions regroupées à la fin.')+' CGV : https://www.cours-echecs-paris.fr/cgv.html';
   const values={'phone_number_collection[enabled]':'true','custom_text[submit][message]':message};
   if(p.book)addFields(values,colorFields());
   plan.push({link,values,product:link.metadata.product,message,fields:p.book?colorFields():link.custom_fields||[]});

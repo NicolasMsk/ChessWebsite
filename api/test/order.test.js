@@ -315,3 +315,13 @@ test('couleur absente ou invalide reste vide',()=>{
  const order=buildOrderRecord({...sessionModerne,...source},'2026-11-22T12:00:00Z');assert.equal(order.book_color,'');assert.doesNotMatch(orderConfirmationHtml(order),/Couleur du livre/);
  }
 });
+
+test('chaque produit annonce une livraison en point relais Mondial Relay (client et admin)', () => {
+  for (const product of ['pack_livres_relies', 'cahier_mats', 'cahier_tactiques', 'cahiers_pack', 'trio_livre_cahiers']) {
+    const order = buildOrderRecord({ ...sessionModerne, metadata: { product } }, '2026-11-25T12:00:00Z');
+    for (const body of [orderConfirmationHtml(order), orderConfirmationText(order), orderAdminHtml(order)]) {
+      assert.match(body, /Mondial Relay/, product);
+      assert.doesNotMatch(body, /Colissimo/, product);
+    }
+  }
+});

@@ -41,7 +41,7 @@
       </div>
       <ul class="order-promises">
         <li><i class="fa-solid fa-box" aria-hidden="true"></i>Ouvrages en stock</li>
-        <li><i class="fa-solid fa-truck" aria-hidden="true"></i>Livraison sous 7 jours maximum après validation du paiement</li>
+        <li><i class="fa-solid fa-truck" aria-hidden="true"></i>Livraison en point relais Mondial Relay sous 7 jours maximum après validation du paiement</li>
         <li><i class="fa-solid fa-rotate-left" aria-hidden="true"></i>Rétractation : 14 jours après réception</li>
       </ul>
       <div class="seller">
@@ -57,19 +57,19 @@
         <li>Livraison et règlement</li>
       </ol>
       <h2 id="checkout-title">Préparer votre envoi</h2>
-      <p class="panel-intro">Envoi suivi · Prix TTC, livraison comprise</p>
+      <p class="panel-intro">Point relais Mondial Relay · Prix TTC, livraison comprise</p>
       <p id="checkout-loading" role="status">Chargement du paiement sécurisé…</p>
       <div id="checkout-error" class="checkout-error" role="alert" hidden></div>
       <form id="details-form" hidden>
         <div id="color-choices"><p class="field-help">Chaque ouvrage est cousu à la main, sous une couverture en imitation daim, douce au toucher : choisissez la couleur de chacun.</p></div>
         <label for="customer-email">Adresse email</label><input id="customer-email" name="email" type="email" autocomplete="email" maxlength="254" required>
         <label for="customer-phone">Téléphone <span>(obligatoire)</span></label><input id="customer-phone" name="phone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78" maxlength="26" required>
-        <p class="field-help">Pour vous joindre au sujet de votre commande ou de la livraison.</p>
+        <p class="field-help">Mondial Relay vous envoie un SMS dès que votre colis arrive au point relais.</p>
         <button class="checkout-button" id="continue-button" type="submit">Continuer vers l’adresse et le paiement</button>
       </form>
       <form id="payment-form" hidden>
         <p id="contact-recap"></p><p class="field-help"><a href="paiement.html" id="change-order">Modifier mes informations</a></p>
-        <h3>Adresse de livraison</h3><p class="field-help">Livraison en France métropolitaine uniquement.</p><div id="shipping-address-element"></div>
+        <h3>Votre adresse</h3><p class="field-help">Livraison en point relais Mondial Relay, en France métropolitaine uniquement. J’envoie votre colis au point relais le plus proche de cette adresse, et Mondial Relay vous prévient par SMS et par email dès qu’il est disponible.</p><div id="shipping-address-element"></div>
         <h3>Règlement</h3><div id="payment-element"></div>
         <p class="field-help"><i class="fa-solid fa-lock" aria-hidden="true"></i> Le règlement est traité par Stripe. Vos coordonnées bancaires sont saisies dans ses champs sécurisés et ne transitent jamais par ce site.</p>
         <label class="terms-label"><input id="accept-terms" type="checkbox" required><span>J’accepte les <a href="cgv.html" target="_blank" rel="noopener">conditions générales de vente</a>.</span></label>

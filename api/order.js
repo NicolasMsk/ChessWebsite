@@ -56,36 +56,36 @@ export const PRODUITS = {
     nom: PACK_NAME,
     entete: 'Édition reliée à la main',
     sousTitre: 'Apprendre les Échecs — Volumes I & II',
-    fabrication: "Votre exemplaire est en stock : je prépare votre colis, puis je l'expédie en Colissimo suivi.",
-    consigne: 'Numéroter, signer, emballer en kraft (sans prix visible), expédier en Colissimo suivi.',
+    fabrication: "Votre exemplaire est en stock : je prépare votre colis, puis je l'expédie en point relais Mondial Relay, le plus proche de votre adresse. Mondial Relay vous prévient par SMS et par email dès qu'il est disponible.",
+    consigne: 'Numéroter, signer, emballer en kraft (sans prix visible), expédier en Mondial Relay, au point relais le plus proche de l’adresse ci-dessous.',
   },
   cahier_mats: {
     nom: 'Mes premiers mats en un coup — cahier d’exercices A6 cousu main',
     entete: 'Le cahier nomade N° 1',
     sousTitre: 'Mes premiers mats en un coup',
-    fabrication: "Votre cahier cousu main est en stock : je prépare votre colis, puis je l'expédie en envoi suivi.",
-    consigne: 'Prélever le cahier cousu main en stock, emballer (sans prix visible), expédier en envoi suivi.',
+    fabrication: "Votre cahier cousu main est en stock : je prépare votre colis, puis je l'expédie en point relais Mondial Relay, le plus proche de votre adresse. Mondial Relay vous prévient par SMS et par email dès qu'il est disponible.",
+    consigne: 'Prélever le cahier cousu main en stock, emballer (sans prix visible), expédier en Mondial Relay, au point relais le plus proche de l’adresse ci-dessous.',
   },
   cahier_tactiques: {
     nom: 'Mes premières tactiques — cahier d’exercices A6 cousu main',
     entete: 'Le cahier nomade N° 2',
     sousTitre: 'Mes premières tactiques',
-    fabrication: "Votre cahier cousu main est en stock : je prépare votre colis, puis je l'expédie en envoi suivi.",
-    consigne: 'Prélever le cahier cousu main en stock, emballer (sans prix visible), expédier en envoi suivi.',
+    fabrication: "Votre cahier cousu main est en stock : je prépare votre colis, puis je l'expédie en point relais Mondial Relay, le plus proche de votre adresse. Mondial Relay vous prévient par SMS et par email dès qu'il est disponible.",
+    consigne: 'Prélever le cahier cousu main en stock, emballer (sans prix visible), expédier en Mondial Relay, au point relais le plus proche de l’adresse ci-dessous.',
   },
   cahiers_pack: {
     nom: 'Les deux cahiers nomades — mats + tactiques (A6, cousus main)',
     entete: 'Les cahiers nomades',
     sousTitre: 'Mes premiers mats + Mes premières tactiques',
-    fabrication: "Vos deux cahiers cousus main sont en stock : je prépare votre colis, puis je l'expédie en envoi suivi.",
-    consigne: 'Prélever les DEUX cahiers cousus main en stock, emballer (sans prix visible), expédier en envoi suivi.',
+    fabrication: "Vos deux cahiers cousus main sont en stock : je prépare votre colis, puis je l'expédie en point relais Mondial Relay, le plus proche de votre adresse. Mondial Relay vous prévient par SMS et par email dès qu'il est disponible.",
+    consigne: 'Prélever les DEUX cahiers cousus main en stock, emballer (sans prix visible), expédier en Mondial Relay, au point relais le plus proche de l’adresse ci-dessous.',
   },
   trio_livre_cahiers: {
     nom: 'Le trio complet — livre relié « Apprendre les Échecs » + les deux cahiers nomades',
     entete: 'Le trio complet',
     sousTitre: 'Apprendre les Échecs + les deux cahiers nomades',
-    fabrication: "Votre livre relié et vos deux cahiers cousus main sont en stock : je prépare le tout pour un envoi en Colissimo suivi.",
-    consigne: 'TRIO : livre (numéroter, signer) + les DEUX cahiers cousus main en stock. Emballer ensemble (sans prix visible), expédier en Colissimo suivi.',
+    fabrication: "Votre livre relié et vos deux cahiers cousus main sont en stock : je prépare le tout pour un envoi en point relais Mondial Relay, le plus proche de votre adresse. Mondial Relay vous prévient par SMS et par email dès qu'il est disponible.",
+    consigne: 'TRIO : livre (numéroter, signer) + les DEUX cahiers cousus main en stock. Emballer ensemble (sans prix visible), expédier en Mondial Relay, au point relais le plus proche de l’adresse ci-dessous.',
   },
 };
 
@@ -230,7 +230,7 @@ export function orderConfirmationHtml(order) {
             <p style="margin:0 0 12px; font-weight:700; color:#3E2C1C; font-size:15px;">R&eacute;capitulatif</p>
             <p style="margin:0 0 6px; font-size:14.5px;">${escapeHtml(p.nom)}</p>
             <p style="margin:0 0 14px; font-size:14.5px;"><strong>${formatAmount(order.amount_total)}</strong> &mdash; livraison comprise</p>
-            <p style="margin:0 0 6px; font-weight:700; color:#3E2C1C; font-size:14.5px;">Adresse de livraison</p>
+            <p style="margin:0 0 6px; font-weight:700; color:#3E2C1C; font-size:14.5px;">Votre adresse (pour choisir le point relais le plus proche)</p>
             <p style="margin:0; font-size:14.5px; line-height:1.55;">${lignes}</p>
           </div>
 
@@ -287,7 +287,7 @@ RECAPITULATIF
 ${p.nom}
 ${formatAmount(order.amount_total)} - livraison comprise
 
-ADRESSE DE LIVRAISON
+VOTRE ADRESSE (POUR CHOISIR LE POINT RELAIS LE PLUS PROCHE)
 ${lignes}
 
 ${colorLines(order).length ? 'COULEURS CHOISIES\n' + colorLines(order).join('\n') + '\n\n' : ''}${p.fabrication}
@@ -324,7 +324,7 @@ export function orderAdminHtml(order) {
     <h2 style="margin:0 0 16px; color:#3E2C1C;">Nouvelle commande &mdash; ${formatAmount(order.amount_total)}</h2>
 
     <div style="margin:0 0 18px; padding:16px 18px; background:#faf6ef; border-left:4px solid #8B5A2B; border-radius:6px;">
-      <div style="font-size:12px; text-transform:uppercase; letter-spacing:1.5px; color:#8B5A2B; margin-bottom:8px;">Etiquette d'expedition</div>
+      <div style="font-size:12px; text-transform:uppercase; letter-spacing:1.5px; color:#8B5A2B; margin-bottom:8px;">Adresse du client (choisir le point relais Mondial Relay le plus proche)</div>
       <div style="font-family:monospace; font-size:14px; line-height:1.7; color:#111;">${etiquette}</div>
     </div>
 
