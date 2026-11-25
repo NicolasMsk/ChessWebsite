@@ -7,8 +7,9 @@
       "date": "2026-11-24",
       "readTime": "16 min",
       "author": "Nicolas Musicki",
-      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
-      "imageAlt": "Défense slave : les premiers coups expliqués aux débutants."
+      "image": "images/ouvertures/slave.webp",
+      "imageAlt": "Illustration de la défense slave : fou en bois et deux pions clairs, décor vert et rubans colorés.",
+      "imageSrcSet": "images/ouvertures/slave-640.webp 640w, images/ouvertures/slave-960.webp 960w, images/ouvertures/slave.webp 1536w"
     },
     {
       "id": "ouverture-sicilienne",
@@ -17,8 +18,9 @@
       "date": "2026-11-24",
       "readTime": "16 min",
       "author": "Nicolas Musicki",
-      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
-      "imageAlt": "Défense sicilienne : les premiers coups expliqués aux débutants."
+      "image": "images/ouvertures/sicilienne.webp",
+      "imageAlt": "Illustration de la défense sicilienne : cavalier et pion en bois, citrons et paysage méditerranéen.",
+      "imageSrcSet": "images/ouvertures/sicilienne-640.webp 640w, images/ouvertures/sicilienne-960.webp 960w, images/ouvertures/sicilienne.webp 1536w"
     },
     {
       "id": "ouverture-scandinave",
@@ -27,8 +29,9 @@
       "date": "2026-11-24",
       "readTime": "15 min",
       "author": "Nicolas Musicki",
-      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
-      "imageAlt": "Défense scandinave : les premiers coups expliqués aux débutants."
+      "image": "images/ouvertures/scandinave.webp",
+      "imageAlt": "Illustration de la défense scandinave : dame claire et cavalier en bois devant un paysage de fjord.",
+      "imageSrcSet": "images/ouvertures/scandinave-640.webp 640w, images/ouvertures/scandinave-960.webp 960w, images/ouvertures/scandinave.webp 1536w"
     },
     {
       "id": "ouverture-londres",
@@ -37,8 +40,9 @@
       "date": "2026-11-24",
       "readTime": "16 min",
       "author": "Nicolas Musicki",
-      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
-      "imageAlt": "Système de Londres : les premiers coups expliqués aux débutants."
+      "image": "images/ouvertures/londres.webp",
+      "imageAlt": "Illustration du système de Londres : tour et fou en bois, Union Jack et silhouette londonienne.",
+      "imageSrcSet": "images/ouvertures/londres-640.webp 640w, images/ouvertures/londres-960.webp 960w, images/ouvertures/londres.webp 1536w"
     },
     {
       "id": "ouverture-gambit-dame",
@@ -47,8 +51,9 @@
       "date": "2026-11-24",
       "readTime": "16 min",
       "author": "Nicolas Musicki",
-      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
-      "imageAlt": "Gambit dame : les premiers coups expliqués aux débutants."
+      "image": "images/ouvertures/gambit-dame.webp",
+      "imageAlt": "Illustration du gambit dame : une dame claire et un pion en bois, sur fond vert et bordeaux.",
+      "imageSrcSet": "images/ouvertures/gambit-dame-640.webp 640w, images/ouvertures/gambit-dame-960.webp 960w, images/ouvertures/gambit-dame.webp 1536w"
     },
     {
       "id": "ouverture-francaise",
@@ -57,8 +62,9 @@
       "date": "2026-11-24",
       "readTime": "15 min",
       "author": "Nicolas Musicki",
-      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
-      "imageAlt": "Défense française : les premiers coups expliqués aux débutants."
+      "image": "images/ouvertures/francaise.webp",
+      "imageAlt": "Illustration de la défense française : fou en bois et pion clair, ruban bleu, blanc et rouge.",
+      "imageSrcSet": "images/ouvertures/francaise-640.webp 640w, images/ouvertures/francaise-960.webp 960w, images/ouvertures/francaise.webp 1536w"
     },
     {
       "id": "ouverture-espagnole",
@@ -67,8 +73,9 @@
       "date": "2026-11-24",
       "readTime": "16 min",
       "author": "Nicolas Musicki",
-      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
-      "imageAlt": "Ouverture espagnole : les premiers coups expliqués aux débutants."
+      "image": "images/ouvertures/espagnole.webp",
+      "imageAlt": "Illustration de l’ouverture espagnole : fou clair et tour en bois devant un ruban rouge et jaune.",
+      "imageSrcSet": "images/ouvertures/espagnole-640.webp 640w, images/ouvertures/espagnole-960.webp 960w, images/ouvertures/espagnole.webp 1536w"
     },
     {
       "id": "ouverture-ecossaise",
@@ -77,8 +84,9 @@
       "date": "2026-11-24",
       "readTime": "16 min",
       "author": "Nicolas Musicki",
-      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
-      "imageAlt": "Ouverture écossaise : les premiers coups expliqués aux débutants."
+      "image": "images/ouvertures/ecossaise.webp",
+      "imageAlt": "Illustration de l’ouverture écossaise : cavalier et pion en bois devant le drapeau écossais.",
+      "imageSrcSet": "images/ouvertures/ecossaise-640.webp 640w, images/ouvertures/ecossaise-960.webp 960w, images/ouvertures/ecossaise.webp 1536w"
     },
     {
       "id": "ouverture-caro-kann",
@@ -87,8 +95,9 @@
       "date": "2026-11-24",
       "readTime": "16 min",
       "author": "Nicolas Musicki",
-      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
-      "imageAlt": "Défense Caro-Kann : les premiers coups expliqués aux débutants."
+      "image": "images/ouvertures/caro-kann.webp",
+      "imageAlt": "Illustration de la défense Caro-Kann : un fou en bois et deux pions clairs sur fond vert.",
+      "imageSrcSet": "images/ouvertures/caro-kann-640.webp 640w, images/ouvertures/caro-kann-960.webp 960w, images/ouvertures/caro-kann.webp 1536w"
     },
     {
       "id": "ouverture-anglaise",
@@ -97,8 +106,9 @@
       "date": "2026-11-24",
       "readTime": "15 min",
       "author": "Nicolas Musicki",
-      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
-      "imageAlt": "Ouverture anglaise : les premiers coups expliqués aux débutants."
+      "image": "images/ouvertures/anglaise.webp",
+      "imageAlt": "Illustration de l’ouverture anglaise : cavalier clair et pion en bois devant la croix de saint Georges.",
+      "imageSrcSet": "images/ouvertures/anglaise-640.webp 640w, images/ouvertures/anglaise-960.webp 960w, images/ouvertures/anglaise.webp 1536w"
     },
     {
       "id": "ouverture-italienne",
@@ -107,8 +117,9 @@
       "date": "2026-11-24",
       "readTime": "17 min",
       "author": "Nicolas Musicki",
-      "image": "images/meilleures-ouvertures-echecs-debutants.webp",
-      "imageAlt": "Échiquier illustrant les premiers coups d’une partie d’échecs"
+      "image": "images/ouvertures/italienne.webp",
+      "imageAlt": "Illustration de l’ouverture italienne : fou clair, cavalier en bois et ruban aux couleurs de l’Italie.",
+      "imageSrcSet": "images/ouvertures/italienne-640.webp 640w, images/ouvertures/italienne-960.webp 960w, images/ouvertures/italienne.webp 1536w"
     },
     {
       "id": "cadeau-echecs-enfant-debutant",

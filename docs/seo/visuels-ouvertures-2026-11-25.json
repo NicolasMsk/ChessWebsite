@@ -1,0 +1,96 @@
+{
+  "generatedOn": "2026-11-25",
+  "tool": "Built-in ImageGen",
+  "purpose": "Illustrations éditoriales décoratives, distinctes des diagrammes pédagogiques.",
+  "images": [
+    {
+      "id": "italienne",
+      "alt": "Illustration de l’ouverture italienne : fou clair, cavalier en bois et ruban aux couleurs de l’Italie.",
+      "prompt": "Use case: stylized-concept. Create ONE polished editorial cover image for a French beginner chess website article about the Italian Opening. Wide landscape 3:2 composition, no text. A beautifully crafted ivory wooden bishop and a walnut knight, confident sculptural silhouettes, on a small partial checkerboard plinth, not a diagram or a full chess position. Behind them a graceful folded Italian tricolor ribbon, correct vertical green white red order, and a very subtle warm terracotta arch silhouette. Cohesive premium handmade editorial still life, tactile matte wood and paper, cream background, forest green shadows, restrained warm brass accents, soft directional studio light. Objects centered in the middle 70% of image, generous breathing room; readable when cropped to 16:9 in a blog card. Refined and welcoming, lively color accents, not dark or cluttered. No lettering, no logo, no watermark, no people.",
+      "original": "C:\\Users\\nmusicki\\.codex\\generated_images\\01a1f9e4-4919-7742-80ad-202011be9181\\exec-7c1ab6b1-b098-4031-95c8-bc89c7c2c91d.png",
+      "asset": "blog/images/ouvertures/italienne.webp"
+    },
+    {
+      "id": "espagnole",
+      "alt": "Illustration de l’ouverture espagnole : fou clair et tour en bois devant un ruban rouge et jaune.",
+      "prompt": "Use case: stylized-concept. Create ONE premium editorial cover illustration for a French beginner chess article. Wide landscape 3:2 composition. Tactile matte wood, layered paper, beautifully crafted Staunton chess pieces, cream background, forest-green shadows, restrained brass details, soft studio lighting. Sculptural still life on a small partial checkerboard plinth, NOT a diagram or a playable full board. Main objects centrally grouped within the middle 70%, generous breathing room, suitable for 16:9 blog crops. Elegant, warm, welcoming, vivid accent colors. No lettering, no numbers, no logos, no watermark, no people. Topic: Spanish Opening. An ivory bishop and dark walnut rook, a gently folded Spanish flag ribbon with clear horizontal red-yellow-red bands (yellow twice as wide, no coat of arms), one subtle ochre Moorish arch silhouette in the background. Rich ruby and golden yellow accents. Distinct arrangement: tall bishop right, shorter rook left.",
+      "original": "C:\\Users\\nmusicki\\.codex\\generated_images\\01a1f9e4-4919-7742-80ad-202011be9181\\exec-1807f5d3-57b9-4fc0-934a-ebdf09ab6c9d.png",
+      "asset": "blog/images/ouvertures/espagnole.webp"
+    },
+    {
+      "id": "ecossaise",
+      "alt": "Illustration de l’ouverture écossaise : cavalier et pion en bois devant le drapeau écossais.",
+      "prompt": "Use case: stylized-concept. Create ONE premium editorial cover illustration for a French beginner chess article. Wide landscape 3:2 composition. Tactile matte wood, layered paper, beautifully crafted Staunton chess pieces, cream background, forest-green shadows, restrained brass details, soft studio lighting. Sculptural still life on a small partial checkerboard plinth, NOT a diagram or a playable full board. Main objects centrally grouped within the middle 70%, generous breathing room, suitable for 16:9 blog crops. Elegant, warm, welcoming, vivid accent colors. No lettering, no numbers, no logos, no watermark, no people. Topic: Scotch Opening. A handsome walnut knight and ivory pawn on a cream-and-walnut checkerboard plinth. Behind them a rich blue Scottish saltire flag draped naturally, unmistakable white diagonal X on blue, and a faint muted hill silhouette. Blue, cream, moss green accent palette. Strong knight silhouette at center-left.",
+      "original": "C:\\Users\\nmusicki\\.codex\\generated_images\\01a1f9e4-4919-7742-80ad-202011be9181\\exec-3bb887da-4162-42fd-ba39-406e2964137b.png",
+      "asset": "blog/images/ouvertures/ecossaise.webp"
+    },
+    {
+      "id": "londres",
+      "alt": "Illustration du système de Londres : tour et fou en bois, Union Jack et silhouette londonienne.",
+      "prompt": "Use case: stylized-concept. Create ONE premium editorial cover illustration for a French beginner chess article. Wide landscape 3:2 composition. Tactile matte wood, layered paper, beautifully crafted Staunton chess pieces, cream background, forest-green shadows, restrained brass details, soft studio lighting. Sculptural still life on a small partial checkerboard plinth, NOT a diagram or a playable full board. Main objects centrally grouped within the middle 70%, generous breathing room, suitable for 16:9 blog crops. Elegant, warm, welcoming, vivid accent colors. No lettering, no numbers, no logos, no watermark, no people. Topic: London System. A tall polished walnut rook and a smaller ivory bishop, a properly rendered folded Union Jack ribbon behind the chess pieces, and a subtle minimal silhouette of the London Elizabeth Tower, without clock numerals or lettering. Navy and restrained brick red accents on the cream background. Rook central, bishop slightly right.",
+      "original": "C:\\Users\\nmusicki\\.codex\\generated_images\\01a1f9e4-4919-7742-80ad-202011be9181\\exec-33db59e9-8c6d-4ab0-a7a7-3f310f7dbb2f.png",
+      "asset": "blog/images/ouvertures/londres.webp"
+    },
+    {
+      "id": "gambit-dame",
+      "alt": "Illustration du gambit dame : une dame claire et un pion en bois, sur fond vert et bordeaux.",
+      "prompt": "Use case: stylized-concept. Create ONE premium editorial cover illustration for a French beginner chess article. Wide landscape 3:2 composition. Tactile matte wood, layered paper, beautifully crafted Staunton chess pieces, cream background, forest-green shadows, restrained brass details, soft studio lighting. Sculptural still life on a small partial checkerboard plinth, NOT a diagram or a playable full board. Main objects centrally grouped within the middle 70%, generous breathing room, suitable for 16:9 blog crops. Elegant, warm, welcoming, vivid accent colors. No lettering, no numbers, no logos, no watermark, no people. Topic: Queen's Gambit. A majestic ivory wooden queen with a recognizable crown of rounded points, accompanied by one small walnut pawn a little ahead of her. A flowing deep burgundy and muted brass ribbon forms a restrained arc behind them, evoking a calculated offering. No national flag, no buildings. Dark forest green semicircular backdrop, elegant queen dominant at center-left, small pawn lower right.",
+      "original": "C:\\Users\\nmusicki\\.codex\\generated_images\\01a1f9e4-4919-7742-80ad-202011be9181\\exec-2f83bbb2-65e8-4c52-9f1b-011e40856d4e.png",
+      "asset": "blog/images/ouvertures/gambit-dame.webp"
+    },
+    {
+      "id": "anglaise",
+      "alt": "Illustration de l’ouverture anglaise : cavalier clair et pion en bois devant la croix de saint Georges.",
+      "prompt": "Use case: stylized-concept. Create ONE premium editorial cover illustration for a French beginner chess article. Wide landscape 3:2 composition. Tactile matte wood, layered paper, beautifully crafted Staunton chess pieces, cream background, forest-green shadows, restrained brass details, soft studio lighting. Sculptural still life on a small partial checkerboard plinth, NOT a diagram or a playable full board. Main objects centrally grouped within the middle 70%, generous breathing room, suitable for 16:9 blog crops. Elegant, warm, welcoming, vivid accent colors. No lettering, no numbers, no logos, no watermark, no people. Topic: English Opening. A graceful ivory knight and smaller walnut pawn, behind them a lightly draped English St George flag, correct simple red upright cross on white (NOT a Union Jack). A minimal dark-green garden arch silhouette in the background. Light airy cream, sage green and red accents. Knight at center-right, pawn left.",
+      "original": "C:\\Users\\nmusicki\\.codex\\generated_images\\01a1f9e4-4919-7742-80ad-202011be9181\\exec-44e693ad-9f57-4b19-bdff-49ebb7993231.png",
+      "asset": "blog/images/ouvertures/anglaise.webp"
+    },
+    {
+      "id": "caro-kann",
+      "alt": "Illustration de la défense Caro-Kann : un fou en bois et deux pions clairs sur fond vert.",
+      "prompt": "Use case: stylized-concept. Create ONE premium editorial cover illustration for a French beginner chess article. Wide landscape 3:2 composition. Tactile matte wood, layered paper, beautifully crafted Staunton chess pieces, cream background, forest-green shadows, restrained brass details, soft studio lighting. Sculptural still life on a small partial checkerboard plinth, NOT a diagram or a playable full board. Main objects centrally grouped within the middle 70%, generous breathing room, suitable for 16:9 blog crops. Elegant, warm, welcoming, vivid accent colors. No lettering, no numbers, no logos, no watermark, no people. Topic: Caro-Kann Defense. A tall dark walnut bishop with clear diagonal mitre slit, protected visually by two smaller ivory pawns forming a balanced triangle. A layered geometric paper arch like a protective wall in muted forest green and teal, with a slender brass ribbon. NO national flag, no heraldry, no portrait. Emphasize solidity and calm development, bishop centered behind pawns, teal-green accents.",
+      "original": "C:\\Users\\nmusicki\\.codex\\generated_images\\01a1f9e4-4919-7742-80ad-202011be9181\\exec-c234b3c1-f878-4c22-acfd-247adc3196dd.png",
+      "asset": "blog/images/ouvertures/caro-kann.webp"
+    },
+    {
+      "id": "sicilienne",
+      "alt": "Illustration de la défense sicilienne : cavalier et pion en bois, citrons et paysage méditerranéen.",
+      "prompt": "Use case: stylized-concept. Create ONE premium editorial cover illustration for a French beginner chess article. Wide landscape 3:2 composition. Tactile matte wood, layered paper, beautifully crafted Staunton chess pieces, cream background, forest-green shadows, restrained brass details, soft studio lighting. Sculptural still life on a small partial checkerboard plinth, NOT a diagram or a playable full board. Main objects centrally grouped within the middle 70%, generous breathing room, suitable for 16:9 blog crops. Elegant, warm, welcoming, vivid accent colors. No lettering, no numbers, no logos, no watermark, no people. Topic: Sicilian Defense. A bold walnut knight and an ivory pawn on a small checkerboard plinth. Warm terracotta paper arches suggesting Mediterranean Sicily, a flowing diagonal red and golden yellow ribbon, two small sculptural lemons and a muted olive leaf accent. No coat of arms, no lettering, no national emblem. Knight center-right, dynamic but uncluttered, warm sunlight.",
+      "original": "C:\\Users\\nmusicki\\.codex\\generated_images\\01a1f9e4-4919-7742-80ad-202011be9181\\exec-0344f561-95b8-4d41-b467-f3d04171b44e.png",
+      "asset": "blog/images/ouvertures/sicilienne.webp"
+    },
+    {
+      "id": "francaise",
+      "alt": "Illustration de la défense française : fou en bois et pion clair, ruban bleu, blanc et rouge.",
+      "prompt": "Use case: stylized-concept. Create ONE premium editorial cover illustration for a French beginner chess article. Wide landscape 3:2 composition. Tactile matte wood, layered paper, beautifully crafted Staunton chess pieces, cream background, forest-green shadows, restrained brass details, soft studio lighting. Sculptural still life on a small partial checkerboard plinth, NOT a diagram or a playable full board. Main objects centrally grouped within the middle 70%, generous breathing room, suitable for 16:9 blog crops. Elegant, warm, welcoming, vivid accent colors. No lettering, no numbers, no logos, no watermark, no people. Topic: French Defense. A dark walnut bishop and an ivory pawn, framed by a softly folded French tricolor ribbon with correct vertical blue-white-red bands. A delicate cream stone arch silhouette behind, restrained cobalt blue and red accents. Bishop center-left, pawn to the right, quiet elegance.",
+      "original": "C:\\Users\\nmusicki\\.codex\\generated_images\\01a1f9e4-4919-7742-80ad-202011be9181\\exec-e5813185-9269-4c32-a955-836ac2733882.png",
+      "asset": "blog/images/ouvertures/francaise.webp"
+    },
+    {
+      "id": "scandinave",
+      "alt": "Illustration de la défense scandinave : dame claire et cavalier en bois devant un paysage de fjord.",
+      "prompt": "Use case: stylized-concept. Create ONE premium editorial cover illustration for a French beginner chess article. Wide landscape 3:2 composition. Tactile matte wood, layered paper, beautifully crafted Staunton chess pieces, cream background, forest-green shadows, restrained brass details, soft studio lighting. Sculptural still life on a small partial checkerboard plinth, NOT a diagram or a playable full board. Main objects centrally grouped within the middle 70%, generous breathing room, suitable for 16:9 blog crops. Elegant, warm, welcoming, vivid accent colors. No lettering, no numbers, no logos, no watermark, no people. Topic: Scandinavian Defense. A tall ivory queen and a smaller walnut knight on a small checkerboard plinth. Minimal layered paper mountain and fjord silhouettes in icy blue and deep forest green. A loosely flowing blue and white ribbon evokes the Nordic landscape; NO national flag or emblem. Queen center-left, strong calm silhouettes, airy northern light.",
+      "original": "C:\\Users\\nmusicki\\.codex\\generated_images\\01a1f9e4-4919-7742-80ad-202011be9181\\exec-545b4b24-d234-4610-ab32-056e6d479657.png",
+      "asset": "blog/images/ouvertures/scandinave.webp"
+    },
+    {
+      "id": "slave",
+      "alt": "Illustration de la défense slave : fou en bois et deux pions clairs, décor vert et rubans colorés.",
+      "prompt": "Use case: stylized-concept. Create ONE premium editorial cover illustration for a French beginner chess article. Wide landscape 3:2 composition. Tactile matte wood, layered paper, beautifully crafted Staunton chess pieces, cream background, forest-green shadows, restrained brass details, soft studio lighting. Sculptural still life on a small partial checkerboard plinth, NOT a diagram or a playable full board. Main objects centrally grouped within the middle 70%, generous breathing room, suitable for 16:9 blog crops. Elegant, warm, welcoming, vivid accent colors. No lettering, no numbers, no logos, no watermark, no people. Topic: Slav Defense. A solid walnut bishop and two ivory pawns forming a balanced protective group on a small checkerboard plinth. An abstract layered forest-green paper arch and decorative woven ribbons in muted red, blue and cream. NO specific national flag, no heraldry. Warm natural wood textures, orderly sculptural composition, bishop center-right and pawns left.",
+      "original": "C:\\Users\\nmusicki\\.codex\\generated_images\\01a1f9e4-4919-7742-80ad-202011be9181\\exec-9419efa7-4beb-4646-afa4-cd528da3b590.png",
+      "asset": "blog/images/ouvertures/slave.webp"
+    }
+  ],
+  "validation": {
+    "images": 11,
+    "webpFiles": 33,
+    "widths": [
+      640,
+      960,
+      1536
+    ],
+    "checks": "16 tests existants réussis ; cohérence des images, métadonnées et ressources vérifiée ; génération reproductible ; git diff --check sans erreur.",
+    "browserPreview": "Non disponible : lancement du navigateur bloqué par le système (spawn EPERM).",
+    "publication": "Aucun déploiement effectué."
+  }
+}

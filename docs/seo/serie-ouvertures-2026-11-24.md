@@ -172,3 +172,9 @@ Référence éditoriale : https://developers.google.com/search/docs/appearance/a
 Caro-Kann : la position commentée utilise désormais 4. Cc3 au lieu de 4. Cf3. Le cavalier g1 reste en g1 et la dame d1 défend g4 ; …Fxg4 permet Dxg4. Séquence, SVG, légende, contexte, réponse et preuves ont été synchronisés. Une régression vérifie également que l’ancienne position avec Cf3 bloque cette reprise.
 
 Relecture des 22 exercices et positions commentées, ainsi que des quiz des ateliers ; ajout de preuves après les solutions pour contrôler les propriétés réellement expliquées. Ces contrôles ne constituent pas une analyse moteur ni une preuve que chaque réponse pédagogique serait le seul meilleur coup.
+
+## Sommaire et confort de lecture — 24 novembre 2026
+
+Sommaire regroupé en trois parcours : comprendre, pratiquer, approfondir. Trois colonnes sur ordinateur, deux sur tablette et une sur téléphone ; repli mobile conservé. Liens alignés, séparateurs sobres, commande d’ouverture explicite et accès au PDF. Espacements des titres et paragraphes de cartes harmonisés. Les onze pages sont régénérées depuis le modèle commun.
+
+Validation de cette passe : 16 tests réussis, pages générées à jour et contrôle de diff sans erreur. Tentative de capture locale dans Chrome sans fenêtre bloquée par un refus d’accès du processus navigateur ; rendu visuel non validé. Aucune publication par cet agent.

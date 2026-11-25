@@ -32,8 +32,6 @@
 .opening-facts { display: flex; flex-wrap: wrap; gap: .6rem; padding: 0; margin: 1.2rem 0 2rem; list-style: none; }
 .opening-facts li { background: #edf1ed; border-radius: 5px; padding: .45rem .7rem; font: 500 .8rem/1.5 Montserrat, sans-serif; }
 .opening-lead { font-size: 1.15rem; }
-.opening-toc { display: flex; flex-wrap: wrap; gap: .5rem; border-block: 1px solid #ded8cc; padding: .8rem 0; margin: 2rem 0; }
-.opening-toc a { display: inline-flex; align-items: center; min-height: 44px; padding: .3rem .7rem; color: var(--opening-green); font-weight: 700; }
 .opening-eyebrow { font: 700 .75rem/1.5 Montserrat, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #755817; margin-bottom: .6rem; }
 .opening-notation { color: #5b5b51; font-size: .95rem; }
 .opening-lesson, .opening-plan, .opening-exercise { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: clamp(1rem, 4vw, 2.5rem); margin: 1.5rem 0; }
@@ -118,9 +116,6 @@
 .opening-quick-reference dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; margin: 0; }
 .opening-quick-reference dt { color: #203e32; font-weight: 700; margin-bottom: .5rem; }
 .opening-quick-reference dd { margin: 0; font-size: 1rem; line-height: 1.7; color: #363a32; }
-.opening-contents { margin: 1.6rem 0 2rem; padding: .6rem 1rem; background: #f6f2e9; border: 1px solid #ded8cc; border-radius: 8px; }
-.opening-contents > summary { padding: .7rem 0; min-height: 48px; cursor: pointer; font-weight: 700; color: #203e32; }
-.opening-contents .opening-toc { margin: .4rem 0 0; border-bottom: 0; gap: .3rem; }
 .opening-page .opening-comparisons { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: 0; margin: 1.2rem 0; }
 .opening-comparisons li { border: 1px solid #ded8cc; border-radius: 8px; padding: 1rem; min-width: 0; }
 .opening-comparisons a { display: inline-block; padding-block: .4rem; font-weight: 700; text-underline-offset: .2em; }
@@ -139,8 +134,6 @@
  .opening-page .opening-header { padding-inline: 16px; }
  .opening-header h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); overflow-wrap: break-word; }
  .opening-page .opening-comparisons { grid-template-columns: minmax(0, 1fr); }
- .opening-contents .opening-toc { display: grid; grid-template-columns: minmax(0, 1fr); }
- .opening-contents .opening-toc a { padding: .65rem .3rem; min-height: 44px; }
  .opening-page .opening-workshop__choice, .opening-page .opening-case-study { padding: 1rem; }
  .opening-page .opening-header__actions .opening-btn { width: 100%; }
  .opening-page .opening-article .opening-source-ref { font-size: .85rem; }
@@ -148,4 +141,53 @@
 @media print {
  .opening-contents { display: none; }
  .opening-quick-reference, .opening-comparisons li { break-inside: avoid; }
+}
+
+/* Sommaire éditorial : trois parcours lisibles sur grand écran. */
+.opening-page .opening-contents { margin: 2rem 0 3rem; padding: 0; overflow: clip; border: 1px solid #d9ded6; border-radius: 14px; background: #fafbf8; }
+.opening-page .opening-contents > summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; list-style: none; padding: 1.4rem 1.6rem; min-height: 64px; cursor: pointer; color: #203e32; }
+.opening-contents > summary::-webkit-details-marker { display: none; }
+.opening-contents__heading { display: grid; gap: .35rem; min-width: 0; }
+.opening-contents__title { font: 600 clamp(1.3rem, 2.5vw, 1.6rem)/1.25 Lora, Georgia, serif; }
+.opening-contents__hint { font: 400 .88rem/1.5 Montserrat, sans-serif; color: #596354; }
+.opening-contents__toggle { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid #ccd5c8; border-radius: 50%; flex-shrink: 0; background: #fff; }
+.opening-contents__toggle::after { content: ''; width: 8px; height: 8px; border-right: 2px solid #203e32; border-bottom: 2px solid #203e32; transform: translateY(-2px) rotate(45deg); }
+.opening-contents[open] .opening-contents__toggle::after { transform: translateY(2px) rotate(225deg); }
+.opening-page .opening-contents > summary:hover { background: #f0f3ed; }
+.opening-page .opening-contents > summary:focus-visible { outline-offset: -5px; border-radius: 12px; }
+.opening-page .opening-toc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; margin: 0; padding: 0 1.6rem 1.5rem; border: 0; }
+.opening-toc__group { min-width: 0; border-top: 1px solid #d9ded6; padding-top: 1rem; }
+.opening-page .opening-toc .opening-toc__label { display: flex; align-items: center; gap: .6rem; font: 700 .85rem/1.5 Montserrat, sans-serif; color: #203e32; margin: 0 0 .65rem; }
+.opening-toc__label > span { display: grid; place-items: center; flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: #e8eee3; font-size: .72rem; color: #435139; }
+.opening-page .opening-toc ul { list-style: none; padding: 0; margin: 0; }
+.opening-page .opening-toc li { margin: 0; padding: 0; border-bottom: 1px solid #e6e9e2; }
+.opening-page .opening-toc li:last-child { border-bottom: 0; }
+.opening-page .opening-toc a { display: flex; align-items: center; min-height: 46px; padding: .7rem .35rem; font: 500 .9rem/1.5 Montserrat, sans-serif; color: #354333; text-decoration: none; border-radius: 4px; overflow-wrap: anywhere; }
+.opening-page .opening-toc a:hover { color: #203e32; background: #eaf0e5; text-decoration: underline; text-underline-offset: .2em; }
+/* Espacements harmonisés dans les cartes et le corps de lecture. */
+.opening-page .opening-article > section { margin-top: clamp(2.2rem, 5vw, 3.2rem); }
+.opening-page .opening-article section > h2 { margin-top: 0; line-height: 1.35; }
+.opening-page .opening-article .opening-card h3, .opening-page .opening-workshop__choice h3 { margin-top: 0; }
+.opening-page .opening-article .opening-workshop__choice p { font-size: 1rem; line-height: 1.8; }
+.opening-page .opening-workshop__choice > p:last-child { margin-bottom: 0; }
+@media (min-width: 601px) and (max-width: 959px) {
+ .opening-page .opening-toc { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .opening-toc__group:last-child { grid-column: 1 / -1; }
+ .opening-page .opening-toc__group:last-child ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.4rem; }
+}
+@media (max-width: 600px) {
+ .opening-page .opening-contents { margin: 1.5rem 0 2rem; border-radius: 10px; }
+ .opening-page .opening-contents > summary { padding: 1rem; }
+ .opening-contents__hint { font-size: .78rem; }
+ .opening-page .opening-toc { grid-template-columns: minmax(0, 1fr); padding: 0 1rem 1rem; gap: 1.1rem; }
+ .opening-page .opening-toc a { min-height: 48px; font-size: .9rem; }
+ .opening-page .opening-article .opening-workshop__choice p { font-size: 1rem; }
+}
+
+/* Illustrations éditoriales : proportions réservées, sans débordement. */
+.opening-page .opening-cover { max-width: 960px; margin: 0 auto clamp(1.5rem, 4vw, 2.5rem); overflow: hidden; border-radius: 16px; background: var(--opening-cream); }
+.opening-page .opening-cover img { display: block; width: 100%; max-width: none; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; margin: 0; border-radius: 0; box-shadow: none; }
+@media (max-width: 600px) {
+  .opening-page .opening-cover { border-radius: 10px; }
+  .opening-page .opening-cover img { aspect-ratio: 3 / 2; }
 }
