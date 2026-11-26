@@ -193,7 +193,7 @@ export function buildOrderRecord(session, nowIso) {
 export function formatAddressLines(order) {
   const a = order.address || {};
   const villeLigne = [a.postal_code, a.city].filter(Boolean).join(' ');
-  const pays = a.country === 'FR' ? 'FRANCE' : a.country;
+  const pays = { FR: 'FRANCE', BE: 'BELGIQUE' }[a.country] || a.country;
   return [order.name, a.line1, a.line2, villeLigne, pays].filter(Boolean);
 }
 

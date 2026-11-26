@@ -30,9 +30,9 @@ export function sessionParameters(product,colors){
  const values={mode:'payment',ui_mode:'elements',locale:'fr',
   'line_items[0][price_data][currency]':'eur','line_items[0][price_data][unit_amount]':String(p.amount),
   'line_items[0][price_data][product_data][name]':p.name,
-  'line_items[0][price_data][product_data][description]':'Couleurs — '+summary+'. Livraison en point relais Mondial Relay comprise, sous '+DELAI_LIVRAISON+' en France métropolitaine.',
+  'line_items[0][price_data][product_data][description]':'Couleurs — '+summary+'. Livraison en point relais Mondial Relay comprise, sous '+DELAI_LIVRAISON+' en France métropolitaine et en Belgique.',
   'line_items[0][quantity]':'1','metadata[product]':product,'payment_intent_data[metadata][product]':product,
-  'phone_number_collection[enabled]':'true','shipping_address_collection[allowed_countries][0]':'FR',
+  'phone_number_collection[enabled]':'true','shipping_address_collection[allowed_countries][0]':'FR','shipping_address_collection[allowed_countries][1]':'BE',
   'return_url':SITE+'/commande-confirmee.html?session_id={CHECKOUT_SESSION_ID}'};
  for(const item of p.items){values['metadata[couleur_'+item+']']=chosen[item];values['payment_intent_data[metadata][couleur_'+item+']']=chosen[item];}
  if(chosen.livre){values['metadata[book_color]']=chosen.livre;values['payment_intent_data[metadata][book_color]']=chosen.livre;}

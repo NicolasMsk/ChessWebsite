@@ -1,5 +1,5 @@
 /** Sans --apply : affiche uniquement les changements prévus. Avec --apply :
- * modifie les textes, la collecte du téléphone et les couleurs des 5 liens
+ * modifie les textes, la collecte du téléphone, les pays de livraison (France, Belgique) et les couleurs des 5 liens
  * existants. Ne crée aucun produit, prix, lien ou paiement. */
 import fs from 'node:fs';
 import {CHECKOUT_PRODUCTS,BOOK_COLORS} from './checkout.js';
@@ -25,8 +25,8 @@ try{
   if(items.data.length!==1||items.data[0].quantity!==1||items.data[0].price.unit_amount!==p.amount||items.data[0].price.currency!=='eur')throw Error('Le prix du lien ne correspond pas au catalogue.');
   if(p.book&&(link.custom_fields||[]).some(f=>f.key!=='couleur_livre'))throw Error('Le lien contient déjà des champs personnalisés à préserver : examen nécessaire.');
   const amount=new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR'}).format(p.amount/100);
-  const message=amount+' TTC, livraison en point relais Mondial Relay comprise en France métropolitaine, sous 7 jours maximum après validation du paiement. '+(p.book?'Livre relié cousu main, couleur au choix.':'Cahiers A6 cousus main, solutions regroupées à la fin.')+' CGV : https://www.cours-echecs-paris.fr/cgv.html';
-  const values={'phone_number_collection[enabled]':'true','custom_text[submit][message]':message};
+  const message=amount+' TTC, livraison en point relais Mondial Relay comprise en France métropolitaine et en Belgique, sous 7 jours maximum après validation du paiement. '+(p.book?'Livre relié cousu main, couleur au choix.':'Cahiers A6 cousus main, solutions regroupées à la fin.')+' CGV : https://www.cours-echecs-paris.fr/cgv.html';
+  const values={'phone_number_collection[enabled]':'true','shipping_address_collection[allowed_countries][0]':'FR','shipping_address_collection[allowed_countries][1]':'BE','custom_text[submit][message]':message};
   if(p.book)addFields(values,colorFields());
   plan.push({link,values,product:link.metadata.product,message,fields:p.book?colorFields():link.custom_fields||[]});
  }
@@ -35,7 +35,7 @@ try{
   fs.mkdirSync(new URL('../tmp/',import.meta.url),{recursive:true});fs.writeFileSync(new URL('../tmp/payment-links-before-update-'+new Date().toISOString().slice(0,10)+'.json',import.meta.url),JSON.stringify(plan.map(p=>({id:p.link.id,url:p.link.url,phone:p.link.phone_number_collection,custom_text:p.link.custom_text,custom_fields:p.link.custom_fields})),null,2));
   for(const p of plan){
    const changed=await stripe('payment_links/'+p.link.id,p.values);
-   if(changed.url!==p.link.url||!changed.active||!changed.phone_number_collection?.enabled||changed.custom_text?.submit?.message!==p.message)throw Error('Vérification de la mise à jour impossible.');
+   if(changed.url!==p.link.url||!changed.active||!changed.phone_number_collection?.enabled||changed.custom_text?.submit?.message!==p.message||changed.shipping_address_collection?.allowed_countries?.join(',')!=='FR,BE')throw Error('Vérification de la mise à jour impossible.');
    if(CHECKOUT_PRODUCTS[p.product].book){const c=changed.custom_fields.find(f=>f.key==='couleur_livre');if(!c||c.optional||c.dropdown.options.map(o=>o.value).join(',')!==Object.keys(BOOK_COLORS).join(','))throw Error('Le choix de couleur n’est pas correctement enregistré.');}
    console.log('Vérifié : '+p.product+' — téléphone obligatoire'+(CHECKOUT_PRODUCTS[p.product].book?', '+Object.keys(BOOK_COLORS).length+' couleurs au choix':'')+'.');
   }

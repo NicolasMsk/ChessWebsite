@@ -65,7 +65,7 @@ test('les URL canoniques et sociales désignent la même page commerciale',()=>{
    for(const node of data['@graph']||[data]){
     if(node.offers?.availability==='https://schema.org/InStock'){
      assert.match(node.offers.description,/7 jours maximum/);
-     assert.equal(node.offers.eligibleRegion.name,'France métropolitaine');
+     assert.deepEqual(node.offers.eligibleRegion.map(r=>r.name),['France métropolitaine','Belgique']);
     }
    }
   }
